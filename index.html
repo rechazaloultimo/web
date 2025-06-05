@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    
+
+    <link rel="preload" href="background/000.webp" as="image">
+
     <link rel="stylesheet" href="style.css">
     <title>Rodrigo Pizarro - Inicio</title> 
 </head>
@@ -139,8 +141,11 @@
             <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 <div class="md:w-2/5 fade-in img-mias-top" style="animation-delay: 0.2s;">
-                    <img src="img-mias/001.jpg" alt="Foto de Rodrigo Pizarro" class="rounded-none shadow-xl w-full aspect-[4/3] border-2 p-1 object-cover" style="border-color: var(--color-border-subtle);" loading="lazy" decoding="async">
-                </div>
+                    <img
+        src="img-mias/001.jpg" loading="lazy"
+        alt="Foto de Rodrigo Pizarro"
+        class="rounded-none shadow-xl w-full aspect-[4/3] border-2 p-1 object-cover"
+        style="border-color: var(--color-border-subtle);"></div>
                 <div class="md:w-3/5 fade-in" style="animation-delay: 0.4s;">
                     <h2 class="font-title text-3xl md:text-4xl lg:text-5xl mb-6">Entre lo tradicional y moderno</h2>
                     <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
@@ -251,11 +256,17 @@
     <a href="https://policies.google.com/privacy" class="text-chinese-seal-red hover:text-chinese-seal-red-hover transition duration-300">Política de privacidad</a> y los
     <a href="https://policies.google.com/terms" class="text-chinese-seal-red hover:text-chinese-seal-red-hover transition duration-300">Términos de servicio</a> de Google.
 </p>
+        <div class="text-xs text-text-tertiary mb-2">
+            <a href="legales/aviso-legal.html" class="footer-link mx-2">Aviso Legal</a>|
+            <a href="legales/privacidad.html" class="footer-link mx-2">Política de Privacidad</a>|
+            <a href="legales/cookies.html" class="footer-link mx-2">Política de Cookies</a>
+        </div>
        <p class="text-sm text-text-secondary mb-4">© <span id="currentYear"></span> Sitio creado por Rodrigo Pizarro. Todos los derechos reservados.</p>
     </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="js/hero-preload.js"></script>
     <script src="js/global.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/theme-toggle.js"></script>

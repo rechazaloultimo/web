@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preload" href="background/006.webp" as="image">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -66,6 +67,7 @@
                         Un espacio para compartir el tiempo, el cuerpo y la práctica consciente. Conecta con tu energía y encuentra el equilibrio.
                     </p>
         </div>
+    </div>
     </header>
 
     <main class="container mx-auto px-6 py-12 md:py-20">
@@ -264,12 +266,18 @@
                 <i class="fab fa-youtube"></i>
             </a>
         </div>
+        <div class="text-xs text-text-tertiary mb-2">
+            <a href="legales/aviso-legal.html" class="footer-link mx-2">Aviso Legal</a>|
+            <a href="legales/privacidad.html" class="footer-link mx-2">Política de Privacidad</a>|
+            <a href="legales/cookies.html" class="footer-link mx-2">Política de Cookies</a>
+        </div>
        
        <p class="text-sm text-text-secondary mb-4">© <span id="currentYear"></span> Sitio creado por Rodrigo Pizarro. Todos los derechos reservados.</p>
     </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="js/hero-preload.js"></script>
     <script src="js/global.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/theme-toggle.js"></script>
