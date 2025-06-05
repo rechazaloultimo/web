@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const img = new Image();
     img.src = imageUrl;
-    img.onload = () => {
+    const revealHero = () => {
         hero.classList.remove('preload-hidden');
-        overlay.remove();
+        overlay.classList.add('fade-out');
+        overlay.addEventListener('transitionend', () => overlay.remove(), { once: true });
     };
-    img.onerror = () => {
-        hero.classList.remove('preload-hidden');
-        overlay.remove();
-    };
+
+    img.onload = revealHero;
+    img.onerror = revealHero;
 });
