@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases de Qígōng y Tàijíquán</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="rice-paper-bg">
+<nav id="mainNav" class="nav-transparent fixed w-full z-50 top-0 transition-all duration-300 ease-out">
+    <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+        <a href="index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
+
+        <div class="flex items-center">
+            <div id="mainNavMenu" class="hidden md:flex items-center space-x-3 lg:space-x-4">
+                <a href="index.html#bienvenida" class="transition duration-300 text-sm lg:text-base">Inicio</a>
+                <a href="acerca-de-mi.html" class="transition duration-300 text-sm lg:text-base">Sobre Mí</a>
+                <a href="clases-presenciales.html" class="transition duration-300 text-sm lg:text-base">Clases</a>
+                <a href="masajes-terapeuticos.html" class="transition duration-300 text-sm lg:text-base">Masajes</a>
+                <a href="asistentes-ia.html" class="transition duration-300 text-sm lg:text-base">Asistentes IA</a>
+                <a href="aulavirtual.html" class="transition duration-300 text-sm lg:text-base">Aula Virtual</a>
+                <a href="index.html#contacto" class="transition duration-300 text-sm lg:text-base">Contacto</a>
+            </div>
+
+            <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp" class="p-2 focus:outline-none text-lg rounded-md" id="whatsapp-nav-icon">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <button id="theme-toggle" type="button" title="Cambiar tema" class="p-2 focus:outline-none text-lg rounded-md">
+                <i class="fas fa-sun" id="theme-toggle-sun-icon"></i>
+                <i class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
+            </button>
+
+            <div class="md:hidden ml-2"> 
+                <button id="mobile-menu-button" class="focus:outline-none p-2" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="block h-0.5 w-6 bg-current my-1"></span>
+                    <span class="block h-0.5 w-6 bg-current my-1"></span>
+                    <span class="block h-0.5 w-6 bg-current"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden shadow-lg py-2 border-t">
+        <a href="index.html#bienvenida" class="block px-6 py-3 text-base transition duration-300 text-right">Inicio</a>
+        <a href="acerca-de-mi.html" class="block px-6 py-3 text-base transition duration-300 text-right">Sobre Mí</a>
+        <a href="clases-presenciales.html" class="block px-6 py-3 text-base transition duration-300 text-right">Clases de Qígōng Tàijíquán</a>
+        <a href="masajes-terapeuticos.html" class="block px-6 py-3 text-base transition duration-300 text-right">Masajes Terapéuticos</a>
+        <a href="asistentes-ia.html" class="block px-6 py-3 text-base transition duration-300 text-right">Asistentes IA</a>
+        <a href="aulavirtual.html" class="block px-6 py-3 text-base transition duration-300 text-right">Aula Virtual</a>
+        <a href="index.html#contacto" class="block px-6 py-3 text-base transition duration-300 text-right">Contacto</a>
+    </div>
+</nav>
+
+
+<header id="hero-clases" class="hero-fullscreen-bg hero-clases-bg h-screen flex flex-col items-center justify-center relative">        <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
+        <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
+            <h1 class="font-title text-5xl sm:text-6xl md:text-7xl text-gray-50 mb-10 fade-in leading-snug">Clases de Qígōng y Tàijíquán</h1>
+                <h2 class="text-xl sm:text-2xl md:text-3xl text-gray-100 mb-12 fade-in font-title" style="animation-delay: 0.2s;">Presenciales y Virtuales</h2>
+                    <p class="text-base sm:text-lg md:text-xl max-w-xl lg:max-w-2xl mx-auto mb-10 text-gray-200 fade-in" style="animation-delay: 0.4s;">
+                        Un espacio para compartir el tiempo, el cuerpo y la práctica consciente. Conecta con tu energía y encuentra el equilibrio.
+                    </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <section id="intro-contenido-clases" class="mb-16 md:mb-20 fade-in">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                 <i class="fas fa-users text-6xl text-chinese-seal-red mb-6"></i>
+                <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-6">Práctica Consciente y Transformadora</h2>
+                 <p class="text-xl text-ink leading-relaxed">
+                    Descubre cómo el Qígōng y el Tàijíquán pueden enriquecer tu bienestar físico y mental.
+                </p>
+            </div>
+            <div class="max-w-4xl mx-auto section-bg-paper p-6 md:p-10 rounded-lg shadow-lg">
+                <p class="text-lg text-ink mb-4 leading-relaxed ">
+                   Si sentís que las clases grupales no son para vos, que necesitás un espacio más íntimo, tranquilo y adaptado a tu propio ritmo, te invito a mis clases particulares de Tàijíquán y Qígōng. Están pensadas justamente para quienes valoran el silencio, el detalle, el proceso personal. No es lo mismo ver un movimiento en grupo que poder tener una corrección personal de la postura y de las dudas surgidas por la práctica. Mis clases presenciales particulares son momentos de pausa, respiración y atención, donde cada cuerpo puede explorar su propio ritmo y límites, para expandirlos a conciencia.
+                </p>
+                <p class="text-lg text-ink mb-4 leading-relaxed ">
+                        En vez de seguir a un grupo, acá se trata de encontrarte con vos mismo/a, sin apuro, sin exigencias externas, en un entorno cuidado donde cada encuentro tiene sentido. Estas prácticas no requieren experiencia previa, solo la intención de estar presente y de reconectar con algo esencial.
+                </p>
+                <p class="text-lg text-ink mb-4 leading-relaxed ">
+                    Si querés acercarte a la práctica del Qìgōng o del Tàijíquán desde un lugar simple, comprometido y humano, conmigo podés empezar. En las sesiones de Qìgōng (Chi Kung) exploramos ejercicios suaves de pie y en movimiento que equilibran la energía vital (Qi), mejoran la circulación y fortalecen la conexión mente-cuerpo.
+                </p>
+                <p class="text-lg text-ink mb-4 leading-relaxed ">
+                    El Tàijíquán (Tai Chi Chuan) busca las posturas y formas marciales circulares y continuas, para complementar  este trabajo interno, la coordinación y la estabilidad postural. Aprenderás a cultivar una respiración profunda y armónica que sincroniza cada gesto con tu centro de gravedad.
+                </p>
+                <p class="text-lg text-ink leading-relaxed">
+                    Más allá de lo físico, ambas disciplinas te invitan a un estado de presencia plena: la práctica es una toma de conciencia, es un gesto en un acto meditativo, donde la mente se aquieta y el cuerpo se reconoce. Cada clase es acompañada por material grabado de los ejercicios realizados, para que puedas continuar y repasar en cualquier momento que quieras.
+                </p>
+            </div>
+        </section>
+
+        <!-- Nueva Sección para Reserva con Calendly -->
+    <section id="reserva-clase" class="max-w-4xl mx-auto section-bg-paper p-6 md:p-10 rounded-lg shadow-lg" style="animation-delay: 0.25s;">
+        <div class="max-w-3xl mx-auto px-6 md:px-10 text-center">
+            <h2 class="font-title text-3xl md:text-4xl text-title-ink mb-6">Reserva tu Clase</h2>
+            <p class="text-lg text-ink mb-8 leading-relaxed">
+                Consulta mi disponibilidad y reserva tu próxima clase de Qígōng o Tàijíquán directamente aquí. ¡Espero verte pronto!
+            </p>
+            
+            <!-- Principio del widget integrado de Calendly -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/rechazaloultimo/clase-de-prueba-presencial?hide_gdpr_banner=1" style="min-width:320px;height:1200px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Final del widget integrado de Calendly -->
+            <p class="text-sm text-text-secondary mt-4">
+                Si tienes alguna pregunta antes de reservar, no dudes en <a href="index.html#contacto" class="text-chinese-seal-red hover:underline">Contactarme</a>.
+            </p>
+        </div>
+    </section>
+
+
+    <section id="beneficios" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-lg shadow-lg fade-in" style="animation-delay: 0.3s;">
+    <div class="max-w-4xl mx-auto px-6 md:px-10">
+        <h2 class="font-title text-3xl md:text-4xl text-title-ink mb-10 text-center">Beneficios de la Práctica</h2>
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div>
+                <h3 class="font-title text-2xl text-title-ink mb-4 flex items-center">
+                    <i class="fas fa-leaf text-2xl text-chinese-seal-red mr-3"></i>Beneficios del Qígōng
+                </h3>
+                <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Mejora de la circulación energética y liberación de bloqueos.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Fortalecimiento del sistema inmunológico.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Reducción del estrés y la ansiedad, promoviendo calma.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Aumento de la vitalidad y la resistencia física.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Mejora de la postura, flexibilidad y amplitud de movimiento.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Equilibrio emocional y claridad mental.
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-title text-2xl text-title-ink mb-4 flex items-center">
+                    <i class="fas fa-water text-2xl text-chinese-seal-red mr-3"></i>Beneficios del Tàijíquán
+                </h3>
+                <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Desarrollo del enraizamiento y la estabilidad postural.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Mejora de la coordinación y fluidez de movimiento.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Potenciación de la fuerza interna a través de la suavidad.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Mejora del equilibrio y la propiocepción.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Integración de cuerpo, respiración e intención.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Calma mental, concentración y reducción del estrés.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        Prevención y recuperación de lesiones (bajo impacto).
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="Qígōng-detalle" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="font-title text-3xl md:text-4xl text-title-ink mb-8 text-center">Explorando el Qìgōng (Chi Kung)</h2>
+                <p class="text-lg text-ink mb-4 leading-relaxed ">
+                    El Qígōng (气功), que se traduce como “trabajo o cultivo de la energía vital (Qi)”, es un arte tradicional chino que integra movimiento suave, respiración consciente y enfoque mental. Parte de la idea de que el ser humano es un puente entre el cielo y la tierra, con la capacidad de transformar y refinar su propia energía para mejorar la salud, aumentar la vitalidad y alcanzar un equilibrio duradero.
+                </p>
+                <p class="text-lg text-ink mb-4 leading-relaxed ">
+                    Aunque el Qígōng tiene raíces filosóficas antiguas, no es necesario involucrarse en ningún aspecto espiritual ni tener experiencia previa para beneficiarse de su práctica. Muchas personas lo eligen simplemente para mejorar su postura, liberar tensiones, respirar mejor, fortalecer el cuerpo y reducir el estrés. En mis clases, trabajamos sobre ejercicios concretos y accesibles, que se adaptan al ritmo de cada persona.
+                </p>
+                <p class="text-lg text-ink mb-6 leading-relaxed">
+                    El Qígōng no es simplemente ejercicio físico ni solo una técnica de meditación, sino un camino interno de transformación que cultiva la unidad entre cuerpo, respiración y mente-corazón. Las prácticas incluyen posturas estáticas, formas en movimiento y meditación, todas orientadas a mejorar el bienestar.
+                </p>
+                </div>
+            </section>
+            <section id="qigon-sistemas" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-lg shadow-lg fade-in" style="animation-delay: 0.3s;">
+                 <div class="max-w-4xl mx-auto px-6 md:px-10">
+                <h4 class="font-title text-xl text-title-ink mb-4">Algunos Sistemas de Qígōng que exploramos:</h4>         
+                <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-lg text-ink leading-relaxed list-none">
+                    <li><i class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Estiramiento de Meridianos</li>
+                    <li><i class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Apertura de las 4 Puertas</li>
+                    <li><i class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Serie en Espiral (Torsiones)</li>
+                    <li><i class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Juego de los 5 Animales</li>
+                    <li><i class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Wudang Qígōng</li>
+                    <li><i class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Mawangdui Dao Yin</li>
+                    <li><i class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Zhineng Qígōng (Nivel I y II)</li>
+                    <li><i class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Yi Jin Jing</li>
+                </ul>
+            </div>
+            <div class="text-center mt-10">
+                    <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=%C2%A1Hola%20Rodrigo!%20Te%20contacto%20porque%20me%20interesan%20tus%20clases%20de%20Qigong.%20Me%20gustar%C3%ADa%20saber%20sobre%20la%20modalidad%2C%20horarios%20y%20cuando%20podr%C3%ADa%20comenzar.&type=phone_number&app_absent=0" class="button-manuscript text-lg font-semibold py-3 px-8">Consultame por clases de Qígōng</a>
+                </div>
+        </section>
+
+        <section id="Tàijíquán-detalle" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
+            <div class="max-w-3xl mx-auto">
+                 <h2 class="font-title text-3xl md:text-4xl text-title-ink mb-8 text-center">Explorando el Tàijíquán (Tai Chi Chuan)</h2>
+                 <p class="text-lg text-ink mb-4 leading-relaxed ">
+                    El Tàijíquán (太极拳), o "Boxeo del Supremo Último", es un arte marcial interno de origen chino. Su fundamento radica en el principio de la armonía entre los opuestos (Yin-Yang), y su práctica está orientada a cultivar la salud, el equilibrio interno y la capacidad marcial desde una consciencia profunda del cuerpo y la energía.
+                </p>
+                 <p class="text-lg text-ink mb-4 leading-relaxed ">
+                    Aunque tiene una raíz marcial, el Tàijíquán se ha consolidado también como una vía para el desarrollo personal y espiritual. Se practica mediante secuencias de movimientos lentos, continuos y circulares que integran respiración, intención y percepción energética. A través de estas formas, el practicante transforma su estructura física, su flujo interno y su estado mental.
+                </p>
+                 <p class="text-lg text-ink mb-4 leading-relaxed ">
+                    El Tàijíquán no es simplemente un sistema de autodefensa ni un ejercicio de relajación. Es una forma de meditación en movimiento, donde la energía interna se activa y se dirige conscientemente. Las principales cualidades que desarrolla son: la relajación consciente, el enraizamiento, la presencia mental y una forma de elasticidad energética que surge desde adentro.
+                </p>
+            </div>
+        </section>
+             <section id="taiji-sistemas" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-lg shadow-lg fade-in" style="animation-delay: 0.3s;">
+                 <div class="max-w-4xl mx-auto px-6 md:px-10">
+                <h4 class="font-title text-xl text-title-ink mb-4">Algunas Formas de Tàijíquán que exploramos:</h4>
+                <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-lg text-ink leading-relaxed list-none">
+                    <li><i class="fas fa-stream text-chinese-seal-red mr-2"></i>Forma de 10 movimientos</li>
+                    <li><i class="fas fa-stream text-chinese-seal-red mr-2"></i>Forma de 16 movimientos</li>
+                    <li><i class="fas fa-stream text-chinese-seal-red mr-2"></i>Forma de 24 movimientos</li>
+                    <li><i class="fas fa-stream text-chinese-seal-red mr-2"></i>Forma de 42 combinada</li>
+                    <li><i class="fas fa-stream text-chinese-seal-red mr-2"></i>Forma Wudang de 13</li>
+                </ul>
+                </div>
+                 <div class="text-center mt-10">
+                    <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=%C2%A1Hola%20Rodrigo!%20Te%20contacto%20porque%20me%20interesan%20tus%20clases%20de%20Taijiquan.%20Me%20gustar%C3%ADa%20saber%20sobre%20la%20modalidad%2C%20horarios%20y%20cuando%20podr%C3%ADa%20comenzar.&type=phone_number&app_absent=0" class="button-manuscript text-lg font-semibold py-3 px-8">Consultame por clases de Tàijíquán</a>
+                 </div>            
+        </section>
+
+    </main>
+
+      <footer class="footer-manuscript py-10 mt-0 text-center" style="border-top-color: var(--color-border-subtle);">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-center space-x-8 mb-4">
+            <a href="https://goo.gl/maps/2y9w8n3v6v8v8v8" target="_blank" class="text-red-600 hover:text-red-700 transition duration-300 text-2xl" title="Ver ubicación en Google Maps">
+                <i class="fas fa-map-marker-alt"></i>
+            </a>
+            <a href="mailto:rodrigoarielpizarro@outlook.com" class="text-blue-500 hover:text-blue-600 transition duration-300 text-2xl" title="Enviar email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+5491138733447" class="text-green-600 hover:text-green-700 transition duration-300 text-2xl" title="Llamar por teléfono">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+            <a href="https://wa.me/5491138733447?text=Hola%2C%20quisiera%20consultar%20sobre..." target="_blank" class="text-green-500 hover:text-green-600 transition duration-300 text-2xl" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/rechazaloultimo/" target="_blank" class="text-pink-600 hover:text-pink-700 transition duration-300 text-2xl" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@rechazaloultimo" target="_blank" class="text-red-600 hover:text-red-700 transition duration-300 text-2xl" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+       
+       <p class="text-sm text-text-secondary mb-4">© <span id="currentYear"></span> Sitio creado por Rodrigo Pizarro. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/glightbox-init.js"></script>
+</body>
+</html>

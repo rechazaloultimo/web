@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnicas de Qígōng ☯ - Rodrigo Pizarro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> {/* Eliminada Crimson Text */}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="rice-paper-bg">
+ <nav id="mainNav" class="nav-transparent fixed w-full z-50 top-0 transition-all duration-300 ease-out">
+    <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+        <a href="index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
+
+        <div class="flex items-center">
+            <div id="mainNavMenu" class="hidden md:flex items-center space-x-3 lg:space-x-4">
+                <a href="index.html#bienvenida" class="transition duration-300 text-sm lg:text-base">Inicio</a>
+                <a href="acerca-de-mi.html" class="transition duration-300 text-sm lg:text-base">Sobre Mí</a>
+                <a href="clases-presenciales.html" class="transition duration-300 text-sm lg:text-base">Clases</a>
+                <a href="masajes-terapeuticos.html" class="transition duration-300 text-sm lg:text-base">Masajes</a>
+                <a href="asistentes-ia.html" class="transition duration-300 text-sm lg:text-base">Asistentes IA</a>
+                <a href="aulavirtual.html" class="transition duration-300 text-sm lg:text-base">Aula Virtual</a>
+                <a href="index.html#contacto" class="transition duration-300 text-sm lg:text-base">Contacto</a>
+            </div>
+
+            <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp" class="p-2 focus:outline-none text-lg rounded-md" id="whatsapp-nav-icon">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <button id="theme-toggle" type="button" title="Cambiar tema" class="p-2 focus:outline-none text-lg rounded-md">
+                <i class="fas fa-sun" id="theme-toggle-sun-icon"></i>
+                <i class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
+            </button>
+
+            <div class="md:hidden ml-2"> 
+                <button id="mobile-menu-button" class="focus:outline-none p-2" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="block h-0.5 w-6 bg-current my-1"></span>
+                    <span class="block h-0.5 w-6 bg-current my-1"></span>
+                    <span class="block h-0.5 w-6 bg-current"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden shadow-lg py-2 border-t">
+        <a href="index.html#bienvenida" class="block px-6 py-3 text-base transition duration-300 text-right">Inicio</a>
+        <a href="acerca-de-mi.html" class="block px-6 py-3 text-base transition duration-300 text-right">Sobre Mí</a>
+        <a href="clases-presenciales.html" class="block px-6 py-3 text-base transition duration-300 text-right">Clases de Qígōng Tàijíquán</a>
+        <a href="masajes-terapeuticos.html" class="block px-6 py-3 text-base transition duration-300 text-right">Masajes Terapéuticos</a>
+        <a href="asistentes-ia.html" class="block px-6 py-3 text-base transition duration-300 text-right">Asistentes IA</a>
+        <a href="aulavirtual.html" class="block px-6 py-3 text-base transition duration-300 text-right">Aula Virtual</a>
+        <a href="index.html#contacto" class="block px-6 py-3 text-base transition duration-300 text-right">Contacto</a>
+    </div>
+</nav>
+    
+<header id="hero-tecnicas-Qígōng" class="hero-fullscreen-bg hero-tecnicas-Qígōng-bg text-white h-[50vh] md:h-[60vh] lg:h-[450px] flex flex-col items-center justify-center relative">
+    <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
+        <h1 class="font-title text-5xl sm:text-6xl md:text-7xl text-gray-50 mb-6 fade-in leading-snug md:leading-tight">Técnicas de Qígōng</h1>
+        <p class="text-xl sm:text-2xl md:text-3xl text-gray-100 mb-8 fade-in font-title" style="animation-delay: 0.2s;">Profundizando en el Arte del Cultivo Energético</p>
+    </div>
+</header>
+    
+<main class="container mx-auto px-6 py-12 md:py-20">
+
+    <section id="intro-Qígōng-tecnicas" class="mb-16 md:mb-20 fade-in">
+        <div class="max-w-3xl mx-auto text-center">
+            <i class="fas fa-hands-praying text-6xl text-chinese-seal-red mb-6"></i> {/* Color de ícono actualizado */}
+            <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-8">Un Recorrido por los Sistemas</h2> {/* Cambiado de H1 a H2 */}
+            <p class="text-xl text-ink mb-6 leading-relaxed  hyphens-auto">
+                Te presento un recorrido por los diversos sistemas y prácticas de Qígōng que conozco, practico y ofrezco para cultivar la energía vital (Qì) y promover el bienestar integral en cuerpo, mente y espíritu.
+            </p>
+        </div>
+    </section>
+
+    <section id="lista-tecnicas-Qígōng" class="fade-in" style="animation-delay: 0.2s;">
+        <div class="max-w-4xl mx-auto space-y-10">
+
+            <div class="section-bg-paper p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3">Estiramiento de Meridianos Tendino-Muscular</h3> {/* Cambiado de H2 a H3 */}
+                <p class="text-lg text-ink leading-relaxed  hyphens-auto">
+                    Un sistema de Qígōng enfocado en el estiramiento y la activación de los canales energéticos (meridianos) a través de sus manifestaciones tendinosas y musculares. Estas sesiones están dedicadas a movilizar y elongar estos recorridos para optimizar la circulación de Qì, mejorar la flexibilidad y liberar tensiones profundas.
+                </p>
+            </div>
+
+            <div class="section-bg-paper p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3">Las 8 Piezas de Brocado (Ba Duan Jin - 八段錦)</h3> {/* Cambiado de H2 a H3 */}
+                <p class="text-lg text-ink leading-relaxed  hyphens-auto">
+                    Una de las series de Qígōng más populares y practicadas. Consiste en ocho movimientos fluidos y elegantes, diseñados para fortalecer el cuerpo, mejorar la salud de los órganos internos y equilibrar la energía vital. Cada "pieza" tiene un enfoque específico, trabajando diferentes aspectos del bienestar físico y energético.
+                </p>
+            </div>
+
+            <div class="section-bg-paper p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3">Apertura de las 4 Puertas (Kai Si Men - 开四门)</h3> {/* Cambiado de H2 a H3 */}
+                <p class="text-lg text-ink leading-relaxed  hyphens-auto">
+                    Este sistema de Taiji Qígōng se centra en desbloquear y activar puntos energéticos clave, conocidos como las "cuatro puertas", ubicados en el torso y las extremidades. Su práctica ayuda a llevar la energía (Qì) hacia las extremidades y a fortalecer el Wei Qi (energía defensiva).
+                </p>
+            </div>
+
+            <div class="section-bg-paper p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3">Serie en Espiral – Torsiones</h3> {/* Cambiado de H2 a H3 */}
+                <p class="text-lg text-ink leading-relaxed  hyphens-auto">
+                    Un conjunto de ejercicios de Taiji Qígōng que combinan giros suaves y movimientos en espiral para mejorar la flexibilidad de la columna vertebral, masajear los órganos internos y promover un flujo interno de Qì más profundo, buscando llevar la energía hacia la médula.
+                </p>
+            </div>
+
+            <div class="section-bg-paper p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3">Cambio de Músculo y Tendón (Yi Jin Jing - 易筋經)</h3> {/* Cambiado de H2 a H3 */}
+                <p class="text-lg text-ink leading-relaxed  hyphens-auto">
+                    Una práctica ancestral y poderosa para transformar y fortalecer los tendones, ligamentos y músculos. Se dice que esta serie de ejercicios promueve la fuerza, la flexibilidad y la resistencia, armonizando la fuerza muscular con la elasticidad de los tendones y mejorando la circulación de la energía.
+                </p>
+            </div>
+
+            <div class="section-bg-paper p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3">El Juego de los 5 Animales (Wu Qin Xi - 五禽戲)</h3> {/* Cambiado de H2 a H3 */}
+                <p class="text-lg text-ink leading-relaxed  hyphens-auto">
+                    Esta serie clásica de Qígōng imita los movimientos y el espíritu de cinco animales: el tigre, el ciervo, el oso, el mono y la grulla. Cada animal se asocia con diferentes órganos y meridianos según la Medicina Tradicional China, y su práctica ayuda a desarrollar distintas cualidades energéticas, fortalecer el cuerpo y equilibrar el Qì en armonía con las estaciones climáticas. Se presenta tanto en su versión tradicional como en la oficial (estandarizada).
+                </p>
+            </div>
+            
+            <div class="section-bg-paper p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3">Wudang Qígōng (武当气功)</h3> {/* Cambiado de H2 a H3 */}
+                <p class="text-lg text-ink leading-relaxed  hyphens-auto">
+                    Un conjunto de enseñanzas y prácticas provenientes de la tradición daoísta de las montañas de Wudang, famosas por su énfasis en el cultivo interno. Este sistema de Qígōng se enfoca en cultivar la energía, la meditación en movimiento y la conexión con los principios naturales para la salud y la longevidad.
+                </p>
+            </div>
+
+            <div class="section-bg-paper p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3">Mawangdui Dao Yin Shu (马王堆导引术)</h3> {/* Cambiado de H2 a H3 */}
+                <p class="text-lg text-ink leading-relaxed  hyphens-auto">
+                    Técnicas de Qígōng (Dao Yin) redescubiertas en las tumbas de Mawangdui, que datan de la dinastía Han (hace más de 2000 años). Estos ejercicios se caracterizan por sus movimientos fluidos y elegantes, diseñados para guiar el Qì, mejorar la flexibilidad y promover la salud general, reflejando las antiguas prácticas de cultivo de la vida. (Referido en el original como "Túmulo del Rey Mǎ").
+                </p>
+            </div>
+            
+            <div class="section-bg-paper p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3">Hilo de Seda – Familia Chen (Chan Si Gong - 缠丝功)</h3> {/* Cambiado de H2 a H3 */}
+                <p class="text-lg text-ink leading-relaxed  hyphens-auto">
+                    Ejercicios fundamentales del Tàijíquán estilo Chen, aunque también practicados como Qígōng. Se centran en el desarrollo de la "energía en espiral" o "devanado del hilo de seda". Estos movimientos continuos, fluidos y en espiral cultivan la conexión interna, la coordinación y la capacidad de generar fuerza desde el centro del cuerpo.
+                </p>
+            </div>
+
+            <div class="section-bg-paper p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3">Zhineng Qígōng (智能气功) - Nivel I y II</h3> {/* Cambiado de H2 a H3 */}
+                <p class="text-lg text-ink leading-relaxed  hyphens-auto">
+                    Un sistema de Qígōng moderno y muy popular, desarrollado por el Dr. Pang Ming. Zhineng Qígōng, o "Qígōng de la Sabiduría y la Capacidad", se enfoca en la movilización activa del Qì, la visualización y la integración de la mente y el cuerpo para mejorar la salud, desarrollar el potencial humano y promover la curación. Se exploran los niveles I (Peng Qi Guan Ding Fa) y II (Xing Shen Zhuang).
+                </p>
+            </div>
+
+            <div class="section-bg-paper p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3">Los Puños de Bodhidharma (Da Mo Quan - 达摩拳)</h3> {/* Cambiado de H2 a H3 */}
+                <p class="text-lg text-ink leading-relaxed  hyphens-auto">
+                    Aunque a menudo asociado con las artes marciales Shaolin, estos ejercicios también contienen elementos de Qígōng y cultivo interno atribuidos al legendario monje Bodhidharma. Se enfocan en el fortalecimiento del cuerpo, la mente y el espíritu, combinando posturas, movimientos y principios meditativos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-16 md:mt-20">
+            <a href="index.html#contacto" class="button-manuscript text-lg font-semibold py-3 px-8"> {/* Ajustado tamaño de texto y padding para consistencia */}
+                <i class="fas fa-info-circle mr-2"></i>Consultar por Prácticas de Qígōng
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer-manuscript py-10 mt-0 text-center" style="border-top-color: var(--color-border-subtle);">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-center space-x-8 mb-4">
+            <a href="https://goo.gl/maps/2y9w8n3v6v8v8v8" target="_blank" class="text-red-600 hover:text-red-700 transition duration-300 text-2xl" title="Ver ubicación en Google Maps">
+                <i class="fas fa-map-marker-alt"></i>
+            </a>
+            <a href="mailto:rodrigoarielpizarro@outlook.com" class="text-blue-500 hover:text-blue-600 transition duration-300 text-2xl" title="Enviar email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+5491138733447" class="text-green-600 hover:text-green-700 transition duration-300 text-2xl" title="Llamar por teléfono">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+            <a href="https://wa.me/5491138733447?text=Hola%2C%20quisiera%20consultar%20sobre..." target="_blank" class="text-green-500 hover:text-green-600 transition duration-300 text-2xl" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/rechazaloultimo/" target="_blank" class="text-pink-600 hover:text-pink-700 transition duration-300 text-2xl" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@rechazaloultimo" target="_blank" class="text-red-600 hover:text-red-700 transition duration-300 text-2xl" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+       
+       <p class="text-sm text-text-secondary mb-4">© <span id="currentYear"></span> Sitio creado por Rodrigo Pizarro. Todos los derechos reservados.</p> {/* Cambiado id a currentYear */}
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

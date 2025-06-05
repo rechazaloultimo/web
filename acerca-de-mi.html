@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Acerca de Rodrigo Pizarro</title>
+</head>
+
+<body class="rice-paper-bg">
+ <nav id="mainNav" class="nav-transparent fixed w-full z-50 top-0 transition-all duration-300 ease-out">
+    <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+        <a href="index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
+
+        <div class="flex items-center">
+            <div id="mainNavMenu" class="hidden md:flex items-center space-x-3 lg:space-x-4">
+                <a href="index.html#bienvenida" class="transition duration-300 text-sm lg:text-base">Inicio</a>
+                <a href="acerca-de-mi.html" class="transition duration-300 text-sm lg:text-base">Sobre Mí</a>
+                <a href="clases-presenciales.html" class="transition duration-300 text-sm lg:text-base">Clases</a>
+                <a href="masajes-terapeuticos.html" class="transition duration-300 text-sm lg:text-base">Masajes</a>
+                <a href="asistentes-ia.html" class="transition duration-300 text-sm lg:text-base">Asistentes IA</a>
+                <a href="aulavirtual.html" class="transition duration-300 text-sm lg:text-base">Aula Virtual</a>
+                <a href="index.html#contacto" class="transition duration-300 text-sm lg:text-base">Contacto</a>
+            </div>
+
+            <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp" class="p-2 focus:outline-none text-lg rounded-md" id="whatsapp-nav-icon">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <button id="theme-toggle" type="button" title="Cambiar tema" class="p-2 focus:outline-none text-lg rounded-md">
+                <i class="fas fa-sun" id="theme-toggle-sun-icon"></i>
+                <i class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
+            </button>
+
+            <div class="md:hidden ml-2"> 
+                <button id="mobile-menu-button" class="focus:outline-none p-2" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="block h-0.5 w-6 bg-current my-1"></span>
+                    <span class="block h-0.5 w-6 bg-current my-1"></span>
+                    <span class="block h-0.5 w-6 bg-current"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden shadow-lg py-2 border-t">
+        <a href="index.html#bienvenida" class="block px-6 py-3 text-base transition duration-300 text-right">Inicio</a>
+        <a href="acerca-de-mi.html" class="block px-6 py-3 text-base transition duration-300 text-right">Sobre Mí</a>
+        <a href="clases-presenciales.html" class="block px-6 py-3 text-base transition duration-300 text-right">Clases de Qígōng Tàijíquán</a>
+        <a href="masajes-terapeuticos.html" class="block px-6 py-3 text-base transition duration-300 text-right">Masajes Terapéuticos</a>
+        <a href="asistentes-ia.html" class="block px-6 py-3 text-base transition duration-300 text-right">Asistentes IA</a>
+        <a href="aulavirtual.html" class="block px-6 py-3 text-base transition duration-300 text-right">Aula Virtual</a>
+        <a href="index.html#contacto" class="block px-6 py-3 text-base transition duration-300 text-right">Contacto</a>
+    </div>
+</nav>
+
+    <main class="container mx-auto px-6 pt-24 pb-12 md:pt-32 md:pb-20">
+
+        <section id="de-mi" class="mb-16 md:mb-20 fade-in">
+            <div class="max-w-4xl mx-auto md:flex md:items-start md:gap-10">
+            <div class="md:w-2/5 mb-8 md:mb-0">
+                <img src="img-mias/001.jpg" alt="Foto de Rodrigo Pizarro" class="object-cover w-full h-full rounded-md" />
+            </div>
+            <div class="md:w-3/5">
+                <h1 class="font-title text-4xl md:text-5xl text-text-title mb-6">De Mí</h1>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                <strong>Empezaría por mi nombre: Rodrigo A. Pizarro,</strong> soy argentino y nací en 1991. Actualmente vivo en la CABA, Buenos Aires, Argentina.
+                </p>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                Mi búsqueda actual está centrada en la exploración interna a través del Tàijíquán (Tai Chi Chuan) y Qígōng (Chi Kung), con orientación daoísta, como vías para alcanzar bienestar físico, emocional y espiritual. ¿Pretencioso? Puede ser, pero creo que es un camino que vale el esfuerzo de recorrer.
+                </p>
+                <p class="text-lg text-text-secondary leading-relaxed">
+                También navego los desafíos del mundo actual, procurando utilizar las herramientas disponibles para sostenerme económicamente hablando, sin perder de vista el equilibrio entre mi crecimiento personal y las exigencias de la realidad cotidiana.
+                </p>
+            </div>
+            </div>
+        </section>
+
+        <section id="raices-intereses" class="mb-16 md:mb-20 py-12 md:py-16 section-bg-paper fade-in" style="animation-delay: 0.2s;">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Mis Raíces e Intereses</h3>
+                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                        Provengo de una familia trabajadora y peronista, con un fuerte sentido de clase y la convicción en la equidad social. Desde mi infancia, estos valores han moldeado mi forma de ver el mundo. Por eso no le escapo a la discusión política y social, y me esfuerzo por ser una persona sensible al dolor ajeno.
+                    </p>
+                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                       Cuando me digo que me esfuerzo, quiero decir que también me descontruyo: como un hombre blanco caucacico, heterosexual, y de clase trabajadora, me doy cuenta de que tengo privilegios, y que no todos tienen. Por eso, me esfuerzo por ser consciente de mis propios sesgos y prejuicios, y por aprender de las experiencias de los demás. En el Daode Jing se dice que cuanto más te vacias, más te llenas. Es un proceso continuo de aprendizaje y crecimiento personal.
+                    </p>
+                    <p class="text-lg text-text-secondary mb-6 leading-relaxed ">
+                        De adolescente, mi gusto por la narrativa de videojuegos y cine me llevó a estudiar cine y guión en la Universidad Nacional de las Artes (UNA). Luego amplié mis estudios hacia las artes multimediales en la UNA, sumergiéndome en una etapa de experimentación artística y conceptual. Esta multidisciplina se convirtió en mi manera de unir diversos intereses que ya venía teniendo y explorar nuevas formas de expresión.
+                    </p>
+                    <h4 class="font-title text-xl text-text-title mb-4">Algunos de los campos que me gusta explorar:</h4>
+                    <div class="flex flex-wrap gap-2 justify-start"> 
+                        <span class="interest-tag">Cine</span>
+                        <span class="interest-tag">Música Psicodélica</span>
+                        <span class="interest-tag">Video Feedback</span>
+                        <span class="interest-tag">Geometría Fractal</span>
+                        <span class="interest-tag">Cyberpunk</span>
+                        <span class="interest-tag">Anime</span>
+                        <span class="interest-tag">Psytrance</span>
+                        <span class="interest-tag">Internet</span>
+                        <span class="interest-tag">Computación</span>
+                        <span class="interest-tag">Metafísica</span>
+                        <span class="interest-tag">Cerámica</span>
+                        <span class="interest-tag">Fractales</span>
+                        <span class="interest-tag">Espiritualidad</span>
+                        <span class="interest-tag">Daoísmo</span>
+                        <span class="interest-tag">Inteligencia Artificial</span>
+                        <span class="interest-tag">Desarrollo Web</span>
+                        <span class="interest-tag">Narrativa</span>
+                        <span class="interest-tag">Experimentación Audiovisual</span>
+                        <span class="interest-tag">Política</span>
+                        <span class="interest-tag">Artes Plásticas</span>
+                        <span class="interest-tag">Microscopía</span>
+                        <span class="interest-tag">Psicodelia</span>
+                        <span class="interest-tag">Estados de conciencia alterado</span>
+                        <span class="interest-tag">Pintura rupestre</span>
+
+                    </div><br>
+                     <p class="text-lg text-text-secondary mb-6 leading-relaxed ">
+            
+                        En la UNA Miltimediales, conocí a Gumersindo Serrano Gomez, gran profesor de Artes Multimediales, que me acercó un concepto que debía llegarme en la vida: la metafísica. Yo venía trabajando con fractales y el desarrollo audiovisual abstracto, incluso a través de la técnica de videofeedback donde se puede apreciar la geometría fractal en movimiento,  la física de la luz y dejar a la mente libre para que interprete lo que ve. Pero todo esto necesita un sentido, un propósito, y Gumer me recomendó leer a Rene Guenon, y de ahí surge otra forma de ver el mundo, una forma de entender la espiritualidad y la metafísica que me ha acompañado desde entonces.
+                    </p>
+                    <p class="text-lg text-text-secondary mb-6 leading-relaxed ">
+                    Tanto Rene Guenon como Frithjof Schuon, me ha influenciado en mi búsqueda espiritual. Sus obra guian a través de la comprensión de la tradición esotérica y la espiritualidad universal como ningun otro autor lo había hecho antes. Así podría seguir nombrando más, y lo haré a medida que vaya teniendo el tiempo para seguir actualizando este párrafo.</p>
+                </div>
+            </section>
+
+        <section id="galeria" class="mb-16 md:mb-20 fade-in">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            
+            <a href="img-mias/001.jpg" class="glightbox" data-gallery="mi-galeria">
+                <img src="img-mias/001.jpg" alt="Descripción de imagen 1" class="rounded-md shadow-lg object-cover w-full h-48 md:h-56 hover:opacity-80 transition-opacity duration-300">
+            </a>
+
+            <a href="img-mias/002.jpg" class="glightbox" data-gallery="mi-galeria">
+                <img src="img-mias/002.jpg" alt="Descripción de imagen 2" class="rounded-md shadow-lg object-cover w-full h-48 md:h-56 hover:opacity-80 transition-opacity duration-300">
+            </a>
+            <a href="img-mias/003.jpg" class="glightbox" data-gallery="mi-galeria">
+                <img src="img-mias/003.jpg" alt="Descripción de imagen 2" class="rounded-md shadow-lg object-cover w-full h-48 md:h-56 hover:opacity-80 transition-opacity duration-300">
+            </a>
+            <a href="img-mias/004.jpg" class="glightbox" data-gallery="mi-galeria">
+                <img src="img-mias/004.jpg" alt="Descripción de imagen 2" class="rounded-md shadow-lg object-cover w-full h-48 md:h-56 hover:opacity-80 transition-opacity duration-300">
+            </a>
+
+            </div>
+                </div>
+            </section>
+
+        <section id="formacion-practica" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
+                <div class="max-w-3xl mx-auto">
+                    <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Mi Formación y Práctica</h3>
+                    <p class="text-lg text-ink mb-4 leading-relaxed ">
+                        Siempre estuve en diversas áreas, desde el soporte técnico de computadoras, producción audiovisual hasta el desarrollo web, incluso he tenido la experiencia de trabajar durante años como soporte multimedial para usuarios de microscopíos.
+                        Sin embargo, encuentro más pasión en la búsqueda de un sentido más profundo de la vida y el bienestar integral. Eso no quita que haya dejado lo otro, sino que he ido integrando mis conocimientos y habilidades en un camino multidisplinario.
+                    </p>
+<p class="text-lg text-ink mb-4 leading-relaxed "> Durante los últimos años, estoy centrando mi formación en integrar cuerpo y energía a través de disciplinas como el <i>Qìgōng (occidentalmente se le escribe y pronuncia erroneamente Chi Kung):</i> Prácticas respiratorias y de movimiento para cultivar, circular y equilibrar el Qì (energía vital); y el <i>Tàijíquán (erroneamente escrito Tai Chi Chuan):</i> Arte marcial interna enfocado en la suavidad, la meditación en movimiento y la armonía cuerpo-mente.
+                    </p>
+<p class="text-lg text-ink mb-4 leading-relaxed "> Empecé estas disciplinas en Julio 2022 en la escuela <a href="https://www.qingmotiyu.com/" target="_blank" rel="noopener noreferrer" class="text-text-main hover:underline font-medium">Qīng Mò Tǐyù</a>, con el director Gustavo Salvato.
+                        A fecha de hoy curso el profesorado de Qìgōng y Tàijíquán, y participo activamente en prácticas grupales.
+                    </p>
+<p class="text-lg text-ink mb-4 leading-relaxed "> Paralelamente, estoy estudiando y practicando por mi cuenta <i>Tuina (An Mo):</i> Masaje terapéutico manual basado en los principios de la Medicina Tradicional China, que incluye técnicas de digitopresión y acupresión para aliviar tensiones y reactivar el flujo energético.
+                    </p>
+<p class="text-lg text-ink mb-4 leading-relaxed ">Entre otras otros temas, no puedo dejar de mencionar la Inteligencia Artificial, que me facina y aterroriza. Actualmente estoy desarrollando y brindando el servicio de proyectos con asistentes GPT personalizados, aplicando mis conocimientos de multiples disciplinas para crear herramientas que facilitan el acceso a saberes complejos, organizando información y ofrececiendo sistemas de consulta interactivos.
+                    </p>
+                </div>
+        </section>
+
+        <section id="lo-que-ofrezco" class="py-12 md:py-16 section-bg-paper fade-in" style="animation-delay: 0.6s;">
+            <div class="container mx-auto px-6">
+                <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Lo Que Ofrezco Hoy</h3>
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <div>
+                        <h4 class="font-title text-xl text-text-title mb-2 flex items-center"><i class="fas fa-yin-yang text-text-main mr-3"></i>Clases de Tàijíquán y Qígōng</h4>
+                        <p class="text-lg text-text-secondary leading-relaxed ">
+                            Ofrezco clases particulares, tanto presenciales como virtuales, adaptadas a las necesidades individuales. Estas prácticas están orientadas a personas que buscan mejorar su salud, reducir el estrés, y también a quienes desean profundizar en la práctica energética y meditativa de estas artes daoístas.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-title text-xl text-text-title mb-2 flex items-center"><i class="fas fa-spa text-text-main mr-3"></i>Sesiones de Masaje Terapéutico</h4>
+                       <p class="text-lg text-text-secondary leading-relaxed ">
+                            Realizo sesiones de masaje terapéutico integrando técnicas de digitopresión, acupresión y abordajes propios de la Medicina Tradicional China. El enfoque está puesto en la circulación del Qì y el logro de un bienestar integral.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-title text-xl text-text-title mb-2 flex items-center"><i class="fas fa-robot text-text-main mr-3"></i>Desarrollo con Asistentes GPT</h4>
+                       <p class="text-lg text-text-secondary leading-relaxed ">
+                            En el ámbito digital, me dedico a crear asistentes GPT a medida, integrando saberes de distintas disciplinas como la medicina tradicional china, Qìgōng y Tàijíquán. Estas soluciones permiten simplificar el acceso a información especializada, organizar contenidos y brindar plataformas de consulta interactiva adaptadas a cada necesidad.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-title text-xl text-text-title mb-2 flex items-center"><i class="fas fa-microscope text-text-main mr-3"></i>Mantenimiento de Microscopios</h4>
+                        <p class="text-lg text-text-secondary leading-relaxed ">
+                            En un ámbito diferente, también ofrezco servicios de mantenimiento de microscopios, incluyendo limpieza integral (mecánica y óptica) y consultoría particular. Es algo que hice y seguiré haciendo, que me ha permitido combinar mi interés por la tecnología y las manualidades finas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <footer class="footer-manuscript py-10 mt-0 text-center" style="border-top-color: var(--color-border-subtle);">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-center space-x-8 mb-4">
+            <a href="https://goo.gl/maps/2y9w8n3v6v8v8v8" target="_blank" class="text-red-600 hover:text-red-700 transition duration-300 text-2xl" title="Ver ubicación en Google Maps">
+                <i class="fas fa-map-marker-alt"></i>
+            </a>
+            <a href="mailto:rodrigoarielpizarro@outlook.com" class="text-blue-500 hover:text-blue-600 transition duration-300 text-2xl" title="Enviar email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+5491138733447" class="text-green-600 hover:text-green-700 transition duration-300 text-2xl" title="Llamar por teléfono">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+            <a href="https://wa.me/5491138733447?text=Hola%2C%20quisiera%20consultar%20sobre..." target="_blank" class="text-green-500 hover:text-green-600 transition duration-300 text-2xl" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/rechazaloultimo/" target="_blank" class="text-pink-600 hover:text-pink-700 transition duration-300 text-2xl" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@rechazaloultimo" target="_blank" class="text-red-600 hover:text-red-700 transition duration-300 text-2xl" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+       <p class="text-sm text-text-secondary mb-4">© <span id="currentYear"></span> Sitio creado por Rodrigo Pizarro. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/glightbox-init.js"></script>
+</body>
+</html>
