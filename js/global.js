@@ -1,12 +1,3 @@
-// Variable global para indicar si reCAPTCHA está cargado
-let recaptchaReady = false;
-
-// Función global que se llama cuando la API de reCAPTCHA está completamente cargada
-// Se asigna a window para asegurar que reCAPTCHA la encuentre globalmente.
-window.onRecaptchaLoad = function() { // ¡Asegúrate de que está asignado a window!
-    console.log('API de reCAPTCHA v3 cargada y lista.');
-    recaptchaReady = true;
-};
 
 // Helper para mostrar errores en campos de formulario
 function showError(fieldOrId, message) {
@@ -19,8 +10,7 @@ function showError(fieldOrId, message) {
         email: document.getElementById('err-email'),
         telefono: document.getElementById('err-telefono'),
         asunto: document.getElementById('err-asunto'),
-        mensaje: document.getElementById('err-mensaje'),
-        recaptcha: document.getElementById('err-recaptcha')
+        mensaje: document.getElementById('err-mensaje')
     };
 
     if (errorSpans[errorSpanId]) {
@@ -43,8 +33,7 @@ function clearError(fieldOrId) {
         email: document.getElementById('err-email'),
         telefono: document.getElementById('err-telefono'),
         asunto: document.getElementById('err-asunto'),
-        mensaje: document.getElementById('err-mensaje'),
-        recaptcha: document.getElementById('err-recaptcha')
+        mensaje: document.getElementById('err-mensaje')
     };
 
     if (errorSpans[errorSpanId]) {
