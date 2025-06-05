@@ -52,11 +52,3 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 });
-
-// Deshabilitar menú contextual y copia (se mantiene global por su naturaleza)
-document.addEventListener('contextmenu', function(event) {
-    event.preventDefault();
-});
-document.addEventListener('copy', function(event) {
-    event.preventDefault();
-});
