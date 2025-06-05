@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>index.html</loc></url>
-  <url><loc>acerca-de-mi.html</loc></url>
-  <url><loc>clases-presenciales.html</loc></url>
-  <url><loc>masajes-terapeuticos.html</loc></url>
-  <url><loc>asistentes-ia.html</loc></url>
-  <url><loc>aulavirtual.html</loc></url>
+  <url>
+    <loc>https://rechazaloultimo.github.io/index.html</loc>
+    <lastmod>2025-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://rechazaloultimo.github.io/acerca-de-mi.html</loc>
+    <lastmod>2025-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://rechazaloultimo.github.io/clases-presenciales.html</loc>
+    <lastmod>2025-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://rechazaloultimo.github.io/masajes-terapeuticos.html</loc>
+    <lastmod>2025-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://rechazaloultimo.github.io/asistentes-ia.html</loc>
+    <lastmod>2025-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://rechazaloultimo.github.io/aulavirtual.html</loc>
+    <lastmod>2025-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://rechazaloultimo.github.io/404.html</loc>
+    <lastmod>2025-06-05</lastmod>
+  </url>
 </urlset>
