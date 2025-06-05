@@ -1,7 +1,0 @@
-{
-  "event": {
-    "token": "grecaptcha.enterprise.execute()",
-    "expectedAction": "grecaptcha.enterprise.execute()",
-    "siteKey": "6LeHYlUrAAAAAJ-YEJZX61d4-JaikMLVePc8XFMU"
-  }
-}
