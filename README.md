@@ -4,17 +4,19 @@ Este repositorio contiene el código fuente del sitio personal de Rodrigo Pizarr
 
 ## Estructura del proyecto
 
-- `index.html` – página de inicio.
-- `acerca-de-mi.html` – información personal.
-- `clases-presenciales.html` – detalles de clases y talleres.
-- `masajes-terapeuticos.html` – masajes Tuina y An Mo.
-- `asistentes-ia.html` – asistentes de inteligencia artificial.
-- `aulavirtual.html` – acceso al aula virtual.
-- `404.html` – página de error.
-- `js/` – archivos JavaScript (navegación, animaciones, etc.).
-- `style.css` – hoja de estilos principal.
-- `img-mias/`, `img-gallery/` y `background/` – recursos gráficos.
-- `robots.txt` y `sitemap.xml` – archivos para SEO.
+Todo el contenido estático vive en la carpeta `public/`.
+
+- `public/index.html` – página de inicio.
+- `public/acerca-de-mi.html` – información personal.
+- `public/clases-presenciales.html` – detalles de clases y talleres.
+- `public/masajes-terapeuticos.html` – masajes Tuina y An Mo.
+- `public/asistentes-ia.html` – asistentes de inteligencia artificial.
+- `public/aulavirtual.html` – acceso al aula virtual.
+- `public/404.html` – página de error.
+- `public/js/` – archivos JavaScript (navegación, animaciones, etc.).
+- `public/style.css` – hoja de estilos principal.
+- `public/img-mias/`, `public/img-gallery/` y `public/background/` – recursos gráficos.
+- `public/robots.txt` y `public/sitemap.xml` – archivos para SEO.
 
 El diseño usa [Tailwind CSS](https://tailwindcss.com/) y fuentes alojadas mediante CDN.
 
@@ -22,7 +24,7 @@ El diseño usa [Tailwind CSS](https://tailwindcss.com/) y fuentes alojadas media
 
 El sitio es estático y puede hospedarse en cualquier servidor web o en GitHub Pages.
 
-Para probarlo de forma local ejecuta un servidor simple desde la raíz del proyecto:
+Para probarlo de forma local ejecuta un servidor simple dentro de `public/`:
 
 ```bash
 python3 -m http.server
