@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "rlu-web-github",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
