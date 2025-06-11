@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Verifica si GLightbox está disponible
     if (typeof GLightbox !== 'function') {
-        console.warn('GLightbox no está cargado.');
+        // console.warn('GLightbox no está cargado.');
         return;
     }
 
     // Verifica si existen elementos con el selector
     const lightboxElements = document.querySelectorAll('.glightbox');
     if (lightboxElements.length === 0) {
-        console.info('No se encontraron elementos .glightbox en la página.');
+        // console.info('No se encontraron elementos .glightbox en la página.');
         return;
     }
 
@@ -36,14 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Ejemplo de eventos adicionales
     lightbox.on('open', () => {
-        console.log('GLightbox abierto');
+        // console.log('GLightbox abierto');
     });
 
     lightbox.on('close', () => {
-        console.log('GLightbox cerrado');
+        // console.log('GLightbox cerrado');
     });
 
     lightbox.on('slide_changed', ({ prev, current }) => {
-        console.log('Slide cambiado:', { prev, current });
+        // console.log('Slide cambiado:', { prev, current });
     });
 });
