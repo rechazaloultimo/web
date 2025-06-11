@@ -52,3 +52,38 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 });
+
+document.querySelectorAll('.audio-btn').forEach(btn => {
+  let audio = null;
+  const label = btn.querySelector('.audio-label');
+  const textoEscuchar = 'Escuchar el contenido';
+  const textoParar    = 'Parar el contenido';
+
+  btn.addEventListener('click', function () {
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+      audio = null;
+      btn.classList.remove('playing');
+      label.textContent = textoEscuchar;
+      return;
+    }
+
+    audio = new Audio(btn.dataset.audio);
+    audio.play();
+    btn.classList.add('playing');
+    label.textContent = textoParar;
+
+    audio.addEventListener('ended', function () {
+      btn.classList.remove('playing');
+      label.textContent = textoEscuchar;
+      audio = null;
+    });
+
+    audio.addEventListener('pause', function () {
+      btn.classList.remove('playing');
+      label.textContent = textoEscuchar;
+      audio = null;
+    });
+  });
+});
