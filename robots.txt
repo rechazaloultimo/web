@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rechazaloultimo.web.app/sitemap.xml
+Sitemap: https://rodrigopizarro.com.ar/sitemap.xml
