@@ -505,3 +505,15 @@ input, select, textarea, button {
   50% { transform: scale(1.13);}
   100% { transform: scale(1);}
 }
+
+@layer utilities {
+  .section-bg-dynamic {
+    background-color: var(--color-chinese-seal-red) !important;
+    color: #fff !important;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark-mode .section-bg-dynamic {
+    background-color: var(--color-dm-chinese-seal-red) !important;
+    color: #000 !important;
+  }
+}
