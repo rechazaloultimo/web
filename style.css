@@ -2260,3 +2260,8 @@ input, select, textarea, button {
     line-height: 1.5rem;
   }
 }
+
+/* Solo devolvemos el color blanco a los títulos dentro de cualquier hero */
+.hero-fullscreen-bg .font-title {
+  color: inherit !important;
+}

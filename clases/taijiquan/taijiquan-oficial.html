@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formas oficiales y modernas de Tàijíquán reconocidas en competición y enseñanza: historia, nombres en chino y pinyin, traducción, beneficios y aplicaciones marciales.">
+    <title>Formas Oficiales y Modernas de Tàijíquán | Rodrigo Pizarro</title>
+    <!-- Google fonts used throughout the site -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind generated styles for the site -->
+    <link rel="stylesheet" href="../../style.css">
+    <!-- Lightbox styles (used in other sections) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+</head>
+<body class="rice-paper-bg">
+    <!-- Navegación principal -->
+    <nav aria-label="Navegación principal" id="mainNav" class="nav-transparent fixed w-full z-50 top-0 transition-all duration-300 ease-out">
+        <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <a href="index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
+            <div class="flex items-center">
+                <!-- enlaces de navegación en escritorio -->
+                <div id="mainNavMenu" class="hidden md:flex items-center space-x-3 lg:space-x-4">
+                    <a href="index.html#bienvenida" class="transition duration-300 text-sm lg:text-base">Inicio</a>
+                    <a href="acerca-de-mi.html" class="transition duration-300 text-sm lg:text-base">Sobre Mí</a>
+                    <a href="clases.html" class="transition duration-300 text-sm lg:text-base">Clases</a>
+                    <a href="asistentes-ia.html" class="transition duration-300 text-sm lg:text-base">Asistentes&nbsp;IA</a>
+                    <a href="aulavirtual.html" class="transition duration-300 text-sm lg:text-base">Aula&nbsp;Virtual</a>
+                    <a href="index.html#contacto" class="transition duration-300 text-sm lg:text-base">Contacto</a>
+                </div>
+                <!-- icono de WhatsApp -->
+                <a href="https://api.whatsapp.com/send/?phone=5491138733447&amp;text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp" class="p-2 focus:outline-none text-lg rounded-none" id="whatsapp-nav-icon">
+                    <i aria-hidden="true" class="fab fa-whatsapp"></i>
+                </a>
+                <!-- botón de cambio de tema -->
+                <button id="theme-toggle" type="button" title="Cambiar tema" class="p-2 focus:outline-none text-lg rounded-none">
+                    <i aria-hidden="true" class="fas fa-sun" id="theme-toggle-sun-icon"></i>
+                    <i aria-hidden="true" class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
+                </button>
+                <!-- botón para menú en dispositivos móviles -->
+                <div class="md:hidden ml-2">
+                    <button id="mobile-menu-button" class="focus:outline-none p-2" aria-expanded="false" aria-controls="mobile-menu">
+                        <span class="block h-0.5 w-6 bg-current my-1"></span>
+                        <span class="block h-0.5 w-6 bg-current my-1"></span>
+                        <span class="block h-0.5 w-6 bg-current"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- menú de navegación en móviles -->
+        <div id="mobile-menu" class="md:hidden hidden shadow-lg py-2 border-t">
+            <a href="index.html#bienvenida" class="block px-6 py-3 text-base transition duration-300 text-right">Inicio</a>
+            <a href="acerca-de-mi.html" class="block px-6 py-3 text-base transition duration-300 text-right">Sobre&nbsp;Mí</a>
+            <a href="clases.html" class="block px-6 py-3 text-base transition duration-300 text-right">Clases de Qígōng&nbsp;Tàijíquán</a>
+            <a href="asistentes-ia.html" class="block px-6 py-3 text-base transition duration-300 text-right">Asistentes&nbsp;IA</a>
+            <a href="aulavirtual.html" class="block px-6 py-3 text-base transition duration-300 text-right">Aula&nbsp;Virtual</a>
+            <a href="index.html#contacto" class="block px-6 py-3 text-base transition duration-300 text-right">Contacto</a>
+        </div>
+    </nav>
+    
+    <!-- Portada de la forma -->
+    <header class="hero-fullscreen-bg hero-clases-bg hero-banner h-screen flex flex-col items-center justify-center relative">
+        <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
+            <h1 class="font-title text-5xl sm:text-6xl md:text-7xl mb-8 fade-in" style="opacity:1">Formas Oficiales y Modernas de Tàijíquán</h1>
+            <h2 class="text-xl sm:text-2xl md:text-3xl mb-12 fade-in font-title" style="animation-delay:0.2s;opacity:1">Rutinas reconocidas en competición y enseñanza</h2>
+            <p class="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-200 fade-in" style="animation-delay:0.4s;opacity:1">
+                Descubre las formas oficiales y modernas de Tàijíquán (Tai Chi Chuan) utilizadas en la enseñanza y la competición internacional. Aquí encontrarás información sobre las rutinas abreviadas y estandarizadas de diferentes familias (Yang, Chen, Wu, Sun, combinadas), su historia, estructura, nombres en chino y pinyin, traducción, beneficios y aplicaciones marciales. Estas formas han sido desarrolladas y reconocidas por organismos oficiales para facilitar el aprendizaje, la evaluación y la difusión del Tàijíquán en todo el mundo.
+            </p>
+        </div>
+        <div class="hero-loading-overlay fade-out"><div class="hero-spinner"></div></div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main id="main-content">
+        <!-- Historia breve -->
+        <section class="container mx-auto px-6 md:px-8 py-16">
+            <h2 class="font-title text-3xl md:text-4xl mb-8">Historia muy breve</h2>
+            <p class="mb-4">Esta serie abreviada de la familia&nbsp;Yang combina ocho posturas tradicionales con un inicio (<em>Qǐ&nbsp;shì</em>) y un cierre (<em>Shōu&nbsp;shì</em>) para cumplir con los requisitos formales de rutina completa. Su desarrollo y difusión siguen varias etapas documentadas:</p>
+            <ul class="list-disc pl-6 space-y-3 text-base md:text-lg">
+                <li><strong>Finales de los&nbsp;90:</strong> dentro del programa estatal <em>“Deporte para Todos”</em>, entrenadores vinculados a la Asociación China de Wushu y universidades diseñaron rutinas cortas de ocho y dieciséis movimientos para facilitar la enseñanza al público. Estas versiones reducidas responden al objetivo de adaptar el Tàijíquán tradicional a la vida urbana.</li>
+                <li><strong>2009:</strong> la prensa deportiva china difundió un listado fijo de ocho posturas con los mismos nombres que se presentan aquí, consolidando esta rutina como módulo básico o <em>de salón</em> para practicantes principiantes【804464837871227†L248-L283】.</li>
+                <li><strong>2009 en adelante:</strong> con la formalización del Sistema de Duanwei, los manuales oficiales de la Asociación China de Wushu establecen que toda rutina debe incluir un comienzo y un cierre. Las directrices de evaluación indican que <em>“la rutina completa debe tener Qǐ shì y Shōu shì; quien no complete la rutina no puede repetirla ni obtener puntuación”</em>【496444223110129†L1126-L1132】. El manual <em>Yang’s Taijiquan</em> publicado por el Instituto de Investigación de Wushu en 2009 (reeditado en 2019) y aprobado por la Asociación China de Wushu sirve como texto base para exámenes【795409761727519†L94-L96】.</li>
+            </ul>
+        </section>
+
+        <!-- Lista de movimientos -->
+        <section class="container mx-auto px-6 md:px-8 pb-16">
+            <h2 class="font-title text-3xl md:text-4xl mb-12">Los 10 movimientos</h2>
+            <!-- Movimiento 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-start">
+                <div class="md:col-span-1">
+                    <!-- Imagen o video en bucle -->
+                    <img src="placeholder_light_gray_block.png" alt="Inicio – Qǐ shì" class="w-full h-auto rounded-lg shadow-lg" />
+                </div>
+                <div class="md:col-span-2 flex flex-col space-y-4">
+                    <h3 class="font-title text-2xl">起势 – Qǐ shì</h3>
+                    <p class="font-semibold">Traducción: Comienzo / «alzar la forma»</p>
+                    <p>Beneficios terapéuticos: esta postura inicial centra la atención, regula la respiración y ayuda a establecer una alineación adecuada del cuerpo. La práctica del Tàijíquán —incluso en formas abreviadas— se asocia con mejoras en la fuerza, la flexibilidad y el equilibrio【125762878913948†L67-L101】.</p>
+                    <p>Aplicación marcial: sirve como postura de preparación para fijar el eje y tomar conciencia del entorno antes de ejecutar técnicas defensivas u ofensivas.</p>
+                </div>
+            </div>
+            <!-- Movimiento 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-start">
+                <div class="md:col-span-1">
+                    <img src="placeholder_light_gray_block.png" alt="Juǎn gōng shì" class="w-full h-auto rounded-lg shadow-lg" />
+                </div>
+                <div class="md:col-span-2 flex flex-col space-y-4">
+                    <h3 class="font-title text-2xl">卷肱势&nbsp;–&nbsp;Juǎn&nbsp;gōng&nbsp;shì / Dào&nbsp;juǎn&nbsp;gōng</h3>
+                    <p class="font-semibold">Traducción: «Enrollar el antebrazo / retroceder el mono»</p>
+                    <p>Beneficios terapéuticos: coordina la rotación de la cintura y los brazos, favoreciendo la movilidad de la columna y la estabilidad de las piernas. Las transiciones lentas y circulares propias del tai chi no fuerzan las articulaciones y permiten que los músculos se mantengan relajados【125762878913948†L92-L100】.</p>
+                    <p>Aplicación marcial: consiste en replegar el brazo para desviar un ataque y retroceder con paso controlado, aprovechando el giro de la cintura para neutralizar la fuerza del oponente.</p>
+                </div>
+            </div>
+            <!-- Movimiento 3 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-start">
+                <div class="md:col-span-1">
+                    <img src="placeholder_light_gray_block.png" alt="Lǒu xī ào bù" class="w-full h-auto rounded-lg shadow-lg" />
+                </div>
+                <div class="md:col-span-2 flex flex-col space-y-4">
+                    <h3 class="font-title text-2xl">搂膝拗步&nbsp;–&nbsp;Lǒu&nbsp;xī&nbsp;ào&nbsp;bù</h3>
+                    <p class="font-semibold">Traducción: Cepillar la rodilla y paso en torsión</p>
+                    <p>Beneficios terapéuticos: fortalece las piernas al realizar un paso avanzado con giro de la cadera y cepillado del brazo, trabajando coordinación y equilibrio. La investigación sugiere que las rutinas de tai chi, aunque suaves, contribuyen a la fuerza muscular tanto del tren inferior como superior【125762878913948†L195-L204】.</p>
+                    <p>Aplicación marcial: la mano que cepilla desvía el ataque hacia un lado mientras el paso torsionado permite entrar y empujar al adversario con el otro brazo.</p>
+                </div>
+            </div>
+            <!-- Movimiento 4 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-start">
+                <div class="md:col-span-1">
+                    <img src="placeholder_light_gray_block.png" alt="Yě mǎ fēn zōng" class="w-full h-auto rounded-lg shadow-lg" />
+                </div>
+                <div class="md:col-span-2 flex flex-col space-y-4">
+                    <h3 class="font-title text-2xl">野马分鬃&nbsp;–&nbsp;Yě&nbsp;mǎ&nbsp;fēn&nbsp;zōng</h3>
+                    <p class="font-semibold">Traducción: Partir la crin del caballo salvaje</p>
+                    <p>Beneficios terapéuticos: refuerza la coordinación de manos y pies al efectuar un avance lateral con brazos que se abren, mejorando la amplitud torácica y la estabilidad del tronco. El tai chi enfatiza movimientos circulares y sin esfuerzo, lo que favorece el flujo de energía y la flexibilidad【125762878913948†L92-L100】.</p>
+                    <p>Aplicación marcial: se utiliza para desviar o desequilibrar al oponente empujando en diagonal como si se dividiera la crin de un caballo, aprovechando la sincronización de ambos brazos.</p>
+                </div>
+            </div>
+            <!-- Movimiento 5 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-start">
+                <div class="md:col-span-1">
+                    <img src="placeholder_light_gray_block.png" alt="Yún shǒu" class="w-full h-auto rounded-lg shadow-lg" />
+                </div>
+                <div class="md:col-span-2 flex flex-col space-y-4">
+                    <h3 class="font-title text-2xl">云手&nbsp;–&nbsp;Yún&nbsp;shǒu</h3>
+                    <p class="font-semibold">Traducción: Manos como nubes</p>
+                    <p>Beneficios terapéuticos: fomenta la movilidad de hombros y caderas con movimientos circulares amplios mientras se traslada lateralmente. Este patrón de respiración profunda y movimientos fluidos es característico del tai chi como “meditación en movimiento”【125762878913948†L86-L96】.</p>
+                    <p>Aplicación marcial: los giros de manos desvían ataques y permiten tomar el control de la muñeca del oponente, mientras el paso lateral crea un ángulo seguro.</p>
+                </div>
+            </div>
+            <!-- Movimiento 6 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-start">
+                <div class="md:col-span-1">
+                    <img src="placeholder_light_gray_block.png" alt="Jīn jī dú lì" class="w-full h-auto rounded-lg shadow-lg" />
+                </div>
+                <div class="md:col-span-2 flex flex-col space-y-4">
+                    <h3 class="font-title text-2xl">金鸡独立&nbsp;–&nbsp;Jīn&nbsp;jī&nbsp;dú&nbsp;lì</h3>
+                    <p class="font-semibold">Traducción: Gallo dorado en una pierna</p>
+                    <p>Beneficios terapéuticos: este equilibrio sobre una pierna mejora la propiocepción y el control postural. Estudios muestran que el tai chi ayuda a entrenar la conciencia corporal y reduce el riesgo de caídas al trabajar fuerza y flexibilidad【125762878913948†L195-L214】.</p>
+                    <p>Aplicación marcial: al levantar la rodilla, se intercepta una patada o se prepara una contra técnica, mientras la mano elevada protege la cabeza.</p>
+                </div>
+            </div>
+            <!-- Movimiento 7 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-start">
+                <div class="md:col-span-1">
+                    <img src="placeholder_light_gray_block.png" alt="Dēng jiǎo" class="w-full h-auto rounded-lg shadow-lg" />
+                </div>
+                <div class="md:col-span-2 flex flex-col space-y-4">
+                    <h3 class="font-title text-2xl">蹬脚&nbsp;–&nbsp;Dēng&nbsp;jiǎo</h3>
+                    <p class="font-semibold">Traducción: Patada de talón</p>
+                    <p>Beneficios terapéuticos: fortalece los músculos de las piernas y mejora la movilidad de la cadera al ejecutar una patada controlada. Al igual que otras posturas, la ejecución lenta y consciente evita tensiones innecesarias y mejora la estabilidad del tronco【125762878913948†L92-L100】.</p>
+                    <p>Aplicación marcial: se utiliza para atacar con el talón a la rodilla o el torso del oponente manteniendo la guardia con las manos.</p>
+                </div>
+            </div>
+            <!-- Movimiento 8 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-start">
+                <div class="md:col-span-1">
+                    <img src="placeholder_light_gray_block.png" alt="Lǎn què wěi" class="w-full h-auto rounded-lg shadow-lg" />
+                </div>
+                <div class="md:col-span-2 flex flex-col space-y-4">
+                    <h3 class="font-title text-2xl">揽雀尾&nbsp;–&nbsp;Lǎn&nbsp;què&nbsp;wěi</h3>
+                    <p class="font-semibold">Traducción: Acariciar la cola del gorrión (incluye <em>péng–lǔ–jǐ–àn</em>)</p>
+                    <p>Beneficios terapéuticos: al integrar varias energías fundamentales (desviar, retroceder, presionar y empujar) se ejercita la coordinación de todo el cuerpo y se fortalece la musculatura central. Practicar este conjunto de movimientos contribuye a mejorar la fuerza del tren superior e inferior sin necesidad de usar pesas【125762878913948†L195-L205】.</p>
+                    <p>Aplicación marcial: este módulo enseña a neutralizar la fuerza entrante (péng), absorber y redirigir (lǔ), presionar hacia el centro (jǐ) y finalmente empujar (àn), demostrando cómo combinar defensa y ataque en un flujo continuo.</p>
+                </div>
+            </div>
+            <!-- Movimiento 9 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-start">
+                <div class="md:col-span-1">
+                    <img src="placeholder_light_gray_block.png" alt="Shí zì shǒu" class="w-full h-auto rounded-lg shadow-lg" />
+                </div>
+                <div class="md:col-span-2 flex flex-col space-y-4">
+                    <h3 class="font-title text-2xl">十字手&nbsp;–&nbsp;Shí&nbsp;zì&nbsp;shǒu</h3>
+                    <p class="font-semibold">Traducción: Manos en cruz</p>
+                    <p>Beneficios terapéuticos: al cruzar los brazos delante del pecho y flexionar ligeramente las rodillas se fomenta la apertura de la espalda y el ensanchamiento de los hombros, estirando suavemente la zona superior.</p>
+                    <p>Aplicación marcial: esta posición se emplea como técnica de cierre para interceptar un último ataque o neutralizar una agarrada, a la vez que prepara el cuerpo para regresar a la postura natural.</p>
+                </div>
+            </div>
+            <!-- Movimiento 10 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-start">
+                <div class="md:col-span-1">
+                    <img src="placeholder_light_gray_block.png" alt="Shōu shì" class="w-full h-auto rounded-lg shadow-lg" />
+                </div>
+                <div class="md:col-span-2 flex flex-col space-y-4">
+                    <h3 class="font-title text-2xl">收势&nbsp;–&nbsp;Shōu&nbsp;shì</h3>
+                    <p class="font-semibold">Traducción: Cierre / «recoger la forma»</p>
+                    <p>Beneficios terapéuticos: este gesto final regula la respiración y devuelve el cuerpo a la calma, ayudando a integrar la energía movilizada durante la forma. La práctica continuada del tai chi puede servir como complemento para la rehabilitación y prevención de problemas de salud【125762878913948†L103-L109】.</p>
+                    <p>Aplicación marcial: se utiliza para restablecer la distancia con el adversario después de las acciones anteriores, cerrar la rutina con una postura defensiva y volver a la neutralidad.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Scripts para tema, animaciones y lightbox (iguales al resto del sitio) -->
+    <script src="js/theme-toggle.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/glightbox-init.js" defer></script>
+</body>
+</html>
