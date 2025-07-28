@@ -40,7 +40,7 @@
     --color-dm-text-title: #FFFFFF;
     --color-dm-border-subtle: #4B5563;
     --color-dm-border-input: #525861; /* Ligeramente más claro para mejor visibilidad en fondos oscuros */
-    --color-dm-chinese-seal-red: #4ade80; /* Verde como lo tenías para el modo oscuro */
+    --color-dm-chinese-seal-red: #01c40b; /* Verde como lo tenías para el modo oscuro */
     --color-dm-chinese-seal-red-hover: #36a166; /* Verde más oscuro para hover */
     --color-dm-text-placeholder: #888c92; /* Placeholder más claro para modo oscuro */
 }

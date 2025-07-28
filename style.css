@@ -1220,11 +1220,11 @@ video {
   /* Acento principal (negro) */
   --color-accent-primary-hover: #343A40;
   /* Hover para acento principal */
-  --color-chinese-seal-red: #B30000;
+  --color-chinese-seal-red: #bd0606;
   /* Rojo Sello Chino */
-  --color-chinese-seal-red-hover: #8C0000;
+  --color-chinese-seal-red-hover: #B30000;
   /* Rojo Sello Chino Hover */
-  --color-error: #DC3545;
+  --color-error: #fffb00;
   /* Rojo para errores */
   --hero-overlay-color: rgba(0, 0, 0, 0.3);
   /* Tipografías */
@@ -1242,9 +1242,9 @@ video {
   --color-dm-border-subtle: #4B5563;
   --color-dm-border-input: #525861;
   /* Ligeramente más claro para mejor visibilidad en fondos oscuros */
-  --color-dm-chinese-seal-red: #4ade80;
+  --color-dm-chinese-seal-red: #01c40b;
   /* Verde como lo tenías para el modo oscuro */
-  --color-dm-chinese-seal-red-hover: #36a166;
+  --color-dm-chinese-seal-red-hover: #007406;
   /* Verde más oscuro para hover */
   --color-dm-text-placeholder: #888c92;
   /* Placeholder más claro para modo oscuro */
@@ -1860,7 +1860,7 @@ input, select, textarea, button {
 }
 
 #mainNav #whatsapp-nav-icon:hover {
-  color: #04eb59;
+  color: #01c40b;
 }
 
 .img-mias-top {
@@ -2265,3 +2265,32 @@ input, select, textarea, button {
 .hero-fullscreen-bg .font-title {
   color: inherit !important;
 }
+
+.section-bg-dynamic {
+    background-color: var(--color-chinese-seal-red) !important;
+    color: #fff !important;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark-mode .section-bg-dynamic {
+    background-color: var(--color-dm-chinese-seal-red) !important;
+    color: #000 !important;
+  }
+
+ /* Botones invertidos al 100% */
+.button-manuscript-inverted {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #000;    /* borde blanco */
+  color:  var(--color-text-light);              /* texto blanco */
+  background-color: #000; 
+  text-align: center;
+  font-family: var(--font-body);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.button-manuscript-inverted:hover {
+  color:            var(--color-chinese-seal-red); /* texto rojo al pasar */
+  background-color: var(--color-text-light);       /* fondo blanco al pasar */
+}
+ 
