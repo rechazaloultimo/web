@@ -28,49 +28,135 @@
 </head>
 
 <body class="rice-paper-bg">
-    <a href="#main-content" class="skip-link">Saltar al contenido</a> 
-   <nav aria-label="Navegacion principal" id="mainNav" class="nav-transparent fixed w-full z-50 top-0 transition-all duration-300 ease-out">
-    <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
-        <a href="index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+    <!-- Barra de navegación reutilizada -->
+    <nav aria-label="Navegación principal" id="mainNav" class="nav-opaque fixed w-full z-50 top-0 transition-all duration-300 ease-out">
+        <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+          <a href="index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
+          
+          <div class="flex items-center">
+            <!-- Menú Desktop -->
+            <ul id="mainNavMenu" class="hidden md:flex items-center space-x-4" role="menubar">
+              <li><a href="index.html#bienvenida">Inicio</a></li>
+              <li><a href="acerca-de-mi.html">Sobre Mí</a></li>
+              
+              <!-- Clases -->
+              <li class="nav-item-has-children">
+                <a>Clases</a>
+                <ul class="nav-submenu">
+                  <li><a href="clases/clases-presenciales.html">Presenciales</a></li>
+                  <li><a href="clases/clases-virtuales.html">Virtuales</a></li>
+                  <li><a href="clases/clases-particulares.html">Particulares</a></li>
 
-        <div class="flex items-center">
-            <div id="mainNavMenu" class="hidden md:flex items-center space-x-3 lg:space-x-4">
-                <a href="index.html#bienvenida" class="transition duration-300 text-sm lg:text-base">Inicio</a>
-                <a href="acerca-de-mi.html" class="transition duration-300 text-sm lg:text-base">Sobre Mí</a>
-                <a href="clases.html" class="transition duration-300 text-sm lg:text-base">Clases</a>
-                <a href="asistentes-ia.html" class="transition duration-300 text-sm lg:text-base">Asistentes IA</a>
-                <a href="aulavirtual.html" class="transition duration-300 text-sm lg:text-base">Aula Virtual</a>
-                <a href="index.html#contacto" class="transition duration-300 text-sm lg:text-base">Contacto</a>
-            </div>
-
-            
-            <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp" class=" p-2 focus:outline-none text-lg rounded-none" id="whatsapp-nav-icon">
-                <i aria-hidden="true" class="fab fa-whatsapp"></i>
+                </ul>
+              </li>
+      
+              <!-- Qìgōng -->
+              <li class="nav-item-has-children">
+                <a>Qìgōng</a>
+                <ul class="nav-submenu">
+                  <li><a href="clases/qigong.html">Qué es el Qìgōng</a></li>
+                  <li><a href="clases/qigong/wudangqigong.html">Wudang Qìgōng</a></li>
+                  <li><a href="clases/qigong/mawangduidaoyinshu.html">Mawangdui Daoyin Shu</a></li>
+                </ul>
+              </li>
+      
+              <!-- Tàijí -->
+              <li class="nav-item-has-children">
+                <a>Tàijí</a>
+                <ul class="nav-submenu">
+                  <li><a href="clases/taiji.html">Qué es el Tàijí</a></li>
+                  <li><a href="clases/taijiquan.html">Tàijíquán</a></li>
+                  <li><a href="clases/taijijian.html">Tàijíjiàn</a></li>
+                  <li><a href="clases/taijishan.html">Tàijíshàn</a></li>
+                  <li><a href="clases/taijidao.html">Tàijídāo</a></li>
+                </ul>
+              </li>
+      
+              <!-- Servicios -->
+              <li class="nav-item-has-children">
+                <a>Servicios</a>
+                <ul class="nav-submenu">
+                  <li><a href="asistentes-ia.html">Asistentes IA</a></li>
+                  <li><a href="aulavirtual.html">Aula Virtual</a></li>
+                </ul>
+              </li>
+      
+              <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+      
+            <!-- Icono WhatsApp -->
+            <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               title="Contactar por WhatsApp" 
+               class="p-2 focus:outline-none text-lg rounded-none" 
+               id="whatsapp-nav-icon">
+              <i aria-hidden="true" class="fab fa-whatsapp"></i>
             </a>
-
+      
+            <!-- Botón cambio de tema -->
             <button id="theme-toggle" type="button" title="Cambiar tema" class="p-2 focus:outline-none text-lg rounded-none">
-                <i aria-hidden="true" class="fas fa-sun" id="theme-toggle-sun-icon"></i>
-                <i aria-hidden="true" class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
+              <i aria-hidden="true" class="fas fa-sun" id="theme-toggle-sun-icon"></i>
+              <i aria-hidden="true" class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
             </button>
-
-            <div class="md:hidden ml-2"> 
-                <button id="mobile-menu-button" class="focus:outline-none p-2" aria-expanded="false" aria-controls="mobile-menu">
-    <span class="block h-0.5 w-6 bg-current my-1"></span>
-    <span class="block h-0.5 w-6 bg-current my-1"></span>
-    <span class="block h-0.5 w-6 bg-current"></span>
-</button>
-            </div>
+      <!-- Botón Hamburguesa + Menú Mobile -->
+    <div class="relative md:hidden ml-2">
+      <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="block h-0.5 w-6 bg-current my-1"></span>
+        <span class="block h-0.5 w-6 bg-current my-1"></span>
+        <span class="block h-0.5 w-6 bg-current"></span>
+      </button>
+    
+      <!-- Menú Mobile -->
+      <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-64 md:hidden shadow-lg rounded-lg bg-white text-right">
+        <a href="index.html#bienvenida" class="block px-4 py-2">Inicio</a>
+        <a href="acerca-de-mi.html" class="block px-4 py-2">Sobre Mí</a>
+    
+        <!-- Clases -->
+        <div class="mobile-accordion">
+          <button class="mobile-acc-btn block px-4 py-2 w-full">Clases</button>
+          <div class="mobile-acc-panel">
+            <a href="../clases/clases-presenciales.html" class="block px-4 py-2">Presenciales</a>
+            <a href="../clases/clases-virtuales.html" class="block px-4 py-2">Virtuales</a>
+          </div>
         </div>
-    </div>
-
-    <div id="mobile-menu" class="md:hidden hidden shadow-lg py-2 border-t">
-        <a href="index.html#bienvenida" class="block px-6 py-3 text-base transition duration-300 text-right">Inicio</a>
-        <a href="acerca-de-mi.html" class="block px-6 py-3 text-base transition duration-300 text-right">Sobre Mí</a>
-        <a href="clases.html" class="block px-6 py-3 text-base transition duration-300 text-right">Clases de Qígōng Tàijíquán</a>
-        <a href="asistentes-ia.html" class="block px-6 py-3 text-base transition duration-300 text-right">Asistentes IA</a>
-        <a href="aulavirtual.html" class="block px-6 py-3 text-base transition duration-300 text-right">Aula Virtual</a>
-        <a href="index.html#contacto" class="block px-6 py-3 text-base transition duration-300 text-right">Contacto</a>
+    
+        <!-- Qìgōng -->
+        <div class="mobile-accordion">
+          <button class="mobile-acc-btn block px-4 py-2 w-full">Qìgōng</button>
+          <div class="mobile-acc-panel">
+            <a href="../clases/qigong.html" class="block px-4 py-2">Qué es el Qìgōng</a>
+            <a href="../clases/qigong/wudangqigong.html" class="block px-4 py-2">Wudang Qìgōng</a>
+            <a href="../clases/qigong/mawangduidaoyinshu.html" class="block px-4 py-2">Mawangdui Daoyin Shu</a>
+          </div>
         </div>
+    
+        <!-- Tàijí -->
+        <div class="mobile-accordion">
+          <button class="mobile-acc-btn block px-4 py-2 w-full">Tàijí</button>
+          <div class="mobile-acc-panel">
+            <a href="../taiji.html" class="block px-4 py-2">Qué es el Tàijí</a>
+            <a href="../taijiquan.html" class="block px-4 py-2">Tàijíquán</a>
+            <a href="../taijijian.html" class="block px-4 py-2">Tàijíjiàn</a>
+            <a href="../taijishan.html" class="block px-4 py-2">Tàijíshàn</a>
+            <a href="../taijidao.html" class="block px-4 py-2">Tàijídāo</a>
+          </div>
+        </div>
+    
+        <!-- Servicios -->
+        <div class="mobile-accordion">
+          <button class="mobile-acc-btn block px-4 py-2 w-full">Servicios</button>
+          <div class="mobile-acc-panel">
+            <a href="../asistentes-ia.html" class="block px-4 py-2">Asistentes IA</a>
+            <a href="../aulavirtual.html" class="block px-4 py-2">Aula Virtual</a>
+          </div>
+        </div>
+    
+        <!-- Contacto -->
+        <a href="../../index.html#contacto" class="block px-4 py-2">Contacto</a>
+      </div>
+    </div>    
 </nav>
     
 <header id="bienvenida" class="hero-fullscreen-bg hero-index-bg preload-hidden hero-banner h-screen flex flex-col items-center justify-center relative">
@@ -92,46 +178,72 @@
                 Te ofrezco explorar las diferentes formas en las que combino el saber tradicional con herramientas contemporáneas para promover el bienestar y el autoconocimiento.
             </p>
             <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
+
                 <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
                     <div>
-                        <h3><i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Qígōng y Tàijíquán</h3>
-                        <p class="text-lg text-ink mb-4 leading-relaxed ">Clases presenciales y digitales para cultivar tu energía vital y encontrar el equilibrio. Explora los beneficios terapéuticos de estas artes ancestrales.
+                        <h3><i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Clases Presenciales</h3>
+                        <p class="text-lg text-ink mb-4 leading-relaxed ">Descubre las artes ancestrales del Qígōng y el Tàijíquán en clases presenciales. Aprende a cultivar tu energía vital y encontrar el equilibrio.
                         </p>
                     </div>
                     <div class="mt-auto pt-4">
-                        <a href="clases.html" class="service-link block">Ver Detalles de Clases &rarr;</a><br>
-                        <!--
-                        <a href="tecnicas-Qígōng.html" class="service-link block mt-1 text-sm">Conocer Técnicas de Qígōng &rarr;</a>
-                        <a href="tecnicas-Tàijíquán.html" class="service-link block mt-1 text-sm">Conocer Técnicas de Tajiquan &rarr;</a>
-                        -->
+                        <a href="../clases/clases-presenciales.html" class="service-link block">Ver Detalles de Clases Presenciales &rarr;</a><br>
                     </div>
                 </div>
 
+                <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
+                        <div>
+                            <h3><i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Clases Particulares</h3>
+                            <p class="text-lg text-ink mb-4 leading-relaxed ">Elegí un espacio personalizado para aprender del Qígōng y el Tàijíquán, en clases particulares.
+                            </p>
+                        </div>
+                        <div class="mt-auto pt-4">
+                            <a href="../clases/clases-particulares.html" class="service-link block">Ver Detalles de Clases Particulares &rarr;</a><br>
+                        </div>
+                    </div>
+
+                <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
+                    <div>
+                        <h3><i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Clases Virtuales de Qígōng</h3>
+                        <p class="text-lg text-ink mb-4 leading-relaxed ">Desde tu Descubre las artes ancestrales del Qígōng clases virtuales.
+                        </p>
+                    </div>
+                    <div class="mt-auto pt-4">
+                        <a href="../clases/clases-virtuales.html" class="service-link block">Ver Detalles de Clases Virtuales &rarr;</a><br>
+                    </div>
+                </div>
+
+                <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
+                    <div>
+                        <h3><i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Sistemas de Qìgōng (Chi Kung)</h3>
+                        <p class="text-lg text-ink mb-4 leading-relaxed ">Aprende sobre el Qìgōng y los diferentes sistemas que puedo enseñarte.
+                        </p>
+                    </div>
+                    <div class="mt-auto pt-4">
+                        <a href="../qigong.html" class="service-link block">Ver Detalles de Sistemas de Qìgōng &rarr;</a><br>
+                    </div>
+                </div>
+
+                <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
+                    <div>
+                        <h3><i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Tàijí (Tai Chi)</h3>
+                        <p class="text-lg text-ink mb-4 leading-relaxed ">Aprende sobre el Tàijí y sus diferentes disciplinas (Tàijíquán (Tai chi chuan), Tàijíjiàn (Tai chi espada), Tàijíshàn (Tai chi abanico), Tàijídáo (Tai chi Sable)).
+                        </p>
+                    </div>
+                    <div class="mt-auto pt-4">
+                        <a href="../taiji.html" class="service-link block">Ver Detalles de Tàijí &rarr;</a><br>
+                    </div>
+                </div>
 
                 <div class="service-card-modern fade-in" style="animation-delay: 0.6s;">
                     <div>
                         <h3><i aria-hidden="true" class="fas fa-robot text-text-main mr-3"></i>Asistentes IA GPT</h3>
-<p class="text-lg text-ink mb-4 leading-relaxed ">Descubre asistentes de inteligencia artificial especializados en filosofía daoísta, MTC y más. Herramientas innovadoras para el aprendizaje y la consulta personalizada.
+                        <p class="text-lg text-ink mb-4 leading-relaxed ">Descubre asistentes de inteligencia artificial especializados en filosofía daoísta, MTC y más. Herramientas innovadoras para el aprendizaje y la consulta personalizada.
                         </p>
                     </div>
                      <div class="mt-auto pt-4">
                         <a href="asistentes-ia.html" class="service-link block">Explorar Asistentes IA &rarr;</a>
                     </div>
                 </div>
-
-                <!-- 
-                <div class="service-card-modern fade-in hidden" style="animation-delay: 0.6s;">
-                    <div>
-                        <h3><i aria-hidden="true" class="fas fa-store text-text-main mr-3"></i>Tienda</h3>
-                        <p class="text-lg text-ink mb-4 leading-relaxed ">
-                            Explora mi tienda, donde encontrarás cursos en video y recursos materiales exclusivos para complementar el aprendizaje y profundizar en tu práctica.
-                        </p>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <a href="tienda.html" class="service-link block">En Construcción &rarr;</a>
-                    </div>
-                </div>
-                -->
 
             </div>
         </div>

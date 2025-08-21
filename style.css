@@ -1255,14 +1255,7 @@ body {
   scroll-behavior: smooth;
   color: var(--color-text-main);
   background-color: var(--color-bg-main);
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Standard */
+
   font-family: var(--font-body);
 }
 
@@ -1312,16 +1305,26 @@ a:hover {
   background-image: url('background/000.webp');
 }
 
-.hero-clases-bg {
-  background-image: url('background/006.webp');
+.hero-clases-presenciales-bg {
+  background-image: url('background/001.webp');
 }
 
-.hero-hub-bg {
+.hero-clases-virtuales-bg {
   background-image: url('background/002.webp');
 }
 
-.hero-sobre-mi-bg {
+.hero-clases-taiji-bg {
   background-image: url('background/003.webp');
+}
+
+.hero-clases-qigong-bg {
+  background-image: url('background/004.webp');
+}
+.hero-mawangdui-bg {
+  background-image: url('background/mawangduidaoyinshu.webp');
+}
+.hero-wudangqigong-bg {
+  background-image: url('background/wudangqigong.webp');
 }
 
 .hero-ia-bg {
@@ -1336,9 +1339,7 @@ a:hover {
   background-image: url('background/008.webp');
 }
 
-.hero-tienda-bg {
-  background-image: url('background/007.webp');
-}
+
 
 /* Preload overlay for hero images */
 
@@ -1523,6 +1524,68 @@ a:hover {
     opacity: 1;
   }
 }
+
+/* ===== Menú Mobile (Tailwind) ===== */
+
+/* Mostrar botón hamburguesa solo en pantallas menores a 768px */
+@media (max-width: 767px) {
+  #mobile-menu-button {
+    display: block;
+  }
+  #mainNavMenu {
+    display: none;
+  }
+}
+
+/* Ocultar botón hamburguesa en escritorio */
+@media (min-width: 768px) {
+  #mobile-menu-button {
+    display: none;
+  }
+}
+
+/* Estilo enlaces del panel mobile */
+#mobile-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+/* Botón acordeón en mobile */
+.mobile-acc-btn {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+/* Panel de submenú dentro de mobile */
+.mobile-acc-panel {
+  display: none;
+  padding-left: 1rem;
+}
+
+.mobile-accordion.open .mobile-acc-panel {
+  display: block;
+}
+
+/* Estilo de enlaces dentro de submenús mobile */
+.mobile-acc-panel a {
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* Hover para mobile */
+#mobile-menu a:hover,
+.mobile-acc-btn:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+body.dark-mode #mobile-menu a:hover,
+body.dark-mode .mobile-acc-btn:hover {
+  background-color: rgba(255,255,255,0.05);
+}
+
 
 /* Tarjeta Genérica (usada para contacto y GPTs) */
 
@@ -1973,6 +2036,236 @@ input, select, textarea, button {
   }
 }
 
+
+/* Solo devolvemos el color blanco a los títulos dentro de cualquier hero */
+.hero-fullscreen-bg .font-title {
+  color: inherit !important;
+}
+
+.section-bg-dynamic {
+    background-color: var(--color-chinese-seal-red) !important;
+    color: #fff !important;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark-mode .section-bg-dynamic {
+    background-color: var(--color-dm-chinese-seal-red) !important;
+    color: #000 !important;
+  }
+
+ /* Botones invertidos al 100% */
+.button-manuscript-inverted {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #000;    /* borde blanco */
+  color:  var(--color-text-light);              /* texto blanco */
+  background-color: #000; 
+  text-align: center;
+  font-family: var(--font-body);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.button-manuscript-inverted:hover {
+  color:            var(--color-chinese-seal-red); /* texto rojo al pasar */
+  background-color: var(--color-text-light);       /* fondo blanco al pasar */
+}
+
+/* Espaciado entre ítems del menú */
+#mainNavMenu {
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Ítems con submenú */
+.nav-item-has-children {
+  align-items: center;
+  position: relative;
+}
+
+/* Texto + flecha juntos */
+.nav-item-has-children > a {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Botón de flecha */
+.nav-parent-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-parent-btn .fa-chevron-down {
+  font-size: 0.75em;
+}
+
+/* Estado abierto: bloque continuo */
+.nav-item-has-children.open {
+  background-color: var(--color-chinese-seal-red);
+}
+body.dark-mode .nav-item-has-children.open {
+  background-color: var(--color-dm-chinese-seal-red);
+}
+
+.nav-item-has-children.open > a,
+.nav-item-has-children.open > .nav-parent-btn,
+.nav-item-has-children.open .nav-submenu a {
+  color: var(--color-text-light) !important;
+}
+body.dark-mode .nav-item-has-children.open > a,
+body.dark-mode .nav-item-has-children.open > .nav-parent-btn,
+body.dark-mode .nav-item-has-children.open .nav-submenu a {
+  color: var(--color-dm-text-title) !important;
+}
+/* Submenús: base */
+.nav-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 14rem;
+  background-color: var(--color-bg-main); /* fondo normal cuando está cerrado */
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  display: none;
+}
+
+
+body.dark-mode .nav-submenu {
+  background-color: var(--color-dm-bg-main);
+}
+
+.nav-submenu a {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-chinese-seal-red);
+}
+body.dark-mode .nav-submenu a {
+  color: var(--color-dm-chinese-seal-red);
+}
+
+/* Estado abierto: fondo y texto unificados */
+.nav-item-has-children.open > a,
+.nav-item-has-children.open > .nav-parent-btn {
+  background-color: var(--color-chinese-seal-red);
+  color: var(--color-text-light);
+}
+
+body.dark-mode .nav-item-has-children.open > a,
+body.dark-mode .nav-item-has-children.open > .nav-parent-btn {
+  background-color: var(--color-dm-chinese-seal-red);
+  color: var(--color-dm-text-title);
+}
+
+.nav-item-has-children.open > .nav-submenu {
+  display: block;
+  background-color: var(--color-chinese-seal-red);
+}
+body.dark-mode .nav-item-has-children.open > .nav-submenu {
+  background-color: var(--color-dm-chinese-seal-red);
+}
+
+/* Texto dentro del submenú en abierto */
+.nav-item-has-children.open .nav-submenu a {
+  color: var(--color-text-light);
+}
+body.dark-mode .nav-item-has-children.open .nav-submenu a {
+  color: var(--color-dm-text-title);
+}
+
+/* Hover sobre enlaces */
+.nav-submenu a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+body.dark-mode .nav-submenu a:hover {
+  background-color: rgba(0,0,0,0.15);
+}
+
+/* Hover en desktop */
+@media (hover:hover) {
+  .nav-item-has-children:hover > .nav-submenu {
+    display: block;
+  }
+}
+
+/* Submenú con el mismo estilo "papel" que el resto del sitio */
+.nav-item-has-children {
+  position: relative;
+}
+
+.nav-submenu {
+  position: absolute;
+  top: calc(100% + 1.25rem); /* distancia visual debajo de la barra */
+  left: 0;
+  min-width: 14rem;
+  border: none;
+  padding: 0;
+  background: var(--color-bg-card);
+  box-shadow: 0 4px 20px var(--color-chinese-seal-red-hover);
+  border-radius: var(--radius-lg, 0.25rem);
+  z-index: 1000;
+  display: none;
+}
+
+/* puente invisible para mantener el hover */
+.nav-item-has-children::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 1.25rem; /* igual a la separación que pusiste en top */
+  width: 100%;
+  background: transparent;
+}
+
+body.dark-mode .nav-submenu {
+  background: var(--color-dm-bg-card);
+  box-shadow: 0 4px 20px var(--color-dm-chinese-seal-red-hover);
+
+}
+
+/* mostrar submenú */
+.nav-item-has-children:hover > .nav-submenu,
+.nav-item-has-children.open > .nav-submenu {
+  display: block;
+}
+
+body.dark-mode .nav-submenu {
+  background: var(--color-dm-bg-card);
+}
+
+/* Enlaces del submenú */
+.nav-submenu a {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-text-title);
+}
+
+body.dark-mode .nav-submenu a {
+  color: var(--color-dm-text-title);
+}
+
+.nav-submenu a:hover {
+  background-color: var(--color-bg-section, rgba(0,0,0,0.04));
+}
+
+body.dark-mode .nav-submenu a:hover {
+  background-color: rgba(255,255,255,0.06);
+}
+
+/* Mostrar en hover o abierto */
+.nav-item-has-children:hover > .nav-submenu,
+.nav-item-has-children.open > .nav-submenu {
+  display: block;
+}
+
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
@@ -2261,36 +2554,46 @@ input, select, textarea, button {
   }
 }
 
-/* Solo devolvemos el color blanco a los títulos dentro de cualquier hero */
-.hero-fullscreen-bg .font-title {
-  color: inherit !important;
+/* Fuerza estilos sobre Tailwind */
+#mobile-menu {
+  position: absolute;
+  top: 100%; /* justo debajo del nav */
+  right: 0; /* alinear con el borde derecho del icono */
+  width: 14rem; /* ancho fijo para un alineado limpio */
+  background: var(--color-bg-card) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  border-radius: var(--radius-lg, 0.25rem);
+  margin-top: 1.15rem;
+  padding: 0.75rem 0;
+  border-top: none !important;
+  text-align: right;
 }
 
-.section-bg-dynamic {
-    background-color: var(--color-chinese-seal-red) !important;
-    color: #fff !important;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  body.dark-mode .section-bg-dynamic {
-    background-color: var(--color-dm-chinese-seal-red) !important;
-    color: #000 !important;
-  }
-
- /* Botones invertidos al 100% */
-.button-manuscript-inverted {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid #000;    /* borde blanco */
-  color:  var(--color-text-light);              /* texto blanco */
-  background-color: #000; 
-  text-align: center;
-  font-family: var(--font-body);
-  font-weight: 500;
-  text-decoration: none;
+body.dark-mode #mobile-menu {
+  background: var(--color-dm-bg-card) !important;
 }
 
-.button-manuscript-inverted:hover {
-  color:            var(--color-chinese-seal-red); /* texto rojo al pasar */
-  background-color: var(--color-text-light);       /* fondo blanco al pasar */
+/* Forzar alineación derecha de todos los hijos */
+#mobile-menu * {
+  text-align: right;
 }
- 
+
+#mobile-menu a,
+#mobile-menu .mobile-acc-btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+#mobile-menu a:hover,
+#mobile-menu .mobile-acc-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode #mobile-menu a:hover,
+body.dark-mode #mobile-menu .mobile-acc-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Video Mawangdui */
+#video iframe { width:100% !important; height:100% !important; display:block; }

@@ -8,12 +8,12 @@
     <title>Clases de Qígōng y Tàijíquán</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <link rel="preload" href="background/006.webp" as="image">
+    <link rel="preload" href="../background/006.webp" as="image">
     <link rel="canonical" href="https://rodrigopizarro.com.ar/clases.html">
-    <meta property="og:title" content="Clases de Qígōng y Tàijíquán - Rodrigo Pizarro">
+    <meta property="og:title" content="Clases presenciales de Qígōng y Tàijíquán - Rodrigo Pizarro">
     <meta property="og:description" content="Clases presenciales de Qígōng y Tàijíquán impartidas por Rodrigo Pizarro en Buenos Aires.">
     <meta property="og:image" content="https://rodrigopizarro.com.ar/img-mias/001.jpg">
     <meta property="og:type" content="website">
@@ -30,56 +30,138 @@
 
 <body class="rice-paper-bg">
     <a href="#main-content" class="skip-link">Saltar al contenido</a>
-<nav aria-label="Navegacion principal" id="mainNav" class="nav-transparent fixed w-full z-50 top-0 transition-all duration-300 ease-out">
-    <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
-        <a href="index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
+    <nav aria-label="Navegación principal" id="mainNav" class="nav-opaque fixed w-full z-50 top-0 transition-all duration-300 ease-out">
+        <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+          <a href="index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
+          
+          <div class="flex items-center">
+            <!-- Menú Desktop -->
+            <ul id="mainNavMenu" class="hidden md:flex items-center space-x-4" role="menubar">
+              <li><a href="index.html#bienvenida">Inicio</a></li>
+              <li><a href="acerca-de-mi.html">Sobre Mí</a></li>
+              
+              <!-- Clases -->
+              <li class="nav-item-has-children">
+                <a>Clases</a>
+                <ul class="nav-submenu">
+                  <li><a href="clases-presenciales.html">Presenciales</a></li>
+                  <li><a href="clases-virtuales.html">Virtuales</a></li>
+                  <li><a href="clases-particulares.html">Particulares</a></li>
+                </ul>
+              </li>
+      
+              <!-- Qìgōng -->
+              <li class="nav-item-has-children">
+                <a>Qìgōng</a>
+                <ul class="nav-submenu">
+                  <li><a href="qigong.html">Qué es el Qìgōng</a></li>
+                  <li><a href="wudang-qigong.html">Wudang Qìgōng</a></li>
+                  <li><a href="qigong/mawangduidaoyinshu.html">Mawangdui Daoyin Shu</a></li>
+                </ul>
+              </li>
+      
+              <!-- Tàijí -->
+              <li class="nav-item-has-children">
+                <a>Tàijí</a>
+                <ul class="nav-submenu">
+                  <li><a href="taiji.html">Qué es el Tàijí</a></li>
+                  <li><a href="taijiquan.html">Tàijíquán</a></li>
 
-        <div class="flex items-center">
-            <div id="mainNavMenu" class="hidden md:flex items-center space-x-3 lg:space-x-4">
-                <a href="index.html#bienvenida" class="transition duration-300 text-sm lg:text-base">Inicio</a>
-                <a href="acerca-de-mi.html" class="transition duration-300 text-sm lg:text-base">Sobre Mí</a>
-                <a href="clases.html" class="transition duration-300 text-sm lg:text-base">Clases</a>
-                <a href="asistentes-ia.html" class="transition duration-300 text-sm lg:text-base">Asistentes IA</a>
-                <a href="aulavirtual.html" class="transition duration-300 text-sm lg:text-base">Aula Virtual</a>
-                <a href="index.html#contacto" class="transition duration-300 text-sm lg:text-base">Contacto</a>
-            </div>
-
-            <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp" class="p-2 focus:outline-none text-lg rounded-none" id="whatsapp-nav-icon">
-                <i aria-hidden="true" class="fab fa-whatsapp"></i>
+                </ul>
+              </li>
+      
+              <!-- Servicios -->
+              <li class="nav-item-has-children">
+                <a>Servicios</a>
+                <ul class="nav-submenu">
+                  <li><a href="asistentes-ia.html">Asistentes IA</a></li>
+                  <li><a href="aulavirtual.html">Aula Virtual</a></li>
+                </ul>
+              </li>
+      
+              <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+      
+            <!-- Icono WhatsApp -->
+            <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               title="Contactar por WhatsApp" 
+               class="p-2 focus:outline-none text-lg rounded-none" 
+               id="whatsapp-nav-icon">
+              <i aria-hidden="true" class="fab fa-whatsapp"></i>
             </a>
-
+      
+            <!-- Botón cambio de tema -->
             <button id="theme-toggle" type="button" title="Cambiar tema" class="p-2 focus:outline-none text-lg rounded-none">
-                <i aria-hidden="true" class="fas fa-sun" id="theme-toggle-sun-icon"></i>
-                <i aria-hidden="true" class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
+              <i aria-hidden="true" class="fas fa-sun" id="theme-toggle-sun-icon"></i>
+              <i aria-hidden="true" class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
             </button>
-
-            <div class="md:hidden ml-2"> 
-                <button id="mobile-menu-button" class="focus:outline-none p-2" aria-expanded="false" aria-controls="mobile-menu">
-                    <span class="block h-0.5 w-6 bg-current my-1"></span>
-                    <span class="block h-0.5 w-6 bg-current my-1"></span>
-                    <span class="block h-0.5 w-6 bg-current"></span>
-                </button>
-            </div>
+      <!-- Botón Hamburguesa + Menú Mobile -->
+    <div class="relative md:hidden ml-2">
+      <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="block h-0.5 w-6 bg-current my-1"></span>
+        <span class="block h-0.5 w-6 bg-current my-1"></span>
+        <span class="block h-0.5 w-6 bg-current"></span>
+      </button>
+    
+      <!-- Menú Mobile -->
+      <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-64 md:hidden shadow-lg rounded-lg bg-white text-right">
+        <a href="../../index.html#bienvenida" class="block px-4 py-2">Inicio</a>
+        <a href="../../acerca-de-mi.html" class="block px-4 py-2">Sobre Mí</a>
+    
+        <!-- Clases -->
+        <div class="mobile-accordion">
+          <button class="mobile-acc-btn block px-4 py-2 w-full">Clases</button>
+          <div class="mobile-acc-panel">
+            <a href="../clases-presenciales.html" class="block px-4 py-2">Presenciales</a>
+            <a href="../clases-virtuales.html" class="block px-4 py-2">Virtuales</a>
+          </div>
         </div>
-    </div>
-
-    <div id="mobile-menu" class="md:hidden hidden shadow-lg py-2 border-t">
-        <a href="index.html#bienvenida" class="block px-6 py-3 text-base transition duration-300 text-right">Inicio</a>
-        <a href="acerca-de-mi.html" class="block px-6 py-3 text-base transition duration-300 text-right">Sobre Mí</a>
-        <a href="clases.html" class="block px-6 py-3 text-base transition duration-300 text-right">Clases de Qígōng Tàijíquán</a>
-        <a href="asistentes-ia.html" class="block px-6 py-3 text-base transition duration-300 text-right">Asistentes IA</a>
-        <a href="aulavirtual.html" class="block px-6 py-3 text-base transition duration-300 text-right">Aula Virtual</a>
-        <a href="index.html#contacto" class="block px-6 py-3 text-base transition duration-300 text-right">Contacto</a>
-    </div>
+    
+        <!-- Qìgōng -->
+        <div class="mobile-accordion">
+          <button class="mobile-acc-btn block px-4 py-2 w-full">Qìgōng</button>
+          <div class="mobile-acc-panel">
+            <a href="../qigong.html" class="block px-4 py-2">Qué es el Qìgōng</a>
+            <a href="../wudang-qigong.html" class="block px-4 py-2">Wudang Qìgōng</a>
+            <a href="../qigong/mawangduidaoyinshu.html" class="block px-4 py-2">Mawangdui Daoyin Shu</a>
+          </div>
+        </div>
+    
+        <!-- Tàijí -->
+        <div class="mobile-accordion">
+          <button class="mobile-acc-btn block px-4 py-2 w-full">Tàijí</button>
+          <div class="mobile-acc-panel">
+            <a href="../taiji.html" class="block px-4 py-2">Qué es el Tàijí</a>
+            <a href="../taijiquan.html" class="block px-4 py-2">Tàijíquán</a>
+            <a href="../taijijian.html" class="block px-4 py-2">Tàijíjiàn</a>
+            <a href="../taijishan.html" class="block px-4 py-2">Tàijíshàn</a>
+            <a href="../taijidao.html" class="block px-4 py-2">Tàijídāo</a>
+          </div>
+        </div>
+    
+        <!-- Servicios -->
+        <div class="mobile-accordion">
+          <button class="mobile-acc-btn block px-4 py-2 w-full">Servicios</button>
+          <div class="mobile-acc-panel">
+            <a href="../asistentes-ia.html" class="block px-4 py-2">Asistentes IA</a>
+            <a href="../aulavirtual.html" class="block px-4 py-2">Aula Virtual</a>
+          </div>
+        </div>
+    
+        <!-- Contacto -->
+        <a href="../../index.html#contacto" class="block px-4 py-2">Contacto</a>
+      </div>
+    </div>    
 </nav>
 
-
-<header id="hero-clases" class="hero-fullscreen-bg hero-clases-bg hero-banner preload-hidden h-screen flex flex-col items-center justify-center relative"> <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
+<header id="hero-clases" class="hero-fullscreen-bg hero-clases-presenciales-bg hero-banner preload-hidden h-screen flex flex-col items-center justify-center relative"> <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
         <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
-            <h1 class="font-title text-5xl sm:text-6xl md:text-7xl  mb-10 fade-in leading-snug">Clases de Qígōng y Tàijíquán</h1>
-                <h2 class="text-xl sm:text-2xl md:text-3xl mb-12 fade-in font-title" style="animation-delay: 0.2s;">Presenciales y Virtuales</h2>
+            <h1 class="font-title text-5xl sm:text-6xl md:text-7xl  mb-10 fade-in leading-snug">Clases presenciales</h1>
+                <h2 class="text-xl sm:text-2xl md:text-3xl mb-12 fade-in font-title" style="animation-delay: 0.2s;">Qìgōng y Tàijíquán</h2>
                     <p class="text-base sm:text-lg md:text-xl max-w-xl lg:max-w-2xl mx-auto mb-10 text-gray-200 fade-in" style="animation-delay: 0.4s;">
-                        Un espacio para compartir el tiempo, el cuerpo y la práctica consciente. Conecta con tu energía y encuentra el equilibrio.
+                        Encontrarás un espacio para compartir el tiempo y la práctica consciene, con tu energía y el equilibrio.
                     </p>
         </div>
     </div>
@@ -95,23 +177,13 @@
                     Descubre cómo el Qígōng y el Tàijíquán pueden enriquecer tu bienestar físico y mental.
                 </p>
             </div>
-                                <!--
-                                <div class="max-w-4xl mx-auto section-bg-paper p-6 md:p-10 rounded-none shadow-lg">
-                                    <div class="audio-block">
-                                        <button class="audio-btn" type="button" aria-label="Escuchar el contenido" data-audio="audios/ejemplo.mp3">
-                                            <i class="fas fa-volume-up icon-play"></i>
-                                            <i class="fas fa-pause icon-pause"></i>
-                                            <span class="audio-label">Escuchar el contenido</span>
-                                        </button>
-                                    </div>
-                                -->
+                <p class="text-lg text-ink mb-4 leading-relaxed">
+                    Si buscás la motivación que surgen de practicar en conjunto, te invito a mis clases grupales de Tàijíquán y Qígōng. El ambiente compartido potencia la concentración y el disfrute: practicar al conjunto y observar los mismos gestos en diferentes personas multiplica la experiencia. Cada encuentro está diseñado para que, aun dentro de la dinámica grupal, recibas indicaciones personales y ajustes que te ayuden a avanzar, mientras la presencia de otros practicantes sostiene la inspiración y el compromiso.
+                </p>
+                <p class="text-lg text-ink mb-4 leading-relaxed">
+                    No necesitás experiencia previa; solo la disposición a compartir el momento en la armonía del grupo que se forme. Las sesiones se convierten en un espacio vivo, construyendo una práctica que equilibra lo personal y lo colectivo.
+                </p>
 
-               <p class="text-lg text-ink mb-4 leading-relaxed ">
-                   Si sentís que las clases grupales no son para vos, que necesitás un espacio más íntimo, tranquilo y adaptado a tu propio ritmo, te invito a mis clases particulares de Tàijíquán y Qígōng. Están pensadas justamente para quienes valoran el silencio, el detalle, el proceso personal. No es lo mismo ver un movimiento en grupo que poder tener una corrección personal de la postura y de las dudas surgidas por la práctica. Mis clases presenciales particulares son momentos de pausa, respiración y atención, donde cada cuerpo puede explorar su propio ritmo y límites, para expandirlos a conciencia.
-                </p>
-                <p class="text-lg text-ink mb-4 leading-relaxed ">
-                        En vez de seguir a un grupo, acá se trata de encontrarte con vos mismo/a, sin apuro, sin exigencias externas, en un entorno cuidado donde cada encuentro tiene sentido. Estas prácticas no requieren experiencia previa, solo la intención de estar presente y de reconectar con algo esencial.
-                </p>
                 <p class="text-lg text-ink mb-4 leading-relaxed ">
                     Si querés acercarte a la práctica del Qìgōng o del Tàijíquán desde un lugar simple, comprometido y humano, conmigo podés empezar. En las sesiones de Qìgōng (Chi Kung) exploramos ejercicios suaves de pie y en movimiento que equilibran la energía vital (Qi), mejoran la circulación y fortalecen la conexión mente-cuerpo.
                 </p>
@@ -124,7 +196,7 @@
             </div>
         </section>
 
-        <!-- Nueva Sección para Reserva con Calendly -->
+        <!--  Calendly
     <section id="reserva-clase" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.25s;">
         <div class="max-w-3xl mx-auto px-6 md:px-10 text-center">
             <h2 class="font-title text-3xl md:text-4xl text-title-ink mb-6">Reserva tu Clase</h2>
@@ -132,35 +204,33 @@
                 Consulta mi disponibilidad y reserva tu próxima clase de Qígōng o Tàijíquán directamente aquí. Si podes seleccionar el horario, es porque está libre, asi que ¡Espero verte pronto!
             </p>
             <p class="text-sm text-text-secondary mt-4">
-                Si tienes alguna pregunta antes de reservar, no dudes en <a href="index.html#contacto" class="text-chinese-seal-red hover:underline">Contactarme</a>.
+                Si tienes alguna pregunta antes de reservar, no dudes en <a href="../index.html#contacto" class="text-chinese-seal-red hover:underline">Contactarme</a>.
             </p>
-            <!-- Principio del widget integrado de Calendly -->
             <div class="calendly-inline-widget " data-url="https://calendly.com/rechazaloultimo/horariosde-clases?hide_gdpr_banner=1" style="min-width:320px;height:1200px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Final del widget integrado de Calendly -->
         </div>
-    </section>
+    </section>-->
 
     <section id="galeria_00" class="mb-16 md:mb-20 fade-in">
          <div class="container mx-auto px-6">
            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            <a href="img-mias/manos (1).webp" class="glightbox" data-gallery="mi-galeria">
-                <img src="img-mias/manos (1).webp" alt="Manos 1" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+            <a href="../img-mias/manos (1).webp" class="glightbox" data-gallery="mi-galeria">
+                <img src="../img-mias/manos (1).webp" alt="Manos 1" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
             </a>
-            <a href="img-mias/manos (2).webp" class="glightbox" data-gallery="mi-galeria">
-                <img src="img-mias/manos (2).webp" alt="Manos 2" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+            <a href="../img-mias/manos (2).webp" class="glightbox" data-gallery="mi-galeria">
+                <img src="../img-mias/manos (2).webp" alt="Manos 2" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
             </a>
-            <a href="img-mias/manos (3).webp" class="glightbox" data-gallery="mi-galeria">
-                <img src="img-mias/manos (3).webp" alt="Manos 3" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+            <a href="../img-mias/manos (3).webp" class="glightbox" data-gallery="mi-galeria">
+                <img src="../img-mias/manos (3).webp" alt="Manos 3" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
             </a>
-            <a href="img-mias/manos (4).webp" class="glightbox" data-gallery="mi-galeria">
-                <img src="img-mias/manos (4).webp" alt="Manos 4" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+            <a href="../img-mias/manos (4).webp" class="glightbox" data-gallery="mi-galeria">
+                <img src="../img-mias/manos (4).webp" alt="Manos 4" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
             </a>
-            <a href="img-mias/manos (5).webp" class="glightbox" data-gallery="mi-galeria">
-                <img src="img-mias/manos (5).webp" alt="Manos 5" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+            <a href="../img-mias/manos (5).webp" class="glightbox" data-gallery="mi-galeria">
+                <img src="../img-mias/manos (5).webp" alt="Manos 5" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
             </a>
-            <a href="img-mias/manos (6).webp" class="glightbox" data-gallery="mi-galeria">
-                <img src="img-mias/manos (6).webp" alt="Manos 6" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+            <a href="../img-mias/manos (6).webp" class="glightbox" data-gallery="mi-galeria">
+                <img src="../img-mias/manos (6).webp" alt="Manos 6" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
             </a>
             </div>
         </div>
@@ -244,23 +314,23 @@
              <section id="galeria_01" class="mb-16 md:mb-20 fade-in">
             <div class="container mx-auto px-6">
              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            <a href="img-mias/qigong (1).webp" class="glightbox" data-gallery="mi-galeria">
-                <img src="img-mias/qigong (1).webp" alt="Qigong 1" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+            <a href="../img-mias/qigong (1).webp" class="glightbox" data-gallery="mi-galeria">
+                <img src="../img-mias/qigong (1).webp" alt="Qigong 1" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
             </a>
-            <a href="img-mias/qigong (2).webp" class="glightbox" data-gallery="mi-galeria">
-                <img src="img-mias/qigong (2).webp" alt="qigong 2" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+            <a href="../img-mias/qigong (2).webp" class="glightbox" data-gallery="mi-galeria">
+                <img src="../img-mias/qigong (2).webp" alt="qigong 2" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
             </a>
-            <a href="img-mias/qigong (3).webp" class="glightbox" data-gallery="mi-galeria">
-                <img src="img-mias/qigong (3).webp" alt="qigong 3" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+            <a href="../img-mias/qigong (3).webp" class="glightbox" data-gallery="mi-galeria">
+                <img src="../img-mias/qigong (3).webp" alt="qigong 3" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
             </a>
-            <a href="img-mias/qigong (4).webp" class="glightbox" data-gallery="mi-galeria">
-                <img src="img-mias/qigong (4).webp" alt="qigong 4" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+            <a href="../img-mias/qigong (4).webp" class="glightbox" data-gallery="mi-galeria">
+                <img src="../img-mias/qigong (4).webp" alt="qigong 4" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
             </a>
-            <a href="img-mias/qigong (5).webp" class="glightbox" data-gallery="mi-galeria">
-                <img src="img-mias/qigong (5).webp" alt="qigong 5" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+            <a href="../img-mias/qigong (5).webp" class="glightbox" data-gallery="mi-galeria">
+                <img src="../img-mias/qigong (5).webp" alt="qigong 5" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
             </a>
-            <a href="img-mias/qigong (6).webp" class="glightbox" data-gallery="mi-galeria">
-                <img src="img-mias/qigong (6).webp" alt="qigong 6" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+            <a href="../img-mias/qigong (6).webp" class="glightbox" data-gallery="mi-galeria">
+                <img src="../img-mias/qigong (6).webp" alt="qigong 6" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
             </a>
             </div>
         </div>
@@ -288,7 +358,7 @@
             <div class="max-w-3xl mx-auto">
                  <h2 class="font-title text-3xl md:text-4xl text-title-ink mb-8 text-center">Explorando el Tàijíquán (Tai Chi Chuan)</h2>
                  <p class="text-lg text-ink mb-4 leading-relaxed ">
-                    El Tàijíquán (太极拳), o "Boxeo del Supremo Último", es un arte marcial interno de origen chino. Su fundamento radica en el principio de la armonía entre los opuestos (Yin-Yang), y su práctica está orientada a cultivar la salud, el equilibrio interno y la capacidad marcial desde una consciencia profunda del cuerpo y la energía.
+                    El Tàijíquán (太极拳), o “Boxeo del Supremo Último”, es un arte marcial interno de origen chino. Su fundamento radica en el principio de la armonía entre los opuestos (Yin-Yang), y su práctica está orientada a cultivar la salud, el equilibrio interno y la capacidad marcial desde una consciencia profunda del cuerpo y la energía.
                 </p>
                  <p class="text-lg text-ink mb-4 leading-relaxed ">
                     Aunque tiene una raíz marcial, el Tàijíquán se ha consolidado también como una vía para el desarrollo personal y espiritual. Se practica mediante secuencias de movimientos lentos, continuos y circulares que integran respiración, intención y percepción energética. A través de estas formas, el practicante transforma su estructura física, su flujo interno y su estado mental.
@@ -301,29 +371,29 @@
 <section id="galeria_02" class="mb-16 md:mb-20 fade-in">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-8">
-                <a href="img-mias/chuan (1).webp" class="glightbox" data-gallery="mi-galeria">
-                    <img src="img-mias/chuan (1).webp" alt="Chuan 1" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                <a href="../img-mias/chuan (1).webp" class="glightbox" data-gallery="mi-galeria">
+                    <img src="../img-mias/chuan (1).webp" alt="Chuan 1" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                 </a>
-                <a href="img-mias/chuan (2).webp" class="glightbox" data-gallery="mi-galeria">
-                    <img src="img-mias/chuan (2).webp" alt="Chuan 2" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                <a href="../img-mias/chuan (2).webp" class="glightbox" data-gallery="mi-galeria">
+                    <img src="../img-mias/chuan (2).webp" alt="Chuan 2" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                 </a>
-                <a href="img-mias/chuan (3).webp" class="glightbox" data-gallery="mi-galeria">
-                    <img src="img-mias/chuan (3).webp" alt="Chuan 3" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                <a href="../img-mias/chuan (3).webp" class="glightbox" data-gallery="mi-galeria">
+                    <img src="../img-mias/chuan (3).webp" alt="Chuan 3" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                 </a>
-                <a href="img-mias/chuan (5).webp" class="glightbox" data-gallery="mi-galeria">
-                    <img src="img-mias/chuan (5).webp" alt="Chuan 5" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                <a href="../img-mias/chuan (5).webp" class="glightbox" data-gallery="mi-galeria">
+                    <img src="../img-mias/chuan (5).webp" alt="Chuan 5" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                 </a>
-                <a href="img-mias/chuan (6).webp" class="glightbox" data-gallery="mi-galeria">
-                    <img src="img-mias/chuan (6).webp" alt="Chuan 6" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                <a href="../img-mias/chuan (6).webp" class="glightbox" data-gallery="mi-galeria">
+                    <img src="../img-mias/chuan (6).webp" alt="Chuan 6" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                 </a>
-                <a href="img-mias/chuan (7).webp" class="glightbox" data-gallery="mi-galeria">
-                    <img src="img-mias/chuan (7).webp" alt="Chuan 7" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                <a href="../img-mias/chuan (7).webp" class="glightbox" data-gallery="mi-galeria">
+                    <img src="../img-mias/chuan (7).webp" alt="Chuan 7" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                 </a>
-                <a href="img-mias/chuan (8).webp" class="glightbox" data-gallery="mi-galeria">
-                    <img src="img-mias/chuan (8).webp" alt="Chuan 8" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                <a href="../img-mias/chuan (8).webp" class="glightbox" data-gallery="mi-galeria">
+                    <img src="../img-mias/chuan (8).webp" alt="Chuan 8" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                 </a>
-                <a href="img-mias/chuan (9).webp" class="glightbox" data-gallery="mi-galeria">
-                    <img src="img-mias/chuan (9).webp" alt="Chuan 9" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                <a href="../img-mias/chuan (9).webp" class="glightbox" data-gallery="mi-galeria">
+                    <img src="../img-mias/chuan (9).webp" alt="Chuan 9" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                 </a>
             </div>
         </div>
@@ -366,30 +436,30 @@
               <section id="galeria_03" class="mb-16 md:mb-20 fade-in">
                     <div class="container mx-auto px-6">
                         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-8">
-                        <a href="img-mias/esp (1).webp" class="glightbox" data-gallery="mi-galeria">
-                            <img src="img-mias/esp (1).webp" alt="Detalle 1" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                        <a href="../img-mias/esp (1).webp" class="glightbox" data-gallery="mi-galeria">
+                            <img src="../img-mias/esp (1).webp" alt="Detalle 1" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                         </a>
 
-                        <a href="img-mias/espada (1).webp" class="glightbox" data-gallery="mi-galeria">
-                            <img src="img-mias/espada (1).webp" alt="Espada 1" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                        <a href="../img-mias/espada (1).webp" class="glightbox" data-gallery="mi-galeria">
+                            <img src="../img-mias/espada (1).webp" alt="Espada 1" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                         </a>
-                        <a href="img-mias/espada (2).webp" class="glightbox" data-gallery="mi-galeria">
-                            <img src="img-mias/espada (2).webp" alt="Espada 2" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                        <a href="../img-mias/espada (2).webp" class="glightbox" data-gallery="mi-galeria">
+                            <img src="../img-mias/espada (2).webp" alt="Espada 2" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                         </a>
-                        <a href="img-mias/espada (3).webp" class="glightbox" data-gallery="mi-galeria">
-                            <img src="img-mias/espada (3).webp" alt="Espada 3" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                        <a href="../img-mias/espada (3).webp" class="glightbox" data-gallery="mi-galeria">
+                            <img src="../img-mias/espada (3).webp" alt="Espada 3" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                         </a>
-                        <a href="img-mias/espada (4).webp" class="glightbox" data-gallery="mi-galeria">
-                            <img src="img-mias/espada (4).webp" alt="Espada 4" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                        <a href="../img-mias/espada (4).webp" class="glightbox" data-gallery="mi-galeria">
+                            <img src="../img-mias/espada (4).webp" alt="Espada 4" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                         </a>
-                        <a href="img-mias/espada (5).webp" class="glightbox" data-gallery="mi-galeria">
-                            <img src="img-mias/espada (5).webp" alt="Espada 5" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                        <a href="../img-mias/espada (5).webp" class="glightbox" data-gallery="mi-galeria">
+                            <img src="../img-mias/espada (5).webp" alt="Espada 5" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                         </a>
-                        <a href="img-mias/espada (6).webp" class="glightbox" data-gallery="mi-galeria">
-                            <img src="img-mias/espada (6).webp" alt="Espada 6" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                        <a href="../img-mias/espada (6).webp" class="glightbox" data-gallery="mi-galeria">
+                            <img src="../img-mias/espada (6).webp" alt="Espada 6" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                         </a>
-                        <a href="img-mias/esp (2).webp" class="glightbox" data-gallery="mi-galeria">
-                            <img src="img-mias/esp (2).webp" alt="Detalle 2" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                        <a href="../img-mias/esp (2).webp" class="glightbox" data-gallery="mi-galeria">
+                            <img src="../img-mias/esp (2).webp" alt="Detalle 2" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                         </a>
                         </div>
                     </div>
@@ -433,29 +503,29 @@
        <section id="galeria_04" class="mb-16 md:mb-20 fade-in">
                     <div class="container mx-auto px-6">
                         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-8">
-                            <a href="img-mias/aba (1).webp" class="glightbox" data-gallery="mi-galeria">
-                                <img src="img-mias/aba (1).webp" alt="Abanico 1" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                            <a href="../img-mias/aba (1).webp" class="glightbox" data-gallery="mi-galeria">
+                                <img src="../img-mias/aba (1).webp" alt="Abanico 1" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                             </a>
-                            <a href="img-mias/aba (2).webp" class="glightbox" data-gallery="mi-galeria">
-                                <img src="img-mias/aba (2).webp" alt="Abanico 2" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                            <a href="../img-mias/aba (2).webp" class="glightbox" data-gallery="mi-galeria">
+                                <img src="../img-mias/aba (2).webp" alt="Abanico 2" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                             </a>
-                            <a href="img-mias/aba (3).webp" class="glightbox" data-gallery="mi-galeria">
-                                <img src="img-mias/aba (3).webp" alt="Abanico 3" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                            <a href="../img-mias/aba (3).webp" class="glightbox" data-gallery="mi-galeria">
+                                <img src="../img-mias/aba (3).webp" alt="Abanico 3" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                             </a>
-                            <a href="img-mias/aba (4).webp" class="glightbox" data-gallery="mi-galeria">
-                                <img src="img-mias/aba (4).webp" alt="Abanico 4" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                            <a href="../img-mias/aba (4).webp" class="glightbox" data-gallery="mi-galeria">
+                                <img src="../img-mias/aba (4).webp" alt="Abanico 4" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                             </a>
-                            <a href="img-mias/aba (5).webp" class="glightbox" data-gallery="mi-galeria">
-                                <img src="img-mias/aba (5).webp" alt="Abanico 5" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                            <a href="../img-mias/aba (5).webp" class="glightbox" data-gallery="mi-galeria">
+                                <img src="../img-mias/aba (5).webp" alt="Abanico 5" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                             </a>
-                                 <a href="img-mias/aba (6).webp" class="glightbox" data-gallery="mi-galeria">
-                                <img src="img-mias/aba (6).webp" alt="Abanico 5" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                                 <a href="../img-mias/aba (6).webp" class="glightbox" data-gallery="mi-galeria">
+                                <img src="../img-mias/aba (6).webp" alt="Abanico 5" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                             </a>
-                                 <a href="img-mias/aba (7).webp" class="glightbox" data-gallery="mi-galeria">
-                                <img src="img-mias/aba (7).webp" alt="Abanico 7" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                                 <a href="../img-mias/aba (7).webp" class="glightbox" data-gallery="mi-galeria">
+                                <img src="../img-mias/aba (7).webp" alt="Abanico 7" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                             </a>
-                                 <a href="img-mias/aba (8).webp" class="glightbox" data-gallery="mi-galeria">
-                                <img src="img-mias/aba (8).webp" alt="Abanico 8" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
+                                 <a href="../img-mias/aba (8).webp" class="glightbox" data-gallery="mi-galeria">
+                                <img src="../img-mias/aba (8).webp" alt="Abanico 8" class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300" loading="lazy" decoding="async">
                             </a>
   
                         </div>
@@ -507,16 +577,16 @@
                 <img src="https://objkt.com/assets/logo.svg" alt="Objkt" style="height: 1.15em; width: 2em; display: inline-block; vertical-align: middle; filter: invert(1);">
             </a>
         </div>
-       <p class="text-sm text-text-secondary mb-4">© <span id="currentYear"></span> Sitio creado por Rodrigo Pizarro. Todos los derechos reservados.</p>
+       <p class="text-sm text-text-secondary mb-4">  Sitio creado por Rodrigo Pizarro. Todos los derechos reservados.</p>
     </div>
 </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
-    <script src="js/hero-preload.js" defer></script>
-    <script src="js/global.js" defer></script>
-    <script src="js/navigation.js" defer></script>
-    <script src="js/theme-toggle.js" defer></script>
-    <script src="js/animations.js" defer></script>
-    <script src="js/glightbox-init.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
+<script src="../js/hero-preload.js" defer></script>
+<script src="../js/global.js" defer></script>
+<script src="../js/navigation.js" defer></script>
+<script src="../js/theme-toggle.js" defer></script>
+<script src="../js/animations.js" defer></script>
+<script src="../js/glightbox-init.js" defer></script>
 </body>
 </html>
