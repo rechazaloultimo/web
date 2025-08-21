@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <link rel="preload" href="background/006.webp" as="image">
+    <link rel="preload" href="background/003.webp" as="image">
     <link rel="canonical" href="https://rodrigopizarro.com.ar/taijichuan.html">
     <meta property="og:title" content="Clases de Tàijíquán - Rodrigo Pizarro">
     <meta property="og:description" content="Clases presenciales de Tàijíquán impartidas por Rodrigo Pizarro en Buenos Aires.">
@@ -31,57 +31,152 @@
 </head>
 
 <body class="rice-paper-bg">
-    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
     <!-- Barra de navegación reutilizada -->
-    <nav aria-label="Navegacion principal" id="mainNav" class="nav-transparent fixed w-full z-50 top-0 transition-all duration-300 ease-out">
+    <nav aria-label="Navegación principal" id="mainNav" class="nav-opaque fixed w-full z-50 top-0 transition-all duration-300 ease-out">
         <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
-            <a href="/index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
-            <div class="flex items-center">
-                <div id="mainNavMenu" class="hidden md:flex items-center space-x-3 lg:space-x-4">
-                    <a href="/index.html#bienvenida" class="transition duration-300 text-sm lg:text-base">Inicio</a>
-                    <a href="/acerca-de-mi.html" class="transition duration-300 text-sm lg:text-base">Sobre Mí</a>
-                    <!-- Esta entrada apunta a la página de Tai Chi -->
-                    <a href="/clases/taiji/taijiquan-oficial-updated.html" class="transition duration-300 text-sm lg:text-base">Clases</a>
-                    <a href="/asistentes-ia.html" class="transition duration-300 text-sm lg:text-base">Asistentes IA</a>
-                    <a href="/aulavirtual.html" class="transition duration-300 text-sm lg:text-base">Aula Virtual</a>
-                    <a href="/index.html#contacto" class="transition duration-300 text-sm lg:text-base">Contacto</a>
-                </div>
-                <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp" class="p-2 focus:outline-none text-lg rounded-none" id="whatsapp-nav-icon">
-                    <i aria-hidden="true" class="fab fa-whatsapp"></i>
-                </a>
-                <button id="theme-toggle" type="button" title="Cambiar tema" class="p-2 focus:outline-none text-lg rounded-none">
-                    <i aria-hidden="true" class="fas fa-sun" id="theme-toggle-sun-icon"></i>
-                    <i aria-hidden="true" class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
-                </button>
-                <div class="md:hidden ml-2">
-                    <button id="mobile-menu-button" class="focus:outline-none p-2" aria-expanded="false" aria-controls="mobile-menu">
-                        <span class="block h-0.5 w-6 bg-current my-1"></span>
-                        <span class="block h-0.5 w-6 bg-current my-1"></span>
-                        <span class="block h-0.5 w-6 bg-current"></span>
-                    </button>
-                </div>
-            </div>
+          <a href="index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
+          
+          <div class="flex items-center">
+            <!-- Menú Desktop -->
+            <ul id="mainNavMenu" class="hidden md:flex items-center space-x-4" role="menubar">
+              <li><a href="../index.html#bienvenida">Inicio</a></li>
+              <li><a href="../acerca-de-mi.html">Sobre Mí</a></li>
+              
+              <!-- Clases -->
+              <li class="nav-item-has-children">
+                <a>Clases</a>
+                <ul class="nav-submenu">
+                  <li><a href="../clases/clases-presenciales.html">Presenciales</a></li>
+                  <li><a href="../clases/clases-virtuales.html">Virtuales</a></li>
+                  <li><a href="../clases/clases-particulares.html">Particulares</a></li>
+
+                </ul>
+              </li>
+      
+              <!-- Qìgōng -->
+              <li class="nav-item-has-children">
+                <a>Qìgōng</a>
+                <ul class="nav-submenu">
+                  <li><a href="../clases/qigong.html">Qué es el Qìgōng</a></li>
+                  <li><a href="../clases/qigong/wudangqigong.html">Wudang Qìgōng</a></li>
+                  <li><a href="../clases/qigong/mawangduidaoyinshu.html">Mawangdui Daoyin Shu</a></li>
+                </ul>
+              </li>
+      
+              <!-- Tàijí -->
+              <li class="nav-item-has-children">
+                <a>Tàijí</a>
+                <ul class="nav-submenu">
+                  <li><a href="taiji.html">Qué es el Tàijí</a></li>
+                  <li><a href="/clases/taiji.html#taijiquan-sistemas">Tàijíquán</a></li>
+
+                </ul>
+              </li>
+      
+              <!-- Servicios -->
+              <li class="nav-item-has-children">
+                <a>Servicios</a>
+                <ul class="nav-submenu">
+                  <li><a href="../asistentes-ia.html">Asistentes IA</a></li>
+                  <li><a href="../aulavirtual.html">Aula Virtual</a></li>
+                </ul>
+              </li>
+      
+              <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+      
+            <!-- Icono WhatsApp -->
+            <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               title="Contactar por WhatsApp" 
+               class="p-2 focus:outline-none text-lg rounded-none" 
+               id="whatsapp-nav-icon">
+              <i aria-hidden="true" class="fab fa-whatsapp"></i>
+            </a>
+      
+            <!-- Botón cambio de tema -->
+            <button id="theme-toggle" type="button" title="Cambiar tema" class="p-2 focus:outline-none text-lg rounded-none">
+              <i aria-hidden="true" class="fas fa-sun" id="theme-toggle-sun-icon"></i>
+              <i aria-hidden="true" class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
+            </button>
+      <!-- Botón Hamburguesa + Menú Mobile -->
+    <div class="relative md:hidden ml-2">
+      <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="block h-0.5 w-6 bg-current my-1"></span>
+        <span class="block h-0.5 w-6 bg-current my-1"></span>
+        <span class="block h-0.5 w-6 bg-current"></span>
+      </button>
+    
+      <!-- Menú Mobile -->
+      <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-64 md:hidden shadow-lg rounded-lg bg-white text-right">
+        <a href="../../index.html#bienvenida" class="block px-4 py-2">Inicio</a>
+        <a href="../../acerca-de-mi.html" class="block px-4 py-2">Sobre Mí</a>
+    
+        <!-- Clases -->
+        <div class="mobile-accordion">
+          <button class="mobile-acc-btn block px-4 py-2 w-full">Clases</button>
+          <div class="mobile-acc-panel">
+            <a href="../clases-presenciales.html" class="block px-4 py-2">Presenciales</a>
+            <a href="../clases-virtuales.html" class="block px-4 py-2">Virtuales</a>
+            <a href="../clases-particulares.html" class="block px-4 py-2">Particulares</a>
+          </div>
         </div>
-        <div id="mobile-menu" class="md:hidden hidden shadow-lg py-2 border-t">
-                <a href="/index.html#bienvenida" class="block px-6 py-3 text-base transition duration-300 text-right">Inicio</a>
-                <a href="/acerca-de-mi.html" class="block px-6 py-3 text-base transition duration-300 text-right">Sobre Mí</a>
-                <a href="/clases/taiji/taijiquan-oficial-updated.html" class="block px-6 py-3 text-base transition duration-300 text-right">Clases de Tàijíquán</a>
-                <a href="/asistentes-ia.html" class="block px-6 py-3 text-base transition duration-300 text-right">Asistentes IA</a>
-                <a href="/aulavirtual.html" class="block px-6 py-3 text-base transition duration-300 text-right">Aula Virtual</a>
-                <a href="/index.html#contacto" class="block px-6 py-3 text-base transition duration-300 text-right">Contacto</a>
+    
+        <!-- Qìgōng -->
+        <div class="mobile-accordion">
+          <button class="mobile-acc-btn block px-4 py-2 w-full">Qìgōng</button>
+          <div class="mobile-acc-panel">
+            <a href="../qigong.html" class="block px-4 py-2">Qué es el Qìgōng</a>
+            <a href="../wudang-qigong.html" class="block px-4 py-2">Wudang Qìgōng</a>
+            <a href="mawangduidaoyinshu.html" class="block px-4 py-2">Mawangdui Daoyin Shu</a>
+          </div>
         </div>
-    </nav>
+    
+        <!-- Tàijí -->
+        <div class="mobile-accordion">
+          <button class="mobile-acc-btn block px-4 py-2 w-full">Tàijí</button>
+          <div class="mobile-acc-panel">
+            <a href="../taiji.html" class="block px-4 py-2">Qué es el Tàijí</a>
+            <a href="/clases/taiji.html#taijiquan-sistemas" class="block px-4 py-2">Tàijíquán</a>
+          </div>
+        </div>
+    
+        <!-- Servicios -->
+        <div class="mobile-accordion">
+          <button class="mobile-acc-btn block px-4 py-2 w-full">Servicios</button>
+          <div class="mobile-acc-panel">
+            <a href="../asistentes-ia.html" class="block px-4 py-2">Asistentes IA</a>
+            <a href="../aulavirtual.html" class="block px-4 py-2">Aula Virtual</a>
+          </div>
+        </div>
+    
+        <!-- Contacto -->
+        <a href="../../index.html#contacto" class="block px-4 py-2">Contacto</a>
+      </div>
+    </div>    
+</nav>
+
+
 
     <!-- Cabecera específica para Tàijíquán -->
-    <header id="hero-clases" class="hero-fullscreen-bg hero-clases-bg hero-banner preload-hidden h-screen flex flex-col items-center justify-center relative">
-        <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
-            <h1 class="font-title text-5xl sm:text-6xl md:text-7xl mb-10 fade-in leading-snug">Clases de Tàijíquán</h1>
-            <h2 class="text-xl sm:text-2xl md:text-3xl mb-12 fade-in font-title" style="animation-delay: 0.2s;">Presenciales y Virtuales</h2>
-            <p class="text-base sm:text-lg md:text-xl max-w-xl lg:max-w-2xl mx-auto mb-10 text-gray-200 fade-in" style="animation-delay: 0.4s;">
-                Un espacio para compartir el tiempo, el cuerpo y la práctica consciente. Conecta con tu energía y encuentra el equilibrio.
-            </p>
-        </div>
-    </header>
+    <header id="hero-clases" class="hero-fullscreen-bg hero-taiji-bg hero-banner preload-hidden h-screen flex flex-col items-center justify-center relative">
+            <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
+              <h1 class="font-title text-5xl sm:text-6xl md:text-7xl mb-10 fade-in leading-snug">
+                Tàijíquán (Tai Chi Chuan)
+              </h1>
+          
+              <h2 class="text-xl sm:text-2xl md:text-3xl mb-12 fade-in font-title" style="animation-delay: 0.2s;">
+                Historia, principios y práctica con alma
+              </h2>
+          
+              <p class="text-base sm:text-lg md:text-xl max-w-xl lg:max-w-2xl mx-auto mb-10 text-gray-200 fade-in" style="animation-delay: 0.4s;">
+                Entra en el mundo del Tàijíquán: movimientos que fluyen como agua y raíces que sostienen el cuerpo. Desde su matriz marcial y filosófica hasta las formas que entrenan equilibrio, relajación y fuerza silenciosa, aquí encontrarás un camino práctico para mover el cuerpo con intención, respirar con sentido y recuperar calma dinámica. Conoce sus estilos clásicos, sus beneficios físicos y mentales, y cómo adaptar la práctica a tu cuerpo.
+              </p>
+            </div>
+          </header>
+          
 
     <main id="main-content" class="container mx-auto px-6 py-12 md:py-20">
         <!-- Introducción adaptada -->
