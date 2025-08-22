@@ -1313,6 +1313,10 @@ a:hover {
   background-image: url('background/002.webp');
 }
 
+.hero-clases-particulares-bg {
+  background-image: url('background/006.webp');
+}
+
 .hero-clases-taiji-bg {
   background-image: url('background/003.webp');
 }
@@ -1631,7 +1635,7 @@ body.dark-mode .mobile-acc-btn:hover {
 .card-manuscript select,
 .login-form-container select /* Si tuvieras un select en el login */ {
   padding-right: 2.5rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%233A3A3A'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http:/www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%233A3A3A'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 1.25em 1.25em;
@@ -2122,17 +2126,27 @@ body.dark-mode .nav-item-has-children.open > .nav-parent-btn,
 body.dark-mode .nav-item-has-children.open .nav-submenu a {
   color: var(--color-dm-text-title) !important;
 }
-/* Submenús: base */
+
 .nav-submenu {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1.25rem); /* distancia visual debajo de la barra */
   left: 0;
   min-width: 14rem;
-  background-color: var(--color-bg-main); /* fondo normal cuando está cerrado */
   border: none;
-  box-shadow: none;
   padding: 0;
+  background: var(--color-bg-card);
+  box-shadow: 0 4px 20px var(--color-chinese-seal-red-hover);
+  border-radius: var(--radius-lg, 0.25rem);
+  z-index: 1000;
   display: none;
+}
+
+/* Enlaces del submenú */
+.nav-submenu a {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-chinese-seal-red);
 }
 
 
@@ -2140,12 +2154,6 @@ body.dark-mode .nav-submenu {
   background-color: var(--color-dm-bg-main);
 }
 
-.nav-submenu a {
-  display: block;
-  padding: 0.55rem 0.75rem;
-  font-size: 0.95rem;
-  color: var(--color-chinese-seal-red);
-}
 body.dark-mode .nav-submenu a {
   color: var(--color-dm-chinese-seal-red);
 }
@@ -2199,20 +2207,6 @@ body.dark-mode .nav-submenu a:hover {
   position: relative;
 }
 
-.nav-submenu {
-  position: absolute;
-  top: calc(100% + 1.25rem); /* distancia visual debajo de la barra */
-  left: 0;
-  min-width: 14rem;
-  border: none;
-  padding: 0;
-  background: var(--color-bg-card);
-  box-shadow: 0 4px 20px var(--color-chinese-seal-red-hover);
-  border-radius: var(--radius-lg, 0.25rem);
-  z-index: 1000;
-  display: none;
-}
-
 /* puente invisible para mantener el hover */
 .nav-item-has-children::after {
   content: "";
@@ -2238,14 +2232,6 @@ body.dark-mode .nav-submenu {
 
 body.dark-mode .nav-submenu {
   background: var(--color-dm-bg-card);
-}
-
-/* Enlaces del submenú */
-.nav-submenu a {
-  display: block;
-  padding: 0.55rem 0.75rem;
-  font-size: 0.95rem;
-  color: var(--color-text-title);
 }
 
 body.dark-mode .nav-submenu a {
@@ -2557,11 +2543,11 @@ body.dark-mode .nav-submenu a:hover {
 /* Fuerza estilos sobre Tailwind */
 #mobile-menu {
   position: absolute;
-  top: 100%; /* justo debajo del nav */
+  top: calc(100% + 0.25rem); /* distancia visual debajo de la barra */
   right: 0; /* alinear con el borde derecho del icono */
   width: 14rem; /* ancho fijo para un alineado limpio */
   background: var(--color-bg-card) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 20px var(--color-chinese-seal-red-hover);
   border-radius: var(--radius-lg, 0.25rem);
   margin-top: 1.15rem;
   padding: 0.75rem 0;

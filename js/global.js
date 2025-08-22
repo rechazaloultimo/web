@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Script para los botones de audio
 document.querySelectorAll('.audio-btn').forEach(btn => {
   let audio = null;
   const label = btn.querySelector('.audio-label');
