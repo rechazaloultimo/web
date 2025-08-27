@@ -23,9 +23,9 @@
       "name": "Rodrigo Pizarro",
       "description": "Instructor de Qígōng Taiji y realizador multimedial",
       "url": "https://rodrigopizarro.com.ar/clases.html"
-    }</script>
-    
+    }</script>      
 </head>
+
 <body class="rice-paper-bg">
   <a href="#main-content" class="skip-link">Saltar al contenido</a>
   <nav aria-label="Navegación principal" id="mainNav" class="nav-opaque fixed w-full z-50 top-0 transition-all duration-300 ease-out">
@@ -75,32 +75,65 @@
                 <li><a href="/aulavirtual.html">Aula Virtual</a></li>
               </ul>
             </li>
-    
-            <li><a href="/index.html#contacto">Contacto</a></li>
-          </ul>
-    
+            
+            <li><a href="/index.html#contacto">Contacto</a></li> 
+
+      <p>Mawangdui Daoyin Shu</p>
+          <!-- Indice -->
+          <li class="nav-item-has-children">
+            <a>Indice</a>
+            <ul class="nav-submenu">
+              <li><a href="#historia">Origen de los Ejercicios</a></li>
+              <li><a href="#manuscritos">Manuscritos y recuperación</a></li>
+              <li><a href="#diagrama">El “Diagrama de Dǎoyǐn”</a></li>
+              <li><a href="#repercusión">Legado y repercusión</a></li>
+            </ul>
+          </li>
+
+          <!-- Movimientos (nombres corregidos) -->
+          <li class="nav-item-has-children">
+            <a>Movimientos</a>
+            <ul class="nav-submenu">
+              <li><a href="#movimiento-0">Preparación</a></li>
+              <li><a href="#movimiento-1">Dibujar un arco</a></li>
+              <li><a href="#movimiento-2">Estirar la espalda</a></li>
+              <li><a href="#movimiento-3">El baño del pato</a></li>
+              <li><a href="#movimiento-4">Ascenso del dragón</a></li>
+              <li><a href="#movimiento-5">Estiramiento de pájaro</a></li>
+              <li><a href="#movimiento-6">Guiar el abdomen</a></li>
+              <li><a href="#movimiento-7">Mirada de búho</a></li>
+              <li><a href="#movimiento-8">Guiar la cintura</a></li>
+              <li><a href="#movimiento-9">El vuelo de la oca</a></li>
+              <li><a href="#movimiento-10">Danzar como una grulla</a></li>
+              <li><a href="#movimiento-11">Exhalar mirando hacia arriba</a></li>
+              <li><a href="#movimiento-12">Estirar la espalda</a></li>
+              <li><a href="#movimiento-13">Cierre</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Botón cambio de tema -->
+        <button id="theme-toggle" type="button" title="Cambiar tema" class="ml-2 p-2 focus:outline-none text-lg rounded-none">
+          <i aria-hidden="true" class="fas fa-sun" id="theme-toggle-sun-icon"></i>
+          <i aria-hidden="true" class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
+        </button> 
           <!-- Icono WhatsApp -->
           <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             title="Contactar por WhatsApp" 
-             class="p-2 focus:outline-none text-lg rounded-none" 
-             id="whatsapp-nav-icon">
-            <i aria-hidden="true" class="fab fa-whatsapp"></i>
-          </a>
-    
-          <!-- Botón cambio de tema -->
-          <button id="theme-toggle" type="button" title="Cambiar tema" class="p-2 focus:outline-none text-lg rounded-none">
-            <i aria-hidden="true" class="fas fa-sun" id="theme-toggle-sun-icon"></i>
-            <i aria-hidden="true" class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
-          </button>
-    <!-- Botón Hamburguesa + Menú Mobile -->
-  <div class="relative md:hidden ml-2">
-    <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+          target="_blank" 
+          rel="noopener noreferrer" 
+          title="Contactar por WhatsApp" 
+          class="p-2 focus:outline-none text-lg" 
+          id="whatsapp-nav-icon">
+         <i aria-hidden="true" class="fab fa-whatsapp"></i>
+       </a>
+  
+      <!-- Botón Hamburguesa + Menú Mobile -->
+      <div class="relative md:hidden ml-2">
+      <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
       <span class="block h-0.5 w-6 bg-current my-1"></span>
       <span class="block h-0.5 w-6 bg-current my-1"></span>
       <span class="block h-0.5 w-6 bg-current"></span>
-    </button>
+      </button>
   
     <!-- Menú Mobile -->
     <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-64 md:hidden shadow-lg rounded-lg bg-white text-right">
@@ -145,13 +178,46 @@
           <a href="/aulavirtual.html" class="block px-4 py-2">Aula Virtual</a>
         </div>
       </div>
-  
-      <!-- Contacto -->
-      <a href="/index.html#contacto" class="block px-4 py-2">Contacto</a>
+
+      <p class="block px-4 py-2 ">Mawangdui Daoyin Shu</p>
+      <!-- Indice -->
+      <div class="mobile-accordion">
+        <button class="mobile-acc-btn block px-4 py-2 w-full text-chinese-seal-red">Indice</button>
+        <div class="mobile-acc-panel">
+          <a href="#historia">Origen de los Ejercicios</a>
+          <a href="#manuscritos">Manuscritos y recuperación</a>
+          <a href="#diagrama">El “Diagrama de Dǎoyǐn”</a>
+          <a href="#repercusión">Legado y repercusión</a>
+          <a href="#movimientos">Serie de movimientos</a>
+          <a href="#opinion">Opinion personal</a>
+        </div>
+      </div>
+
+      <!-- Movimientos (nombres corregidos) -->
+      <div class="mobile-accordion">
+        <button class="mobile-acc-btn block px-4 py-2 w-full text-chinese-seal-red">Serie de movimientos</button>
+        <div class="mobile-acc-panel">
+          <a href="#movimiento-0">Preparación</a>
+          <a href="#movimiento-1">Dibujar un arco</a>
+          <a href="#movimiento-2">Estirar la espalda</a>
+          <a href="#movimiento-3">El baño del pato</a>
+          <a href="#movimiento-4">Ascenso del dragón</a>
+          <a href="#movimiento-5">Estiramiento de pájaro</a>
+          <a href="#movimiento-6">Guiar el abdomen</a>
+          <a href="#movimiento-7">Mirada de búho</a>
+          <a href="#movimiento-8">Guiar la cintura</a>
+          <a href="#movimiento-9">El vuelo de la oca</a>
+          <a href="#movimiento-10">Danzar como una grulla</a>
+          <a href="#movimiento-11">Exhalar mirando hacia arriba</a>
+          <a href="#movimiento-12">Estirar la espalda</a>
+          <a href="#movimiento-13">Cierre</a>
+        </div>
+      </div>
+    <a href="/index.html#contacto" class="block px-4 py-2">Contacto</a>
+
     </div>
-  </div>   
+  </div>  
 </nav>
-  
         <!-- Portada de la forma -->
         <header id="hero-ia" class="hero-fullscreen-bg hero-mawangdui-bg hero-banner preload-hidden text-white h-screen flex flex-col items-center justify-center relative">
             <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
@@ -205,7 +271,7 @@
                  </div>
           </div>
       </section>
-        <section id="historia" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
+        <section id="manuscritos" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
             <div class="max-w-4xl mx-auto">
             <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Manuscritos y su valiosa recuperación</h3>
                 <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
@@ -229,7 +295,7 @@
           </div>
       </section>
 
-            <section id="historia" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
+            <section id="diagrama" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
                 <div class="max-w-4xl mx-auto">
             <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">El “Diagrama de Dǎoyǐn”</h3>
 
@@ -275,7 +341,7 @@
                 </section>
                 
                 
-                <section id="historia" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
+                <section id="repercusión" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
                     <div class="max-w-4xl mx-auto">
          
             <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Legado y repercusión</h3>
@@ -303,7 +369,7 @@
         </section>
 
         <section id="Fuentes_datos" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
-            <div class="max-w-4xl mx-auto mb-16">
+            <div class="max-w-4xl mx-auto mb-16 px-6">
   <h4 class="font-title text-2xl md:text-3xl mb-6">Fuentes utilizadas</h4>
   <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
   <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
@@ -321,7 +387,8 @@
  
 
         <!--  MOVIMIENTOS -->
-        <section id="movimientos" class="container mx-auto px-6 md:px-8 py-8 border-t border-chinese-seal-red"  style="animation-delay: 0.4s;">
+        <section id="sistema" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
+          <div class="max-w-4xl mx-auto">
             <h2 class="font-title text-3xl md:text-4xl mb-4 py-8">La secuencia completa de Mawangdui Dǎoyǐn Shu</h2>
             <p class="text-lg text-text-secondary mb-4 leading-relaxed">
                 Desde su lanzamiento oficial en <strong>2008</strong>, el Daoyin de Mawangdui se ha difundido por toda China
@@ -343,12 +410,13 @@
               <p class="text-lg text-text-secondary mb-4 leading-relaxed">
               Los movimientos de la secuencia en total son 14: 12 movimientos principales, 1 de apertura y otro de cierre. Los 12 movimientos principales corresponden a los 12 meridianos del cuerpo, algunos se hacen unilateralmente y otros bilaterales. Todos deben ser practicados un mínimo de 6 veces unilateralmente y 3 veces bilaterales, con una pausa de 3 respiraciones entre cada movimiento, para mentalizarse hacia el próximo. Algunos remiten a animales y otros a sensaciones corporales, para que el practicante pueda imaginar y sentirse como si estuviera realizando la acción. 
               </p>
-              </section>
+            </div>
+          </section>
 
-              <section id="historia" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
+          <section id="opinion" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
                 <div class="max-w-4xl mx-auto section-bg-dynamic p-6 md:p-10 rounded-none shadow-lg">
                   <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-                    Yo aprendí este sistema a principios de 2024, en la Asociación Qing Mo Tiyu, Argentina. Considero que la Administración General de Deportes de China y Chinese Health Qigong Association, son las instutciones oficiales a las cuales uno podría tener en cuenta para las correciones y cambios en la adecuación y mejora del sistema, considerando que tienen reglamentos técnicos evaluatorios.
+                    Yo aprendí este sistema a principios de 2024, en la Asociación Qing Mo Tiyu, Argentina. Considero que la Administración General de Deportes de China y Chinese Health Qigong Association, son las instituciones oficiales a las cuales se debe tener en cuenta para las correciones y cambios en la adecuación y mejora del sistema, considerando que tienen reglamentos técnicos evaluatorios.
                   </p>
                   <p class="text-lg text-text-secondary mb-4 leading-relaxed">
                     Aun así te encontrarás, como me pasa mí, con variaciones de movimientos e interpretaciones, y eso no significa que "están mal", sean cancelables y deban ser rechazadas. Yo apoyo la curiosidad de aprender y experimentar con diferentes interpretaciones, y la idea de que cada persona debe encontrar su propia práctica, adaptando el sistema a su necesidad y su cuerpo.
@@ -357,7 +425,7 @@
           </section>
 
           <!-- Movimiento 0 -->
-          <section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+          <section id="movimiento-0" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start"> 
               <div class="md:col-span-1 px-6">
                 <img src="/clases/construccion.webp" alt="起势" class="w-full h-auto rounded-lg shadow-lg" />
@@ -388,7 +456,7 @@
                 
                   <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
                     <strong>Respiración recomendada:</strong>
-                    Inspirar por la nariz cuando las manos ascienden y se expanden, y espirar suavemente por la nariz al descender, manteniendo una cadencia tranquila — por ejemplo, cuatro tiempos para inspirar y cuatro para espirar — tal como indica la guía clásica de “inhalar al levantar o extender; exhalar al bajar o contraer”.
+                    Inspirar por la nariz cuando las manos ascienden y se expanden, y espirar suavemente por la nariz al descender, manteniendo una cadencia tranquila — por ejemplo, cuatro tiempos para inspirar y cuatro para espirar.
                   </li>
                 
                   <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
@@ -413,7 +481,7 @@
                 
                   <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
                     <strong>Errores comunes y correcciones:</strong>
-                    Forzar la zona lumbar se corrige alineando el eje cabeza-sacro; elevar los hombros se corrige soltándolos antes de iniciar; respirar superficialmente en el pecho se corrige llevando el aire al abdomen.
+                    Forzar la zona lumbar se corrige alineando el eje cabeza-sacro; elevar los hombros, se corrige soltándolos antes de iniciar; respirar superficialmente en el pecho se corrige llevando el aire al abdomen.
                   </li>
                 
                   <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
@@ -436,7 +504,7 @@
           </div>
         </section>
 
-        <section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+        <section id="movimiento-1" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
             <div class="md:col-span-1 px-6">
               <img src="/clases/construccion.webp" alt="挽弓" class="w-full h-auto rounded-lg shadow-lg" />
@@ -490,7 +558,7 @@
         
 
             <!-- Movimiento 2 -->
-<section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+<section id="movimiento-2" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-1 px-6">
       <img src="/clases/construccion.webp" alt="引背" class="w-full h-auto rounded-lg shadow-lg" />
@@ -542,7 +610,7 @@
 
 
 <!-- Movimiento 3 -->
-<section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+<section id="movimiento-3" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-1 px-6">
       <img src="/clases/construccion.webp" alt="凫浴" class="w-full h-auto rounded-lg shadow-lg" />
@@ -582,7 +650,7 @@
 </section>
 
 <!-- Movimiento 4 -->
-<section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+<section id="movimiento-4" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-1 px-6">
       <img src="/clases/construccion.webp" alt="龙登" class="w-full h-auto rounded-lg shadow-lg" />
@@ -642,7 +710,7 @@
 </section>
 
 <!-- Movimiento 5 -->
-<section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+<section id="movimiento-5" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-1 px-6">
       <img src="/clases/construccion.webp" alt="鸟伸" class="w-full h-auto rounded-lg shadow-lg" />
@@ -706,7 +774,7 @@
 
   
 <!-- Movimiento 6 -->
-<section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+<section id="movimiento-6" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-1 px-6">
       <img src="/clases/construccion.webp" alt="引腹" class="w-full h-auto rounded-lg shadow-lg" />
@@ -765,7 +833,7 @@
 </section>
 
 <!-- Movimiento 7 -->
-<section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+<section id="movimiento-7" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-1 px-6">
       <img src="/clases/construccion.webp" alt="鸱视" class="w-full h-auto rounded-lg shadow-lg" />
@@ -829,7 +897,7 @@
 </section>
 
 <!-- Movimiento 8 -->
-<section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+<section id="movimiento-8" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-1 px-6">
       <img src="/clases/construccion.webp" alt="引腰" class="w-full h-auto rounded-lg shadow-lg" />
@@ -871,7 +939,7 @@
 </section>
 
 <!-- Movimiento 9 -->
-<section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+<section id="movimiento-9" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-1 px-6">
       <img src="/clases/construccion.webp" alt="雁飞" class="w-full h-auto rounded-lg shadow-lg" />
@@ -908,7 +976,7 @@
 </section>
 
 <!-- Movimiento 10 -->
-<section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+<section id="movimiento-10" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-1 px-6">
       <img src="/clases/construccion.webp" alt="鹤舞" class="w-full h-auto rounded-lg shadow-lg" />
@@ -982,7 +1050,7 @@
 </section>
 
        <!-- Movimiento 11 -->
-<section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+<section id="movimiento-11" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-1 px-6">
       <img src="/clases/construccion.webp" alt="仰呼" class="w-full h-auto rounded-lg shadow-lg" />
@@ -1059,7 +1127,7 @@
 </section>
 
 <!-- Movimiento 12 -->
-<section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+<section id="movimiento-12" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-1 px-6">
       <img src="/clases/construccion.webp" alt="引背" class="w-full h-auto rounded-lg shadow-lg" />
@@ -1133,7 +1201,7 @@
 </section>
 
 <!-- Movimiento 13 -->
-<section class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+<section id="movimiento-13" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-1 px-6">
       <img src="/clases/construccion.webp" alt="收势" class="w-full h-auto rounded-lg shadow-lg" />
@@ -1217,7 +1285,7 @@
 </section>
   
   <section id="fuentes_movimientos" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
-    <div class="max-w-4xl mx-auto mb-16">
+    <div class="max-w-4xl mx-auto mb-16 px-6">
 <h4 class="font-title text-2xl md:text-3xl mb-6">Fuentes utilizadas</h4>
 <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
 <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
@@ -1234,6 +1302,7 @@
 </section>
 
 
+  
     </main>
 
         <footer class="footer-manuscript py-10 mt-0 text-center" style="border-top-color: var(--color-border-subtle);">
@@ -1264,12 +1333,12 @@
                <p class="text-sm text-text-secondary mb-4">© <span id="currentYear"></span> Sitio creado por Rodrigo Pizarro. Todos los derechos reservados.</p>
             </div>
         </footer>
-        
-            <script src="https://cdn.jsdelivr.net/npm/glightbox/dist//js/glightbox.min.js" defer></script>
-            <script src="/js/hero-preload.js" defer></script>
-            <script src="/js/navigation.js" defer></script>
-            <script src="/js/theme-toggle.js" defer></script>
-            <script src="/js/animations.js" defer></script>
-            <script src="/js/glightbox-init.js" defer></script>
+  
+        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist//js/glightbox.min.js" defer></script>
+        <script src="/js/hero-preload.js" defer></script>
+        <script src="/js/navigation.js" defer></script>
+        <script src="/js/theme-toggle.js" defer></script>
+        <script src="/js/animations.js" defer></script>
+        <script src="/js/glightbox-init.js" defer></script>
         </body>
         </html>

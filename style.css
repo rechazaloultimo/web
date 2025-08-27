@@ -446,61 +446,7 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position:  ;
-  --tw-gradient-via-position:  ;
-  --tw-gradient-to-position:  ;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-  --tw-contain-size:  ;
-  --tw-contain-layout:  ;
-  --tw-contain-paint:  ;
-  --tw-contain-style:  ;
-}
-
-::backdrop {
+*, ::before, ::after, ::backdrop {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -564,21 +510,9 @@ video {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1301px) {
   .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
+    max-width: 1301px;
   }
 }
 
@@ -1196,9 +1130,9 @@ video {
 /* Estilos Generales y Variables CSS - Nueva Estética */
 
 :root {
-  --color-bg-main: #FFFFFF;
+  --color-bg-main: #ffffff;
   /* Fondo principal blanco */
-  --color-bg-section: #F8F9FA;
+  --color-bg-section: #f6f4f4;
   /* Gris muy claro para secciones */
   --color-bg-card: #FFFFFF;
   /* Fondo de tarjetas blanco */
@@ -1242,12 +1176,9 @@ video {
   --color-dm-border-subtle: #4B5563;
   --color-dm-border-input: #525861;
   /* Ligeramente más claro para mejor visibilidad en fondos oscuros */
-  --color-dm-chinese-seal-red: #01c40b;
-  /* Verde como lo tenías para el modo oscuro */
-  --color-dm-chinese-seal-red-hover: #007406;
-  /* Verde más oscuro para hover */
-  --color-dm-text-placeholder: #888c92;
-  /* Placeholder más claro para modo oscuro */
+  --color-dm-chinese-seal-red: #01c40b; /* Verde como lo tenías para el modo oscuro */
+  --color-dm-chinese-seal-red-hover: #007406;  /* Verde más oscuro para hover */
+  --color-dm-text-placeholder: #888c92;  /* Placeholder más claro para modo oscuro */
 }
 
 body {
@@ -1532,7 +1463,7 @@ a:hover {
 /* ===== Menú Mobile (Tailwind) ===== */
 
 /* Mostrar botón hamburguesa solo en pantallas menores a 768px */
-@media (max-width: 767px) {
+@media (max-width: 1300px) {
   #mobile-menu-button {
     display: block;
   }
@@ -1541,43 +1472,38 @@ a:hover {
   }
 }
 
-/* Ocultar botón hamburguesa en escritorio */
-@media (min-width: 768px) {
-  #mobile-menu-button {
-    display: none;
-  }
-}
-
-/* Estilo enlaces del panel mobile */
-#mobile-menu a {
-  display: block;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-}
-
-/* Botón acordeón en mobile */
-.mobile-acc-btn {
-  width: 100%;
-  text-align: left;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-}
-
-/* Panel de submenú dentro de mobile */
 .mobile-acc-panel {
-  display: none;
+  box-sizing: border-box;
+  max-height: 0;                      /* cerrado por defecto */
+  overflow: hidden;                   /* evitar scroll cuando está cerrado */
+  transition: max-height 240ms ease;  /* animación suave al abrir/cerrar */
   padding-left: 1rem;
+  padding-top: 0;
+  padding-bottom: 0.4rem;
+  -webkit-overflow-scrolling: touch;  /* suavizado iOS cuando se vuelve scrollable */
 }
 
 .mobile-accordion.open .mobile-acc-panel {
-  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: var(--mobile-acc-max-height, 60vh); /* variable fijada por JS */
+  -webkit-overflow-scrolling: touch;
+  padding-top: .35rem;
+  padding-bottom: .6rem;
 }
 
-/* Estilo de enlaces dentro de submenús mobile */
-.mobile-acc-panel a {
-  padding: 0.4rem 1rem;
-  font-size: 0.95rem;
+#mobile-menu a,
+.mobile-acc-panel a,
+.mobile-acc-btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.3;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.06);
 }
+
+/* safety: si algún ancestro tiene overscroll, evitar que interfiera */
+.mobile-acc-panel { overscroll-behavior: contain; }
 
 /* Hover para mobile */
 #mobile-menu a:hover,
@@ -1589,6 +1515,534 @@ body.dark-mode #mobile-menu a:hover,
 body.dark-mode .mobile-acc-btn:hover {
   background-color: rgba(255,255,255,0.05);
 }
+
+
+/* Espaciado entre ítems del menú */
+#mainNavMenu {
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Ítems con submenú */
+.nav-item-has-children {
+  align-items: center;
+  position: relative;
+}
+
+/* Texto + flecha juntos */
+.nav-item-has-children > a {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Botón de flecha */
+.nav-parent-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-parent-btn .fa-chevron-down {
+  font-size: 0.75em;
+}
+
+/* Estado abierto: bloque continuo */
+.nav-item-has-children.open {
+  background-color: var(--color-chinese-seal-red);
+}
+body.dark-mode .nav-item-has-children.open {
+  background-color: var(--color-dm-chinese-seal-red);
+}
+
+.nav-item-has-children.open > a,
+.nav-item-has-children.open > .nav-parent-btn,
+.nav-item-has-children.open .nav-submenu a {
+  color: var(--color-text-light) !important;
+}
+body.dark-mode .nav-item-has-children.open > a,
+body.dark-mode .nav-item-has-children.open > .nav-parent-btn,
+body.dark-mode .nav-item-has-children.open .nav-submenu a {
+  color: var(--color-dm-text-title) !important;
+}
+
+.nav-submenu {
+  position: absolute;
+  top: calc(100% + 1.25rem);
+  left: 0;
+  min-width: 14rem;
+  border: none;
+  padding: 0;
+  background: var(--color-bg-card);
+  box-shadow: 0 4px 20px var(--color-chinese-seal-red-hover);
+  border-radius: var(--radius-lg, 0.25rem);
+  z-index: 1000;
+  display: none;
+}
+
+/* Enlaces del submenú */
+.nav-submenu a {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-chinese-seal-red);
+}
+
+body.dark-mode .nav-submenu {
+  background-color: var(--color-dm-bg-main);
+}
+
+body.dark-mode .nav-submenu a {
+  color: var(--color-dm-chinese-seal-red);
+}
+
+/* Estado abierto: fondo y texto unificados */
+.nav-item-has-children.open > a,
+.nav-item-has-children.open > .nav-parent-btn {
+  background-color: var(--color-chinese-seal-red);
+  color: var(--color-text-light);
+}
+
+body.dark-mode .nav-item-has-children.open > a,
+body.dark-mode .nav-item-has-children.open > .nav-parent-btn {
+  background-color: var(--color-dm-chinese-seal-red);
+  color: var(--color-dm-text-title);
+}
+
+.nav-item-has-children.open > .nav-submenu {
+  display: block;
+  background-color: var(--color-chinese-seal-red);
+}
+body.dark-mode .nav-item-has-children.open > .nav-submenu {
+  background-color: var(--color-dm-chinese-seal-red);
+}
+
+/* Texto dentro del submenú en abierto */
+.nav-item-has-children.open .nav-submenu a {
+  color: var(--color-text-light);
+}
+body.dark-mode .nav-item-has-children.open .nav-submenu a {
+  color: var(--color-dm-text-title);
+}
+
+/* Hover sobre enlaces */
+.nav-submenu a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+body.dark-mode .nav-submenu a:hover {
+  background-color: rgba(0,0,0,0.15);
+}
+
+/* Hover en desktop */
+@media (hover:hover) {
+  .nav-item-has-children:hover > .nav-submenu {
+    display: block;
+  }
+}
+
+/* Submenú con el mismo estilo "papel" que el resto del sitio */
+.nav-item-has-children {
+  position: relative;
+}
+
+/* puente invisible para mantener el hover */
+.nav-item-has-children::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 1.25rem; /* igual a la separación que pusiste en top */
+  width: 100%;
+  background: transparent;
+}
+
+body.dark-mode .nav-submenu {
+  background: var(--color-dm-bg-card);
+  box-shadow: 0 4px 20px var(--color-dm-chinese-seal-red-hover);
+
+}
+
+/* mostrar submenú */
+.nav-item-has-children:hover > .nav-submenu,
+.nav-item-has-children.open > .nav-submenu {
+  display: block;
+}
+
+body.dark-mode .nav-submenu {
+  background: var(--color-dm-bg-card);
+}
+
+body.dark-mode .nav-submenu a {
+  color: var(--color-dm-text-title);
+}
+
+.nav-submenu a:hover {
+  background-color: var(--color-bg-section, rgba(0,0,0,0.04));
+}
+
+body.dark-mode .nav-submenu a:hover {
+  background-color: rgba(255,255,255,0.06);
+}
+
+
+/* Fuerza estilos sobre Tailwind */
+#mobile-menu {
+  position: absolute;
+  top: calc(100% + 0.25rem); /* distancia visual debajo de la barra */
+  right: 0; /* alinear con el borde derecho del icono */
+  width: 14rem; /* ancho fijo para un alineado limpio */
+  background: var(--color-bg-card) !important;
+  box-shadow: 0 4px 20px var(--color-chinese-seal-red-hover);
+  border-radius: none;
+  margin-top: 1.15rem;
+  padding: 0.75rem 0;
+  border-top: none !important;
+  text-align: right;
+  overflow-y: auto;
+  will-change: scroll;
+  max-height: calc(100vh - 3.5rem); /* deja espacio para el header o margen */
+  -webkit-overflow-scrolling: touch; /* mejor experiencia en iOS */
+}
+
+
+body.dark-mode #mobile-menu {
+  background: var(--color-dm-bg-card) !important;
+}
+
+/* Forzar alineación derecha de todos los hijos */
+#mobile-menu * {
+  text-align: right;
+}
+
+#mobile-menu a,
+#mobile-menu .mobile-acc-btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+#mobile-menu a:hover,
+#mobile-menu .mobile-acc-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode #mobile-menu a:hover,
+body.dark-mode #mobile-menu .mobile-acc-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+/* Acordeón: cerrado por defecto */
+.mobile-acc-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 280ms ease;
+}
+
+/* Cuando el acordeón se abre (clase .open en el padre) */
+.mobile-accordion.open .mobile-acc-panel {
+  /* fallback CSS si JS no cambia altura; JS ajustará exactamente la altura */
+  max-height: 1000px;
+}
+
+/* Mostrar en hover o abierto */
+.nav-item-has-children:hover > .nav-submenu,
+.nav-item-has-children.open > .nav-submenu {
+  display: block;
+}
+
+.hover\:text-blue-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.hover\:text-green-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
+.hover\:text-green-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(21 128 61 / var(--tw-text-opacity));
+}
+
+.hover\:text-indigo-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(67 56 202 / var(--tw-text-opacity));
+}
+
+.hover\:text-pink-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(190 24 93 / var(--tw-text-opacity));
+}
+
+.hover\:text-red-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+.hover\:opacity-80:hover {
+  opacity: 0.8;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:ring-offset-0:focus {
+  --tw-ring-offset-width: 0px;
+}
+
+@media (min-width: 640px) {
+  .sm\:w-auto {
+    width: auto;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1301px) {
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .md\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .md\:mb-20 {
+    margin-bottom: 5rem;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:h-full {
+    height: 100%;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:w-2\/5 {
+    width: 40%;
+  }
+
+  .md\:w-3\/5 {
+    width: 60%;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
+  .md\:gap-12 {
+    gap: 3rem;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
+  }
+
+  .md\:p-10 {
+    padding: 2.5rem;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .md\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .md\:pb-20 {
+    padding-bottom: 5rem;
+  }
+
+  .md\:pt-24 {
+    padding-top: 6rem;
+  }
+
+  .md\:pt-32 {
+    padding-top: 8rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .lg\:max-w-2xl {
+    max-width: 42rem;
+  }
+
+  .lg\:max-w-3xl {
+    max-width: 48rem;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .lg\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 
 
 /* Tarjeta Genérica (usada para contacto y GPTs) */
@@ -2074,512 +2528,8 @@ input, select, textarea, button {
   background-color: var(--color-text-light);       /* fondo blanco al pasar */
 }
 
-/* Espaciado entre ítems del menú */
-#mainNavMenu {
-  align-items: center;
-  gap: 1.5rem;
-}
-
-/* Ítems con submenú */
-.nav-item-has-children {
-  align-items: center;
-  position: relative;
-}
-
-/* Texto + flecha juntos */
-.nav-item-has-children > a {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-/* Botón de flecha */
-.nav-parent-btn {
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-.nav-parent-btn .fa-chevron-down {
-  font-size: 0.75em;
-}
-
-/* Estado abierto: bloque continuo */
-.nav-item-has-children.open {
-  background-color: var(--color-chinese-seal-red);
-}
-body.dark-mode .nav-item-has-children.open {
-  background-color: var(--color-dm-chinese-seal-red);
-}
-
-.nav-item-has-children.open > a,
-.nav-item-has-children.open > .nav-parent-btn,
-.nav-item-has-children.open .nav-submenu a {
-  color: var(--color-text-light) !important;
-}
-body.dark-mode .nav-item-has-children.open > a,
-body.dark-mode .nav-item-has-children.open > .nav-parent-btn,
-body.dark-mode .nav-item-has-children.open .nav-submenu a {
-  color: var(--color-dm-text-title) !important;
-}
-
-.nav-submenu {
-  position: absolute;
-  top: calc(100% + 1.25rem); /* distancia visual debajo de la barra */
-  left: 0;
-  min-width: 14rem;
-  border: none;
-  padding: 0;
-  background: var(--color-bg-card);
-  box-shadow: 0 4px 20px var(--color-chinese-seal-red-hover);
-  border-radius: var(--radius-lg, 0.25rem);
-  z-index: 1000;
-  display: none;
-}
-
-/* Enlaces del submenú */
-.nav-submenu a {
-  display: block;
-  padding: 0.55rem 0.75rem;
-  font-size: 0.95rem;
-  color: var(--color-chinese-seal-red);
-}
-
-
-body.dark-mode .nav-submenu {
-  background-color: var(--color-dm-bg-main);
-}
-
-body.dark-mode .nav-submenu a {
-  color: var(--color-dm-chinese-seal-red);
-}
-
-/* Estado abierto: fondo y texto unificados */
-.nav-item-has-children.open > a,
-.nav-item-has-children.open > .nav-parent-btn {
-  background-color: var(--color-chinese-seal-red);
-  color: var(--color-text-light);
-}
-
-body.dark-mode .nav-item-has-children.open > a,
-body.dark-mode .nav-item-has-children.open > .nav-parent-btn {
-  background-color: var(--color-dm-chinese-seal-red);
-  color: var(--color-dm-text-title);
-}
-
-.nav-item-has-children.open > .nav-submenu {
-  display: block;
-  background-color: var(--color-chinese-seal-red);
-}
-body.dark-mode .nav-item-has-children.open > .nav-submenu {
-  background-color: var(--color-dm-chinese-seal-red);
-}
-
-/* Texto dentro del submenú en abierto */
-.nav-item-has-children.open .nav-submenu a {
-  color: var(--color-text-light);
-}
-body.dark-mode .nav-item-has-children.open .nav-submenu a {
-  color: var(--color-dm-text-title);
-}
-
-/* Hover sobre enlaces */
-.nav-submenu a:hover {
-  background-color: rgba(255,255,255,0.1);
-}
-body.dark-mode .nav-submenu a:hover {
-  background-color: rgba(0,0,0,0.15);
-}
-
-/* Hover en desktop */
-@media (hover:hover) {
-  .nav-item-has-children:hover > .nav-submenu {
-    display: block;
-  }
-}
-
-/* Submenú con el mismo estilo "papel" que el resto del sitio */
-.nav-item-has-children {
-  position: relative;
-}
-
-/* puente invisible para mantener el hover */
-.nav-item-has-children::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  height: 1.25rem; /* igual a la separación que pusiste en top */
-  width: 100%;
-  background: transparent;
-}
-
-body.dark-mode .nav-submenu {
-  background: var(--color-dm-bg-card);
-  box-shadow: 0 4px 20px var(--color-dm-chinese-seal-red-hover);
-
-}
-
-/* mostrar submenú */
-.nav-item-has-children:hover > .nav-submenu,
-.nav-item-has-children.open > .nav-submenu {
-  display: block;
-}
-
-body.dark-mode .nav-submenu {
-  background: var(--color-dm-bg-card);
-}
-
-body.dark-mode .nav-submenu a {
-  color: var(--color-dm-text-title);
-}
-
-.nav-submenu a:hover {
-  background-color: var(--color-bg-section, rgba(0,0,0,0.04));
-}
-
-body.dark-mode .nav-submenu a:hover {
-  background-color: rgba(255,255,255,0.06);
-}
-
-/* Mostrar en hover o abierto */
-.nav-item-has-children:hover > .nav-submenu,
-.nav-item-has-children.open > .nav-submenu {
-  display: block;
-}
-
-.hover\:text-blue-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
-}
-
-.hover\:text-green-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
-}
-
-.hover\:text-green-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(21 128 61 / var(--tw-text-opacity));
-}
-
-.hover\:text-indigo-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(67 56 202 / var(--tw-text-opacity));
-}
-
-.hover\:text-pink-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(190 24 93 / var(--tw-text-opacity));
-}
-
-.hover\:text-red-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity));
-}
-
-.hover\:underline:hover {
-  text-decoration-line: underline;
-}
-
-.hover\:opacity-80:hover {
-  opacity: 0.8;
-}
-
-.focus\:outline-none:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.focus\:ring-offset-0:focus {
-  --tw-ring-offset-width: 0px;
-}
-
-@media (min-width: 640px) {
-  .sm\:w-auto {
-    width: auto;
-  }
-
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .sm\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .sm\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .sm\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
-  .md\:mb-0 {
-    margin-bottom: 0px;
-  }
-
-  .md\:mb-16 {
-    margin-bottom: 4rem;
-  }
-
-  .md\:mb-20 {
-    margin-bottom: 5rem;
-  }
-
-  .md\:flex {
-    display: flex;
-  }
-
-  .md\:hidden {
-    display: none;
-  }
-
-  .md\:h-full {
-    height: 100%;
-  }
-
-  .md\:w-1\/2 {
-    width: 50%;
-  }
-
-  .md\:w-2\/5 {
-    width: 40%;
-  }
-
-  .md\:w-3\/5 {
-    width: 60%;
-  }
-
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .md\:flex-row {
-    flex-direction: row;
-  }
-
-  .md\:items-start {
-    align-items: flex-start;
-  }
-
-  .md\:gap-10 {
-    gap: 2.5rem;
-  }
-
-  .md\:gap-12 {
-    gap: 3rem;
-  }
-
-  .md\:gap-8 {
-    gap: 2rem;
-  }
-
-  .md\:p-10 {
-    padding: 2.5rem;
-  }
-
-  .md\:p-8 {
-    padding: 2rem;
-  }
-
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .md\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .md\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .md\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
-  .md\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
-  .md\:pb-20 {
-    padding-bottom: 5rem;
-  }
-
-  .md\:pt-24 {
-    padding-top: 6rem;
-  }
-
-  .md\:pt-32 {
-    padding-top: 8rem;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .md\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .md\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
-  .md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:col-span-1 {
-    grid-column: span 1 / span 1;
-  }
-
-  .lg\:max-w-2xl {
-    max-width: 42rem;
-  }
-
-  .lg\:max-w-3xl {
-    max-width: 48rem;
-  }
-
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-8 {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-  }
-
-  .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1rem * var(--tw-space-x-reverse));
-    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .lg\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-
-  .lg\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-/* Fuerza estilos sobre Tailwind */
-#mobile-menu {
-  position: absolute;
-  top: calc(100% + 0.25rem); /* distancia visual debajo de la barra */
-  right: 0; /* alinear con el borde derecho del icono */
-  width: 14rem; /* ancho fijo para un alineado limpio */
-  background: var(--color-bg-card) !important;
-  box-shadow: 0 4px 20px var(--color-chinese-seal-red-hover);
-  border-radius: var(--radius-lg, 0.25rem);
-  margin-top: 1.15rem;
-  padding: 0.75rem 0;
-  border-top: none !important;
-  text-align: right;
-}
-
-body.dark-mode #mobile-menu {
-  background: var(--color-dm-bg-card) !important;
-}
-
-/* Forzar alineación derecha de todos los hijos */
-#mobile-menu * {
-  text-align: right;
-}
-
-#mobile-menu a,
-#mobile-menu .mobile-acc-btn {
-  display: block;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-}
-
-#mobile-menu a:hover,
-#mobile-menu .mobile-acc-btn:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-body.dark-mode #mobile-menu a:hover,
-body.dark-mode #mobile-menu .mobile-acc-btn:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
 
 /* Video Mawangdui */
 #video iframe { width:100% !important; height:100% !important; display:block; }
+
+
