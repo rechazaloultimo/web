@@ -126,3 +126,48 @@ document.querySelectorAll('#mobile-menu .mobile-accordion').forEach(acc => {
     }
   });
   
+      // ===== CALCULO =====
+
+  (function () {
+  const nav = document.getElementById('mainNav');
+  if (!nav) return;
+
+  function getNavHeight() { return nav.offsetHeight || 0; }
+
+  // interceptar todos los enlaces de ancla dentro del documento
+  document.addEventListener('click', function (e) {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    // ignorar href '#' vacío
+    if (!href || href === '#') return;
+
+    const id = href.slice(1);
+    const target = document.getElementById(id);
+    if (!target) return; // deja el comportamiento normal si no existe
+
+    // previene el salto por defecto y hacemos scroll con offset
+    e.preventDefault();
+    const rect = target.getBoundingClientRect();
+    // posición absoluta del elemento
+    const absoluteTop = window.scrollY + rect.top;
+    // margen extra si querés (por ejemplo 10px)
+    const extra = 40;
+    const y = Math.max(0, absoluteTop - getNavHeight() - extra);
+
+    window.history.pushState(null, '', `#${id}`); // actualiza URL
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  });
+
+  // también al cargar con hash (soporte directo)
+  window.addEventListener('load', function () {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    const target = document.getElementById(id);
+    if (!target) return;
+    const rect = target.getBoundingClientRect();
+    const absoluteTop = window.scrollY + rect.top;
+    const y = Math.max(0, absoluteTop - getNavHeight() - 40);
+    setTimeout(() => window.scrollTo({ top: y, behavior: 'smooth' }), 80);
+  });
+})();

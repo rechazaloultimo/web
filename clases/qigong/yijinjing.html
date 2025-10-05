@@ -3,17 +3,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Descripción breve para buscadores -->
-    <meta name="description" content="Información general sobre el Yi Jin Jing y sus principales variantes.">
-    <title>Yi Jin Jing</title>
+    <meta name="description" content="Información general sobre el Yi  Jin  Jing y sus principales variantes.">
+    <title>Yi  Jin  Jing</title>
     <!-- Tipografías y estilos comunes utilizados en el sitio -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preload" href="/background/006.webp" as="image">
     <!-- Metadatos sociales básicos -->
-    <meta property="og:title" content="Yi Jin Jing - Rodrigo Pizarro">
-    <meta property="og:description" content="Descripción general del sistema Yi Jin Jing y sus variantes oficiales.">
+    <meta property="og:title" content="Yi  Jin  Jing - Rodrigo  Pizarro">
+    <meta property="og:description" content="Descripción general del sistema Yi  Jin  Jing y sus variantes oficiales.">
     <meta property="og:image" content="https://rodrigopizarro.com.ar//img-mias/001.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rodrigopizarro.com.ar/clases/qigong/yijinjing.html">
@@ -22,111 +22,1568 @@
     <script type="application/ld+json">{
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Rodrigo Pizarro",
+      "name": "Rodrigo  Pizarro",
       "description": "Instructor de Qígōng y artes marciales",
       "url": "https://rodrigopizarro.com.ar/clases.html"
     }</script>
 </head>
 <body class="rice-paper-bg">
-    <!-- Enlace oculto para accesibilidad, permite saltar directamente al contenido -->
     <a href="#main-content" class="skip-link">Saltar al contenido</a>
-    <!-- Navegación principal reutilizada de otras páginas -->
-    <nav aria-label="Navegación principal" id="mainNav" class="nav-transparent fixed w-full z-50 top-0 transition-all duration-300 ease-out">
-        <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
-            <a href="/index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
-            <div class="flex items-center">
-                <div id="mainNavMenu" class="hidden md:flex items-center space-x-3 lg:space-x-4">
-                    <a href="/index.html#bienvenida" class="transition duration-300 text-sm lg:text-base">Inicio</a>
-                    <a href="/acerca-de-mi.html" class="transition duration-300 text-sm lg:text-base">Sobre Mí</a>
-                    <a href="/clases/clases-presenciales.html" class="transition duration-300 text-sm lg:text-base">Clases</a>
-                    <a href="/asistentes-ia.html" class="transition duration-300 text-sm lg:text-base">Asistentes IA</a>
-                    <a href="/aulavirtual.html" class="transition duration-300 text-sm lg:text-base">Aula Virtual</a>
-                    <a href="/index.html#contacto" class="transition duration-300 text-sm lg:text-base">Contacto</a>
-                </div>
-                <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp" class="p-2 focus:outline-none text-lg rounded-none" id="whatsapp-nav-icon">
-                    <i aria-hidden="true" class="fab fa-whatsapp"></i>
-                </a>
-                <button id="theme-toggle" type="button" title="Cambiar tema" class="p-2 focus:outline-none text-lg rounded-none">
-                    <i aria-hidden="true" class="fas fa-sun" id="theme-toggle-sun-icon"></i>
-                    <i aria-hidden="true" class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
-                </button>
-                <div class="md:hidden ml-2">
-                    <button id="mobile-menu-button" class="focus:outline-none p-2" aria-expanded="false" aria-controls="mobile-menu">
-                        <span class="block h-0.5 w-6 bg-current my-1"></span>
-                        <span class="block h-0.5 w-6 bg-current my-1"></span>
-                        <span class="block h-0.5 w-6 bg-current"></span>
-                    </button>
-                </div>
-            </div>
+  <nav aria-label="Navegación principal" id="mainNav" class="nav-opaque fixed w-full z-50 top-0 transition-all duration-300 ease-out">
+      <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+        <a href="/index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
+        
+        <div class="flex items-center">
+          <!-- Menú Desktop -->
+          <ul id="mainNavMenu" class="hidden md:flex items-center space-x-4" role="menubar">
+            <li><a href="/index.html#bienvenida">Inicio</a></li>
+            <li><a href="/acerca-de-mi.html">Sobre Mí</a></li>
+            
+            <!-- Clases -->
+            <li class="nav-item-has-children">
+              <a>Clases</a>
+              <ul class="nav-submenu">
+                <li><a href="/clases/clases-presenciales.html">Presenciales</a></li>
+                <li><a href="/clases/clases-virtuales.html">Virtuales</a></li>
+                <li><a href="/clases/clases-particulares.html">Particulares</a></li>
+              </ul>
+            </li>
+    
+            <!-- Qìgōng -->
+            <li class="nav-item-has-children">
+              <a>Qìgōng</a>
+              <ul class="nav-submenu">
+                <li><a href="/clases/qigong.html">Qué es el Qìgōng</a></li>
+                <li><a href="/clases/qigong/wudangqigong.html">Wǔdāng Qìgōng</a></li>
+                <li><a href="/clases/qigong/mawangduidaoyinshu.html">Mawangdui Daoyin Shu</a></li>
+              </ul>
+            </li>
+    
+            <!-- Tàijí -->
+            <li class="nav-item-has-children">
+              <a>Tàijí</a>
+              <ul class="nav-submenu">
+                <li><a href="/clases/taiji.html">Qué es el Tàijí</a></li>
+                <li><a href="/clases/taiji.html#taijiquan-sistemas">Tàijíquán</a></li>
+              </ul>
+            </li>
+    
+            <!-- Servicios -->
+            <li class="nav-item-has-children">
+              <a>Servicios</a>
+              <ul class="nav-submenu">
+                <li><a href="/asistentes-ia.html">Asistentes IA</a></li>
+                <li><a href="/aulavirtual.html">Aula Virtual</a></li>
+              </ul>
+            </li>
+            
+            <li><a href="/index.html#contacto">Contacto</a></li> 
+
+      <p>Yi Jin Jing Oficial</p>
+          <!-- Indice -->
+          <li class="nav-item-has-children">
+            <a>Indice</a>
+            <ul class="nav-submenu">
+              <li><a href="#historia">Origen de los Ejercicios</a></li>
+              <li><a href="#Investigaciones">Investigaciones posteriores</a></li>
+              <li><a href="#version-oficial">Versión oficial</a></li>
+            </ul>
+          </li>
+
+          <!-- Movimientos (nombres corregidos) -->
+          <li class="nav-item-has-children">
+            <a>Movimientos</a>
+            <ul class="nav-submenu">
+              <li><a href="#movimiento-1">Wéituó ofrece el báculo I</a></li>
+              <li><a href="#movimiento-2">Wéituó ofrece el báculo II</a></li>
+              <li><a href="#movimiento-3">Wéituó ofrece el báculo III</a></li>
+              <li><a href="#movimiento-4">Alcanzar las estrellas y cambiar la Osa Mayor</a></li>
+              <li><a href="#movimiento-5">Tirar hacia atrás la cola de nueve bueyes</a></li>
+              <li><a href="#movimiento-6">Sacar garras y desplegar alas</a></li>
+              <li><a href="#movimiento-7">Nueve fantasmas desenvainan el sable</a></li>
+              <li><a href="#movimiento-8">Tres espirales descienden a tierra</a></li>
+              <li><a href="#movimiento-9">El dragón azul extiende la garra</a></li>
+              <li><a href="#movimiento-10">El tigre agazapado salta sobre su presa</a></li>
+              <li><a href="#movimiento-11">Hacer una reverencia</a></li>
+              <li><a href="#movimiento-12">Sacudir la cola</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Botón cambio de tema -->
+        <button id="theme-toggle" type="button" title="Cambiar tema" class="ml-2 p-2 focus:outline-none text-lg rounded-none">
+          <i aria-hidden="true" class="fas fa-sun" id="theme-toggle-sun-icon"></i>
+          <i aria-hidden="true" class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
+        </button> 
+          <!-- Icono WhatsApp -->
+          <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          title="Contactar por WhatsApp" 
+          class="p-2 focus:outline-none text-lg" 
+          id="whatsapp-nav-icon">
+         <i aria-hidden="true" class="fab fa-whatsapp"></i>
+       </a>
+  
+      <!-- Botón Hamburguesa + Menú Mobile -->
+      <div class="relative md:hidden ml-2">
+      <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="block h-0.5 w-6 bg-current my-1"></span>
+      <span class="block h-0.5 w-6 bg-current my-1"></span>
+      <span class="block h-0.5 w-6 bg-current"></span>
+      </button>
+  
+    <!-- Menú Mobile -->
+    <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-64 md:hidden shadow-lg rounded-lg bg-white text-right">
+      <a href="/index.html#bienvenida" class="block px-4 py-2">Inicio</a>
+      <a href="/acerca-de-mi.html" class="block px-4 py-2">Sobre Mí</a>
+  
+      <!-- Clases -->
+      <div class="mobile-accordion">
+        <button class="mobile-acc-btn block px-4 py-2 w-full text-chinese-seal-red">Clases</button>
+        <div class="mobile-acc-panel">
+          <a href="/clases/clases-presenciales.html" class="block px-4 py-2">Presenciales</a>
+          <a href="/clases/clases-virtuales.html" class="block px-4 py-2">Virtuales</a>
+          <a href="/clases/clases-particulares.html" class="block px-4 py-2">Particulares</a>
         </div>
-        <!-- Menú móvil -->
-        <div id="mobile-menu" class="md:hidden hidden shadow-lg py-2 border-t">
-            <a href="/index.html#bienvenida" class="block px-6 py-3 text-base transition duration-300 text-right">Inicio</a>
-            <a href="/acerca-de-mi.html" class="block px-6 py-3 text-base transition duration-300 text-right">Sobre Mí</a>
-            <a href="/clases/clases-presenciales.html" class="block px-6 py-3 text-base transition duration-300 text-right">Clases</a>
-            <a href="/asistentes-ia.html" class="block px-6 py-3 text-base transition duration-300 text-right">Asistentes IA</a>
-            <a href="/aulavirtual.html" class="block px-6 py-3 text-base transition duration-300 text-right">Aula Virtual</a>
-            <a href="/index.html#contacto" class="block px-6 py-3 text-base transition duration-300 text-right">Contacto</a>
+      </div>
+  
+      <!-- Qìgōng -->
+      <div class="mobile-accordion">
+        <button class="mobile-acc-btn block px-4 py-2 w-full text-chinese-seal-red">Qìgōng (Chi Kung)</button>
+        <div class="mobile-acc-panel">
+          <a href="/clases/qigong.html" class="block px-4 py-2">Qué es el Qìgōng (Chi Kung)</a>
+          <a href="/clases/qigong/wudangqigong.html" class="block px-4 py-2">Wudang Qìgōng</a>
+          <a href="/clases/qigong/mawangduidaoyinshu.html" class="block px-4 py-2">Mawangdui Daoyin Shu</a>
         </div>
-    </nav>
+      </div>
+  
+      <!-- Tàijí -->
+      <div class="mobile-accordion">
+        <button class="mobile-acc-btn block px-4 py-2 w-full text-chinese-seal-red">Tàijí (Tai Chi)</button>
+        <div class="mobile-acc-panel">
+          <a href="/clases/taiji.html" class="block px-4 py-2">Qué es el Tàijí (Tai Chi)</a>
+          <a href="/clases/taiji.html#taijiquan-sistemas" class="block px-4 py-2">Tàijíquán (Tai Chi Chuan)</a>
+          <a href="/clases/taiji.html#TaijiJian-detalle" class="block px-4 py-2">Tàijí  Jiàn (Espada)</a>
+        </div>
+      </div>
+  
+      <!-- Servicios -->
+      <div class="mobile-accordion">
+        <button class="mobile-acc-btn block px-4 py-2 w-full text-chinese-seal-red">Servicios</button>
+        <div class="mobile-acc-panel">
+          <a href="/asistentes-ia.html" class="block px-4 py-2">Asistentes IA</a>
+          <a href="/aulavirtual.html" class="block px-4 py-2">Aula Virtual</a>
+        </div>
+      </div>
+
+      <p class="block px-4 py-2 ">Yi Jin Jing Oficial</p>
+      <!-- Indice -->
+      <div class="mobile-accordion">
+        <button class="mobile-acc-btn block px-4 py-2 w-full text-chinese-seal-red">Indice</button>
+        <div class="mobile-acc-panel">
+          <a href="#historia">Origen de los Ejercicios</a>
+          <a href="#manuscritos">Manuscritos y recuperación</a>
+          <a href="#diagrama">El “Diagrama de Dǎoyǐn”</a>
+          <a href="#repercusión">Legado y repercusión</a>
+          <a href="#movimientos">Serie de movimientos</a>
+          <a href="#opinion">Opinion personal</a>
+        </div>
+      </div>
+
+      <!-- Movimientos (nombres corregidos) -->
+      <div class="mobile-accordion">
+        <button class="mobile-acc-btn block px-4 py-2 w-full text-chinese-seal-red">Serie de movimientos</button>
+        <div class="mobile-acc-panel">
+          <a href="#movimiento-1">Wéituó ofrece el báculo I</a>
+          <a href="#movimiento-2">Wéituó ofrece el báculo II</a>
+          <a href="#movimiento-3">Wéituó ofrece el báculo III</a>
+          <a href="#movimiento-4">Alcanzar las estrellas y cambiar la Osa Mayor</a>
+          <a href="#movimiento-5">Tirar hacia atrás la cola de nueve bueyes</a>
+          <a href="#movimiento-6">Sacar garras y desplegar alas</a>
+          <a href="#movimiento-7">Nueve fantasmas desenvainan el sable</a>
+          <a href="#movimiento-8">Tres espirales descienden a tierra</a>
+          <a href="#movimiento-9">El dragón azul extiende la garra</a>
+          <a href="#movimiento-10">El tigre agazapado salta sobre su presa</a>
+          <a href="#movimiento-11">Hacer una reverencia</a>
+          <a href="#movimiento-12">Sacudir la cola</a>
+        </div>
+      </div>
+    <a href="/index.html#contacto" class="block px-4 py-2">Contacto</a>
+
+    </div>
+  </div>
+</nav>
     <!-- Cabecera tipo héroe -->
     <header id="hero-yijinjing" class="hero-fullscreen-bg hero-banner fade-in text-white h-screen flex flex-col items-center justify-center relative">
         <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
-            <h1 class="font-title text-5xl sm:text-6xl md:text-7xl mb-8" style="opacity:1">Yi Jin Jing</h1>
+            <h1 class="font-title text-5xl sm:text-6xl md:text-7xl mb-8" style="opacity:1">Yi  Jin  Jing</h1>
             <h2 class="text-xl sm:text-2xl md:text-3xl mb-12 font-title" style="animation-delay:0.2s;opacity:1">Cambio de músculo y tendón</h2>
             <p class="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-200" style="animation-delay:0.4s;opacity:1">
-                Yi Jin Jing es uno de los estilos oficiales de Qigong impulsados por la Administración General de Deportes de China, junto con Wu Qin Xi, Liu Zi Jue y Ba Duan Jin【269905569071036†screenshot】. Este sistema se centra en el fortalecimiento y la flexibilidad de los tendones y músculos.
+                Yi  Jin  Jing es uno de los estilos oficiales de  Qigong impulsados por la Administración General de Deportes de China, junto con Wu  Qin  Xi, Liu  Zi  Jue y Ba  Duan  Jin【269905569071036†screenshot】. Este sistema se centra en el fortalecimiento y la flexibilidad de los tendones y músculos.
             </p>
         </div>
         <div class="hero-loading-overlay fade-out"><div class="hero-spinner"></div></div>
     </header>
     <!-- Contenido principal -->
     <main id="main-content" class="container mx-auto px-6 py-12 md:py-20">
-        <!-- Introducción y contexto -->
-        <section id="introduccion" class="mb-16 md:mb-20 fade-in" style="animation-delay:0.4s;">
-            <div class="max-w-4xl mx-auto">
-                <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Origen y versiones</h3>
-                <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-                    El término «Yi Jin Jing» se traduce como «transformación de los tendones y los músculos». Se trata de una práctica de ejercicio respiratorio y físico que busca estirar, fortalecer y flexibilizar el cuerpo mientras se cultiva la mente. A lo largo de la historia se desarrollaron diferentes formas de esta disciplina en distintas escuelas.
-                </p>
-                <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-                    A principios del siglo XXI, la Administración General de Deportes de China recopiló y sistematizó varios métodos tradicionales de qigong, estableciendo un repertorio de estilos oficiales que incluye el Yi Jin Jing【269905569071036†screenshot】. Existen otras variantes conocidas, por ejemplo asociadas al templo Shaolin o a la montaña Wudang, pero no dispongo de datos verificables para describir sus características en detalle.
-                </p>
+        
+        <!-- Bloque autónomo: Introducción y orígenes del Yijin Jing -->
+<section id="historia" class="mb-16 md:mb-20 fade-in" style="animation-delay:0.4s;">
+  <div class="max-w-4xl mx-auto">
+    <!-- Título principal -->
+    <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">El origen de leyenda</h3>
+    <!-- Definición general -->
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+  <strong>Yi jin Jing</strong> (易筋经; etimologicamente yi (易) significa «cambio», y jin (筋) alude a «tendones y nervios», mientras que jing (经) se traduce como «métodos» o «clásico». En conjunto se entiende como «Clásico de la transformación de tendones/músculos») es un manual de ejercicios daoyin que combina prácticas corporales y mentales para cultivar la jing (esencia) y dirigir/refinar el qi, la energía interna según la Medicina Tradicional China.</p>
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+  De acuerdo con la leyenda, el monje indio <strong>Bodhidharma</strong>—llamado en chino <strong>Da Mo</strong>—llegó al templo Shaolin y, decepcionado por la laxitud de sus monjes, se retiró a una cueva del monte Song para meditar nueve años de cara a la pared. Cuando el sueño lo vencía, <strong>se arrancó los párpados</strong> y los arrojó al suelo; de ellos brotaron los primeros arbustos de té, cuyas hojas ayudarían a los futuros practicantes a mantener la vigilia. Culminada su contemplación, Bodhidharma redactó dos tratados: el Yijin Jing, destinado a robustecer tendones y músculos, y el Xisui Jing, concebido para «lavar la médula» y purificar la esencia. Temiendo que se perdieran, escondió ambos textos en una hendidura de la pared —según otra versión, en su propia tumba—.</p>
+
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+  Generaciones después, los manuscritos fueron descubiertos; el Xisui Jing se perdió tras ser confiado a un discípulo, mientras que el Yijin Jing se preservó en Shaolin y dio origen a la célebre rutina transmitida hasta hoy. Las crónicas legendarias añaden que, al ver la débil condición física de los monjes, Bodhidharma les enseñó primero las Dieciocho Manos de Arhat para fortalecer el cuerpo y, más tarde, la práctica interna del Yijin Jing o «Clásico de la transformación de los tendones». Algunos relatos afirman que, tras los nueve años de inmovilidad, sus piernas se atrofiaron; de ahí la forma sin extremidades de las tradicionales muñecas Daruma en Japón, símbolo de perseverancia en la meditación.</p>
+
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+  Estudios modernos sitúan el origen escrito del Yijin Jing en un manual de qigong del siglo XVII—mucho después de la época de Bodhidharma—lo que sugiere que la historia fue una elaboración piadosa destinada a realzar la autoridad del texto. No obstante, el aura mística de cuevas, té nacido de párpados y manuscritos ocultos sigue siendo parte inseparable del imaginario cultural en torno al Yijin Jing.</p>
+
+</div>
+</section>
+
+<section id="Investigaciones" class="mb-16 md:mb-20 fade-in" style="animation-delay:0.4s;">
+  <div class="max-w-4xl mx-auto">
+    <!-- Título principal -->
+    <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Investigaciones posteriores</h3>
+      <!-- Investigación moderna -->
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+      Los relatos míticos provienen de dos prefacios que acompañan al Yijin Jing. El primero se atribuye al general <strong>Li Jing</strong> (628, dinastía Tang) y el segundo al general <strong>Niu Gao</strong> (Song). Estudios filológicos hallan incoherencias que cuestionan la autoría de Bodhidharma.</p>
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+      El investigador <strong>Tang Hao</strong> subrayó que el prólogo de Li Jing menciona «el décimo año de Taihe» bajo el emperador Xiaoming del Norte de Wei; sin embargo, Taihe fue un reinado del emperador Xiaowen y, en su año diez (487 d.C.), el templo Shaolin todavía no existía. El mismo prólogo alude al personaje literario “Héroe de la Barba Tupida” (虬髯客), ficticio de la dinastía Tang.</p>
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+      El prólogo de Niu Gao menciona el templo Qinzhong, erigido dos décadas después de la fecha citada, y proclama ser analfabeto: rasgo poco verosímil para un general de su rango. Ya en el siglo XVIII, el erudito <strong>Ling Tingkan</strong> ironizaba que el autor debía ser simultáneamente “ignorante y maestro”.</p>
+
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+      A lo largo de la historia se han registrado <strong>series que oscilan entre 10 y 30 ejercicios</strong>. Algunas fuentes vinculan el número 18 con los Arhats budistas; otras describen secuencias de 12, 14 o 24 partes.
+    </p>
+
+    <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-6">
+      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+        <strong>12 ejercicios de Wang Zuyuan</strong> (dinastía Qing tardía). Publicados en 1882 en
+        Nei Gong Tu Shuo; sirven de base para la versión oficial promovida
+        por la Chinese Health Qigong Association.
+      </li>
+
+      <!-- Chang Renxia & Chang Weizhen – 14 ejercicios -->
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>14-Series Sinew-Transforming Exercises</strong>, compiladas por Chang Renxia y
+      Chang Weizhen, con énfasis terapéutico (ISBN 7119006363).
+    </li>
+
+    <!-- Deng Ming-Dao – 24 ejercicios (Xisui Jing) -->
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>24 ejercicios (Xisui Jing)</strong> divulgados por Deng Ming-Dao en su obra
+      Scholar Warrior; ilustran la vertiente de “lavado de médula”.
+    </li>
+
+    <!-- Controversia Yijin vs Xisui -->
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      Varios autores debaten si Xisui Jing y Yijin Jing son la misma
+      práctica o métodos distintos con efectos diferentes sobre el cuerpo.
+    </li>
+
+    <!-- Antiguas rutinas ilustradas -->
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      Se conservan dos manuales ilustrados clave: uno atribuido a
+      Chen Yi (dinastía Ming) y el facsímil de 1882 de
+      Wang Zuyuan.
+    </li>
+
+    <!-- Uso clínico -->
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      Estudios modernos en hospitales chinos emplean variantes de
+      12 movimientos como apoyo terapéutico en rehabilitación
+      musculoesquelética.
+    </li>
+
+    </ul>
+
+    <p class="text-lg text-text-secondary mt-6 leading-relaxed">
+      En todas estas versiones, el objetivo común es transformar tendones y
+      músculos y favorecer la circulación de qi y sangre a lo largo de
+      los 12 meridianos principales y los canales Du y Ren.
+    </p>
+
+  </div>
+</section>
+
+<section id="version-oficial" class="mb-16 md:mb-20 fade-in" style="animation-delay:0.4s;">
+  <div class="max-w-4xl mx-auto">
+    <!-- Título principal -->
+    <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
+      La versión oficial «Health Qigong – Yi Jin Jing»
+    </h3>
+
+    <!-- Contexto de estandarización -->
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+      Entre <strong>2002 y 2007</strong>, la  Chinese Health Qigong Association 
+      (CQHA) —bajo la égida de la Administración General de Deportes de China—
+      convocó médicos de la Universidad de Medicina Tradicional China de Beijing,
+      científicos del deporte y maestros de artes marciales para depurar y
+      estandarizar el <strong>Yi Jin Jing</strong>. El objetivo: ofrecer una rutina
+      segura, reproducible y científicamente validada para programas de salud
+      pública, educación física y rehabilitación hospitalaria.
+    </p>
+
+    <!-- Lista de los 12 ejercicios -->
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed font-semibold">
+      Secuencia oficial de 12 movimientos, con su nombre en chino y español traducido.
+    </p>
+
+  <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-6">
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    1. Wěituó Xiàn Chǔ Dì Yī Shì – Wéituó ofrece el báculo&nbsp;(韦驮献杵第一势) <br/>
+    <span class="text-sm italic">(otras traducciones:&nbsp;«Wei Tuo prepara una ofrenda al Cielo», «Preparar una ofrenda al Cielo»)</span>
+  </li>
+
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    2. Wěituó Xiàn Chǔ Dì Èr Shì – Wéituó ofrece el báculo II&nbsp;(韦驮献杵第二势) <br/>
+    <span class="text-sm italic">(otras traducciones:&nbsp;«Wei Tuo despliega la ofrenda hacia el Cielo», «Desplegar una ofrenda hacia el Cielo»)</span>
+  </li>
+
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    3. Wěituó Xiàn Chǔ Dì Sān Shì – Wéituó ofrece el báculo III&nbsp;(韦驮献杵第三势) <br/>
+    <span class="text-sm italic">(otras traducciones:&nbsp;«Wei Tuo deposita la ofrenda en el Cielo», «Depositar la ofrenda en la puerta del Cielo»)</span>
+  </li>
+
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    4. Zhāi Xīng Huàn Dǒu Shì – Coger estrellas y cambiar la Osa Mayor&nbsp;(摘星换斗势) <br/>
+    <span class="text-sm italic">(otra traducción:&nbsp;«Guiar las estrellas para iluminar el espíritu»)</span>
+  </li>
+
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    5. Dào Zhuài Jiǔ Niú Wěi Shì – Tirar hacia atrás la cola de nueve bueyes&nbsp;(倒拽九牛尾势) <br/>
+    <span class="text-sm italic">(otra traducción:&nbsp;«Nueve bueyes tiran de un arado»)</span>
+  </li>
+
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    6. Chū Zhǎo Liàng Chì Shì – Sacar garras y desplegar alas&nbsp;(出爪亮翅势) <br/>
+    <span class="text-sm italic">(otra traducción:&nbsp;«Comprobar la propia fuerza para hacer temblar la montaña»)</span>
+  </li>
+
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    7. Jiǔ Guǐ Bá Mǎ Dāo Shì – Nueve fantasmas desenvainan el sable&nbsp;(九鬼拔马刀势) <br/>
+    <span class="text-sm italic">(otra traducción:&nbsp;«Desenvainar el sable para ahuyentar los fantasmas»)</span>
+  </li>
+
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    8. Sān Pán Luò Dì Shì – Tres espirales descienden a tierra&nbsp;(三盘落地势) <br/>
+    <span class="text-sm italic">(otra traducción:&nbsp;«Colocar tres platos en el suelo»)</span>
+  </li>
+
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    9. Qīng Lóng Tàn Zhǎo Shì – El dragón azul extiende la garra&nbsp;(青龙探爪势) <br/>
+    <span class="text-sm italic">(otra traducción:&nbsp;«El dragón verde estira sus garras, saca las garras»)</span>
+  </li>
+
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    10. Wò Hǔ Pū Shí Shì – El tigre agazapado salta sobre su presa&nbsp;(卧虎扑食势) <br/>
+    <span class="text-sm italic">(otra traducción:&nbsp;«Un tigre agresivo sale de su montaña»)</span>
+  </li>
+
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    11. Dǎ Gōng Shì – Hacer una reverencia&nbsp;(打躬势) <br/>
+    <span class="text-sm italic">(otras traducciones:&nbsp;«Arquearse abajo en saludo», «Inclinación o Inclinarse»)</span>
+  </li>
+
+<li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+  12. Diào Wěi Shì – Sacudir la cola&nbsp;(掉尾势) <br/>
+  <span class="text-sm italic">(otras traducciones:&nbsp;«Balancear la cola», «Mover la cola», «Posternarse»)</span>
+</li>
+
+</ul>
+
+
+    <!-- Características técnicas -->
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+      Cada ejercicio combina estiramientos amplios y torsiones espinales con
+      respiración abdominal natural. La rutina completa se realiza entre <strong>15 y 20 minutos</strong>, alternando fases de tensión y relajación para estimular los meridianos, mejorar la elasticidad tendinosa y favorecer
+      la circulación de Qi y sangre. Se enseña con progresión segura,
+      permitiendo la práctica por personas de todas las edades. Aun así, considero que no es un sistema
+      adecuado para todos, especialmente para aquellas personas con problemas de lumbar o sobrepeso.
+    </p>
+
+    <!-- Difusión y certificación -->
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+      Para su difusión global, la CQHA publicó el manual bilingüe
+       Chinese Health Qigong · Yi Jin Jing  (ISBN 978-7-119-04778-2) y
+      material audiovisual oficial. Parte de este material utilicé para crear
+      mis propios recursos de enseñanza y promoción del <strong>Yi Jin Jing</strong>.
+    </p>
+
+
+    
+  </div>
+</section>
+
+<section id="fuentes_y_referencias" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay: 0.3s;">
+  <div class="max-w-4xl mx-auto mb-16 px-6">
+    <h4 class="font-title text-2xl md:text-3xl mb-6">Fuentes utilizadas</h4>
+
+    <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+  <!-- Wikipedia -->
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    <a href="https://en.wikipedia.org/wiki/Yijin_Jing" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+      Wikipedia – Entrada «Yijin Jing»
+    </a>
+  </li>
+
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    <a href="https://en.wikipedia.org/wiki/Bodhidharma" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+      Wikipedia – Entrada «Bodhidharma»
+    </a>
+  </li>
+
+<li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    <a href="https://www.tundeworld.com/YiJinJing.Health.Preserving.Qigong" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+        TundeWorld – Qigong para la preservación de la salud Yi Jin Jing
+    </a>
+</li>
+
+  <!-- Preprint académico de Hsu & Lim (descarga directa) -->
+  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    <a href="https://www.mpiwg-berlin.mpg.de/sites/default/files/Preprints/P486.pdf" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+      Entrenamiento corporal en el entorno: el Yijin Jing. Mundos de Jin y Qi - Artículo académico del Max Planck Institute for the History of Science.
+    </a>
+  </li>
+
+<li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+  <a href="https://pdfcoffee.com/-8605-pdf-free.html" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+   «Nei Gong Tu Shuo» de Wang Zuyuan (1882, 12 posturas muy relacionadas con el Yijin Jing)
+  </a>
+</li>
+
+<li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    <a href="https://en-academic.com/dic.nsf/enwiki/11779463" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+        en-academic.com – Artículo sobre Yi Jin Jing
+    </a>
+</li>
+
+<!-- Lista oficial de los 12 movimientos (sitio gubernamental chino) -->
+<li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+    <a href="https://www.sport.gov.cn/n20001280/n20001265/n20066978/c20287495/content.html" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+        Administración General de Deportes de China – Lista oficial de los 12 movimientos
+    </a>
+</li>
+    </ul>
+  </div>   
+</section>
+
+
+        <!--  MOVIMIENTOS -->
+        <section id="sistema" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="font-title text-3xl md:text-4xl text-text-title mb-4 text-center py-8">La secuencia completa de Yi Jin Jing</h2>
+            <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                Desde que fue estandarizada por la Chinese Health Qigong Association (CHQA) en 2007 –y presentada internacionalmente en el World Health Qigong Tournament & Exchange de 2008–, el Yi Jin Jing se ha implantado en planes de estudio de universidades de educación física, hospitales de medicina tradicional china y seminarios de qigong de más de 40 países.
+            </p>
+            <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                En 2013 la CHQA publicó una edición revisada del manual bilingüe “Health Qigong · Yi Jin Jing” (Foreign Languages Press, ISBN 978-7-119-04778-2). Esta versión añadió diagramas anatómicos, indicaciones de respiración sincronizada y códigos QR con vídeos demostrativos oficiales.
+            </p>
+            <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                El 25 de septiembre de 2018, la Administración General de Deportes difundió un documento técnico titulado «习惯性错误及纠正方法» (“Errores habituales y métodos de corrección”) que detalla ajustes posturales y principios biomecánicos para mantener la seguridad y la eficacia terapéutica durante la práctica.
+              </p>
             </div>
-        </section>
-        <!-- Versión oficial -->
-        <section id="version-oficial" class="mb-16 md:mb-20 fade-in" style="animation-delay:0.6s;">
-            <div class="max-w-4xl mx-auto">
-                <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Versión oficial</h3>
-                <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-                    La versión reconocida oficialmente por la Administración General de Deportes de China se desarrolla bajo la supervisión de la Asociación China de Qigong para la Salud. Esta compilación se creó con el objetivo de preservar la esencia de la práctica tradicional, adaptándola a las necesidades de la población contemporánea.
-                </p>
-                <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-                    La rutina oficial consta de una serie de ejercicios diseñados para estirar las fascias y tendones de todo el cuerpo y mejorar la circulación del qi. Sin embargo, no dispongo de datos verificables sobre la secuencia exacta de movimientos ni sobre el sistema de certificación asociado a esta versión, por lo que se recomienda consultar manuales especializados o instructores certificados para obtener una guía completa.
-                </p>
+          </section>
+
+          <section id="opinion" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
+                <div class="max-w-4xl mx-auto section-bg-dynamic p-6 md:p-10 rounded-none shadow-lg">
+                  <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                    Yo aprendí este sistema a principios de 2025, en la Asociación Qing Mo Tiyu, Argentina. Considero que la Administración General de Deportes de China y Chinese Health Qigong Association, son las instituciones oficiales a las cuales se debe tener en cuenta para las correciones y cambios en la adecuación y mejora del sistema, considerando que tienen reglamentos técnicos evaluatorios.
+                  </p>
+                  <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                    Aun así te encontrarás, como me pasa mí, con variaciones de movimientos e interpretaciones, y eso no significa que "están mal", sean cancelables y deban ser rechazadas. Yo apoyo la curiosidad de aprender y experimentar con diferentes interpretaciones, y la idea de que cada persona debe encontrar su propia práctica, adaptando el sistema a su necesidad y su cuerpo.
+                  </p>
+                </div>
+          </section>
+
+      <section id="movimientos" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
+       <!-- Movimiento 1 · Yi Jin Jing (versión Health Qigong) -->
+        <details id="movimiento-1" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay: 0.3s;">
+          
+                <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-10">
+                    韦驮献杵第一势 – Wei Tuo ofrece el báculo I
+                </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                
+                <!-- Imagen de referencia (sustituye la ruta si lo deseas) -->
+                <div class="md:col-span-1 px-6">
+                <img src="/clases/construccion.webp" alt="韦驮献杵第一势 – Wei Tuo ofrece el báculo I" class="w-full h-auto rounded-lg shadow-lg" />
+                </div>
+
+                <!-- Descripción -->
+                <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+              
+                <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Posición básica:</strong>
+                    Pies paralelos al ancho de hombros, rodillas suaves, brazos descienden relajados. Después se elevan los antebrazos hasta formar un “abrazo de bola” frente al pecho: codos y muñecas en ángulo de ≈ 120°, palmas enfrentadas, dedos apuntando arriba.
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Meridianos implicados:</strong>
+                    Activación principal de los <em>tres meridianos yang de la mano</em> (Intestino Grueso, Triple Calentador y Intestino Delgado). El trabajo excita especialmente la vía de Intestino Grueso, generando fuerza “hacia delante”; Solar y Triple Calentador aportan aperturas lateral y descendente.
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Puntos energéticos clave:</strong>
+                    LU1 (Zhongfu) y CV17 (Shanzhong) abren el tórax; LI11 (Quchi) y PC8 (Laogong) canalizan la fuerza de las palmas; el eje Baihui (DU20) – Changqiang (DU1) se mantiene alineado.
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Beneficio terapéutico:</strong>
+                    Fortalece hombros y pectorales mediante contracción isométrica, mejora la capacidad respiratoria y estimula la circulación del <em>qi</em> en la parte anterior del brazo. A largo plazo alivia rigidez escapular y favorece la postura erguida.
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Respiración:</strong>
+                    Inspirar al elevar y “presentar” el báculo (pecho se expande); espirar al relajar y descender. Mantener ritmo regular (p. ej. 4 tiempos inhalar / 4 tiempos exhalar).
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Intención (Yi):</strong>
+                    Sentir que la fuerza se concentra en las palmas como si se sostuviera un báculo dorado; la energía fluye desde el dāntián hacia fuera y regresa con la exhalación.
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Alineación:</strong>
+                    Columna suspendida “por la coronilla”, sacro ligeramente hundido, hombros bajos; ejes cabeza-cadera-talones alineados para lograr la sensación de “cuerpo colgado desde la parte superior y enraizado por los talones”.
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Puntos de atención:</strong>
+                    Evitar encorvarse o adelantar la cabeza; no tensar trapecios; mantener la mirada serena al frente.
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Errores comunes y correcciones:</strong>
+                    • Hombros encogidos → exhalar y soltarlos.  
+                    • Curvar la zona dorsal → activar core y alinear vértebras.  
+                    • Codos demasiado cerrados o abiertos → buscar ángulo estable ≈ 120°.
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Precauciones:</strong>
+                    Practicantes con tendinitis de hombro deben reducir amplitud; quienes sufran hipertensión no controlada deben evitar apneas o sobreesfuerzo.
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Transición:</strong>
+                    Parte tras la postura preparatoria <em>Qǐ shì</em>; al finalizar enlaza directamente con «Wei Tuo ofrece el báculo II».
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Sensaciones esperadas:</strong>
+                    Calor que recorre brazos y pechos, ligera expansión esternal y sensación de solidez central.
+                    </li>
+
+                </ul>
+                </div>
             </div>
-        </section>
-        <!-- Otras variantes -->
-        <section id="otras-variantes" class="mb-16 md:mb-20 fade-in" style="animation-delay:0.8s;">
-            <div class="max-w-4xl mx-auto">
-                <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Otras variantes</h3>
-                <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-                    La tradición popular menciona versiones de Yi Jin Jing vinculadas al monasterio Shaolin y a la escuela de artes internas de Wudang. Estas variantes suelen diferir en el número de posturas y en el enfoque: algunas son más vigorosas y marciales, mientras que otras se centran en el trabajo interno suave y en la integración del movimiento con la respiración.
-                </p>
-                <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-                    Lamentablemente, no dispongo de fuentes verificables para describir con precisión estas variantes ni para detallar sus secuencias. Si tiene interés en conocerlas, se recomienda buscar bibliografía especializada o asistir a cursos de escuelas reconocidas que enseñen estos métodos.
-                </p>
+        </details>
+
+       <!-- Movimiento 2 · Yi Jin Jing (versión Health Qigong) -->
+        <details id="movimiento-2" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay: 0.3s;">
+            <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-10">
+                韦驮献杵第二势 – Wei Tuo ofrece el báculo II
+            </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+            <!-- Imagen de referencia (sustituye la ruta si lo deseas) -->
+            <div class="md:col-span-1 px-6">
+            <img src="/clases/construccion.webp" alt="韦驮献杵第二势 – Wei Tuo ofrece el báculo II" class="w-full h-auto rounded-lg shadow-lg" />
             </div>
-        </section>
-        <!-- Nota final -->
-        <section id="nota" class="mb-16 md:mb-20 fade-in" style="animation-delay:1s;">
-            <div class="max-w-4xl mx-auto text-center">
-                <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10">Nota importante</h3>
-                <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-                    Esta página resume el contexto general del Yi Jin Jing tal y como se entiende en la actualidad y subraya su inclusión entre los estilos oficiales de qigong【269905569071036†screenshot】. Dado que no disponemos de datos verificables sobre las secuencias detalladas de cada versión, la información aquí presentada tiene un carácter introductorio. Para una práctica adecuada y segura, es fundamental aprender con instructores formados y recurrir a textos de referencia avalados por entidades reconocidas.
-                </p>
+
+            <!-- Descripción -->
+            <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Posición básica (fuente Sohu):</strong>
+                Pies separados al ancho de hombros; rodillas suavemente flexionadas; desde el “abrazo de bola” los brazos se abren <em>lentamente</em> hacia los lados hasta quedar a la altura de los hombros, palmas al frente y dedos apuntando arriba. Al inhalar, el pecho se expande y los brazos se tensan ligeramente hacia atrás; al exhalar, los dedos se curvan hacia dentro y las palmas “empujan” hacia fuera.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong>
+                Predomina el meridiano de Intestino Grueso (LI) que recorre cara externa del brazo hasta el pecho, y se coactiva Pulmón (LU) al ampliar costillas; el estiramiento posterior activa el meridiano Shaoyang de Triple Calentador (SJ).
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong>
+                LI15 (Jianyu) y LI11 (Quchi) para liberar la articulación hombro-codo; LU1 (Zhongfu) para abrir la región pectoral; CV17 (Shanzhong) como centra-respiración al expandir.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico:</strong>
+                Incrementa la capacidad pulmonar, flexibiliza hombros y parte superior de la espalda, mejora la circulación de qi en tórax y brazos y corrige cifosis ligera al fomentar la retro-proyección escapular.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración:</strong>
+                Inhalar mientras los brazos se abren y el pecho se proyecta; exhalar al curvar dedos y “empujar” palmas. Repetir 8–20 veces según la guía oficial.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención (Yi):</strong>
+                Sentir que se “abre el portal del pecho” y se ofrece el báculo luminoso hacia los cuatro puntos cardinales, despejando el meridiano yang del brazo.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación:</strong>
+                Mantener hombros bajos, codos en línea con muñecas; no adelantar la cabeza; sostener el sacro en posición neutra para evitar hiperextensión lumbar.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención:</strong>
+                Controlar que la tensión final provenga del pecho y la espalda, no solo de los hombros; distribuir el peso igualmente en ambos pies.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong>
+                • Colapsar el pecho → expandir costillas y activar dorsal ancho.<br/>
+                • Elevar trapecios → soltar hombros al exhalar.<br/>
+                • Brazos demasiado atrás → mantener línea hombro-codo-muñeca.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Precauciones:</strong>
+                En casos de lesión aguda de manguito rotador reducir amplitud; si hay hipertensión, trabajar con respiración suave sin apnea.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición:</strong>
+                Continúa la serie tras «Wei Tuo ofrece el báculo I» y precede a «Wei Tuo ofrece el báculo III».
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong>
+                Expansión torácica, calor en hombros y brazos, sensación de apertura y ligereza en la parte superior del cuerpo.
+                </li>
+
+            </ul>
             </div>
-        </section>
+        </div>
+        </details>
+
+                <!-- Movimiento 3 · Yi Jin Jing (versión Health Qigong) -->
+        <details id="movimiento-3" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay: 0.3s;">
+            <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-10">
+                韦驮献杵第三势 – Wei Tuo ofrece el báculo III
+              </h3>  
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+            <!-- Imagen ilustrativa -->
+            <div class="md:col-span-1 px-6">
+            <img src="/clases/construccion.webp" alt="韦驮献杵第三势 – Wei Tuo ofrece el báculo III" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+
+            <!-- Contenido descriptivo -->
+            <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            
+              <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Posición y gesto principal:</strong>
+                  Desde la posición II, los brazos se elevan por delante hasta quedar casi verticales sobre la cabeza, palmas mirándose; al alcanzar el punto máximo, los codos se extienden con ligera tensión como “ofreciendo” el báculo al cielo. El pecho se abre y el cuerpo mantiene eje central.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Meridianos implicados:</strong>
+                  Activación ascendente del meridiano de Pulmón (LU) hasta la punta del pulgar; estiramiento del meridiano de Triple Calentador (SJ) en la cara externa del brazo; estimulación de Du Mai (línea media posterior) al alargar la columna.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos energéticos clave:</strong>
+                  LU10 (Yuji) y PC8 (Laogong) intensifican la salida de <em>qi</em> por las palmas; DU14 (Dazhui) y DU20 (Baihui) alinean el eje vertical; CV6 (Qihai) recoge la energía al descender.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Beneficio terapéutico:</strong>
+                  Aumenta la movilidad escapular y la flexión de hombros, estira la cadena miofascial anterior, mejora la ventilación pulmonar superior y tonifica músculos erectores de la columna y abdominales profundos.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Respiración:</strong>
+                  Inhalar lenta y profundamente al elevar los brazos; exhalar al descender de nuevo a la posición inicial, coordinando el cierre escapular.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Intención (Yi):</strong>
+                  Visualizar cómo la energía asciende en espiral desde el dāntián hasta las yemas de los dedos, atravesando la columna y emergiendo como un “báculo de luz” que conecta con el cielo.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Alineación:</strong>
+                  Mantener pies firmes enraizados, glúteos suavemente activados, pel­vis en neutro. Evitar hundir la zona lumbar o extender de más las costillas.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos de atención:</strong>
+                  No tensar cuello; sentir que los hombros ascienden “por dentro” sin encoger trapecios; mantener el peso equilibrado.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Errores comunes y correcciones:</strong>
+                  • Curvar la región lumbar → activar abdomen y alargar coxis hacia el suelo.<br/>
+                  • Flexionar codos → estirarlos sin bloquear; imaginar que “presentas” un objeto pesado.<br/>
+                  • Elevar hombros → relajar escápulas y repartir tensión.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Precauciones:</strong>
+                  Reducir rango en personas con hombro congelado; si hay vértigo, mantener la mirada al frente en vez de al cielo.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Transición:</strong>
+                  Continúa tras «Wei Tuo ofrece el báculo II» y precede a «Coger estrellas y cambiar la Osa Mayor».
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Sensaciones esperadas:</strong>
+                  Estiramiento global en brazos, costados y abdomen superior; sensación de ligereza y amplitud torácica.
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Movimiento 4 · Yi Jin Jing (versión Health Qigong) -->
+        <details id="movimiento-4" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay:0.3s;">
+          <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-10">
+                摘星换斗势 – Coger estrellas y cambiar la Osa Mayor
+              </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+            <!-- Imagen ilustrativa (sustituye la ruta por tu recurso) -->
+            <div class="md:col-span-1 px-6">
+              <img src="/clases/construccion.webp" alt="摘星换斗势 – Coger estrellas y cambiar la Osa Mayor" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+
+            <!-- Descripción estructurada -->
+            <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            
+              <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Meridianos implicados:</strong>
+                  Pulmón (LU) al elevar el brazo; Riñón (KI) al descender; Dai Mai (Vaso Cinturón) por la torsión suave de cintura.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos energéticos clave:</strong>
+                  LU1 Zhongfu y CV17 Shanzhong para abrir tórax; KI3 Taixi estabiliza la base; DU20 Baihui alinea el eje vertical.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Beneficio terapéutico principal:</strong>
+                  Amplía la movilidad costal y diafragmática, equilibra el flujo ascendente-descendente de <em>qi</em>, favorece la elasticidad toracolumbar.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Intención / Yi:</strong>
+                  Imaginar “tomar” una estrella con la palma elevada y “cambiar el cucharón celeste”, intercambiando luz entre mano y dāntián.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Respiración recomendada:</strong>
+                  Inhalar al elevar y coger la estrella; exhalar al girar cintura y descender la mano contraria (ritmo 4-4).
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Alineación estructural:</strong>
+                  Pelvis neutra, hombros relajados, columna axial sin hiperextensión; peso repartido 50-50 en ambos pies.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos de atención:</strong>
+                  Mantener la mirada en la palma elevada; evitar colapsar el costado que desciende; sentir la torsión suave, no forzada.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Errores comunes y correcciones:</strong>
+                  • Desalinear pelvis ➜ estabilizar cadera antes de rotar tronco.<br/>
+                  • Encoger hombros ➜ exhalar y soltarlos.<br/>
+                  • Exceso de inclinación lateral ➜ mantener eje vertical.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Precauciones:</strong>
+                  Reducir amplitud si hay dolor en hombro o zona lumbar; no bloquear la respiración en hipertensión.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Transición anterior y siguiente:</strong>
+                  Sigue a «Wei Tuo ofrece el báculo III» y precede a «Tirar hacia atrás la cola de nueve bueyes».
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Sensaciones esperadas:</strong>
+                  Expansión costal, estiramiento en flancos y ligera torsión lumbar que genera sensación de ligereza y flujo ascendente-descendente.
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Movimiento 5 · Yi Jin Jing (versión Health Qigong) -->
+        <details id="movimiento-5" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay:0.3s;">
+            <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-10">
+                倒拽九牛尾势 – Tirar hacia atrás la cola de nueve bueyes
+              </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+            <!-- Imagen ilustrativa (sustituye la ruta por la tuya) -->
+            <div class="md:col-span-1 px-6">
+              <img src="/clases/construccion.webp" alt="倒拽九牛尾势 – Tirar hacia atrás la cola de nueve bueyes" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+
+            <!-- Descripción del movimiento -->
+            <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+        
+
+              <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Meridianos implicados:</strong>
+                  Cadena posterior Taiyang de Vejiga (BL) y Shaoyang de Vesícula Biliar (GB); refuerzo de Dai Mai (Vaso Cinturón) al plegar y extender cadera.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos energéticos clave:</strong>
+                  BL40 (Weizhong) libera la zona lumbar; GB30 (Huantiao) desata glúteos y nervio ciático; DU4 (Mingmen) tonifica riñón y refuerza columna; SI11 (Tianzong) afloja la escápula.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Beneficio terapéutico principal:</strong>
+                  Estira toda la cadena miofascial posterior, descomprime vértebras lumbares, fortalece isquiotibiales y glúteos y mejora la circulación de <em>qi</em> en espalda y piernas.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Intención / Yi:</strong>
+                  Imaginar que se sujeta la cola de nueve bueyes y se tira con constancia interior, generando una tracción uniforme desde talones hasta coronilla.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Respiración recomendada:</strong>
+                  Inhalar al preparar (brazo delante, columna larga); exhalar al “tirar” y abrir pecho mientras los hombros se retraen suavemente (ritmo 4-4).
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Alineación estructural:</strong>
+                  Charniar cadera manteniendo espalda recta; rodillas semiflexionadas; cuello en línea con columna; peso distribuido en toda la planta del pie.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos de atención:</strong>
+                  Sentir el estiramiento en isquios y zona lumbar sin dolor; mantener hombros bajos; activar ligeramente abdomen para proteger la espalda.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Errores comunes y correcciones:</strong>
+                  • Redondear la zona lumbar → alargar columna y bascular pelvis neutra.<br/>
+                  • Tensionar trapecios → relajar hombros al exhalar.<br/>
+                  • Tirar solo con brazos → implicar la cadena posterior y el centro.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Precauciones:</strong>
+                  Reducir amplitud si hay ciática aguda o desgarro isquiotibial; evitar bloquear rodillas en hiperextensión.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Transición anterior y siguiente:</strong>
+                  Se ejecuta tras «Coger estrellas y cambiar la Osa Mayor» y precede a «Sacar garras y desplegar alas».
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Sensaciones esperadas:</strong>
+                  Estiramiento intenso pero confortable en piernas y espalda, alivio de tensión lumbar y sensación de fuerza que se integra desde talones hasta manos.
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Movimiento 6 · Yi Jin Jing (versión Health Qigong) -->
+        <details id="movimiento-6" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay:0.3s;">
+          <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-10">
+                出爪亮翅势 – Sacar garras y desplegar alas
+              </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+            <!-- Imagen ilustrativa (sustituye la ruta por la tuya) -->
+            <div class="md:col-span-1 px-6">
+            <img src="/clases/construccion.webp" alt="出爪亮翅势 – Sacar garras y desplegar alas" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+
+            <!-- Descripción del movimiento -->
+            <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+
+              <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Meridianos implicados:</strong>
+                  Cadena Shaoyang de Vesícula Biliar (GB) en costados y brazos; estimulación de Shaoyin de Corazón (HT) al expandir la caja torácica y proyectar codos.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos energéticos clave:</strong>
+                  GB21 (Jianjing) y SI11 (Tianzong) liberan tensión escapular; HT1 (Jiquan) abre la axila y favorece la circulación de sangre; LI4 (Hegu) conecta mano-brazo con el tórax.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Beneficio terapéutico principal:</strong>
+                  Alivia rigidez cervical y dorsal alta, mejora la capacidad inspiratoria al abrir la región costoclavicular y fortalece la musculatura interescapular.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Intención / Yi:</strong>
+                  Imaginar ser un ave que extiende sus alas: las garras se proyectan al frente mientras las escápulas “despliegan” las alas hacia atrás.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Respiración recomendada:</strong>
+                  Inhalar al abrir alas y mostrar garras; exhalar al relajar y volver al centro (ritmo 4-4).
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Alineación estructural:</strong>
+                  Columna erguida; hombros bajos; codos suavemente flexionados; pelvis estable; peso repartido de manera uniforme en las plantas de los pies.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos de atención:</strong>
+                  Sentir apertura entre escápulas y esternón; mantener cuello largo; evitar colapsar la zona lumbar al expandir pecho.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Errores comunes y correcciones:</strong>
+                  • Encoger trapecios → descender hombros al exhalar.<br/>
+                  • Curvar costillas hacia delante → activar abdomen y alinear caja torácica.<br/>
+                  • Girar brazos sin apoyo escapular → conectar primero la base de la escápula.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Precauciones:</strong>
+                  Reducir amplitud en síndrome de pinzamiento subacromial; mover sin dolor si existen lesiones de manguito rotador.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Transición anterior y siguiente:</strong>
+                  Se ejecuta tras «Tirar hacia atrás la cola de nueve bueyes» y precede a «Nueve fantasmas desenvainan el sable».
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Sensaciones esperadas:</strong>
+                  Sensación de expansión torácica, calor en deltoides y dorsales, ligereza en cuello y hombros.
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Movimiento 7 · Yi Jin Jing (versión Health Qigong) -->
+        <details id="movimiento-7" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay:0.3s;">
+          <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-10">
+                九鬼拔马刀势 – Nueve fantasmas desenvainan el sable
+              </h3>
+        
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+            <!-- Imagen ilustrativa (sustituye la ruta por tu recurso) -->
+            <div class="md:col-span-1 px-6">
+              <img src="/clases/construccion.webp" alt="九鬼拔马刀势 – Nueve fantasmas desenvainan el sable" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+
+            <!-- Descripción del movimiento -->
+            <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+          
+
+              <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Meridianos implicados:</strong>
+                  Activación oblicua de Yangming de Estómago (ST) y Taiyin de Bazo (SP) al cruzar brazos por delante; estímulo del meridiano Shaoyang de Vesícula Biliar (GB) en la línea lateral del tronco al girar la cintura.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos energéticos clave:</strong>
+                  ST25 (Tianshu) y SP15 (Daheng) masajean el abdomen con la torsión; GB30 (Huantiao) libera cadera; LI4 (Hegu) dirige la potencia hasta la mano “que desenvaina”.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Beneficio terapéutico principal:</strong>
+                  Fortalece oblicuos y cintura escapular, mejora la coordinación tronco-cadera-brazo y desbloquea la fascia anterolateral, aliviando lumbalgias de origen postural.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Intención / Yi:</strong>
+                  Imaginar que se desenvaina un sable en diagonal, cortando energías estancadas y dejando un canal despejado del hombro a la cadera opuesta.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Respiración recomendada:</strong>
+                  Inhalar al preparar (brazo cruza frente al torso); exhalar al efectuar el “corte” diagonal y completar la torsión (ritmo 4-4).
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Alineación estructural:</strong>
+                  Mantener pelvis estable; rodillas flexionadas junto a un giro suave de cintura; hombros relajados, brazo “cortante” extendido sin bloquear codo.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos de atención:</strong>
+                  Sentir la conexión entre talón posterior y mano que corta; no forzar la torsión lumbar; distribuir el peso 60-40 entre las piernas al girar.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Errores comunes y correcciones:</strong>
+                  • Rotar sólo hombros → iniciar giro desde la cintura.<br/>
+                  • Colapsar rodilla interna → alinear rodillas con pies.<br/>
+                  • Elevar hombro delantero → bajar escápula al exhalar.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Precauciones:</strong>
+                  Evitar torsión brusca si hay hernia discal lumbar; acortar recorrido en casos de inestabilidad de hombro.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Transición anterior y siguiente:</strong>
+                  Sigue a «Sacar garras y desplegar alas» y se encadena con «Tres espirales descienden a tierra».
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Sensaciones esperadas:</strong>
+                  Activación diagonal en faja abdominal, calor en cintura y brazo que corta, sensación de liberación en cadera y zona lumbar.
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Movimiento 8 · Yi Jin Jing (versión Health Qigong) -->
+        <details id="movimiento-8" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay:0.3s;">
+            <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-10">
+                三盘落地势 – Tres espirales descienden a tierra
+              </h3>
+        
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+            <!-- Imagen ilustrativa (sustituye la ruta por tu recurso) -->
+            <div class="md:col-span-1 px-6">
+            <img src="/clases/construccion.webp" alt="三盘落地势 – Tres espirales descienden a tierra" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+
+            <!-- Contenido del movimiento -->
+            <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+          
+
+              <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Meridianos implicados:</strong>
+                  Dai Mai (Vaso Cinturón) se activa al “enroscar” la cintura; Yin Qiao y Yang Qiao Mai (canales de talón) se estimulan al flexionar tobillos; cadena Taiyang de Vejiga (BL) se estira a lo largo de la espalda.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos energéticos clave:</strong>
+                  BL23 (Shenshu) tonifica riñón y zona lumbar; GB34 (Yanglingquan) libera rodilla y tendones; KI1 (Yongquan) enraíza la energía; CV6 (Qihai) estabiliza el centro.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Beneficio terapéutico principal:</strong>
+                  Refuerza piernas y glúteos, mejora equilibrio y propiocepción de cadera-tobillo, masajea órganos abdominales al flexionar tronco y estimula la circulación de <em>qi</em> en Dai Mai para aliviar lumbalgias.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Intención / Yi:</strong>
+                  Visualizar tres espirales de energía (cabeza-tronco, cintura y pies) que se enroscan descendiendo a tierra, descargando tensiones hacia las plantas.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Respiración recomendada:</strong>
+                  Inhalar al preparar y alargar columna; exhalar mientras se pliega el cuerpo y las espirales “penetran” el suelo (ritmo 4-4).
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Alineación estructural:</strong>
+                  Charniar desde cadera con espalda recta; rodillas y tobillos flexionan en la misma línea; vértebra cervical prolonga la columna sin colgar cabeza.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos de atención:</strong>
+                  Mantener apoyo igual en ambos pies; sentir “enraizamiento” en KI1; activar suavemente el abdomen para proteger la zona lumbar.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Errores comunes y correcciones:</strong>
+                  • Redondear la espalda → alargar columna y bascular pelvis neutra.<br/>
+                  • Talones despegados → hundir el peso hacia el centro del pie.<br/>
+                  • Tensión excesiva en cuello → alinear mirada al suelo, relajar trapecios.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Precauciones:</strong>
+                  Reducir profundidad de flexión en casos de hernia lumbar o vértigo; mantener rango cómodo si hay problemas de rodilla.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Transición anterior y siguiente:</strong>
+                  Sigue a «Nueve fantasmas desenvainan el sable» y precede a «El dragón azul extiende la garra».
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Sensaciones esperadas:</strong>
+                  Estiramiento profundo en parte posterior de piernas y espalda, sensación de peso que desciende y centro corporal estable y cálido.
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Movimiento 9 · Yi Jin Jing (versión Health Qigong) -->
+        <details id="movimiento-9" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay:0.3s;">
+          <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-10">
+                青龙探爪势 – El dragón azul extiende la garra
+              </h3>
+        
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+            <!-- Imagen ilustrativa (sustituye la ruta por tu recurso) -->
+            <div class="md:col-span-1 px-6">
+              <img src="/clases/construccion.webp" alt="青龙探爪势 – El dragón azul extiende la garra" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+
+            <!-- Descripción del movimiento -->
+            <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            
+
+              <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Meridianos implicados:</strong>
+                  Cadena Shaoyang de Vesícula Biliar (GB) y Jueyin de Hígado (LR) a lo largo del costado y cara interna de la pierna; activación complementaria de Yangming de Estómago (ST) por la proyección de brazos.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos energéticos clave:</strong>
+                  GB20 (Fengchi) libera cuello; GB34 (Yanglingquan) flexibiliza tendones; LR3 (Taichong) regula el ascenso de <em>qi</em>; LI15 (Jianyu) estabiliza hombro durante la proyección de la “garra”.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Beneficio terapéutico principal:</strong>
+                  Mejora la movilidad de cintura escapular y cadera, estira fascia lateral, favorece la circulación hepática-biliar y reduce rigidez costal, útil para neuralgias intercostales leves.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Intención / Yi:</strong>
+                  Sentir al “dragón” surgiendo del costado: la garra penetra hacia adelante mientras la cola (pierna posterior) presiona la tierra, generando un arco de energía lateral.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Respiración recomendada:</strong>
+                  Inhalar mientras se prepara y se abre costado; exhalar al “extender la garra” y profundizar la torsión-estiramiento (ritmo 4-4).
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Alineación estructural:</strong>
+                  Piernas en paso arqueado (gong bu) moderado; rodilla anterior alineada con pie; pelvis neutra; cadera y hombro traseros se abren para mantener espiral continua desde talón hasta mano.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos de atención:</strong>
+                  Evitar colapsar costado que se alarga; mantener hombro de la garra bajo; distribuir peso 60-40 (delante-detrás) con paso estable.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Errores comunes y correcciones:</strong>
+                  • Inclinar el tronco en vez de rotar → mantener eje vertical y girar desde cintura.<br/>
+                  • Bloquear codo de la garra → dejar ligera flexión elástica.<br/>
+                  • Rodilla delantera sobrepasa punta del pie → acortar paso o retraer rodilla.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Precauciones:</strong>
+                  Limitar amplitud si existe tendinitis de hombro o lumbalgia aguda; practicar con paso más corto en problemas de equilibrio.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Transición anterior y siguiente:</strong>
+                  Sigue a «Tres espirales descienden a tierra» y precede a «El tigre agazapado salta sobre su presa».
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Sensaciones esperadas:</strong>
+                  Estiramiento intenso en flanco y hombro, apertura costal, sensación de fluidez lateral y estabilidad en la base.
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Movimiento 10 · Yi Jin Jing (versión Health Qigong) -->
+        <details id="movimiento-10" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay:0.3s;">
+            <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-10">
+                卧虎扑食势 – El tigre agazapado salta sobre su presa
+              </h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+            <!-- Imagen ilustrativa (sustituye la ruta por tu recurso) -->
+            <div class="md:col-span-1 px-6">
+              <img src="/clases/construccion.webp" alt="卧虎扑食势 – El tigre agazapado salta sobre su presa" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+
+            <!-- Contenido del movimiento -->
+            <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            
+
+              <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Meridianos implicados:</strong>
+                  Cadena Yang Qiao (canal de talón exterior) y Taiyang de Vejiga (BL) al flexionar en cuclillas; activación de Shaoyin de Riñón (KI) en la fase de impulso; refuerzo de Yangming de Estómago (ST) en la pierna delantera.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos energéticos clave:</strong>
+                  BL23 (Shenshu) estabiliza zona lumbar; KI10 (Yingu) y ST36 (Zusanli) potencian la fuerza de piernas; LI15 (Jianyu) y SI9 (Jianzhen) coordinan la proyección de brazos y omóplatos.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Beneficio terapéutico principal:</strong>
+                  Refuerza cuádriceps, glúteos y erectores espinales; mejora la elasticidad de caderas y tobillos; estimula la circulación de <em>qi</em> en los canales de las extremidades inferiores y aumenta la capacidad de explosión controlada.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Intención / Yi:</strong>
+                  Sentir como un tigre que se agazapa —centrando energía en dāntián y piernas— y luego “salta” con las garras al frente, liberando la potencia acumulada.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Respiración recomendada:</strong>
+                  Inhalar al descender en postura de tigre; exhalar con fuerza controlada al estirar brazos y piernas en la “embestida” (ritmo 4-4).
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Alineación estructural:</strong>
+                  Tronco ligeramente inclinado hacia adelante manteniendo la espalda recta; rodilla delantera alineada con tobillo; talón trasero firme; hombros bajos; cuello en prolongación de la columna.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos de atención:</strong>
+                  Mantener el peso centrado entre ambos pies; no colapsar zona lumbar; conectar la fuerza desde talón trasero hasta punta de los dedos.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Errores comunes y correcciones:</strong>
+                  • Inclinar excesivamente el tronco → activar abdomen y alargar columna.<br/>
+                  • Rodilla delantera sobrepasando el pie → ampliar paso o retraer rodilla.<br/>
+                  • Tensión en hombros → soltar escápulas al exhalar.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Precauciones:</strong>
+                  Reducir profundidad de la cuclilla si existen problemas de rodilla o inestabilidad de tobillo; evitar bloqueos respiratorios en hipertensión no controlada.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Transición anterior y siguiente:</strong>
+                  Se ejecuta tras «El dragón azul extiende la garra» y precede a «Hacer una reverencia».
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Sensaciones esperadas:</strong>
+                  Calor intenso en muslos y glúteos, sensación de potencia concentrada, liberación de la tensión dorsal al estirar brazos.
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Movimiento 11 · Yi Jin Jing (versión Health Qigong) -->
+        <details id="movimiento-11" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay:0.3s;">
+            <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-10">
+                打躬势 – Hacer una reverencia
+              </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+            <!-- Imagen ilustrativa (sustituye la ruta por tu recurso) -->
+            <div class="md:col-span-1 px-6">
+            <img src="/clases/construccion.webp" alt="打躬势 – Hacer una reverencia" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+
+            <!-- Contenido del movimiento -->
+            <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+        
+              <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Meridianos implicados:</strong>
+                  Vía Taiyang de Vejiga (BL) a lo largo de la espalda en la flexión-extensión; Mér. Ren Mai (línea media anterior) al recuperar la vertical; ligera estimulación de Yin Qiao Mai (talón interior) al levantar el tronco.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos energéticos clave:</strong>
+                  BL40 (Weizhong) estira la cadena posterior; DU4 (Mingmen) tonifica la zona lumbar; CV6 (Qihai) recoge el <em>qi</em>; KI1 (Yongquan) enraíza la energía al flexionarse.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Beneficio terapéutico principal:</strong>
+                  Relaja y estira la musculatura lumbar, masajea vísceras abdominales con la flexión suave, mejora la circulación sanguínea craneal al inclinar la cabeza y fomenta un retorno venoso eficaz.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Intención / Yi:</strong>
+                  Inclinarse con humildad, “doblarse sin romperse” como un tallo de bambú: la energía desciende por la columna al reverenciar y asciende de nuevo al enderezarse.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Respiración recomendada:</strong>
+                  Exhalar lentamente al inclinar el tronco hacia delante; inhalar al regresar a la posición erguida (ritmo 4-4).
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Alineación estructural:</strong>
+                  Flexión desde la cadera con rodillas semiflexionadas; espalda recta; cabeza prolonga la columna; pelvis neutra para evitar hiperflexión lumbar.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos de atención:</strong>
+                  Sentir cómo se estira toda la cadena posterior sin dolor; mantener abdomen activo; distribuir peso en los tres puntos del pie (talón, pulgar, meñique).
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Errores comunes y correcciones:</strong>
+                  • Redondear la parte alta de la espalda → alargar la columna y proyectar coxis hacia atrás.<br/>
+                  • Bloquear rodillas → dejarlas suavemente flexionadas.<br/>
+                  • Alzar hombros al subir → relajarlos y conectar escápulas.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Precauciones:</strong>
+                  Limitar la inclinación si hay hernia discal lumbar o vértigo; levantar la cabeza despacio para evitar hipotensión ortostática.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Transición anterior y siguiente:</strong>
+                  Se practica tras «El tigre agazapado salta sobre su presa» y antecede a «Sacudir la cola», movimiento final de la serie.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Sensaciones esperadas:</strong>
+                  Liberación de tensión lumbar, estiramiento agradable en isquiotibiales y zona dorsal, sensación de calma y recogimiento energético al volver a la vertical.
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Movimiento 12 · Yi Jin Jing (versión Health Qigong) -->
+        <details id="movimiento-12" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay:0.3s;">
+              <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-10">
+                掉尾势 – Sacudir la cola
+              </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+            <!-- Imagen ilustrativa (sustituye la ruta por tu recurso) -->
+            <div class="md:col-span-1 px-6">
+            <img src="/clases/construccion.webp" alt="掉尾势 – Sacudir la cola" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+
+            <!-- Contenido del movimiento -->
+            <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+
+
+              <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Meridianos implicados:</strong>
+                  Du Mai (Vaso Gobernador) y Dai Mai (Vaso Cinturón) al balancear la pelvis; activación de los canales Shaoyin de Riñón (KI) y Taiyang de Vejiga (BL) que recorren la línea media posterior y piernas.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos energéticos clave:</strong>
+                  DU4 (Mingmen) tonifica riñón y calor interno; BL52 (Zhishi) refuerza la región lumbosacra; CV6 (Qihai) sella el <em>qi</em>; KI1 (Yongquan) facilita el descenso y enraizamiento de la energía.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Beneficio terapéutico principal:</strong>
+                  Relaja sacro y zona lumbar, libera tensión en la articulación sacroilíaca, culmina la serie asentando el <em>qi</em> en el dāntián y restablece el equilibrio entre los vasos Du y Ren.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Intención / Yi:</strong>
+                  Visualizar la “cola” de un dragón que sacude suavemente para disipar la energía residual y enviarla a los talones, cerrando el circuito energético.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Respiración recomendada:</strong>
+                  Exhalar con cada sacudida pélvica; inhalar al volver al centro, manteniendo ritmo natural (p. ej. 4 – 4).
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Alineación estructural:</strong>
+                  Pies paralelos al ancho de hombros; rodillas relajadas; pelvis realiza un pequeño vaivén anteroposterior; columna erguida; hombros y brazos sueltos a los costados.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Puntos de atención:</strong>
+                  Movimiento suave de la pelvis desde el sacro; mantener la cabeza estable; sentir la vibración que desciende hasta KI1 sin tensar glúteos ni muslos.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Errores comunes y correcciones:</strong>
+                  • Sacudir con demasiada fuerza → reducir amplitud y suavizar.<br/>
+                  • Mover solo caderas sin columna → permitir ondulación sutil que recorra toda la espalda.<br/>
+                  • Elevar hombros → dejarlos caer con cada exhalación.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Precauciones:</strong>
+                  Evitar movimientos bruscos si existe inestabilidad sacroilíaca; mantener respiración libre en casos de hipertensión.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Transición anterior y cierre:</strong>
+                  Culmina la serie tras «Hacer una reverencia» y sirve de postura de sellado: al finalizar, las manos reposan sobre el dāntián, se realizan tres respiraciones profundas y se disuelve la práctica.
+                </li>
+
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Sensaciones esperadas:</strong>
+                  Relajación lumbopélvica, calor suave descendiendo hacia los pies, sensación de “qi” asentado y mente tranquila.
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </details>
+
+</section>
+
+   <section id="fuentes_movimientos" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in hover-color" style="animation-delay: 0.3s;">
+    <div class="max-w-4xl mx-auto mb-16 px-6">
+        <h4 class="font-title text-2xl md:text-3xl mb-6">Fuentes utilizadas</h4>
+
+    <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+
+      <!-- 2007 – Publicación del manual bilingüe -->
+      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+        <a href="https://www.ebay.com/itm/336117886528"
+          class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+          Manual «Health Qigong · Yi Jin Jing» &nbsp;(Foreign Languages Press, 2007)
+        </a>
+      </li>
+
+      <!-- 2008 – Presentación internacional en el 1.er Torneo & Exchange -->
+      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+        <a href="https://www.jinli.com.au/blog/the-health-qigong-duan-wei-system-why-and-how"
+          class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+          Artículo Jinli – Mención al 1.er Torneo Mundial de Health Qigong (2008)
+        </a>
+      </li>
+
+      <!-- 2018 – Circular sobre “Errores habituales y correcciones” -->
+      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+        <a href="https://www.sport.gov.cn/n20001280/n20001265/n20066978/c20287495/content.html"
+          class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+          Administración General de Deportes (China) – Nota técnica sobre correcciones (publicada 25 sep 2018)
+        </a>
+      </li>
+
+          <!-- Instructivo oficial (12 movimientos) -->
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a href="https://www.sport.gov.cn/n20001280/n20001265/n20066978/c20287495/content.html" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+              Administración General de Deportes de China – Instructivo oficial de los 12 movimientos
+            </a>
+          </li>
+
+          <!-- Video demostrativo oficial (bilibili) -->
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a href="https://www.bilibili.com/video/BV1BTfVYQEMH/" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+              Video instructivo completo «Yi Jin Jing · Health Qigong» (bilibili, Centro de Qigong para la Salud)
+            </a>
+          </li>
+
+          <!-- Artículo explicativo (danieltantaiji) -->
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a href="https://danieltantaiji.com/index.php/articles/74-yi-jin-jing" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+              «Las Doce Posturas del Yi Jin Jing» – Daniel Tan Taiji
+            </a>
+          </li>
+
+          <!-- Video oficial (Xinhua / news.cn) -->
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a href="http://www.news.cn/sports/20250124/8ec74643d99b4f5980d7cfed5a27cfef/c.html" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+              Video oficial de demostración – Agencia Xinhua (news.cn)
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
     </main>
-</body>
-</html>
+
+        <footer class="footer-manuscript py-10 mt-0 text-center" style="border-top-color: var(--color-border-subtle);">
+            <div class="container mx-auto px-6">
+                <div class="flex justify-center space-x-8 mb-4">
+                    <a href="https://goo.gl/maps/2y9w8n3v6v8v8v8" target="_blank" rel="noopener noreferrer" class="text-red-600 hover:text-red-700 transition duration-300 text-2xl" title="Ver ubicación en Google Maps">
+                        <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                    </a>
+                    <a href="mailto:pizarro.rodrigoariel@gmail.com" class="text-blue-500 hover:text-blue-600 transition duration-300 text-2xl" title="Enviar email">
+                        <i aria-hidden="true" class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+5491138733447" class="text-green-600 hover:text-green-700 transition duration-300 text-2xl" title="Llamar por teléfono">
+                        <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                    </a>
+                    <a href="https://wa.me/5491138733447?text=Hola%2C%20quisiera%20consultar%20sobre..." target="_blank" rel="noopener noreferrer" class="text-green-500 hover:text-green-600 transition duration-300 text-2xl" title="WhatsApp">
+                        <i aria-hidden="true" class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/rechazaloultimo/" target="_blank" rel="noopener noreferrer" class="text-pink-600 hover:text-pink-700 transition duration-300 text-2xl" title="Instagram">
+                        <i aria-hidden="true" class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@rechazaloultimo" target="_blank" rel="noopener noreferrer" class="text-red-600 hover:text-red-700 transition duration-300 text-2xl" title="YouTube">
+                        <i aria-hidden="true" class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://x.com/rechazaloultimo" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600 transition duration-300 text-2xl" title="X (Twitter)">
+                        <i aria-hidden="true" class="fab fa-x-twitter"></i>
+                    </a>
+                    </div>
+               <p class="text-sm text-text-secondary mb-4">© <span id="currentYear"></span> Sitio creado por Rodrigo Pizarro. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+  
+        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist//js/glightbox.min.js" defer></script>
+        <script src="/js/hero-preload.js" defer></script>
+        <script src="/js/navigation.js" defer></script>
+        <script src="/js/theme-toggle.js" defer></script>
+        <script src="/js/animations.js" defer></script>
+        <script src="/js/glightbox-init.js" defer></script>
+        </body>
+        </html>
