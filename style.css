@@ -2161,9 +2161,10 @@ footer a:hover {
   font-weight: 500;
 }
 
-/* Aula Virtual Hub & Login Form específico */
+/* card */
 
-#aula-virtual-hub {
+
+.card-content-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2172,31 +2173,39 @@ footer a:hover {
   padding-bottom: 2rem;
   margin-right: auto;
   margin-left: auto;
-  background-image: url('background/008.webp');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
-.aula-virtual-card {
+#card-content-qigong {
+  background-image: url('background/004.webp');
+}
+
+#card-content-taiji {
+  background-image: url('background/003.webp');
+}
+
+.card-content {
   /* Para el card de presentación del hub */
   width: 60%;
   padding: 2rem;
   margin: 10rem 0;
   border-radius: 0;
-  background-color: var(--color-bg-card);
+  /* 30% de transparencia (30% transparente = 70% del color original) */
+  background-color: color-mix(in srgb, var(--color-bg-card) 75%, transparent 25%);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.aula-virtual-card h2 {
+.card-content h2 {
   margin-bottom: 1rem;
   color: var(--color-text-title);
   font-family: var(--font-title);
   font-size: 1.875rem;
 }
 
-.aula-virtual-card p {
+.card-content p {
   line-height: 1.65;
   margin-bottom: 1.5rem;
   color: var(--color-text-secondary);
