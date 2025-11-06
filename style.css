@@ -913,7 +913,7 @@ video {
 
 .py-8 {
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .pb-12 {
@@ -1547,10 +1547,6 @@ body.dark-mode .mobile-acc-btn:hover {
   align-items: center;
 }
 
-.nav-parent-btn .fa-chevron-down {
-  font-size: 0.75em;
-}
-
 /* Estado abierto: bloque continuo */
 .nav-item-has-children.open {
   background-color: var(--color-chinese-seal-red);
@@ -1949,6 +1945,18 @@ body.dark-mode #mobile-menu .mobile-acc-btn:hover {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  /* Forzar menú principal horizontal en pantallas grandes */
+  #mobile-menu-button {
+    display: none; /* ocultar hamburguesa en desktop */
+  }
+
+  #mainNavMenu {
+    display: flex; /* horizontal */
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
   }
 
   .md\:text-3xl {
@@ -2555,15 +2563,47 @@ input, select, textarea, button {
   list-style: none;              
 }
 
-.mov-summary h3, h4{ text-align: center; }
+.ocultar-summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: .75rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  list-style: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
 
+/* Al abrir <details> ocultar suavemente el <summary> */
+summary.ocultar-summary {
+  display: block;
+  overflow: hidden;
+  transition: opacity 240ms ease, transform 240ms ease, max-height 240ms ease, margin 240ms ease;
+  will-change: opacity, transform, max-height;
+}
+
+/* Estado "abierto": animar a invisible/colapsado */
+details[open] > summary.ocultar-summary {
+  opacity: 0;
+  transform: translateY(-6px);
+  max-height: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.mov-summary h3, h4{ text-align: center; }
 /* Ocultar marcador nativo del <summary> */
 .mov-summary::marker{ content: ""; }              /* Firefox */
 .mov-summary::-webkit-details-marker { display: none; } /* WebKit/Blink */
 
-/* Chevron animado */
-.mov-item .chev { transition: transform .2s ease; font-size: 0.95rem; }
-.mov-item[open] .chev { transform: rotate(180deg); }
+/* Chevron animado y ocultar cuando abierto */
+.mov-item .chev { transition: transform .2s ease, opacity .2s; font-size: 0.95rem; }
+.mov-item[open] .chev { opacity: 0; pointer-events: none; }
+
+/* Compatibilidad: algunos detalles usan <details> sin la clase .mov-item.
+  Aseguramos que el chevron rote cuando el <details> está abierto. */
+details .chev { transition: transform .2s ease, opacity .2s; font-size: 0.95rem; }
+details[open] .chev { opacity: 0; pointer-events: none; }
 
 /* Separación del contenido cuando está abierto */
 .mov-item[open] > .grid { padding-top: 1.25rem; }
@@ -2583,4 +2623,34 @@ input, select, textarea, button {
 .hover-color:hover {
   box-shadow: 0 6px 25px var(--color-chinese-seal-red-hover);
   transform: translateY(-4px);
+}
+.mov-summary {
+  display: grid;
+  grid-template-columns: 1fr; /* Cambiado a una sola columna */
+  align-items: center;
+  padding: 0.25rem;
+  cursor: pointer;
+  list-style: none;              
+}
+
+.chev.fa-chevron-down {
+    text-align: center; /* Alineación centrada */
+  display: inline-block;
+  font-size: 2rem;
+  line-height: 1;
+  border:none;
+  color: var(--color-chinese-seal-red);
+  transform-origin: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Clase opcional para movimiento sutil en reposo: añade "idle" al elemento */
+@keyframes chev-idle {
+  0%   { transform: translateY(0) }
+  50%  { transform: translateY(3px) }
+  100% { transform: translateY(0) }
+}
+.chev.fa-chevron-down.idle {
+  animation: chev-idle 3s ease-in-out infinite;
 }

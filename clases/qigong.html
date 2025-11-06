@@ -32,7 +32,7 @@
 <body class="rice-paper-bg">
     <a href="#main-content" class="skip-link">Saltar al contenido</a>
     <!-- Barra de navegación reutilizada -->
-    <nav aria-label="Navegación principal" id="mainNav" class="nav-opaque fixed w-full z-50 top-0 transition-all duration-300 ease-out">
+ <nav aria-label="Navegación principal" id="mainNav" class="nav-opaque fixed w-full z-50 top-0 transition-all duration-300 ease-out">
         <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
           <a href="/index.html" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
           
@@ -69,7 +69,7 @@
                 <ul class="nav-submenu">
                   <li><a href="/clases/taiji.html">Qué es el Tàijí</a></li>
                   <li><a href="/clases/taiji.html#taijiquan-sistemas">Tàijíquán</a></li>
-
+                  <li><a href="/clases/taiji.html#TaijiJian-detalle">Tàijí  Jiàn</a></li>
                 </ul>
               </li>
       
@@ -155,7 +155,7 @@
         <!-- Contacto -->
         <a href="/index.html#contacto" class="block px-4 py-2">Contacto</a>
       </div>
-    </div>  
+    </div>
 </nav>
 
     <!-- Cabecera específica para Qígōng -->
@@ -187,7 +187,6 @@
           El Qígōng (气功), que se traduce como “trabajo o cultivo de la energía vital (Qi)”, es un arte tradicional chino que integra movimiento suave, respiración consciente y enfoque mental. Parte de la idea de que el ser humano es un puente entre el cielo y la tierra, con la capacidad de transformar y refinar su propia energía para mejorar la salud, aumentar la vitalidad y alcanzar un equilibrio duradero.
         </p>
  
-
         <p class="text-lg text-ink mb-4 leading-relaxed">
           Aunque el Qígōng tiene raíces filosóficas antiguas, no es necesario involucrarse en ningún aspecto espiritual ni tener experiencia previa para beneficiarse de su práctica. Muchas personas lo eligen simplemente para mejorar postura, liberar tensiones, respirar mejor, fortalecer el cuerpo y reducir el estrés. En mis clases trabajamos con ejercicios concretos y accesibles que se adaptan al ritmo de cada persona. Las prácticas incluyen posturas estáticas, formas en movimiento y momentos de quietud, todas orientadas a optimizar el bienestar.
         </p>      
@@ -229,9 +228,15 @@
       <p class="text-lg text-text-secondary mb-4 leading-relaxed">
         Que se nutra de la respiración y de los alimentos concentra en dos imágenes muy concretas la fuente de esa energía: el aire y el alimento. El ideograma —vapor/aire + arroz— no es una definición técnica sino una enseñanza simbólica: la vida toma lo sutil del mundo (el aliento) y lo denso (la comida) y los convierte en aquello que mantiene el organismo en movimiento. En esa imagen hay un mensaje práctico y poético a la vez: cuidar la respiración y la alimentación es cuidar la raíz del propio funcionamiento vital.
       </p>
-
+       
+      <details>
+         <summary class="ocultar-summary">
+             <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                      <span class="text-chinese-seal-red">Mas información</span>
+                    </p>
+         </summary>
       <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-        Para nosotres como occidentales, la observación simplista de “en definitiva, hablamos de energía en acción”, abre una puerta interpretativa sin traicionar el sentido original. Esta frase nos permite múltiples lecturas razonables porque conserva tres rasgos esenciales: 1) no es estático (es acción), 2) tiene fuentes detectables (respiración/alimento) y 3) se manifiesta en funciones (lo que hace que el cuerpo respire, se mueva, mantenga calor, etc.). 
+        Para nosotres como occidentales, la observación simplista de “en definitiva, hablamos de energía en acción”, abre una puerta interpretativa sin traicionar el sentido original. Esta frase nos permite múltiples lecturas razonables porque conserva tres rasgos esenciales: 1. no es estático (es acción), 2. tiene fuentes detectables (respiración/alimento) y 3. se manifiesta en funciones (lo que hace que el cuerpo respire, se mueva, mantenga calor, etc.). 
       </p>
   
       <p class="text-lg text-text-secondary mb-4 leading-relaxed">
@@ -245,57 +250,45 @@
       <p class="text-lg text-text-secondary leading-relaxed">
         Además, la MTC caracterizó el Qi según su <strong>especialización</strong>: del encuentro del aire y los alimentos surge Zong Qi; con el apoyo del Yuan Qi se refina en Zhen Qi, que circula como Ying Qi (nutritivo) y Wei Qi (defensivo). Este mapa energético permite interpretar y actuar sobre la salud de manera coherente con la tradición clásica.
       </p>
+    </details>
     </div>
   </section>
   
-  <section id="tipos-qi" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+  <details class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in" style="animation-delay: 0.3s;">
+       <summary class="mov-summary section-bg-paper">
+    <h3 class="font-title text-2xl md:text-4xl text-text-title text-center">Tipos de Qi según la Medicina China</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
     <!-- ancho alineado con la sección anterior -->
     <div class="max-w-4xl mx-auto px-6 md:px-10">
-  
-      <h3 class="font-title text-3xl md:text-4xl text-text-title mb-8 text-center">
-        Tipos de Qi según la Medicina China
-      </h3>
-  
+
       <p class="text-lg text-text-secondary mb-10 leading-relaxed text-center">
         El organismo transforma aliento y alimento en distintas corrientes de energía que sostienen la vida, defienden el cuerpo y regulan cada función.
       </p>
   
       <!-- lista en una sola columna con mayor separación -->
       <ul class="list-none space-y-8 text-lg text-ink leading-relaxed">
-
-        <!-- 1. Esencia -->
-        <li>
-          <i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
           <strong>Jīng (精):</strong> la “esencia” heredada de padres y sostenida por la alimentación; nutre crecimiento, reproducción y longevidad. De ella parte el Yuán Qì.
         </li>
       
-        <!-- 2. Aire puro -->
-        <li>
-          <i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
           <strong>Qīng Qì / Dà Qì (清气 / 大气):</strong> el aire limpio que entra a los Pulmones; su pureza determina la calidad del aliento vital.
         </li>
       
-        <!-- 3. Qi de los alimentos -->
-        <li>
-          <i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
           <strong>Gǔ Qì (谷气):</strong> energía extraída de los nutrientes por Bazo-Estómago; materia prima para sangre y otros tipos de Qi.
         </li>
       
-        <!-- 4. Qi de reunión -->
-        <li>
-          <i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
           <strong>Zōng Qì (宗气):</strong> “Qi de reunión” que se forma en el tórax al combinar Qīng Qì y Gǔ Qì; regula respiración, voz y ritmo cardíaco.
         </li>
       
-        <!-- 5. Qi original -->
-        <li>
-          <i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
           <strong>Yuán Qì (元气):</strong> “Qi original”, enraizado en Riñón (Mìngmén, DU-4); impulsa todas las funciones orgánicas y apoya la transformación de otros tipos de Qi.
         </li>
       
-        <!-- 6. Qi verdadero, nutritivo y defensivo -->
-        <li>
-          <i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
           <strong>Zhēn Qì (真气):</strong> “Qi verdadero” refinado a partir de Zōng Qì y Yuán Qì; se expresa como:<br>
           <span class="ml-7">• Yíng Qì (营气): Qi nutritivo que circula por los meridianos internos y alimenta tejidos.</span><br>
           <span class="ml-7">• Wèi Qì (卫气): Qi defensivo que fluye bajo la piel y músculos, protege del clima y regula la temperatura corporal.</span>
@@ -304,7 +297,7 @@
       </ul>
       
     </div>
-  </section>
+  </details>
   
 
 
@@ -405,14 +398,22 @@
         <div class="max-w-4xl mx-auto px-6 md:px-10">
        <h4 class="font-title text-xl text-title-ink mb-4">Sistemas de Qígōng que conozco:</h4>         
        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-lg text-ink leading-relaxed list-none">
-           <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Estiramiento de Meridianos</li>
-           <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Apertura de las 4 Puertas</li>
-           <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Serie en Espiral (Torsiones)</li>
-           <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Juego de los 5 Animales</li>
-           <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Wudang Qígōng</li>
-           <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Mawangdui Dao Yin</li>
-           <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Zhineng Qígōng (Nivel I y II)</li>
-           <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Yi Jin Jing</li>
+           <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+<i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Estiramiento de Meridianos</li>
+           <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+<i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Apertura de las 4 Puertas</li>
+           <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+<i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Serie en Espiral (Torsiones)</li>
+           <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+<i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Juego de los 5 Animales</li>
+           <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+<i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Wudang Qígōng</li>
+           <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+<i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Mawangdui Dao Yin</li>
+           <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+<i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Zhineng Qígōng (Nivel I y II)</li>
+           <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+<i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Yi Jin Jing</li>
        </ul>
    </div>
    <div class="text-center mt-10">
