@@ -1,0 +1,180 @@
+---
+/**
+ * Navbar.astro - Componente genérico de navegación
+ * 
+ * Uso:
+ * <Navbar additionalMenuItems={customItems} />
+ * 
+ * Props:
+ * - additionalMenuItems: array de items adicionales para el menú (ej. índice de WudangQigong)
+ * - navClass: clase CSS adicional para el nav (ej. 'nav-opaque' o 'nav-transparent')
+ */
+
+interface Props {
+  additionalMenuItems?: Array<{
+    label: string;
+    href?: string;
+    submenu?: Array<{ label: string; href: string }>;
+  }>;
+  navClass?: string;
+}
+
+const { additionalMenuItems = [], navClass = 'nav-opaque' } = Astro.props;
+---
+
+<script src="@/js/navigation.js"></script>
+
+<nav aria-label="Navegación principal" id="mainNav" class={`${navClass} fixed w-full z-50 top-0 transition-all duration-300 ease-out`}>
+  <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+    <a href="/" id="mainNavLogo" class="font-title text-xl md:text-2xl lg:text-3xl">Rodrigo Pizarro</a>
+    
+    <div class="flex items-center">
+      <!-- Menú Desktop -->
+      <ul id="mainNavMenu" class="hidden md:flex items-center space-x-4" role="menubar">
+        <li><a href="/#bienvenida">Inicio</a></li>
+        <li><a href="/acerca-de-mi/">Sobre Mí</a></li>
+        
+        <!-- Clases -->
+        <li><a class="text-chinese-seal-red" href="/clases/">Clases</a></li>
+
+        <!-- Qìgōng -->
+        <li class="nav-item-has-children">
+          <a>Qìgōng</a>
+          <ul class="nav-submenu">
+            <li><a href="/clases/qigong/">Sobre el Qìgōng (Chi Kung)</a></li>
+            <li><a href="/clases/qigong/wudangqigong/">Wudang Qìgōng</a></li>
+            <li><a href="/clases/qigong/mawangduidaoyinshu/">Mawangdui Daoyin Shu</a></li>
+          </ul>
+        </li>
+
+        <!-- Tàijí -->
+        <li class="nav-item-has-children">
+          <a>Tàijí</a>
+          <ul class="nav-submenu">
+            <li><a href="/clases/taijiquan-historia/">Origenes del Tàijíquán</a></li>
+            <li><a href="/clases/taijiquan">Tàijíquán</a></li>
+            <li><a href="/404">Xíngyìquán</a></li>
+            <li><a href="/404">Baguazhang</a></li>
+          </ul>
+        </li>
+
+        <!-- Servicios -->
+        <li class="nav-item-has-children">
+          <a>Servicios</a>
+          <ul class="nav-submenu">
+            <li><a href="/servicios/asistentes-ia/">Asistentes IA</a></li>
+            <li><a href="/404">Microscopia</a></li>
+          </ul>
+        </li>
+
+        <!-- Items Adicionales (específicos de cada página) -->
+        {additionalMenuItems.length > 0 && (
+          <>
+            {additionalMenuItems.map((item) => (
+              <li class={item.submenu ? 'nav-item-has-children' : ''}>
+                {item.submenu ? (
+                  <>
+                    <a>{item.label}</a>
+                    <ul class="nav-submenu">
+                      {item.submenu.map((subitem) => (
+                        <li><a href={subitem.href}>{subitem.label}</a></li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <a href={item.href}>{item.label}</a>
+                )}
+              </li>
+            ))}
+          </>
+        )}
+      </ul>
+
+      <!-- Icono WhatsApp -->
+      <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         title="Contactar por WhatsApp" 
+         class="p-2 focus:outline-none text-lg rounded-none" 
+         id="whatsapp-nav-icon">
+        <i aria-hidden="true" class="fab fa-whatsapp"></i>
+      </a>
+
+      <!-- Botón cambio de tema -->
+      <button id="theme-toggle" type="button" title="Cambiar tema" class="p-2 focus:outline-none text-lg rounded-none">
+        <i aria-hidden="true" class="fas fa-sun" id="theme-toggle-sun-icon"></i>
+        <i aria-hidden="true" class="fas fa-moon hidden" id="theme-toggle-moon-icon"></i>
+      </button>
+
+      <!-- Botón Hamburguesa + Menú Mobile -->
+      <div class="relative md:hidden ml-2">
+        <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="block h-0.5 w-6 bg-current my-1"></span>
+          <span class="block h-0.5 w-6 bg-current my-1"></span>
+          <span class="block h-0.5 w-6 bg-current"></span>
+        </button>
+      
+        <!-- Menú Mobile -->
+        <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-64 md:hidden shadow-lg rounded-lg bg-white text-right">
+          <a href="/" class="block px-4 py-2">Inicio</a>
+          <a href="/acerca-de-mi/" class="block px-4 py-2">Sobre Mí</a>
+         
+          <!-- Clases -->
+          <a href="/clases/" class="block px-4 py-2">Clases</a>
+      
+          <!-- Qìgōng -->
+          <div class="mobile-accordion">
+            <button class="mobile-acc-btn block px-4 py-2 w-full text-chinese-seal-red">Qìgōng (Chi Kung)</button>
+            <div class="mobile-acc-panel">
+              <a href="/clases/qigong/" class="block px-4 py-2">Sobre el Qìgōng (Chi Kung)</a>
+              <a href="/clases/qigong/wudangqigong/" class="block px-4 py-2">Wudang Qìgōng</a>
+              <a href="/clases/qigong/mawangduidaoyinshu/" class="block px-4 py-2">Mawangdui Daoyin Shu</a>
+            </div>
+          </div>
+      
+          <!-- Tàijí -->
+          <div class="mobile-accordion">
+            <button class="mobile-acc-btn block px-4 py-2 w-full text-chinese-seal-red">Tàijí (Tai Chi)</button>
+            <div class="mobile-acc-panel">
+              <a href="/clases/taijiquan-historia/" class="block px-4 py-2">Origenes del Tàijíquán</a>
+              <a href="/clases/taijiquan/" class="block px-4 py-2">Tàijíquán</a>
+              <a href="/404" class="block px-4 py-2">Xíngyìquán</a>
+              <a href="/404" class="block px-4 py-2">Baguazhang</a>
+            </div>
+          </div>
+      
+          <!-- Servicios -->
+          <div class="mobile-accordion">
+            <button class="mobile-acc-btn block px-4 py-2 w-full text-chinese-seal-red">Servicios</button>
+            <div class="mobile-acc-panel">
+              <a href="/servicios/asistentes-ia/" class="block px-4 py-2">Asistentes IA</a>
+              <a href="/404" class="block px-4 py-2">Microscopia</a>
+            </div>
+          </div>
+
+          <!-- Items Adicionales Mobile -->
+          {additionalMenuItems.length > 0 && (
+            <>
+              {additionalMenuItems.map((item) => (
+                <>
+                  {item.submenu ? (
+                    <div class="mobile-accordion">
+                      <button class="mobile-acc-btn block px-4 py-2 w-full text-chinese-seal-red">{item.label}</button>
+                      <div class="mobile-acc-panel">
+                        {item.submenu.map((subitem) => (
+                          <a href={subitem.href} class="block px-4 py-2">{subitem.label}</a>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <a href={item.href} class="block px-4 py-2">{item.label}</a>
+                  )}
+                </>
+              ))}
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

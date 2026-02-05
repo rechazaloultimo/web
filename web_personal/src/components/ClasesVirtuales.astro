@@ -1,0 +1,147 @@
+---
+import CardGaleria from '@/components/galerias/CardGaleria.astro';
+import PhotoSwipeUI from '@/components/galerias/PhotoSwipeUI.astro';
+---
+
+<main id="info-virtuales-content" class="info-panel hidden px-6 px-6 pt-24 pb-12 md:pt-32 md:pb-20 max-w-5xl mx-auto mb-12">
+
+    <section id="intro-contenido-clases" class="mb-16 md:mb-20 fade-in">
+                <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-12 text-center">
+                Qígōng Online desde tu casa
+              </h2>
+              <p class="text-xl text-ink leading-relaxed">
+                Conecta cuerpo, respiración y mente desde tu propio espacio mediante sesiones virtuales en vivo.
+              </p>          
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Mis clases virtuales de <strong>Qígōng</strong> están diseñadas para quienes valoran la calma del hogar. Solo necesitas un pequeño rincón libre, conexión a Internet y ropa cómoda: el resto es una guia de una hora a través de la pantalla.
+            </p>
+          
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Cada encuentro se transmite en directo por videoconferencia (Google Meet), con cámara abierta para que pueda ofrecerte correcciones y adaptaciones. Las clases empiezan con un calentamiento previo, posturas estáticas y respiraciones guiadas, luego con el sistema específico de Qigong que esté programado para ese día y horario. Las grupales no se graban, pero recibirás los ejercicios para practicar entre clases.
+            </p>
+          
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              No se requiere experiencia previa y si tienes restricciones físicas, podemos realizar variaciones seguras. El objetivo es que aprendas un sistema de Qìgōng, y que te permita practicar desde tu casa.
+            </p>
+          
+            <p class="text-lg text-ink leading-relaxed">
+              <strong>Horarios por la  mañana </strong>. Todas las clases son de coste mensual, incluye acceso al grupo privado de apoyo y seguimiento, donde compartiré los movimientos del sistema que se verá. Escríbeme para recibir agenda actualizada y enlace de inscripción.
+            </p>
+          </section>
+
+    <article id="beneficios" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in">
+            <div class="max-w-4xl mx-auto px-6 md:px-10">
+              <h2 class="font-title text-3xl md:text-4xl text-title-ink mb-10 text-center">
+                Beneficios de Practicar Qígōng desde Casa
+              </h2>
+          
+              <div class="grid md:grid-cols-1 gap-2 md:gap-12">
+                <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+          
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Comodidad y privacidad:</strong> realizas la sesión en tu espacio personal, usando la ropa y el entorno que más te relajan.
+                  </li>
+                    
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Ahorro de tiempo y desplazamientos:</strong> aprovechas cada minuto para la práctica sin estrés de tráfico ni gastos de transporte.
+                  </li>
+                                                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Correciones posteriores:</strong> Grupo de apoyo para resolver dudas y recibir feedback entre clases.
+                  </li>
+
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Entorno controlado:</strong> reduces distracciones externas y creas una atmósfera tranquila que potencia la atención plena y la relajación.
+                  </li>
+          
+                </ul>
+              </div>
+            </div>
+          </article>
+          
+
+    <article id="Qígōng-detalle" class="mb-16 md:mb-20 fade-in" style="animation-delay: 0.4s;">
+            <div class="max-w-3xl mx-auto">
+          
+              <h2 class="font-title text-3xl md:text-4xl text-title-ink mb-8 text-center">
+                Explorando el Qìgōng (Chi Kung)
+              </h2>
+          
+              <p class="text-lg text-ink mb-4 leading-relaxed">
+                El Qígōng (气功), “cultivo de la energía vital”, combina movimientos suaves, respiración consciente y enfoque mental. Su sencillez de ejecución —sin saltos ni desplazamientos extensos— lo hace ideal para practicar en una habitación o sala de estar, frente a la cámara.
+              </p>
+          
+              <p class="text-lg text-ink mb-4 leading-relaxed">
+                <strong>¿Por qué imparto Qígōng virtualmente y no Tàijíquán?</strong>  
+                El Tàijíquán requiere espacio amplio para recorrer la forma y un ángulo de cámara generoso para corregir la pisada o la alineación de todo el cuerpo; muchas veces eso resulta inviable en casa. El Qígōng, en cambio, se basa en posturas estacionarias y secuencias breves que caben cómodamente en el campo visual de una cámara. Así, puedo observar la postura y darles una corrección clara.
+              </p>
+          
+              <p class="text-lg text-ink mb-4 leading-relaxed">
+                Además, la intención principal del Qígōng es armonizar el flujo de Qi, aflojar tensiones y entrenar la atención presente. Todos estos objetivos se logran incluso a través de la pantalla, siempre que respetemos la técnica y el ritmo interno. Con una conexión estable, recibes las mismas indicaciones que en persona, grabaciones de cada sesión y fichas con los ejercicios para practicar entre clases.
+              </p>
+          
+            </div>
+          </article>
+          
+ <article id="galeria-fotos-01" class="mb-16 md:mb-20 fade-in container mx-auto px-6">
+            <div class="pswp-gallery-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                        <CardGaleria 
+                            imgPath="qigong (1).webp" 
+                            altText="manos 4"
+                            width={1200}
+                            height={800}
+                            
+                        />
+                        <CardGaleria 
+                            imgPath="qigong (2).webp" 
+                            altText="manos 4"
+                             width={1200}
+                            height={800}
+                        />
+                        
+                        <CardGaleria 
+                            imgPath="qigong (3).webp" 
+                            altText="manos 4"
+                             width={1200}
+                            height={800}
+                        />
+                        <CardGaleria 
+                            imgPath="qigong (4).webp" 
+                            altText="Prueba 4" 
+                            width={1200}
+                            height={800}
+                        />
+                          <CardGaleria 
+                            imgPath="qigong (5).webp" 
+                            altText="Prueba 5" 
+                            width={1200}
+                            height={800}
+                        />
+                          <CardGaleria 
+                            imgPath="qigong (6).webp" 
+                            altText="Prueba 6" 
+                            width={1200}
+                            height={800}
+                        />
+                </div>
+        </article>
+
+     <article id="qigon-sistemas" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in">
+                 <div class="max-w-4xl mx-auto px-6 md:px-10">
+                <h4 class="font-title text-xl text-title-ink mb-4">Sistemas de Qígōng que doy virtualmente:</h4>         
+                <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-lg text-ink leading-relaxed list-none">
+                    <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Estiramiento de Meridianos</li>
+                    <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Apertura de las 4 Puertas</li>
+                    <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Serie en Espiral (Torsiones)</li>
+                    <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Wudang Qígōng</li>
+                    <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Mawangdui Dao Yin</li>
+                    <li><i aria-hidden="true" class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Zhineng Qígōng (Nivel I y II)</li>
+                </ul>
+            </div>
+            <div class="text-center mt-10">
+                    <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=%C2%A1Hola%20Rodrigo!%20Te%20contacto%20porque%20me%20interesan%20tus%20clases%20de%20Qigong.%20Me%20gustar%C3%ADa%20saber%20sobre%20la%20modalidad%2C%20horarios%20y%20cuando%20podr%C3%ADa%20comenzar.&type=phone_number&app_absent=0" class="button-manuscript text-lg font-semibold py-3 px-8">Consultame por clases virtuales de Qígōng</a>
+                </div>
+        </article>
+    
+
+    </main>

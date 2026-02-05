@@ -1,0 +1,36 @@
+---
+import Navbar from '@/components/Navbar.astro';
+
+const mawangduiMenuItems = [
+  {
+    label: 'Indice',
+    submenu: [
+      { label: 'Origen de los Ejercicios', href: '#historia' },
+      { label: 'Manuscritos y recuperación', href: '#manuscritos' },
+      { label: 'El "Diagrama de Dǎoyǐn"', href: '#diagrama' },
+      { label: 'Legado y repercusión', href: '#repercusión' },
+    ]
+  },
+  {
+    label: 'Movimientos',
+    submenu: [
+      { label: 'Preparación', href: '#movimiento-0' },
+      { label: 'Dibujar un arco', href: '#movimiento-1' },
+      { label: 'Estirar la espalda', href: '#movimiento-2' },
+      { label: 'El baño del pato', href: '#movimiento-3' },
+      { label: 'Ascenso del dragón', href: '#movimiento-4' },
+      { label: 'Estiramiento de pájaro', href: '#movimiento-5' },
+      { label: 'Guiar el abdomen', href: '#movimiento-6' },
+      { label: 'Mirada de búho', href: '#movimiento-7' },
+      { label: 'Guiar la cintura', href: '#movimiento-8' },
+      { label: 'El vuelo de la oca', href: '#movimiento-9' },
+      { label: 'Danzar como una grulla', href: '#movimiento-10' },
+      { label: 'Exhalar mirando hacia arriba', href: '#movimiento-11' },
+      { label: 'Estirar la espalda', href: '#movimiento-12' },
+      { label: 'Cierre', href: '#movimiento-13' },
+    ]
+  }
+];
+---
+
+<Navbar additionalMenuItems={mawangduiMenuItems} />

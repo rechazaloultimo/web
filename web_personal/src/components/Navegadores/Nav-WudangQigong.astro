@@ -1,0 +1,53 @@
+---
+import Navbar from '@/components/Navbar.astro';
+
+const wudangMenuItems = [
+  {
+    label: 'Indice',
+    submenu: [
+      { label: 'Origen de los Ejercicios', href: '#historia' },
+      { label: 'Cosmogonía Daoísta', href: '#cosmogonia' },
+      { label: 'Beneficios Físicos', href: '#beneficios-fisicos' },
+      { label: 'Beneficios Emocionales', href: '#beneficios-emocionales' },
+      { label: 'Secuencia de Movimientos', href: '#secuencia-movimientos' },
+      { label: 'Posturas Estáticas', href: '#posturas-estaticas' },
+      { label: 'Posturas Dinámicas', href: '#posturas-dinamicas' },
+    ]
+  },
+  {
+    label: 'Posturas Estáticas',
+    submenu: [
+      { label: 'Wújí — Vacuidad absoluta', href: '#postura-estatica-01' },
+      { label: 'Tàijí cultiva el Dāntián', href: '#postura-estatica-02' },
+      { label: 'Liǎng Yí nutre el Yīn', href: '#postura-estatica-03' },
+      { label: 'Sì Xiàng fortalece Yáng', href: '#postura-estatica-04' },
+      { label: 'Bāguà eleva el Qi al Bǎihuì', href: '#postura-estatica-05' },
+      { label: 'La Tortuga ingiere la energía Yáng', href: '#postura-estatica-06' },
+    ]
+  },
+  {
+    label: 'Posturas Dinámicas',
+    submenu: [
+      { label: 'El dragón de la inundación se sumerge en el Mar', href: '#postura-dinamica-01' },
+      { label: 'La golondrina púrpura vuela alto en el cielo', href: '#postura-dinamica-02' },
+      { label: 'El tigre derriba la montaña', href: '#postura-dinamica-03' },
+      { label: 'Inclinarse ante el Templo Dorado', href: '#postura-dinamica-04' },
+      { label: 'El águila abre las alas', href: '#postura-dinamica-05' },
+      { label: 'La grulla blanca despliega sus alas', href: '#postura-dinamica-06' },
+      { label: 'Mirar derecha e izquierda', href: '#postura-dinamica-07' },
+      { label: 'El fénix abre las alas', href: '#postura-dinamica-08' },
+      { label: 'Drenar el Triple Recalentador', href: '#postura-dinamica-09' },
+      { label: 'Drenar Dū Mài y Rèn Mài', href: '#postura-dinamica-10' },
+      { label: 'Voltear Cielo y Tierra', href: '#postura-dinamica-11' },
+      { label: 'El dragón y el tigre se saludan', href: '#postura-dinamica-12' },
+      { label: 'El mar ondula a derecha e izquierda', href: '#postura-dinamica-13' },
+      { label: 'Presionar las rodillas a izquierda y derecha', href: '#postura-dinamica-14' },
+      { label: 'Caminar hacia el mar', href: '#postura-dinamica-15' },
+      { label: 'Dar y recibir', href: '#postura-dinamica-16' },
+    ]
+  }
+];
+---
+
+<Navbar additionalMenuItems={wudangMenuItems} />
+      

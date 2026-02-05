@@ -1,0 +1,724 @@
+---
+// 1. IMPORTAMOS LOS COMPONENTES NECESARIOS
+import MainLayout from "@/layouts/MainLayout.astro";
+import NavGeneral from "@/components/Navegadores/NavGeneral.astro";
+import CardGaleria from "@/components/galerias/CardGaleria.astro";
+import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
+
+// 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
+const pageTitle = "Rodrigo Pizarro - Qígōng (Chi Kung)";
+const pageDescription = "Información sobre Qígōng impartidas por Rodrigo Pizarro en CABA, Argentina.";
+
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+  <!-- Cabecera específica para Qígōng -->
+  <header
+    id="qigong-inicio"
+    class="hero-fullscreen-bg hero-clases-qigong-bg hero-banner h-screen flex flex-col items-center justify-center relative"
+  >
+    <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
+      <h1
+        class="font-title text-5xl sm:text-6xl md:text-7xl mb-10 fade-in leading-snug"
+      >
+        Qígōng (Chi Kung)
+      </h1>
+      <h2
+        class="text-xl sm:text-2xl md:text-3xl mb-12 fade-in font-title"
+        style="animation-delay: 0.2s;"
+      >
+        Origenes, Beneficios y Sistemas
+      </h2>
+      <p
+        class="text-base sm:text-lg md:text-xl max-w-xl lg:max-w-2xl mx-auto mb-10 text-gray-200 fade-in"
+        style="animation-delay: 0.4s;"
+      >
+        Explora el Qígōng desde sus raíces milenarias en la medicina china,
+        descubre cómo sus movimientos suaves refuerzan la salud y conoce los
+        principales sistemas(corporales, emocionales o meditativos) que lo
+        convierten en una práctica versátil y transformadora.
+      </p>
+    </div>
+  </header>
+
+  <NavGeneral />
+
+  <section id="info-qigong" class="container mx-auto px-6 py-12 md:py-20">
+      
+      <div
+      id="titulo"
+      class="mx-auto text-center mb-12">
+        <i
+          aria-hidden="true"
+          class="fas fa-user-circle text-6xl text-chinese-seal-red mb-6"></i>
+        <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-6">
+          Los Orígenes del Qìgōng (Chi Kung)
+        </h2>
+      </div>
+
+      <article
+        id="introduccion-simple"
+        class="mb-12 md:mb-20 fade-in"
+        style="animation-delay: 0.2s;"
+      >
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          Los orígenes del Qìgōng se remontan a miles de años, naciendo de la
+          observación de la naturaleza por parte de las civilizaciones antiguas,
+          quienes desarrollaron movimientos y danzas para fortalecer la salud y
+          prevenir enfermedades. Con el paso de los siglos, estas prácticas
+          derivaron en diversas variantes: desde enfoques marciales y terapéuticos
+          hasta sistemas de refinamiento meditativo y sexual. Fue a mediados del
+          siglo XX, cuando el gobierno chino unificó y oficializó la práctica bajo
+          el nombre Qìgōng, tomando algunos de los sistemas más practicados para
+          su estandarización y difusión en hospitales, centros de salud y
+          profesionales que quieran enseñar.
+        </p>
+
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          A menudo se describe al <strong>Qìgōng</strong> como el "Yoga chino", ya que
+          ambas disciplinas comparten la práctica de la unión cuerpo, mente y respiración
+          para promover la salud y la expansión de la conciencia. Al igual que el Yoga,
+          el <strong>Qìgōng</strong> utiliza posturas físicas, estiramientos y respiraciones;
+          el <strong>Qìgōng</strong> también tiene posturas estáticas pero suele centrarse
+          en movimientos fluidos y suaves que buscan la relajación profunda y el cultivo
+          de la energía sin esfuerzo excesivo.
+        </p>
+
+        <div
+          class="pswp-gallery-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12 md:mb-20 mt-8"
+        >
+          <CardGaleria
+            imgPath="qigong (1).webp"
+            altText="manos 4"
+            width={1200}
+            height={800}
+          />
+          <CardGaleria
+            imgPath="qigong (2).webp"
+            altText="manos 4"
+            width={1200}
+            height={800}
+          />
+
+          <CardGaleria
+            imgPath="qigong (3).webp"
+            altText="manos 4"
+            width={1200}
+            height={800}
+          />
+          <CardGaleria
+            imgPath="qigong (4).webp"
+            altText="Prueba 4"
+            width={1200}
+            height={800}
+          />
+          <CardGaleria
+            imgPath="qigong (5).webp"
+            altText="Prueba 5"
+            width={1200}
+            height={800}
+          />
+          <CardGaleria
+            imgPath="qigong (6).webp"
+            altText="Prueba 6"
+            width={1200}
+            height={800}
+          />
+        </div>
+      </article>
+
+      <section
+        id="porque-practicar"
+        class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red"
+        style="animation-delay: 0.4s;"
+      >
+        <h3
+          class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center"
+        >
+          Por qué aprender y practicar Qìgōng
+        </h3>
+        <p class="text-lg text-text-ink mb-4 leading-relaxed">
+          Una práctica cotidiana de cualquier sistema de Qìgōng se traduce en el
+          beneficios tangibles como el refinamiento de la <strong
+            >Percepción Sensorial Expandida:</strong
+          > Es la capacidad de procesar información más allá de los cinco sentidos tradicionales,
+          permitiendo una conexión consciente con los sistemas internos de regulación,
+          equilibrio y posicionamiento que normalmente operan de forma inconsciente.
+          En Qìgōng, esto implica refinar la sensibilidad del sistema nervioso para
+          percibir el estado y armonía del ser.
+        </p>
+    
+        <details id="Exterocepción">
+        <summary class="ocultar-summary">
+          <p class="text-lg text-text-secondary leading-relaxed">
+            <span class="text-chinese-seal-red"
+              >Mas información sobre Exterocepción Expandida</span
+            >
+          </p>
+        </summary>
+  <h3 class="text-xl font-bold mb-3">Exterocepción Expandida</h3>
+  <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-6">
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>Termocepción:</strong> Capacidad de sentir y regular los cambios de temperatura interna y externa.
+    </li>
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>Magnetorrecepción:</strong> Sensibilidad sutil a los campos electromagnéticos, facilitando la orientación espacial y la alineación con el entorno.
+    </li>
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>Nocicepción:</strong> Sistema que detecta y procesa señales de dolor o daño potencial en los tejidos.
+    </li>
+  </ul>
+        </details>
+
+        <details id="Conciencia-Propioceptiva">
+        <summary class="ocultar-summary">
+          <p class="text-lg text-text-secondary leading-relaxed">
+            <span class="text-chinese-seal-red"
+              >Mas información sobre Conciencia Propioceptiva</span
+            >
+          </p>
+        </summary>
+  <h3 class="text-xl font-bold mb-3">Conciencia Propioceptiva</h3>
+  <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-6">
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>Sistema Vestibular:</strong> Gestión del equilibrio, la estabilidad postural y la orientación en relación a la gravedad.
+    </li>
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>Propiocepción:</strong> Conciencia profunda de la ubicación y movimiento de los músculos, tendones y articulaciones.
+    </li>
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>Barognosis:</strong> Capacidad de percibir y evaluar el peso, la densidad y la presión de los objetos (sentido de la masa).
+    </li>
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>Sentido del Esfuerzo:</strong> La capacidad de medir y ajustar la tensión muscular necesaria para cada acción.
+    </li>
+  </ul>
+        </details>
+
+        <details id="Maestria-Interoceptiva">
+          <summary class="ocultar-summary">
+          <p class="text-lg text-text-secondary leading-relaxed">
+            <span class="text-chinese-seal-red"
+              >Mas información sobre Maestría Interoceptiva</span
+            >
+          </p>
+        </summary>
+  <h3 class="text-xl font-bold mb-3">Maestría Interoceptiva</h3>
+  <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4">
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>Interocepción:</strong> Percepción del estado interno de los órganos (latidos, procesos viscerales y flujo energético).
+    </li>
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>Mecanorrecepción Alveolar:</strong> Monitoreo del estiramiento y expansión pulmonar para el control consciente de la respiración.
+    </li>
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>Quimiorrecepción:</strong> Detección de los niveles de oxígeno y el pH en el torrente sanguíneo.
+    </li>
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>Osmorrecepción:</strong> Sensibilidad al equilibrio de líquidos, la hidratación celular y la densidad plasmática.
+    </li>
+    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+      <strong>Cronocepción:</strong> La percepción consciente del paso del tiempo y la sincronización con los ritmos biológicos.
+    </li>
+  </ul>
+        </details>
+
+    
+
+      <p class="text-lg text-ink mb-4 leading-relaxed">
+        Aparte, en los sistemas de <strong>Qìgōng</strong> no es necesario tener experiencia
+        previa para beneficiarse de su práctica. Por eso en mis clases, sean particulares
+        o grupales, trabajo con ejercicios concretos y accesibles que se adaptan a las
+        personas.
+      </p>
+      
+      <details id="mas-informacion">
+        <summary class="ocultar-summary">
+          <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+            <span class="text-chinese-seal-red"
+              >Mas información para quienes quieren comprender la esencia del
+              Qìgōng</span
+            >
+          </p>
+            <div class="max-w-4xl mx-auto mt-8">
+            <div
+              id="galeria-etimilogia"
+              class="pswp-gallery-container grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4 mb-4"
+            >
+              <CardGaleria
+                imgPath="caracteres-qigong.png"
+                altText="Caracter Qìgōng (氣功)"
+                width={1024}
+                height={1024}
+              />
+              <CardGaleria
+                imgPath="caracteres-daoyin.png"
+                altText="Caracter Dǎo Yǐn (導引)"
+                width={1024}
+                height={1024}
+              />
+               <CardGaleria
+                imgPath="caracteres-neigong.png"
+                altText="Caracter Néigōng (內功)"
+                width={1024}
+                height={1024}
+              />
+               <CardGaleria
+                imgPath="caracteres-waigong.png"
+                altText="Caracter Wài Gōng (外功)"
+                width={1024}
+                height={1024}
+              />
+
+            </div>
+        </summary>
+        <p class="text-lg text-text-ink mb-4 leading-relaxed">
+          Ahora bien, practicar Qìgōng responde a objetivos muy concretos dentro
+          de las tradiciónes donde se busca estados de conciencia superiores. Para
+          eso lo que se hace es conservar y refinar la esencia (Jing), transformar
+          esa esencia en energía viva (Qì) y, finalmente, nutrir el
+          espíritu/consciencia (Shen); este proceso es central para mantener la
+          salud y buscar longevidad mediante técnicas adecuadas.
+        </p>
+
+        <p class="text-lg text-text-ink mb-4 leading-relaxed">
+          Además, la práctica habitual mejora las funciones que la MTC atribuye al
+          Qi —movimiento, regulación, transformación y protección— y cuida la raíz
+          misma de la vida, que surge de la respiración y la alimentación. Por eso
+          el Qìgōng es tanto preventivo como reparador: trabaja la base energética
+          para sostener el cuerpo y la mente.
+        </p>
+
+        <p class="text-lg text-text-ink mb-4 leading-relaxed">
+          Si bien hay varios sistemas de Qìgōng puede practicarse a cualquier edad
+          y condición física, es importante elegir un sistema adecuado a los
+          objetivos personales.
+        </p>
+
+        <article
+          id="etimología-qigong"
+          class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red"
+          style="animation-delay: 0.2s;"
+        >
+          <div class="max-w-4xl mx-auto">
+            <div
+              id="galeria-etimilogia"
+              class="pswp-gallery-container grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2 mb-12 md:mb-20 mt-8"
+            >
+              <CardGaleria
+                imgPath="caracteres-qigong.png"
+                altText="Caracter Qìgōng (氣功)"
+                width={1024}
+                height={1024}
+              />
+              <CardGaleria
+                imgPath="caracteres-daoyin.png"
+                altText="Caracter Dǎo Yǐn (導引)"
+                width={1024}
+                height={1024}
+              />
+            </div>
+
+            <h3
+              class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center"
+            >
+              Etimología del Qìgōng
+            </h3>
+
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              La palabra Qìgōng une dos caracteres chinos fundamentales. En su
+              forma tradicional se escribe 氣功, mientras que en su forma
+              simplificada se escribe 气功:
+            </p>
+            <details>
+              <summary class="ocultar-summary">
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                  <span class="text-chinese-seal-red"
+                    >Mas información sobre la etimología del Qìgōng</span
+                  >
+                </p>
+              </summary>
+              <ul
+                class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4"
+              >
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Qì (氣 / 气):</strong> El carácter tradicional (氣) es especialmente
+                  descriptivo, pues representa visualmente el vapor (气) que asciende
+                  mientras se cocina el arroz (米). Esta imagen simboliza la energía
+                  que se desprende de la materia. Por extensión, alude al aliento vital,
+                  la esencia o la fuerza invisible que anima a todo ser vivo y fluye
+                  por el universo. En la versión simplificada (气), se conserva el símbolo
+                  del vapor o aire en movimiento.
+                </li>
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Gōng (功):</strong> Este carácter se escribe igual en ambos
+                  sistemas y combina los componentes de "trabajo o herramienta" (工)
+                  y "fuerza" (力). Significa obra, destreza, mérito o un trabajo prolongado
+                  y constante que requiere disciplina para alcanzar la maestría.
+                </li>
+              </ul>
+            </details>
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Juntos, Qìgōng (氣功 / 气功) expresa la idea de “trabajar” o
+              “cultivar” ese aliento interno para refinar la salud y la
+              conciencia. Aunque el término se popularizó en el siglo XX para
+              agrupar diversas técnicas ancestrales de respiración, movimiento y
+              meditación bajo un mismo nombre, su esencia sigue siendo el arte
+              milenario de gestionar y nutrir la propia vitalidad.
+            </p>
+
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Cabe mencionar que el término Dǎo Yǐn es el nombre ancestral de las
+              prácticas que hoy conocemos como Qìgōng. En su forma tradicional se
+              escribe 導引, mientras que en su forma simplificada se escribe 导引.
+            </p>
+            <details>
+              <summary class="ocultar-summary">
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                  <span class="text-chinese-seal-red"
+                    >Mas información sobre la etimología del Dǎo Yǐn</span
+                  >
+                </p>
+              </summary>
+              <ul
+                class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4"
+              >
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Dǎo (導 / 导):</strong> El carácter tradicional (導) muestra
+                  el símbolo del "camino" y un "ojo" o "guía". Significa dirigir, guiar
+                  o conducir. En la práctica, se refiere a la capacidad de usar la mente
+                  y la intención para guiar el flujo del Qì (energía) a través de los
+                  canales internos del cuerpo, eliminando bloqueos.
+                </li>
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                  <strong>Yǐn (引):</strong> Este carácter representa un "arco" siendo
+                  tensado por una cuerda. Significa estirar, extender o atraer. Hace
+                  referencia a los movimientos físicos de estiramiento suave y apertura
+                  articular que permiten que el cuerpo se vuelva flexible y permeable
+                  al paso de la energía vital.
+                </li>
+              </ul>
+              <p class="text-lg text-ink mb-4 leading-relaxed">
+                Juntos, Dǎo Yǐn (導引 / 导引) expresa la idea de “guiar la energía
+                mediante el estiramiento y la intención”. Es un concepto que
+                aparece en textos de más de 2.000 años de antigüedad y describe un
+                sistema integral donde el cuerpo se mueve en armonía con la
+                respiración para restaurar el equilibrio natural, siendo
+                considerado el precursor histórico de la gimnasia terapéutica
+                china.
+              </p>
+            </details>
+          </div>
+        </article>
+
+        <article
+          id="tipos-de-qigong"
+          class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red"
+        >
+          <div class="max-w-4xl mx-auto">
+            <div
+              id="galeria-etimilogia"
+              class="pswp-gallery-container grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2 mb-12 md:mb-20 mt-8"
+            >
+              <CardGaleria
+                imgPath="caracteres-neigong.png"
+                altText="Caracter Neigong (內功)"
+                width={1024}
+                height={1024}
+              />
+              <CardGaleria
+                imgPath="caracteres-daoyin.png"
+                altText="Caracter Wai Gong (外功)"
+                width={1024}
+                height={1024}
+              />
+            </div>
+
+          <h3
+            class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center"
+          >
+            ¿Qìgōng duro o suave?
+          </h3>
+          <p class="text-lg text-ink mb-4 leading-relaxed">
+            Para comprender la intensión de la práctica en profundidad, es
+            fundamental distinguir entre dos conceptos técnicos: el <strong
+              >Wàigōng (外功)</strong
+            >
+            o "trabajo externo" y el <strong>Nèigōng (內功 / 内功)</strong> o "trabajo
+            interno". Aunque popularmente se los conoce como Qìgōng duro y suave, estos
+            términos son mas precisos y reflejan el enfoque de las prácticas.
+          </p>
+          <details>
+            <summary class="ocultar-summary">
+              <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                <span class="text-chinese-seal-red"
+                  >Mas información sobre Nèigōng (Suave/Interno) y Wàigōng
+                  (Duro/Externo)</span
+                >
+              </p>
+            </summary>
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              El <strong>Wàigōng (外功)</strong> se centra en el fortalecimiento de
+              la estructura externa del cuerpo; el Qìgōng "duro" se suele asociar a
+              lo marcial, donde se busca proteger el cuerpo de impactos externos y optimizar
+              el rendimiento físico mediante ejercicios de acondicionamiento intenso.
+              Si bien hay técnias de Qigong duro puede mejorar la resistencia y la fuerza,
+              estos a la larga generan desgaste oseo, articular, tensión y bloqueos
+              energéticos si no se complementan con prácticas internas.
+            </p>
+
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Por el contrario, el <strong>Nèigōng (內功 / 内功)</strong> se enfoca
+              en el cultivo de la salud. el Qigong "suave" utiliza la intención mental
+              y la respiración para movilizar la energía a través de los meridianos,
+              fortalecer los órganos internos y refinar el sistema nervioso. Es un proceso
+              de desarrollo que va desde el interior hacia el exterior, priorizando
+              la relajación profunda y la salud integral.
+            </p>
+          </details>
+          <p class="text-lg text-ink mb-4 leading-relaxed">
+            Obviamente que todos los sistemas, tienden al equilibrio entre ambos,
+            lo que permite obtener resultados duraderos. El trabajo externo
+            proporciona una estructura sólida y alineada, mientras que el trabajo
+            interno asegura que la energía vital circule sin obstrucciones. En mis
+            clases, pongo especial atención en los aspectos del <strong
+              >Nèigōng (內功 / 内功)</strong
+            >, manteniendo los aspectos de estiramiento y tensión propios de los
+            sistemas de <strong>Wàigōng (外功)</strong>
+            que sean beneficiosos para la salud.
+          </p>
+        </article>
+      </details>
+      </section>
+
+  </section>
+
+
+<article
+    class="mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red degrade fade-in"
+    id="galeria-qigong">
+
+    <div
+      class="pswp-gallery-container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:mb-20"
+    >
+      <CardGaleria
+        imgPath="qigong (1).webp"
+        altText="manos 4"
+        width={1200}
+        height={800}
+      />
+      <CardGaleria
+        imgPath="qigong (2).webp"
+        altText="manos 4"
+        width={1200}
+        height={800}
+      />
+
+      <CardGaleria
+        imgPath="qigong (3).webp"
+        altText="manos 4"
+        width={1200}
+        height={800}
+      />
+      <CardGaleria
+        imgPath="qigong (4).webp"
+        altText="Prueba 4"
+        width={1200}
+        height={800}
+      />
+      <CardGaleria
+        imgPath="qigong (5).webp"
+        altText="Prueba 5"
+        width={1200}
+        height={800}
+      />
+      <CardGaleria
+        imgPath="qigong (6).webp"
+        altText="Prueba 6"
+        width={1200}
+        height={800}
+      />
+    </div>
+</article>
+
+  <section
+    id="qigon-sistemas"
+    class="mx-auto mb-12 px-6 md:px-8 py-8"
+  >
+
+    <div class="mx-auto text-center mb-4">
+      <i
+        aria-hidden="true"
+        class="fas fa-user-circle text-6xl text-chinese-seal-red mb-6"></i>
+      <h2 class="font-title text-4xl md:text-5xl text-title-ink">
+        Sistemas de Qìgōng
+      </h2>
+
+      <div
+        id="texto-sistemas"
+        class="max-w-5xl mx-auto mb-4 px-6 md:px-8 py-8"
+      >
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          Los sistemas de Qìgōng que aprendí, practico y enseño son los
+          denominados <strong>Nèigōng (Internos/Suaves)</strong>. De los
+          sistemas que conozco:
+        </p>
+      
+
+      <div class="max-w-4xl mx-auto px-6 md:px-10">
+        <ul
+          class="grid gap-x-8 gap-y-3 text-lg text-ink leading-relaxed list-none"
+        >
+          <li>
+            <i
+              aria-hidden="true"
+              class="fas fa-check-circle text-chinese-seal-red mr-2"
+            ></i>Estiramiento de Meridianos
+          </li>
+          <li>
+            <i
+              aria-hidden="true"
+              class="fas fa-check-circle text-chinese-seal-red mr-2"
+            ></i>Apertura de las 4 Puertas
+          </li>
+          <li>
+            <i
+              aria-hidden="true"
+              class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Serie
+            en Espiral (Torsiones)
+          </li>
+          <li>
+            <i
+              aria-hidden="true"
+              class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Juego
+            de los 5 Animales
+          </li>
+          <li>
+            <i
+              aria-hidden="true"
+              class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Wudang
+            Qígōng (Más información abajo)
+          </li>
+          <li>
+            <i
+              aria-hidden="true"
+              class="fas fa-check-circle text-chinese-seal-red mr-2"
+            ></i>Mawangdui Dao Yin (Más información abajo)
+          </li>
+          <li>
+            <i
+              aria-hidden="true"
+              class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Zhineng
+            Qígōng (Nivel I y II)
+          </li>
+          <li>
+            <i
+              aria-hidden="true"
+              class="fas fa-check-circle text-chinese-seal-red mr-2"></i>Yi Jin
+            Jing
+          </li>
+        </ul>
+      </div>
+      
+      <div class="text-center mt-10">
+        <a
+          href="https://api.whatsapp.com/send/?phone=5491138733447&text=%C2%A1Hola%20Rodrigo!%20Te%20contacto%20porque%20me%20interesan%20tus%20clases%20de%20Qigong.%20Me%20gustar%C3%ADa%20saber%20sobre%20la%20modalidad%2C%20horarios%20y%20cuando%20podr%C3%ADa%20comenzar.&type=phone_number&app_absent=0"
+          class="button-manuscript text-lg font-semibold py-3 px-8"
+          >Consultame por clases de Qígōng</a
+        >
+      </div>
+    </div>
+</div>
+
+    <article
+      id="mawangdui"
+      class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-1 px-6">
+          <img
+            src="/background/mawangduidaoyinshu.webp"
+            alt="收势"
+            class="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+        <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title mb-10">
+            <a
+              href="/clases/qigong/mawangduidaoyinshu/"
+              class="button-manuscript">Mawangdui Dǎoyǐn Shu</a
+            >
+          </h3>
+          <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Historia:</strong>
+              El Dǎoyǐn de Mawangdui proviene del famoso rollo de seda hallado en
+              la tumba nº 3 de Mawangdui (Hunan) en 1973. Sistematizado como una serie
+              de posturas y movimientos, busca conservar la salud y armonizar el cuerpo
+              mediante la respiración, el estiramiento y la intención.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Orientado a </strong> cualquier tipo de personas, edades y niveles
+              de condición física. Se puede adaptar para personas con discapacidades
+              o limitaciones físicas. Y puede ser practicado por personas de cualquier
+              edad, desde niños hasta adultos mayores. Se necesita poco espacio para
+              practicar y no requiere equipo.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article
+      id="wudangqigong"
+      class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-1 px-6">
+          <img
+            src="/background/wudangqigong.webp"
+            alt="武当气功"
+            class="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+
+        <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title mb-10">
+            <a href="/clases/qigong/wudangqigong/" class="button-manuscript"
+              >Wǔdāng Qìgōng (武当气功)</a
+            >
+          </h3>
+
+          <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Historia:</strong>
+              El <strong>Wǔdāng Qìgōng (武当气功)</strong> se originó en las montañas
+              sagradas de Wǔdāng (武当山), cuna del daoísmo interno. Maestros taoístas
+              del linaje <strong
+                >Longmén Pài (龍門派 / La Puerta del Dragón)</strong
+              > preservaron y desarrollaron métodos de cultivo orientados a la longevidad,
+              la salud y la armonización cuerpo-mente, combinando postura, respiración
+              y atención.
+            </li>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Orientado a:</strong>
+              Personas de todas las edades y niveles físicos. Las prácticas se adaptan
+              fácilmente a limitaciones corporales o condiciones específicas, ocupan
+              poco espacio y no requieren equipamiento especial, por lo que son apropiadas
+              tanto para principiantes como para practicantes avanzados.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <script src="/src/js/global.js" defer></script>
+  <script type="module" src="/src/js/photoswipe-init.js" defer></script>
+
+  <PhotoSwipeUI />
+</MainLayout>

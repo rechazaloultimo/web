@@ -1,0 +1,316 @@
+/* ========================================
+   MULTIMEDIA.CSS - Estilos de Media
+   Archivo separado con todos los estilos
+   relacionados con imágenes, videos, 
+   audio y otros elementos multimedia
+   ======================================== */
+
+/* ===== ELEMENTOS MULTIMEDIA BASE ===== */
+
+/* Elementos multimedia - Display block y alineación */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+/* ===== IMÁGENES Y VIDEOS ===== */
+
+/*
+Limita imágenes y videos al ancho del contenedor
+y preserva su aspect ratio intrínseco.
+*/
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== IMAGEN TOP (HERO) ===== */
+
+/* Clase para imágenes top - cover fit */
+.img-mias-top {
+  width: auto;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+/* ===== VIDEO CONTAINER ===== */
+
+/* Contenedor de videos responsivos */
+#video iframe {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* ===== PLACEHOLDER PARA VIDEO ===== */
+
+/* Placeholder para video en dashboard */
+.video-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 2rem;
+  min-height: 300px;
+  color: #666;
+  font-size: 1rem;
+  text-align: center;
+}
+
+body.dark-mode .video-placeholder {
+  background-color: #2a2a2a;
+  border-color: #444;
+  color: #aaa;
+}
+
+/* ===== AUDIO - BLOQUE DE AUDIO ===== */
+
+.audio-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+/* ===== AUDIO - BOTÓN DE REPRODUCCIÓN ===== */
+
+/* Botón para reproducir/pausar audio */
+.audio-btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25em;
+  border: none;
+  color: #b00020;
+  background: none;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.1s;
+  font-size: 1.5rem;
+}
+
+/* Etiqueta del audio */
+.audio-label {
+  margin-left: 0.5em;
+  color: #b00020;
+  transition: color 0.2s;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Icono pause por defecto oculto */
+.audio-btn .icon-pause {
+  display: none;
+}
+
+/* ===== AUDIO - ESTADO REPRODUCIÉNDOSE ===== */
+
+/* Cuando está reproduciendo - color amarillo */
+.audio-btn.playing {
+  color: #ffd600 !important;
+  animation: pulse 1s infinite;
+}
+
+.audio-btn.playing .audio-label {
+  color: #ffd600 !important;
+}
+
+/* Mostrar icono pause cuando está reproduciendo */
+.audio-btn.playing .icon-play {
+  display: none;
+}
+
+.audio-btn.playing .icon-pause {
+  display: inline;
+}
+
+/* Asegurar que el icono pause esté oculto al pausar */
+.audio-btn .icon-pause {
+  display: none;
+}
+
+/* ===== ANIMACIÓN PULSE PARA AUDIO ===== */
+
+/* Animación de pulsación cuando está reproduciendo */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.13);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ===== GOOGLE SIGNIN BUTTON IMAGE ===== */
+
+/* Imagen dentro del botón de Google SignIn */
+.google-signin-btn img {
+  width: auto;
+  height: auto;
+}
+
+/* ===== IMÁGENES RESPONSIVAS ===== */
+
+/* Asegurar que las imágenes sean responsivas */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SVG responsivo */
+svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Canvas responsivo */
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== IFRAMES RESPONSIVOS ===== */
+
+/* Iframe para videos embebidos */
+iframe {
+  max-width: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Embed responsivo */
+embed,
+object {
+  max-width: 100%;
+}
+
+/* ===== PICTURE ELEMENTS ===== */
+
+/* Elemento picture para imágenes responsivas */
+picture {
+  display: block;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+}
+
+/* ===== DARK MODE - MULTIMEDIA ===== */
+
+/* Ajustes para dark mode */
+body.dark-mode .audio-btn {
+  color: #ff6b6b;
+}
+
+body.dark-mode .audio-label {
+  color: #ff6b6b;
+}
+
+body.dark-mode .audio-btn.playing {
+  color: #ffd600 !important;
+}
+
+body.dark-mode .audio-btn.playing .audio-label {
+  color: #ffd600 !important;
+}
+
+/* ===== RESPONSIVE - MULTIMEDIA ===== */
+
+/* Media queries para ajustes responsivos */
+@media (max-width: 640px) {
+  /* Reduce tamaño de fuente en audio para mobile */
+  .audio-btn {
+    font-size: 1.25rem;
+  }
+
+  .audio-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para tablets */
+  .img-mias-top {
+    width: 100%;
+  }
+
+  #video iframe {
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Ajustes para desktop */
+  .img-mias-top {
+    width: auto;
+  }
+
+  #video iframe {
+    min-height: 400px;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Imagen con cover */
+.img-cover {
+  object-fit: cover;
+}
+
+/* Tailwind utility class */
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Imagen con contain */
+.img-contain {
+  object-fit: contain;
+}
+
+/* Imagen con fill */
+.img-fill {
+  object-fit: fill;
+}
+
+/* Posición top */
+.object-top {
+  object-position: top;
+}
+
+/* Posición center */
+.object-center {
+  object-position: center;
+}
+
+/* Posición bottom */
+.object-bottom {
+  object-position: bottom;
+}
+
+/* ===== LAZY LOADING ===== */
+
+/* Imagen con lazy loading */
+img[loading="lazy"] {
+  max-width: 100%;
+  height: auto;
+}
+

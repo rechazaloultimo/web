@@ -1,0 +1,14 @@
+{
+  // 🚨 Usamos la ruta exacta que encontraste 🚨
+  // Nota la S en 'tsconfigs' y la extensión '.json'
+  "extends": "./node_modules/astro/tsconfigs/base.json", 
+  
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      // Tu alias limpio @/
+      "@/*": ["./src/*"] 
+    }
+  }
+}

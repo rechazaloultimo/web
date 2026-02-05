@@ -1,0 +1,25 @@
+---
+// src/components/galerias/CardGaleria.astro
+interface Props {
+  imgPath: string;
+  altText: string;
+  width: number;
+  height: number;
+}
+const { imgPath, altText, width, height } = Astro.props; 
+const fullPath = `/src/images/${imgPath}`; 
+---
+<a href={fullPath} 
+    class="pswp-gallery__item" 
+    data-pswp-width={width} 
+    data-pswp-height={height}> 
+    
+    <img 
+        src={fullPath} 
+        alt={altText} 
+        width={width} 
+        height={height}
+        class="rounded-none shadow-xl w-full aspect-[4/5] border-2 p-1 object-cover"
+        loading="lazy"
+    >
+</a>

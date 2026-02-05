@@ -1,0 +1,1399 @@
+---
+// 1. IMPORTAMOS LOS COMPONENTES NECESARIOS
+import MainLayout from "@/layouts/MainLayout.astro";
+import NavGeneral from "@/components/Navegadores/NavGeneral.astro";
+import CardGaleria from "@/components/galerias/CardGaleria.astro";
+import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
+
+// 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
+const pageTitle = "Rodrigo Pizarro - Taijiquan (Chi Kung)";
+const pageDescription =
+    "Información sobre Taijiquan impartidas por Rodrigo Pizarro en CABA, Argentina.";
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+    <header
+        id="taijiquan-inicio"
+        class="hero-fullscreen-bg hero-tajiquan-historia-bg hero-banner h-screen flex flex-col items-center justify-center relative"
+    >
+        <div
+            class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10"
+        >
+            <h1
+                class="font-title text-5xl sm:text-6xl md:text-7xl mb-10 fade-in leading-snug"
+            >
+                Tàijíquán (Tai Chi Chuan)
+            </h1>
+            <h2
+                class="text-xl sm:text-2xl md:text-3xl mb-12 fade-in font-title"
+                style="animation-delay: 0.2s;"
+            >
+                Historia, Daoismo y Familias
+            </h2>
+            <p
+                class="text-base sm:text-lg md:text-xl max-w-xl lg:max-w-2xl mx-auto mb-10 text-gray-200 fade-in"
+                style="animation-delay: 0.4s;"
+            >
+                Explora el Taijiquan desde sus raíces centenarias y sus
+                mutaciones a través de los años, comprendiendo sus beneficios
+                para la salud integral y descubriendo los principales estilos y
+                sistemas que puedes aprender en mis clases.
+            </p>
+        </div>
+    </header>
+
+    <NavGeneral />
+
+    <section
+        id="historia-taijiquan"
+        class="container mx-auto px-6 py-12 md:py-20"
+    >
+        <div id="titulo" class="mx-auto text-center mb-12">
+            <i
+                aria-hidden="true"
+                class="fas fa-user-circle text-6xl text-chinese-seal-red mb-6"
+            ></i>
+            <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-6">
+                La Historia del Tàijíquán
+            </h2>
+        </div>
+
+        <article id="introduccion-simple" class="mb-4 md:mb-20 fade-in">
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+                Tàijíquán,conocido también como Tai Chi Chuan, se encuentran en <strong
+                    >una discusión constante entre el mito de su creación por el
+                    inmortal Zhang Sanfeng y su realidad histórica como una
+                    evolución técnica humana</strong
+                >. Obviamente que esto no le interesa a todo el mundo, se puede
+                practicar y asimilar sus beneficios sin conocer su historia,
+                pero para mí es fundamental entender el contexto en el que se
+                desarrolla cualquier arte, sea marcial, medicinal o espiritual.
+            </p>
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+                Primero, voy a desarrollar en detalle el mito fundacional del
+                inmortal, que aunque no es verificable históricamente, refleja
+                los valores filosóficos y espirituales que sustentan el arte.
+                Segundo, presentaré la evolución documentada del taijiquan,
+                destacando sus orígenes marciales y su posterior difusión a
+                través de las cinco familias. Tercero y último, analizaré cómo
+                el taijiquan se transformó en una práctica de salud y meditación
+                en la China moderna, adaptándose a las necesidades sociales y
+                culturales de cada época por parte del gobierno chino.
+            </p>
+
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+                Quitando de lado la importancia de su origen, la idea de <strong
+                    >un arte marcial interno chino que combina movimientos
+                    suaves y circulares con principios filosóficos del Daoismo</strong
+                > se ha posicionado como un arte de vida. El taijiquan no solo es
+                una forma de defensa personal, sino también <strong
+                    >un camino hacia la salud integral y el equilibrio mental,
+                    reflejando la armonía entre el yin y el yang</strong
+                >, conceptos centrales en la filosofía china. Si tu interés es
+                profundizar en la historia y evolución del taijiquan, te invito
+                a seguir leyendo, pero si preferis ir directo a los beneficios y
+                estilos que puedes aprender en mis clases, hace click en <a
+                    href="/clases/taijiquan"
+                    class="text-chinese-seal-red underline font-semibold"
+                    >este enlace</a
+                >.
+            </p>
+
+            <div id="galeria-01" class="max-w-4xl mx-auto mt-8">
+                <div
+                    class="pswp-gallery-container grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4"
+                >
+                    <CardGaleria
+                        imgPath="chuan (1).webp"
+                        altText="manos 4"
+                        width={1200}
+                        height={800}
+                    />
+                    <CardGaleria
+                        imgPath="chuan (2).webp"
+                        altText="manos 4"
+                        width={1200}
+                        height={800}
+                    />
+
+                    <CardGaleria
+                        imgPath="chuan (3).webp"
+                        altText="manos 4"
+                        width={1200}
+                        height={800}
+                    />
+                    <CardGaleria
+                        imgPath="chuan (6).webp"
+                        altText="manos 4"
+                        width={1200}
+                        height={800}
+                    />
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section
+        id="sanfeng-mito"
+        class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red"
+    >
+        <h3
+            class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center"
+        >
+            El mito de Zhāng Sānfēng (張三丰)
+        </h3>
+        <p
+            class="text-lg text-text-ink mb-4 leading-relaxed text-chinese-seal-red"
+        >
+            Esto es largo, así que algunas informaciones estarán en referencias
+            al final de algunos párrafos. Otra cosa importante es que basaré mi
+            contenido en casi la totalidad del trabajo de Douglas Wile, un
+            historiador especializado en Taijiquan, entre otros autores:
+        </p>
+        <p class="text-lg text-text-ink mb-4 leading-relaxed">
+            Empiezo con la mirada historiografía idealista, Zhāng Sānfēng
+            (張三丰) emerge como un alquimista taoísta e inmortal cuya
+            cronología fluctúa, según diferentes tradiciones, entre las
+            dinastías Song (960-1279) y Yuan (1271-1368). Aún siendo una figura
+            mítica, los movimientos contemporáneos (Neo-Zhang Sanfengismo)
+            sitúan su nacimiento el noveno día del cuarto mes del año 1247 d.C..
+            Algunas fuentes afirman de forma increíble que vivió hasta el año
+            1464, alcanzando los 217 años de edad. En cuanto a su ubicación, se
+            le asocia primordialmente con las montañas Wudang (provincia de
+            Hubei), lugar donde supuestamente alcanzó la inmortalidad.
+        </p>
+        <p class="text-lg text-text-ink mb-4 leading-relaxed">
+            Cito a <a
+                href="https://www.wudangspain.es/biblioteca/personajes-del-tao%C3%ADsmo/zhang-sanfeng-1/"
+                target="_blank"
+                rel="noopener noreferrer">Wudangspain.com</a
+            >, una de las webs hispanohablantes más completas sobre la historia
+            y cultura de Wudang: "Según una conocida leyenda, Zhang Sanfeng ideó
+            la forma de unificar las enseñanzas del taoísmo, la medicina
+            tradicional y las artes marciales en un solo conjunto después de ser
+            testigo (o soñar según la tradición) de la lucha entre una grulla y
+            una serpiente. Así diseñó una secuencia de 13 posturas, basado en la
+            interacción de los polos complementarios Yin-Yang y que combinaba
+            armónicamente la acción y la calma [...] (que los antiguos taoístas creían legadas por
+            Laozi o el propio Emperador Amarillo), Zhang Sanfeng adquirió una
+            notable habilidad marcial, a la par que cultivaba los métodos de
+            meditación para evolucionar física y espiritualmente. Las trece
+            posturas de su estilo [...] representan el núcleo del Taiji
+            taoísta."
+        </p>
+
+        <details id="referencias-1a4">
+            <summary class="ocultar-summary">
+                <p class="text-lg text-text-secondary leading-relaxed mt-6">
+                    <span class="text-chinese-seal-red"
+                        >Información completa segun la mirada de la
+                        historiografía</span
+                    >
+                </p>
+            </summary>
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Y ahora, toca la mirada histográfica más crítica: la primera
+                persona en nombrar formalmente a Zhang Sanfeng como fundador de
+                la Escuela Interna (Neijia) y vincularlo con las artes marciales
+                fue el filósofo Huang Zongxi en 1669, a través de su obra
+                Epitafio para Wang Zhengnan (Wang Zhengnan Muzhiming) [1]. Antes
+                de este escrito, las hagiografías de la dinastía Ming describían
+                a Sanfeng únicamente como un alquimista espiritual, sin mención
+                alguna al combate [2]. Según la crítica de historiadores especializados en Taijiquan como
+                Douglas Wile (del cual tomaré muchas fuentes), Huang no estaba registrando una tradición antigua,
+                sino "inventándola" para crear un símbolo de resistencia
+                nacionalista [3]: al atribuir el origen del boxeo a un monje
+                taoísta de Wudang, Huang posicionaba la cultura china pura
+                frente al estilo "externo" de Shaolin, de origen budista y
+                extranjero [4].
+            </p>
+            <details id="referencias-1a4">
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        <span class="text-chinese-seal-red"
+                            >Mas información sobre las referencias y fuentes del
+                            [1] al [4]</span
+                        >
+                    </p>
+                </summary>
+                <ul
+                    class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4"
+                >
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>[1] Fuente primaria:</strong> Huang, Zongxi (1669).
+                        Wang Zhengnan Muzhiming (Epitafio para Wang Zhengnan). Documento
+                        fundacional recopilado en Nanlei Wending. Huang (1610–1695)
+                        fue un erudito leal a la dinastía Ming que se negó a servir
+                        a los Qing.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong
+                            >[2] Análisis histórico sobre hagiografías Ming:</strong
+                        > Wile, Douglas (1999). Tai Chi's Ancestors: The Making of
+                        an Internal Martial Art. Sweet Ch'i Press. (pp. 18–25). Wile
+                        analiza exhaustivamente los registros de la dinastía Ming
+                        (como los escritos oficiales y locales de Wudang) y confirma
+                        que, aunque Zhang Sanfeng era famoso como inmortal y excéntrico,
+                        no se le asociaba con el boxeo hasta el texto de Huang.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong
+                            >[3] "Invención de la tradición" y resistencia:</strong
+                        > Wile, Douglas (1996). Lost T'ai-chi Classics from the Late
+                        Ch'ing Dynasty. State University of New York Press. (Introducción,
+                        pp. 4–6). Wile aplica la teoría de Hobsbawm sobre la "invención
+                        de la tradición". Sostiene que el mito de Sanfeng fue una
+                        herramienta de las élites letradas para reclamar la superioridad
+                        cultural china frente a la ocupación manchú (Dinastía Qing).
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong
+                            >[4] Wudang vs. Shaolin (interno/external):</strong
+                        > Shahar, Meir (2008). The Shaolin Monastery: History, Religion,
+                        and the Chinese Martial Arts. University of Hawai'i Press.
+                        (Aunque Wile lo menciona, Shahar es la autoridad complementaria
+                        que confirma cómo el Epitafio de Huang Zongxi es el primer
+                        texto en la historia en crear la oposición binaria entre "Interno/Wudang"
+                        y "Externo/Shaolin").
+                    </li>
+                </ul>
+            </details>
+
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Siguiendo la genealogía del mito, la segunda figura crucial en
+                la formalización de este relato fue Huang Baijia, hijo de Huang
+                Zongxi, quien en su obra Métodos de boxeo de la Escuela Interna
+                (Neijia quanfa) expandió la narrativa de su padre con un matiz
+                profundamente esotérico [5]. Como discípulo directo de Wang
+                Zhengnan, Baijia no solo heredó la técnica, sino que elevó la
+                figura de Zhang Sanfeng al plano de lo sobrenatural al afirmar
+                que el sistema no nació de la observación mundana, sino de una
+                visión onírica donde el dios de la guerra, Xuan Wu, le reveló
+                los secretos del combate al monje [6].
+            </p>
+
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Pensandolo en su contexto, este giro místico cumple una función de legitimación
+                teológica: al vincular el arte con la deidad tutelar de la
+                montaña Wudang, se sellaba la identidad del neijia como una
+                disciplina sagrada y puramente taoísta [7]. Sin embargo, la
+                mayor paradoja de su relato radica en su conclusión; Baijia,
+                lamentando la falta de herederos dignos, declaró que la
+                transmisión del estilo moriría con él [8].
+            </p>
+            <details id="referencias-5a8">
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        <span class="text-chinese-seal-red"
+                            >Mas información sobre las referencias y fuentes del
+                            [5] al [8]</span
+                        >
+                    </p>
+                </summary>
+                <ul
+                    class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4"
+                >
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>[5] Fuente primaria:</strong> Huang, Baijia (aprox.
+                        1676). Neijia Quanfa (Métodos de Boxeo de la Escuela Interna).
+                        Este texto es el primer manual técnico que intenta describir
+                        los movimientos y principios de lo que los Huang denominaban
+                        "Escuela Interna".
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>[6] Sobre la visión de Xuan Wu:</strong> Wile, Douglas
+                        (1999). Tai Chi's Ancestors: The Making of an Internal Martial
+                        Art. Sweet Ch'i Press. (pp. 26-27). Wile destaca cómo la inclusión
+                        de Xuan Wu (el Guerrero Oscuro) transforma una crónica familiar
+                        en una "historia sagrada", alineando el boxeo con la religión
+                        estatal Ming.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong
+                            >[7] "Significado político del dios de la guerra:</strong
+                        > Shahar, Meir (2008). The Shaolin Monastery: History, Religion,
+                        and the Chinese Martial Arts. University of Hawai'i Press.
+                        Shahar explica que Xuan Wu era el protector de la dinastía
+                        Ming; invocarlo era un acto de lealtad dinástica implícita
+                        frente a los Qing.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>[8] La extinción del linaje:</strong> Lorge, Peter
+                        (2012). Chinese Martial Arts: From Antiquity to the Twenty-First
+                        Century. Cambridge University Press. (pp. 192-194). Lorge
+                        y Wile coinciden en que la declaración de "fin de línea" de
+                        Baijia es el mayor obstáculo histórico para quienes hoy pretenden
+                        poseer el "auténtico" sistema de Zhang Sanfeng/Wang Zhengnan.
+                    </li>
+                </ul>
+            </details>
+
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Tras el silencio documental de casi dos siglos que siguió a los
+                Huang, la resurrección de Zhang Sanfeng no fue un hallazgo
+                arqueológico, sino una sofisticada operación de ingeniería
+                cultural ejecutada en dos frentes: el religioso y el
+                nacionalista. Douglas Wile identifica a Li Xiyue (siglo XIX)
+                como el arquitecto del "canon de Sanfeng", quien mediante la
+                escritura espiritista y la fabricación de textos apócrifos, sacó
+                al inmortal del olvido para convertirlo en el pilar de su propia
+                secta [9].
+            </p>
+
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Esta "falsificación sagrada" preparó el terreno para que, a
+                principios del siglo XX, figuras como Sun Lutang y Xu Yusheng
+                terminaran de moldear al mito según las necesidades de una China
+                moderna en crisis. Mientras Sun Lutang (1919) sentenciaba a
+                Sanfeng como el creador del Taijiquan por su disciplina digna,
+                intelectual y patriótica [10], Xu Yusheng (1921) optaba por una
+                narrativa mucho más agresiva y heroica, transformando al monje
+                en un guerrero de la Dinastía Song capaz de aniquilar a cientos
+                de invasores extranjeros [11].
+            </p>
+
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Desde la perspectiva crítica de Wile, este proceso demuestra que
+                Zhang Sanfeng funciona como un "fundador elástico": su biografía
+                se estira o encoge para ajustarse a lo que el autor necesite
+                validar. Para Li Xiyue, era una autoridad divina; para Sun
+                Lutang, un filósofo del movimiento; y para Xu Yusheng, un
+                símbolo de resistencia física contra la humillación extranjera
+                [12]. En este sentido, el Sanfeng que conocemos hoy no es un
+                monje histórico, sino un mosaico de deseos colectivos ensamblado
+                durante el colapso del imperio y el nacimiento de la república.
+            </p>
+            <details id="referencias-9a12">
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        <span class="text-chinese-seal-red"
+                            >Mas información sobre las referencias y fuentes del
+                            [9] al [12]</span
+                        >
+                    </p>
+                </summary>
+                <ul
+                    class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4"
+                >
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong
+                            >[9] Sobre la "falsificación" religiosa de Li Xiyue)</strong
+                        > : Wile, Douglas (1999). Tai Chi's Ancestors: The Making
+                        of an Internal Martial Art. Sweet Ch'i Press. (pp. 40-45).
+                        Wile detalla cómo Li Xiyue y el "Círculo de Sichuan" utilizaron
+                        el trance y la escritura automática para "recibir" textos
+                        de Sanfeng, dotando a su secta de una legitimidad que los
+                        documentos históricos no le daban.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong
+                            >[10] Sun Lutang (1919) y la formalización moderna
+                            en Taijiquan Xue (El estudio del Taijiquan).</strong
+                        > Wile, Douglas (1996). Lost T'ai-chi Classics from the Late
+                        Ch'ing Dynasty. Wile explica que Sun fue el gran sintetizador
+                        que unificó el Xingyiquan, Baguazhang y Taijiquan bajo el
+                        paraguas de "Artes Internas", usando a Sanfeng como el pegamento
+                        histórico-místico en un contexto de modernización nacional.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong
+                            >[11] Xu Yusheng y el nacionalismo marcial:</strong
+                        > Xu, Yusheng (1921). Taijiquan Tushuo (Introducción ilustrada
+                        a la forma Taijiquan). Xu fue un organizador clave en la Asociación
+                        de Investigación de Boxeo de Beijing. Su versión de Sanfeng
+                        matando "quinientos khitanos" refleja el espíritu del movimiento
+                        "Fortalecer la Nación" de la época.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong
+                            >[12] Wile, Douglas (1995). The Case of the Missing
+                            Patriarchs: Writing the History of Taijiquan.
+                            Journal of Asian Martial Arts.</strong
+                        > Aca Wile desmonta la idea de una transmisión lineal y describe
+                        el "vacío de 200 años" como la prueba de que el vínculo entre
+                        el Taijiquan actual y Sanfeng es una atribución retrospectiva
+                        exitosa.
+                    </li>
+                </ul>
+            </details>
+
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Acá es donde se pone interesante la cosa: En la década de 1930,
+                el péndulo de la historia giró radicalmente hacia el
+                racionalismo con la llegada de Tang Hao, el primer historiador
+                marcial en aplicar el método científico y documental [13]. Tras
+                realizar un trabajo de campo sin precedentes en la aldea Chen y
+                las montañas Wudang, Tang Hao desmanteló el mito de Zhang
+                Sanfeng, calificándolo de invención infundada [14]. Este acto de
+                "iconoclastia académica" fue una respuesta directa a la
+                necesidad de la época de purgar a China de las "supersticiones"
+                que, según los intelectuales del Movimiento del Cuatro de Mayo,
+                mantenían al país en un estado de debilidad frente al
+                imperialismo extranjero [15].
+            </p>
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Esta visión materialista alcanzó su apogeo durante la era de Mao
+                (1949-1976). Bajo el patrocinio del Estado, el Taijiquan fue
+                despojado de su linaje aristocrático para ser transformado en un
+                programa de bienestar nacional [16]. Wile analiza este periodo
+                como la "estandarización secular" del arte: al crear la Forma de
+                24 movimientos (1956), el gobierno convirtió una disciplina
+                interna compleja en una herramienta de salud pública y
+                psicología de masas, enfocada estrictamente en la productividad
+                y la higiene nacional [17]. En este proceso, se eliminaron las
+                referencias a la inmortalidad taoísta, reemplazándolas por
+                conceptos de fisiología moderna y medicina preventiva [18].
+            </p>
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Sin embargo, a finales del siglo XX, el vacío espiritual dejado
+                por la modernidad y el colapso de las grandes ideologías
+                permitió el surgimiento del "Neo-Zhang Sanfengismo" [19]. Este
+                movimiento contemporáneo ha revivido el culto al inmortal, no
+                necesariamente como un hecho histórico, sino como un motor de
+                capitalismo cultural y turístico centrado en las montañas Wudang
+                [20]. Para Wile, el retorno de Sanfeng en el siglo XXI funciona
+                como una reafirmación de la identidad china frente a la
+                globalización; el mito vuelve a ser "útil", creando una
+                espiritualidad "auténtica" que el materialismo científico no
+                pudo satisfacer [21]. En este nuevo escenario, el Taijiquan se
+                convierte en un producto de exportación donde la mística de
+                Wudang sirve como un escudo simbólico y una marca del país
+                contra el imperialismo cultural occidental [22].
+            </p>
+            <details id="referencias-13a22">
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        <span class="text-chinese-seal-red"
+                            >Mas información sobre las referencias y fuentes del
+                            [13] al [22]</span
+                        >
+                    </p>
+                </summary>
+                <ul
+                    class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4"
+                >
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        [13] Tang, Hao (1930). Shaolin Wudang Kao (Investigación
+                        sobre Shaolin y Wudang). Es la obra fundacional que
+                        separa por primera vez el mito de la realidad histórica.
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        [14] Wile, Douglas (1995). The Case of the Missing
+                        Patriarchs. Journal of Asian Martial Arts. Wile analiza
+                        cómo Tang Hao utilizó el manual de Qi Jiguang para
+                        probar el origen militar (y no divino) del arte.
+                    </li>
+
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        [15] Kennedy, B., & Guo, E. (2005). Chinese Martial Arts
+                        Training Manuals. North Atlantic Books. Explican el
+                        contexto político de la "Nueva Cultura" y el rechazo a
+                        lo esotérico.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        [16] Wile, Douglas (1996). Lost T'ai-chi Classics from
+                        the Late Ch'ing Dynasty. SUNY Press. Analiza la
+                        transición de las "sociedades secretas" al control
+                        estatal.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        [17] Comisión de Cultura Física y Deportes (1956).
+                        Taijiquan (Simplified) Manual. El documento oficial que
+                        marca el nacimiento del "Taiji para las masas".
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        [18] Morris, Andrew (2004). Marrow of the Nation: A
+                        History of Sport and Physical Culture in Republican
+                        China. University of California Press. Proporciona el
+                        contexto sobre cómo el cuerpo se convirtió en un recurso
+                        estatal.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        [19] Wile, Douglas (2017). Taijiquan and Daoism: From
+                        Religion to Martial Art and Martial Art to Religion.
+                        Journal of Asian Martial Arts. Aquí Wile acuña y analiza
+                        el concepto de "re-sacralización".
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        [20] Liu, Xun (2011). Daoist Modern. Harvard University
+                        Press. Detalla la reconstrucción de Wudang como centro
+                        turístico y religioso tras la Revolución Cultural.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        [21] Wile, Douglas (2007). The Journal of Asian Studies.
+                        "The Taijiquan Classics and the Reconstruction of the
+                        History of Taijiquan". Sobre cómo la historia se
+                        reescribe para servir al nacionalismo actual.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        [22] Lorge, Peter (2012). Chinese Martial Arts: From
+                        Antiquity to the Twenty-First Century. Cambridge
+                        University Press. Analiza el Taiji contemporáneo como
+                        una herramienta de "Soft Power" global.
+                    </li>
+                </ul>
+            </details>
+        </details>
+    </section>
+
+    <section id="las5familias" class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red">
+        <div
+            id="galeria-familias"
+            class="pswp-gallery-container grid grid-cols-5 md:grid-cols-5 lg:grid-cols-5 gap-5 mb-6"
+        >
+            <CardGaleria
+                imgPath="chuan (1).webp"
+                altText="manos 4"
+                width={1200}
+                height={800}
+            />
+            <CardGaleria
+                imgPath="chuan (2).webp"
+                altText="manos 4"
+                width={1200}
+                height={800}
+            />
+
+            <CardGaleria
+                imgPath="chuan (3).webp"
+                altText="manos 4"
+                width={1200}
+                height={800}
+            />
+            <CardGaleria
+                imgPath="chuan (4).webp"
+                altText="manos 4"
+                width={1200}
+                height={800}
+            />
+            <CardGaleria
+                imgPath="chuan (5).webp"
+                altText="manos 4"
+                width={1200}
+                height={800}
+            />
+        </div>
+
+        <h3
+            class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center"
+        >
+            Las 5 Familias del Taijiquan
+        </h3>
+        <p
+            class="text-lg text-text-ink mb-4 leading-relaxed text-chinese-seal-red"
+        >
+            Ahora toca hablar de las familias, muchas veces dicho estilos,
+            porque cada familia se diferencia entre sí por la técnica que han
+            desarrollado, pero también por la filosofía que han aportado al
+            Taijiquan. Hay muchos estilos o linajes, pero los cinco reconocidos
+            por la Republica Popular China y practicados a nivel mundial son los
+            de las familias Chén, Yáng, Wǔ/Hao, Wú y Sūn. La mayoria del
+            conocimiento se trasmite por via oral, así que lo que escribiré
+            debajo es un resumen de cada una de las cinco familias principales
+            del Taijiquan, destacando sus orígenes históricos y nombrando
+            algunos personajes relevantes. No entraré en detalles técnicos
+            específicos, y prefiero centrarme en el contexto histórico y
+            cultural que rodea a cada linaje.
+        </p>
+
+        <p class="text-lg text-text-ink mb-4 leading-relaxed">
+            La legitimidad técnica y política del taijiquan tradicional se
+            distribuye principalmente a través de cinco linajes familiares con
+            orígenes históricos interconectados. La familia Chén se sitúa como
+            la raíz histórica documentada, teniendo a <strong
+                >Chén Wàngtíng (siglo XVII) como el pionero de las formas
+                prototipo</strong
+            > en la aldea de Henan tras su retiro militar. Siglos despues, de este
+            tronco surgió <strong
+                >el estilo Yáng, fundado por Yáng Lùchán</strong
+            >, quien adaptó las enseñanzas que recibió de Chén Chángxīng. Por
+            otro lado, <strong
+                >Wǔ Yǔxiāng creó su propio linaje (estilo Wǔ/Hǎo)</strong
+            > tras estudiar inicialmente con los Yáng y posteriormente con Chén Qìngpíng
+            en Zhaobao. <strong
+                >El estilo Wú fue establecido por Wú Jiànquán</strong
+            >, basándose en las lecciones que su padre, Quanyu, recibió de la
+            segunda generación de la familia Yáng. Finalmente, <strong
+                >el estilo Sūn fue fundado por el reconocido maestro Sūn Lùtáng</strong
+            >, quien integró el Taijiquan de Hǎo Wèizhēn con su propio estilo de
+            Xingyiquan y Baguazhang. Cada una de estas familias no solo
+            desarrolló estilos técnicos distintivos, sino que también contribuyó
+            a la evolución del taijiquan como un fenómeno cultural y
+            nacionalista en China.
+        </p>
+
+        <article id="familia-chen">
+            <h3 class="font-title text-2xl md:text-3xl text-text-title mb-6 mt-8">
+                La familia Chén
+            </h3>
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Situar el nacimiento del taijiquan en la aldea Chen marca el
+                momento en que la historia abandona el misticismo de las
+                montañas para asentarse en el pragmatismo del campo de batalla.
+                Según las investigaciones definitivas de Tang Hao, la creación
+                del estilo por la familia Chen se fundamenta en una génesis
+                puramente humanista y técnica, descartando por completo
+                cualquier revelación divina. El autor real de esta hazaña fue
+                Chen Wangting, un comandante de milicia del condado de Wen que,
+                tras el colapso de la dinastía Ming en 1641, se retiró a su
+                aldea para organizar un sistema de combate que asegurara la
+                supervivencia de su clan.
+            </p>
+            <details id="mas-chen">
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        <span class="text-chinese-seal-red"
+                            >Mas información de los orígenes del Taijiquan en la
+                            Familia Chen</span
+                        >
+                    </p>
+                </summary>
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    Según Douglas Wile, este proceso no fue una iluminación
+                    espiritual, sino una operación de ingeniería marcial basada
+                    en el Clásico del Boxeo (Quanjing) del general Qi Jiguang.
+                    Tang Hao descubrió en la aldea Chen manuales que son
+                    sucesores directos de la obra de Qi; de hecho, la
+                    nomenclatura de las posturas y poemas fundamentales, como el
+                    Quanjing zongge, provienen de manera literal del manual
+                    militar utilizado para entrenar a las tropas Ming. Chen
+                    Wangting realizó una síntesis crítica de las mejores
+                    características de dieciséis estilos populares de su época,
+                    refinándose por generaciones en un riguroso proceso de
+                    ensayo y error.
+                </p>
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    A esta sólida base técnica, la familia Chen añadió su
+                    innovación original más trascendente: el desarrollo del
+                    empuje de manos (tui shou). Este método fue diseñado para
+                    entrenar la sensibilidad y el uso de la energía en el
+                    combate cercano. De las formas más destacables en la
+                    actualidad, nombraré Laojia (老架) o "Vieja estructura", y
+                    las Xinjia (新架) o Nueva Estructura.
+                </p>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    En sus etapas iniciales, el arte de los Chen era una
+                    disciplina puramente humana. Los manuscritos más antiguos
+                    encontrados en la aldea Chen eran listas sencillas de
+                    posturas y canciones de entrenamiento, carentes de cualquier
+                    mística taoísta. Durante este periodo, no existía mención
+                    alguna al inmortal Zhang Sanfeng ni a Wang Zongyue; el
+                    sistema se sustentaba directamente en la eficacia militar
+                    del general Qi Jiguang.
+                </p>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    El gran punto de inflexión ocurrió con Chen Xin, quien entre
+                    1919 y 1933 redactó su obra monumental para defender los
+                    "derechos de propiedad". Ante el éxito masivo del estilo
+                    Yang, que ya gozaba de gran prestigio al asociarse con Zhang
+                    Sanfeng, Chen Xin dotó a su sistema de una mística propia
+                    para no quedar rezagado en el mercado cultural. Para
+                    mantener la autoría dentro de la familia y evitar cedérsela
+                    a un extraño como Sanfeng, nombró a su antepasado Chen Bu
+                    como el creador original. Chen Xin inyectó densas capas de
+                    cosmología del Yijing, medicina y alquimia interna que eran
+                    inexistentes en los registros antiguos del clan. Su maniobra
+                    maestra fue introducir un poema atribuido a Chen Wangting
+                    donde mencionaba su devoción a la Escritura de la Corte
+                    Amarilla (Huangting jing), logrando así una inspiración
+                    taoísta "auténtica" sin necesidad de recurrir al mito de
+                    Wudang.
+                </p>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    Con la llegada de Tang Hao en la década de 1930, la familia
+                    Chen encontró una nueva forma de legitimidad basada en la
+                    evidencia histórica. Los descendientes aceptaron renunciar
+                    definitivamente al mito de Zhang Sanfeng a cambio de ser
+                    reconocidos oficialmente como la raíz histórica documentada
+                    de todos los demás estilos de Taijiquan. En la actualidad,
+                    la familia ha capitalizado este estatus convirtiendo a la
+                    Aldea Chen en una "meca" internacional para el entrenamiento
+                    y la competición. Aunque mantienen la autoría humana de Chen
+                    Wangting para blindar su linaje, han absorbido el lenguaje
+                    de la alquimia interna y el qigong que originalmente les era
+                    ajeno.
+                </p>
+            </details>
+        </article>
+
+        <article id="familia-yang">
+            <h3
+                class="font-title text-2xl md:text-3xl text-text-title mb-6 mt-8"
+            >
+                La familia Yang
+            </h3>
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                La transición del taijiquan desde el pragmatismo rural hacia la
+                sofisticación urbana de Beijing fue gracias a la familia Yang,
+                transformando una técnica de supervivencia de un clan, en un
+                sistema de cultivo interno y prestigio cultural. El fundador,
+                Yang Luchan, actúa como el puente crucial al aprender el arte de
+                la aldea Chen —bajo la tutela de Chen Chang-hsing— para
+                introducirlo en los círculos de la élite imperial.
+            </p>
+            <details id="mas-Yang">
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        <span class="text-chinese-seal-red"
+                            >Mas información de los orígenes del Taijiquan en la
+                            Familia Yang</span
+                        >
+                    </p>
+                </summary>
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    Siguiendo con el origen de mítico, mientras que los Chen
+                    mantuvieron su autoría humana, los Yang adoptaron
+                    estratégicamente al inmortal Zhang Sanfeng para dotar al
+                    estilo de una legitimidad taoísta que resonara con la
+                    intelectualidad de la época. Como Yang Lu Chan aprendió la
+                    Forma antigua de la Familia Chen, el Taijiquan avanzó hacia
+                    una suavización progresiva: se eliminaron los saltos,
+                    pisotones y ritmos asimétricos del estilo Chen original para
+                    dar paso a las características "internas" que hoy definen al
+                    arte.
+                </p>
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    Esta evolución técnica fue acompañada por una sofisticación
+                    teórica que los manuales originales de los Chen no poseían.
+                    A través de figuras como Yang Chengfu, Chen Weiming y Zheng
+                    Manqing, el estilo Yang integró formalmente la filosofía de
+                    Lao Tse y los principios de la alquimia interna, como la
+                    transformación del qi en espíritu. De este modo, el
+                    taijiquan de los Yang se consolidó no solo como un sistema
+                    de defensa personal, sino como un "dao" o camino espiritual,
+                    donde la suavidad absoluta se convierte en el vehículo para
+                    alcanzar el equilibrio del yin y el yang y la salud
+                    nacional.
+                </p>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    A diferencia de la familia Chen, que simplemente mitificó su
+                    propia genealogía nombrando a su ancestro Chen Bu como
+                    creador para proteger sus "derechos de propiedad", los
+                    representantes del estilo Yang adoptaron formalmente al
+                    inmortal Zhang Sanfeng como su "santo patrón". Esta maniobra
+                    fue una operación de ingeniería cultural destinada a
+                    asimilar las artes marciales en la élite cultural china,
+                    dándoles un prestigio que el simple conocimiento militar no
+                    poseía. Para fortalecer esta legitimidad, autores clave de
+                    este linaje inyectaron elementos literarios y místicos a
+                    través de obras fundamentales. Yang Chengfu en 1925 dictó a
+                    su discípulo Chen Weiming, su libro Taijiquan Shu (El Arte
+                    del Taijiquan, 1925), donde publicó una biografía de Sanfeng
+                    llena de "florituras milagrosas". En 1931, Taijiquan
+                    Shiyongfa (Métodos de Aplicación del Taijiquan), relata un
+                    episodio fantástico donde Sanfeng, guiado por "luces
+                    divinas", entra en una cueva profunda y descubre dos
+                    serpientes doradas y dos lanzas milagrosas, de cuyos
+                    principios destiló su arte.
+                </p>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    Esta construcción discursiva permitió presentar el Taijiquan
+                    no como una técnica de milicia rústica, sino como camino de
+                    perfeccionamiento espiritual. El sistema se transformó en un
+                    método para "refinar el qi en espíritu" y alcanzar la
+                    inmortalidad. Bajo la influencia de discípulos como Zheng
+                    Manqing, se integraron formalmente las enseñanzas de Lao Tse
+                    en textos como Zhengzi Taijiquan Shisan Pian (Trece
+                    Capítulos del Taijiquan del Maestro Zheng, 1950). En estos
+                    escritos se defendió que solo la "suavidad suprema" puede
+                    derrotar a la dureza, convirtiendo el concepto de "invertir
+                    en pérdidas" (xue chikui) en una estrategia tanto marcial
+                    como de salud nacional frente al imperialismo.
+                </p>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    Los Yang de ese momento histórico, que pactaron con el
+                    gobierno chino, crearon una forma de protección mágica y un
+                    símbolo de la "chinitud" que separaba el sistema interno
+                    (chino/taoísta) del externo (extranjero/budista).
+                    Simplificando la aplicación marcial del Taijiquan para
+                    trascender su origen aldeano para convertirse en un emblema
+                    intelectual y nacionalista. Incluso de este modo, el éxito
+                    del estilo Yang no radicó solo en su eficacia física, sino
+                    en su capacidad para reescribir la historia y alinear el
+                    movimiento del cuerpo con las aspiraciones filosóficas de
+                    una nación que buscaba su identidad en la modernidad.
+                </p>
+            </details>
+        </article>
+
+        <article id="familia-wuhao">
+            <h3
+                class="font-title text-2xl md:text-3xl text-text-title mb-6 mt-8"
+            >
+                La familia Wu (Hao)
+            </h3>
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Si los Yang llevaron el arte a la aristocracia imperial, la
+                familia Wu (Hao) representa la entrada definitiva del taijiquan
+                en el ámbito de la <strong>intelectualidad confuciana</strong>.
+                Su fundador, Wu Yuxiang, no era un artista marcial de oficio que
+                vendía su arte para vivir, sino un erudito de clase acomodada
+                que buscaba la "esencia" teórica del movimiento. Esta distinción
+                de clase fue fundamental: con los Wu, el taijiquan dejó de ser
+                solo una práctica física para convertirse en una materia de
+                estudio literario y filosófico.
+            </p>
+            <details id="mas-wuhao">
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        <span class="text-chinese-seal-red"
+                            >Más información sobre la síntesis erudita de Wu
+                            Yuxiang</span
+                        >
+                    </p>
+                </summary>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    La formación técnica de <strong>Wu Yuxiang</strong> es única porque
+                    amalgama las dos grandes corrientes anteriores en una síntesis
+                    compacta. Según los registros genealógicos, Wu comenzó su adiestramiento
+                    con la familia Yang, estudiando específicamente con <strong
+                        >Yang Banhou</strong
+                    > (2ª generación Yang), conocido por su temperamento explosivo
+                    y su habilidad marcial de alto nivel. Insatisfecho con quedarse
+                    en una sola visión, Wu viajó a la aldea de Zhaobao para estudiar
+                    con <strong>Chen Qingping</strong> (14ª generación Chen), un maestro
+                    famoso por su estilo de "pequeña estructura" y movimientos circulares
+                    cerrados.
+                </p>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    A diferencia de sus predecesores, la mayor contribución de
+                    la familia Wu (Hao) no fue la expansión popular, sino la <strong
+                        >codificación textual</strong
+                    >. Fue el sobrino de Wu, Li Yiyu, quien compiló los escritos
+                    de su tío y los suyos propios en lo que hoy conocemos como
+                    los "Clásicos del Taijiquan". A diferencia de la familia
+                    Yang, los Wu/Hao mantuvieron una postura más honesta y menos
+                    mitológica en sus inicios. Lǐ Yìyù afirmó explícitamente en
+                    su "Breve introducción al taijiquan" que se desconocían los
+                    orígenes del arte, y los registros originales de la familia
+                    no hacían mención alguna a Zhāng Sānfēng.
+                </p>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    El linaje se mantuvo hermético y elitista durante décadas
+                    hasta llegar a la figura clave de <strong
+                        >Hao Weizhen</strong
+                    >. La importancia histórica de Hao radica en que fue el
+                    eslabón necesario para la creación de los estilos modernos:
+                    fue él quien, rompiendo la exclusividad del clan, transmitió
+                    el sistema completo al famoso maestro <strong
+                        >Sun Lutang</strong
+                    >. Sin la enseñanza de Hao Weizhen, Sun Lutang no habría
+                    podido fusionar el Taiji con el Xingyi y el Bagua para crear
+                    su propio estilo sintético en 1919. Así, la familia Wu (Hao)
+                    actúa como la "biblioteca" teórica que preservó los
+                    principios internos más sutiles que luego influirían en todo
+                    el desarrollo del taijiquan del siglo XX.
+                </p>
+            </details>
+        </article>
+
+        <article id="familia-wu">
+            <h3
+                class="font-title text-2xl md:text-3xl text-text-title mb-6 mt-8"
+            >
+                La familia Wu (Jianquan)
+            </h3>
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Mientras que la familia Wu (Hao) representó la vertiente
+                erudita, el estilo Wu (Jianquan) emergió del crisol militar de
+                la <strong>Guardia de Banderas Manchú</strong>. Su fundador, Wu
+                Jianquan (1870-1942), cuyo padre Wu Quanyu (1834-1902) fue un
+                estudiante del vástago de la segunda generación de la familia
+                Yang, Yang Banhou (1837-1892). De esta transmisión nació una
+                variante técnica especializada en el combate cerrado y la
+                neutralización, que más tarde sería estandarizada por su hijo,
+                Wu Jianquan, para convertirse en la tercera familia de Taijiquan
+                en China.
+            </p>
+
+            <details id="mas-wu">
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        <span class="text-chinese-seal-red"
+                            >Más información sobre la compactación técnica de
+                            los Wu</span
+                        >
+                    </p>
+                </summary>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    Wu Quanyou se especializó en la <strong
+                        >"Pequeña Estructura"</strong
+                    > (<em>Xiaojia</em>) de Yang Banhou, una forma de práctica
+                    más compacta y exigente que la "Gran Estructura" que
+                    popularizaría Yang Chengfu posteriormente. Para
+                    diferenciarse y perfeccionar la mecánica de la
+                    neutralización (<em>hua</em>), la familia Wu desarrolló su
+                    firma biomecánica distintiva: la <strong
+                        >inclinación del tronco</strong
+                    >.
+                </p>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    Lo siguiente es un resumen que hago de un pasaje de Douglas
+                    Wiles, de cómo la familia Wu también reconfiguró el mito de
+                    Zhang Sangfeng: "Wu Tunan, [...] presenta las biografías
+                    formales de todas las figuras no detalladas en la genealogía
+                    de Song Shuming. [...] Contradiciendo el Epitafio para Wang
+                    Zhengnan, ubica a Wang Zongyue el siguiente en la línea
+                    después de Zhang Sangfeng y coloca a Gan Fengchi al final de
+                    la rama del sur. Jiang Fa de la rama del norte lleva el arte
+                    a la aldea Chen.
+                </p>
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    [...] En Estudios sobre el taijiquan (1984), un Wu casi
+                    centenario reafirma su creencia en el mito originario de Xu
+                    Xuanping. En 1935, otros dos estudiantes de Wu Jianquan, Ma
+                    Yueliang y Chen Zhenmin, publicaron un manual con
+                    fotografías de Wu Jianquan, titulado Taijiquan estilo Wu.
+                    [...] Eliminan la rama del sur y a todos los personajes
+                    anteriores a Zhang. [...] Insisten en que la auto-defensa es
+                    una habilidad natural para el hombre, sistematizada por
+                    Bodhidharma y refinada por Zhang Sangfeng.
+                </p>
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    [...] En el mismo año, el segundo hijo de Wu Jianquan,
+                    Gongzao, publicaba Comentarios sobre Taijiquan, donde se
+                    continúa podando el árbol familiar, eliminando todos los
+                    cuadros, biografías y toda mención a Zhang Sanfeng. Rinde
+                    tributo únicamente a su propio padre y a los discípulos más
+                    cercanos, pero esto no quiere decir que esté dando la
+                    espalda al Taoísmo. Por el contrario, dice que los
+                    principios del taiji “coinciden perfectamente con la
+                    meditación taoísta y realmente constituye una práctica
+                    taoísta” (Wu, 1935: 13)." (Termino la cita de Douglas Wile)
+                </p>
+            </details>
+        </article>
+
+        <article id="familia-sun">
+            <h3
+                class="font-title text-2xl md:text-3xl text-text-title mb-6 mt-8"
+            >
+                La familia Sun
+            </h3>
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                El estilo Sun no es simplemente una variante del Taijiquan, sino
+                la culminación de una vida dedicada a la búsqueda de la unidad.
+                Su fundador, el <strong>Gran Maestro Sun Lutang</strong>, es una
+                de las figuras más importantes en la historia de las artes
+                marciales de China. Conocido como un filósofo-guerrero de
+                integridad impecable, Sun Lutang poseía una maestría previa
+                inigualable en <em>Xingyiquan</em> y <em>Baguazhang</em> antes de
+                encontrar el Taijiquan, lo que le permitió percibir la esencia común
+                que une a todas las artes internas bajo un solo principio universal.
+            </p>
+
+            <details id="mas-sun">
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        <span class="text-chinese-seal-red"
+                            >Más información sobre la familia Sun Lutang</span
+                        >
+                    </p>
+                </summary>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    El encuentro que definiría este estilo ocurrió cuando Sun
+                    Lutang, ya un maestro consagrado, cuidó al eminente <strong
+                        >Hao Weizhen</strong
+                    > (estilo Wuhao) durante una grave enfermedad. En gratitud por
+                    su compasión y cuidado, Hao Weizhen le transmitió los secretos
+                    más profundos de su sistema. Sun Lutang, con su mente de erudito
+                    y su cuerpo ya forjado en otras disciplinas, comprendió que el
+                    Taijiquan era la clave para que el pueblo pueda unir el <em
+                        >Yijing</em
+                    > (Libro de los Cambios) con la fisiología humana. El estilo Sun,
+                    también llamado <strong>"Taijiquan de Pasos Vivos"</strong> (<em
+                        >Huobu Taijiquan</em
+                    >), caracterizado por su agilidad sutil y su ritmo continuo,
+                    refleja la filosofía de Baguazhang y del Xingyiquan,
+                    enfatizando el movimiento constante y la adaptabilidad.
+                </p>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    La genialidad de Sun Lutang radicó en su capacidad para <strong
+                        >intelectualizar el arte sin despojarlo de su espíritu</strong
+                    >. En sus escritos fundamentales, como el <em
+                        >Taijiquan Xue</em
+                    > (1919), elevó la práctica de una técnica de combate a una forma
+                    de alquimia interna. Introdujo el concepto de la "apertura y cierre"
+                    (<em>Kai-He</em>), como un trabajo de Qigong dentro del
+                    Taijiquan. Para el Maestro Sun, el Taijiquan era un vehículo
+                    para la salud, la rectitud moral y la unión con el Dao.
+                    También hizo mención de Sanfeng como el creador del
+                    Taijiquan, pero su enfoque estaba más en la integración de
+                    las artes internas que en la mitología.
+                </p>
+
+                <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                    Hoy en día, el legado de la familia Sun, es preservado por
+                    sus descendientes directos en Beijing y por el linaje que se
+                    estableció en Dingxing, provincia de Hebei. Para más
+                    información de la familia Sun, te comparto el enlace a la
+                    web del Maestro Jorge Quiñones <a
+                        href="https://www.taichisun.com/linaje"
+                        target="_blank">Taichisun/Linaje</a
+                    > donde se detalla la historia y aportaciones del linaje de Dingxing.
+                    Actualmente es el estilo que estoy practicando.
+                </p>
+            </details>
+        </article>
+    </section>
+
+    <section
+        id="PopularizacionEstado"
+        class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red"
+    >
+        <div
+            id="galeria-estado"
+            class="pswp-gallery-container grid grid-cols-5 md:grid-cols-5 lg:grid-cols-5 gap-5 mb-6"
+        >
+            <CardGaleria
+                imgPath="chuan (1).webp"
+                altText="manos 4"
+                width={1200}
+                height={800}
+            />
+            <CardGaleria
+                imgPath="chuan (2).webp"
+                altText="manos 4"
+                width={1200}
+                height={800}
+            />
+
+            <CardGaleria
+                imgPath="chuan (3).webp"
+                altText="manos 4"
+                width={1200}
+                height={800}
+            />
+            <CardGaleria
+                imgPath="chuan (7).webp"
+                altText="manos 4"
+                width={1200}
+                height={800}
+            />
+            <CardGaleria
+                imgPath="chuan (5).webp"
+                altText="manos 4"
+                width={1200}
+                height={800}
+            />
+        </div>
+
+        <h3
+            class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center"
+        >
+            Estandarización del Taijiquan por parte de la RPC
+        </h3>
+        <p class="text-lg text-text-ink mb-4 leading-relaxed">
+            Ahora toca hablar de la República Popular China, más sobre el
+            Periodo de Mao desde su fundación en 1949, que ha desempeñado un
+            papel crucial en la promoción y estandarización del Taijiquan como
+            un símbolo nacional, de salud pública y de identidad cultural. Se
+            puede considerar un Soft Power al Taijiquan, como el Shaolin y otras
+            tantas exportaciones chinas. En la estandarización del Taijiquan, se
+            quitaron criterios técnicos y filosóficos de cada familia para crear
+            un sistema homogéneo que pudiera ser enseñado y practicado a nivel
+            masivo. Este proceso implicó la creación de formas simplificadas, la
+            eliminación de elementos considerados "elitistas" o "místicos", y la
+            promoción del Taijiquan como una práctica accesible para todos los
+            ciudadanos chinos.
+        </p>
+
+        <details id="mas-mao">
+            <summary class="ocultar-summary">
+                <p class="text-lg text-text-secondary leading-relaxed">
+                    <span class="text-chinese-seal-red"
+                        >Mas información del proceso de simplificación y control
+                        estatal en el Periodo de Mao hasta los años 1980</span
+                    >
+                </p>
+            </summary>
+            <ul
+                class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4"
+            >
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Creación de Formas Estandarizadas:</strong>
+                    En 1956, el Comité Nacional de Deportes de China desarrolló la
+                    "Forma 24" (简化24式太极拳), una versión simplificada del Taijiquan
+                    diseñada para facilitar su aprendizaje y práctica a nivel masivo.
+                    Esta forma reducida eliminó movimientos complejos y técnicas avanzadas,
+                    sin seguir las tradiciones específicas de cada familia y tomando
+                    el estilo Yang, por ser el más popular, como base principal. Así
+                    surgieron otras formas estandarizadas con el paso de los tiempos.
+                </li>
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Eliminación de Elementos Místicos:</strong>
+                    Durante la campaña de modernización y secularización, se eliminaron
+                    muchos de los elementos filosóficos y místicos asociados con el
+                    Taijiquan, como las referencias a Zhang Sanfeng y la alquimia
+                    interna. El enfoque se desplazó hacia los beneficios físicos y
+                    de salud del Taijiquan, el estado de relajación en la acción ya
+                    no se describía como un "logro espiritual", sino en términos de
+                    medicina y psicología.
+                </li>
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Democratización del Conocimiento:</strong>
+                    Desde la óptica oficial, el linaje tradicional monopolizaba un
+                    conocimiento que debía pertenecer a toda la nación. Se adoptó
+                    la tesis materialista de que el taijiquan no fue un regalo divino,
+                    sino un producto del "trabajo de las masas" por ensayo y error.
+                    Las familias tradicionales fueron perseguidas, sufrieron discriminación
+                    y muchas veces se les prohibió enseñar su arte.
+                </li>
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Confianza en el Pueblo:</strong>
+                    El objetivo político era desmitificar el arte para devolverle
+                    al pueblo el crédito de su propia historia, fomentando la confianza
+                    en sus propias manos en lugar de en la ayuda de figuras inmortales
+                    o divinas
+                </li>
+            </ul>
+        </details>
+
+        <article id="1980-actualidad">
+            <h3
+                class="font-title text-2xl md:text-3xl text-text-title mb-6 mt-8"
+            >
+                La Apertura y el Resurgimiento de los Linajes (1980 -
+                Actualidad)
+            </h3>
+
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Tras la muerte de Mao, la década de los 80 marcó el fin de la
+                hegemonía del oficialismo secular y el inicio de una transición
+                hacia el libre mercado y el resurgimiento de los linajes
+                tradicionales. Durante este periodo, se da el ascenso del
+                turismo del Taiji como un potente motor comercial. El Estado
+                chino, en un giro pragmático, dejó de perseguir las genealogías
+                privadas para empezar a verlas como una fuente de divisas y
+                prestigio internacional.
+            </p>
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Esta fase de "Reforma y Apertura" permitió que los grandes
+                maestros de los linajes familiares tradicionales recuperaran sus
+                roles como depositarios de un saber ancestral. Las aldeas y
+                templos que habían sido despojados de su mística durante la
+                Revolución Cultural fueron reconstruidos y promocionados como
+                santuarios de "autenticidad". Como señala Douglas Wile, este
+                fenómeno fue la creación de una marca-país.
+            </p>
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                En este nuevo escenario, el Taijiquan contemporáneo habita una
+                dualidad: por un lado, se mantiene el Wushu de competición,
+                altamente atlético y vistoso, estandarizado por el gobierno con
+                reglas y competiciones internacionales; por otro, empiezan a
+                surgir los linajes tradicionales que compiten por demostrar
+                quién posee la "transmisión secreta" más pura.
+            </p>
+        </article>
+
+        <article id="construccion-wudang">
+            <h3
+                class="font-title text-2xl md:text-3xl text-text-title mb-6 mt-8"
+            >
+                La Reinvención de Wudang
+            </h3>
+
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Tras la muerte de Mao y las atracciones relacionadas con las
+                películas de Kung Fu de Taiwan, en especial las de Shaolin;
+                marcaron un inicio de una transición hacia el libre mercado. En
+                este contexto, el Estado chino realizó un giro pragmático: las
+                antiguas tradiciones, antes perseguidas como "superstición",
+                fueron rehabilitadas como activos de <strong
+                    >capitalismo cultural</strong
+                >.
+            </p>
+
+            <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                Esta fase permitió que las aldeas y templos fueran reconstruidos
+                como santuarios de "autenticidad", así como sucedio con los
+                Templos Shaolin que eran pura piedra. El Taijiquan de las
+                montañas Wudang, con sus templos reconstruidos, emergió no solo
+                como una práctica recuperada, sino como una operación de gestión
+                de marca diseñada para atraer el turismo internacional y
+                consolidar una identidad nacional mística.
+            </p>
+            <details id="mas-wudang">
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        <span class="text-chinese-seal-red"
+                            >Mas información de la reinvención de Wudang</span
+                        >
+                    </p>
+                </summary>
+                <ul
+                    class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4"
+                >
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Institucionalización de la Leyenda:</strong>
+                        En 1992, la Prensa del Instituto de Educación Física de Pekín
+                        publicó una monografía oficial que otorgaba validez a la longevidad
+                        mítica de <strong>Zhang Sanfeng</strong> (atribuyéndole 217
+                        años). Este aval estatal sobre una figura legendaria muestra
+                        una estrategia para favorecer el mercado del "turismo espiritual"
+                        por encima del rigor del socialismo científico anterior.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Curaduría Documental Seleccionada:</strong>
+                        Para sostener la primacía de Wudang, se han utilizado tácticas
+                        de validación que omiten el debate académico moderno. Un ejemplo
+                        es el uso de citas del historiador <strong
+                            >Xu Zhen</strong
+                        > para legitimar la existencia de Sanfeng, obviando que el
+                        propio Xu se había retractado públicamente de dichas posturas
+                        tras profundizar en sus investigaciones en la década de 1930.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Desarrollo de la Marca Wudang:</strong>
+                        Hoy, Wudang funciona como un imperio comercial gestionado
+                        por asociaciones de investigación y entes estatales. Su objetivo
+                        es propagar la "Cultura Wudang" mediante una vasta infraestructura
+                        de academias de entrenamiento y alojamientos para extranjeros,
+                        posicionando la montaña como la "Meca" del Taijiquan, o todo
+                        arte marcial que pueda existir, así como toda forma de Qigong
+                        que pueda ser comercializada.
+                    </li>
+                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Revestimiento de la Práctica Moderna:</strong>
+                        Se ha observado un proceso de "alquimización" de las formas.
+                        Rutinas simplificadas creadas originalmente para ser aprendidas
+                        rápidamente, son a veces presentadas bajo un lenguaje de alquimia
+                        interna y terminología taoísta antigua. Esto genera una "antigüedad
+                        instantánea" que resulta altamente atractiva para el mercado
+                        de practicantes occidentales.
+                    </li>
+                </ul>
+            </details>
+            
+        </article>
+    </section>
+
+    <section id="opinion" class="mb-16 md:mb-20 fade-in">
+        <div class="max-w-4xl mx-auto section-bg-dynamic p-6 md:p-10 rounded-none">
+            <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                 Si terminaste de leer, y todo esto te generó desencuentros y confusiones que no esperabas, quiero recordarte que<strong> yo soy un practicante de Taijiquan y Qigong </strong> y no me opongo a ninguna
+                    practica de Taijiquan, sea cual sea su origen, aunque algunas no las recomiende.
+                    </p>
+                    <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                        Porque más allá de las disputas genealógicas o las reconstrucciones estatales, la validez del Taijiquan no depende de la veracidad de su mito, sino de su eficacia como <strong>vehículo filosófico</strong>. Independientemente de si Zhang Sanfeng existió o si el arte nació en una milicia rural, <strong>el Taijiquan se ha consolidado como la herramienta más sofisticada para experimentar el Daoísmo de manera directa y tangible.</strong>
+                    </p>
+                    <p class="text-lg text-text-ink mb-4 leading-relaxed">
+                        En última instancia, <strong>el Taijiquan trasciende su propia historia</strong>. Es aquí donde el arte marcial cumple su función más elevada: no la de vencer a otro, sino la de integrar al individuo en el flujo incesante del universo, logrando una salud que es, al mismo tiempo, física, mental y espiritual.
+                    </p>
+
+                    <p class="text-lg text-text-secondary mb-4 leading-relaxed">Este es un gran tesoro que merece ser preservado y comprendido con respeto, de ahí radica la importancia de conocer su contexto histórico, político y social. <strong>El Taijiquan es una excelente via para la comprensión de la cosmogonía taoísta, y quien lo practica puede encontrar una conexión profunda con los principios fundamentales del taoísmo.</strong></p>
+          </div>
+    </section>
+
+    <article
+        id="etimología-taiji"
+        class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red"
+        style="animation-delay: 0.2s;"
+    >
+        <div id="galeria-01" class="max-w-4xl mx-auto mt-8">
+            <div
+                class="pswp-gallery-container grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-3 mb-4"
+            >
+                <CardGaleria
+                    imgPath="chuan (1).webp"
+                    altText="manos 4"
+                    width={1200}
+                    height={800}
+                />
+                <CardGaleria
+                    imgPath="chuan (2).webp"
+                    altText="manos 4"
+                    width={1200}
+                    height={800}
+                />
+
+                <CardGaleria
+                    imgPath="chuan (3).webp"
+                    altText="manos 4"
+                    width={1200}
+                    height={800}
+                />
+            </div>
+        </div>
+        <h3
+            class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center"
+        >
+            Etimología del Tàijíquán
+        </h3>
+
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+            El término Tàijíquán (太極拳 / 太极拳) es una tríada de conceptos
+            que vincula la cosmología más profunda del taoísmo con la ciencia
+            del combate. Para comprender su significado, es necesario desglosar
+            sus caracteres:
+        </p>
+
+        <details>
+            <summary class="ocultar-summary">
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                    <span class="text-chinese-seal-red"
+                        >Más información sobre la etimología de Tàijíquán</span
+                    >
+                </p>
+            </summary>
+            <ul
+                class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4"
+            >
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Tài (太):</strong>
+                    Significa "supremo", "máximo" o "el más grande". Es un superlativo
+                    que indica algo que no tiene nada por encima; una condición de
+                    magnitud absoluta.
+                </li>
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Jí (極 / 极):</strong>
+                    Literalmente significa "polo", "límite" o "extremo". Originalmente
+                    representaba la viga cumbrera de un techo, el punto más alto de
+                    una estructura. Representa el principio motor que surge de la
+                    unidad original (Wújí) para dar lugar al movimiento; es el estado
+                    de equilibrio dinámico donde el Yin y el Yang, aunque diferenciados,
+                    coexisten en perfecta armonía y cambio incesante
+                </li>
+                <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Quán (拳):</strong>
+                    Su pictograma representa un puño cerrado (la combinación de "mano"
+                    y "enrollar"). En la cultura china, este carácter designa a los
+                    sistemas de combate o artes marciales. Alude a la manifestación
+                    física y defensiva de los principios filosóficos.
+                </li>
+            </ul>
+        </details>
+
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+            Unidos, Tàijíquán expresa la idea de un <strong
+                >"Boxeo de la Gran Polaridad"</strong
+            >. Este nombre no es casual: sugiere que el arte no se basa en la
+            fuerza muscular bruta, sino en las leyes del cambio continuo entre
+            el vacío y la plenitud, la suavidad y la dureza. Como señala la
+            visión de los maestros clásicos, practicar este arte es convertir el
+            propio cuerpo en un laboratorio donde se experimenta el equilibrio
+            dinámico del universo, transformando un método de defensa en una vía
+            de realización espiritual y física.
+        </p>
+    </article>
+
+    <script src="/src/js/global.js" defer></script>
+    <script type="module" src="/src/js/photoswipe-init.js" defer></script>
+    <PhotoSwipeUI />
+</MainLayout>

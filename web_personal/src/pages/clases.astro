@@ -1,0 +1,131 @@
+---
+// 1. IMPORTAMOS LOS COMPONENTES NECESARIOS
+import MainLayout from '@/layouts/MainLayout.astro';
+import NavGeneral from '@/components/Navegadores/NavGeneral.astro';
+
+// 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
+const pageTitle = "Rodrigo Pizarro - Clases Qígōng y Tàijíquán";
+const pageDescription = "Clases de Qígōng y Tàijíquán impartidas por Rodrigo Pizarro en CABA, Argentina.";
+
+// Importamos los nuevos componentes de contenido
+import ClasesGrupales from '@/components/ClasesGrupales.astro';
+import ClasesParticulares from '@/components/ClasesParticulares.astro';
+import ClasesVirtuales from '@/components/ClasesVirtuales.astro';
+
+---
+<MainLayout title={pageTitle} description={pageDescription}>
+    <NavGeneral />
+
+    <section id="clases-container" class="card-grid grid-3-cols fade-in" style="animation-delay: 0.1s;">
+        
+        <article id="card-content-presenciales" class="card-content-container">
+            <div class="card-content">
+                <h2 class="font-title">Clases Grupales</h2>
+                <p class="text-lg text-text-secondary mb-6 leading-relaxed">
+                  Espacio colectivo para aprender y practicar Qìgōng y Tàijíquán
+                </p>
+              <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4 border-l-4 border-chinese-seal-red ">
+                    <li class="pl-2 py-1">
+                        1 a 2 clases semanales
+                    </li>
+                    <li class="pl-2 py-1">
+                        1 hora de duración
+                    </li>
+                    <li class="pl-2 py-1">
+                        Máx. 4 personas por grupo
+                    </li>
+                    <li class="pl-2 py-1">
+                        Sistemas oficiales de Qìgōng, y Tàijíquán simplificados.
+                    </li>
+                </ul>
+                <button 
+                    data-target="info-grupales-content" 
+                    class="toggle-btn button-manuscript inline-block mt-2 cursor-pointer">
+                    Ver detalles
+                </button>
+                <div class="text-center mt-10">
+                    <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=%C2%A1Hola%20Rodrigo!%20Te%20contacto%20porque%20me%20interesan%20tus%20clases%20de%20Qigong.%20Me%20gustar%C3%ADa%20saber%20sobre%20la%20modalidad%2C%20horarios%20y%20cuando%20podr%C3%ADa%20comenzar.&type=phone_number&app_absent=0" class="button-manuscript text-lg font-semibold py-3 px-8">Consultame por clases de Grupales</a>
+                </div>
+
+            </div>
+        </article>
+
+        <article id="card-content-particulares" class="card-content-container">
+            <div class="card-content">
+                <h2 class="font-title">Clases Particulares</h2>
+                <p class="text-lg text-text-secondary mb-6 leading-relaxed">
+                    Espacio de aprendizaje personalizado e individual en mi taller.
+                </p>
+                   <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4 border-l-4 border-chinese-seal-red ">
+                    <li class="pl-1 py-1">
+                        Días y horarios a elección
+                    </li>
+                    <li class="pl-2 py-1">
+                        1 a 3 hora de duración máx.
+                    </li>
+                    <li class="pl-2 py-1">
+                       Todos los sistemas y formas que conozco y practico
+                    </li>
+                    <li class="pl-2 py-1">
+                        Grabaciones de ejercicios
+                    </li>
+                </ul>
+                
+                <button 
+                    data-target="info-particulares-content" 
+                    class="toggle-btn button-manuscript inline-block mt-2 cursor-pointer">
+                    Ver detalles
+                </button>
+                <div class="text-center mt-10">
+                    <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=%C2%A1Hola%20Rodrigo!%20Te%20contacto%20porque%20me%20interesan%20tus%20clases%20de%20Qigong.%20Me%20gustar%C3%ADa%20saber%20sobre%20la%20modalidad%2C%20horarios%20y%20cuando%20podr%C3%ADa%20comenzar.&type=phone_number&app_absent=0" class="button-manuscript text-lg font-semibold py-3 px-8">Consultame por clases de Particulares</a>
+                </div>
+
+            </div>
+        </article>
+
+        <article id="card-content-virtuales" class="card-content-container">
+            <div class="card-content">
+                <h2 class="font-title">Clases Virtuales</h2>
+                <p class="text-lg text-text-secondary mb-6 leading-relaxed">
+                    Aprendé desde tu hogar con clases online grupales.
+                </p>
+
+                  <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4 border-l-4 border-chinese-seal-red ">
+                    <li class="pl-2 py-1">
+                        Tres días a la semana
+                    </li>
+                    <li class="pl-2 py-1">
+                        1 hora de duración.
+                    </li>
+                    <li class="pl-2 py-1">
+                      Un sistema de Qìgōng oficial por año.
+                    </li>
+                    <li class="pl-2 py-1">
+                        Correcciones personalizadas por video.
+                    </li>
+                </ul>
+                <button 
+                    data-target="info-virtuales-content" 
+                    class="toggle-btn button-manuscript inline-block mt-2 cursor-pointer">
+                    Ver detalles
+                </button>
+                <div class="text-center mt-10">
+                    <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=%C2%A1Hola%20Rodrigo!%20Te%20contacto%20porque%20me%20interesan%20tus%20clases%20de%20Qigong.%20Me%20gustar%C3%ADa%20saber%20sobre%20la%20modalidad%2C%20horarios%20y%20cuando%20podr%C3%ADa%20comenzar.&type=phone_number&app_absent=0" class="button-manuscript text-lg font-semibold py-3 px-8">Consultame por clases de Virtuales</a>
+                </div>
+
+            </div>
+        </article>
+    </section>
+
+    <div id="info-display-area" class="container mx-auto px-4 min-h-[200px]">
+        <ClasesGrupales id="info-grupales-content" class="info-panel hidden" />
+        <ClasesParticulares id="info-particulares-content" class="info-panel hidden" />
+        <ClasesVirtuales id="info-virtuales-content" class="info-panel hidden" />
+    </div>
+
+<script src="/src/js/global.js" defer></script>
+</MainLayout>
+
+
+
+
