@@ -9,10 +9,8 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   // Tu dominio final sin barra al final
-  site: 'https://rodrigopizarro.com.ar',
-  
-  // ALERTA: base debe ser '/' o no estar presente si usas dominio propio
-  base: '/', 
+  site: 'https://rodrigopizarro.com.ar', 
+  base: '/',
 
   vite: {
     resolve: {
