@@ -1,0 +1,1389 @@
+---
+// 1. IMPORTAMOS LOS COMPONENTES NECESARIOS
+import MainLayout from "@/layouts/MainLayout.astro";
+import CardGaleria from "@/components/galerias/CardGaleria.astro";
+import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
+import NavMawangdui from "@/components/Navegadores/Nav-Mawangdui.astro";
+
+// 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
+const pageTitle = "Rodrigo Pizarro - Mawangdui Dǎoyǐn Shu";
+const pageDescription =
+  "Información sobre Mawangdui Dǎoyǐn Shu impartidas por Rodrigo Pizarro en CABA, Argentina.";
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+  <NavMawangdui />
+
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+    <header
+    id="header"
+    class="hero-fullscreen-bg hero-mawangdui-bg hero-banner h-screen flex flex-col items-center justify-center relative"
+  >
+    <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
+      <h1
+        class="font-title text-5xl sm:text-6xl md:text-7xl mb-8 fade-in"
+        style="opacity:1"
+      >Mawangdui Dǎoyǐn Shu</h1>
+            <h2 class="text-xl sm:text-2xl md:text-3xl mb-12 fade-in font-title" style="animation-delay:0.2s;opacity:1">Sistema de Qigong oficial</h2>
+            <p class="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-200 fade-in" style="animation-delay:0.4s;opacity:1">
+                Serie de 12 movimientos que se basan en los dibujos hallados en el manuscrito encontrado en las tumbas Han de Mawangdui. 
+            </p>
+        </div>
+    </header>
+
+  <section id="historia" class="container mx-auto px-6 py-12 md:py-20">
+    <div id="titulo" class="mx-auto text-center mb-12">
+      <i
+        aria-hidden="true"
+        class="fas fa-user-circle text-6xl text-chinese-seal-red mb-6"></i>
+      <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-6">
+       Origen de los Ejercicios</h2>
+    </div>
+
+     <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                El "<strong>Qigong para la Salud: Ejercicios Dǎoyǐn de Mawangdui</strong>" se basa en los dibujos de Dǎoyǐn hallados en las tumbas Han de Mawangdui y en otras fuentes clásicas. Aprovecha la sabiduría ancestral china sobre la conservación de la salud y ha sido adaptada a las necesidades modernas, dando lugar a un <strong>conjunto de ejercicios de qigong con efectos notables en el fortalecimiento físico, la recuperación y el bienestar general</strong>. Esta práctica destaca por su <strong>clara metodología de “guiar” y “estirar” (导引)</strong>, sus principios científicos y sus resultados visibles, razón por la cual goza de gran popularidad y reconocimiento tanto en China como en el extranjero.
+          </p>
+                <details>
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                              <span class="text-chinese-seal-red">Mas información</span>
+                            </p>
+                </summary>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                    Las técnicas tradicionales chinas de cuidado de la salud nacieron de la experiencia cotidiana de los primeros pobladores.<strong> En la antigüedad se las llamaba generalmente “Dǎoyǐn” (导引) o “Anjiao” (按蹻)</strong>. En tiempos primigenios, mientras la gente luchaba por cubrir necesidades básicas como alimento y vestido, comenzó a transmitir sencillas pautas de autocuidado para conservar la salud.
+                </p>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                    Así, desde la época del Emperador Yao, el movimiento con forma de “danza” servía para armonizar el qi y la sangre, flexibilizar los tendones y movilizar las articulaciones, logrando así fines terapéuticos y de longevidad. Este “baile” primigenio es el antecedente directo del Dǎoyǐn.
+                </p>
+                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                    Según los sinólogos, <strong>la primera vez que aparece escrita la palabra 导引 (Dǎoyǐn) es en el capítulo 15 del Zhuāngzǐ, obra fechada hacia el siglo IV-III a. C.</strong> Allí, Zhuang Zhou describe a quienes “expulsan el aliento viejo y toman el nuevo… imitando al oso y al pájaro para conservar cuerpo y alma” y a esa práctica la llama dǎoyǐn.
+                    En los comentarios de Li Yi (siglo III) al Zhuangzi se define “Dǎoyǐn” como <strong>“guiar el qi para armonizarlo, atraer el cuerpo para flexibilizarlo”</strong>: “daoqi linghe, yinti lingsou”. Aquí “guiar el qi” se refiere al trabajo respiratorio y “atraer el cuerpo” al movimiento físico.
+                    </p>
+                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                    Más adelante, Ge Hong (siglo IV) en el Baopuzi (抱朴子·别旨) describe sus formas corporales:
+                    “Dǎoyǐn no consiste en ponerle nombre o dibujar un diagrama, sino en estirarse y flexionarse, inclinarse y levantar la cabeza, caminar y acostarse, apoyarse y permanecer erguido, deambular, andar despacio, recitar o suspirar; todo ello es Dǎoyǐn.”
+                    En la dinastía Sui, Chao Yuanfang en el Zhoubing Yuanchou Lun (诸病源候论) explica: “<strong>Llenar el cuerpo de qi y guiarlo hacia fuera, expulsando la antigua energía perversa interna; por eso se llama Dǎoyǐn.</strong>”: acá el énfasis está en la respiración.
+                </p>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                     En el Táng, Wang Bing comenta en el Huangdi Neijing Suwen que “<strong>Dǎoyǐn significa sacudir los tendones y huesos, mover las extremidades</strong>” e incluye también el masaje dentro de su definición. En la dinastía Song, Zeng Cao en el Daoshu·Taching Yangsheng Pian (道枢·太清养生篇) reitera: “<strong>Dǎoyǐn es inclinarse, mirar hacia arriba, flexionarse y estirarse.</strong>”
+                </p>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                    En todas estas definiciones, ya sean ejercicios respiratorios de “expulsar lo viejo y recibir lo nuevo” o movimientos de estiramiento e inclinación, <strong>el objetivo común es que el practicante active conscientemente su respiración y sus tendones, desobstruyendo el flujo interno de qi y sangre.</strong>
+                </p>
+            </details>
+  </section>
+
+  <section id="manuscritos" class="mb-8 fade-in max-w-4xl mx-auto">
+
+      <articule id="galeria_00" class="mb-8 flex justify-center items-center">
+              <div class="grid  justify-center items-center">
+                    <img src="/src/images/mawangduidaoyintu_02.webp" alt="mawangduidaoyintu desenterrado" class="rounded-none shadow-lg object-cover w-50 h-50 md:h-44 lg:h-48 mx-50" loading="lazy" decoding="async">
+              </div>
+      </articule>
+
+            <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Manuscritos y su valiosa recuperación</h3>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                    Los textos antiguos mencionan varios tratados ilustrados de Dǎoyǐn: el Sui Shu·Jingji Zhi 《隋书·经籍志》 cita tres volúmenes de “Dǎoyǐn Tu”; el Song Wen Zongmu 《崇文总目》 registra el “Liùqì Dǎoyǐn Tú” de un tomo; y el Song Shi·Yiwen Zhi 《宋史·艺文志》 menciona un “Dǎoyǐn Yangsheng Tú”. <strong>Todos esos manuscritos se han perdido, por lo que el hallazgo del “Diagrama de Dǎoyǐn de Mawangdui” resulta imprescindible.</strong>
+                </p><details>
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                              <span class="text-chinese-seal-red">Mas información</span>
+                            </p>
+                </summary>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                    El periodo entre la Primavera y Otoño hasta la dinastía Qin-Han fue crucial para la formación de la cultura de salud en China. <strong>Las doctrinas de los diversos filósofos sentaron las bases del concepto de unidad de cuerpo y mente, y de la práctica de la vida activa y pasiva.</strong> El Huangdi Neijing enfatiza que “esencia (jing), qi y espíritu (shen)” son los tres tesoros del ser humano, y propone las teorías de qi original, qi verdadero, qi ancestral, qi nutritivo, qi defensivo, qi verdadero y qi perverso, soportando toda la medicina de conservación. Asimismo, según las transformaciones de las cuatro estaciones, sugiere “<strong>nutrir el yang en primavera y verano, nutrir el yin en otoño e invierno</strong>”, y defiende métodos como “<strong>mantener la calma, guardar la mente, conservar el espíritu, presionar pies y guiar estiramientos</strong>”.
+                </p>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                    De estos principios se derivan técnicas como el <strong>“Regulación de los Cuatro Qi” (Sìqì Tiáoshén)</strong>, las prácticas de <strong>“Energía ascendente” (Shēngqì Tōngtiān)</strong>, los <strong>“Mantras del cofre dorado” (Jīn Guì Zhēnyán)</strong> y muchas más, que representan los primeros avances teóricos en salud preventiva. <strong>El Huangdi Neijing, por tanto, estableció el fundamento de la cultura del bienestar en China y es fuente primordial de las ideas del Dǎoyǐn de Mawangdui.</strong>
+                </p>
+            </details>
+        </section>
+  
+
+     <section id="diagrama" class="mb-12 fade-in max-w-4xl mx-auto">
+      
+      <articule id="galeria_01" class="mb-8 flex justify-center items-center">
+              <div class="grid  justify-center items-center">
+                    <img src="/src/images/mawangduidaoyintu_reconstruido.webp" alt="mawangduidaoyintu desenterrado" class="rounded-none shadow-lg object-cover w-50 h-50 md:h-44 lg:h-48 mx-50" loading="lazy" decoding="async">
+              </div>
+        </articule>
+
+            <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">El “Diagrama de Dǎoyǐn”</h3>
+
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                <strong>El Dǎoyǐn de Mawangdui toma la mayoría de sus posturas del famoso rollo de seda pintada descubierto en 1973 en la tumba nº 3 de Mawangdui (长沙, Hunan)</strong>. Se trata de la representación más antigua conocida de ejercicios corporales, con más de 2000 años de historia.
+                </p>  
+            <details>
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary mb-4 leading-relaxed border">
+                              <span class="text-chinese-seal-red border">Mas información</span>
+                            </p>
+                </summary>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                En la exhumación de 1973 apareció, junto a textos médicos, un estuche de madera lacada que contenía fragmentos de una pintura en seda. Tras su restauración, los expertos unieron los trozos hasta revelar <strong>un rollo de 140 cm de largo por 50 cm de ancho, con cuatro filas de figuras (cada una de unas 11 posturas, 9–12 cm de alto), en las que hombres y mujeres, vestidos o medio desnudos, ejecutan ejercicios de Dǎoyǐn</strong>. Están trazados con fino pincel sobre contornos en tinta negra y coloreados con bermellón y tonos gris-azulados, acompañados de breves inscripciones (31 localizadas en fragmentos conservados).
+                </p>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                El grupo de estudio de los Textos de Mawangdui nombró esta obra “Diagrama de Dǎoyǐn de Mawangdui” basándose en tres razones: La primera que los movimientos “Xìn(Shēn)” (伸) y “Xióngjīng” (熊经) remiten al pasaje del Zhuangzi que alude a “estirar tendones de oso y alas de pájaro”.
+                La segunda, el Sui Shu menciona un “Xíngqi Tú” y un “Dǎoyǐn Tú”, de los cuales este pudo ser uno de ellos.
+                Y por tercero, en la misma plancha de seda, <strong>se hallan los tratados</strong> 《Quègǔ Shíqì Pian》 y 《Yīnyáng Shíyī Mài Jiǔ Jīng》, confirmando su <strong>función como manual de salud</strong>.
+                </p>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                <strong>Entre 1974 y 1978 se llevó a cabo la restauración completa, dando como resultado el “Diagrama de Dǎoyǐn” de 44 figuras.</strong> Frente al rollo están copiados el tratado sobre moxibustión de los once meridianos y el capítulo sobre “eliminación de humores” del Quègǔ. Algunos investigadores vinculan esta obra con el posterior "Daoyin Shiqi Juan" (导引十七卷) mencionado en el Hanshu Yiwenzhi (汉书·艺文志); y con los hallazgos del Zhangjiashan que corroboran su integración en la tradición médica del Huangdi Neijing.
+                </p>
+            
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                <strong>El diseño del diagrama refleja además conceptos cosmológicos antiguos</strong>: 11 columnas (número yang) y 4 filas (número yin), conforme a la cosmovisión de “seis qi celestes” y “cinco fases terrestres”, y al principio “cielo seis, tierra cinco” ―un reflejo de la armonía universal según el Guoyu.
+                </p>
+                </details>
+                </div>
+       </section>
+
+        <section id="repercusión" class="mb-16 fade-in max-w-4xl mx-auto">
+
+
+            <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Legado y repercusión</h3>
+                <p class="text-lg text-text-secondary mb-4 leading-relaxed">En tiempos contemporáneos, a principios del siglo XXI la <strong>Administración General de Deportes de China impulsó la recopilación y sistematización de estas técnicas tradicionales</strong>, dando origen a estilos oficiales de Qigong: Yi Jin Jing, Wu Qin Xi, Liu Zi Jue y Ba Duan Jin. En 2007 se convocó una nueva licitación para enriquecer el repertorio, y la Universidad de Deporte de Shanghái ganó el encargo de codificar el “Dǎoyǐn de Mawangdui”.
+                    </p>
+              <details>
+                <summary class="ocultar-summary">
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                              <span class="text-chinese-seal-red">Mas información</span>
+                            </p>
+                </summary>
+                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                    Bajo la supervisión de un equipo interdisciplinar y tras una exhaustiva revisión de los textos y pinturas, se definieron 17 posturas originales de Mawangdui, más una postura inicial de regulación del qi y otra de cierre para restituir la energía y calmar la mente. 
+                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
+                    El criterio de diseño combinó:
+                </p>
+                    <ul class="list-none text-lg text-text-secondary space-y-3 leading-relaxed mb-6">
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">Fidelidad al prototipo pictórico</li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">Sencillez de aprendizaje y memorización</li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">Estética de movimiento</li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">Efectividad en el mantenimiento de la salud</li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">Adaptabilidad a distintos tipos de practicantes</li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">Semejanza con otros sistemas oficiales</li>
+
+                    </ul>
+                </details>
+                
+            <articule id="video" class="mb-8 flex justify-center items-center">
+              <div class="container mx-auto px-6">
+                <!-- mismo ancho que el texto -->
+                <div class="mx-auto w-full max-w-3xl">
+                  <!-- ALTO FIJO GRANDE -->
+                  
+                  <div
+                    class="w-full rounded-none shadow-lg overflow-hidden"
+                  >
+                    <iframe
+                      src="https://www.youtube.com/embed/ygvGEUOIHG0?si=eHFgW3m5X1v8SVRA&amp"
+                      class="block w-full h-full"
+                      frameborder="0"
+                      allowfullscreen
+                      scrolling="no"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      style="width:100% !important; height:100% !important; display:block;"
+                    ></iframe>
+                  </div>
+                  <p class="text-lg text-text-secondary mb-4 leading-relaxed text-center">
+                    Vídeo oficial de Chinese Health Qigong Association de Qigong Ma Wang Dui Daoyin Shu
+                  </p>
+                </div>
+              </div>
+            </articule>
+        </section>
+
+        <!--  Fuentes -->
+        <section
+          id="Fuentes_datos"
+          class="mb-16 md:mb-20 fade-in">
+          <div
+            class="max-w-4xl mx-auto section-bg-paper p-6 md:p-10 rounded-none shadow-lg"
+          >
+            <h4 class="font-title text-2xl md:text-3xl">Fuentes utilizadas</h4>
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a href="https://www.ahtcm.edu.cn/kcsz/info/1007/1951.htm" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">Fuente del Artículo "El origen y desarrollo de la nueva técnica Mawangdui Dǎoyǐn" de la Universidad de Medicina China de Anhui</a>
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a href="https://archive.org/details/early-chinese-medical-literature-mawangdui-manuscripts-donald-harper/page/n3/mode/2up" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">Early Chinese Medical Literature: The Mawangdui Manuscripts (Donald Harper, 1998, archive.org)</a>
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a href="https://www.sport.gov.cn/qgzx/n5407/c875504/content/" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">Changsha Mawangdui Han mu boshu (陈松长, sport.gov.cn)</a>
+          </li>
+        </ul>
+        </div>
+        </section>
+        
+
+    <!--  SISTEMA -->
+    <section id="sistema" class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="font-title text-3xl md:text-4xl mb-4 py-8 text-center">La secuencia completa de Mawangdui Dǎoyǐn Shu</h2>
+            <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                Destacar que es un sistema actualizado, desde su<strong></strong> lanzamiento oficial en 2008</strong> hasta la actualidad, el Daoyin de Mawangdui se ha difundido por toda China
+                y el mundo, integrándose en la oferta académica de universidades deportivas, hospitales de medicina
+                tradicional china y seminarios de qigong.
+              </p>
+            
+              <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                En <strong>2013 se publicó la Edición Revisada del Manual Oficial de Daoyin de Mawangdui</strong>,
+                que añadió diagramas anatómicos detallados, guías de respiración sincronizada y códigos QR que enlazan a
+                vídeos demostrativos certificados por la Chinese Health Qigong Association.
+              </p>
+              
+              <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                El <strong>25 de septiembre de 2018</strong>, la Administración General de Deportes emitió la circular «习惯性错误及纠正方法» (“Errores habituales y métodos de corrección”) para garantizar la estética postural, la seguridad biomecánica y el efecto terapéutico previsto. <strong>Esto está integrado en los movimientos que se encuentran abajo y es sumamente importante los cambios realizados para mejorar el sistema.</strong>
+              </p>
+              </details>
+
+              <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+              Los movimientos de la secuencia en total son 14: 12 movimientos principales, 1 de apertura y otro de cierre. Los 12 movimientos principales corresponden a los 12 meridianos del cuerpo, algunos se hacen unilateralmente y otros bilaterales. Todos deben ser practicados un mínimo de 6 veces unilateralmente y 3 veces bilaterales, con una pausa de 3 respiraciones entre cada movimiento, para mentalizarse hacia el próximo. Algunos remiten a animales y otros a sensaciones corporales, para que el practicante pueda imaginar y sentirse como si estuviera realizando la acción. 
+              </p>
+            </div>
+          </section>
+
+    <!--  OPINION -->
+    <section id="opinion" class="mb-16 md:mb-20 fade-in" >
+                <div class="max-w-4xl mx-auto section-bg-dynamic p-6 md:p-10 rounded-none shadow-lg">
+                  <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                    Yo aprendí este sistema a principios de 2024, en la Asociación Qing Mo Tiyu, Argentina. Considero que la Administración General de Deportes de China y Chinese Health Qigong Association, son las instituciones oficiales a las cuales se debe tener en cuenta para las correciones y cambios en la adecuación y mejora del sistema, considerando que tienen reglamentos técnicos evaluatorios.
+                  </p>
+                  <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+                    Aun así te encontrarás, como me pasa mí, con variaciones de movimientos e interpretaciones, y eso no significa que "están mal", sean cancelables y deban ser rechazadas. Yo apoyo la curiosidad de aprender y experimentar con diferentes interpretaciones, y la idea de que cada persona debe encontrar su propia práctica, adaptando el sistema a su necesidad y su cuerpo.
+                  </p>
+                </div>
+          </section>
+
+    <!--  MOVIMIENTOS -->
+    <section id="movimientos" class="mb-16 md:mb-20">
+
+        <details
+    id="movimiento-0"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+           起势 – Qǐ shì – (Preparación)
+    </h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+
+           <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-1 px-6">
+        <CardGaleria
+          imgPath="construccion.webp"
+          altText="construccion"
+          width={800}
+          height={800}
+        />
+      </div>
+              <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+                <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Meridianos implicados:</strong>
+                    Ren Mai (Vaso Concepción) y Du Mai (Vaso Gobernador) forman el eje central al ponerse de pie; se despiertan suavemente los meridianos Taiyin y Shaoyin de las manos para conectar la respiración con el movimiento.
+                  </li>
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Puntos energéticos clave:</strong>
+                    Dāntián inferior (CV6–CV4) como depósito del Qi, Baihui (DU20) para alinear eje cielo-tierra y Zhongwan (CV12) para suavizar y centrar el torso.
+                  </li>
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Beneficio terapéutico principal:</strong>
+                    Reunir el Qi disperso, armonizar la respiración con la postura y “despertar” el sistema energético antes de los movimientos dinámicos de la serie.
+                  </li>
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Intención / Yi:</strong>
+                    Sentir que el aire, la luz y la atención se recogen desde el entorno y se asientan en el dāntián, estableciendo una base serena y estable.
+                  </li>
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Respiración recomendada:</strong>
+                    Inspirar por la nariz cuando las manos ascienden y se expanden, y espirar suavemente por la nariz al descender, manteniendo una cadencia tranquila — por ejemplo, cuatro tiempos para inspirar y cuatro para espirar.
+                  </li>
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Alineación estructural:</strong>
+                    Columna erguida sin rigidez, barbilla ligeramente retraída, hombros relajados, rodillas suaves y peso equilibrado en ambos pies.
+                  </li>
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Visualización / imagen interna:</strong>
+                    Una esfera cálida de luz se eleva desde el dāntián con la inhalación y vuelve a asentarse en él con la exhalación, llenando gradualmente el tronco de calma y vitalidad.
+                  </li>
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Activación muscular / biomecánica clave:</strong>
+                    Ligerísima contracción del suelo pélvico y del transverso abdominal para sostener la postura; escápulas separadas con hombros descendidos para permitir que los brazos suban sin tensión.
+                  </li>
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Puntos de atención (foco):</strong>
+                    Mantener la mente en el dāntián, evitar tensar cuello y hombros, permitir que la respiración sea profunda y continua.
+                  </li>
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Errores comunes y correcciones:</strong>
+                    Forzar la zona lumbar se corrige alineando el eje cabeza-sacro; elevar los hombros, se corrige soltándolos antes de iniciar; respirar superficialmente en el pecho se corrige llevando el aire al abdomen.
+                  </li>
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Contraindicaciones o precauciones:</strong>
+                    No forzar la respiración si existe hipertensión no controlada o vértigo; en caso de inestabilidad mantener la mirada baja y practicar de forma pausada.
+                  </li>
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Transición anterior y siguiente:</strong>
+                    Al ser el inicio de la serie no tiene movimiento previo; prepara el cuerpo y el Qi para las expansiones o giros del ejercicio “Wǎn gōng – Dibujar un arco”.
+                  </li>
+                
+                  <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                    <strong>Sensaciones esperadas:</strong>
+                    Ligera expansión en pecho y abdomen, sosiego mental y sensación de “enraizamiento” en el centro corporal.
+                  </li>
+                
+                </ul>                
+              </div>
+          </div>
+        </details>
+
+          <!-- Movimiento 1 -->
+        <details
+          id="movimiento-1"
+          class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+        >
+          <summary class="mov-summary section-bg-paper">
+            <h3
+              class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+            >
+                挽弓 – Wǎn gōng – (Dibujar un arco)</h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                  <div class="md:col-span-1 px-6">
+                    <CardGaleria
+                              imgPath="construccion.webp"
+                              altText="construccion"
+                              width={1200}
+                              height={800}
+                      />    </div>
+                  <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+                    <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Meridiano a activar:</strong> El principal es el Meridiano Tendinomuscular de Pulmón (LU), con implicación secundaria del Meridiano Tendinomuscular de Intestino Grueso (LI) y del Dai Mai (Vaso Cinturón), debido a la conexión funcional entre tórax, hombros y zona abdominal.
+                      </li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Puntos energéticos clave:</strong> LU1 (Zhongfu – punto Mu anterior del Pulmón, abre el pecho y regula el Qi), LU11 (Shaoshang – punto Jing-pozo, libera calor y estimula la circulación de Qi en el meridiano pulmonar), BL13 (Feishu – punto Shu dorsal del Pulmón, tonifica y regula la función respiratoria), GB21 (Jianjing – relaja la tensión de cuello y hombros, desciende el Qi), DU14 (Dazhui – punto de cruce Yang, estimula el Wei Qi y despeja calor), LI4 (Hegu – regula la superficie y libera obstrucciones en brazo y hombro).
+                      </li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Beneficio terapéutico principal:</strong> Tonificar y flexibilizar el Meridiano Tendinomuscular de Pulmón (LU), mejorar la estabilidad postural y la activación de la musculatura paravertebral y abdominal profunda (multífidos y transverso del abdomen), favorecer la expansión torácica y la apertura escapular, y contribuir a la reducción del dolor lumbar crónico inespecífico mediante la extensión y apertura del pecho y los brazos.
+                      </li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Intención / Yi:</strong> Generar una sensación de estiramiento continuo desde LU1 hasta LU11 en ambos lados, abriendo el pecho, extendiendo los brazos y manteniendo abdomen y caderas relajados.
+                      </li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Respiración recomendada:</strong> Inhalar al abrir y tensar el arco, exhalar al soltar y regresar a la posición central.
+                      </li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Alineación estructural:</strong> Mantener los brazos extendidos hasta el punto de tensión sin elevar los hombros, relajar la parte inferior del cuerpo, cuidar la postura de pies y rodillas para que el movimiento se unifique y fluya.
+                      </li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Visualización / imagen interna:</strong> Imaginar que con los brazos se dibuja un arco invisible que expande el pecho y dirige la energía hasta el pulgar.
+                      </li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Activación muscular / biomecánica clave:</strong> Activación coordinada de multífidos, erectores espinales, glúteos, isquiotibiales y romboides, junto con estabilización profunda del core y apertura controlada de la cintura escapular.
+                      </li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Puntos de atención (foco):</strong> Mantener el peso equilibrado en ambos pies, no permitir que los hombros se eleven, y buscar un estiramiento máximo y controlado en el pecho y el brazo que se extiende.
+                      </li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Errores comunes y correcciones:</strong> Uno de los errores más frecuentes es inclinar el tronco hacia delante por pérdida de control del centro, lo que se corrige manteniendo el eje vertical y la activación abdominal. También es habitual elevar los hombros por tensión en los trapecios; para evitarlo, se debe relajar la musculatura cervical y permitir el descenso natural de las escápulas. Otro error común es relajar en exceso el abdomen, lo que compromete la estabilidad lumbar; en este caso, es importante activar la musculatura profunda del core para proteger la zona baja de la espalda.
+                      </li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Contraindicaciones o precauciones:</strong> Evitar la hiperextensión lumbar en personas con dolor agudo y ajustar la amplitud del movimiento según la condición física de cada practicante.
+                      </li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Transición anterior y siguiente:</strong> Tras la apertura inicial de la secuencia, este es el primer movimiento con nombre propio y precede a Yǐn bèi (Estirar la espalda).
+                      </li>
+                      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                        <strong>Sensaciones esperadas:</strong> Apertura de la zona torácica y escapular, relajación de la garganta y estiramiento de las cadenas musculares posteriores.
+                      </li>                                
+                    </ul>
+                  </div>
+                </div>
+        </details>
+
+            <!-- Movimiento 2 -->
+  <details
+    id="movimiento-2"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+          引背 – Yǐn bèi  – (Estirar la espalda)</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+    <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-1 px-6">
+        <CardGaleria
+          imgPath="construccion.webp"
+          altText="construccion"
+          width={800}
+          height={800}
+        />
+      </div>
+    <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Meridianos implicados:</strong> El principal es el Meridiano Tendinomuscular de Intestino Grueso (LI), con participación directa de Estómago (ST) y Vejiga (BL) debido a la extensión y estabilización posterior. También intervienen el Dai Mai (Vaso Cinturón) y el Du Mai (Vaso Gobernador) por la proyección axial de la columna y la apertura de la línea Yang dorsal.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos energéticos clave:</strong> LI4 (Hégǔ – punto Yuan-fuente, regula la superficie y desbloquea el canal), LI11 (Qūchí – punto He-mar, limpia calor y estimula la circulación de Qi y Xue), LI15 (Jiānyú – libera y moviliza el hombro), LI16 (Jùgǔ – libera la articulación del hombro y despeja el canal), ST25 (Tiānshū – punto Mu anterior del Intestino Grueso, regula la función intestinal y abdominal), BL25 (Dàchángshū – punto Shu dorsal del Intestino Grueso, regula la zona lumbar), DU14 (Dàzhuī – punto de cruce Yang, moviliza el Qi defensivo y relaja tensión dorsal).
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Beneficio terapéutico principal:</strong> Facilita el estiramiento axial de la columna, libera tensión en la cadena muscular posterior y en los meridianos Yang dorsales, favorece la apertura torácica y mejora la circulación de Qi y Xue a lo largo del Du Mai y de los canales implicados. Fortalece la musculatura extensora y estabilizadora profunda de la columna.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Intención / Yi:</strong> Alargar o contraer la columna, según corresponda el movimiento, como si una cuerda tirara suavemente de la coronilla hacia el cielo, manteniendo el sacro enraizado y generando espacio intervertebral con cada respiración.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Respiración recomendada:</strong> Inhalar para expandir y alargar desde la base pélvica hasta la coronilla; exhalar suavemente, manteniendo la extensión sin colapsar la postura.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Alineación estructural:</strong> Colocar los pies al ancho de hombros, rodillas semiflexionadas, pelvis neutra, columna erguida, esternón proyectado hacia adelante sin hiperextender, hombros relajados y barbilla ligeramente recogida.
+        </li>
+ 
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Activación muscular / biomecánica clave:</strong> Activación de erectores espinales, multífidos y transverso abdominal, con coactivación ligera de glúteos. Apertura controlada de la caja torácica posterior para favorecer la expansión pulmonar.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos de atención (foco):</strong> Mantener el equilibrio distribuido en toda la planta del pie, elongación continua desde el sacro hasta la coronilla y expansión uniforme evitando generar tensión excesiva en cuello o zona lumbar.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Errores comunes y correcciones:</strong> Un error frecuente es encorvar la zona dorsal, lo que se corrige manteniendo la proyección axial de la columna. También es habitual elevar los hombros por tensión en la cintura escapular; la corrección consiste en relajarlos y permitir el descenso natural de las escápulas. Otro error es colapsar el abdomen, que debe evitarse activando la musculatura profunda del core para sostener la postura.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Contraindicaciones o precauciones:</strong> Evitar la hiperextensión lumbar en casos de patología discal aguda. Moderar el rango de extensión en personas con vértigo, hipertensión no controlada o dolor cervical.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Transición anterior y siguiente:</strong> Se ejecuta después de Wǎn gōng (Dibujar el arco) y antes 凫浴 – Fú yù (El baño del pato).
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Sensaciones esperadas:</strong> Elongación progresiva y agradable a lo largo de toda la línea posterior, expansión torácica y sensación de descompresión vertebral.
+        </li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- Movimiento 3 -->
+  <details
+    id="movimiento-3"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+          凫浴 – Fú yù  – (El baño del pato)</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+  <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-1 px-6">
+        <CardGaleria
+          imgPath="construccion.webp"
+          altText="construccion"
+          width={800}
+          height={800}
+        />
+      </div>
+    <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Meridianos implicados:</strong> El principal es el Meridiano Tendinomuscular de Estómago (ST), con apoyo funcional del MTM de Bazo (SP) para la estabilidad y control postural del tren inferior.</li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Puntos energéticos clave:</strong> ST36 (Zúsānlǐ – punto He-mar y Tierra, tonifica Qi y Xue, fortalece piernas y centro), ST41 (Jiěxī – punto Jing-río, libera tobillo y estimula movilidad articular), ST25 (Tiānshū – punto Mu anterior del Intestino Grueso, regula función digestiva y abdomen), SP6 (Sānyīnjiāo – cruce de los tres Yin de pierna, estabiliza cadera y fortalece la base).</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Beneficio terapéutico principal:</strong> fortalece piernas y zona lumbar, activa la circulación en extremidades inferiores y mejora la estabilidad y coordinación del tren inferior en descensos y ascensos controlados.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Intención / Yi:</strong> Imitar el balanceo de un pato y la recolección del agua con las alas, con una inmersión suave en agua, sosteniendo la fluidez y el equilibrio de todo el cuerpo.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Respiración recomendada:</strong> inhalar en la preparación y elevación; exhalar en el descenso y flexión de piernas, coordinando ritmo y amplitud.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Alineación estructural:</strong> pies paralelos al ancho de hombros, rodillas flexionadas sin colapsar hacia adentro, pelvis estable, espalda recta, barbilla ligeramente retraída.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Visualización / imagen interna:</strong> sentir que el cuerpo flota y se sumerge en agua tibia, liberando tensión en caderas y zona lumbar mientras las piernas sostienen con firmeza.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Activación muscular / biomecánica clave:</strong> participación coordinada de cuádriceps y glúteos en la fase de descenso y ascenso, estabilización del core y de la columna por erectores y multífidos, y control fino de tobillo para la estabilidad plantar.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Puntos de atención (foco):</strong> mantener las rodillas alineadas con los pies, evitar que el peso se desplace a la punta, y conservar el tronco estable y vertical durante todo el gesto.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Errores comunes y correcciones:</strong> inclinar en exceso el tronco hacia adelante se corrige priorizando la verticalidad; el colapso de rodillas hacia adentro se previene abriendo suavemente hasta la línea del pie; la pérdida de ritmo respiratorio se evita sincronizando conscientemente inhalación y exhalación con el movimiento.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Contraindicaciones o precauciones:</strong> Adaptar si hay lesión de rodilla o cadera; no superar los 90° de flexión de rodilla en presencia de dolor o inestabilidad articular.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Transición anterior y siguiente:</strong> Se ejecuta después de Yǐn bèi (Estirar la espalda) y antes Lóng dēng (Ascenso del dragón).
+        </li>        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Sensaciones esperadas:</strong> calor progresivo en piernas y zona lumbar, sensación de estabilidad y fluidez.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- Movimiento 4 -->
+  <details
+    id="movimiento-4"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+          龙登 – Lóng dēng  – (Ascenso del dragón)</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+  <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-1 px-6">
+        <CardGaleria
+          imgPath="construccion.webp"
+          altText="construccion"
+          width={800}
+          height={800}
+        />
+      </div>
+    <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Meridianos implicados:</strong> El principal es el Meridiano Tendinomuscular de Bazo/Páncreas (SP), secundariamente el Chong Mai y el MTM de Hígado y Estómago, necesarios para estabilidad y control postural.</li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Puntos energéticos clave:</strong> SP1 (Yīnbái), SP9 (Yīnlíngquán), SP21 (Dàbāo).</li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Beneficio terapéutico principal:</strong> Mejora del control postural y la estabilidad lumbopélvica (activación de multífidos y transverso del abdomen).</li>
+    
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Intención / Yi:</strong>
+          Sensación de “ascenso” longitudinal: alargar la columna desde la pelvis hasta la coronilla, con movimiento fluido y controlado, evitando rigidez en hombros y cuello.
+        </li>
+    
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Respiración recomendada:</strong>
+          Inhalar al bajar y formar la flor de loto con las manos, exhalar al subir y mirar hacia hacia arriba. Inhalar al elevar talones y mirar hacia abajo con el mentón retraido, y exhalar al descomprimir la postura, bajar los talones y regresar al centro.
+        </li>
+    
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Alineación estructural:</strong>
+          Pies en forma de V, rodillas suaves, pelvis neutra, columna erguida, escápulas “ancladas” abajo y atrás, barbilla ligeramente recogida para alargar la nuca.
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Activación muscular / biomecánica clave:</strong>
+          Multífidos y erectores espinales (elongación axial sin hiperextensión), rotadores externos de hombro con depresión escapular, estabilización del core (transverso/oblicuos), glúteos como base.
+        </li>
+    
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos de atención (foco):</strong>
+          Peso repartido en ambos pies, rodillas alineadas con la punta de los pies al bajar, hombros relajados, cuello largo, respiración continua y suave.
+        </li>
+    
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Errores comunes y correcciones:</strong>
+          Evitar la hiperextensión lumbar manteniendo pelvis neutra; corregir la elevación de hombros relajando trapecios y fijando la depresión escapular; prevenir el bloqueo respiratorio coordinando inhalación al alargar y exhalación al regresar.
+        </li>
+    
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Contraindicaciones o precauciones:</strong>
+          En dolor lumbar agudo o mareo, reducir rango y velocidad; evitar rangos dolorosos de cuello/hombro; progresión gradual bajo supervisión si existe patología vertebral.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Transición anterior y siguiente:</strong>
+          Se ejecuta después de Fú yù (El baño del pato) y antes Niǎo shēn (Estiramiento de pájaro).</li>
+    
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Sensaciones esperadas:</strong>
+          Elongación axial agradable, calor suave en espalda y cintura escapular, respiración amplia sin dolor agudo.
+        </li>
+      </ul>
+    </div>    
+  </div>
+</details>
+
+<!-- Movimiento 5 -->
+  <details
+    id="movimiento-5"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+          鸟伸 – Niǎo shēn  – (Estiramiento de pájaro)</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-1 px-6">
+        <CardGaleria
+                  imgPath="construccion.webp"
+                  altText="construccion"
+                  width={1200}
+                  height={800}
+                />    </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Meridianos implicados:</strong> El principal es el Meridiano Tendinomuscular de Corazón (HT, Shaoyin de mano). Participación secundaria de Intestino Delgado (SI, Taiyang de mano) por la cadena posterior del brazo y de Du Mai (Vaso Gobernador) por la extensión axial vertebral y el desenrollamiento segmentario.
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos energéticos clave:</strong> HT1 (Jíquán, en la axila: inicia y guía la apertura del brazo), HT3 (Shàohǎi, pliegue cubital: facilita la extensión y libera tensión del codo), HT7 (Shénmén, muñeca: estabiliza la línea del antebrazo y coordina la apertura torácica), HT9 (Shàochōng, punta del meñique: completa el estiramiento distal y la proyección de la mano).
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Beneficio terapéutico principal:</strong> Apertura torácica y de cintura escapular, mejora de la movilidad glenohumeral, coordinación cabeza–cuello–columna y reducción de rigidez en la espalda alta mediante extensión vertebral segmentaria controlada.
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Intención / Yi:</strong> Estirar “alas” con una trayectoria continua desde la axila hacia el meñique, manteniendo la mirada estable y el crecimiento axial de la columna desde la pelvis hasta la coronilla.
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Respiración recomendada:</strong> Respiración continua y silenciosa. Acompañar la inclinación del tronco con una inhalación que ensanche la caja torácica posterior; sostener la exhalación durante la extensión segmentaria para mantener control y no comprimir la zona lumbar o cervical.
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Alineación estructural:</strong> Talones juntos y pies a cuarenta y cinco grados formando una “V”; rodillas suaves; pelvis neutra. El tronco desciende en bisagra hasta quedar paralelo al suelo y asciende “desenrollando” vértebra a vértebra. Hombros descendidos, cuello largo, mentón levemente recogido sin comprimir.
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Activación muscular / biomecánica clave:</strong> Control excéntrico de isquiotibiales y glúteos en la inclinación del tronco; activación de multífidos y erectores espinales para sostener la extensión axial sin hiperextender; estabilización profunda del core (transverso y oblicuos) para proteger la charnela lumbosacra; depresión y rotación superior de la escápula por serrato anterior y fibras inferiores del trapecio; participación de romboides y deltoides posterior en el barrido de brazos; alineación cervical mantenida por flexores profundos del cuello evitando compresión.
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos de atención (foco):</strong> Mantener cabeza, cuello y columna en un mismo eje; ejecutar la extensión de forma secuencial y distribuida; abrir hombros sin elevarlos; proyectar la línea del corazón hasta la punta del meñique en cada fase de apertura.
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Errores comunes y correcciones:</strong> Arqueo excesivo de la zona lumbar al elevar el tronco, que se corrige manteniendo pelvis neutra y activación del abdomen profundo; caída de la cabeza o compresión cervical, que se corrige sosteniendo la elongación del cuello y el mentón recogido; elevación de hombros o bloqueo escapular, que se corrige con depresión escapular activa y recorrido amplio pero controlado de brazos; pérdida de ritmo respiratorio, que se corrige sincronizando inhalación en la preparación y exhalación en la extensión segmentaria.
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Contraindicaciones o precauciones:</strong> Modificar amplitud en dolor cervical o lumbar; evitar rangos dolorosos de hombro y priorizar la calidad de la extensión vertebral sobre la cantidad de movimiento; progresión gradual en presencia de inestabilidad escapular o mareo.
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Transición anterior y siguiente:</strong>
+          Se ejecuta después de Lóng dēng (Ascenso del dragón) y antes Yǐn fù (Guiar el abdomen).
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Sensaciones esperadas:</strong> Amplitud torácica, ligereza en hombros, elongación axial confortable y mayor claridad postural tras el desenrollamiento de la columna.
+        </li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- Movimiento 6 -->
+  <details
+    id="movimiento-6"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+          引腹 – Yǐn fù – (Guiar el abdomen)</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+
+  <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-1 px-6">
+        <CardGaleria
+          imgPath="construccion.webp"
+          altText="construccion"
+          width={800}
+          height={800}
+        />
+      </div>
+    <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Meridianos implicados:</strong> El principal es el Meridiano Tendinomuscular de Intestino Delgado (SI). Participación secundaria de Du Mai y Dai Mai, que sostienen el eje central y regulan la energía en la zona abdominal y lumbar.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos energéticos clave:</strong> Xiaohai (SI8), Bingfeng (SI12), Tianzong (SI11) y Guanyuan (Ren4). Estos puntos refuerzan el trayecto del meridiano de Intestino Delgado, estimulan la circulación de Qi en el abdomen, regulan la energía del centro corporal y apoyan la conexión con la región lumbar mediante la acción de Dai Mai.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Beneficio terapéutico principal:</strong> Activa la motilidad intestinal, facilita la digestión, refuerza el core interno y armoniza el Qi abdominal, evitando bloqueos y fortaleciendo el centro vital.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Intención / Yi:</strong> Guiar y concentrar la energía hacia el abdomen, despertando calor interno, vitalidad y la percepción de un eje corporal estable.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Respiración recomendada:</strong> Abdominal profunda y rítmica. Yo noto que si uno quiere tonificar debe realizar las expaciones de movimientos con inhalaciones, y en la exhalación se contrae con control, activando el dāntián inferior y movilizando la energía interna. Si uno quiere relajarse debe realizar las contracciones de movimientos con inhalaciones, y en la exhalación se expandir con control, activando el dāntián inferior y movilizando la energía interna.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Alineación estructural:</strong> Columna recta y elongada para que se estire con la flexión de rodilla; pelvis en posición neutra, abdomen activo pero sin rigidez, pies juntos con apoyo firme en el suelo. Brazos relajados al estirarse.
+        </li>
+      
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Activación muscular / biomecánica clave:</strong> Transverso abdominal, oblicuos internos, diafragma y suelo pélvico trabajando en sinergia para sostener el eje central del cuerpo.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos de atención (foco):</strong> Peso sobre la pierna que flexiona la rodilla, relajación suave de la cadera sin tensión en la zona lumbar, exxpanción de los brazos a los costados sin tensionar.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Errores comunes y correcciones:</strong> Forzar el abdomen puede generar rigidez, por lo que se recomienda trabajar con control suave. Contener la respiración interrumpe la circulación de energía, se debe mantener un flujo constante. Inclinar la espalda hacia adelante desequilibra el eje, se debe sostener una alineación vertical estable. Sacar cadera hacia los costados o llevar el peso sobre la pierna extendida podría lastimar la zona lumbar. 
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Contraindicaciones o precauciones:</strong> Evitar esfuerzos abdominales intensos en postoperatorios recientes, hernias abdominales activas y embarazo avanzado sin supervisión. 
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Transición anterior y siguiente:</strong> 
+          Se ejecuta después de Niǎo shēn (Estiramiento de pájaro) y antes Chī shì (Mirada de búho).
+        </li>
+      </ul>      
+    </div>
+  </div>
+</details>
+
+<!-- Movimiento 7 -->
+  <details
+    id="movimiento-7"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+          鸱视 – Chī shì  – (Mirada de búho)</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+
+   <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-1 px-6">
+        <CardGaleria
+          imgPath="construccion.webp"
+          altText="construccion"
+          width={800}
+          height={800}
+        />
+      </div>
+    <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Meridianos implicados:</strong> El principal es el Meridiano de Vejiga (Taiyang de pie), que recorre la nuca, espalda y columna. Secundariamente participan Du Mai (Vaso Gobernador), que asciende por la línea media posterior y regula la movilidad axial, y Vesícula Biliar, que cruza la región lateral del cuello y la base del cráneo.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos energéticos clave:</strong> Tianzhu (BL10), situado en la base de la nuca y esencial para liberar tensión cervical; Fengchi (GB20), punto en la depresión occipital que armoniza circulación hacia la cabeza y ojos; Dazhui (DU14), en la unión cervicodorsal, que regula el Yang y despeja la mente. Puede añadirse Jingming (BL1) para favorecer la visión.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Beneficio terapéutico principal:</strong> Libera contracturas en la musculatura cervical y dorsal alta, mejora la irrigación y flujo de Qi y Xue hacia la cabeza, ojos y cerebro. Favorece la agudeza visual, la claridad mental y la prevención de cefaleas de origen tensional.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Intención / Yi:</strong> Cultivar una percepción amplia y alerta, similar a la mirada circular del búho que observa con calma y atención en todas direcciones.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Respiración recomendada:</strong> Natural y continua, coordinando la rotación cervical con la exhalación para liberar tensiones.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Alineación estructural:</strong> Columna erguida y estable, hombros relajados, barbilla suavemente retraída para alargar la nuca y mantener apertura en el eje occipital.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Activación muscular / biomecánica clave:</strong> Flexores y extensores cervicales profundos, músculos suboccipitales y trapecio superior, trabajando de manera equilibrada y sin brusquedad para sostener y guiar la rotación.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos de atención (foco):</strong> Mantener la respiración suave, evitar tensión en mandíbula y lengua, y no forzar el rango de movimiento cervical.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Errores comunes y correcciones:</strong> Un error habitual es girar la cabeza de forma brusca; debe realizarse una rotación lenta, fluida y controlada. Otro error frecuente es inclinar la cabeza hacia adelante o atrás durante el giro; se corrige manteniendo el eje cervical neutro. También suele elevarse los hombros inconscientemente; la corrección es mantenerlos relajados y descendidos.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Contraindicaciones o precauciones:</strong> Evitar amplitud excesiva en personas con hernia cervical, mareos, vértigo o rigidez severa. Precaución en casos de cirugía cervical reciente o inestabilidad vertebral.
+        </li>
+            
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Transición anterior y siguiente:</strong> Anterior: Niǎo shēn – Estiramiento de ave. Siguiente: Yǐn yāo – Guiar la cintura.
+        </li>
+              
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Transición anterior y siguiente:</strong> 
+          Se ejecuta después de Niǎo shēn (Estiramiento de ave) y antes de Yǐn yāo (Guiar la cintura).
+        </li>        
+      </ul>
+      
+    </div>
+  </div>
+</details>
+
+<!-- Movimiento 8 -->
+  <details
+    id="movimiento-8"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+          引腰 – Yǐn yāo – (Guiar la cintura)</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+
+   <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-1 px-6">
+        <CardGaleria
+          imgPath="construccion.webp"
+          altText="construccion"
+          width={800}
+          height={800}
+        />
+      </div>
+    <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Meridianos implicados:</strong> El principal es Riñón (KI). Participan el Dai Mai (Vaso Cinturón) y el Du Mai (Vaso Gobernador), organizando la estabilidad lumbopélvica y el eje posterior.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Puntos energéticos clave:</strong> Mìngmén (DU4) y Yāoyángguān (DU3) para vigorizar el eje posterior; Tàixī (KI3) y Fùliú (KI7) para tonificar Riñón y regular el agua; Shènshū (BL23, Shu dorsal de Riñón) como apoyo; Dàimài (GB26) para equilibrar el cinturón pélvico.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Beneficio terapéutico principal:</strong> Fortalece la zona lumbar, estimula la energía de Riñón, mejora la estabilidad central y favorece la movilidad integrada de pelvis y cintura.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Intención / Yi:</strong> Guiar el movimiento desde el centro del cuerpo, generando fuerza y elasticidad equilibradas en la región lumbopélvica.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Respiración recomendada:</strong> Inhalar al preparar (apertura/elongación) y exhalar al conducir el gesto (flexión/cierre), manteniendo ritmo suave y continuo.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Alineación estructural:</strong> Pelvis neutra al inicio, columna elongada sin colapso lumbar, esternón proyectado sin hiperextensión, apoyo plantar estable.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Visualización / imagen interna:</strong> La cintura como eje fluido que ondula el tronco desde el centro hacia arriba y hacia abajo, con el “cinturón” (Dai Mai) ajustando y sosteniendo.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Activación muscular / biomecánica clave:</strong> Multífidos y erectores espinales para la elongación axial; transverso y oblicuos para el control del core; glúteos y rotadores de cadera para guiar la pelvis; coordinación diafragma–suelo pélvico para sostener la presión intraabdominal.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Puntos de atención (foco):</strong> Evitar hiperextensión lumbar, distribuir el movimiento entre cadera y columna, mantener respiración fluida y hombros relajados.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Errores comunes y correcciones:</strong> Usar solo la parte alta de la espalda en lugar de iniciar desde la pelvis; arquear en exceso la zona lumbar en vez de sostener la activación abdominal; perder el eje vertical cuando aumenta la amplitud del gesto. Corregir iniciando el movimiento desde la cadera, manteniendo pelvis neutra y activación del core, y dosificando el rango.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Contraindicaciones o precauciones:</strong> Precaución en lumbalgia aguda, hernia discal lumbar o postcirugía; reducir amplitud y velocidad según tolerancia.</li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Transición anterior y siguiente:</strong> 
+          Se ejecuta después de Chī shì (Mirada de búho) y antes de Yàn fēi (El vuelo de la oca salvaje).
+        </li>
+        
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Sensaciones esperadas:</strong> calor agradable en zona lumbar, sensación de soltura pélvica y soporte central firme.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- Movimiento 9 -->
+  <details
+    id="movimiento-9"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+          雁飞 – Yàn fēi  – (El vuelo de la oca)</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+
+   <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-1 px-6">
+        <CardGaleria
+          imgPath="construccion.webp"
+          altText="construccion"
+          width={800}
+          height={800}
+        />
+      </div>
+    <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+      <ul class="list-none text-lg text-ink space-y-4 leading-relaxed">
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Meridianos implicados:</strong> Pericardio (PC) como eje principal de apertura torácica y regulación del Qi de corazón; Du Mai (Vaso Gobernador) sostiene el eje posterior y la proyección axial; Dai Mai (Vaso Cinturón) mantiene la cohesión lateral durante la expansión; Triple Recalentador (SJ) colabora de forma funcional en la proyección anterior‑lateral de los brazos y la armonización de los tres jiao.</li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Puntos energéticos clave:</strong> Tianchi (PC1) abre la base del pecho; Neiguan (PC6) regula el Qi torácico y calma el Shen; Laogong (PC8) irradia la energía hacia las palmas; Danzhong (REN17) reúne el Qi del tórax; Dazhui (DU14) dinamiza el Yang y libera tensión cervicodorsal.</li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Beneficio terapéutico principal:</strong> Favorece la apertura torácica, regula la energía corazón‑pericardio, amplía la capacidad respiratoria y mejora la coordinación escapulotorácica, aliviando opresión y rigidez intercostal.</li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Intención / Yi:</strong> Desplegar el Qi desde el centro del pecho hacia brazos y espalda como alas que se abren con serenidad, utilizando la mirada para guiar el Qi desde la punta del mayor hacia la punta del dedo mayor de la otra mano.</li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Respiración recomendada:</strong> Inhalar con la cabeza hacia la mano elevada y exhalar con la cabeza hacia la mano baja.</li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Alineación estructural:</strong> Columna elongada con sacro pesado y coronilla proyectada; esternón elevado sin hiperextender la zona lumbar; hombros descendidos y escápulas libres sobre la parrilla costal; apoyo plantar firme; brazos y manos extendidas a los laterales siempre.</li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Activación muscular / biomecánica clave:</strong> Los hombros suben y bajan con suavidad; los omóplatos se deslizan para abrir el pecho; la espalda se alarga sin rigidez y el abdomen sostiene ligero el centro.</li>        
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Puntos de atención (foco):</strong> Mantener la apertura desde el pecho y no sólo desde los hombros; evitar elevarlos; conservar el eje vertical sin arquear la zona lumbar; sostener respiración amplia y continua.</li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Errores comunes y correcciones:</strong> La tensión cervical se previene alargando la nuca y relajando mandíbula y lengua; el arco lumbar excesivo se corrige activando el abdomen bajo y distribuyendo la extensión a toda la columna; la rigidez de brazos desaparece iniciando el movimiento desde el pecho y permitiendo libertad a las escápulas.</li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Contraindicaciones o precauciones:</strong> Moderar amplitud en lesiones de hombro o cervical; ajustar la práctica en hipertensión o patologías cardíacas; evitar apnea y respetar rangos indoloros.</li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Transición anterior y siguiente:</strong> Se practica despues de Yǐn yāo (Guiar la cintura) y precede a Hè wǔ (Danzar como una grulla).</li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red"><strong>Sensaciones esperadas:</strong> Amplitud torácica, un fluir de la sangre de la zona alta del cuerpo, calor y cosquilleo suave en el en manos y brazos, relajación de la cervical.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- Movimiento 10 -->
+  <details
+    id="movimiento-10"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+          鹤舞 – Hè wǔ – (Danzar como una grulla)</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+
+   <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-1 px-6">
+        <CardGaleria
+          imgPath="construccion.webp"
+          altText="construccion"
+          width={800}
+          height={800}
+        />
+      </div>
+    <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Meridianos implicados:</strong>
+          El principal es Triple Recalentador / Sanjiao (SJ), que regula la circulación de Qi entre los tres jiao y se activa al abrir brazos y expandir el tórax. Secundariamente colaboran Du Mai (Vaso Gobernador) para sostener el eje posterior y Dai Mai (Vaso Cinturón) para estabilizar la cintura durante el balanceo.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos energéticos clave:</strong>
+          Waiguan (SJ5) estimula la circulación en brazos y libera bloqueo externo; Zhongzhu (SJ3) armoniza la mano y facilita la apertura de dedos; Tianjing (SJ10) despeja el canal y relaja el codo; Yifeng (SJ17) libera tensión cervical; Dazhui (DU14) dinamiza el Yang y alinea el eje.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Beneficio terapéutico principal:</strong>
+          Armoniza los tres jiao, abre el pecho y la espalda alta, mejora la amplitud respiratoria y la coordinación brazo-tronco; refuerza el equilibrio al trabajar sobre una base estable.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Intención / Yi:</strong>
+          Elevarse con ligereza y elegancia, como una grulla que despliega sus alas, manteniendo serenidad y control postural en cada cambio de apoyo.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Respiración recomendada:</strong>
+          Inhalar al abrir brazos y alargar el cuerpo; exhalar lenta y suavemente al descender o cambiar de pierna, dejando que el pecho se relaje sin colapsar.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Alineación estructural:</strong>
+          Columna erguida, pelvis neutra, rodilla de apoyo alineada con el pie, coronilla proyectada hacia arriba, hombros descendidos y escápulas libres.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Activación muscular / biomecánica clave:</strong>
+          Pierna de apoyo activa cuádriceps y glúteo; core sostiene la vertical; brazos se elevan con movilidad escapular suave; el pecho se expande sin rigidez lumbar.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos de atención (foco):</strong>
+          Mantener centro de gravedad estable, hombros relajados, respiración fluida y coordinación entre brazo y pierna contraria.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Errores comunes y correcciones:</strong>
+          Perder equilibrio — bajar un poco la pierna elevada o usar un apoyo; tensar hombros — aflojar y abrir pecho; cortar la respiración — sincronizar con el movimiento.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Contraindicaciones o precauciones:</strong>
+          Practicar cerca de un apoyo si hay vértigo o problemas de equilibrio; reducir rango en lesiones de hombro, tobillo o rodilla.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Transición anterior y siguiente:</strong>
+          Se realiza después de Yàn fēi (El vuelo de la oca) y antes de Yǎng hū (Exhalar mirando hacia arriba).
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Sensaciones esperadas:</strong>
+          Amplitud torácica, ligereza en brazos y hombros, calor suave en la pierna de apoyo.
+        </li>
+      </ul>      
+    </div>
+  </div>
+</details>
+
+<!-- Movimiento 11 -->
+  <details
+    id="movimiento-11"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+          仰呼 – Yǎng hū  – (Exhalar mirando hacia arriba)</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+
+   <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-1 px-6">
+        <CardGaleria
+          imgPath="construccion.webp"
+          altText="construccion"
+          width={800}
+          height={800}
+        />
+      </div>
+    <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Meridianos implicados:</strong>
+          Vesícula Biliar (GB) es el canal principal —su recorrido lateral y cervical se activa al mirar hacia arriba y abrir el pecho—. Colaboran Ren Mai (Vaso Concepción) para la expansión anterior, Du Mai (Vaso Gobernador) para sostener el eje posterior y Hígado (LIV) para mantener flexibilidad y circulación de Qi ascendente.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos energéticos clave:</strong>
+          Fengchi (GB20) libera la base del cráneo y favorece la mirada al cielo; Jianjing (GB21) abre hombros y cuello; Yanglingquan (GB34) armoniza la línea lateral; Danzhong (REN17) expande el centro torácico; Taichong (LIV3) facilita el flujo de Qi ascendente.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Beneficio terapéutico principal:</strong>
+          Abre la parte anterior del tórax, mejora la capacidad respiratoria, relaja la tensión cervical y estimula la circulación de Qi a lo largo de la línea lateral y el eje anterior-posterior.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Intención / Yi:</strong>
+          Arquear el cuerpo desde la lumbar hasta la cervical para elevar el Qi, y relajar la tensión que sube por los brazos hasta los dedos de las manos.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Respiración recomendada:</strong>
+          Inhalar al preparar la apertura; exhalar larga y relajada mirando hacia arriba, vaciando los pulmones sin comprimir el cuello. Yo propongo que la exhalación de la primera parte sea por boca, y la de la segunda parte sea por nariz.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Alineación estructural:</strong>
+          Pies firmes al ancho de hombros y rectos, pelvis neutra, extensión torácica controlada arqueando toda la columna, barbilla suavemente proyectada sin comprimir nuca.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Activación muscular / biomecánica clave:</strong>
+          Apertura controlada de tórax con ayuda de la musculatura intercostal; espalda se alarga con ligera activación de erectores; cuello se extiende sin tensión; abdomen sostiene para evitar arco lumbar.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos de atención (foco):</strong>
+          Mantener las piernas estiradas y rectas. No colapsar la nuca  y la zona lumbar al arquear la columna. Dejar que costillas se expandan sin forzar hombros ni trapecios. Llevar toda la tensión a los dedos de las manos al relajar los brazos hacia abajo.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Errores comunes y correcciones:</strong>
+          Es habitual que, al mirar hacia arriba, se hiperextienda el cuello; la solución consiste en alargar la nuca y mantener la mirada suave. Otro fallo frecuente es arquear demasiado la zona lumbar; puede evitarse activando suavemente el abdomen para sostener la columna. Por último, muchas personas exhalan con brusquedad: conviene prolongar conscientemente la salida del aire sin soplar, dejando que la respiración se deslice sin tensión, una parte mirando hacia arriba y una poca mirando hacia delante.
+        </li>
+        
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Contraindicaciones o precauciones:</strong>
+          Practicar con cuidado en casos de mareo, hipertensión sin controlar o lesiones cervicales; reducir rango si aparece cualquier molestia en la columna.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Transición anterior y siguiente:</strong>
+          Se realiza después de Hè wǔ (Danzar como una grulla) y antes de Yǐn bèi (Estirar la espalda).
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Sensaciones esperadas:</strong>
+          Expansión torácica, alivio en cuello y pecho, sensación de aire fresco y claridad mental al exhalar.
+        </li>
+      
+      </ul>
+      
+    </div>
+  </div>
+</details>
+
+<!-- Movimiento 12 -->
+  <details
+    id="movimiento-12"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+          引背 – Yǐn bèi – (Estirar la espalda)</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+
+   <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-1 px-6">
+        <CardGaleria
+          imgPath="construccion.webp"
+          altText="construccion"
+          width={800}
+          height={800}
+        />
+      </div>
+    <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Meridianos implicados:</strong>
+          El meridiano principal es Hígado (LIV), que libera y distribuye el Qi por toda la línea posterior al estirarse la espalda. Actúan como apoyo el trayecto tendinomuscular de Vesícula Biliar (GB), que estabiliza el costado, el Dai Mai (Vaso Concepción) para contener la expansión lateral y el Du Mai (Vaso Gobernador) por su recorrido medio-posterior a lo largo de la columna.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos energéticos clave:</strong>
+          Taichong (LIV3) para mover el Qi estancado y relajar la cadena posterior; Ququan (LIV8) nutre y flexibiliza tendones; Yanglingquan (GB34) despeja la articulación de la rodilla y armoniza la línea lateral; Zulinqi (GB41) abre el Dai Mai y favorece la expansión de costados; Ganshu (BL18) tonifica el Hígado desde la espalda.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Beneficio terapéutico principal:</strong>
+          Favorece la elasticidad de la columna dorsal y lumbar, dispersa la tensión paravertebral y mejora la circulación de Qi y Xue a lo largo del eje posterior y las cadenas laterales, aliviando sobrecargas en la espalda.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Intención / Yi:</strong>
+          Visualizar una línea de estiramiento que nace en el dedo gordo del pie, recorre la cara interna de la pierna y el flanco, y culmina en LIV14 (Qímén) —punto situado en el sexto espacio intercostal, a la altura del pezón—; simultáneamente, sentir cómo la espalda se proyecta del sacro a la coronilla, desplegándose como un arco que libera rigidez y crea espacio entre las vértebras.
+        </li>        
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Respiración recomendada:</strong>
+          Tomar aire mientras se prepara la extensión; exhalar de forma lenta y continua al relajar el estiramiento, manteniendo el abdomen suavemente activo para proteger la zona lumbar cuando se tiene que bajar para la segunda parte del movimiento.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Alineación estructural:</strong>
+          Columna larga y proyectada; pelvis en posición neutra; hombros relajados lejos de las orejas; peso repartido de manera uniforme entre ambos pies.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Activación muscular / biomecánica clave:</strong>
+          Trabajo excéntrico de erectores espinales y romboides para regular la bajada; estabilización del núcleo con transverso y multífidos; glúteos y cadena posterior aportan soporte sin rigidez.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos de atención (foco):</strong>
+          Mantener la elongación axial sin colapsar la zona lumbar; no encoger hombros; dejar que la respiración fluya a lo largo de toda la espalda.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Errores comunes y correcciones:</strong>
+          Si los hombros se elevan, recordá relajarlos y abrir el pecho; si la zona lumbar se arquea en exceso, activá suavemente el abdomen y distribui la extensión por toda la columna; si la respiración se corta, retomá un ritmo fluido antes de profundizar más.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Contraindicaciones o precauciones:</strong>
+          Practicar con cuidado en presencia de hernias discales agudas, escoliosis severa o dolor lumbar intenso; nunca forzar la amplitud más allá del límite confortable.
+        </li>
+
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Transición anterior y siguiente:</strong>
+          Este estiramiento cierra la secuencia tras Yǎng hū (Exhalar mirando hacia arriba) y marca la vuelta a la postura neutral.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Sensaciones esperadas:</strong>
+          Una ligera tensión inicial que se transforma en sensación de frescura, ligereza y espacio a lo largo de toda la espalda.
+        </li>
+      </ul>      
+    </div>
+  </div>
+</details>
+
+<!-- Movimiento 13 -->
+  <details
+    id="movimiento-13"
+    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
+    <summary class="mov-summary section-bg-paper">
+      <h3
+        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
+      >
+          收势 – Shōu shì – (Cierre)</h3>
+    <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+  </summary>
+
+   <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-1 px-6">
+        <CardGaleria
+          imgPath="construccion.webp"
+          altText="construccion"
+          width={800}
+          height={800}
+        />
+      </div>
+    <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Meridianos implicados:</strong>
+          Ren Mai (Vaso Concepción) dirige la energía por la línea media anterior durante el descenso de las manos; Du Mai estabiliza el eje posterior; Pericardio (PC) y Riñón (KI) colaboran al sellar la energía en el Dan Tian.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos energéticos clave:</strong>
+          Primer sello Danzhong (REN17), centro del pecho, reúne el Qi.  
+          Segundo sello Zhongwan (REN12), parte alta del abdomen, armoniza Estómago y Bazo.  
+          Tercer sello Qihai / Guanyuan (REN6–REN4), Dan Tian inferior, almacena la energía para nutrir todo el cuerpo.  
+          Las palmas (Laogong PC8) actúan como «tapones» que conducen el Qi a cada nivel.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Beneficio terapéutico principal:</strong>
+          Sella y equilibra la energía generada durante la secuencia, induce calma mental y favorece la integración de los tres centros (pecho, abdomen medio y bajo).
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Intención / Yi:</strong>
+          Reunir el Qi disperso con las palmas, guiándolo en tres pasos descendentes hasta el Dan Tian inferior, donde se conserva como una reserva cálida y estable.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Respiración recomendada:</strong>
+          Inspirar suavemente al elevar las manos; exhalar lenta y prolongadamente en cada sello, percibiendo cómo el aire y la energía descienden y se concentran.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Alineación estructural:</strong>
+          Postura erguida con pies paralelos al ancho de hombros, rodillas relajadas, sacro pesado, coronilla suspendida y hombros suavemente descendidos.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Visualización / imagen interna:</strong>
+          Imaginar un hilo de luz que desciende desde la coronilla a lo largo del eje central, siguiendo el trayecto de las palmas mientras estas sellan la energía en cada nivel.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Activación muscular / biomecánica clave:</strong>
+          Tono postural suave: glúteos y abdomen inferior sostienen la vertical; hombros y brazos se mueven con mínimo esfuerzo, guiados por la respiración.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Puntos de atención (foco):</strong>
+          Deslizar las palmas sin prisa, mantener la mente anclada en cada punto de sello y percibir el calor que se acumula en el Dan Tian.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Errores comunes y correcciones:</strong>
+          Cerrar de forma brusca no beneficia la práctica, ralentizar los gestos y sincronizar con la respiración.  
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Contraindicaciones o precauciones:</strong>
+          Ninguna específica; simplemente mantener la estabilidad si existen problemas de equilibrio o fatiga.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Transición anterior y siguiente:</strong>
+          Sigue inmediatamente al último movimiento activo (Yǐn bèi) y finaliza la práctica, dando paso a una breve quietud en postura neutral.
+        </li>
+      
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          <strong>Sensaciones esperadas:</strong>
+          Calor suave que se concentra en el abdomen inferior, respiración tranquila, mente clara y sensación de enraizamiento.
+        </li>
+      
+      </ul>
+      
+    </div>
+  </div>
+</details>
+    </section>
+
+<section id="Fuentes_Mawangdui" class="mb-16 md:mb-20 fade-in">
+  <div class="max-w-4xl mx-auto section-bg-paper p-6 md:p-10 rounded-none shadow-lg">
+    <h4 class="font-title text-2xl md:text-3xl border-b-2 border-chinese-seal-red pb-4">
+        Fuentes y Bibliografía Académica utilizada para la elaboración de este artículo</h4>
+    <ul class="list-none text-lg text-ink space-y-6 leading-relaxed py-10">
+      
+      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+        <a href="https://es.scribd.com/document/847331542/Libro-Daoyin-de-Mawangdui" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+          Libro Oficial: "Daoyin de Mawangdui: Qigong Chino para la Salud"
+        </a>
+        <p class="text-sm text-text-secondary mt-1">
+          Traducción al español de la obra fundamental de la Asociación China de Qigong para la Salud, que sistematiza las técnicas milenarias recuperadas.
+        </p>
+      </li>
+
+      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+        <a href="https://www.sport.gov.cn/qgzx/n5407/c875504/content.html" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+          Estudio sobre los manuscritos de seda de Mawangdui (Chen Songchang)
+        </a>
+        <p class="text-sm text-text-secondary mt-1">
+          Investigación del Centro de Gestión de Qigong para la Salud sobre la iconografía y el valor arqueológico de los textos de la tumba de la dinastía Han.
+        </p>
+      </li>
+
+      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+        <a href="https://www.sport.gov.cn/qgzx/n5407/c851828/content.html" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+          Mawangdui Daoyin Shu: Introducción oficial de la Administración General de Deportes
+        </a>
+        <p class="text-sm text-text-secondary mt-1">
+          Guía institucional sobre el desarrollo del Health Qigong moderno basado en los ejercicios de conducción del Qi (Daoyin) clásicos.
+        </p>
+      </li>
+
+      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+        <a href="https://www.sport.gov.cn/qgzx/n5407/c873567/content.html" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+          Características técnicas y beneficios del método Mawangdui Daoyin
+        </a>
+        <p class="text-sm text-text-secondary mt-1">
+          Análisis de la mecánica corporal y los efectos terapéuticos de la forma reconstruida por expertos contemporáneos.
+        </p>
+      </li>
+
+      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+        <a href="http://www.360doc.com/content/23/0915/06/52169558_1096537638.shtml" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+          Análisis detallado de los movimientos del Mapa Daoyin (Archivo Documental)
+        </a>
+        <p class="text-sm text-text-secondary mt-1">
+          Estudio pormenorizado de las 44 figuras del mapa original de seda, identificando posturas de estiramiento y respiración abdominal.
+        </p>
+      </li>
+
+      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+        <a href="https://www.sport.gov.cn/qgzx/n5407/c875504/content.html" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
+          Corrección de errores comunes en la práctica de Mawangdui Daoyin
+        </a>
+        <p class="text-sm text-text-secondary mt-1">
+          Manual técnico para la alineación correcta y la prevención de vicios posturales en el Qigong de salud institucionalizado.
+        </p>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<PhotoSwipeUI />
+</MainLayout>

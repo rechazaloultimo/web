@@ -114,6 +114,8 @@
   top: calc(100% + 1.25rem);
   left: 0;
   min-width: 14rem;
+  max-height: 60vh;
+  overflow-y: auto;
   border: none;
   padding: 0;
   background: var(--color-bg-card);
@@ -247,7 +249,6 @@
 .mobile-accordion.open .mobile-acc-panel {
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: var(--mobile-acc-max-height, 60vh);
   -webkit-overflow-scrolling: touch;
   padding-top: .35rem;
   padding-bottom: .6rem;
@@ -445,6 +446,147 @@ body.dark-mode .nav-item-has-children.open > .nav-submenu {
 
 body.dark-mode .nav-item-has-children.open .nav-submenu a {
   color: var(--color-dm-text-title);
+}
+
+/* ===== SCROLL STYLING PARA SUBMENÚS LARGOS ===== */
+
+/* Scrollbar para navegadores basados en WebKit */
+.nav-submenu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.nav-submenu::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+.nav-submenu::-webkit-scrollbar-thumb {
+  background: var(--color-chinese-seal-red);
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.nav-submenu::-webkit-scrollbar-thumb:hover {
+  background: var(--color-chinese-seal-red-hover);
+  opacity: 1;
+}
+
+/* Dark mode - scrollbar styling */
+body.dark-mode .nav-submenu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .nav-submenu::-webkit-scrollbar-thumb {
+  background: var(--color-dm-chinese-seal-red);
+  opacity: 0.7;
+}
+
+body.dark-mode .nav-submenu::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dm-chinese-seal-red-hover);
+  opacity: 1;
+}
+
+/* Firefox - field-sizing */
+.nav-submenu {
+  scrollbar-color: var(--color-chinese-seal-red) rgba(0, 0, 0, 0.05);
+  scrollbar-width: thin;
+}
+
+body.dark-mode .nav-submenu {
+  scrollbar-color: var(--color-dm-chinese-seal-red) rgba(255, 255, 255, 0.05);
+}
+
+/* ===== SCROLL STYLING PARA MENÚ MOBILE ===== */
+
+/* Scrollbar para #mobile-menu - WebKit */
+#mobile-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+#mobile-menu::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+#mobile-menu::-webkit-scrollbar-thumb {
+  background: var(--color-chinese-seal-red);
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+#mobile-menu::-webkit-scrollbar-thumb:hover {
+  background: var(--color-chinese-seal-red-hover);
+  opacity: 1;
+}
+
+/* Scrollbar para .mobile-acc-panel - WebKit */
+.mobile-acc-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mobile-acc-panel::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+.mobile-acc-panel::-webkit-scrollbar-thumb {
+  background: var(--color-chinese-seal-red);
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.mobile-acc-panel::-webkit-scrollbar-thumb:hover {
+  background: var(--color-chinese-seal-red-hover);
+  opacity: 1;
+}
+
+/* Firefox - scrollbar para mobile menu */
+#mobile-menu {
+  scrollbar-color: var(--color-chinese-seal-red) rgba(0, 0, 0, 0.05);
+  scrollbar-width: thin;
+}
+
+.mobile-acc-panel {
+  scrollbar-color: var(--color-chinese-seal-red) rgba(0, 0, 0, 0.05);
+  scrollbar-width: thin;
+}
+
+/* Dark mode - scrollbar styling para mobile menu */
+body.dark-mode #mobile-menu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode #mobile-menu::-webkit-scrollbar-thumb {
+  background: var(--color-dm-chinese-seal-red);
+  opacity: 0.7;
+}
+
+body.dark-mode #mobile-menu::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dm-chinese-seal-red-hover);
+  opacity: 1;
+}
+
+body.dark-mode .mobile-acc-panel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .mobile-acc-panel::-webkit-scrollbar-thumb {
+  background: var(--color-dm-chinese-seal-red);
+  opacity: 0.7;
+}
+
+body.dark-mode .mobile-acc-panel::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dm-chinese-seal-red-hover);
+  opacity: 1;
+}
+
+/* Firefox dark mode */
+body.dark-mode #mobile-menu {
+  scrollbar-color: var(--color-dm-chinese-seal-red) rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .mobile-acc-panel {
+  scrollbar-color: var(--color-dm-chinese-seal-red) rgba(255, 255, 255, 0.05);
 }
 
 /* Menú mobile en dark mode */

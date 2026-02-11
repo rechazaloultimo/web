@@ -14,6 +14,7 @@ const pageDescription =
 <MainLayout title={pageTitle} description={pageDescription}>
     <a href="#main-content" class="skip-link">Saltar al contenido</a>
 
+    <NavGeneral />
     <header
         id="taijiquan-inicio"
         class="hero-fullscreen-bg hero-clases-taiji-bg hero-banner h-screen flex flex-col items-center justify-center relative"
@@ -34,7 +35,7 @@ const pageDescription =
             </h2>
             <p
                 class="text-base sm:text-lg md:text-xl max-w-xl lg:max-w-2xl mx-auto mb-10 text-gray-200 fade-in"
-                style="animation-delay: 0.4s;"
+                
             >
                 Conoce el Taijiquan para adquirir los beneficios posturales, psicológicos y emocionales de un arte marcial que promueve la armonía
                 para la salud integral y la posiblidad de llevar el Daoismo a un práctica cotidiana física y tangible.
@@ -42,7 +43,6 @@ const pageDescription =
         </div>
     </header>
 
-    <NavGeneral />
 
 
     <section
@@ -79,39 +79,39 @@ const pageDescription =
             y una elasticidad energética que surge desde adentro. 
         </p>
 
-            <p class="text-lg text-ink mb-4 leading-relaxed">
-                Si te interesa tomar clases conmigo, te invito a visitar mi página de clases <a
-                    href="/clases/taijiquan"
-                    class="text-chinese-seal-red underline font-semibold"
-                    > en este enlace</a
-                >
-                para que puedas elegir que modalidad te interesa más.
-            </p>
+         
 
             <div id="galeria-01" class="max-w-4xl mx-auto mt-8">
-                <div
-                    class="pswp-gallery-container grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4 mb-4"
-                >
-                    <CardGaleria
-                        imgPath="chuan (1).webp"
-                        altText="manos 4"
-                        width={1200}
-                        height={800}
-                    />
-                    <CardGaleria
-                        imgPath="chuan (2).webp"
-                        altText="manos 4"
-                        width={1200}
-                        height={800}
-                    />
+               <div
+        class="pswp-gallery-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+      >
+        <CardGaleria
+          imgPath="chuan (1).webp"
+        altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+          width={960}
+          height={1200}
+        />
+        <CardGaleria
+          imgPath="chuan (2).webp"
+        altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+          width={960}
+          height={1200}
+        />
 
-                    <CardGaleria
-                        imgPath="chuan (3).webp"
-                        altText="manos 4"
-                        width={1200}
-                        height={800}
-                    />
-                </div>
+        <CardGaleria
+          imgPath="chuan (3).webp"
+        altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+          width={960}
+          height={1200}
+        />
+        <CardGaleria
+          imgPath="chuan (5).webp"
+        altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+          width={960}
+          height={1200}
+        />
+        
+      </div>
             </div>
         </article>
 
@@ -171,14 +171,13 @@ const pageDescription =
         </div>
     </article>
 
+</section>
     <!-- Detalle de Tàijíquán -->
-    <section
+<section
         id="Taijiquan-detalle"
         class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red"
-        style="animation-delay: 0.4s;"
     >
-    
-        <div class="max-w-3xl mx-auto">
+ <div class="max-w-3xl mx-auto">
             <h2
                 class="font-title text-3xl md:text-4xl text-title-ink mb-8 text-center"
             >
@@ -211,109 +210,53 @@ const pageDescription =
         </div>
     </section>
 
-    <!-- Galería principal de Tàijíquán -->
-    <section id="galeria_taiji" class="mb-16 md:mb-20 fade-in">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-8">
-                <a
-                    href="/img-mias/chuan (1).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/chuan (1).webp"
-                        alt="Chuan 1"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
+            
+            <article
+                id="galeria-chuan"
+                class="mb-16 md:mb-20 fade-in container mx-auto px-6"
+            >
+                <div
+                class="pswp-gallery-container grid grid-cols-6 md:grid-cols-6 sd:grid-cols-6 lg:grid-cols-6 gap-6"
                 >
-                <a
-                    href="/img-mias/chuan (2).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/chuan (2).webp"
-                        alt="Chuan 2"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/chuan (3).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/chuan (3).webp"
-                        alt="Chuan 3"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/chuan (5).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/chuan (5).webp"
-                        alt="Chuan 5"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/chuan (6).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/chuan (6).webp"
-                        alt="Chuan 6"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/chuan (7).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/chuan (7).webp"
-                        alt="Chuan 7"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/chuan (8).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/chuan (8).webp"
-                        alt="Chuan 8"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/chuan (9).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/chuan (9).webp"
-                        alt="Chuan 9"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-            </div>
-        </div>
-    </section>
+                <CardGaleria
+                    imgPath="chuan (9).webp"
+                    altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+                    height={1200}
+                    width={960}
+                />
+                <CardGaleria
+                    imgPath="chuan (8).webp"
+                    altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+                    height={1200}
+                    width={960}
+                />
+            <CardGaleria
+                    imgPath="chuan (1).webp"
+                    altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+                    width={960}
+                    height={1200}
+                    />
+                    <CardGaleria
+                    imgPath="chuan (2).webp"
+                    altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+                    width={960}
+                    height={1200}
+                    />
+
+                    <CardGaleria
+                    imgPath="chuan (3).webp"
+                    altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+                    width={960}
+                    height={1200}
+                    />
+                    <CardGaleria
+                    imgPath="chuan (5).webp"
+                    altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+                    width={960}
+                    height={1200}
+                    />
+                </div>
+            </article>
 
     <!-- Formas de Tàijíquán -->
     <section
@@ -377,7 +320,7 @@ const pageDescription =
     <section
         id="TaijiJian-detalle"
         class="mb-16 md:mb-20 fade-in"
-        style="animation-delay: 0.4s;"
+       
     >
         <div class="max-w-3xl mx-auto">
             <h2
@@ -409,108 +352,51 @@ const pageDescription =
     </section>
 
     <!-- Galería de Tàijí  Jiàn -->
-    <section id="galeria_taijijian" class="mb-16 md:mb-20 fade-in">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-8">
-                <a
-                    href="/img-mias/esp (1).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/esp (1).webp"
-                        alt="Detalle 1"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
+            <article
+                id="galeria-espada"
+                class="mb-16 md:mb-20 fade-in container mx-auto px-6"
+            >
+                <div
+                class="pswp-gallery-container grid grid-cols-6 md:grid-cols-6 sd:grid-cols-6 lg:grid-cols-6 gap-6"
                 >
-                <a
-                    href="/img-mias/espada (1).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/espada (1).webp"
-                        alt="Espada 1"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/espada (2).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/espada (2).webp"
-                        alt="Espada 2"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/espada (3).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/espada (3).webp"
-                        alt="Espada 3"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/espada (4).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/espada (4).webp"
-                        alt="Espada 4"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/espada (5).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/espada (5).webp"
-                        alt="Espada 5"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/espada (6).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/espada (6).webp"
-                        alt="Espada 6"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/esp (2).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/esp (2).webp"
-                        alt="Detalle 2"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-            </div>
-        </div>
-    </section>
+                <CardGaleria
+                    imgPath="espada/esp (1).webp"
+                    altText=" "
+                    height={1200}
+                    width={960}
+                />
+                <CardGaleria
+                    imgPath="espada/esp (3).webp"
+                    altText=" "
+                    height={1200}
+                    width={960}                />
+            <CardGaleria
+                    imgPath="espada/esp (4).webp"
+                    altText=" "
+                    width={960}
+                    height={1200}
+                    />
+                    <CardGaleria
+                    imgPath="espada/esp (5).webp"
+                    altText=" "
+                    height={1200}
+                    width={960}
+                    />
+
+                    <CardGaleria
+                    imgPath="espada/esp (6).webp"
+                    altText=" "
+                    width={960}
+                    height={1200}
+                    />
+                    <CardGaleria
+                    imgPath="espada/esp (2).webp"
+                    altText=" "
+                    width={960}
+                    height={1200}
+                    />
+                </div>
+            </article>
 
     <!-- Formas de Tàijí  Jiàn -->
     <section
@@ -546,7 +432,7 @@ const pageDescription =
     <section
         id="TaijiShan-detalle"
         class="mb-16 md:mb-20 fade-in"
-        style="animation-delay: 0.4s;"
+       
     >
         <div class="max-w-3xl mx-auto">
             <h2
@@ -584,108 +470,52 @@ const pageDescription =
     </section>
 
     <!-- Galería de Tàijí  Shàn -->
-    <section id="galeria_taijishan" class="mb-16 md:mb-20 fade-in">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-8">
-                <a
-                    href="/img-mias/aba (1).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/aba (1).webp"
-                        alt="Abanico 1"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
+      <!-- Galería de Tàijí  Jiàn -->
+            <article
+                id="galeria-espada"
+                class="mb-16 md:mb-20 fade-in container mx-auto px-6"
+            >
+                <div
+                class="pswp-gallery-container grid grid-cols-6 md:grid-cols-6 sd:grid-cols-6 lg:grid-cols-6 gap-6"
                 >
-                <a
-                    href="/img-mias/aba (2).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/aba (2).webp"
-                        alt="Abanico 2"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/aba (3).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/aba (3).webp"
-                        alt="Abanico 3"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/aba (4).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/aba (4).webp"
-                        alt="Abanico 4"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/aba (5).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/aba (5).webp"
-                        alt="Abanico 5"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/aba (6).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/aba (6).webp"
-                        alt="Abanico 6"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/aba (7).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/aba (7).webp"
-                        alt="Abanico 7"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-                <a
-                    href="/img-mias/aba (8).webp"
-                    class="glightbox"
-                    data-gallery="mi-galeria"
-                    ><img
-                        src="/img-mias/aba (8).webp"
-                        alt="Abanico 8"
-                        class="rounded-none shadow-lg object-cover w-full h-48 md:h-full hover:opacity-80 transition-opacity duration-300"
-                        loading="lazy"
-                        decoding="async"
-                    /></a
-                >
-            </div>
-        </div>
-    </section>
+                <CardGaleria
+                    imgPath="abanico/aba (1).webp"
+                    altText=" "
+                    height={1200}
+                    width={960}
+                />
+                <CardGaleria
+                    imgPath="abanico/aba (2).webp"
+                    altText=" "
+                    height={1200}
+                    width={960}                />
+            <CardGaleria
+                    imgPath="abanico/aba (3).webp"
+                    altText=" "
+                    width={960}
+                    height={1200}
+                    />
+                    <CardGaleria
+                    imgPath="abanico/aba (4).webp"
+                    altText=" "
+                    height={1200}
+                    width={960}
+                    />
+
+                    <CardGaleria
+                    imgPath="abanico/aba (5).webp"
+                    altText=" "
+                    width={960}
+                    height={1200}
+                    />
+                    <CardGaleria
+                    imgPath="abanico/aba (6).webp"
+                    altText=" "
+                    width={960}
+                    height={1200}
+                    />
+                </div>
+            </article>
 
     <!-- Formas de Tàijí  Shàn -->
     <section

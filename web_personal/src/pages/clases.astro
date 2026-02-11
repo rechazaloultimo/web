@@ -16,9 +16,9 @@ import ClasesVirtuales from '@/components/ClasesVirtuales.astro';
 <MainLayout title={pageTitle} description={pageDescription}>
     <NavGeneral />
 
-    <section id="clases-container" class="card-grid grid-3-cols fade-in" style="animation-delay: 0.1s;">
+    <section id="clases-container" class="card-grid grid-2-cols">
         
-        <article id="card-content-presenciales" class="card-content-container">
+        <article id="card-content-presenciales" class="card-content-container fade-in">
             <div class="card-content">
                 <h2 class="font-title">Clases Grupales</h2>
                 <p class="text-lg text-text-secondary mb-6 leading-relaxed">
@@ -32,7 +32,7 @@ import ClasesVirtuales from '@/components/ClasesVirtuales.astro';
                         1 hora de duración
                     </li>
                     <li class="pl-2 py-1">
-                        Máx. 4 personas por grupo
+                        Máx. 5 personas por grupo
                     </li>
                     <li class="pl-2 py-1">
                         Sistemas oficiales de Qìgōng, y Tàijíquán simplificados.
@@ -50,7 +50,7 @@ import ClasesVirtuales from '@/components/ClasesVirtuales.astro';
             </div>
         </article>
 
-        <article id="card-content-particulares" class="card-content-container">
+        <article id="card-content-particulares" class="card-content-container fade-in">
             <div class="card-content">
                 <h2 class="font-title">Clases Particulares</h2>
                 <p class="text-lg text-text-secondary mb-6 leading-relaxed">
@@ -82,7 +82,7 @@ import ClasesVirtuales from '@/components/ClasesVirtuales.astro';
 
             </div>
         </article>
-
+        <!--
         <article id="card-content-virtuales" class="card-content-container">
             <div class="card-content">
                 <h2 class="font-title">Clases Virtuales</h2>
@@ -92,8 +92,7 @@ import ClasesVirtuales from '@/components/ClasesVirtuales.astro';
 
                   <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4 border-l-4 border-chinese-seal-red ">
                     <li class="pl-2 py-1">
-                        Tres días a la semana
-                    </li>
+                        Dos días a la semana por la mañana.
                     <li class="pl-2 py-1">
                         1 hora de duración.
                     </li>
@@ -115,6 +114,7 @@ import ClasesVirtuales from '@/components/ClasesVirtuales.astro';
 
             </div>
         </article>
+         -->
     </section>
 
     <div id="info-display-area" class="container mx-auto px-4 min-h-[200px]">

@@ -35,55 +35,42 @@
 /* ========================================= */
 
 .hero-index-bg {
-    background-image: url('/background/000.webp');
+    background-image: url('/background/sol-saliente.webp');
 }
 
 .hero-clases-presenciales-bg, #card-content-presenciales {
-    background-image: url('/background/001.webp');
+    background-image: url('/background/playa-floripa.webp');
 }
 
+.hero-clases-particulares-bg, #card-content-particulares {
+    background-image: url('/background/lagoverde-vista.webp');
+}
 
+.hero-clases-taiji-bg, #card-content-taiji {
+    background-image: url('/background/lagoverde-vista.webp');
+}
+
+.hero-tajiquan-historia-bg {
+    background-image: url('/background/historia.webp');
+}
+
+.hero-clases-qigong-bg, #card-content-qigong {
+    background-image: url('/background/glaciares.webp');
+}
+
+.hero-mawangdui-bg {
+    background-image: url('/background/sistemas/mawangduidaoyinshu.webp');
+}
+
+.hero-wudangqigong-bg {
+    background-image: url('/background/sistemas/wudangqigong.webp');
+}
+
+    /* LO SAQUE POR AHORA */
 .hero-clases-virtuales-bg, #card-content-virtuales {
     background-image: url('/background/002.webp');
 }
 
-.hero-clases-particulares-bg, #card-content-particulares {
-    background-image: url('/background/006.webp');
-}
-
-.hero-clases-taiji-bg, #card-content-taiji {
-    background-image: url('/background/003.webp');
-}
-
-.hero-tajiquan-historia-bg {
-    background-image: url('/background/005.webp');
-}
-
-.hero-clases-qigong-bg, #card-content-qigong {
-    background-image: url('/background/004.webp');
-}
-
-.hero-mawangdui-bg {
-    /* CORREGIDO: Asegura que inicie con '/' */
-    background-image: url('/background/mawangduidaoyinshu.webp');
-}
-
-.hero-wudangqigong-bg {
-    /* CORREGIDO: Asegura que inicie con '/' */
-    background-image: url('/background/wudangqigong.webp');
-}
-
-.hero-ia-bg {
-    /* CORREGIDO: Asegura que inicie con '/' */
-    background-image: url('/background/004.webp');
-}
-
-
-
-.hero-aula-bg {
-    /* CORREGIDO: Asegura que inicie con '/' */
-    background-image: url('/background/008.webp');
-}
 
 /* Preload overlay for hero images */
 
