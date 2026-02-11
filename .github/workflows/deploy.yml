@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ] # Asegurate que tu rama se llame main o master
+    branches: [ main ] # Confirmá si tu rama es main o master
 
 permissions:
   contents: read
@@ -15,5 +15,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Install, build, and upload with Astro
         uses: withastro/action@v3
+        with:
+          path: web_personal  # <--- ESTA ES LA CLAVE: le decimos dónde está el proyecto
+          package-manager: npm
