@@ -1,10 +1,9 @@
 ---
-
-import Footer from '@/components/Footer.astro';
-import '@/styles/main.css';
-import '@/styles/hero.css';
-import '@/styles/nav.css';
-import '@/styles/multimedia.css';
+import Footer from "@/components/Footer.astro";
+import "@/styles/main.css";
+import "@/styles/hero.css";
+import "@/styles/nav.css";
+import "@/styles/multimedia.css";
 
 // --- (Script de Astro) ---
 
@@ -30,28 +29,36 @@ const canonicalURL = "https://rodrigopizarro.com.ar" + Astro.url.pathname;
 const defaultOgImage = "https://rodrigopizarro.com.ar/img-mias/001.jpg";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>{title}</title>
-    <meta name="description" content={description}>
+    <meta name="description" content={description} />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <link rel="canonical" href={canonicalURL}>
-    <meta property="og:title" content={title}>
-    <meta property="og:description" content={description}>
-    <meta property="og:image" content={defaultOgImage}>
-    <meta property="og:type" content="website">
-    <meta property="og:url" content={canonicalURL}>
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={defaultOgImage} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
 
-    <script type="application/ld+json" set:html={`
+    <script
+      type="application/ld+json"
+      set:html={`
       {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -59,20 +66,24 @@ const defaultOgImage = "https://rodrigopizarro.com.ar/img-mias/001.jpg";
         "description": "${description}",
         "url": "${canonicalURL}"
       }
-    `}/>
+    `}
+    />
 
     <slot name="extra-head" />
-    <script src="/src/js/theme-toggle.js"></script>
-</head>
+  </head>
 
-<body class="rice-paper-bg flex flex-col min-h-screen">
+  <body class="rice-paper-bg flex flex-col min-h-screen">
     <main>
-        <slot />
+      <slot />
     </main>
 
     <Footer />
 
-    <script src="/src/js/animations.js" defer></script>
-    <script type="module" src="/src/js/titulo-mov.js"></script>
-</body>
+    <script>
+      import "../js/animations.js";
+      import "../js/global.js";
+      import "../js/theme-toggle.js";
+      import "../js/photoswipe-init.js";
+    </script>
+  </body>
 </html>

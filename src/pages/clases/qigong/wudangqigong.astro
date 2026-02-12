@@ -4,6 +4,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import CardGaleria from "@/components/galerias/CardGaleria.astro";
 import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
 import NavWudangQigong from "@/components/Navegadores/Nav-WudangQigong.astro";
+import ImagenEstatica from "@/components/galerias/ImagenEstatica.astro";
 
 // 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
 const pageTitle = "Rodrigo Pizarro - Wǔdāng Qìgōng";
@@ -23,79 +24,70 @@ const pageDescription =
     <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
       <h1
         class="font-title text-5xl sm:text-6xl md:text-7xl mb-8 fade-in"
-        style="opacity:1"
+        style="animation-delay: 0.2s;"
       >
         Wǔdāng Qìgōng
       </h1>
       <h2
         class="text-xl sm:text-2xl md:text-3xl mb-12 fade-in font-title"
-        style="animation-delay:0.2s;opacity:1"
+        style="animation-delay:0.4s;"
       >
         Sistema de qigong y cosmogonia daoista para el cultivo interno
       </h2>
       <p
         class="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-200 fade-in"
-        style="opacity:1"
+        style="animation-delay: 0.6s;"
       >
-        Serie Qìgōng transmitida desde el linaje Longmén (龍門派) de las
-        montañas Wǔdāng. Su práctica armoniza el cuerpo, la respiración y la
-        mente, cultivando la energía vital en función de explicar la
-        manifestación del universo con conceptos daoístas.
+        Serie Qìgōng transmitida desde el linaje Longmén (龍門派) de las montañas Wǔdāng. Su
+        práctica armoniza el cuerpo, la respiración y la mente, cultivando la energía vital en
+        función de explicar la manifestación del universo con conceptos daoístas.
       </p>
     </div>
   </header>
 
   <section id="historia" class="container mx-auto px-6 py-12 md:py-20">
     <div id="titulo" class="mx-auto text-center mb-12">
-      <i
-        aria-hidden="true"
-        class="fas fa-user-circle text-6xl text-chinese-seal-red mb-6"></i>
+      <i aria-hidden="true" class="fas fa-user-circle text-6xl text-chinese-seal-red mb-6"></i>
       <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-6">
         El Origen de Wudang Qìgōng
       </h2>
     </div>
 
     <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-      El sistema <strong>Wǔdāng Qìgōng (武当气功)</strong> lleva el nombre de las
-      montañas de Wǔdāng, Provincia de Hubei, en China; antigua cuna del daoismo.
-      A lo largo de siglos, los sacerdotes practicantes de artes alquímicas internas,
-      desarrollaron métodos para la longevidad, la salud y el cultivo interior, uniendo
-      cuerpo, respiración y mente para encontrar una conexión con el Dao (道). Este
-      sistema es uno de ellos.
+      El sistema <strong>Wǔdāng Qìgōng (武当气功)</strong> lleva el nombre de las montañas de Wǔdāng,
+      Provincia de Hubei, en China; antigua cuna del daoismo. A lo largo de siglos, los sacerdotes practicantes
+      de artes alquímicas internas, desarrollaron métodos para la longevidad, la salud y el cultivo interior,
+      uniendo cuerpo, respiración y mente para encontrar una conexión con el Dao (道). Este sistema es
+      uno de ellos.
     </p>
     <details>
       <summary class="ocultar-summary">
         <p
           class="text-lg text-text-secondary mb-4 leading-relaxed border-chinese-seal-red border-l-4 pl-4"
         >
-          <span class="text-chinese-seal-red"
-            >Leer más sobre la historia del Wǔdāng Qìgōng</span
-          >
+          <span class="text-chinese-seal-red">Leer más sobre la historia del Wǔdāng Qìgōng</span>
         </p>
       </summary>
 
       <p class="text-lg text-text-secondary mb-6 leading-relaxed">
         La transmisión moderna pertenece al linaje <strong
           >Longmén Pài (龍門派, “Puerta del Dragón”)</strong
-        >, que preservó estas enseñanzas y las articuló para su difusión
-        responsable.
+        >, que preservó estas enseñanzas y las articuló para su difusión responsable.
       </p>
 
       <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-        En tiempos recientes, <strong>徐本善 Xú Běnshàn</strong> (1860–1932) consolidó
-        una forma completa y la confió a discípulos laicos selectos, asegurando su
-        continuidad fuera del claustro.
+        En tiempos recientes, <strong>徐本善 Xú Běnshàn</strong> (1860–1932) consolidó una forma completa
+        y la confió a discípulos laicos selectos, asegurando su continuidad fuera del claustro.
       </p>
 
       <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-        Más tarde, <strong>裴锡荣 Péi Xíróng</strong> (1913–1999) sistematizó la práctica
-        para su enseñanza en ciudades como Shanghái y Pekín, y la transmitió a la
-        generación siguiente.
+        Más tarde, <strong>裴锡荣 Péi Xíróng</strong> (1913–1999) sistematizó la práctica para su enseñanza
+        en ciudades como Shanghái y Pekín, y la transmitió a la generación siguiente.
       </p>
 
       <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-        <strong>孙海云 Sūn Hǎiyún</strong> (1922–2013) varió el sistema en las épocas
-        de la Revolución Cultural China, y desarrolló la línea clínica <strong
+        <strong>孙海云 Sūn Hǎiyún</strong> (1922–2013) varió el sistema en las épocas de la Revolución
+        Cultural China, y desarrolló la línea clínica <strong
           >Wǔbǎomén Qìgōng (五保门气功, “Cinco Protecciones / Cinco Tesoros”)</strong
         >, acercándola al ámbito hospitalario.
       </p>
@@ -103,27 +95,22 @@ const pageDescription =
       <p class="text-lg text-text-secondary mb-4 leading-relaxed">
         Desde fines de los años 80, la difusión occidental se apoya en el <strong
           >Dr. Yves Réquéna</strong
-        > (francés), quien estudió parte en la ciudad y en las montañas de Wǔdāng,
-        y publicó en 1992 un libro que compiló este sistema llamado "Movimientos para
-        la felicidad - Wu Dang Qi Gong"; en la actualidad <strong
-          >孙俊青 Sun Junqing</strong
-        > (19.ª gen.) continúa la transmisión en Asia y Occidente, aunque en el 2014
-        sentó bases en Barcelona.
+        > (francés), quien estudió parte en la ciudad y en las montañas de Wǔdāng, y publicó en 1992
+        un libro que compiló este sistema llamado "Movimientos para la felicidad - Wu Dang Qi Gong";
+        en la actualidad <strong>孙俊青 Sun Junqing</strong> (19.ª gen.) continúa la transmisión en Asia
+        y Occidente, aunque en el 2014 sentó bases en Barcelona.
       </p>
 
       <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-        Yo aprendí el sistema Wǔdāng Qìgōng (武当气功) por parte del profesor y
-        director de Qing Mo Tiyu, Gustavo Salvato, en el año 2024. Él lo
-        aprendió de su maestro Mario Schwarz. La versión que a mí me llegó es
-        muy parecida a la que se encuentra en el libro "Movimientos para la
-        felicidad - Wu Dang Qi Gong", publicado por el Dr. Yves Réquéna.
+        Yo aprendí el sistema Wǔdāng Qìgōng (武当气功) por parte del profesor y director de Qing Mo
+        Tiyu, Gustavo Salvato, en el año 2024. Él lo aprendió de su maestro Mario Schwarz. La
+        versión que a mí me llegó es muy parecida a la que se encuentra en el libro "Movimientos
+        para la felicidad - Wu Dang Qi Gong", publicado por el Dr. Yves Réquéna.
       </p>
     </details>
 
     <div id="galeria-01" class="max-w-4xl mx-auto">
-      <div
-        class="pswp-gallery-container grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4"
-      >
+      <div class="pswp-gallery-container grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4">
         <CardGaleria
           imgPath="qigong-wudang/wu (1).webp"
           altText="Tàijí (太极) cultiva el Dāntián (丹田)"
@@ -157,36 +144,38 @@ const pageDescription =
     id="cosmogonia"
     class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red"
   >
-    <h3
-      class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center"
-    >
+    <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
       Cosmogonía Daoísta y Qìgōng
     </h3>
 
     <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-    <strong>  La cosmología tradicional busca el significado, el orden y los principios
-      subyacentes en el universo</strong>. Por eso, la manera correcta de encarar una
-      secuencia lógica es desde una <strong>perspectiva de jerarquias</strong>, comenzando por
-      nombrar el <strong>Dao</strong>. Este <strong>concepto que no es posible de definir o categorizar</strong>
-      porque excede lo explicable, habrá que darle una aplicación como <strong>la
-      no-definición del mismo</strong>, es decir, el concepto de <strong>No-Ser o No-Existencia (Wúji, 无极)</strong>. Al
-      determinar su potencialidad absoluta de no-existencia, un vacio absoluto o
-      cero metafísico, podemos explicar <strong>el Principio Supremo o Gran Polarización (Taiji)</strong>, el Uno,
-      donde si podemos abordar los conceptos de <strong>no-dualidad y polaridad que
-      estructura la manifestación</strong> (Yīn/Yáng), la cual se despliega luego en
-      fases más diferenciadas que ordenan tiempo, espacio y ciclos, hasta
-      alcanzar la multiplicidad concreta de los fenómenos contenidos todos en el Dao.
+      <strong>
+        La cosmología tradicional busca el significado, el orden y los principios subyacentes en el
+        universo</strong
+      >. Por eso, la manera correcta de encarar una secuencia lógica es desde una <strong
+        >perspectiva de jerarquias</strong
+      >, comenzando por nombrar el <strong>Dao</strong>. Este <strong
+        >concepto que no es posible de definir o categorizar</strong
+      >
+      porque excede lo explicable, habrá que darle una aplicación como <strong
+        >la no-definición del mismo</strong
+      >, es decir, el concepto de <strong>No-Ser o No-Existencia (Wúji, 无极)</strong>. Al
+      determinar su potencialidad absoluta de no-existencia, un vacio absoluto o cero metafísico,
+      podemos explicar <strong>el Principio Supremo o Gran Polarización (Taiji)</strong>, el Uno,
+      donde si podemos abordar los conceptos de <strong
+        >no-dualidad y polaridad que estructura la manifestación</strong
+      > (Yīn/Yáng), la cual se despliega luego en fases más diferenciadas que ordenan tiempo, espacio
+      y ciclos, hasta alcanzar la multiplicidad concreta de los fenómenos contenidos todos en el Dao.
     </p>
     <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-      Lo que acabo de mensionar, resumido y simplificado, será la explicación
-      del <strong>sistema Wǔdāng Qìgōng desde una perspectiva metafísica</strong>, usando
-      conceptos numéricos, geométricos y simbólicos. En este sistema, <strong>el
-      binarismo y su progresión numérica (0→1→2→4→8) es fundamental</strong>, pero aun
-      así se puede encontrar los conceptos mas importantes de la Tradición
-      Primordial, como <strong>la Triada (Cielo, Tierra, Hombre)</strong> y <strong>Wǔ Xíng</strong> traducido
-      como los cinco reinos mutantes o los 5 movimientos/fases (mal simplificado
-      como los 5 elementos) que son fundamentales en la medicina tradicional
-      china.
+      Lo que acabo de mensionar, resumido y simplificado, será la explicación del <strong
+        >sistema Wǔdāng Qìgōng desde una perspectiva metafísica</strong
+      >, usando conceptos numéricos, geométricos y simbólicos. En este sistema, <strong
+        >el binarismo y su progresión numérica (0→1→2→4→8) es fundamental</strong
+      >, pero aun así se puede encontrar los conceptos mas importantes de la Tradición Primordial,
+      como <strong>la Triada (Cielo, Tierra, Hombre)</strong> y <strong>Wǔ Xíng</strong> traducido como
+      los cinco reinos mutantes o los 5 movimientos/fases (mal simplificado como los 5 elementos) que
+      son fundamentales en la medicina tradicional china.
     </p>
   </section>
 
@@ -196,13 +185,10 @@ const pageDescription =
       <div class="mx-auto w-full max-w-3xl">
         <!-- ALTO FIJO GRANDE -->
         <p class="text-lg text-text-secondary mb-4 leading-relaxed text-center">
-          Video de Liu Xiao Ling sobre el Wǔdāng Qìgōng (algunas las posturas
-          estáticas y dinámicas difieren de las de Yves Réquéna)
+          Video de Liu Xiao Ling sobre el Wǔdāng Qìgōng (algunas las posturas estáticas y dinámicas
+          difieren de las de Yves Réquéna)
         </p>
-        <div
-          class="w-full rounded-none shadow-lg overflow-hidden"
-          style="height:28rem;"
-        >
+        <div class="w-full rounded-none shadow-lg overflow-hidden" style="height:28rem;">
           <iframe
             src="https://www.youtube.com/embed/Efez8VJ7-Ks?si=zLwxMGEhRw5GALew"
             class="block w-full h-full"
@@ -210,8 +196,7 @@ const pageDescription =
             allowfullscreen
             scrolling="no"
             referrerpolicy="no-referrer-when-downgrade"
-            style="width:100% !important; height:100% !important; display:block;"
-          ></iframe>
+            style="width:100% !important; height:100% !important; display:block;"></iframe>
         </div>
       </div>
     </div>
@@ -222,9 +207,7 @@ const pageDescription =
     id="beneficios"
     class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red"
   >
-    <h3
-      class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center"
-    >
+    <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
       Beneficios de practicar Wǔdāng Qìgōng
     </h3>
 
@@ -239,53 +222,43 @@ const pageDescription =
 
       <div class="grid grid-cols-1 md:grid-cols-1 gap-1 items-start">
         <div class="md:col-span-1 px-6">
-          <ul
-            class="list-none text-lg text-text-secondary space-y-3 leading-relaxed mb-12"
-          >
+          <ul class="list-none text-lg text-text-secondary space-y-3 leading-relaxed mb-12">
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Mejora de la movilidad y flexibilidad:</strong> estira y lubrica
-              articulaciones, tendones y fascias, incrementando la amplitud de movimiento
-              y reduciendo rigidez.
+              <strong>Mejora de la movilidad y flexibilidad:</strong> estira y lubrica articulaciones,
+              tendones y fascias, incrementando la amplitud de movimiento y reduciendo rigidez.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Fortalecimiento de la estructura corporal:</strong> tonifica
-              la musculatura postural, fortalece la zona lumbar y mejora la alineación
-              vertebral.
+              <strong>Fortalecimiento de la estructura corporal:</strong> tonifica la musculatura postural,
+              fortalece la zona lumbar y mejora la alineación vertebral.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Circulación y retorno venoso/linfático:</strong> los movimientos
-              rítmicos y la respiración favorecen la circulación sanguínea y linfática,
-              ayudando a eliminar toxinas y edemas.
+              <strong>Circulación y retorno venoso/linfático:</strong> los movimientos rítmicos y la
+              respiración favorecen la circulación sanguínea y linfática, ayudando a eliminar toxinas
+              y edemas.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Respiración más eficiente:</strong> potencia la capacidad pulmonar
-              y la calidad de la respiración, con beneficios para la oxigenación y
-              la regulación autonómica.
+              <strong>Respiración más eficiente:</strong> potencia la capacidad pulmonar y la calidad
+              de la respiración, con beneficios para la oxigenación y la regulación autonómica.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Equilibrio y propiocepción:</strong> mejora la estabilidad,
-              la coordinación y la conciencia corporal, reduciendo el riesgo de caídas
-              y lesiones.
+              <strong>Equilibrio y propiocepción:</strong> mejora la estabilidad, la coordinación y la
+              conciencia corporal, reduciendo el riesgo de caídas y lesiones.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Refuerzo de tendones y ligamentos:</strong> prácticas suaves
-              y sostenidas estimulan la fortaleza tendinosa y la resiliencia de las
-              articulaciones.
+              <strong>Refuerzo de tendones y ligamentos:</strong> prácticas suaves y sostenidas estimulan
+              la fortaleza tendinosa y la resiliencia de las articulaciones.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Regulación de funciones viscerales:</strong> la respiración
-              y la atención al Dāntián favorecen la digestión, el metabolismo y la
-              función renal/hepática en sentido regulador.
+              <strong>Regulación de funciones viscerales:</strong> la respiración y la atención al Dāntián
+              favorecen la digestión, el metabolismo y la función renal/hepática en sentido regulador.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Reducción del dolor crónico:</strong> alivio de tensiones musculares
-              y dolores de cuello, hombros y espalda mediante reequilibrio postural
-              y relajación profunda.
+              <strong>Reducción del dolor crónico:</strong> alivio de tensiones musculares y dolores
+              de cuello, hombros y espalda mediante reequilibrio postural y relajación profunda.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Incremento de la vitalidad y resistencia:</strong> sensación
-              sostenida de mayor energía, recuperación más rápida tras esfuerzos y
-              mejor tolerancia al cansancio.
+              <strong>Incremento de la vitalidad y resistencia:</strong> sensación sostenida de mayor
+              energía, recuperación más rápida tras esfuerzos y mejor tolerancia al cansancio.
             </li>
           </ul>
         </div>
@@ -297,49 +270,39 @@ const pageDescription =
       class="max-w-4xl mx-auto mb-16 md:mb-20 py-8 section-bg-paper rounded-none shadow-lg fade-in"
     >
       <summary class="mov-summary section-bg-paper">
-        <h4 class="font-title text-2xl md:text-3xl mb-2">
-          Beneficios emocionales
-        </h4>
+        <h4 class="font-title text-2xl md:text-3xl mb-2">Beneficios emocionales</h4>
         <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
       </summary>
       <div class="grid grid-cols-1 md:grid-cols-1 gap-1 items-start">
         <div class="md:col-span-1 px-6">
-          <ul
-            class="list-none text-lg text-text-secondary space-y-3 leading-relaxed mb-12"
-          >
+          <ul class="list-none text-lg text-text-secondary space-y-3 leading-relaxed mb-12">
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Reducción del estrés y la ansiedad:</strong> la respiración
-              consciente y la postura equilibrada activan el sistema nervioso parasimpático,
-              favoreciendo la calma.
+              <strong>Reducción del estrés y la ansiedad:</strong> la respiración consciente y la postura
+              equilibrada activan el sistema nervioso parasimpático, favoreciendo la calma.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Estabilización emocional:</strong> mejora la regulación afectiva,
-              disminuye reactividad y facilita respuestas más serenas ante la adversidad.
+              <strong>Estabilización emocional:</strong> mejora la regulación afectiva, disminuye reactividad
+              y facilita respuestas más serenas ante la adversidad.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Claridad mental y atención sostenida:</strong> potencia la concentración,
-              la memoria y la capacidad de enfoque a través de prácticas de presencia
-              y observación interna.
+              <strong>Claridad mental y atención sostenida:</strong> potencia la concentración, la memoria
+              y la capacidad de enfoque a través de prácticas de presencia y observación interna.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Mejora del sueño y descanso reparador:</strong> la regulación
-              energética y la relajación profunda contribuyen a conciliar mejor el
-              sueño y a recuperar calidad del descanso.
+              <strong>Mejora del sueño y descanso reparador:</strong> la regulación energética y la relajación
+              profunda contribuyen a conciliar mejor el sueño y a recuperar calidad del descanso.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong
-                >Aumento de la resiliencia y equilibrio psicológico:</strong
-              > favorece una percepción más integrada de los retos y una mayor capacidad
-              de recuperación emocional.
+              <strong>Aumento de la resiliencia y equilibrio psicológico:</strong> favorece una percepción
+              más integrada de los retos y una mayor capacidad de recuperación emocional.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Sensación de arraigo y centrado:</strong> la práctica sostenida
-              genera una sensación de presencia, enraizamiento y equilibrio interno
-              que mejora la toma de decisiones.
+              <strong>Sensación de arraigo y centrado:</strong> la práctica sostenida genera una sensación
+              de presencia, enraizamiento y equilibrio interno que mejora la toma de decisiones.
             </li>
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              <strong>Bienestar y ánimo general:</strong> práctica regular incrementa
-              la sensación de bienestar, alegría serena y armonía interna.
+              <strong>Bienestar y ánimo general:</strong> práctica regular incrementa la sensación de
+              bienestar, alegría serena y armonía interna.
             </li>
           </ul>
         </div>
@@ -347,743 +310,719 @@ const pageDescription =
     </details>
   </section>
 
-
-<!--  MOVIMIENTOS -->
-<section
-  id="secuencia-movimientos"
-  class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red"
->
-  <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
-    La secuencia de Wǔdāng Qìgōng
-  </h3>
-  <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-    Los movimientos de la secuencia de Wǔdāng Qìgōng I son en total 22
-    ejercicios: 6 posturas estáticas y 16 posturas dinámicas. La serie dinámica
-    está compuesta por movimientos descritos con rutina, cierre, concentración y
-    efectos.
-  </p>
-
-  <details>
-    <summary class="ocultar-summary">
-      <p
-        class="text-lg text-text-secondary mb-4 leading-relaxed border-chinese-seal-red border-l-4 pl-4"
-      >
-        <span class="text-chinese-seal-red"
-          >Sobre la práctica estática del sistema Wǔdāng Qìgōng
-        </span>
-      </p>
-    </summary>
-
-    <p class="text-lg text-text-secondary mb-6 leading-relaxed">
-      <strong>La práctica estática del sistema Wǔdāng Qìgōng </strong> se fundamenta
-      en la cosmogonía daoísta, donde cada etapa de la manifestación se refleja en
-      una postura estática. No se trata de una simple secuencia de posiciones, sino
-      de una meditación encarnada: cada postura expresa un principio de la creación,
-      una transformación de la energía desde el vacío original hacia la manifestación
-      y su regreso a la unidad. En la quietud, la intención orienta el flujo interno,
-      y nuestra práctica convierte el cuerpo en el medio por donde el cielo y la tierra
-      se equilibran, donde la inmovilidad contiene el movimiento más sutil.
-    </p>
-
-    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-      En las posturas estáticas, se recomienda empezar progresivamente con 10
-      respiraciones concientes (suponiendo que inhalar y exhalar son una
-      respiración de 6 segundos total) y luego ir aumentando la cantidad de
-      respiraciones. Esto permite que el cuerpo se acostumbre a la respiración
-      conciente y que la práctica sea más relajante y cómoda, que cronometrarse
-      en minutos. Llegará el momento en que te olvidarás del conteo y la
-      práctica se convertirá en un flujo natural.
-    </p>
-  </details>
-
-  <details>
-    <summary class="ocultar-summary">
-      <p
-        class="text-lg text-text-secondary mb-4 leading-relaxed border-chinese-seal-red border-l-4 pl-4"
-      >
-        <span class="text-chinese-seal-red"
-          >Sobre la práctica dinámica del sistema Wǔdāng Qìgōng
-        </span>
-      </p>
-    </summary>
-    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-      <strong>En la práctica dinámica del sistema Wǔdāng Qìgōng</strong>, la
-      intención dirige y organiza el movimiento con desplazamiento corporal, que
-      guía el flujo de la energía por los meridianos: hacia la base del cuerpo
-      para activar Riñón y Vejiga; hacia el pecho y los brazos para abrir Pulmón
-      y Corazón; en los giros y extensiones para armonizar Hígado y Vesícula
-      Biliar; hacia el abdomen y las piernas para fortalecer Bazo-Páncreas y
-      Estómago, estabilizando el centro; a lo largo del eje vertical para
-      conectar los canales anterior y posterior (Ren Mai y Du Mai); en los
-      movimientos espirales que equilibran la circulación interna del Chong Mai;
-      y en las rotaciones del tronco que abren el cinturón energético del Dai
-      Mai. No hay meridiano principal y extraordinario que no se vea afectado
-      por esta práctica. Finalmente, toda la energía movilizada retorna al
-      centro inferior, donde se condensa y se aquieta.
-    </p>
-
-    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-      En cuanto a las posturas dinámicas, no hay una regla rígida de
-      repeticiones numéricas; en cambio se recomienda practicar hasta sentir la
-      energía fluir sin llegar al cansancio, y volver brevemente al Wújí entre
-      los movimientos. Luego avanzar de forma progresiva en tiempos y
-      repeticiones y mantener pausas conscientes para centrar la intención antes
-      del siguiente ejercicio.
-    </p>
-  </details>
-</section>
-
-<section id="opinion" class="mb-16 md:mb-20 fade-in">
-  <div
-    class="max-w-4xl mx-auto section-bg-dynamic p-6 md:p-10 rounded-none shadow-lg"
+  <!--  MOVIMIENTOS -->
+  <section
+    id="secuencia-movimientos"
+    class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red"
   >
-    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-      Las posturas y movimientos siempre varían según interpretaciones y
-      adaptaciones, algunas de ellas se pueden encontrar en libros y videos,
-      otras en clases dictadas. Es un sistema con casi 200 años, fue modificado
-      y adaptado por varias generaciones, esperar que sea puro es imposible, más
-      después de la Revolución Cultural China y la adaptación comercial del
-      sistema para Occidente.
-    </p>
-    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-      Por eso, desde mi punto de vista, lo importante es mantener la intención
-      original del sistema: explicar la cosmogonia desde una perspectiva
-      metafísica daoista y luego utilizar el Qi para hacerlo circular en el
-      cuerpo.
-    </p>
-  </div>
-</section>
-
-<section id="posturas-estaticas" class="mb-16 md:mb-20 fade-in">
-  <div class="max-w-4xl mx-auto mb-10">
-    <h3
-      class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center"
-    >
-      Posturas Estáticas de Wǔdāng Qìgōng
+    <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
+      La secuencia de Wǔdāng Qìgōng
     </h3>
     <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-      Las posturas estáticas constituyen la base del sistema Wǔdāng Qìgōng,
-      cultivando la energía vital en estado de quietud. A través de la
-      inmovilidad consciente, el cuerpo se convierte en un receptáculo y canal
-      para el Qì (气). Estas posturas permiten:
+      Los movimientos de la secuencia de Wǔdāng Qìgōng I son en total 22 ejercicios: 6 posturas
+      estáticas y 16 posturas dinámicas. La serie dinámica está compuesta por movimientos descritos
+      con rutina, cierre, concentración y efectos.
     </p>
-    <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-        Concentrar, refinar y almacenar la energía interna (Qì, 气) en el
-        Dāntián (丹田).
-      </li>
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-        Armonizar cuerpo, respiración y mente en un eje central de quietud.
-      </li>
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-        Fortalecer la energía esencial (Jīng, 精) y facilitar su transformación
-        en Qì (气) y Shén (神).
-      </li>
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-        Establecer las bases para el desarrollo espiritual y la alquimia interna
-        (Nèidān, 内丹).
-      </li>
-    </ul>
-  </div>
 
-  <!-- Postura estática 01: Wújí -->
-  <details
-    id="postura-estatica-01"
-    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
-  >
-    <summary class="mov-summary section-bg-paper">
-      <h3
-        class="font-title text-2xl md:text-4xl text-text-title text-center mb-4"
-      >
-        Wújí (无极) - Vacuidad absoluta
-      </h3>
-      <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
-    </summary>
+    <details>
+      <summary class="ocultar-summary">
+        <p
+          class="text-lg text-text-secondary mb-4 leading-relaxed border-chinese-seal-red border-l-4 pl-4"
+        >
+          <span class="text-chinese-seal-red"
+            >Sobre la práctica estática del sistema Wǔdāng Qìgōng
+          </span>
+        </p>
+      </summary>
 
-   <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-      <div class="md:col-span-1 px-6">
-        <CardGaleria
-          imgPath="construccion.webp"
-          altText="construccion"
-          width={800}
-          height={800}
-        />
-      </div>
-      <div class="md:col-span-2 flex flex-col space-y-4 px-10">
-        <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Wújí (无极) — Vacuidad absoluta</strong>
-            Wújí es la postura meditativa de pie (Zhàn Zhuāng Gōng 站桩功) que abre
-            y cierra la práctica general y de cada movimiento realizado, sea postura
-            estática o dinámica. Representa el estado de vacuidad absoluta, origen
-            de todas las cosas y potencialidad pura. Si tuviese que ser representado
-            con un símbolo, sería un círculo vacío, sin distinción ni polaridad. De
-            esta manera, se asemeja al principio del cero metafísico, donde todo es
-            posible pero nada está definido.
-          </li>
+      <p class="text-lg text-text-secondary mb-6 leading-relaxed">
+        <strong>La práctica estática del sistema Wǔdāng Qìgōng </strong> se fundamenta en la cosmogonía
+        daoísta, donde cada etapa de la manifestación se refleja en una postura estática. No se trata
+        de una simple secuencia de posiciones, sino de una meditación encarnada: cada postura expresa
+        un principio de la creación, una transformación de la energía desde el vacío original hacia la
+        manifestación y su regreso a la unidad. En la quietud, la intención orienta el flujo interno,
+        y nuestra práctica convierte el cuerpo en el medio por donde el cielo y la tierra se equilibran,
+        donde la inmovilidad contiene el movimiento más sutil.
+      </p>
 
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Función y progresión:</strong>
-            El estado de Wújí da comienzo a la práctica por reconocerse en <strong
-              >tres jerarquías</strong
-            >: cuerpo (alineamiento y enraizamiento), mente (calma sostenida y
-            mirada quieta) y emociones (suave apertura y sonrisa interna). Así,
-            se pasa del reconocimiento a la asimilación y finalmente al olvido
-            consciente, para pasar a jerarquías superiores. Su función es el
-            anclaje a la vacuidad antes de cualquier intención, ya que es el
-            reconocimiento sin juzgamiento del estado presente.
-          </li>
+      <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+        En las posturas estáticas, se recomienda empezar progresivamente con 10 respiraciones
+        concientes (suponiendo que inhalar y exhalar son una respiración de 6 segundos total) y
+        luego ir aumentando la cantidad de respiraciones. Esto permite que el cuerpo se acostumbre a
+        la respiración conciente y que la práctica sea más relajante y cómoda, que cronometrarse en
+        minutos. Llegará el momento en que te olvidarás del conteo y la práctica se convertirá en un
+        flujo natural.
+      </p>
+    </details>
 
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Intención (Yì 意):</strong>
-            La intención es sentir desde la planta de los pies hasta la coronilla
-            una alineación que nos permita sentir la energía que nos recorre. Para
-            esto, la intención pasará por las 3 jerarquías mencionadas, buscando la
-            vacuidad sin forzar, permitiendo que el cuerpo se alinee y se enraíce,
-            que la mente se serene y que las emociones se suavicen.
-          </li>
-        </ul>
-      </div>
+    <details>
+      <summary class="ocultar-summary">
+        <p
+          class="text-lg text-text-secondary mb-4 leading-relaxed border-chinese-seal-red border-l-4 pl-4"
+        >
+          <span class="text-chinese-seal-red"
+            >Sobre la práctica dinámica del sistema Wǔdāng Qìgōng
+          </span>
+        </p>
+      </summary>
+      <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+        <strong>En la práctica dinámica del sistema Wǔdāng Qìgōng</strong>, la intención dirige y
+        organiza el movimiento con desplazamiento corporal, que guía el flujo de la energía por los
+        meridianos: hacia la base del cuerpo para activar Riñón y Vejiga; hacia el pecho y los
+        brazos para abrir Pulmón y Corazón; en los giros y extensiones para armonizar Hígado y
+        Vesícula Biliar; hacia el abdomen y las piernas para fortalecer Bazo-Páncreas y Estómago,
+        estabilizando el centro; a lo largo del eje vertical para conectar los canales anterior y
+        posterior (Ren Mai y Du Mai); en los movimientos espirales que equilibran la circulación
+        interna del Chong Mai; y en las rotaciones del tronco que abren el cinturón energético del
+        Dai Mai. No hay meridiano principal y extraordinario que no se vea afectado por esta
+        práctica. Finalmente, toda la energía movilizada retorna al centro inferior, donde se
+        condensa y se aquieta.
+      </p>
+
+      <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+        En cuanto a las posturas dinámicas, no hay una regla rígida de repeticiones numéricas; en
+        cambio se recomienda practicar hasta sentir la energía fluir sin llegar al cansancio, y
+        volver brevemente al Wújí entre los movimientos. Luego avanzar de forma progresiva en
+        tiempos y repeticiones y mantener pausas conscientes para centrar la intención antes del
+        siguiente ejercicio.
+      </p>
+    </details>
+  </section>
+
+  <section id="opinion" class="mb-16 md:mb-20 fade-in">
+    <div class="max-w-4xl mx-auto section-bg-dynamic p-6 md:p-10 rounded-none shadow-lg">
+      <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+        Las posturas y movimientos siempre varían según interpretaciones y adaptaciones, algunas de
+        ellas se pueden encontrar en libros y videos, otras en clases dictadas. Es un sistema con
+        casi 200 años, fue modificado y adaptado por varias generaciones, esperar que sea puro es
+        imposible, más después de la Revolución Cultural China y la adaptación comercial del sistema
+        para Occidente.
+      </p>
+      <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+        Por eso, desde mi punto de vista, lo importante es mantener la intención original del
+        sistema: explicar la cosmogonia desde una perspectiva metafísica daoista y luego utilizar el
+        Qi para hacerlo circular en el cuerpo.
+      </p>
     </div>
-  </details>
+  </section>
 
-  <!-- Postura estática 02: Tàijí -->
-  <details
-    id="postura-estatica-02"
-    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
-    style="animation-delay: 0.35s;"
-  >
-    <summary class="mov-summary section-bg-paper">
-      <h3
-        class="font-title text-center text-2xl md:text-4xl text-text-title mb-4"
-      >
-        Tàijí (太极) cultiva el Dāntián (丹田)
+  <section id="posturas-estaticas" class="mb-16 md:mb-20 fade-in">
+    <div class="max-w-4xl mx-auto mb-10">
+      <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
+        Posturas Estáticas de Wǔdāng Qìgōng
       </h3>
-      <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
-    </summary>
-    <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-      <div class="md:col-span-1 px-6">
-        <CardGaleria
-          imgPath="construccion.webp"
-          altText="construccion"
-          width={800}
-          height={800}
-        />
-      </div>
-
-      <div class="md:col-span-2 flex flex-col space-y-4 px-10">
-        <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Tàijí (太极) cultiva el Dāntián:</strong> es una postura clásica
-            conocida como "abrazar el arbol". Representa la intensión del principio
-            de manifestación supremo, esto quiere decir, el principio único y de manera
-            indiferenciada la polaridad Yīn/Yáng dentro del propio cuerpo. Si tuviese
-            que ser representado con un simbolo conocido, el Taijitu (太极图), en
-            especial el "Diagrama circular del señor Lai Qutang" (來瞿唐先生圓圖).
-            Obviamente hay muchas expresiones, la mas antigua y universal que podríamos
-            mencionar es el circulo con un punto (cerrado u abierto) en el centro.
-            Las representaciones simbólicas son varias, pero en todas está la característica
-            de no-dualidad: la unidad dinámica y armónica de los opuestos complementarios.
-          </li>
-
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Función y meridianos:</strong> Esta postura actua como un principio
-            de condensación energética aplicando por primera vez una intensión: hacer
-            circular la energía en una dirección específica en el cuerpo para condensar
-            el Qi en el Dāntián. Trabaja la coordinación entre eje anterior (Rèn Mài
-            任脉) y posterior (Dū Mài 督脉), equilibrando meridianos Yīn/Yáng y preparando
-            la energía para su densificación y circulación interna.
-          </li>
-
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Efectos e intención (Yì 意):</strong> Como lo dice la postura,
-            cultivar significa nutrir. Esto quiere decir que la intensión es cargar
-            de energía el Dāntián, y por ende los efectos se notan en la vitalidad
-            y el aumento del calor corporal, promoviendo una sensación de bienestar
-            activo y equilibrio interno.
-          </li>
-        </ul>
-      </div>
+      <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+        Las posturas estáticas constituyen la base del sistema Wǔdāng Qìgōng, cultivando la energía
+        vital en estado de quietud. A través de la inmovilidad consciente, el cuerpo se convierte en
+        un receptáculo y canal para el Qì (气). Estas posturas permiten:
+      </p>
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          Concentrar, refinar y almacenar la energía interna (Qì, 气) en el Dāntián (丹田).
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          Armonizar cuerpo, respiración y mente en un eje central de quietud.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          Fortalecer la energía esencial (Jīng, 精) y facilitar su transformación en Qì (气) y Shén
+          (神).
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          Establecer las bases para el desarrollo espiritual y la alquimia interna (Nèidān, 内丹).
+        </li>
+      </ul>
     </div>
-  </details>
 
-  <!-- Postura estática 03: Liǎng Yí -->
-  <details
-    id="postura-estatica-03"
-    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
-  >
-    <summary class="mov-summary section-bg-paper">
-      <h3
-        class="font-title text-center text-2xl md:text-4xl text-text-title mb-4"
-      >
-        Liǎng Yí (两仪) nutre el Yīn (阴)
-      </h3>
-      <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
-    </summary>
-    <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-      <div class="md:col-span-1 px-6">
-        <CardGaleria
-          imgPath="construccion.webp"
-          altText="construccion"
-          width={800}
-          height={800}
-        />
-      </div>
-      <div class="md:col-span-2 flex flex-col space-y-4 px-10">
-        <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Liǎng Yí (两仪) nutre el Yīn:</strong>
-            Liǎng Yí significa "Los dos aspectos" y expresa la separación Yīn/Yáng
-            de manera completa y opuesta. Si Taiji representa la unidad en la no-dualidad,
-            Liǎng Yí enfatiza la dualidad en la unidad. De esta manera crea una distinción,
-            de tal manera que se reconozcan sus diferencias para que luego interactuen
-            y se armonicen. Al pasar de la unidad a la dualidad, del Uno al Dos, nos
-            hace hablar de "anterior y posterior" (前後, qián hòu), el principio de
-            la relatividad y la interdependencia: Yin y Yang no existen el uno sin
-            el otro, y se definen mutuamente a través de su relación. Este pasaje
-            es fundamental para entender el simbolismo de "linea continua" (Yang)
-            y "linea partida" (Yin), que es la base de los trigramas y hexagramas
-            del I Ching (Libro de las Mutaciones). Continuando con el simbolismo y
-            la representación, Liǎng Yí establece relaciónes de dualidad que nos importan
-            para la cosmogonia: espacial con arriba-abajo; temporal con antes-después;
-            y obviamente númerica con par-impar.
-          </li>
-
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Función y meridianos:</strong>
-            La postura que también es de pie y estática, con los brazos paralelos
-            al piso, y representa la separación y unificación del Dantian en dos mitades,
-            para así activar y tonificar el meridiano del cinturón <strong
-              >Dàimài (带脉)</strong
-            > que es el único meridiano extraordinario que circula de manera horizontal
-            en el cuerpo, actuando como un cinturón que une y conecta los meridianos
-            Yīn y Yáng de las piernas con los del tronco. Esto hace que la postura
-            mejore la zona lumbar y pélvica, ya que activa el eje central del cuerpo
-            y fortalece la musculatura profunda de la zona lumbar. Así mismo, como
-            se intensiona el arriba y abajo, se activa el meridiano Chōngmài (冲脉),
-            nombrado Mar de la Sangre, que es el responsable de la circulación de
-            la sangre y la energía nutritiva en el cuerpo. Su rama principal está
-            en la parte anterior del cuerpo, y ramifica tanto hacia arriba como hacia
-            abajo, conectandose con Dū Mài y Rèn Mài.
-          </li>
-
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Efectos e intención (Yì 意):</strong>
-            La intención de la postura estática es nutrir el Yīn del cuerpo. Para
-            hacerlo, con las extremidades del cuerpo se respira y se expande el cuerpo
-            desde el Dantian tanto arriba como abajo. Al exhalar se vuelve a unir
-            la intensión en la Dantian para relajar el estiramiento profundo. Esta
-            intención de expandirse y unificar en la quietud a través de la división
-            del Dantian, tiene como efecto mejorar la postura general de la columna,
-            calmando y refrescando el exceso de Yáng producido por la primera postura.
-            La sensación de frescura y relajación profunda, que ayuda a calmar la
-            mente y las emociones, es producto de la activación del Yīn en el cuerpo.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </details>
-
-  <!-- Postura estática 04: Sì Xiàng -->
-  <details
-    id="postura-estatica-04"
-    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
-  >
-    <summary class="mov-summary section-bg-paper">
-      <h3
-        class="font-title text-center text-2xl md:text-4xl text-text-title mb-4"
-      >
-        Sì Xiàng (四象) fortalece la energía Yáng (阳) de los riñones
-      </h3>
-      <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
-    </summary>
-     <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-      <div class="md:col-span-1 px-6">
-        <CardGaleria
-          imgPath="construccion.webp"
-          altText="construccion"
-          width={800}
-          height={800}
-        />
-      </div>
-      <div class="md:col-span-2 flex flex-col space-y-4 px-10">
-        <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong
-              >Sì Xiàng (四象) fortalece la energía Yáng de los riñones:</strong
-            >
-            Sì Xiàng como traducción más directa serían "Las cuatro imágenes o "Los
-            cuatro simbolos". Estas son cuatro fases o manifestaciones primarias que
-            surgen de la interacción de las dos fuerzas fundamentales del universo,
-            el Yin y el Yang. Si anteriormente en Liang Yi hablabamos del principio
-            de la relatividad y la interdependencia, en Sì Xiàng hablamos de manifestaciones
-            que van a tener una relación de transformación cíclica entre ellas, teniendo
-            cada una su función y su lugar en el ciclo. Estas cuatro fases son: <strong
-              >1. Tài Yáng (太阳) - Gran Yáng</strong
-            >, <strong>2. Shào Yáng (少阳) - Pequeño Yáng</strong>, <strong
-              >3. Shào Yīn (少阴) - Pequeño Yīn</strong
-            > y <strong>4. Tài Yīn (太阴) - Gran Yīn</strong>. Un simbolo que
-            podría representar este concepto es el Taijitu de Zhao Huiqian
-            (1351-1395), y en otras explicaciones metafísicas de la cosmogonia
-            utilizando simbolos geométricos, se toma un triangulo isósceles (la
-            punta sería Taiji, su base compartida por Yin y Yang) y se junta en
-            esta base con otro triangulo invertido, formando una rombo o
-            cuadrado e(Para más información ver el libro "La Gran Triada" de
-            Rene Guenon).
-          </li>
-
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Función y meridianos:</strong>
-            La postura de Si Xiàng busca crear dos rombos: uno en la parte superior
-            del cuerpo (con los brazos) y otro en la parte inferior (con las piernas).
-            Esta forma geométrica que mencionamos anteriormente, trae una gran carga
-            física a la cara medial de las piernas (la zona interna), y tiene como
-            función activar y tonificar los meridianos que pasan por esta zona como
-            el meridiano de Higado, el de Bazo y el de Riñón. En especial, el organo
-            <strong>Riñón (肾经, KI)</strong> es el que pierde mas Yang a medida que
-            pasa la vida, y que a su vez está relacionado con la energía esencial
-            <strong>Jīng (精)</strong> que almacena. Esta energía es la base de la
-            vitalidad y longevidad. Como la función es calentar esta cara medial de
-            las piernas, todo el calor producto de la tensión debe subir hacia la
-            zona lumbar y pélvica, donde se encuentra el Mingmen (命门) o "Puerta
-            de la Vida", que es el punto energético que nutre y calienta el Riñón.
-            Curiosamente, es el primer organo que el embrión desarrolla en el útero,
-            y es el último que se apaga en la vejez.
-          </li>
-
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Efectos e intención (Yì 意):</strong>
-            Como la intención de la postura es fortalecer el Yang de esta zona y por
-            consiguiente almacenarlo en los Riñones, el efecto principal es el aumento
-            del calor corporal, que se siente en la zona lumbar y pélvica al principio.
-            La intención de fortalecer la raíz Yáng y preservar el <strong
-              >Jīng</strong
-            > da como efectos a largo plazo: aumentar tonicidad, vigor y resistencia;
-            mejora del tono sexual/endocrino; soporte para la columna y estabilidad
-            física.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </details>
-
-  <!-- Postura estática 05: Bāguà -->
-  <details
-    id="postura-estatica-05"
-    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
-  >
-    <summary class="mov-summary section-bg-paper">
-      <h3
-        class="font-title text-center text-2xl md:text-4xl text-text-title mb-4"
-      >
-        Bāguà (八卦) eleva la energía al Bǎihuì (百会)
-      </h3>
-      <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
-    </summary>
-     <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-      <div class="md:col-span-1 px-6">
-        <CardGaleria
-          imgPath="construccion.webp"
-          altText="construccion"
-          width={800}
-          height={800}
-        />
-      </div>
-      <div class="md:col-span-2 flex flex-col space-y-4 px-10">
-        <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            Bāguà (八卦) significa "Ocho trigramas" y representa la
-            manifestación de las ocho fuerzas fenoménicas que surgen de la
-            interacción dinámica del Yīn y el Yáng. Estos trigramas son
-            combinaciones de tres líneas, ya sean continuas (Yáng) o partidas
-            (Yīn). ¿Por qué son 3 lineas? Porque representan los <strong
-              >tres niveles de manifestación</strong
-            >: cielo (tiān 天), tierra (dì 地) y humanidad (rén 人). Estos tres
-            niveles interactúan y se reflejan en los ocho trigramas, que a su
-            vez forman la base del I Ching (易经), el antiguo texto chino de
-            sabiduría y adivinación. Cada trigrama tiene su propia simbología,
-            atributos y asociaciones, y juntos representan la totalidad del
-            mundo fenoménico. Para continuar con el simbolismo, la superposición
-            de dos cuadrados (uno rotado 45 grados) forma un octágono, que es la
-            representación geométrica de los ocho trigramas; El Baguà también es
-            fuente de varias representaciones simbólicas, como el Bagua de Fu Xi
-            (伏羲八卦) y el Bagua de Wen Wang (文王八卦), cada uno con sus
-            propias disposiciones y significados.
-          </li>
-
-          <details class="mov-details">
-            <summary class="mov-summary border-l-4 border-chinese-seal-red">
-              <span class="text-lg text-text-secondary text-text-title"
-                >Leer más sobre la acción mental de los 8 trigramas en la
-                disposición del Cielo Anterior</span
-              >
-            </summary>
-
-            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              ☰ – Cielo – Sur: expandirse, confiar, inspirar.
-            </li>
-
-            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              ☷ – Tierra – Norte: aceptar, dejar pasar, humildad.
-            </li>
-
-            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              ☵ – Agua – Oeste: fluir, adaptarse, mantener suavidad ante lo
-              difícil.
-            </li>
-
-            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              ☲ – Fuego – Este: iluminar, clarificar pensamientos, expresar con
-              lucidez.
-            </li>
-
-            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              ☴ – Viento – Sureste: decidir, actuar con determinación, soltar.
-            </li>
-
-            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              ☳ – Trueno – Noroeste: dividir, despertar la mente, romper la
-              inercia mental o el letargo.
-            </li>
-
-            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              ☱ – Lago – Suroeste: descansar, reflejar serenamente, liberar
-              emociones y hallar paz.
-            </li>
-
-            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-              ☶ – Montaña – Noreste: estabilizar, sostener el centro,
-              permanecer firme y en quietud.
-            </li>
-          </details>
-
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Función y meridianos:</strong>
-            El ejercicio continua con la función de dirigir la energía, en este caso,
-            de manera ascendente desde el Dāntián hacia la coronilla, específicamente
-            al punto energético Bǎihuì (百会), que significa "Cien reuniones" y es
-            el punto donde convergen múltiples meridianos y, como más importante,
-            la conexión con el Cielo o las energías celestiales. Esta función de elevar
-            la energía, carga de gran cantidad de Qi el cerebro para ir construyendo
-            el Shen (神) traducido como espíritu. Nuestra conciencia está alojada
-            en el cerebro, y el Shen es la manifestación más sutil y elevada de nuestra
-            energía vital. Al combinarla con el concepto de Bāguà simbolizado en nuestros
-            dedos de la mano extendidos, a excepción de los pulgares, se busca armonizar
-            y equilibrar los pensamientos con las fuerzas cósmicas, promoviendo un
-            estado de equilibrio y conexión espiritual.
-          </li>
-
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Efectos e intención (Yì 意):</strong>
-            La intención es la condensación del Qi en el cerebro para estimular el
-            Shen, y en la coronilla para la conexión con el Cielo; siempre manteniendo
-            la intención de elevar la energía sin forzar, permitiendo que el Qi fluya
-            naturalmente hacia arriba. Los efectos son una mayor claridad mental,
-            mejor concentración y una sensación de ligereza y expansión en la cabeza.
-            A medida que se practica regularmente, se puede ir aplicando las acciones
-            mentales de los 8 trigramas para equilibrar y armonizar las emociones
-            y pensamientos.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </details>
-
-  <!-- Postura estática 06: Guī xī Yáng qì -->
-  <details
-    id="postura-estatica-06"
-    class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
-  >
-    <summary class="mov-summary section-bg-paper">
-      <h3
-        class="font-title text-center text-2xl md:text-4xl text-text-title mb-4"
-      >
-        Guī xī Yáng qì (龟吸阳气) — La tortuga ingiere la energía Yáng
-      </h3>
-      <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
-    </summary>
-
-    <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-      <div class="md:col-span-1 px-6">
-        <CardGaleria
-          imgPath="construccion.webp"
-          altText="construccion"
-          width={800}
-          height={800}
-        />
-      </div>
-      <div class="md:col-span-2 flex flex-col space-y-4 px-10">
-        <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            En la tradición daoísta, la tortuga (龟 Guī) es más que un símbolo
-            de longevidad: es una imagen cosmológica del universo mismo. Su
-            caparazón superior, redondeado, se asocia al Cielo (Tiān 天);
-            mientras que el plastrón plano, la parte inferior, representa la
-            Tierra (Dì 地). En esta correspondencia, la tortuga encarna el eje
-            del cosmos —lo que los daoístas llaman Zhōng dào (中道), el camino
-            del centro—, donde convergen las energías del Cielo y de la Tierra.
-            Incluso las antiguas carcasas de tortuga se utilizaron en la
-            piromancia (adivinación con fuego) de la dinastía Shāng (商, ca.
-            siglo XVI a.C.) por parte de reyes y adivinos, lo que añade una
-            dimensión mística y ritual a su simbolismo. Para completar, “ingerir
-            la energía Yáng” representa la absorción de la energía del Sol
-            (太阳, Tàiyáng), como la manifestación más inmediata y visible del
-            Yáng celestial. Su luz y calor representan el aliento del Cielo
-            descendiendo hacia la Tierra, que anima toda forma de vida en
-            nuestro planeta.
-          </li>
-
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Función y meridianos:</strong>
-            La función es absorber la energía Yáng del Cielo, y conducirla desde el
-            punto Bǎihuì (百会) en la coronilla hacia el Dāntián (丹田). Esta acción
-            de "descenso" es fundamental en la práctica del Qìgōng, ya que permite
-            que la energía celestial se integre y se almacene en el centro energético
-            del cuerpo. Al realizar esta postura, se activa el meridiano Dū Mài (督脉),
-            que es el canal energético que recorre la columna vertebral y conecta
-            todos los meridianos Yáng del cuerpo. Este meridiano es crucial para la
-            circulación del Qì Yáng, y su activación ayuda a fortalecer la espalda,
-            mejorar la postura y aumentar la vitalidad general.
-          </li>
-
-          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-            <strong>Efectos e intención (Yì 意):</strong>
-            La postura está en relación con San Ti Shi (三體勢) traducida como "La
-            postura de las tres armonías", que produce la unión entre el Cielo, la
-            Humanidad y la Tierra, permitiendo así la armonización de la cadena fundamental
-            de estilos internos: Yi (intención), Qi (energía) Li (fuerza) Xing (forma)
-            y Shen (espíritu). Si la intensión es absorber la energía Yáng del Cielo
-            y conducirla hacia el Dāntián, y soportar todo el peso del cuerpo sobre
-            una pierna, los efectos mas notables son: un aumento de la musculatura
-            de piernas, equilibrio anatómico de la columna, mejora del sistema nervioso
-            y circulatorio, llegando a un potencial de regeneración celular.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </details>
-</section>
-
-<section id="posturas-dinamicas" class="mb-16 md:mb-20 fade-in">
-  <div class="max-w-4xl mx-auto mb-10">
-    <h3
-      class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center"
+    <!-- Postura estática 01: Wújí -->
+    <details
+      id="postura-estatica-01"
+      class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
     >
-      Posturas Dinámicas de Wudang Qigong
-    </h3>
-    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-      Estas posturas tienen como propósito principal movilizar, distribuir y
-      armonizar el Qì a lo largo del cuerpo, trabajando de forma más externa y
-      circulatoria en comparación con la acumulación y refinamiento interno que
-      ofrecen las posturas estáticas. Cada movimiento dinámico:
-    </p>
-    <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-        Activa un área específica del cuerpo o de los órganos internos.
-      </li>
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-        Estimula los meridianos energéticos en el cuerpo.
-      </li>
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-        Libera bloqueos físicos, emocionales y energéticos.
-      </li>
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-        Integra la respiración, el movimiento y la intención.
-      </li>
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-        Prepara el cuerpo para una práctica alquímica más profunda.
-      </li>
-    </ul>
-  </div>
-</section>
-<section id="Fuentes_Tradicion" class="mb-16 md:mb-20 fade-in">
-  <div class="max-w-4xl mx-auto section-bg-paper p-6 md:p-10 rounded-none shadow-lg">
-    <h4 class="font-title text-2xl md:text-3xl border-b-2 border-chinese-seal-red pb-4">
+      <summary class="mov-summary section-bg-paper">
+        <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+          Wújí (无极) - Vacuidad absoluta
+        </h3>
+        <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+      </summary>
+
+      <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-1 px-6">
+          <CardGaleria
+            imgPath="construccion.webp"
+            altText="construccion"
+            width={800}
+            height={800}
+          />
+        </div>
+        <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+          <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Wújí (无极) — Vacuidad absoluta</strong>
+              Wújí es la postura meditativa de pie (Zhàn Zhuāng Gōng 站桩功) que abre y cierra la práctica
+              general y de cada movimiento realizado, sea postura estática o dinámica. Representa el
+              estado de vacuidad absoluta, origen de todas las cosas y potencialidad pura. Si tuviese
+              que ser representado con un símbolo, sería un círculo vacío, sin distinción ni polaridad.
+              De esta manera, se asemeja al principio del cero metafísico, donde todo es posible pero
+              nada está definido.
+            </li>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Función y progresión:</strong>
+              El estado de Wújí da comienzo a la práctica por reconocerse en <strong
+                >tres jerarquías</strong
+              >: cuerpo (alineamiento y enraizamiento), mente (calma sostenida y mirada quieta) y
+              emociones (suave apertura y sonrisa interna). Así, se pasa del reconocimiento a la
+              asimilación y finalmente al olvido consciente, para pasar a jerarquías superiores. Su
+              función es el anclaje a la vacuidad antes de cualquier intención, ya que es el
+              reconocimiento sin juzgamiento del estado presente.
+            </li>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Intención (Yì 意):</strong>
+              La intención es sentir desde la planta de los pies hasta la coronilla una alineación que
+              nos permita sentir la energía que nos recorre. Para esto, la intención pasará por las 3
+              jerarquías mencionadas, buscando la vacuidad sin forzar, permitiendo que el cuerpo se alinee
+              y se enraíce, que la mente se serene y que las emociones se suavicen.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <!-- Postura estática 02: Tàijí -->
+    <details
+      id="postura-estatica-02"
+      class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      style="animation-delay: 0.35s;"
+    >
+      <summary class="mov-summary section-bg-paper">
+        <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-4">
+          Tàijí (太极) cultiva el Dāntián (丹田)
+        </h3>
+        <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+      </summary>
+      <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-1 px-6">
+          <CardGaleria
+            imgPath="construccion.webp"
+            altText="construccion"
+            width={800}
+            height={800}
+          />
+        </div>
+
+        <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+          <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Tàijí (太极) cultiva el Dāntián:</strong> es una postura clásica conocida como
+              "abrazar el arbol". Representa la intensión del principio de manifestación supremo, esto
+              quiere decir, el principio único y de manera indiferenciada la polaridad Yīn/Yáng dentro
+              del propio cuerpo. Si tuviese que ser representado con un simbolo conocido, el Taijitu
+              (太极图), en especial el "Diagrama circular del señor Lai Qutang" (來瞿唐先生圓圖). Obviamente
+              hay muchas expresiones, la mas antigua y universal que podríamos mencionar es el circulo
+              con un punto (cerrado u abierto) en el centro. Las representaciones simbólicas son varias,
+              pero en todas está la característica de no-dualidad: la unidad dinámica y armónica de los
+              opuestos complementarios.
+            </li>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Función y meridianos:</strong> Esta postura actua como un principio de condensación
+              energética aplicando por primera vez una intensión: hacer circular la energía en una dirección
+              específica en el cuerpo para condensar el Qi en el Dāntián. Trabaja la coordinación entre
+              eje anterior (Rèn Mài 任脉) y posterior (Dū Mài 督脉), equilibrando meridianos Yīn/Yáng
+              y preparando la energía para su densificación y circulación interna.
+            </li>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Efectos e intención (Yì 意):</strong> Como lo dice la postura, cultivar significa
+              nutrir. Esto quiere decir que la intensión es cargar de energía el Dāntián, y por ende
+              los efectos se notan en la vitalidad y el aumento del calor corporal, promoviendo una sensación
+              de bienestar activo y equilibrio interno.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <!-- Postura estática 03: Liǎng Yí -->
+    <details
+      id="postura-estatica-03"
+      class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+    >
+      <summary class="mov-summary section-bg-paper">
+        <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-4">
+          Liǎng Yí (两仪) nutre el Yīn (阴)
+        </h3>
+        <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+      </summary>
+      <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-1 px-6">
+          <CardGaleria
+            imgPath="construccion.webp"
+            altText="construccion"
+            width={800}
+            height={800}
+          />
+        </div>
+        <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+          <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Liǎng Yí (两仪) nutre el Yīn:</strong>
+              Liǎng Yí significa "Los dos aspectos" y expresa la separación Yīn/Yáng de manera completa
+              y opuesta. Si Taiji representa la unidad en la no-dualidad, Liǎng Yí enfatiza la dualidad
+              en la unidad. De esta manera crea una distinción, de tal manera que se reconozcan sus diferencias
+              para que luego interactuen y se armonicen. Al pasar de la unidad a la dualidad, del Uno
+              al Dos, nos hace hablar de "anterior y posterior" (前後, qián hòu), el principio de la
+              relatividad y la interdependencia: Yin y Yang no existen el uno sin el otro, y se definen
+              mutuamente a través de su relación. Este pasaje es fundamental para entender el simbolismo
+              de "linea continua" (Yang) y "linea partida" (Yin), que es la base de los trigramas y hexagramas
+              del I Ching (Libro de las Mutaciones). Continuando con el simbolismo y la representación,
+              Liǎng Yí establece relaciónes de dualidad que nos importan para la cosmogonia: espacial
+              con arriba-abajo; temporal con antes-después; y obviamente númerica con par-impar.
+            </li>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Función y meridianos:</strong>
+              La postura que también es de pie y estática, con los brazos paralelos al piso, y representa
+              la separación y unificación del Dantian en dos mitades, para así activar y tonificar el
+              meridiano del cinturón <strong>Dàimài (带脉)</strong> que es el único meridiano extraordinario
+              que circula de manera horizontal en el cuerpo, actuando como un cinturón que une y conecta
+              los meridianos Yīn y Yáng de las piernas con los del tronco. Esto hace que la postura mejore
+              la zona lumbar y pélvica, ya que activa el eje central del cuerpo y fortalece la musculatura
+              profunda de la zona lumbar. Así mismo, como se intensiona el arriba y abajo, se activa
+              el meridiano Chōngmài (冲脉), nombrado Mar de la Sangre, que es el responsable de la circulación
+              de la sangre y la energía nutritiva en el cuerpo. Su rama principal está en la parte anterior
+              del cuerpo, y ramifica tanto hacia arriba como hacia abajo, conectandose con Dū Mài y Rèn
+              Mài.
+            </li>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Efectos e intención (Yì 意):</strong>
+              La intención de la postura estática es nutrir el Yīn del cuerpo. Para hacerlo, con las
+              extremidades del cuerpo se respira y se expande el cuerpo desde el Dantian tanto arriba
+              como abajo. Al exhalar se vuelve a unir la intensión en la Dantian para relajar el estiramiento
+              profundo. Esta intención de expandirse y unificar en la quietud a través de la división
+              del Dantian, tiene como efecto mejorar la postura general de la columna, calmando y refrescando
+              el exceso de Yáng producido por la primera postura. La sensación de frescura y relajación
+              profunda, que ayuda a calmar la mente y las emociones, es producto de la activación del
+              Yīn en el cuerpo.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <!-- Postura estática 04: Sì Xiàng -->
+    <details
+      id="postura-estatica-04"
+      class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+    >
+      <summary class="mov-summary section-bg-paper">
+        <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-4">
+          Sì Xiàng (四象) fortalece la energía Yáng (阳) de los riñones
+        </h3>
+        <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+      </summary>
+      <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-1 px-6">
+          <CardGaleria
+            imgPath="construccion.webp"
+            altText="construccion"
+            width={800}
+            height={800}
+          />
+        </div>
+        <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+          <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Sì Xiàng (四象) fortalece la energía Yáng de los riñones:</strong>
+              Sì Xiàng como traducción más directa serían "Las cuatro imágenes o "Los cuatro simbolos".
+              Estas son cuatro fases o manifestaciones primarias que surgen de la interacción de las
+              dos fuerzas fundamentales del universo, el Yin y el Yang. Si anteriormente en Liang Yi
+              hablabamos del principio de la relatividad y la interdependencia, en Sì Xiàng hablamos
+              de manifestaciones que van a tener una relación de transformación cíclica entre ellas,
+              teniendo cada una su función y su lugar en el ciclo. Estas cuatro fases son: <strong
+                >1. Tài Yáng (太阳) - Gran Yáng</strong
+              >, <strong>2. Shào Yáng (少阳) - Pequeño Yáng</strong>, <strong
+                >3. Shào Yīn (少阴) - Pequeño Yīn</strong
+              > y <strong>4. Tài Yīn (太阴) - Gran Yīn</strong>. Un simbolo que podría representar
+              este concepto es el Taijitu de Zhao Huiqian (1351-1395), y en otras explicaciones
+              metafísicas de la cosmogonia utilizando simbolos geométricos, se toma un triangulo
+              isósceles (la punta sería Taiji, su base compartida por Yin y Yang) y se junta en esta
+              base con otro triangulo invertido, formando una rombo o cuadrado e(Para más
+              información ver el libro "La Gran Triada" de Rene Guenon).
+            </li>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Función y meridianos:</strong>
+              La postura de Si Xiàng busca crear dos rombos: uno en la parte superior del cuerpo (con
+              los brazos) y otro en la parte inferior (con las piernas). Esta forma geométrica que mencionamos
+              anteriormente, trae una gran carga física a la cara medial de las piernas (la zona interna),
+              y tiene como función activar y tonificar los meridianos que pasan por esta zona como el
+              meridiano de Higado, el de Bazo y el de Riñón. En especial, el organo
+              <strong>Riñón (肾经, KI)</strong> es el que pierde mas Yang a medida que pasa la vida,
+              y que a su vez está relacionado con la energía esencial
+              <strong>Jīng (精)</strong> que almacena. Esta energía es la base de la vitalidad y longevidad.
+              Como la función es calentar esta cara medial de las piernas, todo el calor producto de
+              la tensión debe subir hacia la zona lumbar y pélvica, donde se encuentra el Mingmen (命门)
+              o "Puerta de la Vida", que es el punto energético que nutre y calienta el Riñón. Curiosamente,
+              es el primer organo que el embrión desarrolla en el útero, y es el último que se apaga
+              en la vejez.
+            </li>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Efectos e intención (Yì 意):</strong>
+              Como la intención de la postura es fortalecer el Yang de esta zona y por consiguiente almacenarlo
+              en los Riñones, el efecto principal es el aumento del calor corporal, que se siente en
+              la zona lumbar y pélvica al principio. La intención de fortalecer la raíz Yáng y preservar
+              el <strong>Jīng</strong> da como efectos a largo plazo: aumentar tonicidad, vigor y resistencia;
+              mejora del tono sexual/endocrino; soporte para la columna y estabilidad física.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <!-- Postura estática 05: Bāguà -->
+    <details
+      id="postura-estatica-05"
+      class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+    >
+      <summary class="mov-summary section-bg-paper">
+        <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-4">
+          Bāguà (八卦) eleva la energía al Bǎihuì (百会)
+        </h3>
+        <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+      </summary>
+      <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-1 px-6">
+          <CardGaleria
+            imgPath="construccion.webp"
+            altText="construccion"
+            width={800}
+            height={800}
+          />
+        </div>
+        <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+          <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Bāguà (八卦) significa "Ocho trigramas" y representa la manifestación de las ocho
+              fuerzas fenoménicas que surgen de la interacción dinámica del Yīn y el Yáng. Estos
+              trigramas son combinaciones de tres líneas, ya sean continuas (Yáng) o partidas (Yīn).
+              ¿Por qué son 3 lineas? Porque representan los <strong
+                >tres niveles de manifestación</strong
+              >: cielo (tiān 天), tierra (dì 地) y humanidad (rén 人). Estos tres niveles
+              interactúan y se reflejan en los ocho trigramas, que a su vez forman la base del I
+              Ching (易经), el antiguo texto chino de sabiduría y adivinación. Cada trigrama tiene
+              su propia simbología, atributos y asociaciones, y juntos representan la totalidad del
+              mundo fenoménico. Para continuar con el simbolismo, la superposición de dos cuadrados
+              (uno rotado 45 grados) forma un octágono, que es la representación geométrica de los
+              ocho trigramas; El Baguà también es fuente de varias representaciones simbólicas, como
+              el Bagua de Fu Xi (伏羲八卦) y el Bagua de Wen Wang (文王八卦), cada uno con sus
+              propias disposiciones y significados.
+            </li>
+
+            <details class="mov-details">
+              <summary class="mov-summary border-l-4 border-chinese-seal-red">
+                <span class="text-lg text-text-secondary text-text-title"
+                  >Leer más sobre la acción mental de los 8 trigramas en la disposición del Cielo
+                  Anterior</span
+                >
+              </summary>
+
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                ☰ – Cielo – Sur: expandirse, confiar, inspirar.
+              </li>
+
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                ☷ – Tierra – Norte: aceptar, dejar pasar, humildad.
+              </li>
+
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                ☵ – Agua – Oeste: fluir, adaptarse, mantener suavidad ante lo difícil.
+              </li>
+
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                ☲ – Fuego – Este: iluminar, clarificar pensamientos, expresar con lucidez.
+              </li>
+
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                ☴ – Viento – Sureste: decidir, actuar con determinación, soltar.
+              </li>
+
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                ☳ – Trueno – Noroeste: dividir, despertar la mente, romper la inercia mental o el
+                letargo.
+              </li>
+
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                ☱ – Lago – Suroeste: descansar, reflejar serenamente, liberar emociones y hallar
+                paz.
+              </li>
+
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                ☶ – Montaña – Noreste: estabilizar, sostener el centro, permanecer firme y en
+                quietud.
+              </li>
+            </details>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Función y meridianos:</strong>
+              El ejercicio continua con la función de dirigir la energía, en este caso, de manera ascendente
+              desde el Dāntián hacia la coronilla, específicamente al punto energético Bǎihuì (百会),
+              que significa "Cien reuniones" y es el punto donde convergen múltiples meridianos y, como
+              más importante, la conexión con el Cielo o las energías celestiales. Esta función de elevar
+              la energía, carga de gran cantidad de Qi el cerebro para ir construyendo el Shen (神) traducido
+              como espíritu. Nuestra conciencia está alojada en el cerebro, y el Shen es la manifestación
+              más sutil y elevada de nuestra energía vital. Al combinarla con el concepto de Bāguà simbolizado
+              en nuestros dedos de la mano extendidos, a excepción de los pulgares, se busca armonizar
+              y equilibrar los pensamientos con las fuerzas cósmicas, promoviendo un estado de equilibrio
+              y conexión espiritual.
+            </li>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Efectos e intención (Yì 意):</strong>
+              La intención es la condensación del Qi en el cerebro para estimular el Shen, y en la coronilla
+              para la conexión con el Cielo; siempre manteniendo la intención de elevar la energía sin
+              forzar, permitiendo que el Qi fluya naturalmente hacia arriba. Los efectos son una mayor
+              claridad mental, mejor concentración y una sensación de ligereza y expansión en la cabeza.
+              A medida que se practica regularmente, se puede ir aplicando las acciones mentales de los
+              8 trigramas para equilibrar y armonizar las emociones y pensamientos.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <!-- Postura estática 06: Guī xī Yáng qì -->
+    <details
+      id="postura-estatica-06"
+      class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+    >
+      <summary class="mov-summary section-bg-paper">
+        <h3 class="font-title text-center text-2xl md:text-4xl text-text-title mb-4">
+          Guī xī Yáng qì (龟吸阳气) — La tortuga ingiere la energía Yáng
+        </h3>
+        <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+      </summary>
+
+      <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-1 px-6">
+          <CardGaleria
+            imgPath="construccion.webp"
+            altText="construccion"
+            width={800}
+            height={800}
+          />
+        </div>
+        <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+          <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              En la tradición daoísta, la tortuga (龟 Guī) es más que un símbolo de longevidad: es
+              una imagen cosmológica del universo mismo. Su caparazón superior, redondeado, se
+              asocia al Cielo (Tiān 天); mientras que el plastrón plano, la parte inferior,
+              representa la Tierra (Dì 地). En esta correspondencia, la tortuga encarna el eje del
+              cosmos —lo que los daoístas llaman Zhōng dào (中道), el camino del centro—, donde
+              convergen las energías del Cielo y de la Tierra. Incluso las antiguas carcasas de
+              tortuga se utilizaron en la piromancia (adivinación con fuego) de la dinastía Shāng
+              (商, ca. siglo XVI a.C.) por parte de reyes y adivinos, lo que añade una dimensión
+              mística y ritual a su simbolismo. Para completar, “ingerir la energía Yáng” representa
+              la absorción de la energía del Sol (太阳, Tàiyáng), como la manifestación más
+              inmediata y visible del Yáng celestial. Su luz y calor representan el aliento del
+              Cielo descendiendo hacia la Tierra, que anima toda forma de vida en nuestro planeta.
+            </li>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Función y meridianos:</strong>
+              La función es absorber la energía Yáng del Cielo, y conducirla desde el punto Bǎihuì (百会)
+              en la coronilla hacia el Dāntián (丹田). Esta acción de "descenso" es fundamental en la
+              práctica del Qìgōng, ya que permite que la energía celestial se integre y se almacene en
+              el centro energético del cuerpo. Al realizar esta postura, se activa el meridiano Dū Mài
+              (督脉), que es el canal energético que recorre la columna vertebral y conecta todos los
+              meridianos Yáng del cuerpo. Este meridiano es crucial para la circulación del Qì Yáng,
+              y su activación ayuda a fortalecer la espalda, mejorar la postura y aumentar la vitalidad
+              general.
+            </li>
+
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              <strong>Efectos e intención (Yì 意):</strong>
+              La postura está en relación con San Ti Shi (三體勢) traducida como "La postura de las tres
+              armonías", que produce la unión entre el Cielo, la Humanidad y la Tierra, permitiendo así
+              la armonización de la cadena fundamental de estilos internos: Yi (intención), Qi (energía)
+              Li (fuerza) Xing (forma) y Shen (espíritu). Si la intensión es absorber la energía Yáng
+              del Cielo y conducirla hacia el Dāntián, y soportar todo el peso del cuerpo sobre una pierna,
+              los efectos mas notables son: un aumento de la musculatura de piernas, equilibrio anatómico
+              de la columna, mejora del sistema nervioso y circulatorio, llegando a un potencial de regeneración
+              celular.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section id="posturas-dinamicas" class="mb-16 md:mb-20 fade-in">
+    <div class="max-w-4xl mx-auto mb-10">
+      <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
+        Posturas Dinámicas de Wudang Qigong
+      </h3>
+      <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+        Estas posturas tienen como propósito principal movilizar, distribuir y armonizar el Qì a lo
+        largo del cuerpo, trabajando de forma más externa y circulatoria en comparación con la
+        acumulación y refinamiento interno que ofrecen las posturas estáticas. Cada movimiento
+        dinámico:
+      </p>
+      <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          Activa un área específica del cuerpo o de los órganos internos.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          Estimula los meridianos energéticos en el cuerpo.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          Libera bloqueos físicos, emocionales y energéticos.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          Integra la respiración, el movimiento y la intención.
+        </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+          Prepara el cuerpo para una práctica alquímica más profunda.
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="Fuentes_Tradicion" class="mb-16 md:mb-20 fade-in">
+    <div class="max-w-4xl mx-auto section-bg-paper p-6 md:p-10 rounded-none shadow-lg">
+      <h4 class="font-title text-2xl md:text-3xl border-b-2 border-chinese-seal-red pb-4">
         Fuentes y Bibliografía Académica utilizada para la elaboración de este artículo
-    </h4>
-    <ul class="list-none text-lg text-ink space-y-6 leading-relaxed py-10">
-      
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
-        <span class="font-semibold text-text-ink italic">Yves Réquéna: "Movimientos para la Felicidad (Wu Dang Qi Gong)"</span>
-        <p class="text-sm text-text-secondary mt-1">
-          Obra fundamental sobre la aplicación clínica y terapéutica de los ejercicios de Wudang para el equilibrio emocional y la vitalidad.
-        </p>
-      </li>
+      </h4>
+      <ul class="list-none text-lg text-ink space-y-6 leading-relaxed py-10">
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
+          <span class="font-semibold text-text-ink italic"
+            >Yves Réquéna: "Movimientos para la Felicidad (Wu Dang Qi Gong)"</span
+          >
+          <p class="text-sm text-text-secondary mt-1">
+            Obra fundamental sobre la aplicación clínica y terapéutica de los ejercicios de Wudang
+            para el equilibrio emocional y la vitalidad.
+          </p>
+        </li>
 
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
-        <span class="font-semibold text-text-ink italic">René Guénon: "La Gran Tríada"</span>
-        <p class="text-sm text-text-secondary mt-1">
-          Análisis de Triadas, y en especial, de la gran Triada del Extremo oriente (China). Considero importante para comprender la mirada metafísica de filosófica del Daoísmo y su relación con la cosmología china.
-        </p>
-      </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
+          <span class="font-semibold text-text-ink italic">René Guénon: "La Gran Tríada"</span>
+          <p class="text-sm text-text-secondary mt-1">
+            Análisis de Triadas, y en especial, de la gran Triada del Extremo oriente (China).
+            Considero importante para comprender la mirada metafísica de filosófica del Daoísmo y su
+            relación con la cosmología china.
+          </p>
+        </li>
 
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
-        <a href="https://taijiquan.pro.br/ensinamentos-taichichuan/tao-yin-yang/" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
-          Eduardo Molon: Armonización de Yin y Yang para obtener el Tao
-        </a>
-        <p class="text-sm text-text-secondary mt-1">
-          Ensayo sobre la aplicación práctica del dualismo dinámico en la estructura del Taijiquan tradicional.
-        </p>
-      </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
+          <a
+            href="https://taijiquan.pro.br/ensinamentos-taichichuan/tao-yin-yang/"
+            class="text-blue-700 underline font-semibold"
+            target="_blank"
+            rel="noopener"
+          >
+            Eduardo Molon: Armonización de Yin y Yang para obtener el Tao
+          </a>
+          <p class="text-sm text-text-secondary mt-1">
+            Ensayo sobre la aplicación práctica del dualismo dinámico en la estructura del Taijiquan
+            tradicional.
+          </p>
+        </li>
 
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
-        <a href="https://www.wudangzixiao.com/english/articles/wudang-martial-arts-roots/" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
-          Roots of Wudang Martial Arts — Templo Zi Xiao
-        </a>
-        <p class="text-sm text-text-secondary mt-1">
-          Investigación sobre las raíces históricas y el contexto cultural de las artes marciales dentro del complejo de templos de Wudang.
-        </p>
-      </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
+          <a
+            href="https://www.wudangzixiao.com/english/articles/wudang-martial-arts-roots/"
+            class="text-blue-700 underline font-semibold"
+            target="_blank"
+            rel="noopener"
+          >
+            Roots of Wudang Martial Arts — Templo Zi Xiao
+          </a>
+          <p class="text-sm text-text-secondary mt-1">
+            Investigación sobre las raíces históricas y el contexto cultural de las artes marciales
+            dentro del complejo de templos de Wudang.
+          </p>
+        </li>
 
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
-        <a href="https://dao-world.org/2023/10/14/the-origin-of-the-dragon-gate-and-the-transmission-of-precepts-in-wudang/" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
-          El Origen de la Puerta del Dragón (Longmén) y sus preceptos
-        </a>
-        <p class="text-sm text-text-secondary mt-1">
-          Estudio sobre la transmisión de conocimientos y la ética dentro del linaje Longmén en las montañas sagradas.
-        </p>
-      </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
+          <a
+            href="https://dao-world.org/2023/10/14/the-origin-of-the-dragon-gate-and-the-transmission-of-precepts-in-wudang/"
+            class="text-blue-700 underline font-semibold"
+            target="_blank"
+            rel="noopener"
+          >
+            El Origen de la Puerta del Dragón (Longmén) y sus preceptos
+          </a>
+          <p class="text-sm text-text-secondary mt-1">
+            Estudio sobre la transmisión de conocimientos y la ética dentro del linaje Longmén en
+            las montañas sagradas.
+          </p>
+        </li>
 
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
-        <a href="https://wudanglongmen.com/peixirong/" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
-          Pei Xirong y la transmisión del linaje Wudang Longmén
-        </a>
-        <p class="text-sm text-text-secondary mt-1">
-          Notas biográficas y técnicas sobre el Maestro Pei Xirong, figura clave en la preservación del estilo.
-        </p>
-      </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
+          <a
+            href="https://wudanglongmen.com/peixirong/"
+            class="text-blue-700 underline font-semibold"
+            target="_blank"
+            rel="noopener"
+          >
+            Pei Xirong y la transmisión del linaje Wudang Longmén
+          </a>
+          <p class="text-sm text-text-secondary mt-1">
+            Notas biográficas y técnicas sobre el Maestro Pei Xirong, figura clave en la
+            preservación del estilo.
+          </p>
+        </li>
 
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
-        <a href="http://www.wudanglongmen.com/xiaolingliu/" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
-          Biografía y apuntes sobre Liu Xiao Ling (刘晓凌)
-        </a>
-        <p class="text-sm text-text-secondary mt-1">
-          Recopilación histórica sobre la docencia y el impacto de Liu Xiao Ling en la difusión de las artes internas.
-        </p>
-      </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
+          <a
+            href="http://www.wudanglongmen.com/xiaolingliu/"
+            class="text-blue-700 underline font-semibold"
+            target="_blank"
+            rel="noopener"
+          >
+            Biografía y apuntes sobre Liu Xiao Ling (刘晓凌)
+          </a>
+          <p class="text-sm text-text-secondary mt-1">
+            Recopilación histórica sobre la docencia y el impacto de Liu Xiao Ling en la difusión de
+            las artes internas.
+          </p>
+        </li>
 
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
-        <a href="https://datelobueno.com/wp-content/uploads/2014/05/Chi-Kung-del-Dao.pdf" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
-          Wubaomen Qigong: La enseñanza de Sun Haiyun y Sun JunQing
-        </a>
-        <p class="text-sm text-text-secondary mt-1">
-          Documento técnico sobre el linaje Wubaomen y su enfoque en la salud y la regulación del Qi.
-        </p>
-      </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
+          <a
+            href="https://datelobueno.com/wp-content/uploads/2014/05/Chi-Kung-del-Dao.pdf"
+            class="text-blue-700 underline font-semibold"
+            target="_blank"
+            rel="noopener"
+          >
+            Wubaomen Qigong: La enseñanza de Sun Haiyun y Sun JunQing
+          </a>
+          <p class="text-sm text-text-secondary mt-1">
+            Documento técnico sobre el linaje Wubaomen y su enfoque en la salud y la regulación del
+            Qi.
+          </p>
+        </li>
 
-      <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
-        <a href="https://es.wikipedia.org/wiki/Hueso_oracular" class="text-blue-700 underline font-semibold" target="_blank" rel="noopener">
-          Huesos Oraculares y la raíz del pensamiento simbólico chino
-        </a>
-        <p class="text-sm text-text-secondary mt-1">
-          Contexto arqueológico sobre la piromancia y los orígenes de la escritura, fundamentales para entender los conceptos del I-Ching.
-        </p>
-      </li>
+        <li class="pl-4 py-1 border-l-4 border-chinese-seal-red mb-4">
+          <a
+            href="https://es.wikipedia.org/wiki/Hueso_oracular"
+            class="text-blue-700 underline font-semibold"
+            target="_blank"
+            rel="noopener"
+          >
+            Huesos Oraculares y la raíz del pensamiento simbólico chino
+          </a>
+          <p class="text-sm text-text-secondary mt-1">
+            Contexto arqueológico sobre la piromancia y los orígenes de la escritura, fundamentales
+            para entender los conceptos del I-Ching.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-    </ul>
-  </div>
-</section>
-
-<script type="module" src="/src/js/photoswipe-init.js" defer></script>
-<PhotoSwipeUI />
+  <PhotoSwipeUI />
 </MainLayout>

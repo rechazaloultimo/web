@@ -1,206 +1,283 @@
 ---
 // 1. IMPORTAMOS LOS COMPONENTES NECESARIOS
-import MainLayout from '@/layouts/MainLayout.astro';
-import NavGeneral from '@/components/Navegadores/NavGeneral.astro';
-import CardGaleria from '@/components/galerias/CardGaleria.astro';
-import PhotoSwipeUI from '@/components/galerias/PhotoSwipeUI.astro';
+import MainLayout from "@/layouts/MainLayout.astro";
+import NavGeneral from "@/components/Navegadores/NavGeneral.astro";
+import CardGaleria from "@/components/galerias/CardGaleria.astro";
+import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
+import ImagenEstatica from "@/components/galerias/ImagenEstatica.astro";
 
 // 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
 const pageTitle = "Rodrigo Pizarro - Acerca de mí";
-const pageDescription = "Sitio personal de Rodrigo Pizarro con servicios de Qígōng, Tàijíquán y asistentes IA GPT personalizados.";
-
+const pageDescription =
+  "Sitio personal de Rodrigo Pizarro con servicios de Qígōng, Tàijíquán y asistentes IA GPT personalizados.";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
+  <NavGeneral />
 
-    <NavGeneral />
+  <main id="main-content" class="px-6 pt-24 pb-12 md:pt-32 md:pb-20 max-w-5xl mx-auto mb-12 mt-8">
+    <section id="de-mi" class="mb-16 md:mb-20 fade-in">
+      <div class="max-w-4xl mx-auto md:flex md:items-start md:gap-10">
+        <div class="md:w-3/5 mb-8 md:mb-0">
+          <ImagenEstatica
+            imgPath="qigong-wudang/wu (1).webp"
+            altText="Foto Rodrigo"
+            class="rounded-none shadow-xl w-full aspect-[4/5] border-2 p-1 object-cover"
+          />
+        </div>
+        <div class="md:w-3/5">
+          <h1 class="font-title text-4xl md:text-5xl text-text-title mb-6">De Mí</h1>
+          <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+            <strong>Me llamo Rodrigo Pizarro,</strong> soy argentino y nací en 1991. Actualmente vivo
+            en la CABA, Buenos Aires, Argentina.
+          </p>
+          <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+            Mi búsqueda actual está centrada en la exploración interna a través del Tàijíquán (Tai
+            Chi Chuan) y Qígōng (Chi Kung), con orientación daoísta, como vías para alcanzar
+            bienestar físico, emocional y, con bastante suerte, el espiritual.
+          </p>
+          <p class="text-lg text-text-secondary leading-relaxed">
+            También navego los desafíos del mundo actual, procurando utilizar las herramientas
+            disponibles para sostenerme económicamente hablando, sin perder de vista el equilibrio
+            entre mi crecimiento personal y las exigencias de la realidad cotidiana.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <main id="main-content" class="px-6 pt-24 pb-12 md:pt-32 md:pb-20 max-w-5xl mx-auto mb-12 mt-8">
+    <section
+      id="raices-intereses"
+      class="mb-8 py-12 md:py-16 section-bg-paper fade-in"
+      style="animation-delay: 0.2s;"
+    >
+      <div class="max-w-3xl mx-auto px-6">
+        <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
+          Mis Raíces e Intereses
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Provengo de una familia trabajadora, con un fuerte sentido de clase y la convicción en la
+          equidad social. Desde mi infancia, estos valores han moldeado mi forma de ver el mundo.
+          Por eso no le escapo a la discusión política y social, y me esfuerzo por ser una persona
+          sensible al dolor ajeno.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Cuando me digo que me esfuerzo, quiero decir que busco ser consciente de mis propios
+          sesgos y prejuicios, y por aprender de las experiencias de los demás. Entre las frases del
+          Daode Jing, se dice que cuanto más te vacias, más te llenas. Es un proceso continuo de
+          aprendizaje y crecimiento personal.
+        </p>
 
-        <section id="de-mi" class="mb-16 md:mb-20 fade-in">
-            <div class="max-w-4xl mx-auto md:flex md:items-start md:gap-10">
-            <div class="md:w-3/5 mb-8 md:mb-0">
-           <img
-        src="/src/images/qigong-wudang/wu (1).webp" loading="lazy"
-        alt="Foto de Rodrigo Pizarro"
-        class="rounded-none shadow-xl w-full aspect-[4/5] border-2 p-1 object-cover"
-                loading="lazy" decoding="async" />
-            </div>
-            <div class="md:w-3/5">
-                <h1 class="font-title text-4xl md:text-5xl text-text-title mb-6">De Mí</h1>
-                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
-                <strong>Me llamo Rodrigo Pizarro,</strong> soy argentino y nací en 1991. Actualmente vivo en la CABA, Buenos Aires, Argentina.
-                </p>
-                <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
-                Mi búsqueda actual está centrada en la exploración interna a través del Tàijíquán (Tai Chi Chuan) y Qígōng (Chi Kung), con orientación daoísta, como vías para alcanzar bienestar físico, emocional y, con bastante suerte, el espiritual.
-                </p>
-                <p class="text-lg text-text-secondary leading-relaxed">
-                También navego los desafíos del mundo actual, procurando utilizar las herramientas disponibles para sostenerme económicamente hablando, sin perder de vista el equilibrio entre mi crecimiento personal y las exigencias de la realidad cotidiana.
-                </p>
-            </div>
-            </div>
-        </section>
+        <details>
+          <summary class="ocultar-summary">
+            <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+              <span class="text-chinese-seal-red">Mas información</span>
+            </p>
+          </summary>
+          <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+            De adolescente, mi gusto por la narrativa de videojuegos y cine me llevó a estudiar cine
+            y guión en la Universidad Nacional de las Artes (UNA). Luego amplié mis estudios hacia
+            las artes multimediales en la UNA, sumergiéndome en una etapa de experimentación
+            artística y conceptual. Esta multidisciplina se convirtió en mi manera de unir diversos
+            intereses que ya venía teniendo y explorar nuevas formas de expresión.
+          </p>
+          <h4 class="font-title text-xl text-text-title mb-6">
+            Algunos temas de los que me gusta charlar:
+          </h4>
 
-        <section id="raices-intereses" class="mb-16 md:mb-20 py-12 md:py-16 section-bg-paper fade-in" style="animation-delay: 0.2s;">
-            <div class="max-w-3xl mx-auto px-6">
-                <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Mis Raíces e Intereses</h3>
-                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
-                        Provengo de una familia trabajadora, con un fuerte sentido de clase y la convicción en la equidad social. Desde mi infancia, estos valores han moldeado mi forma de ver el mundo. Por eso no le escapo a la discusión política y social, y me esfuerzo por ser una persona sensible al dolor ajeno.
-                    </p>
-                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
-                       Cuando me digo que me esfuerzo, quiero decir que busco ser consciente de mis propios sesgos y prejuicios, y por aprender de las experiencias de los demás. Entre las frases del Daode Jing, se dice que cuanto más te vacias, más te llenas. Es un proceso continuo de aprendizaje y crecimiento personal.
-                    </p>
-                  
+          <div class="flex flex-wrap gap-2 justify-start mb-10">
+            <span class="interest-tag">Cine</span>
+            <span class="interest-tag">Música Psicodélica</span>
+            <span class="interest-tag">Video Feedback</span>
+            <span class="interest-tag">Geometría Fractal</span>
+            <span class="interest-tag">Cyberpunk</span>
+            <span class="interest-tag">Anime</span>
+            <span class="interest-tag">Psytrance</span>
+            <span class="interest-tag">Internet</span>
+            <span class="interest-tag">Computación</span>
+            <span class="interest-tag">Metafísica</span>
+            <span class="interest-tag">Cerámica</span>
+            <span class="interest-tag">Fractales</span>
+            <span class="interest-tag">Espiritualidad</span>
+            <span class="interest-tag">Daoísmo</span>
+            <span class="interest-tag">Inteligencia Artificial</span>
+            <span class="interest-tag">Desarrollo Web</span>
+            <span class="interest-tag">Narrativa</span>
+            <span class="interest-tag">Experimentación Audiovisual</span>
+            <span class="interest-tag">Política</span>
+            <span class="interest-tag">Artes Plásticas</span>
+            <span class="interest-tag">Microscopía</span>
+            <span class="interest-tag">Psicodelia</span>
+            <span class="interest-tag">Estados de conciencia alterado</span>
+            <span class="interest-tag">Inteligencia Artificial</span>
+            <span class="interest-tag">Meditación</span>
+            <span class="interest-tag">Cultura popular</span>
+            <span class="interest-tag">Diseño de moda</span>
+            <span class="interest-tag">Piratería informática</span>
+          </div>
+          <p class="text-lg text-text-secondary mb-6 leading-relaxed">
+            En la UNA Multimediales, conocí a Gumersindo Serrano Gomez, gran profesor de Artes
+            Multimediales, que me acercó un concepto que debía llegarme en la vida: la metafísica.
+            Yo venía trabajando con fractales y el desarrollo audiovisual abstracto, incluso a
+            través de la técnica de videofeedback donde se puede apreciar la geometría fractal en
+            movimiento, la física de la luz y dejar que la mente interprete lo que ve. Pero todo
+            esto necesita un anclaje conceptual, y Gumer me recomendó leer a Rene Guenon, y de ahí
+            surge otra forma de ver el mundo, una forma de entender la espiritualidad y la
+            metafísica que me ha acompañado desde entonces.
+          </p>
+          <p class="text-lg text-text-secondary mb-6 leading-relaxed">
+            Tanto Rene Guenon como Frithjof Schuon, me ha influenciado en mi búsqueda espiritual. De
+            la mayoría de sus obras, encuentro comprensión de la tradición esotérica y la
+            espiritualidad universal. Así podría seguir nombrando más, y lo haré a medida que vaya
+            teniendo el tiempo para seguir actualizando este párrafo.
+          </p>
+        </details>
+      </div>
+    </section>
 
-               <details>
-                  <summary class="ocultar-summary">
-                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
-                      <span class="text-chinese-seal-red">Mas información</span>
-                    </p>
-                 </summary>
-                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
-                        De adolescente, mi gusto por la narrativa de videojuegos y cine me llevó a estudiar cine y guión en la Universidad Nacional de las Artes (UNA). Luego amplié mis estudios hacia las artes multimediales en la UNA, sumergiéndome en una etapa de experimentación artística y conceptual. Esta multidisciplina se convirtió en mi manera de unir diversos intereses que ya venía teniendo y explorar nuevas formas de expresión.
-                    </p>
-                  <h4 class="font-title text-xl text-text-title mb-6">Algunos temas de los que me gusta charlar:</h4>
-    
-                    <div class="flex flex-wrap gap-2 justify-start mb-10"> 
-                        <span class="interest-tag">Cine</span>
-                        <span class="interest-tag">Música Psicodélica</span>
-                        <span class="interest-tag">Video Feedback</span>
-                        <span class="interest-tag">Geometría Fractal</span>
-                        <span class="interest-tag">Cyberpunk</span>
-                        <span class="interest-tag">Anime</span>
-                        <span class="interest-tag">Psytrance</span>
-                        <span class="interest-tag">Internet</span>
-                        <span class="interest-tag">Computación</span>
-                        <span class="interest-tag">Metafísica</span>
-                        <span class="interest-tag">Cerámica</span>
-                        <span class="interest-tag">Fractales</span>
-                        <span class="interest-tag">Espiritualidad</span>
-                        <span class="interest-tag">Daoísmo</span>
-                        <span class="interest-tag">Inteligencia Artificial</span>
-                        <span class="interest-tag">Desarrollo Web</span>
-                        <span class="interest-tag">Narrativa</span>
-                        <span class="interest-tag">Experimentación Audiovisual</span>
-                        <span class="interest-tag">Política</span>
-                        <span class="interest-tag">Artes Plásticas</span>
-                        <span class="interest-tag">Microscopía</span>
-                        <span class="interest-tag">Psicodelia</span>
-                        <span class="interest-tag">Estados de conciencia alterado</span>
-                        <span class="interest-tag">Inteligencia Artificial</span>
-                        <span class="interest-tag">Meditación</span>
-                        <span class="interest-tag">Cultura popular</span>
-                        <span class="interest-tag">Diseño de moda</span>
-                        <span class="interest-tag">Piratería informática</span>
+    <articulo id="galeria-fotos-01" class="mb-16 md:mb-20 fade-in container mx-auto px-6">
+      <div class="pswp-gallery-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <CardGaleria
+          imgPath="qigong-wudang/wu (1).webp"
+          altText="Tàijí (太极) cultiva el Dāntián (丹田)"
+          width={950}
+          height={1200}
+        />
+        <CardGaleria
+          imgPath="qigong-wudang/wu (2).webp"
+          altText="Liǎng Yí (两仪) nutre el Yīn (阴)"
+          width={950}
+          height={1200}
+        />
 
+        <CardGaleria
+          imgPath="qigong-wudang/wu (3).webp"
+          altText="Sì Xiàng (四象) fortalece la energía Yáng de los riñones"
+          width={950}
+          height={1200}
+        />
+        <CardGaleria
+          imgPath="qigong-wudang/wu (4).webp"
+          altText="Bāguà (八卦) eleva la energía al Bǎihuì (百会)"
+          width={950}
+          height={1200}
+        />
+      </div>
+    </articulo>
 
-                    </div>
-                     <p class="text-lg text-text-secondary mb-6 leading-relaxed ">
-                        En la UNA Multimediales, conocí a Gumersindo Serrano Gomez, gran profesor de Artes Multimediales, que me acercó un concepto que debía llegarme en la vida: la metafísica. Yo venía trabajando con fractales y el desarrollo audiovisual abstracto, incluso a través de la técnica de videofeedback donde se puede apreciar la geometría fractal en movimiento,  la física de la luz y dejar que la mente interprete lo que ve. Pero todo esto necesita un anclaje conceptual, y Gumer me recomendó leer a Rene Guenon, y de ahí surge otra forma de ver el mundo, una forma de entender la espiritualidad y la metafísica que me ha acompañado desde entonces.
-                    </p>
-                    <p class="text-lg text-text-secondary mb-6 leading-relaxed ">
-                    Tanto Rene Guenon como Frithjof Schuon, me ha influenciado en mi búsqueda espiritual. De la mayoría de sus obras, encuentro comprensión de la tradición esotérica y la espiritualidad universal. Así podría seguir nombrando más, y lo haré a medida que vaya teniendo el tiempo para seguir actualizando este párrafo.</p>
-                </div>
-            </section>
- 
-        <articulo id="galeria-fotos-01" class="mb-16 md:mb-20 fade-in container mx-auto px-6">
-            <div class="pswp-gallery-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                                <CardGaleria 
-                            imgPath="qigong-wudang/wu (1).webp" 
-                            altText="Tàijí (太极) cultiva el Dāntián (丹田)"
-                            width={950}
-                            height={1200}
-                            
-                        />
-                        <CardGaleria 
-                            imgPath="qigong-wudang/wu (2).webp" 
-                            altText="Liǎng Yí (两仪) nutre el Yīn (阴)"
-                             width={950}
-                            height={1200}
-                        />
-                        
-                        <CardGaleria 
-                            imgPath="qigong-wudang/wu (3).webp" 
-                            altText="Sì Xiàng (四象) fortalece la energía Yáng de los riñones"
-                             width={950}
-                            height={1200}
-                        />
-                        <CardGaleria 
-                            imgPath="qigong-wudang/wu (4).webp" 
-                            altText="Bāguà (八卦) eleva la energía al Bǎihuì (百会)" 
-                            width={950}
-                            height={1200}
-                        />
-                </div>
-        </articulo>
-        
-        <section id="formacion-practica" class="mb-16 md:mb-20 fade-in">
-                <div class="max-w-3xl mx-auto">
-                    <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Mi Formación y Práctica</h3>
-                    <p class="text-lg text-ink mb-4 leading-relaxed ">
-                        Siempre estuve en diversas áreas, desde el soporte técnico, producción audiovisual, como soporte multimedial para usuarios de microscopíos.
-                        Sin embargo, encuentro más pasión en la búsqueda de un sentido más profundo de la vida y el bienestar integral. Eso no quita que haya dejado lo otro, sino que he ido integrando mis conocimientos y habilidades en un camino multidisplinario.
-                    </p>
-                    <p class="text-lg text-ink mb-4 leading-relaxed "> Esta búsqueda de la expresión de la metafísica, el daoísmo y la expresión de una práctica conectada con esta filosofía. Por eso en los últimos años, estoy centrando mi formación en integrar cuerpo y energía a través de disciplinas como el <i>Qìgōng (occidentalmente se le escribe y pronuncia como Chi Kung):</i> Prácticas respiratorias y de movimiento para cultivar, circular y equilibrar el Qì (energía vital); y el <i>Tàijíquán (escrito a veces como Tai Chi Chuan):</i> Arte marcial interna enfocado en la suavidad, la meditación en movimiento y la armonía cuerpo-mente. Y la Medicina Tradicional China, que me ha brindado un marco teórico y práctico para comprender la salud desde una perspectiva holística.
-                    </p>
-                
-               <details>
-                  <summary class="ocultar-summary">
-                    <p class="text-lg text-text-secondary mb-4 leading-relaxed ">
-                      <span class="text-chinese-seal-red">Mas información</span>
-                    </p>
-                 </summary>
-                    <p class="text-lg text-ink mb-4 leading-relaxed"> Empecé estas disciplinas en Julio 2022 en la Asociación <a href="https://www.qingmotiyu.com/" target="_blank" rel="noopener noreferrer" class="text-text-main hover:underline font-medium">Qīng Mò Tǐyù</a>, con el director Gustavo Salvato, hasta Octubre de 2025. En esta asociación aprendí muchas técnicas y conceptos, como grandes compañeros de práctica y la importancia de la comunidad en el aprendizaje. </p>
-                    <p class="text-lg text-ink mb-4 leading-relaxed">A principios del 2025 vengo leyendo sobre Sun LuTang (孙禄堂), creador del estilo Sun, primer maestro en dominar el Taijiquan, Xingyiquan y Baguaquan; las tres artes marciales internas, término que se conoce como Neijian. Realmente su vida, así como quienes continuan con su legado, comparten un respecto muy profundo por las artes internas, el confusionismo y el daoismo. Por eso en Septiembre de 2025 empecé a estudiar con el <a href="https://www.taichisun.com/quienes-somos" target="_blank" rel="noopener noreferrer" class="text-text-main hover:underline font-medium">Maestro Jorge Quiñones</a>, representate occidental reconocido por la Asociación de Artes Marciales de Sun Lu Tang de Ding Xing, China.</p>
-                    </p>
-                    <p class="text-lg text-ink mb-4 leading-relaxed">Entre otras otros temas, no puedo dejar de mencionar la Inteligencia Artificial, que me facina y aterroriza. Actualmente estoy desarrollando y brindando el servicio de proyectos con asistentes GPT personalizados, aplicando mis conocimientos de multiples disciplinas para crear herramientas que facilitan el acceso a saberes complejos, organizando información y ofreceiendo sistemas de consulta interactivos.</p>
-               </details>
-         </div>
-                  </section>
-  
-        <article id="galeria-fotos-02" class="mb-16 md:mb-20 fade-in container mx-auto px-6">
-            <div class="pswp-gallery-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                                <CardGaleria 
-                            imgPath="chuan (3).webp" 
-                            altText="Peng (掤) - Expansión de la Familia Yang Moderna" 
-                             width={950}
-                            width={950}
-                            height={1200}
-                            
-                        />
-                        <CardGaleria 
-                            imgPath="espada/espada (2).webp" 
-                            altText="Espada 32 (剑) - Familia Yang Moderna"
-                             width={950}
-                            height={1200}
-                        />
-                        
-                        <CardGaleria 
-                            imgPath="chuan (7).webp" 
-                            altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
-                             width={950}
-                            height={1200}
-                        />
-                        <CardGaleria 
-                            imgPath="abanico/aba (5).webp" 
-                            altText="Taiji Gong Fu Shan (52 movimientos) de Li Deyin" 
-                            width={950}
-                            height={1200}
-                        />
-                </div>
-        </article>
+    <section id="formacion-practica" class="mt-8 mb-16 md:mb-20 fade-in">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
+          Mi Formación y Práctica
+        </h3>
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          Siempre estuve en diversas áreas, desde el soporte técnico, producción audiovisual, como
+          soporte multimedial para usuarios de microscopíos. Sin embargo, encuentro más pasión en la
+          búsqueda de un sentido más profundo de la vida y el bienestar integral. Eso no quita que
+          haya dejado lo otro, sino que he ido integrando mis conocimientos y habilidades en un
+          camino multidisplinario.
+        </p>
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          Esta búsqueda de la expresión de la metafísica, el daoísmo y la expresión de una práctica
+          conectada con esta filosofía. Por eso en los últimos años, estoy centrando mi formación en
+          integrar cuerpo y energía a través de disciplinas como el <i
+            >Qìgōng (occidentalmente se le escribe y pronuncia como Chi Kung):</i
+          > Prácticas respiratorias y de movimiento para cultivar, circular y equilibrar el Qì (energía
+          vital); y el <i>Tàijíquán (escrito a veces como Tai Chi Chuan):</i> Arte marcial interna enfocado
+          en la suavidad, la meditación en movimiento y la armonía cuerpo-mente. Y la Medicina Tradicional
+          China, que me ha brindado un marco teórico y práctico para comprender la salud desde una perspectiva
+          holística.
+        </p>
+
+        <details>
+          <summary class="ocultar-summary">
+            <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+              <span class="text-chinese-seal-red">Mas información</span>
+            </p>
+          </summary>
+          <p class="text-lg text-ink mb-4 leading-relaxed">
+            Empecé estas disciplinas en Julio 2022 en la Asociación <a
+              href="https://www.qingmotiyu.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-text-main hover:underline font-medium">Qīng Mò Tǐyù</a
+            >, con el director Gustavo Salvato, hasta Octubre de 2025. En esta asociación aprendí
+            muchas técnicas y conceptos, como grandes compañeros de práctica y la importancia de la
+            comunidad en el aprendizaje.
+          </p>
+          <p class="text-lg text-ink mb-4 leading-relaxed">
+            A principios del 2025 vengo leyendo sobre Sun LuTang (孙禄堂), creador del estilo Sun,
+            primer maestro en dominar el Taijiquan, Xingyiquan y Baguaquan; las tres artes marciales
+            internas, término que se conoce como Neijian. Realmente su vida, así como quienes
+            continuan con su legado, comparten un respecto muy profundo por las artes internas, el
+            confusionismo y el daoismo. Por eso en Septiembre de 2025 empecé a estudiar con el <a
+              href="https://www.taichisun.com/quienes-somos"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-text-main hover:underline font-medium">Maestro Jorge Quiñones</a
+            >, representate occidental reconocido por la Asociación de Artes Marciales de Sun Lu
+            Tang de Ding Xing, China.
+          </p>
+        </details>
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          Entre otras otros temas, no puedo dejar de mencionar la Inteligencia Artificial, que me
+          facina y aterroriza. Actualmente estoy desarrollando y brindando el servicio de proyectos
+          con asistentes GPT personalizados, aplicando mis conocimientos de multiples disciplinas
+          para crear herramientas que facilitan el acceso a saberes complejos, organizando
+          información y ofreceiendo sistemas de consulta interactivos.
+        </p>
+      </div>
+    </section>
+
+    <article id="galeria-fotos-02" class="mb-16 md:mb-20 fade-in container mx-auto px-6">
+      <div class="pswp-gallery-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <CardGaleria
+          imgPath="chuan (3).webp"
+          altText="Peng (掤) - Expansión de la Familia Yang Moderna"
+          width={950}
+          width={950}
+          height={1200}
+        />
+        <CardGaleria
+          imgPath="espada/esp (2).webp"
+          altText="Espada 32 (剑) - Familia Yang Moderna"
+          width={950}
+          height={1200}
+        />
+
+        <CardGaleria
+          imgPath="chuan (7).webp"
+          altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+          width={950}
+          height={1200}
+        />
+        <CardGaleria
+          imgPath="abanico/aba (5).webp"
+          altText="Taiji Gong Fu Shan (52 movimientos) de Li Deyin"
+          width={950}
+          height={1200}
+        />
+      </div>
+    </article>
 
     <section id="lo-que-ofrezco" class="py-12 md:py-16 section-bg-paper fade-in">
-            <div class="container mx-auto px-6">
-                <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">Lo Que Ofrezco Hoy</h3>
-                <div class="max-w-3xl mx-auto space-y-8">
-                    <div>
-                        <h4 class="font-title text-xl text-text-title mb-2 flex items-center"><i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Clases de Tàijíquán y Qígōng</h4>
-                        <p class="text-lg text-text-secondary leading-relaxed ">
-                            Ofrezco clases particulares, tanto presenciales como virtuales, adaptadas a las necesidades individuales. Estas prácticas están orientadas a personas que buscan mejorar su salud, reducir el estrés, y también a quienes desean profundizar en la práctica energética y meditativa de estas artes daoístas.
-                        </p>
-                    </div>
-                    <!--
+      <div class="container mx-auto px-6">
+        <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
+          Lo Que Ofrezco Hoy
+        </h3>
+        <div class="max-w-3xl mx-auto space-y-8">
+          <div>
+            <h4 class="font-title text-xl text-text-title mb-2 flex items-center">
+              <i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Clases de
+              Tàijíquán y Qígōng
+            </h4>
+            <p class="text-lg text-text-secondary leading-relaxed">
+              Ofrezco clases particulares, tanto presenciales como virtuales, adaptadas a las
+              necesidades individuales. Estas prácticas están orientadas a personas que buscan
+              mejorar su salud, reducir el estrés, y también a quienes desean profundizar en la
+              práctica energética y meditativa de estas artes daoístas.
+            </p>
+          </div>
+          <!--
                               <div>
                                 <h4 class="font-title text-xl text-text-title mb-2 flex items-center"><i aria-hidden="true" class="fas fa-spa text-text-main mr-3"></i>Sesiones de Masaje Terapéutico</h4>
                                  <p class="text-lg text-text-secondary leading-relaxed ">
@@ -208,27 +285,33 @@ const pageDescription = "Sitio personal de Rodrigo Pizarro con servicios de Qíg
                                 </p>
                               </div>
                     -->
-                    <div>
-                        <h4 class="font-title text-xl text-text-title mb-2 flex items-center"><i aria-hidden="true" class="fas fa-robot text-text-main mr-3"></i>Desarrollo con Asistentes GPT</h4>
-                       <p class="text-lg text-text-secondary leading-relaxed ">
-                            Estoy desarrollando asistentes de GPT personalizados, integrando saberes de distintas disciplinas como la medicina tradicional china, Qìgōng y Tàijíquán. Estas soluciones permiten simplificar el acceso a información especializada, organizar contenidos y brindar plataformas de consulta interactiva adaptadas a cada necesidad.
-                        </p>
-                    </div>
-                    <div>
-                        <h4 class="font-title text-xl text-text-title mb-2 flex items-center"><i aria-hidden="true" class="fas fa-microscope text-text-main mr-3"></i>Mantenimiento de Microscopios</h4>
-                        <p class="text-lg text-text-secondary leading-relaxed ">
-                            En un ámbito totalmente diferente, ofrezco servicios de mantenimiento de microscopios, incluyendo limpieza integral (mecánica y óptica) y consultoría particular. Es algo que hice y seguiré haciendo, que me ha permitido combinar mi interés por la tecnología y las manualidades finas.
-                        </p>
-                    </div>
-                </div>
-            </div>
+          <div>
+            <h4 class="font-title text-xl text-text-title mb-2 flex items-center">
+              <i aria-hidden="true" class="fas fa-robot text-text-main mr-3"></i>Desarrollo con
+              Asistentes GPT
+            </h4>
+            <p class="text-lg text-text-secondary leading-relaxed">
+              Estoy desarrollando asistentes de GPT personalizados, integrando saberes de distintas
+              disciplinas como la medicina tradicional china, Qìgōng y Tàijíquán. Estas soluciones
+              permiten simplificar el acceso a información especializada, organizar contenidos y
+              brindar plataformas de consulta interactiva adaptadas a cada necesidad.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-title text-xl text-text-title mb-2 flex items-center">
+              <i aria-hidden="true" class="fas fa-microscope text-text-main mr-3"></i>Mantenimiento
+              de Microscopios
+            </h4>
+            <p class="text-lg text-text-secondary leading-relaxed">
+              En un ámbito totalmente diferente, ofrezco servicios de mantenimiento de microscopios,
+              incluyendo limpieza integral (mecánica y óptica) y consultoría particular. Es algo que
+              hice y seguiré haciendo, que me ha permitido combinar mi interés por la tecnología y
+              las manualidades finas.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-   
-
-    </main>
-
-
-   <script type="module" src="/src/js/photoswipe-init.js" defer></script>
-
-    <PhotoSwipeUI />
-    </MainLayout>
+  </main>
+  <PhotoSwipeUI />
+</MainLayout>

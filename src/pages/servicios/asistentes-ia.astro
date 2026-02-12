@@ -9,492 +9,334 @@ import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
 
 // 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
 const pageTitle = "Rodrigo Pizarro - IA GPT Personalizados";
-const pageDescription = "Sitio personal de Rodrigo Pizarro con servicios de asistentes IA GPT personalizados.";
+const pageDescription =
+  "Sitio personal de Rodrigo Pizarro con servicios de asistentes IA GPT personalizados.";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
+  <NavGeneral />
 
+  <main id="main-content" class="container mx-auto px-6 py-12 md:py-20">
+    <section id="intro-contenido-ia" class="mb-16 md:mb-20 fade-in">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <i aria-hidden="true" class="fas fa-brain text-6xl text-chinese-seal-red mb-6"></i>
+        <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-6 leading-snug">
+          Asistentes IA: Un Apoyo Moderno al Aprendizaje Ancestral
+        </h2>
+        <p class="text-xl text-ink leading-relaxed">
+          Integrando herramientas modernas para facilitar el estudio y la comprensión de disciplinas
+          tradicionales.
+        </p>
+      </div>
+      <div class="max-w-4xl mx-auto section-bg-paper p-6 md:p-10 rounded-none shadow-lg">
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          Un asistente de IA como un GPT personalizado es especialmente funcional para aprender y
+          profundizar en prácticas como el Qígōng, el Tàijíquán y la Medicina Tradicional China
+          (MTC), entre otras disciplinas. Gracias a la curaduría previa en materiales y directrices
+          configurada en un GPT, es posible explorar desde los fundamentos filosóficos —como el
+          equilibrio del Yin y el Yang o los Cinco Elementos— hasta aspectos prácticos como las
+          posturas, la respiración o el uso terapéutico de los meridianos y puntos energéticos,
+          incluso repasar conceptos del Daoismo.
+        </p>
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          A diferencia de un manual o un buscador, el asistente puede responder según tu nivel de
+          experiencia, integrar distintos enfoques (médico, marcial o espiritual), aclarar dudas en
+          tiempo real y ayudarte a construir una comprensión orgánica y progresiva de estas
+          disciplinas. Ya sea que estés comenzando a practicar, enseñando, o simplemente
+          investigando, este tipo de herramienta se convierte en un asistente de estudio y
+          reflexión, que respeta la complejidad del conocimiento tradicional, pero lo hace accesible
+          para el presente.
+        </p>
+      </div>
+    </section>
 
-        <NavGeneral />
+    <section id="donaciones-ia" class="mb-16 md:mb-20 fade-in">
+      <div class="max-w-4xl mx-auto section-bg-dynamic p-6 md:p-10 rounded-none shadow-lg">
+        <p class="text-lg mb-4 leading-relaxed">
+          Creo firmemente en democratizar el acceso a la tecnología y en que el aprendizaje sea un
+          derecho, no un privilegio. <strong
+            >Por eso publicaré la mayoría de mis GPTs de forma gratuita</strong
+          >, sin suscripciones ni registros complicados: quiero que los uses, experimentes y, sobre
+          todo, que te resulten útiles para tus proyectos, estudios o trabajo.
+        </p>
+        <p class="text-lg leading-relaxed">
+          <strong>Si sentís que estas herramientas te aportaron valor</strong> —ya sea ahorrándote tiempo,
+          inspirándote o resolviendo un problema— <strong
+            >te agradecería una donación monetaria del monto que consideres.</strong
+          > Cada aporte, grande o pequeño, me ayuda en las horas que dedico a investigar y mejorar los
+          asistentes.
+        </p>
+        <div class="text-center mt-8">
+          <a
+            href="https://www.matecito.co/rechazaloultimo"
+            class="button-manuscript-inverted py-3 px-8">Agradeceme con tu aporte</a
+          >
+        </div>
+      </div>
+    </section>
 
-        <main id="main-content" class="container mx-auto px-6 py-12 md:py-20">
-            <section id="intro-contenido-ia" class="mb-16 md:mb-20 fade-in">
-                <div class="max-w-3xl mx-auto text-center mb-12">
-                    <i
-                        aria-hidden="true"
-                        class="fas fa-brain text-6xl text-chinese-seal-red mb-6"
-                    ></i>
-                    <h2
-                        class="font-title text-4xl md:text-5xl text-title-ink mb-6 leading-snug"
-                    >
-                        Asistentes IA: Un Apoyo Moderno al Aprendizaje Ancestral
-                    </h2>
-                    <p class="text-xl text-ink leading-relaxed">
-                        Integrando herramientas modernas para facilitar el
-                        estudio y la comprensión de disciplinas tradicionales.
-                    </p>
-                </div>
-                <div
-                    class="max-w-4xl mx-auto section-bg-paper p-6 md:p-10 rounded-none shadow-lg"
-                >
-                    <p class="text-lg text-ink mb-4 leading-relaxed">
-                        Un asistente de IA como un GPT personalizado es
-                        especialmente funcional para aprender y profundizar en
-                        prácticas como el Qígōng, el Tàijíquán y la Medicina
-                        Tradicional China (MTC), entre otras disciplinas.
-                        Gracias a la curaduría previa en materiales y
-                        directrices configurada en un GPT, es posible explorar
-                        desde los fundamentos filosóficos —como el equilibrio
-                        del Yin y el Yang o los Cinco Elementos— hasta aspectos
-                        prácticos como las posturas, la respiración o el uso
-                        terapéutico de los meridianos y puntos energéticos,
-                        incluso repasar conceptos del Daoismo.
-                    </p>
-                    <p class="text-lg text-ink mb-4 leading-relaxed">
-                        A diferencia de un manual o un buscador, el asistente
-                        puede responder según tu nivel de experiencia, integrar
-                        distintos enfoques (médico, marcial o espiritual),
-                        aclarar dudas en tiempo real y ayudarte a construir una
-                        comprensión orgánica y progresiva de estas disciplinas.
-                        Ya sea que estés comenzando a practicar, enseñando, o
-                        simplemente investigando, este tipo de herramienta se
-                        convierte en un asistente de estudio y reflexión, que
-                        respeta la complejidad del conocimiento tradicional,
-                        pero lo hace accesible para el presente.
-                    </p>
-                </div>
-            </section>
+    <section id="mis-gpts" class="py-16 md:py-24 fade-in">
+      <div class="container mx-auto px-6">
+        <h2 class="font-title text-3xl md:text-4xl lg:text-5xl text-center mb-6">
+          Mis Asistentes GPT gratuitos
+        </h2>
+        <p class="text-lg text-text-secondary text-center max-w-2xl mx-auto mb-12 md:mb-16">
+          Los GPTs aquí son gratuitos, sin suscripciones ni registros complicados. Es necesario
+          tener cuenta en ChatGPT.com para acceder a ellos, pero no es necesario ser usuario Plus.
+          Algunos mejoran su funcionalidad con la suscripción paga, pero no es obligatorio.
+        </p>
 
-            <section id="donaciones-ia" class="mb-16 md:mb-20 fade-in">
-                <div
-                    class="max-w-4xl mx-auto section-bg-dynamic p-6 md:p-10 rounded-none shadow-lg"
-                >
-                    <p class="text-lg mb-4 leading-relaxed">
-                        Creo firmemente en democratizar el acceso a la
-                        tecnología y en que el aprendizaje sea un derecho, no un
-                        privilegio. <strong
-                            >Por eso publicaré la mayoría de mis GPTs de forma
-                            gratuita</strong
-                        >, sin suscripciones ni registros complicados: quiero
-                        que los uses, experimentes y, sobre todo, que te
-                        resulten útiles para tus proyectos, estudios o trabajo.
-                    </p>
-                    <p class="text-lg leading-relaxed">
-                        <strong
-                            >Si sentís que estas herramientas te aportaron valor</strong
-                        > —ya sea ahorrándote tiempo, inspirándote o resolviendo un
-                        problema— <strong
-                            >te agradecería una donación monetaria del monto que
-                            consideres.</strong
-                        > Cada aporte, grande o pequeño, me ayuda en las horas que
-                        dedico a investigar y mejorar los asistentes.
-                    </p>
-                    <div class="text-center mt-8">
-                        <a
-                            href="https://www.matecito.co/rechazaloultimo"
-                            class="button-manuscript-inverted py-3 px-8"
-                            >Agradeceme con tu aporte</a
-                        >
-                    </div>
-                </div>
-            </section>
-
-            <section
-                id="mis-gpts"
-                class="py-16 md:py-24 fade-in"
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div class="card-manuscript p-6 md:p-8 flex flex-col fade-in">
+            <div class="text-center mb-4">
+              <i aria-hidden="true" class="fas fa-book-medical text-4xl text-chinese-seal-red"></i>
+            </div>
+            <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center">MTC-GPT</h3>
+            <p class="text-sm text-center text-text-secondary mb-1">Medicina Tradicional China</p>
+            <p class="text-ink leading-relaxed mb-4 flex-grow">
+              Asistente IA para el estudio de MTC, integrando Yin-Yang, Cinco Elementos y Tres
+              Tesoros. Facilita el diagnóstico según Ba Gang y aclara conceptos complejos.
+            </p>
+            <p class="text-center font-semibold text-text-secondary mb-4">Estado: En desarrollo</p>
+            <div class="text-center mt-auto">
+              <button
+                class="button-manuscript w-full text-center py-2 px-4 text-sm opacity-50 cursor-not-allowed"
+                aria-disabled="true"
+                disabled>Próximamente</button
               >
-                <div class="container mx-auto px-6">
-                    <h2
-                        class="font-title text-3xl md:text-4xl lg:text-5xl text-center mb-6"
-                    >
-                        Mis Asistentes GPT gratuitos
-                    </h2>
-                    <p
-                        class="text-lg text-text-secondary text-center max-w-2xl mx-auto mb-12 md:mb-16"
-                    >
-                        Los GPTs aquí son gratuitos, sin suscripciones ni
-                        registros complicados. Es necesario tener cuenta en
-                        ChatGPT.com para acceder a ellos, pero no es necesario
-                        ser usuario Plus. Algunos mejoran su funcionalidad con
-                        la suscripción paga, pero no es obligatorio.
-                    </p>
+            </div>
+          </div>
 
-                    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-book-medical text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                MTC-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                Medicina Tradicional China
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                Asistente IA para el estudio de MTC, integrando
-                                Yin-Yang, Cinco Elementos y Tres Tesoros.
-                                Facilita el diagnóstico según Ba Gang y aclara
-                                conceptos complejos.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-text-secondary mb-4"
-                            >
-                                Estado: En desarrollo
-                            </p>
-                            <div class="text-center mt-auto">
-                                <button
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm opacity-50 cursor-not-allowed"
-                                    aria-disabled="true"
-                                    disabled>Próximamente</button
-                                >
-                            </div>
-                        </div>
+          <div class="card-manuscript p-6 md:p-8 flex flex-col fade-in">
+            <div class="text-center mb-4">
+              <i aria-hidden="true" class="fas fa-bars text-4xl text-chinese-seal-red"></i>
+            </div>
+            <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center">
+              BāguàGPT
+            </h3>
+            <p class="text-sm text-center text-text-secondary mb-1">Los Ocho Trigramas</p>
+            <p class="text-ink leading-relaxed mb-4 flex-grow">
+              Herramienta pedagógica sobre simbología, filosofía y aplicación del bāguà y cada
+              trigrama, vinculándolos con principios energéticos, psicológicos y físicos del
+              entrenamiento interno.
+            </p>
+            <p class="text-center font-semibold text-green-600 mb-4">
+              Actualizado en Julio de 2025
+            </p>
+            <div class="text-center mt-auto">
+              <a
+                href=" https://chatgpt.com/g/g-67f660548d848191b01af38f48a940d8-baguagpt-comprension-de-los-ocho-trigramas"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button-manuscript w-full text-center py-2 px-4 text-sm">Utilizar BāguàGPT</a
+              >
+            </div>
+          </div>
 
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                         
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-bars text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                BāguàGPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                Los Ocho Trigramas
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                Herramienta pedagógica sobre simbología,
-                                filosofía y aplicación del bāguà y cada
-                                trigrama, vinculándolos con principios
-                                energéticos, psicológicos y físicos del
-                                entrenamiento interno.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-green-600 mb-4"
-                            >
-                                Actualizado en Julio de 2025
-                            </p>
-                            <div class="text-center mt-auto">
-                                <a
-                                    href=" https://chatgpt.com/g/g-67f660548d848191b01af38f48a940d8-baguagpt-comprension-de-los-ocho-trigramas"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm"
-                                    >Utilizar BāguàGPT</a
-                                >
-                            </div>
-                        </div>
+          <div
+            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
+            style="animation-delay: 0.5s;"
+          >
+            <div class="text-center mb-4">
+              <i aria-hidden="true" class="fas fa-mountain text-4xl text-chinese-seal-red"></i>
+            </div>
+            <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center">
+              Mawangdui Dǎoyǐn Shu-GPT
+            </h3>
+            <p class="text-sm text-center text-text-secondary mb-1">Sistema Qígōng Oficial</p>
+            <p class="text-ink leading-relaxed mb-4 flex-grow">
+              Asistente del sistema qigong Mawangdui Dǎoyǐn Shu, con una curaduría en la historia,
+              fuentes, base práctica oficial, errores y modificaciones. Ideal para quienes buscan
+              profundizar en este sistema de Qígōng que beneficia la salud física.
+            </p>
+            <p class="text-center font-semibold text-text-secondary mb-4">Estado: En desarrollo</p>
+            <div class="text-center mt-auto">
+              <button
+                class="button-manuscript w-full text-center py-2 px-4 text-sm opacity-50 cursor-not-allowed"
+                aria-disabled="true"
+                disabled>Más Info (Próximamente)</button
+              >
+            </div>
+          </div>
 
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.5s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-mountain text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                Mawangdui Dǎoyǐn Shu-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                Sistema Qígōng Oficial
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                Asistente del sistema qigong Mawangdui Dǎoyǐn
-                                Shu, con una curaduría en la historia, fuentes,
-                                base práctica oficial, errores y modificaciones.
-                                Ideal para quienes buscan profundizar en este
-                                sistema de Qígōng que beneficia la salud física.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-text-secondary mb-4"
-                            >
-                                Estado: En desarrollo
-                            </p>
-                            <div class="text-center mt-auto">
-                                <button
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm opacity-50 cursor-not-allowed"
-                                    aria-disabled="true"
-                                    disabled>Más Info (Próximamente)</button
-                                >
-                            </div>
-                        </div>
+          <div
+            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
+            style="animation-delay: 0.5s;"
+          >
+            <div class="text-center mb-4">
+              <i aria-hidden="true" class="fas fa-mountain text-4xl text-chinese-seal-red"></i>
+            </div>
+            <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center">
+              Wudang Qígōng-GPT
+            </h3>
+            <p class="text-sm text-center text-text-secondary mb-1">Sistema Wudang Qígōng</p>
+            <p class="text-ink leading-relaxed mb-4 flex-grow">
+              Inspirado en Wǔdāng Qìgōng, une conocimiento ancestral con mi práctica diaria.
+              Actualizado semanalmente, es un puente entre practicantes y este sistema de Qígōng.
+            </p>
+            <p class="text-center font-semibold text-green-600 mb-4">
+              Actualizado en Septiembre de 2025
+            </p>
+            <div class="text-center mt-auto">
+              <a
+                href="https://chatgpt.com/g/g-67e553e939fc8191bce0a17e49639d09-wudang-qigong-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button-manuscript w-full text-center py-2 px-4 text-sm"
+                >Utilizar Wudang Qígōng-GPT</a
+              >
+            </div>
+          </div>
 
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.5s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-mountain text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                Wudang Qígōng-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                Sistema Wudang Qígōng
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                Inspirado en Wǔdāng Qìgōng, une conocimiento
-                                ancestral con mi práctica diaria. Actualizado
-                                semanalmente, es un puente entre practicantes y
-                                este sistema de Qígōng.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-green-600 mb-4"
-                            >
-                                Actualizado en Septiembre de 2025
-                            </p>
-                            <div class="text-center mt-auto">
-                                <a
-                                    href="https://chatgpt.com/g/g-67e553e939fc8191bce0a17e49639d09-wudang-qigong-1"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm"
-                                    >Utilizar Wudang Qígōng-GPT</a
-                                >
-                            </div>
-                        </div>
+          <div
+            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
+            style="animation-delay: 0.5s;"
+          >
+            <div class="text-center mb-4">
+              <i aria-hidden="true" class="fas fa-mountain text-4xl text-chinese-seal-red"></i>
+            </div>
+            <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center">
+              Yi Jin Jing-GPT
+            </h3>
+            <p class="text-sm text-center text-text-secondary mb-1">
+              Oficial, Tradicionales y variaciones
+            </p>
+            <p class="text-ink leading-relaxed mb-4 flex-grow">
+              Este GPT toma como base el sistema Yi Jin Jing, integrando diferentes enfoques y
+              tradiciones. Es una herramienta para profundizar en esta práctica ancestral de Qígōng
+              que contiene una rica historia y múltiples interpretaciones.
+            </p>
+            <p class="text-center font-semibold text-text-secondary mb-4">Estado: En desarrollo</p>
+            <div class="text-center mt-auto">
+              <button
+                class="button-manuscript w-full text-center py-2 px-4 text-sm opacity-50 cursor-not-allowed"
+                aria-disabled="true"
+                disabled>Más Info (Próximamente)</button
+              >
+            </div>
+          </div>
 
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.5s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-mountain text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                Yi Jin Jing-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                Oficial, Tradicionales y variaciones
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                Este GPT toma como base el sistema Yi Jin Jing,
-                                integrando diferentes enfoques y tradiciones. Es
-                                una herramienta para profundizar en esta
-                                práctica ancestral de Qígōng que contiene una
-                                rica historia y múltiples interpretaciones.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-text-secondary mb-4"
-                            >
-                                Estado: En desarrollo
-                            </p>
-                            <div class="text-center mt-auto">
-                                <button
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm opacity-50 cursor-not-allowed"
-                                    aria-disabled="true"
-                                    disabled>Más Info (Próximamente)</button
-                                >
-                            </div>
-                        </div>
+          <div
+            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
+            style="animation-delay: 0.5s;"
+          >
+            <div class="text-center mb-4">
+              <i aria-hidden="true" class="fas fa-mountain text-4xl text-chinese-seal-red"></i>
+            </div>
+            <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center">
+              Estiramiento de Meridianos TM-GPT
+            </h3>
+            <p class="text-sm text-center text-text-secondary mb-1">
+              (Sistema de Qigong para Meridianos Tendinosos Musculares (TM))
+            </p>
+            <p class="text-ink leading-relaxed mb-4 flex-grow">
+              El ChatGPT de Estiramiento de Meridianos TM es una herramienta para aprender y
+              practicar estiramientos específicos que benefician la salud de los meridianos y puntos
+              energéticos. Ideal para quienes buscan mejorar su bienestar físico y energético.
+            </p>
+            <p class="text-center font-semibold text-text-secondary mb-4">Estado: En desarrollo</p>
+            <div class="text-center mt-auto">
+              <button
+                class="button-manuscript w-full text-center py-2 px-4 text-sm opacity-50 cursor-not-allowed"
+                aria-disabled="true"
+                disabled>Más Info (Próximamente)</button
+              >
+            </div>
+          </div>
 
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.5s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-mountain text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                Estiramiento de Meridianos TM-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                (Sistema de Qigong para Meridianos Tendinosos
-                                Musculares (TM))
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                El ChatGPT de Estiramiento de Meridianos TM es
-                                una herramienta para aprender y practicar
-                                estiramientos específicos que benefician la
-                                salud de los meridianos y puntos energéticos.
-                                Ideal para quienes buscan mejorar su bienestar
-                                físico y energético.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-text-secondary mb-4"
-                            >
-                                Estado: En desarrollo
-                            </p>
-                            <div class="text-center mt-auto">
-                                <button
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm opacity-50 cursor-not-allowed"
-                                    aria-disabled="true"
-                                    disabled>Más Info (Próximamente)</button
-                                >
-                            </div>
-                        </div>
+          <div
+            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
+            style="animation-delay: 0.6s;"
+          >
+            <div class="text-center mb-4">
+              <i aria-hidden="true" class="fas fa-language text-4xl text-chinese-seal-red"></i>
+            </div>
+            <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center">
+              Pīnyīn-GPT
+            </h3>
+            <p class="text-sm text-center text-text-secondary mb-1">(Revisor de Pīnyīn)</p>
+            <p class="text-ink leading-relaxed mb-4 flex-grow">
+              ChatGPT especializado para comprender términos chinos en taijí, qígōng, MTC u otras
+              palabras chinas que nos genren dudas. Descubre cómo se escriben, su raíz cultural y
+              evolución.
+            </p>
+            <p class="text-center font-semibold text-green-600 mb-4">
+              Actualizado en Julio de 2025
+            </p>
+            <div class="text-center mt-auto">
+              <a
+                href="https://chatgpt.com/g/g-67e2b640fd70819190f60f3e5b572214-corrector-de-pinyin"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button-manuscript w-full text-center py-2 px-4 text-sm"
+                >Utilizar Pīnyīn-GPT</a
+              >
+            </div>
+          </div>
 
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.6s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-language text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                Pīnyīn-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                (Revisor de Pīnyīn)
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                ChatGPT especializado para comprender términos
-                                chinos en taijí, qígōng, MTC u otras palabras
-                                chinas que nos genren dudas. Descubre cómo se
-                                escriben, su raíz cultural y evolución.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-green-600 mb-4"
-                            >
-                                Actualizado en Julio de 2025
-                            </p>
-                            <div class="text-center mt-auto">
-                                <a
-                                    href="https://chatgpt.com/g/g-67e2b640fd70819190f60f3e5b572214-corrector-de-pinyin"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm"
-                                    >Utilizar Pīnyīn-GPT</a
-                                >
-                            </div>
-                        </div>
+          <!-- Nuevo: Dào Dé Jīng-GPT -->
+          <div
+            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
+            style="animation-delay: 0.7s;"
+          >
+            <div class="text-center mb-4">
+              <i aria-hidden="true" class="fas fa-scroll text-4xl text-chinese-seal-red"></i>
+            </div>
+            <h3 class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center">
+              Dào Dé Jīng-GPT
+            </h3>
+            <p class="text-sm text-center text-text-secondary mb-1">
+              Comentarios y textos del Dào Dé Jīng
+            </p>
+            <p class="text-ink leading-relaxed mb-4 flex-grow">
+              Asistente para explorar el Dào Dé Jīng: interpretación de versos, variantes de
+              traducción, contexto histórico y aplicaciones prácticas.
+            </p>
+            <p class="text-center font-semibold text-green-600 mb-4">
+              Actualizado en Septiembre de 2025
+            </p>
+            <div class="text-center mt-auto">
+              <a
+                href="https://chatgpt.com/g/g-684b099f0d408191b67e227a685b5261-daode-jing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button-manuscript w-full text-center py-2 px-4 text-sm"
+                >Utilizar Dào Dé Jīng-GPT</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                        <!-- Nuevo: Dào Dé Jīng-GPT -->
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.7s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-scroll text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                Dào Dé Jīng-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                Comentarios y textos del Dào Dé Jīng
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                Asistente para explorar el Dào Dé Jīng:
-                                interpretación de versos, variantes de
-                                traducción, contexto histórico y aplicaciones
-                                prácticas.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-green-600 mb-4"
-                            >
-                                Actualizado en Septiembre de 2025
-                            </p>
-                            <div class="text-center mt-auto">
-                                <a
-                                    href="https://chatgpt.com/g/g-684b099f0d408191b67e227a685b5261-daode-jing"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm"
-                                    >Utilizar Dào Dé Jīng-GPT</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section
-                id="asesoria-gpt"
-                class="py-16 md:py-24 section-bg-paper fade-in"
-                style="animation-delay: 0.7s;"
+    <section
+      id="asesoria-gpt"
+      class="py-16 md:py-24 section-bg-paper fade-in"
+      style="animation-delay: 0.7s;"
+    >
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <i aria-hidden="true" class="fas fa-hands-helping text-5xl text-chinese-seal-red mb-6"
+          ></i>
+          <h2 class="font-title text-3xl md:text-4xl text-title-ink mb-8">
+            Servicio de Asesoría GPT Personalizada
+          </h2>
+          <p class="text-lg text-ink mb-6 leading-relaxed">
+            Ofrezco un servicio particular para generar tus propios asistentes GPT enfocados en tu
+            material y objetivos específicos.
+          </p>
+          <p class="text-lg text-ink mb-6 leading-relaxed">
+            Imagina un asistente particular para consultar tu conocimiento, resolver dudas, realizar
+            estudios, resúmenes, análisis, generar imágenes y más. Una herramienta a medida para
+            potenciar tu trabajo o estudio.
+          </p>
+          <div class="mt-8">
+            <a href="/index/#contacto" class="button-manuscript text-lg py-3 px-8"
+              >Consultar por Asesoría</a
             >
-                <div class="container mx-auto px-6">
-                    <div class="max-w-3xl mx-auto text-center">
-                        <i
-                            aria-hidden="true"
-                            class="fas fa-hands-helping text-5xl text-chinese-seal-red mb-6"
-                        ></i>
-                        <h2
-                            class="font-title text-3xl md:text-4xl text-title-ink mb-8"
-                        >
-                            Servicio de Asesoría GPT Personalizada
-                        </h2>
-                        <p class="text-lg text-ink mb-6 leading-relaxed">
-                            Ofrezco un servicio particular para generar tus
-                            propios asistentes GPT enfocados en tu material y
-                            objetivos específicos.
-                        </p>
-                        <p class="text-lg text-ink mb-6 leading-relaxed">
-                            Imagina un asistente particular para consultar tu
-                            conocimiento, resolver dudas, realizar estudios,
-                            resúmenes, análisis, generar imágenes y más. Una
-                            herramienta a medida para potenciar tu trabajo o
-                            estudio.
-                        </p>
-                        <div class="mt-8">
-                            <a
-                                href="/index/#contacto"
-                                class="button-manuscript text-lg py-3 px-8"
-                                >Consultar por Asesoría</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </body>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </MainLayout>

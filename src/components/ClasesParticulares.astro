@@ -1,232 +1,284 @@
 ---
-import CardGaleria from '@/components/galerias/CardGaleria.astro';
-import PhotoSwipeUI from '@/components/galerias/PhotoSwipeUI.astro';
+import CardGaleria from "@/components/galerias/CardGaleria.astro";
+import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
 ---
 
-<main id="info-particulares-content" class="info-panel hidden px-6 pt-24 pb-12 md:pt-32 md:pb-20 max-w-5xl mx-auto mb-12">
+<main
+  id="info-particulares-content"
+  class="px-6 pt-24 pb-12 md:pt-32 md:pb-20 max-w-5xl mx-auto mb-12"
+>
+  <section id="intro-contenido-clases" class="mb-16 md:mb-20 fade-in">
+    <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-12 text-center">
+      Tus Clases Personalizadas y Particulares de Qígōng y Tàijíquán
+    </h2>
+    <p class="text-lg text-ink mb-4 leading-relaxed">
+      Sesiones individuales y personalizadas pensadas para quienes buscan una guía exclusiva
+      adaptada 100% a su propio ritmo y necesidades.
+    </p>
 
-    <section id="intro-contenido-clases" class="mb-16 md:mb-20 fade-in">
-            <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-12 text-center">
-                Tus Clases Personalizadas y Particulares de Qígōng y Tàijíquán
-            </h2>
-                <p class="text-lg text-ink mb-4 leading-relaxed ">
-                Sesiones individuales y personalizadas pensadas para quienes buscan una guía exclusiva adaptada 100% a su propio ritmo y necesidades.</p>
+    <p class="text-lg text-ink mb-4 leading-relaxed">
+      Las clases particulares están diseñadas <strong
+        >para las personas que quieren una práctica personalizada</strong
+      >, con el acompañamiento exhaustivo, que les permita tener <strong
+        >días y horarios elegidos a su medida</strong
+      >. De esa manera, la frecuencia y duración de las sesiones serán según <strong
+        >tus necesidades y disponibilidad, el sistema que elijas</strong
+      > y te interese profundizar, y <strong>los objetivos que quieras alcanzar</strong>. Podes
+      tener desde 1 hasta 3 horas máximo de entrenamiento por día, de lunes a viernes.
+    </p>
 
-            <p class="text-lg text-ink mb-4 leading-relaxed ">
-              Las clases particulares están diseñadas <strong>para las personas que quieren una práctica personalizada</strong>, con el acompañamiento exhaustivo, que les permita tener <strong>días y horarios elegidos a su medida</strong>. De esa manera, la frecuencia y duración de las sesiones serán según <strong>tus necesidades y disponibilidad, el sistema que elijas</strong> y te interese profundizar, y <strong>los objetivos que quieras alcanzar</strong>. Podes tener desde 1 hasta 3 horas máximo de entrenamiento por día, de lunes a viernes.
-            </p>
-        
-            <p class="text-lg text-ink mb-4 leading-relaxed ">
-            De mi parte, te cuento que <strong>en mi taller dispongo de las comodidades</strong> como sillones, espejos, música, aire acondicionado, baño y agua/té; y <strong>en cuanto a los ejercicios</strong>, los ajusto a tu estado físico, objetivos y experiencia previa, observando cada matiz de la postura y corrigiendo en el momento. Una vez terminada la clase, te envío un <strong>resumen escrito y grabaciones de los ejercicios para que puedas repasar y practicar en casa</strong>.
-            </p>
-               
-            <p class="text-lg text-ink mb-4 leading-relaxed ">
-              Si ya tomaste clases de Qígōng o Tàijíquán en grupo y deseas profundizar en un sistema específico, perfeccionar una forma o abordar aplicaciones internas, <strong>las sesiones uno a uno te ofrecen el ambiente ideal para resolver dudas y avanzar con confianza.</strong>
-            </p>
-          
-            <p class="text-lg text-ink mb-4 leading-relaxed ">
-              Y para quienes son totalmente nuevos, <strong>las clases individuales brindan la calma necesaria para aprender sin apuro</strong>: te introduzco los principios fundamentales, construimos la alineación desde cero y desarrollas la conciencia corporal paso a paso.
-            </p>
+    <p class="text-lg text-ink mb-4 leading-relaxed">
+      De mi parte, te cuento que <strong>en mi taller dispongo de las comodidades</strong> como sillones,
+      espejos, música, aire acondicionado, baño y agua/té; y <strong
+        >en cuanto a los ejercicios</strong
+      >, los ajusto a tu estado físico, objetivos y experiencia previa, observando cada matiz de la
+      postura y corrigiendo en el momento. Una vez terminada la clase, te envío un <strong
+        >resumen escrito y grabaciones de los ejercicios para que puedas repasar y practicar en casa</strong
+      >.
+    </p>
 
-             <div class="text-center mt-10">
-                    <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=%C2%A1Hola%20Rodrigo!%20Te%20contacto%20porque%20me%20interesan%20tus%20clases%20de%20Qigong.%20Me%20gustar%C3%ADa%20saber%20sobre%20la%20modalidad%2C%20horarios%20y%20cuando%20podr%C3%ADa%20comenzar.&type=phone_number&app_absent=0" class="button-manuscript text-lg font-semibold py-3 px-8">Consultame por clases de Particulares</a>
-                </div>
-
-          </section>
-
-    <article
-      id="galeria-qigong-01"
-      class="mb-16 md:mb-20 fade-in container mx-auto px-6"
-    >
-      <div
-        class="pswp-gallery-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12 md:mb-20 mt-8"
+    <p class="text-lg text-ink mb-4 leading-relaxed">
+      Si ya tomaste clases de Qígōng o Tàijíquán en grupo y deseas profundizar en un sistema
+      específico, perfeccionar una forma o abordar aplicaciones internas, <strong
+        >las sesiones uno a uno te ofrecen el ambiente ideal para resolver dudas y avanzar con
+        confianza.</strong
       >
-        <CardGaleria
-          imgPath="qigong (1).webp"
-          altText="Izquierda y Derecha para abrir la montaña - Qigong"
-          width={960}
-          height={1200}
-        />
-        <CardGaleria
-          imgPath="qigong (2).webp"
-          altText="La grulla blanca despliega sus alas - Qigong"
- width={960}
-          height={1200}        />
+    </p>
 
-        <CardGaleria
-          imgPath="qigong (3).webp"
-          altText="La gran piton gira su cuerpo - Torsion"
- width={960}
-          height={1200}        />
-        <CardGaleria
-          imgPath="qigong (4).webp"
-          altText="Mezclar agua y fuego"
-  width={960}
-          height={1200}
-        />
-        <CardGaleria
-          imgPath="qigong (5).webp"
-          altText="El Osos sostiene la luna"
-       width={960}
-          height={1200}
-        />
-        <CardGaleria
-          imgPath="qigong (6).webp"
-          altText="Mirar como un Buho - Mawangdui Daoyin Shu"
-          width={960}
-          height={1200}
-        />
-      </div>
-    </article>
+    <p class="text-lg text-ink mb-4 leading-relaxed">
+      Y para quienes son totalmente nuevos, <strong
+        >las clases individuales brindan la calma necesaria para aprender sin apuro</strong
+      >: te introduzco los principios fundamentales, construimos la alineación desde cero y
+      desarrollas la conciencia corporal paso a paso.
+    </p>
+
+    <div class="text-center mt-10">
+      <a
+        href="https://api.whatsapp.com/send/?phone=5491138733447&text=%C2%A1Hola%20Rodrigo!%20Te%20contacto%20porque%20me%20interesan%20tus%20clases%20de%20Qigong.%20Me%20gustar%C3%ADa%20saber%20sobre%20la%20modalidad%2C%20horarios%20y%20cuando%20podr%C3%ADa%20comenzar.&type=phone_number&app_absent=0"
+        class="button-manuscript text-lg font-semibold py-3 px-8"
+        >Consultame por clases de Particulares</a
+      >
+    </div>
   </section>
 
+  <article id="galeria-qigong-01" class="mb-16 md:mb-20 fade-in container mx-auto px-6">
+    <div
+      class="pswp-gallery-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12 md:mb-20 mt-8"
+    >
+      <CardGaleria
+        imgPath="qigong (1).webp"
+        altText="Izquierda y Derecha para abrir la montaña - Qigong"
+        width={960}
+        height={1200}
+      />
+      <CardGaleria
+        imgPath="qigong (2).webp"
+        altText="La grulla blanca despliega sus alas - Qigong"
+        width={960}
+        height={1200}
+      />
 
-    <article id="beneficios" class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in">
+      <CardGaleria
+        imgPath="qigong (3).webp"
+        altText="La gran piton gira su cuerpo - Torsion"
+        width={960}
+        height={1200}
+      />
+      <CardGaleria
+        imgPath="qigong (4).webp"
+        altText="Mezclar agua y fuego"
+        width={960}
+        height={1200}
+      />
+      <CardGaleria
+        imgPath="qigong (5).webp"
+        altText="El Osos sostiene la luna"
+        width={960}
+        height={1200}
+      />
+      <CardGaleria
+        imgPath="qigong (6).webp"
+        altText="Mirar como un Buho - Mawangdui Daoyin Shu"
+        width={960}
+        height={1200}
+      />
+    </div>
+  </article>
+
+  <article
+    id="beneficios"
+    class="mb-16 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+  >
     <div class="max-w-4xl mx-auto px-6 md:px-10">
-        <h2 class="font-title text-3xl md:text-4xl text-title-ink mb-10 text-center">Beneficios de la Práctica</h2>
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-            <div>
-                <h3 class="font-title text-2xl text-title-ink mb-4 flex items-center">
-                    <i aria-hidden="true" class="fas fa-leaf text-2xl text-chinese-seal-red mr-3"></i>Beneficios del Qígōng
-                </h3>
-                <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Mejora de la circulación energética y liberación de bloqueos.
-                    </li>
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Fortalecimiento del sistema inmunológico.
-                    </li>
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Reducción del estrés y la ansiedad, promoviendo calma.
-                    </li>
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Aumento de la vitalidad y la resistencia física.
-                    </li>
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Mejora de la postura, flexibilidad y amplitud de movimiento.
-                    </li>
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Equilibrio emocional y claridad mental.
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-title text-2xl text-title-ink mb-4 flex items-center">
-                    <i aria-hidden="true" class="fas fa-water text-2xl text-chinese-seal-red mr-3"></i>Beneficios del Tàijíquán
-                </h3>
-                <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Desarrollo del enraizamiento y la estabilidad postural.
-                    </li>
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Mejora de la coordinación y fluidez de movimiento.
-                    </li>
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Potenciación de la fuerza interna a través de la suavidad.
-                    </li>
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Mejora del equilibrio y la propiocepción.
-                    </li>
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Integración de cuerpo, respiración e intención.
-                    </li>
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Calma mental, concentración y reducción del estrés.
-                    </li>
-                    <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
-                        Prevención y recuperación de lesiones (bajo impacto).
-                    </li>
-                </ul>
-            </div>
-            </div>
-            </div>
-        </article>
+      <h2 class="font-title text-3xl md:text-4xl text-title-ink mb-10 text-center">
+        Beneficios de la Práctica
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div>
+          <h3 class="font-title text-2xl text-title-ink mb-4 flex items-center">
+            <i aria-hidden="true" class="fas fa-leaf text-2xl text-chinese-seal-red mr-3"
+            ></i>Beneficios del Qígōng
+          </h3>
+          <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Mejora de la circulación energética y liberación de bloqueos.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Fortalecimiento del sistema inmunológico.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Reducción del estrés y la ansiedad, promoviendo calma.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Aumento de la vitalidad y la resistencia física.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Mejora de la postura, flexibilidad y amplitud de movimiento.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Equilibrio emocional y claridad mental.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-title text-2xl text-title-ink mb-4 flex items-center">
+            <i aria-hidden="true" class="fas fa-water text-2xl text-chinese-seal-red mr-3"
+            ></i>Beneficios del Tàijíquán
+          </h3>
+          <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Desarrollo del enraizamiento y la estabilidad postural.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Mejora de la coordinación y fluidez de movimiento.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Potenciación de la fuerza interna a través de la suavidad.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Mejora del equilibrio y la propiocepción.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Integración de cuerpo, respiración e intención.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Calma mental, concentración y reducción del estrés.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              Prevención y recuperación de lesiones (bajo impacto).
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
 
+  <section id="quetepuedoenseniar" class="mb-16 md:mb-20 fade-in">
+    <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-12 text-center">
+      Sistemas y formas que puedo enseñarte
+    </h2>
 
-    <section id="quetepuedoenseniar" class="mb-16 md:mb-20 fade-in">
-            <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-12 text-center">
-                Sistemas y formas que puedo enseñarte
-              </h2>
+    <p class="text-lg text-ink mb-4 leading-relaxed">
+      <strong> El contenido de las clases particulares está determinado por dos factores</strong>:
+      tus intereses y objetivos personales, y mi experiencia y formación en los sistemas de Qígōng y
+      Tàijíquán. Si no tenes conocimiento previo, te propongo una charla para conocerte y que me
+      conozcas, y así definir las diferentes opciones que puedo ofrecerte, para que juntos veamos
+      cuales son las mejores opciones a tus necesidades y expectativas.
+    </p>
 
-            <p class="text-lg text-ink mb-4 leading-relaxed ">
-             <strong> El contenido de las clases particulares está determinado por dos factores</strong>: tus intereses y objetivos personales, y mi experiencia y formación en los sistemas de Qígōng y Tàijíquán. Si no tenes conocimiento previo, te propongo una charla para conocerte y que me conozcas, y así definir las diferentes opciones que puedo ofrecerte, para que juntos veamos cuales son las mejores opciones a tus necesidades y expectativas.
-            </p>
-        
-            <p class="text-lg text-ink mb-6 leading-relaxed">
-           <strong> Si hablamos de Qígōng (Chi Kung)</strong>, puedo enseñarte sistemas completos que beneficien tu salud y bienestar, desde un punto físico y mental. Si tu interés también es hablar sobre los conceptos energéticos y filosóficos, podemos abordar prácticas de meditación y respiración con cargas simbólicas. <strong>Mi interés es que encuentres en el Qígōng una práctica que te acompañe en tu vida diaria</strong>, y que puedas integrar sus beneficios en tu rutina o aliviar tus dolencias particulares.
-            </p>
-                        <p class="text-lg text-ink mb-6 leading-relaxed">
+    <p class="text-lg text-ink mb-6 leading-relaxed">
+      <strong> Si hablamos de Qígōng (Chi Kung)</strong>, puedo enseñarte sistemas completos que
+      beneficien tu salud y bienestar, desde un punto físico y mental. Si tu interés también es
+      hablar sobre los conceptos energéticos y filosóficos, podemos abordar prácticas de meditación
+      y respiración con cargas simbólicas. <strong
+        >Mi interés es que encuentres en el Qígōng una práctica que te acompañe en tu vida diaria</strong
+      >, y que puedas integrar sus beneficios en tu rutina o aliviar tus dolencias particulares.
+    </p>
+    <p class="text-lg text-ink mb-6 leading-relaxed">
+      <a class="text-lg text-ink leading-relaxed text-chinese-seal-red" href="/clases/qigong">
+        Ver más información sobre sistemas y conceptos en mi sección específica sobre Qígōng.
+      </a>
+    </p>
 
-            <a class="text-lg text-ink leading-relaxed text-chinese-seal-red" href="/clases/qigong">
-            Ver más información sobre sistemas y conceptos en mi sección específica sobre Qígōng.
-            </a>
-            </p>
+    <p class="text-lg text-ink mb-6 leading-relaxed">
+      <strong> Si hablamos de Tàijíquán (Tai Chi Chuan)</strong>, puedo enseñarte mecánicas, formas
+      y aplicaciones que te sirvan como acercamiento a un entrenamiento físico y psicológico de un
+      arte marcial interno, que <strong
+        >tiene como objetivo el desarrollo de un estilo de pelea basado en la filosofía Daoista
+        (Taoista)</strong
+      > con un enfoque sobre la debilidad, la suavidad, la relajación y el uso eficiente de la energía.
+      Podemos trabajar tanto en la forma como en las aplicaciones marciales, dependiendo de tus intereses
+      y objetivos. Algunas personas prefieren un enfoque más lúdico y de coordinación; otras buscan un
+      entendimiento de las técnicas de combate y defensa personal; <strong
+        >a mí me gusta combinar ambos aspectos manteniendo en claro que el Tàijíquán es un arte
+        marcial pero tomandolo como una práctica de realización personal y autoconocimiento.</strong
+      >
+    </p>
+    <p class="text-lg text-ink mb-4 leading-relaxed">
+      <a class="text-lg text-ink leading-relaxed text-chinese-seal-red" href="/clases/taijiquan">
+        Ver más información sobre sistemas y conceptos en mi sección específica sobre Tàijíquán.
+      </a>
+    </p>
+    <p class="text-lg text-ink mb-6 leading-relaxed">
+      <a
+        class="text-lg text-ink leading-relaxed text-chinese-seal-red"
+        href="/clases/taijiquan-historia"
+      >
+        Ver más información sobre la origen del Taijiquan en mi sección específica.
+      </a>
+    </p>
 
-            <p class="text-lg text-ink mb-6 leading-relaxed">
-           <strong> Si hablamos de Tàijíquán (Tai Chi Chuan)</strong>, puedo enseñarte mecánicas, formas y aplicaciones que te sirvan como acercamiento a un entrenamiento físico y psicológico de un arte marcial interno, que <strong>tiene como objetivo el desarrollo de un estilo de pelea basado en la filosofía Daoista (Taoista)</strong> con un enfoque sobre la debilidad, la suavidad, la relajación y el uso eficiente de la energía. Podemos trabajar tanto en la forma como en las aplicaciones marciales, dependiendo de tus intereses y objetivos. Algunas personas prefieren un enfoque más lúdico y de coordinación; otras buscan un entendimiento de las técnicas de combate y defensa personal; <strong>a mí me gusta combinar ambos aspectos manteniendo en claro que el Tàijíquán es un arte marcial pero tomandolo como una práctica de realización personal y autoconocimiento.</strong></p>
-            <p class="text-lg text-ink mb-4 leading-relaxed">
-            <a class="text-lg text-ink leading-relaxed text-chinese-seal-red" href="/clases/taijiquan">
-            Ver más información sobre sistemas y conceptos en mi sección específica sobre Tàijíquán.
-            </a></p>
-                        <p class="text-lg text-ink mb-6 leading-relaxed">
+    <div class="text-center mt-10">
+      <a
+        href="https://api.whatsapp.com/send/?phone=5491138733447&text=%C2%A1Hola%20Rodrigo!%20Te%20contacto%20porque%20me%20interesan%20tus%20clases%20de%20Qigong.%20Me%20gustar%C3%ADa%20saber%20sobre%20la%20modalidad%2C%20horarios%20y%20cuando%20podr%C3%ADa%20comenzar.&type=phone_number&app_absent=0"
+        class="button-manuscript text-lg font-semibold py-3 px-8"
+        >Consultame por clases de Particulares</a
+      >
+    </div>
+  </section>
 
-            <a class="text-lg text-ink leading-relaxed text-chinese-seal-red" href="/clases/taijiquan-historia">
-            Ver más información sobre la origen del Taijiquan en mi sección específica.
-            </a>
-            </p>
+  <article id="galeria-fotos-01" class="mb-16 md:mb-20 fade-in container mx-auto px-6">
+    <div
+      class="pswp-gallery-container grid grid-cols-6 md:grid-cols-3 sd:grid-cols-3 lg:grid-cols-6 gap-4"
+    >
+      <CardGaleria
+        imgPath="chuan (9).webp"
+        altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+        height={1200}
+        width={960}
+      />
+      <CardGaleria
+        imgPath="chuan (8).webp"
+        altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
+        height={1200}
+        width={960}
+      />
 
-             <div class="text-center mt-10">
-                    <a href="https://api.whatsapp.com/send/?phone=5491138733447&text=%C2%A1Hola%20Rodrigo!%20Te%20contacto%20porque%20me%20interesan%20tus%20clases%20de%20Qigong.%20Me%20gustar%C3%ADa%20saber%20sobre%20la%20modalidad%2C%20horarios%20y%20cuando%20podr%C3%ADa%20comenzar.&type=phone_number&app_absent=0" class="button-manuscript text-lg font-semibold py-3 px-8">Consultame por clases de Particulares</a>
-                </div>
-
-          </section>
-
-          
-    <article id="galeria-fotos-01" class="mb-16 md:mb-20 fade-in container mx-auto px-6">
-            <div class="pswp-gallery-container grid grid-cols-6 md:grid-cols-3 sd:grid-cols-3 lg:grid-cols-6 gap-4">
-
-                        <CardGaleria 
-                            imgPath="chuan (9).webp" 
-                            altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
-                            height={1200}
-                            width={960}
-                            
-                        />
-                        <CardGaleria 
-                            imgPath="chuan (8).webp" 
-                            altText="Forma 42 de Tàijíquán - Combinación de las 5 Familias con la base Yang"
-                            height={1200}
-                            width={960}                        />
-                        
-                        <CardGaleria 
-                            imgPath="qigong (7).webp" 
-                            altText="El Ascenso del Dragón"
-                            height={1200}
-                            width={960}                        />
-                        <CardGaleria 
-                            imgPath="qigong (5).webp" 
-                            altText="Mexclar el Agua y el Fuego" 
-    height={1200}
-                            width={960}                              />
-                          <CardGaleria 
-                            imgPath="qigong-wudang/wu (5).webp" 
-                            altText="Guī xī Yáng qì (龟吸阳气) — La tortuga ingiere la energía Yáng" 
-                            width={960}
-                            height={1200}
-                        />
-                          <CardGaleria 
-                            imgPath="qigong-wudang/wu (6).webp" 
-                            altText="El dragon de la inundación se sumerge en el Mar" 
-                            width={960}
-                            height={1200}
-                        />
-                </div>
-        </article>
-   
-
-    
-    </main>
-
-<script type="module" src="/src/js/photoswipe-init.js" defer></script>
-
+      <CardGaleria
+        imgPath="qigong (7).webp"
+        altText="El Ascenso del Dragón"
+        height={1200}
+        width={960}
+      />
+      <CardGaleria
+        imgPath="qigong (5).webp"
+        altText="Mexclar el Agua y el Fuego"
+        height={1200}
+        width={960}
+      />
+      <CardGaleria
+        imgPath="qigong-wudang/wu (5).webp"
+        altText="Guī xī Yáng qì (龟吸阳气) — La tortuga ingiere la energía Yáng"
+        width={960}
+        height={1200}
+      />
+      <CardGaleria
+        imgPath="qigong-wudang/wu (6).webp"
+        altText="El dragon de la inundación se sumerge en el Mar"
+        width={960}
+        height={1200}
+      />
+    </div>
+  </article>
+</main>
 <PhotoSwipeUI />

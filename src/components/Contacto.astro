@@ -1,56 +1,98 @@
-<section id="contacto" class="min-h-screen flex flex-col justify-center py-16 md:py-24 section-bg-paper">
-    <div class="container mx-auto px-6">
-        <h2 class="font-title text-3xl md:text-4xl lg:text-5xl text-center mb-12 fade-in">Contáctame</h2>
-        <div class="max-w-2xl mx-auto card-manuscript p-6 md:p-10 shadow-lg fade-in" style="animation-delay: 0.2s;">
-            <form action="https://formspree.io/f/xyzjzjaj" method="POST" id="contact-form">
-                <input type="hidden" name="_next" value="https://rodrigopizarro.com.ar/">
-                <div class="grid sm:grid-cols-2 gap-x-6 gap-y-5 mb-5">
-                    <div>
-                        <label for="nombre" class="block text-text-main font-medium mb-1 text-sm">Nombre y Apellido</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
-                        <span class="error-text text-xs mt-1 hidden" id="err-nombre"></span>
-                    </div>
-                    <div>
-                        <label for="telefono" class="block text-text-main font-medium mb-1 text-sm">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" required placeholder="Tu número de teléfono">
-                        <span class="error-text text-xs mt-1 hidden" id="err-telefono"></span>
-                    </div>
-                </div>
-                <div class="mb-5">
-                    <label for="email" class="block text-text-main font-medium mb-1 text-sm">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="tu@correo.com">
-                    <span class="error-text text-xs mt-1 hidden" id="err-email"></span>
-                </div>
-                <div class="mb-5">
-                    <label for="asunto" class="block text-text-main font-medium mb-1 text-sm">Asunto</label>
-                    <select id="asunto" name="asunto" required>
-                        <option value="" disabled selected>Selecciona un asunto...</option>
-                        <option value="Clases Qígōng/Tàijíquán">Clases Qígōng/Tàijíquán</option>
-                        <option value="Asistentes IA GPT">Asistentes IA GPT</option>
-                        <option value="Asesoría GPT Personalizada">Asesoría GPT Personalizada</option>
-                        <option value="Aula Virtual">Consulta Aula Virtual</option>
-                        <option value="Otro">Otro</option>
-                    </select>
-                    <span class="error-text text-xs mt-1 hidden" id="err-asunto"></span>
-                </div>
-                <div class="mb-5">
-                    <label for="mensaje" class="block text-text-main font-medium mb-1 text-sm">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu consulta aquí..."></textarea>
-                    <span class="error-text text-xs mt-1 hidden" id="err-mensaje"></span>
-                </div>
-                <div class="flex items-center mb-6">
-                     <div class="flex items-center">
-                        <input type="checkbox" id="send-copy" name="_cc" value="" class="h-4 w-4 focus:ring-offset-0">
-                        <label for="send-copy" class="ml-2 block text-sm text-text-secondary">Enviarme una copia (Opcional)</label>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="button-manuscript text-base font-semibold py-3 px-10 w-full sm:w-auto">Enviar Mensaje</button>
-                </div>
-                <div id="form-status" class="mt-4 text-center text-base"></div>
-            </form>
-            </div>
+<section
+  id="contacto"
+  class="min-h-screen flex flex-col justify-center py-16 md:py-24 section-bg-paper"
+>
+  <div class="container mx-auto px-6">
+    <h2 class="font-title text-3xl md:text-4xl lg:text-5xl text-center mb-12 fade-in">
+      Contáctame
+    </h2>
+    <div
+      class="max-w-2xl mx-auto card-manuscript p-6 md:p-10 shadow-lg fade-in"
+      style="animation-delay: 0.2s;"
+    >
+      <form action="https://formspree.io/f/xyzjzjaj" method="POST" id="contact-form">
+        <input type="hidden" name="_next" value="https://rodrigopizarro.com.ar/" />
+        <div class="grid sm:grid-cols-2 gap-x-6 gap-y-5 mb-5">
+          <div>
+            <label for="nombre" class="block text-text-main font-medium mb-1 text-sm"
+              >Nombre y Apellido</label
+            >
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              placeholder="Tu nombre completo"
+            />
+            <span class="error-text text-xs mt-1 hidden" id="err-nombre"></span>
+          </div>
+          <div>
+            <label for="telefono" class="block text-text-main font-medium mb-1 text-sm"
+              >Teléfono</label
+            >
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              required
+              placeholder="Tu número de teléfono"
+            />
+            <span class="error-text text-xs mt-1 hidden" id="err-telefono"></span>
+          </div>
+        </div>
+        <div class="mb-5">
+          <label for="email" class="block text-text-main font-medium mb-1 text-sm">Email</label>
+          <input type="email" id="email" name="email" required placeholder="tu@correo.com" />
+          <span class="error-text text-xs mt-1 hidden" id="err-email"></span>
+        </div>
+        <div class="mb-5">
+          <label for="asunto" class="block text-text-main font-medium mb-1 text-sm">Asunto</label>
+          <select id="asunto" name="asunto" required>
+            <option value="" disabled selected>Selecciona un asunto...</option>
+            <option value="Clases Qígōng/Tàijíquán">Clases Qígōng/Tàijíquán</option>
+            <option value="Asistentes IA GPT">Asistentes IA GPT</option>
+            <option value="Asesoría GPT Personalizada">Asesoría GPT Personalizada</option>
+            <option value="Otro">Otro</option>
+          </select>
+          <span class="error-text text-xs mt-1 hidden" id="err-asunto"></span>
+        </div>
+        <div class="mb-5">
+          <label for="mensaje" class="block text-text-main font-medium mb-1 text-sm">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="5"
+            required
+            placeholder="Escribe tu consulta aquí..."></textarea>
+          <span class="error-text text-xs mt-1 hidden" id="err-mensaje"></span>
+        </div>
+        <div class="flex items-center mb-6">
+          <div class="flex items-center">
+            <input
+              type="checkbox"
+              id="send-copy"
+              name="_cc"
+              value=""
+              class="h-4 w-4 focus:ring-offset-0"
+            />
+            <label for="send-copy" class="ml-2 block text-sm text-text-secondary"
+              >Enviarme una copia (Opcional)</label
+            >
+          </div>
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="button-manuscript text-base font-semibold py-3 px-10 w-full sm:w-auto"
+            >Enviar Mensaje</button
+          >
+        </div>
+        <div id="form-status" class="mt-4 text-center text-base"></div>
+      </form>
     </div>
+  </div>
 </section>
 
-<script src="/src/js/form-contact.js" defer></script>
+<script>
+  import "../js/form-contact.js";
+</script>

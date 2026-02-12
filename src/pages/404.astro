@@ -1,10 +1,10 @@
 ---
 // 1. IMPORTAMOS LOS COMPONENTES
 // El esqueleto de la página
-import MainLayout from '../layouts/MainLayout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
 
 // El NAV (que vamos a crear)
-import NavGeneral from '../components/Navegadores/NavGeneral.astro';
+import NavGeneral from "../components/Navegadores/NavGeneral.astro";
 
 // 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
 const pageTitle = "Rodrigo Pizarro - Neijia";
@@ -12,18 +12,17 @@ const pageDescription = "404 - NOT FOUND: La página solicitada no fue encontrad
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
-
-<NavGeneral />
-<main id="main-content" class="flex-grow flex flex-col items-center justify-center text-center section-bg-paper">
-       
-     <section
-        id="404-section"
-        class="min-h-screen flex flex-col justify-center"
-    >
-    <h1 class="font-title text-5xl md:text-6xl mb-6">404 - Página no encontrada</h1>
-        <p class="text-lg text-text-secondary mb-8">Lo sentimos, el contenido solicitado no está disponible o está en construcción.</p>
-        <a href="/" class="service-link block">Volver al inicio &rarr;</a>
-  </div>
-    
-</main>
+  <NavGeneral />
+  <main
+    id="main-content"
+    class="flex-grow flex flex-col items-center justify-center text-center section-bg-paper"
+  >
+    <section id="404-section" class="min-h-screen flex flex-col justify-center">
+      <h1 class="font-title text-5xl md:text-6xl mb-6">404 - Página no encontrada</h1>
+      <p class="text-lg text-text-secondary mb-8">
+        Lo sentimos, el contenido solicitado no está disponible o está en construcción.
+      </p>
+      <a href="/" class="service-link block">Volver al inicio &rarr;</a>
+    </section>
+  </main>
 </MainLayout>

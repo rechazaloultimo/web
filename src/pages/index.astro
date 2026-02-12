@@ -2,321 +2,259 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import NavGeneral from "@/components/Navegadores/NavGeneral.astro";
 import Contacto from "@/components/Contacto.astro";
+import ImagenEstatica from "@/components/galerias/ImagenEstatica.astro";
 
 // 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
 const pageTitle = "Rodrigo Pizarro - Neijia";
-const pageDescription =
-    "Sitio personal de Rodrigo Pizarro con servicios de Qígōng, Tàijíquán.";
+const pageDescription = "Sitio personal de Rodrigo Pizarro con servicios de Qígōng, Tàijíquán.";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
-    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
 
-    <header
-        id="bienvenida"
-        class="hero-fullscreen-bg hero-index-bg hero-banner h-screen flex flex-col items-center justify-center relative"
-    >
-        <div
-            class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10"
-        >
-            <h1
-                class="font-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gray-50 mb-6 fade-in"
-                style="animation-delay: 0.2s;"
-            >
-                Rodrigo Pizarro
-            </h1>
-            <h2
-                class="text-xl sm:text-2xl md:text-3xl text-gray-100 mb-10 fade-in font-title"
-                style="animation-delay: 0.4s;"
-            >
-                Realizador Multimedial Daoísta
-            </h2>
-            <p
-                class="text-base sm:text-lg md:text-xl max-w-xl lg:max-w-3xl mx-auto mb-10 text-gray-200 fade-in"
-                style="animation-delay: 0.6s;"
-            >
-                Bienvenidxs a mi web personal<br />
-                Encontrarás información de los servicios que ofrezco, fusionando disciplinas
-                tradicionales con herramientas modernas.
+  <header
+    id="bienvenida"
+    class="hero-fullscreen-bg hero-index-bg hero-banner h-screen flex flex-col items-center justify-center relative"
+  >
+    <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
+      <h1
+        class="font-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gray-50 mb-6 fade-in"
+        style="animation-delay: 0.2s;"
+      >
+        Rodrigo Pizarro
+      </h1>
+      <h2
+        class="text-xl sm:text-2xl md:text-3xl text-gray-100 mb-10 fade-in font-title"
+        style="animation-delay: 0.6s;"
+      >
+        Realizador Multimedial Daoísta
+      </h2>
+      <p
+        class="text-base sm:text-lg md:text-xl max-w-xl lg:max-w-3xl mx-auto mb-10 text-gray-200 fade-in"
+        style="animation-delay: 0.8s;"
+      >
+        Bienvenidxs a mi web personal<br />
+        Encontrarás información de los servicios que ofrezco, fusionando disciplinas tradicionales con
+        herramientas modernas.
+      </p>
+    </div>
+  </header>
+
+  <NavGeneral />
+
+  <section
+    id="servicios"
+    class="min-h-screen flex flex-col justify-center py-16 md:py-22 section-bg-paper"
+  >
+    <div class="container mx-auto px-6">
+      <h2 class="font-title text-3xl md:text-4xl lg:text-5xl text-center mb-6 fade-in">
+        Servicios y Disciplinas
+      </h2>
+      <p class="text-lg text-text-secondary text-center max-w-3xl mx-auto mb-12 md:mb-16 fade-in">
+        Te ofrezco explorar las diferentes formas en las que combino el saber tradicional con
+        herramientas contemporáneas para promover el bienestar y el autoconocimiento.
+      </p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8">
+        <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
+          <div>
+            <h3>
+              <i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Clases Grupales
+              de Tàijíquán
+            </h3>
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Descubre las artes ancestrales del Qígōng y el Tàijíquán en clases grupales. Aprende a
+              cultivar tu energía vital y encontrar el equilibrio.
             </p>
-        </div>
-    </header>
-
-    <NavGeneral />
-
-    <section
-        id="servicios"
-        class="min-h-screen flex flex-col justify-center py-16 md:py-22 section-bg-paper"
-    >
-        <div class="container mx-auto px-6">
-            <h2
-                class="font-title text-3xl md:text-4xl lg:text-5xl text-center mb-6 fade-in"
-            >
-                Servicios y Disciplinas
-            </h2>
-            <p
-                class="text-lg text-text-secondary text-center max-w-3xl mx-auto mb-12 md:mb-16 fade-in"
-            >
-                Te ofrezco explorar las diferentes formas en las que combino el
-                saber tradicional con herramientas contemporáneas para promover
-                el bienestar y el autoconocimiento.
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Compartirás la experiencia con otrxs estudiantes, fomentando un ambiente de
+              aprendizaje colaborativo y apoyo mutuo.
             </p>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8">
-                <div
-                    class="service-card-modern fade-in"
-                    style="animation-delay: 0.2s;"
-                >
-                    <div>
-                        <h3>
-                            <i
-                                aria-hidden="true"
-                                class="fas fa-yin-yang text-text-main mr-3"
-                            ></i>Clases Grupales de Tàijíquán
-                        </h3>
-                        <p class="text-lg text-ink mb-4 leading-relaxed">
-                            Descubre las artes ancestrales del Qígōng y el
-                            Tàijíquán en clases grupales. Aprende a cultivar
-                            tu energía vital y encontrar el equilibrio.
-                        </p>
-                        <p class="text-lg text-ink mb-4 leading-relaxed">
-                            Compartirás la experiencia con
-                            otrxs estudiantes, fomentando un ambiente de
-                            aprendizaje colaborativo y apoyo mutuo.
-                        </p>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <a
-                            href="/clases"
-                            class="service-link block"
-                            >Ver Detalles de Clases Presenciales &rarr;</a
-                        ><br />
-                    </div>
-                </div>
-
-                <div
-                    class="service-card-modern fade-in"
-                    style="animation-delay: 0.2s;"
-                >
-                    <div>
-                        <h3>
-                            <i
-                                aria-hidden="true"
-                                class="fas fa-yin-yang text-text-main mr-3"
-                            ></i>Clases Particulares de Qigōng y Tàijíquán 
-                        </h3>
-                        <p class="text-lg text-ink mb-4 leading-relaxed">
-                            Elegí un espacio personalizado en mi taller para aprender todos los sistemas que conozco y enseño.
-                        </p>
-                        <p class="text-lg text-ink mb-4 leading-relaxed">
-                            Podes elegir  los horarios y frecuencia que mejor se adapten a tus necesidades, y tener una atención más particular, que se ajuste a tus espectativas.
-                        </p>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <a
-                            href="/clases"
-                            class="service-link block"
-                            >Ver Detalles de Clases Particulares &rarr;</a
-                        ><br />
-                    </div>
-                </div>
-
-                <div
-                    class="service-card-modern fade-in"
-                    style="animation-delay: 0.2s;"
-                >
-                    <div>
-                        <h3>
-                            <i
-                                aria-hidden="true"
-                                class="fas fa-yin-yang text-text-main mr-3"
-                            ></i>Clases Virtuales de Qígōng
-                        </h3>
-                        <p class="text-lg text-ink mb-4 leading-relaxed">
-                            Desde la comodidad del hogar, 3 clases virtuales por semana de una hora.
-                        </p>
-                        <p class="text-lg text-ink mb-4 leading-relaxed">
-                            Ideal para quienes buscan flexibilidad horaria y desean integrar la práctica del Qígōng en su rutina diaria sin desplazamientos.
-                        </p>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <a
-                            href="/clases"
-                            class="service-link block"
-                            >Ver Detalles de Clases Virtuales &rarr;</a
-                        ><br />
-                    </div>
-                </div>
-
-              
-                                <div
-                                    class="service-card-modern fade-in"
-                                    style="animation-delay: 0.6s;"
-                                >
-                                    <div>
-                                        <h3>
-                                            <i
-                                                aria-hidden="true"
-                                                class="fas fa-robot text-text-main mr-3"
-                                            ></i>Asistentes IA GPT
-                                        </h3>
-                                        <p class="text-lg text-ink mb-4 leading-relaxed">
-                                            Descubre asistentes de inteligencia artificial
-                                            especializados en filosofía daoísta, MTC y más.
-                                            Herramientas innovadoras para el aprendizaje y la
-                                            consulta personalizada.
-                                        </p>
-                                    </div>
-                                    <div class="mt-auto pt-4">
-                                        <a href="/servicios/asistentes-ia" class="service-link block"
-                                            >Explorar Asistentes IA &rarr;</a
-                                        >
-                                    </div>
-                                </div>
-                
-            </div>
+          </div>
+          <div class="mt-auto pt-4">
+            <a href="/clases" class="service-link block"
+              >Ver Detalles de Clases Presenciales &rarr;</a
+            ><br />
+          </div>
         </div>
-    </section>
 
-    <section
-        id="sobre-mi"
-        class="min-h-screen flex flex-col justify-center py-16 md:py-22 rice-paper-bg"
+        <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
+          <div>
+            <h3>
+              <i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Clases
+              Particulares de Qigōng y Tàijíquán
+            </h3>
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Elegí un espacio personalizado en mi taller para aprender todos los sistemas que
+              conozco y enseño.
+            </p>
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Podes elegir los horarios y frecuencia que mejor se adapten a tus necesidades, y tener
+              una atención más particular, que se ajuste a tus espectativas.
+            </p>
+          </div>
+          <div class="mt-auto pt-4">
+            <a href="/clases" class="service-link block"
+              >Ver Detalles de Clases Particulares &rarr;</a
+            ><br />
+          </div>
+        </div>
+
+        <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
+          <div>
+            <h3>
+              <i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Clases Virtuales
+              de Qígōng
+            </h3>
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Desde la comodidad del hogar, 3 clases virtuales por semana de una hora.
+            </p>
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Ideal para quienes buscan flexibilidad horaria y desean integrar la práctica del
+              Qígōng en su rutina diaria sin desplazamientos.
+            </p>
+          </div>
+          <div class="mt-auto pt-4">
+            <a href="/clases" class="service-link block">Ver Detalles de Clases Virtuales &rarr;</a
+            ><br />
+          </div>
+        </div>
+
+        <div class="service-card-modern fade-in" style="animation-delay: 0.6s;">
+          <div>
+            <h3>
+              <i aria-hidden="true" class="fas fa-robot text-text-main mr-3"></i>Asistentes IA GPT
+            </h3>
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Descubre asistentes de inteligencia artificial especializados en filosofía daoísta,
+              MTC y más. Herramientas innovadoras para el aprendizaje y la consulta personalizada.
+            </p>
+          </div>
+          <div class="mt-auto pt-4">
+            <a href="/servicios/asistentes-ia" class="service-link block"
+              >Explorar Asistentes IA &rarr;</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="sobre-mi"
+    class="min-h-screen flex flex-col justify-center py-16 md:py-22 rice-paper-bg"
+  >
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="md:w-2/5 fade-in img-mias-top">
+          <ImagenEstatica
+            imgPath="qigong-wudang/wu (0).webp"
+            altText=" "
+            class="rounded-none shadow-xl w-full aspect-[4/5] border-2 p-1 object-cover"
+          />
+        </div>
+        <div class="md:w-3/5 fade-in">
+          <h2 class="font-title text-3xl md:text-4xl lg:text-5xl mb-6">
+            Entre lo tradicional y moderno
+          </h2>
+          <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+            Me describo a mí mismo como un <strong>Realizador Multimedial</strong>: la <strong
+              >Multimedia</strong
+            > es la integración de diferentes medios como texto, imagen, audio y video para comunicar
+            ideas de manera más rica y efectiva; la <strong>Multidisciplina</strong> significa combinar
+            conocimientos y habilidades de distintas áreas, como arte (Videoarte), tecnología (IA), salud
+            (como el Tàijíquán y el Qígōng) y filosofía (como el Daoismo), para crear propuestas más
+            completas y creativas.
+          </p>
+          <p class="text-lg text-text-secondary mb-6 leading-relaxed">
+            Mi propuesta es ofrecer herramientas y servicios, el autoconocimiento y la conexión con
+            una sabiduría atemporal, para una transformación consciente.
+          </p>
+          <a
+            href="/acerca-de-mi.html"
+            class="button-manuscript text-base md:text-lg font-semibold py-3 px-6 inline-block"
+          >
+            Te invito a leer mi historia y formación &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sistemas-container" class="card-grid grid-2-cols">
+    <article
+      id="card-content-taiji"
+      class="fade-in card-content-container"
+      style="animation-delay: 0.2s;"
     >
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                <div
-                    class="md:w-2/5 fade-in img-mias-top"
-                >
-                    <img
-                        src="/src/images/qigong-wudang/wu (0).webp"
-                        loading="lazy"
-                        alt="Foto de Rodrigo Pizarro"
-                        class="rounded-none shadow-xl w-full aspect-[4/5] border-2 p-1 object-cover"
-                        style="border-color: var(--color-border-subtle);"
-                    />
-                </div>
-                <div class="md:w-3/5 fade-in">
-                    <h2
-                        class="font-title text-3xl md:text-4xl lg:text-5xl mb-6"
-                    >
-                        Entre lo tradicional y moderno
-                    </h2>
-                    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-                        Me describo a mí mismo como un <strong
-                            >Realizador Multimedial</strong
-                        >: la <strong>Multimedia</strong> es la integración de diferentes
-                        medios como texto, imagen, audio y video para comunicar ideas
-                        de manera más rica y efectiva; la <strong
-                            >Multidisciplina</strong
-                        > significa combinar conocimientos y habilidades de distintas
-                        áreas, como arte (Videoarte), tecnología (IA), salud (como el Tàijíquán
-                        y el Qígōng) y filosofía (como el Daoismo), para crear propuestas
-                        más completas y creativas.
-                    </p>
-                    <p class="text-lg text-text-secondary mb-6 leading-relaxed">
-                        Mi propuesta es ofrecer herramientas y servicios, el
-                        autoconocimiento y la conexión con una sabiduría
-                        atemporal, para una transformación consciente.
-                    </p>
-                    <a
-                        href="/acerca-de-mi.html"
-                        class="button-manuscript text-base md:text-lg font-semibold py-3 px-6 inline-block"
-                    >
-                        Te invito a leer mi historia y formación &rarr;
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sistemas-container" class="card-grid grid-2-cols">
-        <article
-            id="card-content-taiji"
-            class="fade-in card-content-container"
-            style="animation-delay: 0.2s;"
+      <div class="card-content">
+        <h2 class="font-title">
+          <i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Tàijí (Tai Chi)
+        </h2>
+        <p class="text-lg text-text-secondary mb-6 leading-relaxed">
+          Me interesa teorizar y compartir conocimiento, por eso te brindo esta sección sobre:
+        </p>
+        <ul
+          class="list-none text-lg text-ink space-y-3 leading-relaxed mb-8 border-l-4 border-chinese-seal-red"
         >
-            <div class="card-content">
-                <h2 class="font-title">
-                    <i
-                        aria-hidden="true"
-                        class="fas fa-yin-yang text-text-main mr-3"></i>Tàijí
-                    (Tai Chi)
-                </h2>
-                <p class="text-lg text-text-secondary mb-6 leading-relaxed">
-                    Me interesa teorizar y compartir conocimiento, por eso te brindo esta sección sobre:
-                </p>
-                 <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-8 border-l-4 border-chinese-seal-red ">
-                    <li class="pl-2 py-1">
-                        Origenes Históricos y Míticos
-                    </li>
-                    <li class="pl-2 py-1">
-                        Historia de las Familias Tradicionales
-                    </li>
-                    <li class="pl-2 py-1">
-                        Transformación del Tàijí en la modernidad por parte del Gobierno Chino
-                    </li>
-                 <a
-                    href="/clases/taiji/historia"
-                    class="button-manuscript inline-block mt-2">Origenes del Taijiquan</a
-                >
-                </ul>
-                <ul class="list-none text-lg text-ink space-y-3 leading-relaxed border-l-4 border-chinese-seal-red ">
-
-                    <li class="pl-2 py-1">
-                    El Tàijíquán (Chuan significa manos) o con
-                    armas como Tàijíjiàn (Jiàn es espada), Dao
-                    (Sabre) u ornamentales como el Tàijíshàn (abanico).
-                    </li>
-                <a
-                    href="/clases/taijiquan"
-                    class="button-manuscript inline-block mt-2">Taijiquan y Armas</a
-                >
-                </ul>
-            </div>
-        </article>
-
-        <article
-            id="card-content-qigong"
-            class="fade-in card-content-container"
-            style="animation-delay: 0.2s;"
+          <li class="pl-2 py-1">Origenes Históricos y Míticos</li>
+          <li class="pl-2 py-1">Historia de las Familias Tradicionales</li>
+          <li class="pl-2 py-1">
+            Transformación del Tàijí en la modernidad por parte del Gobierno Chino
+          </li>
+          <a href="/clases/taiji/historia" class="button-manuscript inline-block mt-2"
+            >Origenes del Taijiquan</a
+          >
+        </ul>
+        <ul
+          class="list-none text-lg text-ink space-y-3 leading-relaxed border-l-4 border-chinese-seal-red"
         >
-            <div class="card-content">
-                <h2 class="font-title">
-                    <i
-                        aria-hidden="true"
-                        class="fas fa-yin-yang text-text-main mr-3"></i>Qígōng
-                    (Chi Kung)
-                </h2>
-                <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-                    Aprender sobre Qigong, por eso te brindo esta sección que abarca:
-                </p>
-                 <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-8 border-l-4 border-chinese-seal-red ">
-                    <li class="pl-2 py-1">
-                    Origenes Etimologicos e Históricos
-                    </li>
-                    <li class="pl-2 py-1">
-                    Beneficios de la práctica del Qígōng
-                    </li>
-                <a
-                    href="/clases/qigong"
-                    class="button-manuscript inline-block mt-2">Origenes del Qigong</a
-                >
-                </ul>
-            
-                 <ul class="list-none text-lg text-ink space-y-3 leading-relaxed border-l-4 border-chinese-seal-red ">
-                <li class="pl-2 py-1">
-                    Diferentes sistemas que enseño para mejorar tu salud física y mental
-                    </li>
-                                    <a
-                    href="/clases/qigong#galeria-qigong"
-                    class="button-manuscript inline-block mt-2">Sistemas de Qígōng</a
-                >
-                 </ul>
-            </div>
-        </article>
-    </section>
+          <li class="pl-2 py-1">
+            El Tàijíquán (Chuan significa manos) o con armas como Tàijíjiàn (Jiàn es espada), Dao
+            (Sabre) u ornamentales como el Tàijíshàn (abanico).
+          </li>
+          <a href="/clases/taijiquan" class="button-manuscript inline-block mt-2"
+            >Taijiquan y Armas</a
+          >
+        </ul>
+      </div>
+    </article>
 
-    <Contacto id="contacto" />
+    <article
+      id="card-content-qigong"
+      class="fade-in card-content-container"
+      style="animation-delay: 0.2s;"
+    >
+      <div class="card-content">
+        <h2 class="font-title">
+          <i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Qígōng (Chi Kung)
+        </h2>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Aprender sobre Qigong, por eso te brindo esta sección que abarca:
+        </p>
+        <ul
+          class="list-none text-lg text-ink space-y-3 leading-relaxed mb-8 border-l-4 border-chinese-seal-red"
+        >
+          <li class="pl-2 py-1">Origenes Etimologicos e Históricos</li>
+          <li class="pl-2 py-1">Beneficios de la práctica del Qígōng</li>
+          <a href="/clases/qigong" class="button-manuscript inline-block mt-2"
+            >Origenes del Qigong</a
+          >
+        </ul>
 
-    <script src="/src/js/global.js" defer></script>
+        <ul
+          class="list-none text-lg text-ink space-y-3 leading-relaxed border-l-4 border-chinese-seal-red"
+        >
+          <li class="pl-2 py-1">
+            Diferentes sistemas que enseño para mejorar tu salud física y mental
+          </li>
+          <a href="/clases/qigong#galeria-qigong" class="button-manuscript inline-block mt-2"
+            >Sistemas de Qígōng</a
+          >
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <Contacto id="contacto" />
 </MainLayout>
