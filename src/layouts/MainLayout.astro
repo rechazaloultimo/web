@@ -5,8 +5,6 @@ import "@/styles/hero.css";
 import "@/styles/nav.css";
 import "@/styles/multimedia.css";
 
-// --- (Script de Astro) ---
-
 // 1. Definimos las Props que la página DEBE pasarnos.
 interface Props {
   title: string;
@@ -19,14 +17,7 @@ interface Props {
 }
 const { title, description } = Astro.props;
 
-// 2. Calculamos la URL canónica automáticamente
-// (Asegúrate de tener 'site' en tu astro.config.mjs si usas esto)
-// const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
-// O de forma más simple por ahora:
 const canonicalURL = "https://rodrigopizarro.com.ar" + Astro.url.pathname;
-
-// 3. Definimos la imagen OG por defecto
-const defaultOgImage = "https://rodrigopizarro.com.ar/img-mias/001.jpg";
 ---
 
 <!doctype html>
@@ -52,7 +43,6 @@ const defaultOgImage = "https://rodrigopizarro.com.ar/img-mias/001.jpg";
     <link rel="canonical" href={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={defaultOgImage} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
 

@@ -22,7 +22,7 @@
 
 ::before,
 ::after {
-  --tw-content: '';
+  --tw-content: "";
 }
 
 /*
@@ -44,9 +44,10 @@ html,
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -89,7 +90,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /*
@@ -135,7 +136,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -236,9 +238,9 @@ select {
 */
 
 button,
-input:where([type='button']),
-input:where([type='reset']),
-input:where([type='submit']) {
+input:where([type="button"]),
+input:where([type="reset"]),
+input:where([type="submit"]) {
   -webkit-appearance: button;
   appearance: button;
   /* 1 */
@@ -286,7 +288,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type='search'] {
+[type="search"] {
   -webkit-appearance: textfield;
   appearance: textfield;
   /* 1 */
@@ -380,7 +382,8 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder, textarea::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -426,7 +429,10 @@ Make sure disabled buttons don't get the pointer cursor.
   display: none;
 }
 
-*, ::before, ::after, ::backdrop {
+*,
+::before,
+::after,
+::backdrop {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -771,12 +777,12 @@ Make sure disabled buttons don't get the pointer cursor.
 
 .gap-x-6 {
   -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
+  column-gap: 1.5rem;
 }
 
 .gap-x-8 {
   -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  column-gap: 2rem;
 }
 
 .gap-y-3 {
@@ -1068,29 +1074,59 @@ Make sure disabled buttons don't get the pointer cursor.
 
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+    0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+    var(--tw-shadow);
 }
 
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+    0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+    var(--tw-shadow);
 }
 
 .invert {
   --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale)
+    var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale)
+    var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    text-decoration-color,
+    fill,
+    stroke,
+    opacity,
+    box-shadow,
+    transform,
+    filter,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    text-decoration-color,
+    fill,
+    stroke,
+    opacity,
+    box-shadow,
+    transform,
+    filter,
+    backdrop-filter,
+    -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1115,15 +1151,14 @@ Make sure disabled buttons don't get the pointer cursor.
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-
 /* Estilos Generales y Variables CSS - Nueva Estética */
 
 :root {
-  --color-bg-main: #ffffff;
+  --color-bg-main: #fefcf0;
   /* Fondo principal blanco */
-  --color-bg-section: #f6f4f4;
+  --color-bg-section: #f6f3e4;
   /* Gris muy claro para secciones */
-  --color-bg-card: #FFFFFF;
+  --color-bg-card: #fdfbf2;
   /* Fondo de tarjetas blanco */
   --color-text-main: #212529;
   /* Texto principal casi negro */
@@ -1131,17 +1166,17 @@ Make sure disabled buttons don't get the pointer cursor.
   /* Texto secundario gris oscuro */
   --color-text-title: #000000;
   /* Títulos negros */
-  --color-text-light: #FFFFFF;
+  --color-text-light: #ffffff;
   /* Texto claro para fondos oscuros */
-  --color-text-placeholder: #6C757D;
+  --color-text-placeholder: #6c757d;
   /* Placeholder para modo claro */
-  --color-border-subtle: #DEE2E6;
+  --color-border-subtle: #dee2e6;
   /* Borde sutil gris claro */
-  --color-border-input: #CED4DA;
+  --color-border-input: #ced4da;
   /* Borde para inputs */
   --color-accent-primary: #000000;
   /* Acento principal (negro) */
-  --color-accent-primary-hover: #343A40;
+  --color-accent-primary-hover: #343a40;
   /* Hover para acento principal */
   --color-chinese-seal-red: #b31010;
   /* Rojo Sello Chino */
@@ -1151,22 +1186,22 @@ Make sure disabled buttons don't get the pointer cursor.
   /* Rojo para errores */
   /* --hero-overlay-color moved to hero.css */
   /* Tipografías */
-  --font-title: 'Noto Serif SC', serif;
-  --font-body: 'Inter', sans-serif;
+  --font-title: "Noto Serif SC", serif;
+  --font-body: "Inter", sans-serif;
   /* Colores para Modo Oscuro */
   --color-dm-bg-main: #1c1c1c;
   --color-dm-bg-section: #2b2c2e;
   /* Ligeramente más claro que el fondo principal oscuro */
   --color-dm-bg-card: #393c42;
   /* Un poco más claro para tarjetas en modo oscuro */
-  --color-dm-text-main: #F3F4F6;
-  --color-dm-text-secondary: #D1D5DB;
-  --color-dm-text-title: #FFFFFF;
-  --color-dm-border-subtle: #4B5563;
+  --color-dm-text-main: #f3f4f6;
+  --color-dm-text-secondary: #d1d5db;
+  --color-dm-text-title: #ffffff;
+  --color-dm-border-subtle: #4b5563;
   --color-dm-border-input: #525861;
-  --color-dm-chinese-seal-red: hwb(50 0% 10%); 
+  --color-dm-chinese-seal-red: hwb(50 0% 10%);
   --color-dm-chinese-seal-red-hover: hwb(53 10% 13%);
-  --color-dm-text-placeholder: #888c92;  /* Placeholder más claro para modo oscuro */
+  --color-dm-text-placeholder: #888c92; /* Placeholder más claro para modo oscuro */
 }
 
 body {
@@ -1383,10 +1418,10 @@ a:hover {
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-    .md\:grid-cols-4 {
+  .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-    .md\:grid-cols-5 {
+  .md\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
@@ -1568,8 +1603,6 @@ a:hover {
   }
 }
 
-
-
 /* Tarjeta Genérica (usada para contacto y GPTs) */
 
 .card-manuscript {
@@ -1619,8 +1652,8 @@ a:hover {
   background-position: right 0.75rem center;
   background-size: 1.25em 1.25em;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .card-manuscript input[type="checkbox"],
@@ -1630,11 +1663,15 @@ a:hover {
   color: var(--color-accent-primary);
 }
 
-.card-manuscript input:focus, .card-manuscript select:focus, .card-manuscript textarea:focus,
-.login-form-container input:focus, .login-form-container select:focus, .login-form-container textarea:focus {
+.card-manuscript input:focus,
+.card-manuscript select:focus,
+.card-manuscript textarea:focus,
+.login-form-container input:focus,
+.login-form-container select:focus,
+.login-form-container textarea:focus {
   border-color: var(--color-accent-primary);
   outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
 }
 
 .error-text {
@@ -1678,10 +1715,10 @@ footer a:hover {
 .interest-tag {
   display: inline-block;
   padding: 0.25rem 0.65rem;
-  border: 1px solid #DEE2E6;
+  border: 1px solid #dee2e6;
   border-radius: 0;
   color: #495057;
-  background-color: #E9ECEF;
+  background-color: #e9ecef;
   font-size: 0.85rem;
   font-weight: 500;
 }
@@ -1697,7 +1734,7 @@ footer a:hover {
   border: 1px solid var(--color-border-subtle);
   background-color: var(--color-bg-card);
   /* Usa la variable de fondo de tarjeta */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
 }
 
 .login-form-container h2 {
@@ -1728,10 +1765,11 @@ footer a:hover {
   text-align: center;
 }
 
-.form-divider::before, .form-divider::after {
+.form-divider::before,
+.form-divider::after {
   flex: 1;
   border-bottom: 1px solid var(--color-border-subtle);
-  content: '';
+  content: "";
 }
 
 .form-divider span {
@@ -1815,13 +1853,26 @@ body.dark-mode {
 
 /* Transición suave para el cambio de tema */
 
-body, body::before, body::after,
-#mainNav, .service-card-modern, .card-manuscript, .login-form-container, .aula-virtual-card, footer,
-input, select, textarea, button {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+body,
+body::before,
+body::after,
+#mainNav,
+.service-card-modern,
+.card-manuscript,
+.login-form-container,
+.aula-virtual-card,
+footer,
+input,
+select,
+textarea,
+button {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    opacity 0.3s ease,
+    box-shadow 0.3s ease;
 }
-
-
 
 .border-chinese-seal-red {
   border-color: var(--color-chinese-seal-red);
@@ -1854,26 +1905,25 @@ input, select, textarea, button {
 
 /* Audio styles moved to multimedia.css */
 
-
-
-
 .section-bg-dynamic {
-    background-color: var(--color-chinese-seal-red) !important;
-    color: #fff !important;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  body.dark-mode .section-bg-dynamic {
-    background-color: var(--color-dm-chinese-seal-red) !important;
-    color: #000 !important;
-  }
+  background-color: var(--color-chinese-seal-red) !important;
+  color: #fff !important;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+body.dark-mode .section-bg-dynamic {
+  background-color: var(--color-dm-chinese-seal-red) !important;
+  color: #000 !important;
+}
 
- /* Botones invertidos al 100% */
+/* Botones invertidos al 100% */
 .button-manuscript-inverted {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border: 2px solid #000;    /* borde blanco */
-  color:  var(--color-text-light);              /* texto blanco */
-  background-color: #000; 
+  border: 2px solid #000; /* borde blanco */
+  color: var(--color-text-light); /* texto blanco */
+  background-color: #000;
   text-align: center;
   font-family: var(--font-body);
   font-weight: 500;
@@ -1881,43 +1931,50 @@ input, select, textarea, button {
 }
 
 .button-manuscript-inverted:hover {
-  color:            var(--color-chinese-seal-red); /* texto rojo al pasar */
-  background-color: var(--color-text-light);       /* fondo blanco al pasar */
+  color: var(--color-chinese-seal-red); /* texto rojo al pasar */
+  background-color: var(--color-text-light); /* fondo blanco al pasar */
 }
-
 
 /* Video Mawangdui moved to multimedia.css */
 
 /* Bloque colapsable por movimiento */
-.mov-item { overflow: hidden; }
+.mov-item {
+  overflow: hidden;
+}
 
 /* Título del bloque (usa summary como H3) */
 .mov-summary {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  gap: .75rem;
+  gap: 0.75rem;
   padding: 1.25rem 1rem;
   cursor: pointer;
-  list-style: none;              
+  list-style: none;
 }
 
 .ocultar-summary {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  gap: .75rem;
+  gap: 0.75rem;
   padding-bottom: 1rem;
   cursor: pointer;
   list-style: none;
-  transition: opacity 160ms ease, transform 160ms ease;
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
 }
 
 /* Al abrir <details> ocultar suavemente el <summary> */
 summary.ocultar-summary {
   display: block;
   overflow: hidden;
-  transition: opacity 240ms ease, transform 240ms ease, max-height 240ms ease, margin 240ms ease;
+  transition:
+    opacity 240ms ease,
+    transform 240ms ease,
+    max-height 240ms ease,
+    margin 240ms ease;
   will-change: opacity, transform, max-height;
 }
 
@@ -1930,33 +1987,66 @@ details[open] > summary.ocultar-summary {
   pointer-events: none;
 }
 
-.mov-summary h3, h4{ text-align: center; }
+.mov-summary h3,
+h4 {
+  text-align: center;
+}
 /* Ocultar marcador nativo del <summary> */
-.mov-summary::marker{ content: ""; }              /* Firefox */
-.mov-summary::-webkit-details-marker { display: none; } /* WebKit/Blink */
+.mov-summary::marker {
+  content: "";
+} /* Firefox */
+.mov-summary::-webkit-details-marker {
+  display: none;
+} /* WebKit/Blink */
 
 /* Chevron animado y ocultar cuando abierto */
-.mov-item .chev { transition: transform .2s ease, opacity .2s; font-size: 0.95rem; }
-.mov-item[open] .chev { opacity: 0; pointer-events: none; }
+.mov-item .chev {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s;
+  font-size: 0.95rem;
+}
+.mov-item[open] .chev {
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* Compatibilidad: algunos detalles usan <details> sin la clase .mov-item.
   Aseguramos que el chevron rote cuando el <details> está abierto. */
-details .chev { transition: transform .2s ease, opacity .2s; font-size: 0.95rem; }
-details[open] .chev { opacity: 0; pointer-events: none; }
+details .chev {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s;
+  font-size: 0.95rem;
+}
+details[open] .chev {
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* Separación del contenido cuando está abierto */
-.mov-item[open] > .grid { padding-top: 1.25rem; }
-
-/* Que los saltos por #ancla no queden tapados por el navbar fijo */
-[id^="movimiento-"] { scroll-margin-top: 5.5rem; }
-@media (min-width: 768px) {
-  [id^="movimiento-"] { scroll-margin-top: 6.5rem; }
+.mov-item[open] > .grid {
+  padding-top: 1.25rem;
 }
 
 /* Que los saltos por #ancla no queden tapados por el navbar fijo */
-[id^="postura-estatica-"] { scroll-margin-top: 5.5rem; }
+[id^="movimiento-"] {
+  scroll-margin-top: 5.5rem;
+}
 @media (min-width: 768px) {
-  [id^="postura-estatica-"] { scroll-margin-top: 6.5rem; }
+  [id^="movimiento-"] {
+    scroll-margin-top: 6.5rem;
+  }
+}
+
+/* Que los saltos por #ancla no queden tapados por el navbar fijo */
+[id^="postura-estatica-"] {
+  scroll-margin-top: 5.5rem;
+}
+@media (min-width: 768px) {
+  [id^="postura-estatica-"] {
+    scroll-margin-top: 6.5rem;
+  }
 }
 
 .hover-color:hover {
@@ -1973,11 +2063,11 @@ details[open] .chev { opacity: 0; pointer-events: none; }
 }
 
 .chev.fa-chevron-down {
-    text-align: center; /* Alineación centrada */
+  text-align: center; /* Alineación centrada */
   display: inline-block;
   font-size: 2rem;
   line-height: 1;
-  border:none;
+  border: none;
   color: var(--color-chinese-seal-red);
   transform-origin: center;
   -webkit-font-smoothing: antialiased;
@@ -1986,14 +2076,19 @@ details[open] .chev { opacity: 0; pointer-events: none; }
 
 /* Clase opcional para movimiento sutil en reposo: añade "idle" al elemento */
 @keyframes chev-idle {
-  0%   { transform: translateY(0) }
-  50%  { transform: translateY(3px) }
-  100% { transform: translateY(0) }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .chev.fa-chevron-down.idle {
   animation: chev-idle 3s ease-in-out infinite;
 }
-
 
 /* ========================================= */
 /* 🚨 FIX: Color de iconos de Font Awesome en PhotoSwipe */
@@ -2002,41 +2097,39 @@ details[open] .chev { opacity: 0; pointer-events: none; }
 /* Selecciona los iconos (la etiqueta i) dentro de los botones de Copy y Download */
 .pswp__button--copy i,
 .pswp__button--download i {
-    color: #fff; /* Forsa el color blanco */
-    font-size: 24px; /* Opcional: Asegura un buen tamaño, ajusta si es necesario */
+  color: #fff; /* Forsa el color blanco */
+  font-size: 24px; /* Opcional: Asegura un buen tamaño, ajusta si es necesario */
 }
 
 /* Opcional: Ajusta el padding si los nuevos botones se ven raros */
 .pswp__button--copy,
 .pswp__button--download {
-    padding: 10px; /* Asegura un área de clic adecuada */
-    width: 44px; /* Ancho estándar de PhotoSwipe */
-    height: 44px; /* Altura estándar de PhotoSwipe */
+  padding: 10px; /* Asegura un área de clic adecuada */
+  width: 44px; /* Ancho estándar de PhotoSwipe */
+  height: 44px; /* Altura estándar de PhotoSwipe */
 }
-
-
 
 /* ========================================= */
 /* LAYOUT: GRID BASE Y MODIFICADORES */
 /* ========================================= */
 
 .card-grid {
-    display: grid;
-    /* Por defecto es 3 columnas */
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 0; 
-    padding: 0; 
-    min-height: 100vh;
+  display: grid;
+  /* Por defecto es 3 columnas */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
 /* FUERZA 3 COLUMNAS */
 .card-grid.grid-3-cols {
-    grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* FUERZA 2 COLUMNAS */
 .card-grid.grid-2-cols {
-    grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* ========================================= */
@@ -2044,67 +2137,64 @@ details[open] .chev { opacity: 0; pointer-events: none; }
 /* ========================================= */
 
 .card-content-container {
-    /* Anula la altura de pantalla y establece Flexbox para el botón */
-    min-height: 95vh !important; 
-    display: flex;
-    flex-direction: column;
+  /* Anula la altura de pantalla y establece Flexbox para el botón */
+  min-height: 95vh !important;
+  display: flex;
+  flex-direction: column;
 
-    /* Estilos visuales de la tarjeta completa */
-    width: 100%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    margin-right: auto;
-    margin-left: auto;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+  /* Estilos visuales de la tarjeta completa */
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .card-content {
-    /* Flexbox para que el contenido crezca y empuje el botón */
-    flex-grow: 1; 
-    display: flex; 
-    flex-direction: column; 
-        min-height: auto !important; 
+  /* Flexbox para que el contenido crezca y empuje el botón */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: auto !important;
 
-
-    /* Estilos visuales del cuerpo del contenido */
-    width: 60%; 
-    padding: 2rem;
-    margin: 10rem auto; 
-    border-radius: 0;
-    background-color: color-mix(in srgb, var(--color-bg-card) 75%, transparent 25%);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  /* Estilos visuales del cuerpo del contenido */
+  width: 60%;
+  padding: 2rem;
+  margin: 10rem auto;
+  border-radius: 0;
+  background-color: color-mix(in srgb, var(--color-bg-card) 75%, transparent 25%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .card-content a.button-manuscript {
-    /* Alinea el botón al final del espacio restante */
-    margin-top: auto; 
+  /* Alinea el botón al final del espacio restante */
+  margin-top: auto;
 }
 
 .card-content h2 {
-    margin-bottom: 1rem;
-    color: var(--color-text-title);
-    font-family: var(--font-title);
-    font-size: 1.875rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-title);
+  font-family: var(--font-title);
+  font-size: 1.875rem;
 }
 
 @media (max-width: 1024px) {
+  .card-grid,
+  .card-grid.grid-3-cols,
+  .card-grid.grid-2-cols {
+    grid-template-columns: 1fr;
+  }
 
-    .card-grid, .card-grid.grid-3-cols, .card-grid.grid-2-cols  {
-        grid-template-columns: 1fr; 
-    }
-
-    /* Ajuste de ancho de contenido en móvil */
-    .card-content {
-        width: 80%;
-        margin: 5rem auto; 
-    }
+  /* Ajuste de ancho de contenido en móvil */
+  .card-content {
+    width: 80%;
+    margin: 5rem auto;
+  }
 }
-
-
-
 
 /*
  * 1. CLASE BASE: Estado Inicial (INVISIBLE y desplazado)
@@ -2133,19 +2223,21 @@ details[open] .chev { opacity: 0; pointer-events: none; }
 /* 1. ESTADO INICIAL Y TRANSICIÓN */
 .info-panel {
   opacity: 0;
-  transform: translateY(1rem); 
-  transition: opacity 700ms ease-in-out, transform 700ms ease-in-out; 
+  transform: translateY(1rem);
+  transition:
+    opacity 700ms ease-in-out,
+    transform 700ms ease-in-out;
 }
 
 /* 2. ESTADO COMPLETAMENTE OCULTO */
 .info-panel.hidden {
-    display: none;
+  display: none;
 }
 
 /* 3. ESTADO ACTIVO (Lo hace visible y animado) */
 .info-panel.is-active {
   /* Al activarse, debe anular el display: none */
-  display: block; 
+  display: block;
   opacity: 1;
   transform: translateY(0);
 }
@@ -2196,18 +2288,10 @@ body.dark-mode .list-decimal > li::before {
 
 .degrade {
   /* El degradado inicia arriba con el color y termina abajo transparente */
-  background: linear-gradient(
-    to bottom, 
-    var(--color-chinese-seal-red) 30%, 
-    transparent 100%
-  );
+  background: linear-gradient(to bottom, var(--color-chinese-seal-red) 30%, transparent 100%);
 }
 
 /* Soporte para Modo Oscuro */
 body.dark-mode .degrade {
-  background: linear-gradient(
-    to bottom, 
-    var(--color-dm-chinese-seal-red) 30%, 
-    transparent 100%
-  );
+  background: linear-gradient(to bottom, var(--color-dm-chinese-seal-red) 30%, transparent 100%);
 }

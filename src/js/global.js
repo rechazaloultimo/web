@@ -35,7 +35,6 @@ document.querySelectorAll(".audio-btn").forEach((btn) => {
 });
 
 // Script para mostrar/ocultar paneles de información
-// Este código debe ir en un archivo .js separado, como /src/js/global.js
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".toggle-btn");
   // Seleccionamos todos los paneles que llevan la clase base
@@ -104,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // src/js/titulo-mov.js
-
 function startTitleMarquee(originalTitle, speed = 600) {
   if (!document.title || originalTitle.trim() === "") {
     return;
