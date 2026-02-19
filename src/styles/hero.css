@@ -1,4 +1,3 @@
-
 /* Variables para Hero */
 :root {
   --hero-overlay-color: rgba(0, 0, 0, 0.3);
@@ -35,47 +34,52 @@
 /* ========================================= */
 
 .hero-index-bg {
-    background-image: url('/background/sol-saliente.webp');
+  background-image: url("/background/sol-saliente.webp");
 }
 
-.hero-clases-presenciales-bg, #card-content-presenciales {
-    background-image: url('/background/playa-floripa.webp');
+.hero-clases-presenciales-bg,
+#card-content-presenciales {
+  background-image: url("/background/playa-floripa.webp");
 }
 
-.hero-clases-particulares-bg, #card-content-particulares {
-    background-image: url('/background/lagoverde-vista.webp');
+.hero-clases-particulares-bg,
+#card-content-particulares {
+  background-image: url("/background/lagoverde-vista.webp");
 }
 
-.hero-clases-taiji-bg, #card-content-taiji {
-    background-image: url('/background/lagoverde-vista.webp');
+.hero-clases-taiji-bg,
+#card-content-taiji {
+  background-image: url("/background/lagoverde-vista.webp");
 }
 
 .hero-tajiquan-historia-bg {
-    background-image: url('/background/historia.webp');
+  background-image: url("/background/historia.webp");
 }
 
-.hero-clases-qigong-bg, #card-content-qigong {
-    background-image: url('/background/glaciares.webp');
+.hero-clases-qigong-bg,
+#card-content-qigong {
+  background-image: url("/background/glaciares.webp");
 }
 
 .hero-mawangdui-bg {
-    background-image: url('/background/sistemas/mawangduidaoyinshu.webp');
+  background-image: url("/background/sistemas/mawangduidaoyinshu.webp");
 }
 
 .hero-wudangqigong-bg {
-    background-image: url('/background/sistemas/wudangqigong.webp');
+  background-image: url("/background/sistemas/wudangqigong.webp");
 }
 
-    /* LO SAQUE POR AHORA */
-.hero-clases-virtuales-bg, #card-content-virtuales {
-    background-image: url('/background/pantano-tarde.webp');
+/* LO SAQUE POR AHORA */
+.hero-clases-virtuales-bg,
+#card-content-virtuales {
+  background-image: url("/background/pantano-tarde.webp");
 }
-
 
 /* Preload overlay for hero images */
 
 .hero-fullscreen-bg.preload-hidden {
   opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Para que aparezca suavemente */
 }
 
 .hero-loading-overlay {
