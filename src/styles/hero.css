@@ -79,7 +79,6 @@
 
 .hero-fullscreen-bg.preload-hidden {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out; /* Para que aparezca suavemente */
 }
 
 .hero-loading-overlay {
