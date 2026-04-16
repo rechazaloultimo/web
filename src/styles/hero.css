@@ -1,14 +1,26 @@
-/* Variables para Hero */
+/* ======================================== */
+/* HERO.CSS - Estilos de Hero y Fondos      */
+/* Refactorizado y optimizado               */
+/* ======================================== */
+
+/* ----------------------------------------
+   VARIABLES LOCALES
+---------------------------------------- */
 :root {
   --hero-overlay-color: rgba(0, 0, 0, 0.3);
+  --hero-loading-bg: rgba(0, 0, 0, 0.5);
 }
 
-/* Fondos y Texturas */
-
+/* ----------------------------------------
+   FONDO BASE (PAPEL DE ARROZ)
+---------------------------------------- */
 .rice-paper-bg {
   background-color: var(--color-bg-main);
 }
 
+/* ----------------------------------------
+   CONTENEDOR PRINCIPAL DEL HERO
+---------------------------------------- */
 .hero-fullscreen-bg {
   position: relative;
   color: white;
@@ -19,6 +31,7 @@
   transition: opacity 0.5s ease-in-out;
 }
 
+/* Overlay oscuro sobre la imagen */
 .hero-fullscreen-bg::before {
   position: absolute;
   z-index: 1;
@@ -29,54 +42,65 @@
   background-color: var(--hero-overlay-color);
   content: "";
 }
-/* ========================================= */
-/* Rutas Corregidas (Todas Inician con '/') */
-/* ========================================= */
 
+/* Aseguramos que los títulos dentro del hero hereden el color blanco */
+.hero-fullscreen-bg .font-title {
+  color: inherit; /* Sin !important */
+}
+
+/* ----------------------------------------
+   IMÁGENES DE FONDO (RUTAS ABSOLUTAS)
+   Agrupadas por imagen repetida
+---------------------------------------- */
+/* Página de inicio */
 .hero-index-bg {
   background-image: url("/background/sol-saliente.webp");
 }
 
+/* Clases presenciales */
 .hero-clases-presenciales-bg,
 #card-content-presenciales {
   background-image: url("/background/playa-floripa.webp");
 }
 
+/* Clases particulares y Taiji (misma imagen) */
 .hero-clases-particulares-bg,
-#card-content-particulares {
-  background-image: url("/background/lagoverde-vista.webp");
-}
-
+#card-content-particulares,
 .hero-clases-taiji-bg,
 #card-content-taiji {
   background-image: url("/background/lagoverde-vista.webp");
 }
 
+/* Historia del Taijiquan */
 .hero-tajiquan-historia-bg {
   background-image: url("/background/historia.webp");
 }
 
+/* Clases de Qigong */
 .hero-clases-qigong-bg,
 #card-content-qigong {
   background-image: url("/background/glaciares.webp");
 }
 
+/* Sistemas: Mawangdui */
 .hero-mawangdui-bg {
   background-image: url("/background/sistemas/mawangduidaoyinshu.webp");
 }
 
+/* Sistemas: Wudang Qigong */
 .hero-wudangqigong-bg {
   background-image: url("/background/sistemas/wudangqigong.webp");
 }
 
-/* LO SAQUE POR AHORA */
+/* Clases virtuales (actualmente comentado en el original) */
 .hero-clases-virtuales-bg,
 #card-content-virtuales {
   background-image: url("/background/pantano-tarde.webp");
 }
 
-/* Preload overlay for hero images */
-
+/* ----------------------------------------
+   PRELOAD DE IMÁGENES HERO
+---------------------------------------- */
 .hero-fullscreen-bg.preload-hidden {
   opacity: 0;
 }
@@ -91,8 +115,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--hero-loading-bg);
   transition: opacity 0.5s ease;
+  will-change: opacity;
 }
 
 .hero-loading-overlay.fade-out {
@@ -112,16 +137,19 @@
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
 
+/* ----------------------------------------
+   SECCIÓN CON FONDO DE PAPEL
+---------------------------------------- */
 .section-bg-paper {
   background-color: var(--color-bg-section);
 }
 
-.hero-fullscreen-bg .font-title {
-  color: inherit !important;
-}
+/* ----------------------------------------
+   RESPONSIVE (si fuera necesario)
+   Por ahora no se requieren ajustes específicos
+---------------------------------------- */
