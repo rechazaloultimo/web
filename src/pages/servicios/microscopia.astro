@@ -2,467 +2,339 @@
 // 1. IMPORTAMOS LOS COMPONENTES NECESARIOS
 import MainLayout from "@/layouts/MainLayout.astro"; // Asumiendo que también usas el layout
 import NavGeneral from "@/components/Navegadores/NavGeneral.astro";
-import Footer from "@/components/Footer.astro";
-import Contacto from "@/components/Contacto.astro";
 import CardGaleria from "@/components/galerias/CardGaleria.astro";
 import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
 
 // 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
-const pageTitle = "Rodrigo Pizarro - Acerca de mí";
+const pageTitle = "Rodrigo Pizarro - Microscopia";
 const pageDescription =
-    "Sitio personal de Rodrigo Pizarro con servicios de Qígōng, Tàijíquán y asistentes IA GPT personalizados.";
+  "Sitio personal de Rodrigo Pizarro con servicios de Mantenimiento de Microscopia.";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
+  <NavGeneral />
 
+  <main id="main-content" class="container mx-auto px-6 py-12 md:py-20">
+    <section id="intro-contenido-microscopios" class="mb-16 md:mb-20 fade-in">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <i aria-hidden="true" class="fas fa-microscope text-6xl text-chinese-seal-red mb-6"></i>
+        <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-6 leading-snug">
+          Mantenimiento de Microscopios
+        </h2>
+        <p class="text-xl text-ink leading-relaxed">
+          Servicio de mantenimiento y soporte de microscopios ópticos
+        </p>
+      </div>
+      <div class="max-w-4xl mx-auto section-bg-paper p-6 md:p-10 rounded-none shadow-lg">
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          Brindo el servicio de mantenimiento de microscopios binoculares, trinoculares y
+          estereoscópicos, con un enfoque en la limpieza, ajuste y reparación de componentes ópticos
+          y mecánicos. Mi experiencia de más de 6 años en el campo me permite ofrecer un servicio de
+          alta calidad y precio accesible, asegurando que tu microscopio funcione de manera óptima
+          para tus necesidades de investigación, educación o trabajo.
+        </p>
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          Podes solicitar mi servicio para que realice un presupuesto sin cargo para la limpieza
+          óptica simple o un mantenimiento completo, óptico y mecánico; o asesoramiento sobre el
+          cuidado y uso adecuado de tu microscopio, así como opciones para mejorar la calidad de
+          fotografías o mediciones.
+        </p>
+      </div>
+    </section>
 
-        <NavGeneral />
+    <section id="microscopios" class="mt-8 mb-16 md:mb-20 fade-in">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
+          Microscopios Ópticos o Compuestos
+        </h3>
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          Los equipos de microscopía optica con los que he trabajado incluyen microscopios
+          compuestos, los que comúnmente se utilizan para observar muestras sobre portamuestras o
+          con placa petri, etc; utilizando objetivos intercambiables con aumentos, las marcas que
+          más he trabajado y reparado fueron como Leica, Zeiss, Olympus, Nikon y los chinos
+          genericos como Motic y AmScope.
+        </p>
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          Aparte de las marcas, las diferentes técnicas de microscopía, como la luz transmitida, la
+          luz reflejada, la fluorescencia, la microscopía de contraste de fases, etc, requieren
+          diferentes tipos de mantenimiento, y he trabajado con todas ellas, brindando un servicio
+          integral para asegurar el óptimo funcionamiento de los microscopios en sus diversas
+          aplicaciones. Conozco cuando hay un hongos, polvo, aceite o suciedad en las lentes, y como
+          limpiar cada tipo de lente, y también como revisar componentes mecánicos como el sistema
+          de enfoque macro y micrométrico, la platina, el Eje XY, el sistema de iluminación, etc.,
+          para asegurar que el microscopio funcione de manera óptima.
+        </p>
+        <details>
+          <summary class="ocultar-summary">
+            <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+              <span class="text-chinese-seal-red">Mas información</span>
+            </p>
+          </summary>
+          <p class="text-lg text-ink mb-4 leading-relaxed">
+            Empecé a conocer e interezarme por los microscopios al utilizar equipamiento de video
+            analógico profesional en el 2018, y me di cuenta de la necesidad de saber sobre el
+            hardware que llevan, para poder realizar fotografías, mediciones y análisis de imágenes
+            con la mejor calidad posible. En el 2019 se me presentó la oportunidad de trabajar en
+            una empresa de microscopios vendedores de Leica Microsystems en Buenos Aires, donde tuve
+            la oportunidad de aprender sobre el mantenimiento de microscopios, técnicas de limpieza,
+            reparación y calibración de equipos, así como brindar soporte técnico a los clientes.
+            Ahí te das cuenta de la importancia de un buen mantenimiento para asegurar la calidad de
+            las imágenes y el rendimiento del equipo, sea para investigación, educación o trabajo
+            profesional. Empecé a brindar el servicio de mantenimiento de microscopios de manera
+            independiente en el 2025 como una forma de compartir mis conocimientos y experiencia con
+            otros usuarios, ofreciendo un servicio de alta calidad a un precio accesible, y ayudando
+            a asegurar que los microscopios funcionen de manera óptima para sus necesidades.
+          </p>
+          <p class="text-lg text-ink mb-4 leading-relaxed">
+            Tambien soy una persona muy sincera al respecto de cuales son las posibilidades de
+            reparación o mantenimiento, incluso asesoro sobre la compra de microscopios nuevos o
+            usados. No me caso con ningun equipo, marca o modelo, y si hay algun desperfecto o
+            necesitas un asesoramiento sincero sobre una futura compra o mantenimiento de
+            microscopio, no dudes en consultarme, incluso si no es para contratar mi servicio, sino
+            para que te ayude a entender mejor tu equipo o tus opciones de reparación o compra.
+          </p>
+        </details>
+      </div>
+      <article
+        id="galeria-fotos-microscopios"
+        class="mb-16 md:mb-20 fade-in container mx-auto px-6"
+      >
+        <div class="pswp-gallery-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <CardGaleria
+            imgPath="microscopios/micro (1).webp"
+            altText=" "
+            width={1900}
+            height={1900}
+          />
+          <CardGaleria
+            imgPath="microscopios/micro (2).webp"
+            altText=" "
+            width={1900}
+            height={1900}
+          />
+          <CardGaleria
+            imgPath="microscopios/micro (3).webp"
+            altText=" "
+            width={1900}
+            height={1900}
+          />
+          <CardGaleria
+            imgPath="microscopios/micro (4).webp"
+            altText=" "
+            width={1900}
+            height={1900}
+          />
+          <CardGaleria
+            imgPath="microscopios/micro (5).webp"
+            altText=" "
+            width={1900}
+            height={1900}
+          />
+          <CardGaleria
+            imgPath="microscopios/micro (6).webp"
+            altText=" "
+            width={1900}
+            height={1900}
+          />
+        </div>
+      </article>
+    </section>
 
-        <main id="main-content" class="container mx-auto px-6 py-12 md:py-20">
-            <section id="intro-contenido-ia" class="mb-16 md:mb-20 fade-in">
-                <div class="max-w-3xl mx-auto text-center mb-12">
-                    <i
-                        aria-hidden="true"
-                        class="fas fa-brain text-6xl text-chinese-seal-red mb-6"
-                    ></i>
-                    <h2
-                        class="font-title text-4xl md:text-5xl text-title-ink mb-6 leading-snug"
-                    >
-                        Soporte Técnico en Microscopios
-                    </h2>
-                    <p class="text-xl text-ink leading-relaxed">
-                        Integrando herramientas modernas para facilitar el
-                        estudio y la comprensión de disciplinas tradicionales.
-                    </p>
-                </div>
-                <div
-                    class="max-w-4xl mx-auto section-bg-paper p-6 md:p-10 rounded-none shadow-lg"
-                >
-                    <p class="text-lg text-ink mb-4 leading-relaxed">
-                        Un asistente de IA como un GPT personalizado es
-                        especialmente funcional para aprender y profundizar en
-                        prácticas como el Qígōng, el Tàijíquán y la Medicina
-                        Tradicional China (MTC), entre otras disciplinas.
-                        Gracias a la curaduría previa en materiales y
-                        directrices configurada en un GPT, es posible explorar
-                        desde los fundamentos filosóficos —como el equilibrio
-                        del Yin y el Yang o los Cinco Elementos— hasta aspectos
-                        prácticos como las posturas, la respiración o el uso
-                        terapéutico de los meridianos y puntos energéticos,
-                        incluso repasar conceptos del Daoismo.
-                    </p>
-                    <p class="text-lg text-ink mb-4 leading-relaxed">
-                        A diferencia de un manual o un buscador, el asistente
-                        puede responder según tu nivel de experiencia, integrar
-                        distintos enfoques (médico, marcial o espiritual),
-                        aclarar dudas en tiempo real y ayudarte a construir una
-                        comprensión orgánica y progresiva de estas disciplinas.
-                        Ya sea que estés comenzando a practicar, enseñando, o
-                        simplemente investigando, este tipo de herramienta se
-                        convierte en un asistente de estudio y reflexión, que
-                        respeta la complejidad del conocimiento tradicional,
-                        pero lo hace accesible para el presente.
-                    </p>
-                </div>
-            </section>
+    <section id="lupas" class="mt-8 mb-16 md:mb-20 fade-in">
+      <div class="max-w-3xl mx-auto mb-10">
+        <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
+          Microscopios Estereoscópicos o Lupas
+        </h3>
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          También he trabajado con microscopios estereoscópicos, comunmente denominada lupas, que se
+          utilizan para observar objetos más grandes, como insectos, circuitos electrónicos, telas,
+          impresiones, proyectiles, etc. Las marcas con las que he trabajado incluyen Leica (y las
+          marcas que fue comprando Leica al paso de decadas de incursión mecánica y óptica), Zeiss,
+          Olympus y los chinos genericos obviamente.
+        </p>
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          En este tipo de microscopios, hay que prestarle atención especial a la limpieza de los
+          oculares y el lente, saber corregir y lubricar los mecanismos de enfoque, como también
+          asesorar sobre el cuidado y uso adecuado para asegurar que el microscopio estereoscópico
+          funcione de manera óptima para sus diversas aplicaciones. Este tipo de equipos son muy
+          utilizados para la obtención de imágenes de alta calidad para fotografía, mediciones y
+          análisis, y requieren un mantenimiento adecuado así como de algunas consideraciones poco
+          conocidas según la marca y el modelo.
+        </p>
+      </div>
 
-            <section
-                id="mis-gpts"
-                class="py-16 md:py-24 fade-in"
-                style="animation-delay: 0.2s;"
+      <article
+        id="galeria-fotos-microscopios"
+        class="mb-16 md:mb-20 fade-in container mx-auto px-6"
+      >
+        <div class="pswp-gallery-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <CardGaleria
+            imgPath="microscopios/lupa (1).webp"
+            altText=" "
+            width={1900}
+            height={1900}
+          />
+          <CardGaleria
+            imgPath="microscopios/lupa (2).webp"
+            altText=" "
+            width={1900}
+            height={1900}
+          />
+          <CardGaleria
+            imgPath="microscopios/lupa (3).webp"
+            altText=" "
+            width={1900}
+            height={1900}
+          />
+          <CardGaleria
+            imgPath="microscopios/lupa (4).webp"
+            altText=" "
+            width={1900}
+            height={1900}
+          />
+          <CardGaleria
+            imgPath="microscopios/lupa (5).webp"
+            altText=" "
+            width={1900}
+            height={1900}
+          />
+          <CardGaleria
+            imgPath="microscopios/lupa (6).webp"
+            altText=" "
+            width={1900}
+            height={1900}
+          />
+        </div>
+      </article>
+    </section>
+
+    <section id="software" class="mt-8 mb-16 md:mb-20 fade-in">
+      <div class="max-w-3xl mx-auto mb-10">
+        <h3 class="font-title text-3xl md:text-4xl text-text-title mb-10 text-center">
+          Software y Captura de Imágenes en Microscopios
+        </h3>
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          Realicé videos tutoriales y he trabajado con microscopios con diferentes cámaras y
+          software de captura, brindando asesoramiento sobre la configuración y uso adecuado para
+          obtener imágenes de alta calidad. He trabajado con software como Leica Application Suite,
+          Zeiss ZEN, Olympus cellSens, Mshot, Software de escaneo de preparados, entre otros; para
+          la captura y análisis de imágenes en microscopios ópticos y estereoscópicos. He brindado
+          soporte a usuarios en la configuración de cámaras, ajuste de parámetros de captura, mejora
+          de la calidad de imágenes y solución de problemas relacionados con el software de captura.
+        </p>
+        <p class="text-lg text-ink mb-4 leading-relaxed">
+          Videos realizados por mí sobre ajustes de equipamientos y software, con muestras
+          observadas con microscopios compuestos y estereoscópicos. Los últimos videos son
+          realizados con microscopios petrograficos, con técnicas de luz transmitida y polarizada.
+        </p>
+      </div>
+
+      <article id="videos" class="mb-16 md:mb-20 fade-in container mx-auto px-6">
+        <div class="container mx-auto px-6 mb-16">
+          <div id="webinar" class="mx-auto w-full grid grid-cols-2 gap-2 mt-2">
+            <div class="w-full rounded-none shadow-lg overflow-hidden" style="height:28rem;">
+              <iframe
+                src="https://www.youtube.com/embed/IFYWFM3j1q0?si=U_CMIsaJnXckAxQu"
+                class="block w-full h-full"
+                frameborder="0"
+                allowfullscreen
+                scrolling="no"
+                referrerpolicy="no-referrer-when-downgrade"
+                style="width:100% !important; height:100% !important; display:block;"></iframe>
+            </div>
+            <div class="w-full rounded-none shadow-lg overflow-hidden" style="height:28rem;">
+              <iframe
+                src="https://www.youtube.com/embed/oyO5hgpC86U?si=uZ2VdpaSWUqA2b5F"
+                class="block w-full h-full"
+                frameborder="0"
+                allowfullscreen
+                scrolling="no"
+                referrerpolicy="no-referrer-when-downgrade"
+                style="width:100% !important; height:100% !important; display:block;"></iframe>
+            </div>
+            <div class="w-full rounded-none shadow-lg overflow-hidden" style="height:28rem;">
+              <iframe
+                src="https://www.youtube.com/embed/2zfVF-55FpE?si=QgSSIdeArVdo7B7G"
+                class="block w-full h-full"
+                frameborder="0"
+                allowfullscreen
+                scrolling="no"
+                referrerpolicy="no-referrer-when-downgrade"
+                style="width:100% !important; height:100% !important; display:block;"></iframe>
+            </div>
+
+            <div class="w-full rounded-none shadow-lg overflow-hidden" style="height:28rem;">
+              <iframe
+                src="https://www.youtube.com/embed/SNcz315PXws?si=9NwkqTTac7QtYoqK"
+                class="block w-full h-full"
+                frameborder="0"
+                allowfullscreen
+                scrolling="no"
+                referrerpolicy="no-referrer-when-downgrade"
+                style="width:100% !important; height:100% !important; display:block;"></iframe>
+            </div>
+
+            <div class="w-full rounded-none shadow-lg overflow-hidden" style="height:28rem;">
+              <iframe
+                src="https://www.youtube.com/embed/l9OzfNjMpqE?si=w-GZ-14V8UzJJCp0"
+                class="block w-full h-full"
+                frameborder="0"
+                allowfullscreen
+                scrolling="no"
+                referrerpolicy="no-referrer-when-downgrade"
+                style="width:100% !important; height:100% !important; display:block;"></iframe>
+            </div>
+            <div class="w-full rounded-none shadow-lg overflow-hidden" style="height:28rem;">
+              <iframe
+                src="https://www.youtube.com/embed/vzVDmDf8_cg?si=Td_8yV3NYdFVUeXo"
+                class="block w-full h-full"
+                frameborder="0"
+                allowfullscreen
+                scrolling="no"
+                referrerpolicy="no-referrer-when-downgrade"
+                style="width:100% !important; height:100% !important; display:block;"></iframe>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section
+      id="contacto-microscopios"
+      <div
+      class="max-w-5xl mx-auto section-bg-paper p-6 md:p-10 rounded-none shadow-lg fade-in"
+    >
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <i aria-hidden="true" class="fas fa-hands-helping text-5xl text-chinese-seal-red mb-6"
+          ></i>
+          <h2 class="font-title text-3xl md:text-4xl text-title-ink mb-8">
+            Servicio de Mantenimiento en Microscopios
+          </h2>
+          <p class="text-lg text-ink mb-4 leading-relaxed">
+            Podes pedirme tareas de limpieza y mantenimiento de lentes, ajuste de iluminación,
+            reparación de mecanismos de enfoque, calibración de sistemas ópticos, asesoramiento
+            sobre el cuidado y uso adecuado de los microscopios, así como la mejora de la calidad de
+            imágenes para fotografía y mediciones, en los casos que disponen de cámara y software de
+            captura.
+          </p>
+
+          <div class="mt-8">
+            <a
+              href="https://api.whatsapp.com/send?phone=5491138733447&text=Hola%2C%20me%20interesa%20realizar%20un%20mantenimiento%20de%20mi%20microscopio.%20Mi%20nombre%20es&type=phone_number&app_absent=0"
+              class="button-manuscript text-lg py-3 px-8"
+              >Consultarme por Mantenimiento de Microscopia</a
             >
-                <div class="container mx-auto px-6">
-                    <h2
-                        class="font-title text-3xl md:text-4xl lg:text-5xl text-center mb-6"
-                    >
-                        Mis Asistentes GPT gratuitos
-                    </h2>
-                    <p
-                        class="text-lg text-text-secondary text-center max-w-2xl mx-auto mb-12 md:mb-16"
-                    >
-                        Los GPTs aquí son gratuitos, sin suscripciones ni
-                        registros complicados. Es necesario tener cuenta en
-                        ChatGPT.com para acceder a ellos, pero no es necesario
-                        ser usuario Plus. Algunos mejoran su funcionalidad con
-                        la suscripción paga, pero no es obligatorio.
-                    </p>
-
-                    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-book-medical text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                MTC-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                Medicina Tradicional China
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                Asistente IA para el estudio de MTC, integrando
-                                Yin-Yang, Cinco Elementos y Tres Tesoros.
-                                Facilita el diagnóstico según Ba Gang y aclara
-                                conceptos complejos.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-text-secondary mb-4"
-                            >
-                                Estado: En desarrollo
-                            </p>
-                            <div class="text-center mt-auto">
-                                <button
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm opacity-50 cursor-not-allowed"
-                                    aria-disabled="true"
-                                    disabled>Próximamente</button
-                                >
-                            </div>
-                        </div>
-
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.4s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-bars text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                BāguàGPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                Los Ocho Trigramas
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                Herramienta pedagógica sobre simbología,
-                                filosofía y aplicación del bāguà y cada
-                                trigrama, vinculándolos con principios
-                                energéticos, psicológicos y físicos del
-                                entrenamiento interno.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-green-600 mb-4"
-                            >
-                                Actualizado en Julio de 2025
-                            </p>
-                            <div class="text-center mt-auto">
-                                <a
-                                    href=" https://chatgpt.com/g/g-67f660548d848191b01af38f48a940d8-baguagpt-comprension-de-los-ocho-trigramas"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm"
-                                    >Utilizar BāguàGPT</a
-                                >
-                            </div>
-                        </div>
-
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.5s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-mountain text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                Mawangdui Dǎoyǐn Shu-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                Sistema Qígōng Oficial
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                Asistente del sistema qigong Mawangdui Dǎoyǐn
-                                Shu, con una curaduría en la historia, fuentes,
-                                base práctica oficial, errores y modificaciones.
-                                Ideal para quienes buscan profundizar en este
-                                sistema de Qígōng que beneficia la salud física.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-text-secondary mb-4"
-                            >
-                                Estado: En desarrollo
-                            </p>
-                            <div class="text-center mt-auto">
-                                <button
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm opacity-50 cursor-not-allowed"
-                                    aria-disabled="true"
-                                    disabled>Más Info (Próximamente)</button
-                                >
-                            </div>
-                        </div>
-
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.5s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-mountain text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                Wudang Qígōng-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                Sistema Wudang Qígōng
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                Inspirado en Wǔdāng Qìgōng, une conocimiento
-                                ancestral con mi práctica diaria. Actualizado
-                                semanalmente, es un puente entre practicantes y
-                                este sistema de Qígōng.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-green-600 mb-4"
-                            >
-                                Actualizado en Septiembre de 2025
-                            </p>
-                            <div class="text-center mt-auto">
-                                <a
-                                    href="https://chatgpt.com/g/g-67e553e939fc8191bce0a17e49639d09-wudang-qigong-1"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm"
-                                    >Utilizar Wudang Qígōng-GPT</a
-                                >
-                            </div>
-                        </div>
-
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.5s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-mountain text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                Yi Jin Jing-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                Oficial, Tradicionales y variaciones
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                Este GPT toma como base el sistema Yi Jin Jing,
-                                integrando diferentes enfoques y tradiciones. Es
-                                una herramienta para profundizar en esta
-                                práctica ancestral de Qígōng que contiene una
-                                rica historia y múltiples interpretaciones.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-text-secondary mb-4"
-                            >
-                                Estado: En desarrollo
-                            </p>
-                            <div class="text-center mt-auto">
-                                <button
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm opacity-50 cursor-not-allowed"
-                                    aria-disabled="true"
-                                    disabled>Más Info (Próximamente)</button
-                                >
-                            </div>
-                        </div>
-
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.5s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-mountain text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                Estiramiento de Meridianos TM-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                (Sistema de Qigong para Meridianos Tendinosos
-                                Musculares (TM))
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                El ChatGPT de Estiramiento de Meridianos TM es
-                                una herramienta para aprender y practicar
-                                estiramientos específicos que benefician la
-                                salud de los meridianos y puntos energéticos.
-                                Ideal para quienes buscan mejorar su bienestar
-                                físico y energético.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-text-secondary mb-4"
-                            >
-                                Estado: En desarrollo
-                            </p>
-                            <div class="text-center mt-auto">
-                                <button
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm opacity-50 cursor-not-allowed"
-                                    aria-disabled="true"
-                                    disabled>Más Info (Próximamente)</button
-                                >
-                            </div>
-                        </div>
-
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.6s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-language text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                Pīnyīn-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                (Revisor de Pīnyīn)
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                ChatGPT especializado para comprender términos
-                                chinos en taijí, qígōng, MTC u otras palabras
-                                chinas que nos genren dudas. Descubre cómo se
-                                escriben, su raíz cultural y evolución.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-green-600 mb-4"
-                            >
-                                Actualizado en Julio de 2025
-                            </p>
-                            <div class="text-center mt-auto">
-                                <a
-                                    href="https://chatgpt.com/g/g-67e2b640fd70819190f60f3e5b572214-corrector-de-pinyin"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm"
-                                    >Utilizar Pīnyīn-GPT</a
-                                >
-                            </div>
-                        </div>
-
-                        <!-- Nuevo: Dào Dé Jīng-GPT -->
-                        <div
-                            class="card-manuscript p-6 md:p-8 flex flex-col fade-in"
-                            style="animation-delay: 0.7s;"
-                        >
-                            <div class="text-center mb-4">
-                                <i
-                                    aria-hidden="true"
-                                    class="fas fa-scroll text-4xl text-chinese-seal-red"
-                                ></i>
-                            </div>
-                            <h3
-                                class="font-title text-2xl md:text-3xl text-title-ink mb-3 text-center"
-                            >
-                                Dào Dé Jīng-GPT
-                            </h3>
-                            <p
-                                class="text-sm text-center text-text-secondary mb-1"
-                            >
-                                Comentarios y textos del Dào Dé Jīng
-                            </p>
-                            <p class="text-ink leading-relaxed mb-4 flex-grow">
-                                Asistente para explorar el Dào Dé Jīng:
-                                interpretación de versos, variantes de
-                                traducción, contexto histórico y aplicaciones
-                                prácticas.
-                            </p>
-                            <p
-                                class="text-center font-semibold text-green-600 mb-4"
-                            >
-                                Actualizado en Septiembre de 2025
-                            </p>
-                            <div class="text-center mt-auto">
-                                <a
-                                    href="https://chatgpt.com/g/g-684b099f0d408191b67e227a685b5261-daode-jing"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="button-manuscript w-full text-center py-2 px-4 text-sm"
-                                    >Utilizar Dào Dé Jīng-GPT</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section
-                id="asesoria-gpt"
-                class="py-16 md:py-24 section-bg-paper fade-in"
-                style="animation-delay: 0.7s;"
+          </div>
+          <div class="mt-4">
+            <a
+              href="https://api.whatsapp.com/send?phone=5491138733447&text=Hola%2C%20me%20interesa%20recibir%20asesoramiento%20sobre%20captura%20de%20im%C3%A1genes%20y%20videos%20con%20mi%20microscopio%20o%20lupa.&type=phone_number&app_absent=0"
+              class="button-manuscript text-lg py-3 px-8"
+              >Consultarme por Asesoramiento en Captura de Imágenes/Videos</a
             >
-                <div class="container mx-auto px-6">
-                    <div class="max-w-3xl mx-auto text-center">
-                        <i
-                            aria-hidden="true"
-                            class="fas fa-hands-helping text-5xl text-chinese-seal-red mb-6"
-                        ></i>
-                        <h2
-                            class="font-title text-3xl md:text-4xl text-title-ink mb-8"
-                        >
-                            Servicio de Asesoría GPT Personalizada
-                        </h2>
-                        <p class="text-lg text-ink mb-6 leading-relaxed">
-                            Ofrezco un servicio particular para generar tus
-                            propios asistentes GPT enfocados en tu material y
-                            objetivos específicos.
-                        </p>
-                        <p class="text-lg text-ink mb-6 leading-relaxed">
-                            Imagina un asistente particular para consultar tu
-                            conocimiento, resolver dudas, realizar estudios,
-                            resúmenes, análisis, generar imágenes y más. Una
-                            herramienta a medida para potenciar tu trabajo o
-                            estudio.
-                        </p>
-                        <div class="mt-8">
-                            <a
-                                href="/index/#contacto"
-                                class="button-manuscript text-lg py-3 px-8"
-                                >Consultar por Asesoría</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </body>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </MainLayout>

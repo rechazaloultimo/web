@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auriculoterapia - Sistema de Localización Anatómica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .ear-container {
+        position: relative;
+        max-width: 500px; /* Ancho de visualización controlado */
+        margin: auto;
+      }
+      .overlay-svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+      .hotspot {
+        fill: rgba(255, 255, 255, 0);
+        stroke: rgba(0, 0, 0, 0.05);
+        stroke-width: 1;
+        pointer-events: all;
+        cursor: crosshair;
+        transition: all 0.2s ease-in-out;
+      }
+      .hotspot:hover {
+        fill: rgba(30, 64, 175, 0.25); /* Azul técnico translúcido */
+        stroke: rgba(30, 64, 175, 0.6);
+      }
+      .active-view {
+        display: block;
+      }
+      .hidden-view {
+        display: none;
+      }
+
+      /* Estilo para las etiquetas de texto */
+      .label-text {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body class="bg-zinc-50 text-zinc-900 font-sans antialiased">
+    <nav class="bg-white border-b border-zinc-200 py-4 sticky top-0 z-50">
+      <div class="max-w-4xl mx-auto flex justify-center gap-6">
+        <button
+          onclick="switchView('anatomia')"
+          id="btn-anatomia"
+          class="px-5 py-2 rounded border border-zinc-300 text-sm font-semibold transition bg-zinc-800 text-white"
+        >
+          ANATOMÍA ESTRUCTURAL
+        </button>
+        <button
+          onclick="switchView('puntos')"
+          id="btn-puntos"
+          class="px-5 py-2 rounded border border-zinc-300 text-sm font-semibold transition bg-white text-zinc-600 hover:bg-zinc-100"
+        >
+          MAPA DE PUNTOS (SEGMENTADO)
+        </button>
+      </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto p-6">
+      <div
+        id="info-panel"
+        class="mb-6 p-5 bg-white border border-zinc-200 rounded shadow-sm min-h-[100px] flex flex-col justify-center text-center"
+      >
+        <h2 id="area-title" class="text-lg font-bold text-zinc-800 tracking-tight">
+          SELECCIONE REGIÓN
+        </h2>
+        <p id="area-desc" class="text-sm text-zinc-500 mt-1 italic">
+          Indique una zona en el gráfico para obtener la nomenclatura técnica.
+        </p>
+      </div>
+
+      <div class="ear-container bg-white border border-zinc-200 p-2 shadow-lg">
+        <div id="view-anatomia" class="active-view">
+          <img
+            src="/web/src/images/auriculoterapia/oreja-segmentada.webp"
+            alt="Anatomía Auricular"
+            class="w-full h-auto opacity-90"
+          />
+          <svg viewBox="0 0 887 1236" class="overlay-svg">
+            <path
+              d="M385,565 Q320,150 480,60 Q840,60 855,450 L840,920 Q810,1130 680,1190 L580,1190 L600,1100 L790,950 L810,480 Q790,140 480,140 Q410,200 395,565 Z"
+              class="hotspot"
+              onmouseover="
+                updateInfo('Hélix', 'Estructura curva más externa del pabellón auricular.')
+              "
+            />
+
+            <path
+              d="M620,1050 Q540,650 530,550 Q480,300 420,180 L540,160 Q620,400 640,550 Q750,560 780,950 Z"
+              class="hotspot"
+              onmouseover="
+                updateInfo(
+                  'Anti-hélix',
+                  'Relieve curvo paralelo al hélix; se bifurca en su parte superior.',
+                )
+              "
+            />
+
+            <path
+              d="M450,220 Q540,350 540,510 Q420,460 380,520 Z"
+              class="hotspot"
+              onmouseover="
+                updateInfo(
+                  'Fosa Triangular',
+                  'Depresión profunda situada entre las dos ramas del anti-hélix.',
+                )
+              "
+            />
+
+            <path
+              d="M780,250 Q810,550 780,850 L730,830 Q760,550 730,300 Z"
+              class="hotspot"
+              onmouseover="
+                updateInfo(
+                  'Fosa Escafoidea',
+                  'Zona acanalada situada entre el hélix y el anti-hélix.',
+                )
+              "
+            />
+
+            <path
+              d="M400,580 Q520,530 620,630 L610,920 Q440,960 360,860 Q420,750 400,580 Z"
+              class="hotspot"
+              onmouseover="
+                updateInfo(
+                  'Concha de la Oreja',
+                  'Depresión central que conduce al conducto auditivo externo.',
+                )
+              "
+            />
+
+            <path
+              d="M290,730 Q340,690 385,760 L385,870 Q310,900 290,810 Z"
+              class="hotspot"
+              onmouseover="
+                updateInfo(
+                  'Trago',
+                  'Pequeña eminencia laminar situada delante del conducto auditivo.',
+                )
+              "
+            />
+
+            <path
+              d="M510,950 Q580,920 620,1000 L530,1050 Q480,1020 510,950 Z"
+              class="hotspot"
+              onmouseover="
+                updateInfo(
+                  'Anti-trago',
+                  'Eminencia situada en la parte posteroinferior del pabellón, frente al trago.',
+                )
+              "
+            />
+
+            <path
+              d="M580,1190 Q750,1190 780,1000 L650,1050 Q600,1150 580,1190 Z"
+              class="hotspot"
+              onmouseover="
+                updateInfo(
+                  'Lóbulo',
+                  'Extremo inferior del pabellón auricular, de consistencia blanda.',
+                )
+              "
+            />
+          </svg>
+        </div>
+
+        <div id="view-puntos" class="hidden-view">
+          <img
+            src="/web/src/images/auriculoterapia/oreja-segmentada.webp"
+            alt="Mapa de Segmentos"
+            class="w-full h-auto"
+          />
+          <svg viewBox="0 0 887 1236" class="overlay-svg" id="svg-map">
+            <path
+              d="M320,720 Q350,680 430,730 L400,880 Q340,880 310,800 Z"
+              class="hotspot"
+              data-name="Trago"
+              data-info="Proyección anterior que protege el conducto auditivo. Punto maestro de control adrenal."
+            />
+
+            <path
+              d="M510,310 L590,340 L560,420 L480,390 Z"
+              class="hotspot"
+              data-name="Zona Lumbar"
+              data-info="Región superior del anti-hélix. Tratamiento de lumbalgias y ciática."
+            />
+
+            <path
+              d="M600,410 L680,440 L640,600 L570,580 Z"
+              class="hotspot"
+              data-name="Zona Torácica"
+              data-info="Segmento medio. Relacionado con órganos internos y dolores dorsales."
+            />
+
+            <path
+              d="M640,620 L710,650 L660,820 L590,780 Z"
+              class="hotspot"
+              data-name="Zona Cervical"
+              data-info="Base del anti-hélix. Control de tensión en cuello y cervicalgias."
+            />
+          </svg>
+
+          <script>
+            // 1. Lógica de Interacción mejorada
+            const hotspots = document.querySelectorAll(".hotspot");
+            const title = document.getElementById("area-title");
+            const desc = document.getElementById("area-desc");
+
+            hotspots.forEach((spot) => {
+              spot.addEventListener("mouseenter", (e) => {
+                const name = e.target.getAttribute("data-name");
+                const info = e.target.getAttribute("data-info");
+                title.innerText = name;
+                desc.innerText = info;
+              });
+            });
+
+            // 2. UTILIDAD PARA DESARROLLO (Borrar una vez mapeado todo)
+            // Haz clic en cualquier lugar de la oreja para ver la coordenada exacta en la consola.
+            document.getElementById("svg-map").addEventListener("click", function (e) {
+              const pt = this.createSVGPoint();
+              pt.x = e.clientX;
+              pt.y = e.clientY;
+              const svgP = pt.matrixTransform(this.getScreenCTM().inverse());
+              console.log(
+                `Coordenada para el punto: x="${Math.round(svgP.x)}" y="${Math.round(svgP.y)}"`,
+              );
+            });
+          </script>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      /**
+       * Alterna entre la vista de anatomía macro y el mapa segmentado.
+       */
+      function switchView(view) {
+        const anaView = document.getElementById("view-anatomia");
+        const punView = document.getElementById("view-puntos");
+        const btnAna = document.getElementById("btn-anatomia");
+        const btnPun = document.getElementById("btn-puntos");
+
+        if (view === "anatomia") {
+          anaView.className = "active-view";
+          punView.className = "hidden-view";
+          btnAna.className =
+            "px-5 py-2 rounded border border-zinc-300 text-sm font-semibold transition bg-zinc-800 text-white";
+          btnPun.className =
+            "px-5 py-2 rounded border border-zinc-300 text-sm font-semibold transition bg-white text-zinc-600 hover:bg-zinc-100";
+        } else {
+          anaView.className = "hidden-view";
+          punView.className = "active-view";
+          btnPun.className =
+            "px-5 py-2 rounded border border-zinc-300 text-sm font-semibold transition bg-zinc-800 text-white";
+          btnAna.className =
+            "px-5 py-2 rounded border border-zinc-300 text-sm font-semibold transition bg-white text-zinc-600 hover:bg-zinc-100";
+        }
+        updateInfo(
+          "SELECCIONE REGIÓN",
+          "Indique una zona en el gráfico para obtener la nomenclatura técnica.",
+        );
+      }
+
+      /**
+       * Actualiza el panel de información técnica.
+       */
+      function updateInfo(title, desc) {
+        document.getElementById("area-title").innerText = title;
+        document.getElementById("area-desc").innerText = desc;
+      }
+    </script>
+  </body>
+</html>
