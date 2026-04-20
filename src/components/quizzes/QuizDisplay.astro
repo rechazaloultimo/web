@@ -1,0 +1,304 @@
+---
+// src/components/quizzes/QuizDisplay.astro
+import type { QuizMeta } from "../../data/quizzes";
+import "../../styles/quiz-engine.css";
+
+export interface Props {
+  quizzes: QuizMeta[];
+  basePath?: string;
+}
+
+const { quizzes, basePath = "?" } = Astro.props;
+---
+
+<div id="quiz-controller-wrapper">
+  <div id="no-quiz-placeholder" class="text-center py-16 bg-bg-section border border-border-subtle">
+    <h3 class="font-title text-xl mb-2 text-text-title uppercase tracking-widest">
+      Selección Requerida
+    </h3>
+  </div>
+
+  <div id="active-quiz-container" style="display: none;">
+    <div class="quiz-card">
+      <div class="quiz-header-custom">
+        <h1 id="dynamic-quiz-title-text"></h1>
+        <div class="sub">Evaluación Técnica Cronometrada | Transición Automática</div>
+      </div>
+      <div id="quiz-engine-mount"></div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ quizzes }}>
+  function runQuizEngine() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const activeId = urlParams.get("quiz");
+    const engineMount = document.getElementById("quiz-engine-mount");
+    const selectedQuiz = quizzes.find((q) => q.id === activeId);
+
+    if (!selectedQuiz) return;
+
+    document.getElementById("active-quiz-container").style.display = "block";
+    document.getElementById("no-quiz-placeholder").style.display = "none";
+    document.getElementById("dynamic-quiz-title-text").innerText = selectedQuiz.title;
+
+    // Configuración de tiempos
+    const SECONDS_PER_QUESTION = 9;
+    const TRANSITION_DELAY = 2000; // 2 segundos
+
+    let currentSet = [];
+    let currentIndex = 0;
+    let userAnswers = [];
+    let liveAciertos = 0;
+    let liveErrores = 0;
+    let liveSinContestar = 0;
+    let timerInterval = null;
+    let transitionTimeout = null;
+    let timeLeft = SECONDS_PER_QUESTION;
+
+    function shuffleAndStart() {
+      currentSet = [...selectedQuiz.questions]
+        .map((q) => ({
+          ...q,
+          shuffledOptions: q.options
+            .map((opt, i) => ({ text: opt, originalIndex: i }))
+            .sort(() => Math.random() - 0.5),
+        }))
+        .sort(() => Math.random() - 0.5);
+
+      currentIndex = 0;
+      userAnswers = [];
+      liveAciertos = 0;
+      liveErrores = 0;
+      liveSinContestar = 0;
+      renderQuestion();
+    }
+
+    function stopTimers() {
+      if (timerInterval) clearInterval(timerInterval);
+      if (transitionTimeout) clearTimeout(transitionTimeout);
+    }
+
+    function startTimer() {
+      stopTimers();
+      timeLeft = SECONDS_PER_QUESTION;
+      updateTimerUI();
+
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        updateTimerUI();
+        if (timeLeft <= -1) {
+          clearInterval(timerInterval);
+          handleAutoSkip();
+        }
+      }, 1000);
+    }
+
+    function updateTimerUI() {
+      const bar = document.getElementById("timer-bar-element");
+      // Se elimina la búsqueda y actualización de timer-text-element
+      if (bar) {
+        const percentage = (timeLeft / SECONDS_PER_QUESTION) * 100;
+        bar.style.width = `${percentage}%`;
+      }
+    }
+
+    function renderQuestion() {
+      const q = currentSet[currentIndex];
+      const progress = (currentIndex / currentSet.length) * 100;
+
+      engineMount.innerHTML = `
+        <div class="fade-in">
+          <div class="progress-area">
+            <span style="font-weight: bold; text-transform: uppercase; font-size: 0.7rem;">
+              Pregunta ${currentIndex + 1} de ${currentSet.length}
+            </span>
+            <div style="display: flex; gap: 0.5rem;">
+              <span class="score-badge">✅ ${liveAciertos}</span>
+              <span class="incorrect-badge">❌ ${liveErrores}</span>
+              <span class="unanswered-badge">⚪ ${liveSinContestar}</span>
+            </div>
+          </div>
+          
+          <div class="timer-container" style="margin-bottom: 0;">
+            <div id="timer-bar-element" class="timer-bar"></div>
+          </div>
+
+          <div style="padding: 2.5rem 2rem;">
+           
+            
+            <h2 style="font-family: serif; font-size: 1.3rem; margin-bottom: 2rem; line-height: 1.4; border-left: 3px solid #b31010; padding-left: 1.2rem;">
+              ${q.text}
+            </h2>
+
+            <div id="options-grid">
+              ${q.shuffledOptions
+                .map(
+                  (opt) => `
+                <button class="opt-btn" data-idx="${opt.originalIndex}">
+                  <span class="opt-btn-indicator">${String.fromCharCode(65 + q.shuffledOptions.indexOf(opt))}</span>
+                  <span>${opt.text}</span>
+                </button>
+              `,
+                )
+                .join("")}
+            </div>
+
+            <div id="feedback-anchor"></div>
+          </div>
+        </div>
+      `;
+
+      engineMount.querySelectorAll(".opt-btn").forEach((btn) => {
+        btn.addEventListener("click", handleSelection);
+      });
+
+      startTimer();
+    }
+
+    function handleSelection(e) {
+      stopTimers();
+      const q = currentSet[currentIndex];
+      const selectedIdx = parseInt(e.currentTarget.dataset.idx);
+      const isRight = selectedIdx === q.correct;
+
+      if (isRight) liveAciertos++;
+      else liveErrores++;
+
+      finalizeQuestion(selectedIdx, isRight, false);
+    }
+
+    function handleAutoSkip() {
+      const q = currentSet[currentIndex];
+      liveSinContestar++;
+
+      userAnswers.push({
+        questionText: q.text,
+        selectedText: "SIN RESPUESTA",
+        correctText: q.options[q.correct],
+        isRight: false,
+        timeout: true,
+      });
+
+      // Bloqueo visual
+      const allBtns = engineMount.querySelectorAll(".opt-btn");
+      allBtns.forEach((btn) => {
+        btn.classList.add("is-locked");
+        btn.disabled = true;
+        if (parseInt(btn.dataset.idx) === q.correct) btn.classList.add("is-correct");
+      });
+
+      document.getElementById("feedback-anchor").innerHTML = `
+        <div class="auto-next-notice">
+          <span>⚠️ Tiempo agotado. Siguiente pregunta en 2s...</span>
+        </div>
+      `;
+
+      transitionTimeout = setTimeout(nextStep, TRANSITION_DELAY);
+    }
+
+    function finalizeQuestion(selectedIdx, isRight, isTimeout) {
+      const q = currentSet[currentIndex];
+
+      userAnswers.push({
+        questionText: q.text,
+        selectedText: q.options[selectedIdx],
+        correctText: q.options[q.correct],
+        isRight,
+      });
+
+      const allBtns = engineMount.querySelectorAll(".opt-btn");
+      allBtns.forEach((btn) => {
+        btn.classList.add("is-locked");
+        btn.disabled = true;
+        const btnIdx = parseInt(btn.dataset.idx);
+        if (btnIdx === q.correct) btn.classList.add("is-correct");
+        if (btnIdx === selectedIdx && !isRight) btn.classList.add("is-incorrect");
+      });
+
+      document.getElementById("feedback-anchor").innerHTML = `
+        <div class="auto-next-notice">
+          <span>🔒 Respuesta registrada. Siguiente pregunta en 2s...</span>
+        </div>
+      `;
+
+      transitionTimeout = setTimeout(nextStep, TRANSITION_DELAY);
+    }
+
+    function nextStep() {
+      stopTimers();
+      currentIndex++;
+      if (currentIndex < currentSet.length) renderQuestion();
+      else renderResults();
+    }
+
+    function renderResults() {
+      stopTimers();
+      const score = userAnswers.filter((a) => a.isRight).length;
+      const percentage = Math.round((score / currentSet.length) * 100);
+
+      engineMount.innerHTML = `
+        <div class="fade-in">
+          <div class="progress-area">
+            <span style="font-weight: bold; text-transform: uppercase;">Informe Final de Evaluación</span>
+            <div style="display: flex; gap: 1rem;">
+              <span>Aciertos: ${liveAciertos}</span>
+              <span>Errores: ${liveErrores}</span>
+              <span>Sin contestar: ${liveSinContestar}</span>
+            </div>
+          </div>
+          
+          <div style="padding: 3rem 2rem; text-align: center;">
+            <div class="result-score" style="font-size: 3rem; font-family: serif; margin-bottom: 0.5rem;">
+              ${score} / ${currentSet.length}
+            </div>
+            <p style="margin-bottom: 2.5rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; color: #666;">
+              Nivel de precisión técnica: ${percentage}%
+            </p>
+            
+            <div class="custom-scrollbar" style="text-align: left; max-height: 450px; overflow-y: auto; background: #f9f9f9; padding: 2rem; border: 1px solid #dee2e6;">
+               <h3 style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; border-bottom: 1px solid #000; padding-bottom: 0.5rem;">
+                 Revisión de protocolos y respuestas
+               </h3>
+               
+               ${userAnswers
+                 .map(
+                   (a, i) => `
+                <div style="margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                  <p style="margin-bottom: 0.8rem; font-size: 0.9rem; line-height: 1.4;">
+                    <strong>${i + 1}. ${a.questionText}</strong>
+                  </p>
+                  
+                  <div style="display: grid; grid-template-columns: 140px 1fr; gap: 0.4rem; font-size: 0.8rem;">
+                    <span style="color: #888; text-transform: uppercase; font-size: 0.65rem;">Respuesta elegida:</span>
+                    <span style="${a.timeout ? "color: #b31010; font-style: italic;" : a.isRight ? "color: #15803d;" : "color: #b31010;"}">
+                      ${a.timeout ? "NULIFICADA (Tiempo agotado)" : a.selectedText}
+                    </span>
+                    
+                    <span style="color: #888; text-transform: uppercase; font-size: 0.65rem;">Respuesta correcta:</span>
+                    <span style="font-weight: 500;">${a.correctText}</span>
+                    
+                    <span style="color: #888; text-transform: uppercase; font-size: 0.65rem;">Estado:</span>
+                    <span>${a.isRight ? "CORRECTO" : a.timeout ? "INCOMPLETO" : "INCORRECTO"}</span>
+                  </div>
+                </div>
+              `,
+                 )
+                 .join("")}
+            </div>
+            
+            <button id="restartBtn" class="restart-btn" style="margin-top: 2.5rem; background: #000; color: #fff; padding: 1rem 2rem; border: none; cursor: pointer; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.1em;">
+              Reiniciar Evaluación
+            </button>
+          </div>
+        </div>
+      `;
+      document.getElementById("restartBtn").addEventListener("click", shuffleAndStart);
+    }
+
+    shuffleAndStart();
+  }
+
+  runQuizEngine();
+  document.addEventListener("astro:page-load", runQuizEngine);
+</script>

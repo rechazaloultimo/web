@@ -1,0 +1,58 @@
+---
+// src/pages/quizzes.astro
+import MainQuizzes from "@/layouts/MainQuizzes.astro";
+import NavGeneral from "@/components/Navegadores/NavGeneral.astro";
+import QuizDisplay from "@/components/quizzes/QuizDisplay.astro";
+import { quizzes, type QuizMeta } from "@/data/quizzes";
+
+const pageTitle = "Quizzes de Medicina Tradicional China";
+const pageDescription = "Evaluaciones técnicas sobre fundamentos de MTC";
+const basePath = Astro.url.pathname;
+---
+
+<MainQuizzes title={pageTitle} description={pageDescription}>
+  <NavGeneral />
+
+  <main id="main-content" class="flex-grow flex flex-col section-bg-paper py-8 md:py-12">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <section class="mb-12">
+        <h2
+          class="font-title text-2xl mb-6 text-center md:text-left border-b-2 border-chinese-seal-red pb-2 inline-block"
+        >
+          Quizzes disponibles
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+          {
+            quizzes.map((quiz) => (
+              <a
+                href={`?quiz=${quiz.id}#quiz-viewer`}
+                data-quiz-id={quiz.id}
+                class="quiz-card-link card-manuscript p-6 block"
+              >
+                <h3 class="font-title text-xl mb-2">{quiz.title}</h3>
+                <p class="text-sm mb-4">{quiz.description}</p>
+
+                <span class="active-badge" style="display: none;">
+                  Seleccionado
+                </span>
+              </a>
+            ))
+          }
+        </div>
+
+        {
+          quizzes.length === 0 && (
+            <div class="text-center py-12 text-text-secondary border border-border-subtle mt-6">
+              <p class="text-lg">No hay unidades disponibles en este momento.</p>
+            </div>
+          )
+        }
+      </section>
+
+      <section id="quiz-viewer" class="scroll-mt-20">
+        <QuizDisplay quizzes={quizzes} basePath={basePath} />
+      </section>
+    </div>
+  </main>
+</MainQuizzes>

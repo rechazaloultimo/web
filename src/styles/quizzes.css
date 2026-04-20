@@ -1,0 +1,46 @@
+/* Contenedor de la tarjeta */
+.card-manuscript {
+  background-color: var(--color-bg-card, #fdfbf2);
+  border: 1px solid var(--color-border-subtle, #dee2e6);
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  position: relative; /* Esencial para la etiqueta inferior */
+}
+
+/* Estado Activo: El borde inferior se vuelve más grueso o se mantiene en 2px */
+.quiz-card-link.is-active {
+  border: 2px solid var(--color-chinese-seal-red, #b31010);
+  background-color: var(--color-bg-section, #f6f3e4);
+  margin-bottom: 2rem; /* Espacio para que la etiqueta no pise la fila de abajo */
+}
+
+/* La etiqueta "SELECCIONADO" */
+.quiz-card-link.is-active .active-badge {
+  display: block !important;
+  position: absolute;
+
+  /* Posicionamiento exacto */
+  bottom: -24px; /* Ajusta este valor según el alto de la etiqueta */
+  left: -2px; /* Alineado con el borde izquierdo de 2px */
+
+  background-color: var(--color-chinese-seal-red, #b31010);
+  color: #ffffff;
+
+  /* Estilo de texto */
+  padding: 4px 12px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  /* Sin bordes redondeados para mantener la estética austera */
+  border-radius: 0;
+  z-index: 20;
+}
+
+/* Efecto hover general */
+.card-manuscript:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
