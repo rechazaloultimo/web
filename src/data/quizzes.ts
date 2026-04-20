@@ -1318,11 +1318,7 @@ export const quizzes: QuizMeta[] = [
         options: ["El Qi", "El descanso", "El frío", "El sedentarismo"],
         correct: 0,
       },
-      {
-        text: "¿Quién es el docente mencionado en el material de nutrición?",
-        options: ["Jorge Quiñones", "Marisa Marine", "Paul Nogier", "Sun Simiao"],
-        correct: 1,
-      },
+
       {
         text: "La frase 'El equilibrio del Qi es salud' pertenece a:",
         options: [
