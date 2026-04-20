@@ -1,28 +1,26 @@
 ---
 // src/components/quizzes/QuizDisplay.astro
 import type { QuizMeta } from "../../data/quizzes";
-import "../../styles/quiz-engine.css";
 
 export interface Props {
   quizzes: QuizMeta[];
-  basePath?: string;
 }
 
-const { quizzes, basePath = "?" } = Astro.props;
+const { quizzes } = Astro.props;
 ---
 
-<div id="quiz-controller-wrapper">
-  <div id="no-quiz-placeholder" class="text-center py-16 bg-bg-section border border-border-subtle">
-    <h3 class="font-title text-xl mb-2 text-text-title uppercase tracking-widest">
-      Selección Requerida
+<div id="quiz-controller-wrapper" class="section-bg-paper container mx-auto px-4 max-w-5xl">
+  <div id="no-quiz-placeholder" class="text-center py-20 border border-dashed border-gray-300">
+    <h3 class="font-title text-xl text-gray-400 uppercase tracking-widest">
+      Selecciona un módulo para comenzar
     </h3>
   </div>
 
   <div id="active-quiz-container" style="display: none;">
-    <div class="quiz-card">
+    <div class="quiz-card-full">
       <div class="quiz-header-custom">
-        <h1 id="dynamic-quiz-title-text"></h1>
-        <div class="sub">Evaluación Técnica Cronometrada | Transición Automática</div>
+        <h1 id="dynamic-quiz-title-text" class="font-title text-3xl"></h1>
+        <div class="sub uppercase tracking-tighter opacity-70">Protocolo de Evaluación Técnica</div>
       </div>
       <div id="quiz-engine-mount"></div>
     </div>
@@ -42,9 +40,10 @@ const { quizzes, basePath = "?" } = Astro.props;
     document.getElementById("no-quiz-placeholder").style.display = "none";
     document.getElementById("dynamic-quiz-title-text").innerText = selectedQuiz.title;
 
-    // Configuración de tiempos
-    const SECONDS_PER_QUESTION = 9;
-    const TRANSITION_DELAY = 2000; // 2 segundos
+    // --- VARIABLES DE SESIÓN (Valores por defecto) ---
+    let SECONDS_PER_QUESTION = 9;
+    let IS_RANDOM = false; // "Original" por defecto ahora
+    const TRANSITION_DELAY = 2000;
 
     let currentSet = [];
     let currentIndex = 0;
@@ -54,17 +53,96 @@ const { quizzes, basePath = "?" } = Astro.props;
     let liveSinContestar = 0;
     let timerInterval = null;
     let transitionTimeout = null;
-    let timeLeft = SECONDS_PER_QUESTION;
+    let timeLeft = 0;
 
-    function shuffleAndStart() {
-      currentSet = [...selectedQuiz.questions]
-        .map((q) => ({
-          ...q,
-          shuffledOptions: q.options
-            .map((opt, i) => ({ text: opt, originalIndex: i }))
-            .sort(() => Math.random() - 0.5),
-        }))
-        .sort(() => Math.random() - 0.5);
+    function renderSetup() {
+      stopTimers();
+      engineMount.innerHTML = `
+        <div class="fade-in setup-screen" style="padding: 3rem 1rem; max-width: 600px; margin: 0 auto;">
+          <h2 style="font-family: serif; font-size: 1.6rem; text-align: center; margin-bottom: 2.5rem; color: #1a1a1a;">
+            Configuración de la Sesión
+          </h2>
+          
+          <div style="display: flex; flex-direction: column; gap: 2rem;">
+            
+            <div class="setup-group">
+              <span class="setup-label">Secuencia de Preguntas</span>
+              <div class="radio-stack">
+                <label class="radio-option">
+                  <input type="radio" name="order-mode" value="fixed" checked>
+                  <div class="radio-text">
+                    <strong>Orden Original</strong>
+                    <span>Para aprender secuencialmente los contenidos.</span>
+                  </div>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="order-mode" value="random">
+                  <div class="radio-text">
+                    <strong>Orden Aleatorio</strong>
+                    <span>Para practicar con un conocimiento básico sólido.</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="setup-group">
+              <span class="setup-label">Velocidad de Respuesta</span>
+              <div class="radio-stack">
+                <label class="radio-option">
+                  <input type="radio" name="speed-mode" value="15">
+                  <div class="radio-text">
+                    <strong>15 Segundos</strong>
+                    <span>Modo aprendizaje: lectura pausada y reflexión.</span>
+                  </div>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="speed-mode" value="9" checked>
+                  <div class="radio-text">
+                    <strong>9 Segundos</strong>
+                    <span>Ritmo estándar: flujo normal de evaluación.</span>
+                  </div>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="speed-mode" value="5">
+                  <div class="radio-text">
+                    <strong>5 Segundos</strong>
+                    <span>Maestría: para fijar el conocimiento mediante reflejos.</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <button id="start-quiz-btn" class="btn-primary-chinese" style="margin-top: 3.5rem; width: 100%;">
+            Comenzar Entrenamiento
+          </button>
+        </div>
+      `;
+
+      document.getElementById("start-quiz-btn").addEventListener("click", () => {
+        // Capturar Tiempo
+        const speedVal = document.querySelector('input[name="speed-mode"]:checked').value;
+        SECONDS_PER_QUESTION = parseInt(speedVal);
+
+        // Capturar Orden
+        const orderVal = document.querySelector('input[name="order-mode"]:checked').value;
+        IS_RANDOM = orderVal === "random";
+
+        prepareAndStart();
+      });
+    }
+
+    function prepareAndStart() {
+      let baseSet = [...selectedQuiz.questions];
+      if (IS_RANDOM) baseSet.sort(() => Math.random() - 0.5);
+
+      currentSet = baseSet.map((q) => ({
+        ...q,
+        shuffledOptions: q.options
+          .map((opt, i) => ({ text: opt, originalIndex: i }))
+          .sort(() => Math.random() - 0.5),
+      }));
 
       currentIndex = 0;
       userAnswers = [];
@@ -74,6 +152,7 @@ const { quizzes, basePath = "?" } = Astro.props;
       renderQuestion();
     }
 
+    // --- LÓGICA DE MOTOR (IDÉNTICA A LA ANTERIOR PERO CON UI LIMPIA) ---
     function stopTimers() {
       if (timerInterval) clearInterval(timerInterval);
       if (transitionTimeout) clearTimeout(transitionTimeout);
@@ -83,11 +162,10 @@ const { quizzes, basePath = "?" } = Astro.props;
       stopTimers();
       timeLeft = SECONDS_PER_QUESTION;
       updateTimerUI();
-
       timerInterval = setInterval(() => {
         timeLeft--;
         updateTimerUI();
-        if (timeLeft <= -1) {
+        if (timeLeft < 0) {
           clearInterval(timerInterval);
           handleAutoSkip();
         }
@@ -96,54 +174,53 @@ const { quizzes, basePath = "?" } = Astro.props;
 
     function updateTimerUI() {
       const bar = document.getElementById("timer-bar-element");
-      // Se elimina la búsqueda y actualización de timer-text-element
       if (bar) {
-        const percentage = (timeLeft / SECONDS_PER_QUESTION) * 100;
+        const percentage = Math.max(0, (timeLeft / SECONDS_PER_QUESTION) * 100);
         bar.style.width = `${percentage}%`;
+        // Cambio de color si queda poco tiempo
+        bar.style.backgroundColor = timeLeft < 3 ? "#b31010" : "#1a1a1a";
       }
     }
-
     function renderQuestion() {
       const q = currentSet[currentIndex];
-      const progress = (currentIndex / currentSet.length) * 100;
-
       engineMount.innerHTML = `
         <div class="fade-in">
           <div class="progress-area">
-            <span style="font-weight: bold; text-transform: uppercase; font-size: 0.7rem;">
-              Pregunta ${currentIndex + 1} de ${currentSet.length}
-            </span>
-            <div style="display: flex; gap: 0.5rem;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+               <span style="font-weight: bold; text-transform: uppercase; font-size: 0.7rem; color: #888;">
+                Módulo en curso
+               </span>
+               <span style="font-family: serif; font-size: 1rem; color: var(--color-text-title);">
+                Pregunta ${currentIndex + 1} de ${currentSet.length}
+               </span>
+            </div>
+            
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
               <span class="score-badge">✅ ${liveAciertos}</span>
               <span class="incorrect-badge">❌ ${liveErrores}</span>
               <span class="unanswered-badge">⚪ ${liveSinContestar}</span>
             </div>
           </div>
           
-          <div class="timer-container" style="margin-bottom: 0;">
+          <div class="timer-container">
             <div id="timer-bar-element" class="timer-bar"></div>
           </div>
 
-          <div style="padding: 2.5rem 2rem;">
-           
+          <div class="question-body">
+            <h2 class="question-text">${q.text}</h2>
             
-            <h2 style="font-family: serif; font-size: 1.3rem; margin-bottom: 2rem; line-height: 1.4; border-left: 3px solid #b31010; padding-left: 1.2rem;">
-              ${q.text}
-            </h2>
-
-            <div id="options-grid">
+            <div class="options-container">
               ${q.shuffledOptions
                 .map(
-                  (opt) => `
+                  (opt, i) => `
                 <button class="opt-btn" data-idx="${opt.originalIndex}">
-                  <span class="opt-btn-indicator">${String.fromCharCode(65 + q.shuffledOptions.indexOf(opt))}</span>
+                  <span class="opt-btn-indicator">${String.fromCharCode(65 + i)}</span>
                   <span>${opt.text}</span>
                 </button>
               `,
                 )
                 .join("")}
             </div>
-
             <div id="feedback-anchor"></div>
           </div>
         </div>
@@ -152,54 +229,38 @@ const { quizzes, basePath = "?" } = Astro.props;
       engineMount.querySelectorAll(".opt-btn").forEach((btn) => {
         btn.addEventListener("click", handleSelection);
       });
-
       startTimer();
     }
-
     function handleSelection(e) {
       stopTimers();
       const q = currentSet[currentIndex];
       const selectedIdx = parseInt(e.currentTarget.dataset.idx);
       const isRight = selectedIdx === q.correct;
 
+      // Actualizar contadores globales
       if (isRight) liveAciertos++;
       else liveErrores++;
 
-      finalizeQuestion(selectedIdx, isRight, false);
+      finalizeQuestion(selectedIdx, isRight);
     }
 
     function handleAutoSkip() {
       const q = currentSet[currentIndex];
       liveSinContestar++;
-
       userAnswers.push({
         questionText: q.text,
-        selectedText: "SIN RESPUESTA",
+        selectedText: "TIEMPO AGOTADO",
         correctText: q.options[q.correct],
         isRight: false,
-        timeout: true,
       });
 
-      // Bloqueo visual
-      const allBtns = engineMount.querySelectorAll(".opt-btn");
-      allBtns.forEach((btn) => {
-        btn.classList.add("is-locked");
-        btn.disabled = true;
-        if (parseInt(btn.dataset.idx) === q.correct) btn.classList.add("is-correct");
-      });
-
-      document.getElementById("feedback-anchor").innerHTML = `
-        <div class="auto-next-notice">
-          <span>⚠️ Tiempo agotado. Siguiente pregunta en 2s...</span>
-        </div>
-      `;
-
+      // Solo marcamos la correcta en verde porque nadie eligió nada
+      markButtons(q.correct, -1);
       transitionTimeout = setTimeout(nextStep, TRANSITION_DELAY);
     }
 
-    function finalizeQuestion(selectedIdx, isRight, isTimeout) {
+    function finalizeQuestion(selectedIdx, isRight) {
       const q = currentSet[currentIndex];
-
       userAnswers.push({
         questionText: q.text,
         selectedText: q.options[selectedIdx],
@@ -207,26 +268,51 @@ const { quizzes, basePath = "?" } = Astro.props;
         isRight,
       });
 
-      const allBtns = engineMount.querySelectorAll(".opt-btn");
-      allBtns.forEach((btn) => {
-        btn.classList.add("is-locked");
-        btn.disabled = true;
-        const btnIdx = parseInt(btn.dataset.idx);
-        if (btnIdx === q.correct) btn.classList.add("is-correct");
-        if (btnIdx === selectedIdx && !isRight) btn.classList.add("is-incorrect");
-      });
+      // Pintamos los botones según la lógica técnica
+      markButtons(q.correct, selectedIdx);
 
-      document.getElementById("feedback-anchor").innerHTML = `
-        <div class="auto-next-notice">
-          <span>🔒 Respuesta registrada. Siguiente pregunta en 2s...</span>
-        </div>
-      `;
-
+      // Transición automática sin mensajes de texto
       transitionTimeout = setTimeout(nextStep, TRANSITION_DELAY);
     }
 
+    function markButtons(correctIdx, selectedIdx) {
+      const buttons = engineMount.querySelectorAll(".opt-btn");
+
+      buttons.forEach((btn) => {
+        btn.classList.add("is-locked"); // Bloqueamos para evitar doble click
+        const idx = parseInt(btn.dataset.idx);
+
+        // 1. Si es la correcta, siempre va en verde (is-correct)
+        if (idx === correctIdx) {
+          btn.classList.add("is-correct");
+        }
+
+        // 2. Si el usuario eligió esta y no es la correcta, va en rojo (is-incorrect)
+        if (idx === selectedIdx && idx !== correctIdx) {
+          btn.classList.add("is-incorrect");
+        }
+      });
+
+      // Actualizamos los badges de la cabecera inmediatamente
+      updateLiveStats();
+    }
+
+    function updateLiveStats() {
+      const badgeOk = engineMount.querySelector(".score-badge");
+      const badgeErr = engineMount.querySelector(".incorrect-badge");
+      const badgeWait = engineMount.querySelector(".unanswered-badge");
+
+      if (badgeOk) badgeOk.innerText = `✅ ${liveAciertos}`;
+      if (badgeErr) badgeErr.innerText = `❌ ${liveErrores}`;
+      if (badgeWait) badgeWait.innerText = `⚪ ${liveSinContestar}`;
+    }
+
+    function showFeedback(msg) {
+      document.getElementById("feedback-anchor").innerHTML =
+        `<div class="next-notice">${msg} ...</div>`;
+    }
+
     function nextStep() {
-      stopTimers();
       currentIndex++;
       if (currentIndex < currentSet.length) renderQuestion();
       else renderResults();
@@ -238,65 +324,57 @@ const { quizzes, basePath = "?" } = Astro.props;
       const percentage = Math.round((score / currentSet.length) * 100);
 
       engineMount.innerHTML = `
-        <div class="fade-in">
-          <div class="progress-area">
-            <span style="font-weight: bold; text-transform: uppercase;">Informe Final de Evaluación</span>
-            <div style="display: flex; gap: 1rem;">
-              <span>Aciertos: ${liveAciertos}</span>
-              <span>Errores: ${liveErrores}</span>
-              <span>Sin contestar: ${liveSinContestar}</span>
-            </div>
+        <div class="fade-in results-classic" style="text-align: center; padding: 2rem;">
+          <div class="score-display" style="font-family: serif; font-size: 4rem; color: var(--color-chinese-seal-red, #b31010); margin-bottom: 0.5rem;">
+            ${score} / ${currentSet.length}
+          </div>
+          <p style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.8rem; color: #666; margin-bottom: 2rem;">
+            Precisión: ${percentage}%
+          </p>
+          
+          <div class="custom-scrollbar" style="text-align: left; max-height: 600px; overflow-y: auto; background: #fff; padding: 1.5rem; border: 1px solid #eee; margin-bottom: 2rem;">
+            <h3 style="font-family: serif; font-size: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em;">
+              Revisión Técnica
+            </h3>
+            
+            ${userAnswers
+              .map(
+                (a, i) => `
+              <div style="margin-bottom: 1.5rem; border-bottom: 1px dotted #ccc; padding-bottom: 1rem; last-child { border: none; }">
+                <p style="margin-bottom: 0.5rem; font-size: 0.95rem; line-height: 1.4;">
+                  <strong>${i + 1}. ${a.questionText}</strong>
+                </p>
+                <div style="font-size: 0.85rem; display: grid; grid-template-columns: 100px 1fr; gap: 0.5rem;">
+                  <span style="color: #999; text-transform: uppercase; font-size: 0.65rem; font-weight: bold;">Tu respuesta:</span>
+                  <span style="${a.isRight ? "color: #15803d; font-weight: 600;" : "color: var(--color-chinese-seal-red, #b31010); font-weight: 600;"}">
+                    ${a.selectedText} ${a.isRight ? "✓" : "✗"}
+                  </span>
+                  
+                  ${
+                    !a.isRight
+                      ? `
+                    <span style="color: #999; text-transform: uppercase; font-size: 0.65rem; font-weight: bold;">Correcta:</span>
+                    <span style="color: #333; font-weight: 600;">${a.correctText}</span>
+                  `
+                      : ""
+                  }
+                </div>
+              </div>
+            `,
+              )
+              .join("")}
           </div>
           
-          <div style="padding: 3rem 2rem; text-align: center;">
-            <div class="result-score" style="font-size: 3rem; font-family: serif; margin-bottom: 0.5rem;">
-              ${score} / ${currentSet.length}
-            </div>
-            <p style="margin-bottom: 2.5rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; color: #666;">
-              Nivel de precisión técnica: ${percentage}%
-            </p>
-            
-            <div class="custom-scrollbar" style="text-align: left; max-height: 450px; overflow-y: auto; background: #f9f9f9; padding: 2rem; border: 1px solid #dee2e6;">
-               <h3 style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; border-bottom: 1px solid #000; padding-bottom: 0.5rem;">
-                 Revisión de protocolos y respuestas
-               </h3>
-               
-               ${userAnswers
-                 .map(
-                   (a, i) => `
-                <div style="margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
-                  <p style="margin-bottom: 0.8rem; font-size: 0.9rem; line-height: 1.4;">
-                    <strong>${i + 1}. ${a.questionText}</strong>
-                  </p>
-                  
-                  <div style="display: grid; grid-template-columns: 140px 1fr; gap: 0.4rem; font-size: 0.8rem;">
-                    <span style="color: #888; text-transform: uppercase; font-size: 0.65rem;">Respuesta elegida:</span>
-                    <span style="${a.timeout ? "color: #b31010; font-style: italic;" : a.isRight ? "color: #15803d;" : "color: #b31010;"}">
-                      ${a.timeout ? "NULIFICADA (Tiempo agotado)" : a.selectedText}
-                    </span>
-                    
-                    <span style="color: #888; text-transform: uppercase; font-size: 0.65rem;">Respuesta correcta:</span>
-                    <span style="font-weight: 500;">${a.correctText}</span>
-                    
-                    <span style="color: #888; text-transform: uppercase; font-size: 0.65rem;">Estado:</span>
-                    <span>${a.isRight ? "CORRECTO" : a.timeout ? "INCOMPLETO" : "INCORRECTO"}</span>
-                  </div>
-                </div>
-              `,
-                 )
-                 .join("")}
-            </div>
-            
-            <button id="restartBtn" class="restart-btn" style="margin-top: 2.5rem; background: #000; color: #fff; padding: 1rem 2rem; border: none; cursor: pointer; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.1em;">
-              Reiniciar Evaluación
-            </button>
-          </div>
+          <button id="finalResetBtn" class="start-btn-classic">
+            Nueva Sesión
+          </button>
         </div>
       `;
-      document.getElementById("restartBtn").addEventListener("click", shuffleAndStart);
+
+      document.getElementById("finalResetBtn").addEventListener("click", renderSetup);
     }
 
-    shuffleAndStart();
+    renderSetup();
   }
 
   runQuizEngine();

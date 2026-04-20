@@ -1,46 +1,197 @@
 /* Contenedor de la tarjeta */
 .card-manuscript {
-  background-color: var(--color-bg-card, #fdfbf2);
+  background-color: var(--color-bg-card, #fbfbf9);
   border: 1px solid var(--color-border-subtle, #dee2e6);
   border-radius: 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
-  position: relative; /* Esencial para la etiqueta inferior */
+  position: relative;
 }
 
-/* Estado Activo: El borde inferior se vuelve más grueso o se mantiene en 2px */
+/* Estado Activo */
 .quiz-card-link.is-active {
   border: 2px solid var(--color-chinese-seal-red, #b31010);
   background-color: var(--color-bg-section, #f6f3e4);
-  margin-bottom: 2rem; /* Espacio para que la etiqueta no pise la fila de abajo */
+  margin-bottom: 2rem;
 }
 
-/* La etiqueta "SELECCIONADO" */
+/* Badge "SELECCIONADO" */
 .quiz-card-link.is-active .active-badge {
   display: block !important;
   position: absolute;
-
-  /* Posicionamiento exacto */
-  bottom: -24px; /* Ajusta este valor según el alto de la etiqueta */
-  left: -2px; /* Alineado con el borde izquierdo de 2px */
-
+  bottom: -24px;
+  left: -2px;
   background-color: var(--color-chinese-seal-red, #b31010);
   color: #ffffff;
-
-  /* Estilo de texto */
   padding: 4px 12px;
   font-size: 0.65rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-
-  /* Sin bordes redondeados para mantener la estética austera */
   border-radius: 0;
   z-index: 20;
 }
 
-/* Efecto hover general */
+.active-badge {
+  display: none;
+}
+
 .card-manuscript:hover {
-  transform: translateY(-2px);
+  border: 2px solid var(--color-chinese-seal-red, #b31010);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Utilidades */
+.border-chinese-seal-red {
+  border-color: var(--color-chinese-seal-red, #b31010);
+}
+.bg-bg-section {
+  background-color: var(--color-bg-section, #f6f3e4);
+}
+.border-border-subtle {
+  border-color: var(--color-border-subtle, #dee2e6);
+}
+.text-text-secondary {
+  color: var(--color-text-secondary, #495057);
+}
+.text-chinese-seal-red {
+  color: var(--color-chinese-seal-red, #b31010);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.scroll-mt-20 {
+  scroll-margin-top: 5rem;
+}
+
+/* Tus estilos adicionales (conservados) */
+.setup-group {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+.setup-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #b31010;
+  margin-bottom: 1rem;
+}
+.radio-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.radio-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: background 0.2s;
+}
+.radio-option:hover {
+  background: #fdfbf2;
+}
+.radio-option input[type="radio"] {
+  margin-top: 0.3rem;
+  accent-color: #000;
+  width: 18px;
+  height: 18px;
+}
+.radio-text strong {
+  display: block;
+  font-size: 0.95rem;
+  font-family: serif;
+}
+.radio-text span {
+  font-size: 0.8rem;
+  color: #666;
+}
+.btn-primary-chinese {
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 1.2rem;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-primary-chinese:hover {
+  background: #b31010;
+}
+
+.timer-wrapper {
+  height: 4px;
+  background: #eee;
+  margin: 0 0 2rem 0;
+}
+.timer-bar-fill {
+  height: 100%;
+  transition:
+    width 1s linear,
+    background-color 0.3s;
+}
+.question-text {
+  font-family: serif;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 2.5rem;
+  border-left: 4px solid #b31010;
+  padding-left: 1.5rem;
+}
+.answer-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  background: white;
+  border: 1px solid #ddd;
+  text-align: left;
+  cursor: pointer;
+}
+.answer-btn .bullet {
+  font-weight: bold;
+  font-family: monospace;
+  color: #b31010;
+}
+.answer-btn.correct {
+  border-color: #15803d;
+  background: #f0fdf4;
+}
+.answer-btn.wrong {
+  border-color: #b31010;
+  background: #fef2f2;
+}
+.answer-btn.locked {
+  pointer-events: none;
+}
+.next-notice {
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: #666;
+}
+
+/* Tipografía forzada para el motor del quiz */
+#quiz-engine-mount,
+#quiz-engine-mount * {
+  font-family: var(--font-title, Georgia, "Times New Roman", serif) !important;
+}
+#quiz-engine-mount .opt-btn-indicator,
+#quiz-engine-mount .section-label,
+#quiz-engine-mount .score-badge,
+#quiz-engine-mount .incorrect-badge,
+#quiz-engine-mount .unanswered-badge,
+#quiz-engine-mount .start-btn-classic,
+#quiz-engine-mount button {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, monospace) !important;
 }

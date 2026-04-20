@@ -8,51 +8,76 @@ import { quizzes, type QuizMeta } from "@/data/quizzes";
 const pageTitle = "Quizzes de Medicina Tradicional China";
 const pageDescription = "Evaluaciones técnicas sobre fundamentos de MTC";
 const basePath = Astro.url.pathname;
+
+// Obtener el ID del quiz seleccionado de la URL
+const selectedId = Astro.url.searchParams.get("quiz");
 ---
 
 <MainQuizzes title={pageTitle} description={pageDescription}>
   <NavGeneral />
 
   <main id="main-content" class="flex-grow flex flex-col section-bg-paper py-8 md:py-12">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <section class="mb-12">
-        <h2
-          class="font-title text-2xl mb-6 text-center md:text-left border-b-2 border-chinese-seal-red pb-2 inline-block"
-        >
-          Quizzes disponibles
-        </h2>
+    <section class="container mx-auto px-4 max-w-5xl">
+      <h2
+        class="font-title text-2xl mb-6 text-center md:text-left border-b-2 border-chinese-seal-red pb-2 inline-block"
+      >
+        Multiple Choice sobre temas vistos en la <a
+          href="https://www.escueladeacupuntura.com.ar/"
+          class="text-chinese-seal-red underline">Escuela AnMo</a
+        > por Rodrigo Pizarro
+      </h2>
+      <p class="text-lg mb-8 text-text-secondary">
+        Empecé a cursar la carrera en Marzo del 2026, y para practicar lo que voy aprendiendo, armé
+        estos multiples choise. Por ahora son 30 preguntas por cada tema visto, pero con el tiempo
+        espero ir agregando más preguntas y temas.
+      </p>
+      <p class="text-lg mb-12 text-text-secondary">
+        Si tenés sugerencias de preguntas o temas para agregar, no dudes en contactarme al <a
+          href="https://api.whatsapp.com/send/?phone=5491138733447&text=Buenas%2C%20tengo%20inter%C3%A9s%20en%20tus%20servicios%20y%20me%20contacto%20por%20&type=phone_number&app_absent=0"
+          target="_blank"
+          class="text-chinese-seal-red underline">whatsapp</a
+        >. Y en el caso de que te sirvan para estudiar, podes hacerme una donación simbólica por <a
+          href="https://www.matecito.co/rechazaloultimo"
+          target="_blank"
+          class="text-chinese-seal-red underline">Matecito</a
+        >.
+      </p>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
-          {
-            quizzes.map((quiz) => (
+    <section class="container mx-auto px-4 max-w-6xl mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+        {
+          quizzes.map((quiz) => {
+            const isActive = selectedId === quiz.id;
+            return (
               <a
                 href={`?quiz=${quiz.id}#quiz-viewer`}
                 data-quiz-id={quiz.id}
-                class="quiz-card-link card-manuscript p-6 block"
+                class={`quiz-card-link card-manuscript p-6 block mb-4 ${isActive ? "is-active" : ""}`}
               >
                 <h3 class="font-title text-xl mb-2">{quiz.title}</h3>
                 <p class="text-sm mb-4">{quiz.description}</p>
 
-                <span class="active-badge" style="display: none;">
+                <span class="active-badge" style={`display: ${isActive ? "block" : "none"};`}>
                   Seleccionado
                 </span>
               </a>
-            ))
-          }
-        </div>
-
-        {
-          quizzes.length === 0 && (
-            <div class="text-center py-12 text-text-secondary border border-border-subtle mt-6">
-              <p class="text-lg">No hay unidades disponibles en este momento.</p>
-            </div>
-          )
+            );
+          })
         }
-      </section>
+      </div>
 
-      <section id="quiz-viewer" class="scroll-mt-20">
-        <QuizDisplay quizzes={quizzes} basePath={basePath} />
-      </section>
-    </div>
+      {
+        quizzes.length === 0 && (
+          <div class="text-center py-12 text-text-secondary border border-border-subtle mt-6">
+            <p class="text-lg">No hay unidades disponibles en este momento.</p>
+          </div>
+        )
+      }
+    </section>
+
+    <section id="quiz-viewer" class="scroll-mt-20">
+      <QuizDisplay quizzes={quizzes} basePath={basePath} />
+    </section>
   </main>
 </MainQuizzes>
