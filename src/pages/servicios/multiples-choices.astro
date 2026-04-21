@@ -15,6 +15,7 @@ const selectedId = Astro.url.searchParams.get("quiz");
 
 <MainQuizzes title={pageTitle} description={pageDescription}>
   <main id="main-content" class="flex-grow flex flex-col section-bg-paper py-8 md:py-12">
+    <NavGeneral />
     <section class="container mx-auto px-4 max-w-5xl">
       <h2
         class="font-title text-2xl mb-6 text-center md:text-left border-b-2 border-chinese-seal-red pb-2 inline-block"
@@ -74,7 +75,6 @@ const selectedId = Astro.url.searchParams.get("quiz");
       }
     </section>
 
-    <section id="quiz-viewer" class="scroll-mt-20">
       <QuizDisplay quizzes={quizzes} basePath={basePath} />
     </section>
   </main>

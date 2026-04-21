@@ -92,12 +92,10 @@ html {
   padding: 0.5rem;
   transition: background 0.2s;
 }
-.radio-option:hover {
-  background: #fdfbf2;
-}
+
 .radio-option input[type="radio"] {
   margin-top: 0.3rem;
-  accent-color: #000;
+  accent-color: #b31010;
   width: 18px;
   height: 18px;
 }
@@ -151,7 +149,6 @@ html {
   gap: 1rem;
   padding: 1rem;
   margin-bottom: 0.8rem;
-  background: white;
   border: 1px solid #ddd;
   text-align: left;
   cursor: pointer;
@@ -185,6 +182,7 @@ html {
 #quiz-engine-mount,
 #quiz-engine-mount * {
   font-family: var(--font-title, Georgia, "Times New Roman", serif) !important;
+  
 }
 #quiz-engine-mount .opt-btn-indicator,
 #quiz-engine-mount .section-label,
