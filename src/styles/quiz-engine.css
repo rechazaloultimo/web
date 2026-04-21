@@ -243,3 +243,76 @@ body.dark-mode {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ========================================= */
+/* PANTALLA DE RESULTADOS (ESTILO MANUSCRITO)*/
+/* ========================================= */
+
+/* Contenedor de la lista de revisión */
+.results-review-container {
+  margin-top: 2rem;
+  border-top: 2px solid var(--text-dark);
+}
+
+.results-item {
+  padding: 1.5rem;
+  background-color: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 0 !important;
+  margin-bottom: 1rem;
+}
+
+/* Título de la pregunta en el resumen */
+.results-q-text {
+  font-family: serif !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: block;
+  color: var(--text-dark);
+}
+
+/* Grilla de datos técnicos del resultado */
+.results-data-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.results-label {
+  font-family: monospace !important;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: #888;
+  font-weight: bold;
+  align-self: center;
+}
+
+.results-value {
+  font-weight: 600;
+}
+
+/* Colores de estado en resultados */
+.text-correct { color: #15803d !important; }
+.text-incorrect { color: var(--seal-red) !important; }
+
+/* Botón Final */
+.final-reset-btn {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: var(--text-dark) !important;
+  color: white !important;
+  border: none;
+  border-radius: 0 !important;
+  font-family: monospace !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.final-reset-btn:hover {
+  background-color: var(--seal-red) !important;
+}
