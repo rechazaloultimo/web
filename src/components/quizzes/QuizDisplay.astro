@@ -9,7 +9,7 @@ export interface Props {
 const { quizzes } = Astro.props;
 ---
 
-<div id="quiz-controller-wrapper" class="section-bg-paper container mx-auto px-4 max-w-5xl">
+<div id="quiz-viewer" class="section-bg-paper container mx-auto px-4 max-w-5xl scroll-mt-20">
   <div
     id="no-quiz-placeholder"
     class="group relative p-[2px] rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100 transition-all duration-700 hover:from-gray-200 hover:via-gray-300 hover:to-gray-200"
@@ -42,8 +42,7 @@ const { quizzes } = Astro.props;
 
   <div id="active-quiz-container" style="display: none;">
     <div class="quiz-card-full section-bg-paper container mx-auto px-4 max-w-5xl">
-      <div id="quiz-engine-mount" class="max-w-5xl mx-auto p-2">
-</div>
+      <div id="quiz-engine-mount" class="max-w-5xl mx-auto p-2"></div>
     </div>
   </div>
 </div>
@@ -181,7 +180,7 @@ const { quizzes } = Astro.props;
         bar.style.backgroundColor = timeLeft < 4 ? "var(--quiz-accent)" : "var(--quiz-text-title)";
       }
     }
-    
+
     function renderQuestion() {
       isLocked = false; // Liberamos el bloqueo para la nueva pregunta
       const q = currentSet[currentIndex];
@@ -213,12 +212,15 @@ const { quizzes } = Astro.props;
             
             <div class="options-container">
               ${q.shuffledOptions
-                .map((opt, i) => `
+                .map(
+                  (opt, i) => `
                 <button class="opt-btn" data-idx="${opt.originalIndex}">
                   <span class="opt-btn-indicator">${String.fromCharCode(65 + i)}</span>
                   <span>${opt.text}</span>
                 </button>
-              `).join("")}
+              `,
+                )
+                .join("")}
             </div>
             <div id="feedback-anchor"></div>
           </div>
@@ -233,8 +235,8 @@ const { quizzes } = Astro.props;
 
     function handleSelection(e) {
       if (isLocked) return; // CRÍTICO: Si ya se votó, ignorar más clics
-      isLocked = true; 
-      
+      isLocked = true;
+
       stopTimers();
       const q = currentSet[currentIndex];
       const selectedIdx = parseInt(e.currentTarget.dataset.idx);
@@ -249,7 +251,7 @@ const { quizzes } = Astro.props;
     function handleAutoSkip() {
       if (isLocked) return;
       isLocked = true;
-      
+
       const q = currentSet[currentIndex];
       liveSinContestar++;
       userAnswers.push({
@@ -319,21 +321,29 @@ const { quizzes } = Astro.props;
             <p class="setup-label">Precisión lograda: ${percentage}%</p>
             
             <div class="custom-scrollbar mt-8 text-left max-h-[400px] overflow-y-auto border border-gray-100 p-4 bg-gray-50 rounded-lg">
-              ${userAnswers.map((a, i) => `
+              ${userAnswers
+                .map(
+                  (a, i) => `
                 <div class="mb-4 pb-4 border-b border-dotted border-gray-300 last:border-0">
                   <p class="text-sm font-bold mb-2">${i + 1}. ${a.questionText}</p>
                   <div class="grid grid-cols-2 text-xs gap-2">
                     <span class="text-gray-400 uppercase font-bold">Tu respuesta:</span>
-                    <span class="${a.isRight ? 'text-green-700' : 'text-red-700'} font-bold">
-                      ${a.selectedText} ${a.isRight ? '✓' : '✗'}
+                    <span class="${a.isRight ? "text-green-700" : "text-red-700"} font-bold">
+                      ${a.selectedText} ${a.isRight ? "✓" : "✗"}
                     </span>
-                    ${!a.isRight ? `
+                    ${
+                      !a.isRight
+                        ? `
                       <span class="text-gray-400 uppercase font-bold">Correcta:</span>
                       <span class="text-black font-bold">${a.correctText}</span>
-                    ` : ''}
+                    `
+                        : ""
+                    }
                   </div>
                 </div>
-              `).join("")}
+              `,
+                )
+                .join("")}
             </div>
             
             <button id="finalResetBtn" class="restart-btn w-full mt-8">
