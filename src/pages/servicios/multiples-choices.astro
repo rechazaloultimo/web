@@ -50,7 +50,7 @@ const selectedId = Astro.url.searchParams.get("quiz");
             const isActive = selectedId === quiz.id;
             return (
               <a
-                href={`?quiz=${quiz.id}#quiz-viewer`}
+                href={`?quiz=${quiz.id}&t=${Date.now()}#quiz-viewer`}
                 data-quiz-id={quiz.id}
                 class={`quiz-card-link card-manuscript p-6 block mb-4 ${isActive ? "is-active" : ""}`}
               >
@@ -75,7 +75,6 @@ const selectedId = Astro.url.searchParams.get("quiz");
       }
     </section>
 
-      <QuizDisplay quizzes={quizzes} basePath={basePath} />
-    </section>
+    <QuizDisplay quizzes={quizzes} />
   </main>
 </MainQuizzes>
