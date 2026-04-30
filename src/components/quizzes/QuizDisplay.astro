@@ -9,7 +9,7 @@ export interface Props {
 const { quizzes } = Astro.props;
 ---
 
-<div id="quiz-viewer" class="section-bg-paper container mx-auto px-4 max-w-5xl">
+<div id="quiz-viewer" class="section-bg-paper container mx-auto max-w-4xl">
   <div
     id="no-quiz-placeholder"
     class="group relative p-[2px] rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100 transition-all duration-700 hover:from-gray-200 hover:via-gray-300 hover:to-gray-200"
@@ -41,8 +41,8 @@ const { quizzes } = Astro.props;
   </div>
 
   <div id="active-quiz-container" style="display: none;">
-    <div class="quiz-card-full section-bg-paper container mx-auto px-4 max-w-5xl">
-      <div id="quiz-engine-mount" class="max-w-5xl mx-auto p-2"></div>
+    <div class="quiz-card-full section-bg-paper container mx-auto max-w-4xl">
+      <div id="quiz-engine-mount"></div>
     </div>
   </div>
 </div>

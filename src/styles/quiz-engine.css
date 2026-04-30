@@ -16,12 +16,12 @@
   --quiz-shadow: rgba(0, 0, 0, 0.08);
   --quiz-opt-bg: #ffffff;
   --quiz-opt-hover: #fdfbf2;
+  --quiz-error: #e74c3c;
 }
 
-/* Basado en la estructura de tu main.css para modo oscuro */
 body.dark-mode {
   --quiz-bg-main: #1e1e1e;
-  --quiz-bg-header: #2a2a26; /* Beige muy oscuro/carbono */
+  --quiz-bg-header: #2a2a26;
   --quiz-bg-secondary: #252525;
   --quiz-text-title: #f3f4f6;
   --quiz-text-body: #e5e7eb;
@@ -38,10 +38,10 @@ body.dark-mode {
 
 .quiz-card {
   width: 100%;
-  margin: 2rem auto;
+  max-width: 100%; /* Ocupa todo el ancho en móviles */
+  margin: 0;
   background-color: var(--quiz-bg-main);
   border: 1px solid var(--quiz-border);
-  border-radius: none;
   box-shadow: 0 10px 30px var(--quiz-shadow);
   overflow: hidden;
   transition:
@@ -50,7 +50,7 @@ body.dark-mode {
 }
 
 .quiz-header-custom {
-  padding: 2.5rem 2rem;
+  padding: 1rem;
   background-color: var(--quiz-bg-header);
   border-bottom: 1px solid var(--quiz-border);
   text-align: center;
@@ -58,16 +58,17 @@ body.dark-mode {
 
 .quiz-header-custom h1 {
   font-family: serif;
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--quiz-text-title);
   text-transform: uppercase;
   letter-spacing: -0.01em;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
 }
 
 .quiz-header-custom .sub {
   font-size: 0.75rem;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   color: var(--quiz-text-muted);
@@ -81,7 +82,7 @@ body.dark-mode {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 2rem;
+  padding: 1rem 1.75rem;
   background-color: var(--quiz-bg-main);
   border-bottom: 1px solid var(--quiz-border);
   gap: 1rem;
@@ -93,7 +94,6 @@ body.dark-mode {
   padding: 0.4rem 1rem;
   font-weight: bold;
   font-size: 0.75rem;
-  border-radius: 4px;
   color: #ffffff;
 }
 
@@ -124,7 +124,7 @@ body.dark-mode {
 /* ========================================= */
 
 .question-body {
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
 }
 
 .question-text {
@@ -134,13 +134,13 @@ body.dark-mode {
   color: var(--quiz-text-title);
   margin-bottom: 2.5rem;
   border-left: 6px solid var(--quiz-accent);
-  padding-left: 1.5rem;
+  padding-left: 1.25rem;
 }
 
 .options-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -205,7 +205,6 @@ body.dark-mode {
 .setup-box {
   background: var(--quiz-bg-main);
   border: 1px solid var(--quiz-border);
-  border-radius: 12px;
   overflow: hidden;
   margin: 2rem auto;
   max-width: 600px;
@@ -229,6 +228,7 @@ body.dark-mode {
   text-transform: uppercase;
   margin-bottom: 0.75rem;
   color: var(--quiz-text-muted);
+  letter-spacing: 0.1em;
 }
 
 .quiz-select {
@@ -237,7 +237,6 @@ body.dark-mode {
   background-color: var(--quiz-bg-secondary);
   border: 1px solid var(--quiz-border);
   color: var(--quiz-text-body);
-  border-radius: 8px;
   outline: none;
 }
 
@@ -248,19 +247,22 @@ body.dark-mode {
 .restart-btn {
   background-color: var(--quiz-accent);
   color: #ffffff;
-  border: none;
-  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--quiz-accent);
+  padding: 1rem 1.5rem;
   font-family: var(--font-mono, monospace);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  font-size: 0.8rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  border-radius: 0;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
 .restart-btn:hover {
-  background-color: var(--color-chinese-seal-red-hover, #900808);
+  background-color: #900808;
+  border-color: #900808;
+  box-shadow: 0 4px 12px rgba(179, 16, 16, 0.3);
 }
 
 .fade-in {
@@ -286,123 +288,342 @@ body.dark-mode {
   padding: 1rem;
 }
 
-.results-header {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: var(--color-bg-section, #f6f3e4);
-  border: 1px solid var(--color-border-subtle, #dee2e6);
-  margin-bottom: 2.5rem;
-  position: relative;
+/* --- Listado de Revisión --- */
+.review-scroll-area {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  background: var(--quiz-bg-secondary);
+  border: 1px solid var(--quiz-border);
 }
 
-.results-header::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  right: 10%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--color-chinese-seal-red, #b31010),
-    transparent
-  );
+.review-scroll-area::-webkit-scrollbar {
+  width: 4px;
 }
 
-.score-circle {
-  font-family: var(--font-title, serif);
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: var(--color-text-title, #1a1a1a);
-  line-height: 1;
+.review-scroll-area::-webkit-scrollbar-track {
+  background: var(--quiz-bg-secondary);
+}
+
+.review-scroll-area::-webkit-scrollbar-thumb {
+  background: var(--quiz-border);
+}
+
+.review-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: var(--quiz-accent);
+}
+
+/* Cada bloque de pregunta/respuesta */
+.mb-6.pb-4.border-b {
+  border-bottom: 1px solid var(--quiz-border) !important;
+  padding-bottom: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-6.pb-4.border-b:last-child {
+  border-bottom: none !important;
+}
+
+/* Número y texto de pregunta */
+.review-scroll-area .text-sm.font-bold {
+  font-family: serif;
+  font-size: 0.95rem !important;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 1rem !important;
+  color: var(--quiz-text-title);
+}
+
+/* Grid de respuestas - hacerlo responsive */
+.grid.grid-cols-1.sm\\:grid-cols-2.text-xs.gap-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .grid.grid-cols-1.sm\\:grid-cols-2.text-xs.gap-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Labels de respuesta (Tu respuesta, Correcta) */
+.review-scroll-area span.text-gray-400.uppercase.font-extrabold {
+  font-size: 0.65rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--quiz-text-muted);
+  display: block;
   margin-bottom: 0.5rem;
 }
 
+/* Spans de respuestas formateadas */
+.review-scroll-area span.font-bold.bg-white {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--quiz-border);
+  background: var(--quiz-bg-main);
+  color: var(--quiz-text-body);
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+/* Verde para respuestas correctas */
+.text-green-700 {
+  color: var(--quiz-success) !important;
+}
+
+/* Rojo para respuestas incorrectas */
+.text-red-700 {
+  color: var(--quiz-error) !important;
+}
+
+/* Scorecard en resultados */
+.font-serif.text-6xl.text-black.mb-2 {
+  font-family: serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--quiz-text-title);
+  margin: 1.5rem 0 0.5rem 0;
+}
+
 .score-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--quiz-text-muted);
+  font-weight: 600;
+}
+
+/* --- Contenedor de Resultados --- */
+.results-classic {
+  animation: fadeIn 0.6s ease-out;
+  max-width: 650px; /* Un poco más angosto para mejor lectura */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center; /* Centramos el puntaje principal */
+}
+
+/* Puntaje Principal */
+.font-serif.text-6xl.text-black.mb-2 {
+  font-family: serif;
+  font-size: 4.5rem;
+  font-weight: 400; /* Le quitamos peso para hacerlo más elegante */
+  color: var(--quiz-text-title);
+  margin: 1rem 0 0.2rem 0;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-size: 0.75rem;
-  color: var(--color-text-secondary, #666);
+  color: var(--quiz-text-muted);
   font-weight: 600;
+  display: block;
+  margin-bottom: 3rem;
 }
 
 /* --- Listado de Revisión --- */
 .review-scroll-area {
-  max-height: 550px;
+  max-height: 500px;
   overflow-y: auto;
-  padding-right: 1rem;
-  margin-bottom: 3rem;
+  padding: 0 1rem;
+  margin: 2rem 0;
+  background: transparent; /* Quitamos el fondo gris de la caja para limpiar el diseño */
+  border: none;
+  text-align: left; /* Volvemos a alinear a la izquierda para leer bien */
 }
 
-.review-card {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  transition: transform 0.2s ease;
+/* Scrollbar refinado */
+.review-scroll-area::-webkit-scrollbar {
+  width: 3px;
+}
+.review-scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+.review-scroll-area::-webkit-scrollbar-thumb {
+  background: var(--quiz-border);
 }
 
-.review-card:hover {
-  border-color: var(--color-border-subtle, #dee2e6);
+/* Cada bloque de pregunta */
+.mb-6.pb-4.border-b {
+  border-bottom: 1px solid var(--quiz-border) !important;
+  padding-bottom: 2rem !important; /* Más aire entre preguntas */
+  margin-bottom: 2rem !important;
 }
 
-.review-card.is-correct {
-  border-left: 4px solid #15803d;
+.mb-6.pb-4.border-b:last-child {
+  border-bottom: none !important;
 }
 
-.review-card.is-wrong {
-  border-left: 4px solid var(--color-chinese-seal-red, #b31010);
+/* Texto de la pregunta */
+.review-scroll-area .text-sm.font-bold {
+  font-family: serif;
+  font-size: 1.1rem !important;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1.2rem !important;
+  color: var(--quiz-text-title);
 }
 
-.review-q-text {
-  font-family: var(--font-title, serif);
-  font-size: 1.05rem;
-  color: #1a1a1a;
-  margin-bottom: 1rem;
-  line-height: 1.4;
+/* Destruimos el Grid - Usamos Flexbox en columna para que el texto fluya libre */
+.grid.grid-cols-1.sm\\:grid-cols-2.text-xs.gap-3 {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.8rem !important;
 }
 
-.review-data-grid {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.75rem 1.5rem;
-  align-items: baseline;
-}
-
-.review-tag {
-  font-size: 0.65rem;
+/* Labels (Tu respuesta, Correcta) */
+.review-scroll-area span.text-gray-400.uppercase.font-extrabold {
+  font-size: 0.65rem !important;
   text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  color: #999;
+  letter-spacing: 0.15em;
+  color: var(--quiz-text-muted);
+  font-weight: normal; /* Menos agresivo */
+  display: inline-block;
+  min-width: 120px; /* Alinea los labels para que las respuestas queden parejas */
 }
 
-.ans-text {
-  font-size: 0.9rem;
+/* Colores de las respuestas */
+.text-green-700 {
+  color: var(--quiz-success) !important;
   font-weight: 500;
 }
 
-.ans-text.success {
-  color: #15803d;
-}
-.ans-text.error {
-  color: var(--color-chinese-seal-red, #b31010);
-}
-.ans-text.neutral {
-  color: #444;
+.text-red-700 {
+  color: var(--quiz-error) !important;
+  text-decoration: line-through; /* Un toque editorial para el error */
+  opacity: 0.8;
 }
 
-/* Custom Scrollbar */
+/* Texto neutro para la respuesta correcta cuando te equivocas */
+.text-black.font-bold {
+  color: var(--quiz-text-title) !important;
+  font-weight: 500;
+}
+
+/* --- Botón Nueva Sesión Minimalista --- */
+.restart-btn {
+  background-color: transparent;
+  color: var(--quiz-text-title);
+  border: 1px solid var(--quiz-text-title);
+  padding: 1rem 2.5rem;
+  font-family: var(--font-mono, monospace);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto; /* Evita que ocupe todo el ancho */
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.restart-btn:hover {
+  background-color: var(--quiz-text-title);
+  color: var(--quiz-bg-main);
+  box-shadow: none;
+}
+
+/* --- Contenedor de Revisión Estilo "Syllabus" --- */
+.review-scroll-area {
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 0; /* Quitamos padding lateral para que las líneas toquen los bordes si querés */
+  margin-top: 2rem;
+  border-top: 2px solid var(--quiz-text-title); /* Línea de cierre superior */
+}
+
+/* Bloque de cada Pregunta */
+.mb-6.pb-4.border-b {
+  border-bottom: 1px solid var(--quiz-border) !important;
+  padding: 2rem 1.5rem !important;
+  margin-bottom: 0 !important; /* Eliminamos margen para que las celdas se toquen */
+  transition: background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mb-6.pb-4.border-b:hover {
+  background-color: var(--quiz-bg-secondary); /* Efecto sutil de fila */
+}
+
+/* Título de la pregunta: Más grande y con número destacado */
+.review-scroll-area .text-sm.font-bold {
+  font-family: serif;
+  font-size: 1.25rem !important; /* Mucho más grande */
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--quiz-text-title);
+  margin: 0 !important;
+}
+
+/* Estructura de Tabla para Respuestas */
+.grid.grid-cols-1.sm\\:grid-cols-2.text-xs.gap-3 {
+  display: table !important; /* Forzamos comportamiento de tabla */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grid.grid-cols-1.sm\\:grid-cols-2.text-xs.gap-3 > div {
+  display: table-row;
+}
+
+/* Etiquetas (Tu respuesta / Correcta) */
+.review-scroll-area span.text-gray-400.uppercase.font-extrabold {
+  display: table-cell;
+  padding: 8px 0;
+  width: 150px; /* Ancho fijo para la columna de etiquetas */
+  font-size: 0.7rem !important;
+  letter-spacing: 0.15em;
+  color: var(--quiz-text-muted);
+  border-bottom: 1px solid transparent;
+  vertical-align: middle;
+}
+
+/* Valores de las respuestas */
+.review-scroll-area span.font-bold {
+  display: table-cell;
+  padding: 8px 1rem;
+  font-size: 1rem !important; /* Texto legible */
+  font-weight: 600 !important;
+  color: var(--quiz-text-title);
+  vertical-align: middle;
+}
+
+/* --- Estados Visuales --- */
+
+/* Si es correcta, solo mostramos el check */
+.text-green-700 {
+  color: var(--quiz-success) !important;
+  background-color: rgba(21, 128, 61, 0.05);
+  border-radius: 4px;
+}
+
+/* Si es incorrecta, tachamos y damos peso */
+.text-red-700 {
+  color: var(--quiz-error) !important;
+  text-decoration: line-through;
+  font-weight: 700 !important;
+}
+
+/* Respuesta correcta (cuando fallaste) resaltada en negrita pura */
+.text-black.font-bold {
+  color: var(--quiz-text-title) !important;
+  font-weight: 800 !important;
+  border-left: 3px solid var(--quiz-accent); /* Marca de acento */
+  padding-left: 10px !important;
+}
+
+/* --- Scrollbar Minimalista --- */
 .review-scroll-area::-webkit-scrollbar {
   width: 4px;
 }
-.review-scroll-area::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
 .review-scroll-area::-webkit-scrollbar-thumb {
-  background: #ccc;
-}
-.review-scroll-area::-webkit-scrollbar-thumb:hover {
-  background: var(--color-chinese-seal-red, #b31010);
+  background: var(--quiz-text-title);
 }
