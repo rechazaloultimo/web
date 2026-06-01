@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor de Auriculoterapia — Carga Técnica</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600&family=DM+Mono:wght@300;400&display=swap");
+
+      :root {
+        --bg: #0e0e0e;
+        --surface: #141414;
+        --border: #252525;
+        --text: #e0dbd2;
+        --accent: #c8a96e;
+        --red: #d94f3d;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Cormorant Garamond", serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      header {
+        padding: 0.8rem 2rem;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--surface);
+      }
+
+      .main-container {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+      }
+
+      /* Área del Mapa */
+      .editor-canvas {
+        flex: 1;
+        position: relative;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        background: #050505;
+      }
+
+      .image-container {
+        position: relative;
+        margin: 2rem;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+        line-height: 0;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: crosshair;
+      }
+
+      /* Panel Lateral */
+      .sidebar {
+        width: 450px;
+        border-left: 1px solid var(--border);
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+      }
+
+      .section {
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      h3 {
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        margin-bottom: 1.2rem;
+        color: var(--accent);
+        font-size: 0.8rem;
+      }
+
+      label {
+        display: block;
+        font-size: 0.7rem;
+        color: #777;
+        margin-bottom: 0.3rem;
+        text-transform: uppercase;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        color: var(--text);
+        padding: 0.6rem;
+        font-family: "DM Mono", monospace;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        outline: none;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: var(--accent);
+      }
+
+      /* Lista de Puntos */
+      .point-list-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        border-bottom: 1px solid var(--border);
+        font-family: "DM Mono", monospace;
+        font-size: 0.75rem;
+        cursor: pointer;
+      }
+
+      .point-list-item:hover {
+        background: rgba(200, 169, 110, 0.05);
+      }
+      .point-list-item.active {
+        background: rgba(200, 169, 110, 0.15);
+        color: var(--accent);
+      }
+
+      button {
+        background: none;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        padding: 0.6rem 1rem;
+        cursor: pointer;
+        font-family: "Cormorant Garamond", serif;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        transition: 0.2s;
+      }
+
+      button:hover {
+        background: var(--accent);
+        color: var(--bg);
+      }
+      button.danger {
+        border-color: var(--red);
+        color: var(--red);
+      }
+      button.danger:hover {
+        background: var(--red);
+        color: white;
+      }
+
+      .json-io {
+        font-family: "DM Mono", monospace;
+        font-size: 0.7rem;
+        height: 150px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Gestor de Datos — Auriculoterapia</h1>
+      <div style="display: flex; gap: 10px">
+        <button onclick="toggleTheme()">Alternar Fondo (B/N)</button>
+        <button onclick="copyToClipboard()">Copiar Salida</button>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <div class="editor-canvas">
+        <div class="image-container">
+          <img id="mapImg" src="oreja-segmentada-v3.jpg" width="850" height="1300" />
+          <svg id="canvas" width="850" height="1300"></svg>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="section">
+          <h3>Sincronización de Datos</h3>
+          <textarea
+            id="ioField"
+            class="json-io"
+            placeholder="Pega aquí el objeto PUNTOS existente para editar..."
+          ></textarea>
+          <button onclick="importData()" style="width: 100%">Cargar Datos en Editor</button>
+        </div>
+
+        <div class="section" id="editorSection">
+          <h3>Editor de Punto</h3>
+          <label>Nombre Principal</label>
+          <input type="text" id="edit_name" oninput="liveUpdate()" />
+
+          <label>Relación MTC (Zang-Fu / Meridianos)</label>
+          <input type="text" id="edit_mtc" oninput="liveUpdate()" />
+
+          <label>Localización (Anatómica)</label>
+          <textarea id="edit_loc" rows="2" oninput="liveUpdate()"></textarea>
+
+          <label>Beneficio Terapéutico</label>
+          <textarea id="edit_bene" rows="4" oninput="liveUpdate()"></textarea>
+
+          <div style="display: flex; gap: 10px">
+            <button class="danger" onclick="deleteCurrent()" style="flex: 1">Eliminar Punto</button>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Índice de Puntos</h3>
+          <div id="pointIndex"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let puntos = {};
+      let selectedId = null;
+      let isDark = false;
+
+      const canvas = document.getElementById("canvas");
+      const img = document.getElementById("mapImg");
+      const ioField = document.getElementById("ioField");
+
+      function toggleTheme() {
+        isDark = !isDark;
+        img.src = isDark ? "oreja-segmentada-v3 - negro.jpg" : "oreja-segmentada-v3.jpg";
+      }
+
+      canvas.addEventListener("click", (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const x = Math.round(e.clientX - rect.left);
+        const y = Math.round(e.clientY - rect.top);
+
+        const id = "p" + Date.now();
+        puntos[id] = {
+          name: "Nuevo Punto",
+          mtc: "",
+          location: "",
+          benefits: "",
+          coords: { x, y },
+        };
+        selectPoint(id);
+      });
+
+      function selectPoint(id) {
+        selectedId = id;
+        const p = puntos[id];
+        document.getElementById("edit_name").value = p.name;
+        document.getElementById("edit_mtc").value = p.mtc;
+        document.getElementById("edit_loc").value = p.location;
+        document.getElementById("edit_bene").value = p.benefits;
+        render();
+      }
+
+      function liveUpdate() {
+        if (!selectedId) return;
+        puntos[selectedId].name = document.getElementById("edit_name").value;
+        puntos[selectedId].mtc = document.getElementById("edit_mtc").value;
+        puntos[selectedId].location = document.getElementById("edit_loc").value;
+        puntos[selectedId].benefits = document.getElementById("edit_bene").value;
+        render();
+      }
+
+      function deleteCurrent() {
+        if (selectedId) {
+          delete puntos[selectedId];
+          selectedId = null;
+          render();
+        }
+      }
+
+      function render() {
+        // Marcadores SVG
+        canvas.innerHTML = "";
+        Object.keys(puntos).forEach((id) => {
+          const p = puntos[id];
+          const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+          circle.setAttribute("cx", p.coords.x);
+          circle.setAttribute("cy", p.coords.y);
+          circle.setAttribute("r", id === selectedId ? "10" : "7");
+          circle.setAttribute("fill", id === selectedId ? "transparent" : "rgba(200,169,110,0.5)");
+          circle.setAttribute("stroke", "#c8a96e");
+          circle.setAttribute("stroke-width", id === selectedId ? "3" : "1.5");
+          circle.onclick = (e) => {
+            e.stopPropagation();
+            selectPoint(id);
+          };
+          canvas.appendChild(circle);
+        });
+
+        // Lista Lateral
+        const index = document.getElementById("pointIndex");
+        index.innerHTML = "";
+        Object.keys(puntos).forEach((id) => {
+          const div = document.createElement("div");
+          div.className = `point-list-item ${id === selectedId ? "active" : ""}`;
+          div.innerHTML = `<span>${puntos[id].name || "Sin nombre"}</span> <span>(${puntos[id].coords.x},${puntos[id].coords.y})</span>`;
+          div.onclick = () => selectPoint(id);
+          index.appendChild(div);
+        });
+
+        // Generación de Salida
+        const output = {};
+        Object.keys(puntos).forEach((id, i) => {
+          output[`punto_${i + 1}`] = {
+            num: i + 1,
+            name: puntos[id].name,
+            mtc_relation: puntos[id].mtc,
+            location: puntos[id].location,
+            therapeutic_benefits: puntos[id].benefits,
+            coords: puntos[id].coords,
+          };
+        });
+        ioField.value = "const PUNTOS = " + JSON.stringify(output, null, 2) + ";";
+      }
+
+      function importData() {
+        try {
+          const raw = ioField.value.replace("const PUNTOS = ", "").replace(";", "");
+          const data = JSON.parse(raw);
+          puntos = {};
+          Object.keys(data).forEach((key) => {
+            const id = "p" + Math.random().toString(36).substr(2, 9);
+            puntos[id] = {
+              name: data[key].name,
+              mtc: data[key].mtc_relation || "",
+              location: data[key].location || "",
+              benefits: data[key].therapeutic_benefits || "",
+              coords: data[key].coords,
+            };
+          });
+          render();
+          alert("Datos cargados correctamente.");
+        } catch (e) {
+          alert("Error en el formato del JSON. Asegúrate de que sea un objeto válido.");
+        }
+      }
+
+      function copyToClipboard() {
+        ioField.select();
+        document.execCommand("copy");
+        alert("Código copiado.");
+      }
+    </script>
+  </body>
+</html>
