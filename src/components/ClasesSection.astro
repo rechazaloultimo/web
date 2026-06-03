@@ -1,0 +1,65 @@
+---
+/**
+ * Componente reutilizable para secciones de clases
+ * Uso: Grupales, Particulares, Virtuales
+ */
+
+import CardGaleria from "@/components/galerias/CardGaleria.astro";
+import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
+
+interface GalleryImage {
+  imgPath: string;
+  altText: string;
+  width: number;
+  height: number;
+}
+
+interface Props {
+  type: "grupales" | "particulares" | "virtuales";
+  title: string;
+  contentId: string;
+  galleryId: string;
+  galleryImages: GalleryImage[];
+  galleryGridClass?: string;
+}
+
+const {
+  type,
+  title,
+  contentId,
+  galleryId,
+  galleryImages,
+  galleryGridClass = "gallery-grid",
+} = Astro.props;
+---
+
+<main id={`info-${type}-content`} class="page-section-container">
+  <!-- Sección de introducción -->
+  <section id={contentId} class="fade-in-section">
+    <h2 class="section-heading-xl">
+      {title}
+    </h2>
+
+    <!-- Contenido inyectado via slot -->
+    <slot name="intro" />
+  </section>
+
+  <!-- Galería -->
+  {
+    galleryImages.length > 0 && (
+      <article id={galleryId} class="fade-in-section-container">
+        <PhotoSwipeUI />
+        <div class={`pswp-gallery-container ${galleryGridClass}`}>
+          {galleryImages.map((img) => (
+            <CardGaleria
+              imgPath={img.imgPath}
+              altText={img.altText}
+              width={img.width}
+              height={img.height}
+            />
+          ))}
+        </div>
+      </article>
+    )
+  }
+</main>

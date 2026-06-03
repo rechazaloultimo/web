@@ -1,7 +1,7 @@
 ---
 // 1. IMPORTAMOS LOS COMPONENTES NECESARIOS
 import MainLayout from "@/layouts/MainLayout.astro";
-import NavGeneral from "@/components/Navegadores/NavGeneral.astro";
+import Navbar from "@/components/Navegadores/Navbar.astro";
 import CardGaleria from "@/components/galerias/CardGaleria.astro";
 import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
 import ImagenEstatica from "@/components/galerias/ImagenEstatica.astro";
@@ -41,7 +41,7 @@ const pageDescription =
     </div>
   </header>
 
-  <NavGeneral />
+  <Navbar />
 
   <section id="info-qigong" class="container mx-auto px-6 py-12 md:py-20">
     <div id="titulo" class="mx-auto text-center mb-12">
@@ -66,10 +66,10 @@ const pageDescription =
       <p class="text-lg text-ink mb-4 leading-relaxed">
         A menudo se describe al <strong>Qìgōng</strong> como el "Yoga chino", ya que ambas disciplinas
         comparten la práctica de la unión cuerpo, mente y respiración para promover la salud y la expansión
-        de la conciencia. Al igual que el Yoga, el <strong>Qìgōng</strong> utiliza posturas físicas,
-        estiramientos y respiraciones; el <strong>Qìgōng</strong> también tiene posturas estáticas pero
-        suele centrarse en movimientos fluidos y suaves que buscan la relajación profunda y el cultivo
-        de la energía sin esfuerzo excesivo.
+        de la conciencia. Al igual que el Yoga, el <strong>Qìgōng</strong> utiliza posturas físicas, estiramientos
+        y respiraciones; el <strong>Qìgōng</strong> también tiene posturas estáticas pero suele centrarse
+        en movimientos fluidos y suaves que buscan la relajación profunda y el cultivo de la energía sin
+        esfuerzo excesivo.
       </p>
 
       <div
@@ -127,8 +127,8 @@ const pageDescription =
         Una práctica cotidiana de cualquier sistema de Qìgōng se traduce en el beneficios tangibles
         como el refinamiento de la <strong>Percepción Sensorial Expandida:</strong> Es la capacidad de
         procesar información más allá de los cinco sentidos tradicionales, permitiendo una conexión consciente
-        con los sistemas internos de regulación, equilibrio y posicionamiento que normalmente operan
-        de forma inconsciente. En Qìgōng, esto implica refinar la sensibilidad del sistema nervioso para
+        con los sistemas internos de regulación, equilibrio y posicionamiento que normalmente operan de
+        forma inconsciente. En Qìgōng, esto implica refinar la sensibilidad del sistema nervioso para
         percibir el estado y armonía del ser.
       </p>
 
@@ -322,11 +322,11 @@ const pageDescription =
               <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4">
                 <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
                   <strong>Qì (氣 / 气):</strong> El carácter tradicional (氣) es especialmente descriptivo,
-                  pues representa visualmente el vapor (气) que asciende mientras se cocina el arroz
-                  (米). Esta imagen simboliza la energía que se desprende de la materia. Por extensión,
-                  alude al aliento vital, la esencia o la fuerza invisible que anima a todo ser vivo
-                  y fluye por el universo. En la versión simplificada (气), se conserva el símbolo del
-                  vapor o aire en movimiento.
+                  pues representa visualmente el vapor (气) que asciende mientras se cocina el arroz (米).
+                  Esta imagen simboliza la energía que se desprende de la materia. Por extensión, alude
+                  al aliento vital, la esencia o la fuerza invisible que anima a todo ser vivo y fluye
+                  por el universo. En la versión simplificada (气), se conserva el símbolo del vapor o
+                  aire en movimiento.
                 </li>
                 <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
                   <strong>Gōng (功):</strong> Este carácter se escribe igual en ambos sistemas y combina
@@ -360,9 +360,9 @@ const pageDescription =
               <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4">
                 <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
                   <strong>Dǎo (導 / 导):</strong> El carácter tradicional (導) muestra el símbolo del
-                  "camino" y un "ojo" o "guía". Significa dirigir, guiar o conducir. En la práctica,
-                  se refiere a la capacidad de usar la mente y la intención para guiar el flujo del Qì
-                  (energía) a través de los canales internos del cuerpo, eliminando bloqueos.
+                  "camino" y un "ojo" o "guía". Significa dirigir, guiar o conducir. En la práctica, se
+                  refiere a la capacidad de usar la mente y la intención para guiar el flujo del Qì (energía)
+                  a través de los canales internos del cuerpo, eliminando bloqueos.
                 </li>
                 <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
                   <strong>Yǐn (引):</strong> Este carácter representa un "arco" siendo tensado por una
@@ -412,8 +412,8 @@ const pageDescription =
               Para comprender la intensión de la práctica en profundidad, es fundamental distinguir
               entre dos conceptos técnicos: el <strong>Wàigōng (外功)</strong>
               o "trabajo externo" y el <strong>Nèigōng (內功 / 内功)</strong> o "trabajo interno". Aunque
-              popularmente se los conoce como Qìgōng duro y suave, estos términos son mas precisos y
-              reflejan el enfoque de las prácticas.
+              popularmente se los conoce como Qìgōng duro y suave, estos términos son mas precisos y reflejan
+              el enfoque de las prácticas.
             </p>
             <details>
               <summary class="ocultar-summary">
@@ -426,10 +426,10 @@ const pageDescription =
               <p class="text-lg text-ink mb-4 leading-relaxed">
                 El <strong>Wàigōng (外功)</strong> se centra en el fortalecimiento de la estructura externa
                 del cuerpo; el Qìgōng "duro" se suele asociar a lo marcial, donde se busca proteger el
-                cuerpo de impactos externos y optimizar el rendimiento físico mediante ejercicios de
-                acondicionamiento intenso. Si bien hay técnias de Qigong duro puede mejorar la resistencia
-                y la fuerza, estos a la larga generan desgaste oseo, articular, tensión y bloqueos energéticos
-                si no se complementan con prácticas internas.
+                cuerpo de impactos externos y optimizar el rendimiento físico mediante ejercicios de acondicionamiento
+                intenso. Si bien hay técnias de Qigong duro puede mejorar la resistencia y la fuerza,
+                estos a la larga generan desgaste oseo, articular, tensión y bloqueos energéticos si no
+                se complementan con prácticas internas.
               </p>
 
               <p class="text-lg text-ink mb-4 leading-relaxed">
@@ -674,8 +674,8 @@ const pageDescription =
           <ul class="list-none text-lg text-ink space-y-3 leading-relaxed">
             <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
               <strong>Historia:</strong>
-              Atribuido al legendario médico Hua Tuo durante la Dinastía Han (s. II d.C.). Es uno de
-              los sistemas de Qigong más antiguos y famosos, actualizado y oficializado; se basa en imitar
+              Atribuido al legendario médico Hua Tuo durante la Dinastía Han (s. II d.C.). Es uno de los
+              sistemas de Qigong más antiguos y famosos, actualizado y oficializado; se basa en imitar
               los movimientos y el espíritu del Tigre, el Ciervo, el Oso, el Mono y la Grulla para fortalecer
               los órganos internos y la vitalidad.
             </li>

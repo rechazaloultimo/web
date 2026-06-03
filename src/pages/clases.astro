@@ -1,7 +1,7 @@
 ---
 // 1. IMPORTAMOS LOS COMPONENTES NECESARIOS
 import MainLayout from "@/layouts/MainLayout.astro";
-import NavGeneral from "@/components/Navegadores/NavGeneral.astro";
+import Navbar from "@/components/Navegadores/Navbar.astro";
 
 // 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
 const pageTitle = "Rodrigo Pizarro - Clases Qígōng y Tàijíquán";
@@ -15,7 +15,7 @@ import ClasesVirtuales from "@/components/ClasesVirtuales.astro";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
-  <NavGeneral />
+  <Navbar />
 
   <section id="clases-container" class="card-grid grid-2-cols">
     <article id="card-content-particulares" class="card-content-container fade-in">

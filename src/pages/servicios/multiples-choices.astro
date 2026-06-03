@@ -1,7 +1,7 @@
 ---
 // src/pages/quizzes.astro
 import MainQuizzes from "@/layouts/MainQuizzes.astro";
-import NavGeneral from "@/components/Navegadores/NavGeneral.astro";
+import Navbar from "@/components/Navegadores/Navbar.astro";
 import QuizDisplay from "@/components/quizzes/QuizDisplay.astro";
 import { quizzes, type QuizMeta } from "@/data/quizzes";
 
@@ -15,7 +15,7 @@ const selectedId = Astro.url.searchParams.get("quiz");
 
 <MainQuizzes title={pageTitle} description={pageDescription}>
   <main id="main-content" class="flex-grow flex flex-col section-bg-paper py-8 md:py-12">
-    <NavGeneral />
+    <Navbar />
     <section class="container mx-auto px-4 max-w-5xl">
       <h2
         class="font-title text-2xl mb-6 text-center md:text-left border-b-2 border-chinese-seal-red pb-2 inline-block"

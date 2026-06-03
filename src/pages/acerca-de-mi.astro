@@ -1,7 +1,7 @@
 ---
 // 1. IMPORTAMOS LOS COMPONENTES NECESARIOS
 import MainLayout from "@/layouts/MainLayout.astro";
-import NavGeneral from "@/components/Navegadores/NavGeneral.astro";
+import Navbar from "@/components/Navegadores/Navbar.astro";
 import CardGaleria from "@/components/galerias/CardGaleria.astro";
 import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
 import ImagenEstatica from "@/components/galerias/ImagenEstatica.astro";
@@ -13,7 +13,7 @@ const pageDescription =
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
-  <NavGeneral />
+  <Navbar />
 
   <main id="main-content" class="px-6 pt-24 pb-12 md:pt-32 md:pb-20 max-w-5xl mx-auto mb-12 mt-8">
     <section id="de-mi" class="mb-16 md:mb-20 fade-in">

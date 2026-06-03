@@ -1,7 +1,7 @@
 ---
 // 1. IMPORTAMOS LOS COMPONENTES NECESARIOS
 import MainLayout from "@/layouts/MainLayout.astro";
-import NavGeneral from "@/components/Navegadores/NavGeneral.astro";
+import Navbar from "@/components/Navegadores/Navbar.astro";
 import CardGaleria from "@/components/galerias/CardGaleria.astro";
 import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
 
@@ -14,7 +14,7 @@ const pageDescription =
 <MainLayout title={pageTitle} description={pageDescription}>
   <a href="#main-content" class="skip-link">Saltar al contenido</a>
 
-  <NavGeneral />
+  <Navbar />
   <header
     id="taijiquan-inicio"
     class="hero-fullscreen-bg hero-clases-taiji-bg hero-banner h-screen flex flex-col items-center justify-center relative"

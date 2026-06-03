@@ -4,7 +4,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 
 // El NAV (que vamos a crear)
-import NavGeneral from "../components/Navegadores/NavGeneral.astro";
+import Navbar from "../components/Navegadores/Navbar.astro";
 
 // 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
 const pageTitle = "Rodrigo Pizarro - Neijia";
@@ -12,7 +12,7 @@ const pageDescription = "404 - NOT FOUND: La página solicitada no fue encontrad
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
-  <NavGeneral />
+  <Navbar />
   <main
     id="main-content"
     class="flex-grow flex flex-col items-center justify-center text-center section-bg-paper"
