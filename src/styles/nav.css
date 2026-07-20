@@ -7,7 +7,19 @@
    NAVBAR PRINCIPAL
 ---------------------------------------- */
 #mainNav {
+  --nav-surface: var(--color-bg-main);
+  --nav-border-color: var(--color-border-subtle);
+  --nav-logo-color: var(--color-text-title);
+  --nav-icon-color: var(--color-text-main);
+  --nav-link-color: var(--color-chinese-seal-red);
+  --nav-link-hover-color: var(--color-chinese-seal-red-hover);
+  --nav-mobile-border-color: var(--color-border-subtle);
+  --nav-mobile-bg: var(--color-bg-main);
+  --nav-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   border-bottom-width: 1px;
+  border-bottom-color: var(--nav-border-color);
+  background-color: var(--nav-surface);
+  box-shadow: var(--nav-shadow);
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
@@ -21,56 +33,62 @@
 ---------------------------------------- */
 /* Estado TRANSPARENTE - al tope de la página */
 #mainNav.nav-transparent {
-  border-bottom-color: transparent;
+  --nav-border-color: transparent;
+  --nav-surface: transparent;
+  --nav-logo-color: var(--color-text-light);
+  --nav-icon-color: var(--color-text-light);
+  --nav-link-color: var(--color-chinese-seal-red);
+  --nav-link-hover-color: var(--color-chinese-seal-red-hover);
+  --nav-mobile-border-color: rgba(255, 255, 255, 0.15);
+  --nav-mobile-bg: rgba(10, 10, 10, 0.9);
+  --nav-shadow: none;
   opacity: 0;
-  background-color: transparent;
-  box-shadow: none;
   pointer-events: none;
-}
-#mainNav.nav-transparent #mainNavLogo {
-  color: var(--color-text-light);
-}
-#mainNav.nav-transparent #mobile-menu-button span {
-  background-color: var(--color-text-light);
-}
-#mainNav.nav-transparent #mainNavMenu a,
-#mainNav.nav-transparent #mobile-menu a {
-  color: var(--color-chinese-seal-red);
-}
-#mainNav.nav-transparent #mainNavMenu a:hover,
-#mainNav.nav-transparent #mobile-menu a:hover {
-  color: var(--color-chinese-seal-red-hover);
-}
-#mainNav.nav-transparent #mobile-menu {
-  border-top-color: rgba(255, 255, 255, 0.15);
-  background-color: rgba(10, 10, 10, 0.9);
 }
 
 /* Estado OPACO - cuando se ha scrolleado */
 #mainNav.nav-opaque {
-  border-bottom-color: var(--color-border-subtle);
+  --nav-border-color: var(--color-border-subtle);
+  --nav-surface: var(--color-bg-main);
+  --nav-logo-color: var(--color-text-title);
+  --nav-icon-color: var(--color-text-main);
+  --nav-link-color: var(--color-chinese-seal-red);
+  --nav-link-hover-color: var(--color-chinese-seal-red-hover);
+  --nav-mobile-border-color: var(--color-border-subtle);
+  --nav-mobile-bg: var(--color-bg-main);
+  --nav-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   opacity: 1;
-  background-color: var(--color-bg-main);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   pointer-events: auto;
 }
+
+#mainNav.nav-transparent #mainNavLogo,
 #mainNav.nav-opaque #mainNavLogo {
-  color: var(--color-text-title);
+  color: var(--nav-logo-color);
 }
+
+#mainNav.nav-transparent #mobile-menu-button span,
 #mainNav.nav-opaque #mobile-menu-button span {
-  background-color: var(--color-text-main);
+  background-color: var(--nav-icon-color);
 }
+
+#mainNav.nav-transparent #mainNavMenu a,
+#mainNav.nav-transparent #mobile-menu a,
 #mainNav.nav-opaque #mainNavMenu a,
 #mainNav.nav-opaque #mobile-menu a {
-  color: var(--color-chinese-seal-red);
+  color: var(--nav-link-color);
 }
+
+#mainNav.nav-transparent #mainNavMenu a:hover,
+#mainNav.nav-transparent #mobile-menu a:hover,
 #mainNav.nav-opaque #mainNavMenu a:hover,
 #mainNav.nav-opaque #mobile-menu a:hover {
-  color: var(--color-chinese-seal-red-hover);
+  color: var(--nav-link-hover-color);
 }
+
+#mainNav.nav-transparent #mobile-menu,
 #mainNav.nav-opaque #mobile-menu {
-  border-top-color: var(--color-border-subtle);
-  background-color: var(--color-bg-main);
+  border-top-color: var(--nav-mobile-border-color);
+  background-color: var(--nav-mobile-bg);
 }
 
 /* ----------------------------------------

@@ -7,6 +7,7 @@ export interface Question {
 
 export interface QuizMeta {
   id: string;
+  category?: string;
   title: string;
   description: string;
   questions: Question[];
@@ -18,6 +19,7 @@ export const quizzes: QuizMeta[] = [
   //  "title": "Auriculoterapia - Anatomía y Diagnóstico Visual - Clase 1",
   {
     id: "anatomia-diagnostico-auricular",
+    category: "auriculoterapia",
     title: "Auriculoterapia - Anatomía y Diagnóstico Visual - Clase 1",
     description:
       "Estudio de las estructuras de la oreja y la interpretación de señales visuales según la Medicina China.",
@@ -212,11 +214,14 @@ export const quizzes: QuizMeta[] = [
   //    title: "Auriculoterapia - Los 10 Puntos Maestros",
   {
     id: "master-puntos-auriculares",
+    category: "auriculoterapia",
     title: "Auriculoterapia - Los 10 Puntos Maestros",
     description:
-      "Evaluación sobre la localización exacta y las funciones terapéuticas de los puntos pilares de la medicina auricular.",
+      "Evaluación sobre la localización exacta y las funciones terapéuticas de los 10 puntos pilares de la medicina auricular.",
     questions: [
-      // ========== 1. PUNTO CERO ==========
+      // ==========================================
+      // 1. PUNTO CERO
+      // ==========================================
       {
         text: "¿Cuál es la ubicación exacta del Punto Cero?",
         options: [
@@ -238,7 +243,9 @@ export const quizzes: QuizMeta[] = [
         correct: 1,
       },
 
-      // ========== 2. SHEN MEN ==========
+      // ==========================================
+      // 2. SHEN MEN
+      // ==========================================
       {
         text: "¿Dónde se localiza el punto Shen Men (Puerta del Espíritu)?",
         options: [
@@ -260,7 +267,9 @@ export const quizzes: QuizMeta[] = [
         correct: 2,
       },
 
-      // ========== 3. SIMPÁTICO Y ENDOCRINO ==========
+      // ==========================================
+      // 3. SIMPÁTICO
+      // ==========================================
       {
         text: "¿Dónde se sitúa el Punto Simpático?",
         options: [
@@ -272,6 +281,20 @@ export const quizzes: QuizMeta[] = [
         correct: 0,
       },
       {
+        text: "¿Cuál es la función principal del Punto Simpático?",
+        options: [
+          "Regular el sistema nervioso autónomo, tratar dolores viscerales y espasmos",
+          "Estimular la glándula pineal",
+          "Mejorar la audición",
+          "Aumentar la temperatura corporal",
+        ],
+        correct: 0,
+      },
+
+      // ==========================================
+      // 4. ENDOCRINO
+      // ==========================================
+      {
         text: "El Punto Endocrino se localiza en la base de la concha cava, cerca de la incisura intertrágica. ¿Cuál es su uso principal?",
         options: [
           "Tratar fracturas óseas",
@@ -281,8 +304,20 @@ export const quizzes: QuizMeta[] = [
         ],
         correct: 1,
       },
+      {
+        text: "¿En qué zona de la oreja se encuentra el Punto Endocrino?",
+        options: [
+          "En el lóbulo",
+          "En la base de la concha cava, cerca de la incisura intertrágica",
+          "En la raíz del hélix",
+          "En la fosa triangular",
+        ],
+        correct: 1,
+      },
 
-      // ========== 4. TÁLAMO Y OSCILACIÓN ==========
+      // ==========================================
+      // 5. TÁLAMO
+      // ==========================================
       {
         text: "¿Cuál es la ubicación del Máster Tálamo?",
         options: [
@@ -303,11 +338,10 @@ export const quizzes: QuizMeta[] = [
         ],
         correct: 0,
       },
-      {
-        text: "¿Qué punto equilibra los hemisferios cerebrales y ayuda en trastornos de aprendizaje como la dislexia?",
-        options: ["Shen Men", "Máster Oscilación", "Punto Cero", "Punto Alergia"],
-        correct: 1,
-      },
+
+      // ==========================================
+      // 6. OSCILACIÓN
+      // ==========================================
       {
         text: "¿Dónde se localiza el Máster Oscilación?",
         options: [
@@ -318,8 +352,15 @@ export const quizzes: QuizMeta[] = [
         ],
         correct: 1,
       },
+      {
+        text: "¿Qué punto equilibra los hemisferios cerebrales y ayuda en trastornos de aprendizaje como la dislexia?",
+        options: ["Shen Men", "Máster Oscilación", "Punto Cero", "Punto Alergia"],
+        correct: 1,
+      },
 
-      // ========== 5. ALERGIA Y SENSORIAL ==========
+      // ==========================================
+      // 7. ALERGIA
+      // ==========================================
       {
         text: "¿Dónde se ubica típicamente el Punto Alergia?",
         options: [
@@ -331,17 +372,21 @@ export const quizzes: QuizMeta[] = [
         correct: 1,
       },
       {
-        text: "El Punto Sensorial (Máster Sensorial) se utiliza para:",
+        text: "¿Cuál es la función principal del Punto Alergia?",
         options: [
-          "Problemas de vista, oído y olfato",
-          "Dolor de espalda",
+          "Tratar alergias, asma y urticaria",
+          "Regular la presión arterial",
           "Mejorar la digestión",
-          "Aumentar la energía de Riñón",
+          "Calmar el dolor de cabeza",
         ],
         correct: 0,
       },
+
+      // ==========================================
+      // 8. SENSORIAL
+      // ==========================================
       {
-        text: "¿Dónde se localiza el Punto Sensorial?",
+        text: "¿Dónde se localiza el Punto Sensorial (Máster Sensorial)?",
         options: [
           "En el centro del lóbulo",
           "En el trago",
@@ -350,25 +395,20 @@ export const quizzes: QuizMeta[] = [
         ],
         correct: 0,
       },
-
-      // ========== 6. PUNTOS DEL TRAGO (NICOTINA / HAMBRE) ==========
       {
-        text: "¿Qué punto se encuentra en el trago y se usa para el control de adicciones y ansiedad?",
+        text: "El Punto Sensorial se utiliza para:",
         options: [
-          "Punto de Nicotina / Boca",
-          "Punto de Rodilla",
-          "Punto de Hígado",
-          "Punto de Vejiga",
+          "Problemas de vista, oído y olfato",
+          "Dolor de espalda",
+          "Mejorar la digestión",
+          "Aumentar la energía de Riñón",
         ],
         correct: 0,
       },
-      {
-        text: "¿En qué zona se localiza el punto del Hambre para control de peso?",
-        options: ["En el lóbulo", "En el trago", "En el hélix", "En la fosa triangular"],
-        correct: 1,
-      },
 
-      // ========== 7. CEREBRO Y TRANQUILIZANTE ==========
+      // ==========================================
+      // 9. CEREBRO (MÁSTER CEREBRAL)
+      // ==========================================
       {
         text: "¿Cuál es la función del Punto Cerebro (Máster Cerebral)?",
         options: [
@@ -380,36 +420,38 @@ export const quizzes: QuizMeta[] = [
         correct: 0,
       },
       {
+        text: "¿En qué zona de la oreja se encuentra generalmente el Punto Cerebro?",
+        options: [
+          "En el antitrago (zona cerebral)",
+          "En el lóbulo",
+          "En la fosa triangular",
+          "En el trago",
+        ],
+        correct: 0,
+      },
+
+      // ==========================================
+      // 10. TRANQUILIZANTE
+      // ==========================================
+      {
         text: "¿Dónde se encuentra el Punto Tranquilizante?",
         options: [
-          "En el trago",
+          "En el trago (generalmente en la parte inferior)",
           "En el antitrago",
           "En el lóbulo",
           "En la base de la fosa triangular",
         ],
         correct: 0,
       },
-
-      // ========== 8. INTEGRACIÓN CLÍNICA ==========
       {
-        text: "Si un paciente llega con mucho dolor y gran ansiedad por el tratamiento, ¿qué combinación de Master Puntos es la más adecuada para iniciar?",
+        text: "¿Cuál es la función principal del Punto Tranquilizante?",
         options: [
-          "Punto Alergia y Endocrino",
-          "Shen Men y Tálamo",
-          "Oscilación y Punto Cero",
-          "Nicotina y Sensorial",
+          "Sedante, trata el insomnio y la ansiedad",
+          "Estimula el apetito",
+          "Mejora la memoria",
+          "Aumenta la presión arterial",
         ],
-        correct: 1,
-      },
-      {
-        text: "¿Qué punto maestro es conocido como el 'Punto de Control Maestro' que regula a todos los demás?",
-        options: ["Shen Men", "Punto Cero", "Tálamo", "Endocrino"],
-        correct: 1,
-      },
-      {
-        text: "¿Qué estructura de la oreja alberga al punto Máster Tálamo?",
-        options: ["El Hélix", "El Antitrago", "El Trago", "La Fosa Escafoidea"],
-        correct: 1,
+        correct: 0,
       },
     ],
   },
@@ -417,6 +459,7 @@ export const quizzes: QuizMeta[] = [
   //"title": "Auriculoterapia - Formas Terapéuticas y Aplicación Clínica",
   {
     id: "terapeutica-auricular",
+    category: "auriculoterapia",
     title: "Auriculoterapia - Formas Terapéuticas y Aplicación Clínica",
     description:
       "Evaluación sobre métodos de tratamiento, técnicas de sangría y funciones específicas del Hélix.",
@@ -611,6 +654,7 @@ export const quizzes: QuizMeta[] = [
   // "title": "Auriculoterapia - Columna y Miembro Inferior",
   {
     id: "cartografia-somatica-inferior",
+    category: "auriculoterapia",
     title: "Auriculoterapia - Columna y Miembro Inferior",
     description:
       "Evaluación detallada sobre las zonas reflejas del sistema musculoesquelético en la oreja.",
@@ -1337,12 +1381,13 @@ export const quizzes: QuizMeta[] = [
     ],
   },
 
-  //Anatomia - terminologia
+  //Anatomia - Osea
   {
-    id: "anatomia-terminologia",
-    title: "Anatomía - Terminología Esencial (Glosario Interactivo)",
+    id: "anatomia-osea",
+    category: "anatomia",
+    title: "Anatomía Ósea – Terminología y Reparos (Glosario Interactivo)",
     description:
-      "Definiciones de los términos anatómicos fundamentales: posiciones, estructuras óseas, tipos de articulaciones, músculos y reparos anatómicos.",
+      "Definiciones de términos anatómicos relacionados exclusivamente con el sistema óseo: posiciones, partes de los huesos, clasificaciones, columna vertebral y reparos palpables.",
     questions: [
       // ==========================================
       // SECCIÓN 1: POSICIONES Y DECÚBITOS
@@ -1379,7 +1424,7 @@ export const quizzes: QuizMeta[] = [
       },
 
       // ==========================================
-      // SECCIÓN 2: HUESOS Y SUS PARTES
+      // SECCIÓN 2: HUESOS Y SUS PARTES (CLASIFICACIÓN Y ESTRUCTURA)
       // ==========================================
       {
         text: "¿Qué son las 'epífisis' en un hueso largo?",
@@ -1432,6 +1477,16 @@ export const quizzes: QuizMeta[] = [
         correct: 0,
       },
       {
+        text: "¿Qué es la 'cavidad medular'?",
+        options: [
+          "El espacio interior de la diáfisis de los huesos largos que contiene médula ósea",
+          "La superficie articular cubierta de cartílago",
+          "El canal por donde pasan los nervios periféricos",
+          "La depresión donde se inserta un ligamento",
+        ],
+        correct: 0,
+      },
+      {
         text: "¿Cómo se clasifica un 'hueso largo'?",
         options: [
           "Aquel donde el ancho y el largo son similares (ej. vértebras)",
@@ -1471,166 +1526,68 @@ export const quizzes: QuizMeta[] = [
         ],
         correct: 1,
       },
-
-      // ==========================================
-      // SECCIÓN 3: ARTICULACIONES
-      // ==========================================
       {
-        text: "¿Qué es una 'sinartrosis'?",
+        text: "¿Qué es un 'hueso irregular'?",
         options: [
-          "Una articulación muy móvil como la cadera",
-          "Una articulación inmóvil o fija, como las suturas del cráneo",
-          "Una articulación semimóvil con disco cartilaginoso",
-          "Una articulación que se ha luxado",
-        ],
-        correct: 1,
-      },
-      {
-        text: "¿Qué es una 'anfiartrosis'?",
-        options: [
-          "Una articulación completamente inmóvil",
-          "Una articulación semimóvil, unida por cartílago, como la sínfisis púbica o los discos intervertebrales",
-          "Una diartrosis sin cápsula",
-          "La unión de dos huesos largos",
-        ],
-        correct: 1,
-      },
-      {
-        text: "¿Qué es una 'diartrosis' (articulación sinovial)?",
-        options: [
-          "Una articulación fija sin cavidad",
-          "Una articulación libremente móvil que contiene líquido sinovial y cápsula articular (ej. rodilla, hombro)",
-          "La unión entre dos vértebras",
-          "Un tipo de sutura craneal",
-        ],
-        correct: 1,
-      },
-      {
-        text: "¿Qué es una 'enartrosis'?",
-        options: [
-          "Un tipo de diartrosis donde una cabeza esférica encaja en una cavidad cóncava, permitiendo movimiento en todos los ejes (ej. cadera, hombro)",
-          "Una articulación plana que solo permite deslizamiento",
-          "Una articulación en bisagra como el codo",
-          "Una articulación que une dos superficies planas",
+          "Un hueso que no encaja en las categorías de largo, plano o corto, con forma compleja (ej. vértebras, huesos de la cara)",
+          "Un hueso que ha sufrido una fractura",
+          "Un hueso que no tiene médula ósea",
+          "Un hueso que solo se encuentra en el cráneo",
         ],
         correct: 0,
       },
       {
-        text: "¿Qué es la 'cápsula articular'?",
-        options: [
-          "El líquido que lubrica la articulación",
-          "El cartílago que recubre las superficies óseas",
-          "La envoltura fibrosa que rodea la articulación y mantiene los huesos en contacto",
-          "El espacio entre dos huesos",
-        ],
-        correct: 2,
+        text: "¿Qué nombre recibe una prominencia ósea redondeada que articula con otro hueso?",
+        options: ["Tuberosidad", "Cóndilo", "Fosa", "Agujero"],
+        correct: 1,
       },
       {
-        text: "¿Qué son los 'ligamentos'?",
+        text: "¿Qué es una 'fosa' en anatomía ósea?",
         options: [
-          "Bandas de tejido conectivo fibroso que conectan hueso con hueso, dando estabilidad a la articulación",
-          "Bandas que conectan músculo con hueso",
-          "Vasos sanguíneos periarticulares",
-          "Nervios que inervan la articulación",
+          "Una elevación alargada en la superficie del hueso",
+          "Una depresión o cavidad poco profunda en el hueso",
+          "Un conducto que atraviesa el hueso",
+          "Un extremo redondeado de un hueso",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué es una 'tuberosidad' ósea?",
+        options: [
+          "Una pequeña depresión para la inserción de ligamentos",
+          "Una prominencia grande y rugosa donde se insertan músculos y tendones",
+          "Un agujero por donde pasa un nervio",
+          "Una superficie articular lisa",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué es un 'agujero' (foramen) en un hueso?",
+        options: [
+          "Un orificio que permite el paso de vasos sanguíneos, nervios o ligamentos",
+          "Una elevación en la superficie ósea",
+          "Una cavidad articular",
+          "Un extremo de un hueso largo",
         ],
         correct: 0,
       },
-      {
-        text: "¿Qué son los 'tendones'?",
-        options: [
-          "Bandas fibrosas que unen hueso con hueso",
-          "Estructuras que conectan el músculo al hueso, transmitiendo la fuerza de contracción",
-          "Almohadillas de cartílago dentro de la rodilla",
-          "Vainas sinoviales que protegen los nervios",
-        ],
-        correct: 1,
-      },
 
       // ==========================================
-      // SECCIÓN 4: MÚSCULOS Y MOVIMIENTOS
+      // SECCIÓN 3: COLUMNA VERTEBRAL
       // ==========================================
       {
-        text: "¿Qué caracteriza al 'músculo liso'?",
+        text: "¿Cuál es la curvatura fisiológica de la columna cervical?",
         options: [
-          "Es voluntario y se inserta en los huesos",
-          "Es estriado y forma el corazón",
-          "Es involuntario y se encuentra en las paredes de las vísceras (vasos sanguíneos, intestinos)",
-          "Es el responsable de mover las articulaciones",
-        ],
-        correct: 2,
-      },
-      {
-        text: "¿Qué es un 'músculo agonista'?",
-        options: [
-          "El músculo que se opone al movimiento",
-          "El músculo que estabiliza la articulación sin moverse",
-          "El músculo o grupo muscular que produce la fuerza principal para un movimiento específico",
-          "Un músculo paralizado",
-        ],
-        correct: 2,
-      },
-      {
-        text: "¿Qué es un 'músculo antagonista'?",
-        options: [
-          "El que ayuda al agonista en el movimiento",
-          "El que se relaja o alarga para permitir el movimiento del agonista",
-          "El que fija la postura",
-          "El que inicia el movimiento",
+          "Cifosis (concavidad anterior)",
+          "Lordosis (concavidad posterior)",
+          "Escoliosis",
+          "Rectitud",
         ],
         correct: 1,
       },
       {
-        text: "¿Qué es el 'manguito rotador'?",
-        options: [
-          "Un conjunto de cuatro músculos que estabilizan la articulación de la cadera",
-          "Un conjunto de cuatro músculos y sus tendones que estabilizan el hombro (supraespinoso, infraespinoso, redondo menor, subescapular)",
-          "La vaina sinovial que envuelve el tendón del bíceps",
-          "El ligamento cruzado de la rodilla",
-        ],
-        correct: 1,
-      },
-      {
-        text: "¿Qué movimiento se conoce como 'abducción'?",
-        options: [
-          "Doblar una articulación disminuyendo el ángulo",
-          "Alejar una extremidad de la línea media del cuerpo",
-          "Girar el antebrazo para poner la palma hacia abajo",
-          "Acercar una extremidad a la línea media",
-        ],
-        correct: 1,
-      },
-      {
-        text: "¿Qué es la 'flexión'?",
-        options: [
-          "Aumentar el ángulo de una articulación",
-          "Alejar una parte del cuerpo",
-          "Disminuir el ángulo de una articulación, acercando los segmentos corporales",
-          "Rotar el tronco",
-        ],
-        correct: 2,
-      },
-
-      // ==========================================
-      // SECCIÓN 5: COLUMNA VERTEBRAL Y TÉRMINOS ESPECÍFICOS
-      // ==========================================
-      {
-        text: "¿Qué es una 'lordosis'?",
-        options: [
-          "Una desviación lateral de la columna",
-          "Una curvatura fisiológica (o patológica) de la columna con concavidad posterior (cóncava hacia atrás) a nivel cervical y lumbar",
-          "Una curvatura de concavidad anterior (joroba) a nivel torácico",
-          "Una fractura de la vértebra",
-        ],
-        correct: 1,
-      },
-      {
-        text: "¿Qué es una 'cifosis'?",
-        options: [
-          "Curvatura lateral de la columna",
-          "Curvatura de concavidad anterior, normal a nivel torácico (y sacro), patológica si es excesiva (joroba)",
-          "Curvatura lumbar excesiva",
-          "Pérdida de la altura discal",
-        ],
+        text: "¿Qué tipo de curvatura presenta la región torácica de la columna?",
+        options: ["Lordosis", "Cifosis", "Escoliosis", "Hiperlordosis"],
         correct: 1,
       },
       {
@@ -1644,15 +1601,29 @@ export const quizzes: QuizMeta[] = [
         correct: 0,
       },
       {
-        text: "¿Qué se entiende por 'hernia discal'?",
+        text: "¿Qué estructura ósea forma la 'apófisis espinosa' de una vértebra?",
         options: [
-          "Calcificación del disco que suelda las vértebras",
-          "Desplazamiento del núcleo pulposo del disco que puede presionar los nervios raquídeos",
-          "Rotura de la apófisis transversa",
-          "Inflamación de la articulación facetaria",
+          "La parte anterior del cuerpo vertebral",
+          "La prolongación que se dirige hacia atrás y se palpa en la línea media de la espalda",
+          "La proyección lateral que sirve de inserción muscular",
+          "El agujero vertebral",
         ],
         correct: 1,
       },
+      {
+        text: "¿Cuántas vértebras cervicales tiene la columna vertebral humana?",
+        options: ["5", "7", "12", "4"],
+        correct: 1,
+      },
+      {
+        text: "¿Qué región de la columna tiene 12 vértebras?",
+        options: ["Cervical", "Torácica", "Lumbar", "Sacro"],
+        correct: 1,
+      },
+
+      // ==========================================
+      // SECCIÓN 4: REPAROS ÓSEOS PALPABLES Y REFERENCIAS
+      // ==========================================
       {
         text: "¿Qué es la 'cresta ilíaca'?",
         options: [
@@ -1683,12 +1654,727 @@ export const quizzes: QuizMeta[] = [
         ],
         correct: 0,
       },
+      {
+        text: "¿Qué estructura ósea constituye la 'espina de la escápula'?",
+        options: [
+          "Una cresta ósea en la cara posterior de la escápula, palpable en la espalda",
+          "El borde lateral del omóplato",
+          "La apófisis coracoides",
+          "El ángulo inferior de la escápula",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es el hueso más largo del cuerpo humano?",
+        options: ["El húmero", "El fémur", "La tibia", "El radio"],
+        correct: 1,
+      },
+      {
+        text: "¿Qué hueso forma la prominencia del codo (olécranon)?",
+        options: ["El radio", "El cúbito", "El húmero", "La clavícula"],
+        correct: 1,
+      },
+      {
+        text: "¿Qué hueso forma la parte anterior de la rodilla (rótula)?",
+        options: [
+          "Un hueso sesamoideo incluido en el tendón del cuádriceps",
+          "Un hueso corto del tarso",
+          "Un hueso plano del cráneo",
+          "Una vértebra lumbar",
+        ],
+        correct: 0,
+      },
+    ],
+  },
+
+  //Anatomia - Articulaciones y Ligamentos
+  {
+    id: "anatomia-articulaciones-ligamentos",
+    category: "anatomia",
+    title: "Articulaciones y Ligamentos – Terminología Esencial (Glosario Interactivo)",
+    description:
+      "Definiciones de los conceptos fundamentales sobre articulaciones (clasificación, tipos, componentes) y ligamentos (función y ejemplos principales).",
+    questions: [
+      // ==========================================
+      // SECCIÓN 1: DEFINICIÓN Y CLASIFICACIÓN FUNCIONAL
+      // ==========================================
+      {
+        text: "¿Qué es una articulación en anatomía?",
+        options: [
+          "La unión entre dos o más huesos o entre un hueso y un cartílago",
+          "El tejido que conecta un músculo con un hueso",
+          "La cavidad donde se aloja la médula ósea",
+          "El espacio entre dos vértebras",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cómo se clasifican las articulaciones según su movilidad?",
+        options: [
+          "Fijas, semimóviles y móviles",
+          "Simples y compuestas",
+          "Primarias y secundarias",
+          "Fibrosas, cartilaginosas y sinoviales",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué es una 'sinartrosis'?",
+        options: [
+          "Una articulación inmóvil o fija (ej. suturas del cráneo)",
+          "Una articulación semimóvil (ej. sínfisis púbica)",
+          "Una articulación libremente móvil (ej. rodilla)",
+          "Una articulación que se ha luxado",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué es una 'anfiartrosis'?",
+        options: [
+          "Una articulación completamente inmóvil",
+          "Una articulación semimóvil, unida por cartílago (ej. discos intervertebrales, sínfisis púbica)",
+          "Una diartrosis sin cápsula",
+          "La unión de dos huesos largos",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué es una 'diartrosis' (articulación sinovial)?",
+        options: [
+          "Una articulación fija sin cavidad",
+          "Una articulación libremente móvil que contiene líquido sinovial y cápsula articular (ej. rodilla, hombro)",
+          "La unión entre dos vértebras",
+          "Un tipo de sutura craneal",
+        ],
+        correct: 1,
+      },
+
+      // ==========================================
+      // SECCIÓN 2: CLASIFICACIÓN ESTRUCTURAL (FIBROSAS, CARTILAGINOSAS, SINOVIALES)
+      // ==========================================
+      {
+        text: "¿Qué tipo de articulación es una sutura craneal según su estructura?",
+        options: [
+          "Articulación fibrosa",
+          "Articulación cartilaginosa",
+          "Articulación sinovial",
+          "Articulación elastoide",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué tipo de articulación es la sínfisis púbica según su estructura?",
+        options: ["Fibrosa", "Cartilaginosa", "Sinovial", "Membranosa"],
+        correct: 1,
+      },
+      {
+        text: "¿Qué tipo de articulación es la rodilla según su estructura?",
+        options: ["Fibrosa", "Cartilaginosa", "Sinovial", "Anfiartrosis"],
+        correct: 2,
+      },
+      {
+        text: "¿Qué tipo de articulación es la articulación temporomandibular?",
+        options: ["Fibrosa", "Cartilaginosa", "Sinovial", "Sinartrosis"],
+        correct: 2,
+      },
+
+      // ==========================================
+      // SECCIÓN 3: COMPONENTES DE LA ARTICULACIÓN SINOVIAL
+      // ==========================================
+      {
+        text: "¿Qué es la 'cápsula articular'?",
+        options: [
+          "El líquido que lubrica la articulación",
+          "El cartílago que recubre las superficies óseas",
+          "La envoltura fibrosa que rodea la articulación y mantiene los huesos en contacto",
+          "El espacio entre dos huesos",
+        ],
+        correct: 2,
+      },
+      {
+        text: "¿Qué función tiene el 'cartílago articular' en una articulación sinovial?",
+        options: [
+          "Producir líquido sinovial",
+          "Reducir la fricción y absorber impactos",
+          "Unir los huesos mediante ligamentos",
+          "Dar estabilidad pasiva",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué es el 'líquido sinovial'?",
+        options: [
+          "Un fluido viscoso que lubrica la articulación y nutre el cartílago",
+          "El tejido que forma los ligamentos",
+          "El recubrimiento externo del hueso",
+          "El material del disco intervertebral",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué es un 'menisco' en anatomía articular?",
+        options: [
+          "Un ligamento intraarticular",
+          "Un disco de fibrocartílago en forma de medialuna que mejora la congruencia articular (ej. en la rodilla)",
+          "La membrana que envuelve el tendón",
+          "Un tipo de hueso sesamoideo",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué estructura recubre internamente la cápsula articular y segrega líquido sinovial?",
+        options: [
+          "El periostio",
+          "La membrana sinovial",
+          "El cartílago hialino",
+          "El ligamento cruzado",
+        ],
+        correct: 1,
+      },
+
+      // ==========================================
+      // SECCIÓN 4: TIPOS DE MOVIMIENTOS ARTICULARES
+      // ==========================================
+      {
+        text: "¿Qué movimiento se conoce como 'flexión'?",
+        options: [
+          "Aumentar el ángulo de una articulación",
+          "Alejar una parte del cuerpo de la línea media",
+          "Disminuir el ángulo de una articulación, acercando los segmentos corporales",
+          "Rotar el tronco",
+        ],
+        correct: 2,
+      },
+      {
+        text: "¿Qué movimiento es la 'extensión'?",
+        options: [
+          "Disminuir el ángulo articular",
+          "Aumentar el ángulo articular, enderezando la articulación",
+          "Alejar la extremidad de la línea media",
+          "Girar hacia adentro",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué es la 'abducción'?",
+        options: [
+          "Doblar una articulación disminuyendo el ángulo",
+          "Alejar una extremidad de la línea media del cuerpo",
+          "Girar el antebrazo para poner la palma hacia abajo",
+          "Acercar una extremidad a la línea media",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué es la 'aducción'?",
+        options: [
+          "Alejar una extremidad de la línea media",
+          "Acercar una extremidad a la línea media del cuerpo",
+          "Doblar hacia atrás",
+          "Girar hacia fuera",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué es la 'rotación interna' o 'medial' de una extremidad?",
+        options: [
+          "Girar el miembro hacia la línea media del cuerpo",
+          "Girar el miembro hacia fuera",
+          "Doblar la articulación hacia adelante",
+          "Extender la articulación",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué movimiento combina flexión, extensión, abducción y aducción en secuencia sin rotar?",
+        options: ["Circunducción", "Pronación", "Supinación", "Inversión"],
+        correct: 0,
+      },
+
+      // ==========================================
+      // SECCIÓN 5: LIGAMENTOS – DEFINICIÓN Y EJEMPLOS
+      // ==========================================
+      {
+        text: "¿Qué son los 'ligamentos' en anatomía?",
+        options: [
+          "Bandas de tejido conectivo fibroso que conectan hueso con hueso, dando estabilidad a la articulación",
+          "Bandas que conectan músculo con hueso",
+          "Vasos sanguíneos periarticulares",
+          "Nervios que inervan la articulación",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es la función principal de un ligamento?",
+        options: [
+          "Generar movimiento activo",
+          "Limitar los movimientos excesivos y proporcionar estabilidad pasiva a la articulación",
+          "Producir líquido sinovial",
+          "Absorber impactos",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué ligamento de la rodilla evita el desplazamiento anterior de la tibia?",
+        options: [
+          "Ligamento colateral medial",
+          "Ligamento cruzado anterior (LCA)",
+          "Ligamento cruzado posterior (LCP)",
+          "Ligamento rotuliano",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué ligamento de la rodilla evita el desplazamiento posterior de la tibia?",
+        options: [
+          "Ligamento cruzado anterior (LCA)",
+          "Ligamento cruzado posterior (LCP)",
+          "Ligamento colateral lateral",
+          "Ligamento poplíteo",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué ligamento une la cabeza del fémur con el acetábulo en la cadera?",
+        options: [
+          "Ligamento redondo (ligamento de la cabeza femoral)",
+          "Ligamento iliofemoral",
+          "Ligamento pubofemoral",
+          "Ligamento isquiofemoral",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué ligamento es el más fuerte del cuerpo humano y estabiliza la articulación de la cadera?",
+        options: [
+          "Ligamento iliofemoral",
+          "Ligamento pubofemoral",
+          "Ligamento redondo",
+          "Ligamento sacroilíaco",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué ligamento del hombro forma parte del manguito rotador?",
+        options: [
+          "Ligamento coracohumeral",
+          "Ligamento acromioclavicular",
+          "Ligamento glenohumeral",
+          "Ligamento transversoS",
+        ],
+        correct: 2,
+      },
+      {
+        text: "¿Qué ligamento estabiliza la articulación acromioclavicular del hombro?",
+        options: [
+          "Ligamento coracoclavicular",
+          "Ligamento acromioclavicular",
+          "Ligamento coracoacromial",
+          "Ligamento glenohumeral",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué es un 'esguince' en relación con los ligamentos?",
+        options: [
+          "Una fractura del hueso adyacente",
+          "Un estiramiento o desgarro de un ligamento",
+          "Una inflamación del cartílago",
+          "La pérdida de líquido sinovial",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué ligamento une el cúbito con el radio a nivel de la muñeca (lado cubital)?",
+        options: [
+          "Ligamento colateral cubital de la muñeca",
+          "Ligamento colateral radial de la muñeca",
+          "Ligamento escafolunar",
+          "Ligamento semilunar",
+        ],
+        correct: 0,
+      },
+    ],
+  },
+
+  //Anatomia - Musculos y Tendones
+  {
+    id: "anatomia-musculos-tendones",
+    category: "anatomia",
+    title: "Músculos y Tendones – Terminología Esencial (Glosario Interactivo)",
+    description:
+      "Definiciones de los conceptos fundamentales sobre músculos (tipos, funciones, nomenclatura) y tendones (estructura, función, ejemplos principales).",
+    questions: [
+      // ==========================================
+      // SECCIÓN 1: DEFINICIONES BÁSICAS
+      // ==========================================
+      {
+        text: "¿Qué es un músculo en anatomía?",
+        options: [
+          "Un tejido especializado en la contracción, que permite el movimiento, la estabilidad y la generación de calor",
+          "Un hueso que protege órganos internos",
+          "Un ligamento que conecta dos huesos",
+          "Un órgano que bombea sangre",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué es un tendón?",
+        options: [
+          "Una estructura fibrosa que conecta un músculo con un hueso",
+          "Una banda que conecta hueso con hueso",
+          "Un tipo de cartílago que amortigua articulaciones",
+          "Un fluido que lubrica las articulaciones",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es la función principal de un músculo esquelético?",
+        options: [
+          "Producir calor y movimiento voluntario",
+          "Bombear sangre",
+          "Regular la presión arterial",
+          "Absorber nutrientes",
+        ],
+        correct: 0,
+      },
+
+      // ==========================================
+      // SECCIÓN 2: TIPOS DE TEJIDO MUSCULAR
+      // ==========================================
+      {
+        text: "¿Qué caracteriza al 'músculo liso'?",
+        options: [
+          "Es voluntario y se inserta en los huesos",
+          "Es involuntario y se encuentra en las paredes de las vísceras (vasos sanguíneos, intestinos, vejiga)",
+          "Es estriado y forma el corazón",
+          "Es el responsable de mover las extremidades",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué caracteriza al 'músculo estriado esquelético'?",
+        options: [
+          "Es involuntario y no tiene estrías",
+          "Es voluntario, con estrías transversales, y se inserta en los huesos",
+          "Es involuntario y forma el corazón",
+          "Se encuentra solo en las vísceras",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué caracteriza al 'músculo cardíaco' (miocardio)?",
+        options: [
+          "Es voluntario y estriado",
+          "Es involuntario, estriado, y se encuentra exclusivamente en el corazón",
+          "Es liso y se contrae rítmicamente",
+          "Es voluntario y no tiene estrías",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué tipo de músculo controlamos de forma voluntaria (consciente)?",
+        options: [
+          "El músculo liso",
+          "El músculo estriado esquelético",
+          "El músculo cardíaco",
+          "Todos los músculos son voluntarios",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué tipo de músculo se contrae de forma involuntaria (automática)?",
+        options: [
+          "El músculo estriado esquelético",
+          "El músculo liso y el cardíaco",
+          "Solo el músculo liso",
+          "Solo el músculo cardíaco",
+        ],
+        correct: 1,
+      },
+
+      // ==========================================
+      // SECCIÓN 3: PARTES DE UN MÚSCULO Y FUNCIONES
+      // ==========================================
+      {
+        text: "¿Qué es el 'vientre muscular'?",
+        options: [
+          "La porción central y carnosa del músculo, donde se produce la contracción",
+          "El extremo tendinoso que se inserta en el hueso",
+          "La membrana que recubre el músculo",
+          "El punto de origen del músculo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué es el 'origen' de un músculo?",
+        options: [
+          "La inserción más móvil del músculo",
+          "El punto de fijación más estable o proximal del músculo",
+          "El tendón que conecta con el hueso",
+          "La fascia que lo envuelve",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué es la 'inserción' de un músculo?",
+        options: [
+          "El punto de fijación más móvil o distal del músculo",
+          "El punto de origen fijo",
+          "La vaina tendinosa que lo protege",
+          "El ligamento que lo estabiliza",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué es la 'aponeurosis'?",
+        options: [
+          "Una lámina de tejido conectivo fibroso que envuelve o fija un músculo",
+          "Un ligamento articular",
+          "Un tipo de hueso sesamoideo",
+          "Una bolsa sinovial",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué es el 'músculo agonista'?",
+        options: [
+          "El músculo que se opone al movimiento",
+          "El músculo principal que realiza un movimiento específico",
+          "El que estabiliza la articulación",
+          "El que se relaja durante el movimiento",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué es el 'músculo antagonista'?",
+        options: [
+          "El músculo que ayuda al agonista en el movimiento",
+          "El que se opone o se relaja para permitir el movimiento del agonista",
+          "El que fija la postura",
+          "El que inicia el movimiento",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué es un 'músculo sinergista'?",
+        options: [
+          "El que se opone al agonista",
+          "El que colabora con el agonista para realizar el movimiento de forma más eficiente",
+          "El que fija el hueso",
+          "El que no participa en el movimiento",
+        ],
+        correct: 1,
+      },
+
+      // ==========================================
+      // SECCIÓN 4: NOMENCLATURA MUSCULAR (NOMBRES SEGÚN FORMA, TAMAÑO, ACCIÓN)
+      // ==========================================
+      {
+        text: "¿Qué indica el nombre 'bíceps' en un músculo?",
+        options: [
+          "Que tiene dos cabezas o vientres de origen",
+          "Que tiene tres cabezas",
+          "Que tiene cuatro cabezas",
+          "Que tiene forma de trapecio",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué indica el nombre 'tríceps'?",
+        options: [
+          "Que tiene dos cabezas",
+          "Que tiene tres cabezas",
+          "Que tiene cuatro cabezas",
+          "Que tiene forma de rombo",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué músculo tiene cuatro cabezas (cuádriceps)?",
+        options: [
+          "El bíceps braquial",
+          "El músculo de la pantorrilla",
+          "El cuádriceps femoral (extensor de la rodilla)",
+          "El deltoides",
+        ],
+        correct: 2,
+      },
+      {
+        text: "¿Qué indica en el nombre de un músculo el término 'recto' (ej. recto abdominal)?",
+        options: [
+          "Que tiene forma triangular",
+          "Que sus fibras son paralelas y rectas",
+          "Que se inserta en la cabeza",
+          "Que es ancho y plano",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué indica el término 'deltoides' en un músculo?",
+        options: [
+          "Que tiene forma de triángulo (delta)",
+          "Que tiene dos cabezas",
+          "Que tiene forma redonda",
+          "Que es alargado",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué músculo se llama así por su forma de 'trapecio'?",
+        options: [
+          "El trapecio de la espalda",
+          "El deltoides del hombro",
+          "El bíceps del brazo",
+          "El glúteo mayor",
+        ],
+        correct: 0,
+      },
+
+      // ==========================================
+      // SECCIÓN 5: TENDONES – DEFINICIÓN, FUNCIÓN Y EJEMPLOS
+      // ==========================================
+      {
+        text: "¿Cuál es la función principal de un tendón?",
+        options: [
+          "Conectar músculo a hueso y transmitir la fuerza de contracción",
+          "Conectar hueso a hueso para dar estabilidad",
+          "Amortiguar las articulaciones",
+          "Producir líquido sinovial",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué estructura envuelve a los tendones para reducir la fricción en zonas de roce?",
+        options: [
+          "La vaina tendinosa",
+          "El periostio",
+          "La membrana sinovial",
+          "La cápsula articular",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué tendón es el más fuerte y grande del cuerpo humano?",
+        options: [
+          "El tendón del bíceps",
+          "El tendón rotuliano",
+          "El tendón de Aquiles",
+          "El tendón del tríceps",
+        ],
+        correct: 2,
+      },
+      {
+        text: "¿Qué tendón conecta el músculo cuádriceps con la tibia (rótula)?",
+        options: [
+          "El tendón rotuliano (ligamento rotuliano)",
+          "El tendón de Aquiles",
+          "El tendón del bíceps femoral",
+          "El tendón del glúteo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué tendón del hombro suele lesionarse en la tendinitis del manguito rotador?",
+        options: [
+          "Tendón del bíceps",
+          "Tendón del supraespinoso",
+          "Tendón del tríceps",
+          "Tendón del deltoides",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Qué tendón se inflama en la 'tendinitis de Quervain' en la muñeca?",
+        options: [
+          "Tendón del extensor corto del pulgar y abductor largo del pulgar",
+          "Tendón del flexor radial del carpo",
+          "Tendón del extensor común de los dedos",
+          "Tendón del cubital anterior",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Qué es una 'vaina tendinosa'?",
+        options: [
+          "Un revestimiento sinovial que envuelve el tendón para reducir la fricción",
+          "Una bolsa llena de líquido sinovial",
+          "Un ligamento que fija el tendón",
+          "Una capa de cartílago",
+        ],
+        correct: 0,
+      },
+
+      // ==========================================
+      // SECCIÓN 6: EJEMPLOS DE MÚSCULOS IMPORTANTES
+      // ==========================================
+      {
+        text: "¿Cuál es la función principal del bíceps braquial?",
+        options: [
+          "Extender el codo",
+          "Flexionar el codo y supinar el antebrazo",
+          "Abducir el hombro",
+          "Rotar el brazo hacia fuera",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es la función principal del tríceps braquial?",
+        options: [
+          "Flexionar el codo",
+          "Extender el codo (estirar el brazo)",
+          "Abducir el hombro",
+          "Rotar la muñeca",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es la función principal del músculo deltoides?",
+        options: [
+          "Flexionar y abducir el hombro",
+          "Extender el codo",
+          "Flexionar la muñeca",
+          "Rotar el cuello",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es la función principal del cuádriceps femoral?",
+        options: [
+          "Flexionar la rodilla",
+          "Extender la rodilla (enderezar la pierna)",
+          "Abducir la cadera",
+          "Flexionar la cadera",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es la función principal de los isquiotibiales (muslo posterior)?",
+        options: [
+          "Extender la rodilla",
+          "Flexionar la rodilla y extender la cadera",
+          "Abducir la cadera",
+          "Rotar el pie",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es la función principal del músculo gastrocnemio (gemelo) de la pantorrilla?",
+        options: [
+          "Flexionar el pie hacia arriba (dorsiflexión)",
+          "Extender el pie hacia abajo (flexión plantar) y flexionar la rodilla",
+          "Rotar el pie hacia fuera",
+          "Invertir el pie",
+        ],
+        correct: 1,
+      },
     ],
   },
 
   // Meridiano de Pulmon
   {
     id: "meridiano-pulmon-completo",
+    category: "meridianos",
     title: "Pulmón – Nombres, Ubicación y Clínica (Shǒu Tàiyīn)",
     description:
       "Nomenclatura (Pīnyīn y traducción), localización anatómica y funciones clínicas principales de cada punto del meridiano de Pulmón.",
@@ -1990,6 +2676,7 @@ export const quizzes: QuizMeta[] = [
   // Meridiano de Intestino Grueso
   {
     id: "meridiano-ig-completo",
+    category: "meridianos",
     title: "Intestino Grueso – Nombres, Ubicación y Clínica (Shǒu Yángmíng)",
     description:
       "Nomenclatura (Pīnyīn y traducción), localización anatómica y acciones clínicas principales de los 20 puntos del meridiano de Intestino Grueso según Yang Jiasan.",
@@ -2548,39 +3235,2741 @@ export const quizzes: QuizMeta[] = [
     ],
   },
 
-  //  "title": "TEST ",
+  // Meridiano de Estomago
   {
-    id: "TEST",
-    title: "TEST China - Clase 1",
-    description: "test",
+    id: "meridiano-e-completo",
+    category: "meridianos",
+    title: "Estómago – Nombres, Ubicación y Clínica (Zú Yángmíng)",
+    description:
+      "Nomenclatura (Pīnyīn y traducción), localización anatómica y acciones clínicas principales de los 45 puntos del meridiano de Estómago según la tradición.",
     questions: [
-      // ========== 1. FILOSOFÍA Y DEFINICIÓN ==========
+      // ==========================================
+      // FASE 1: NOMENCLATURA (45 preguntas)
+      // ==========================================
       {
-        text: "Según el proverbio citado en clase, ¿quién es considerada 'la madre' de la enfermedad?",
-        options: ["Las emociones", "Los alimentos", "El clima", "La genética"],
-        correct: 1,
+        text: "¿Cuál es el nombre en Pīnyīn y la traducción del punto E1?",
+        options: [
+          "Chéngqì (Receptáculo de las Lágrimas)",
+          "Sìbái (Cuatro Blancos)",
+          "Jùliáo (Gran Hendidura)",
+          "Dìcāng (Granero de la Tierra)",
+        ],
+        correct: 0,
       },
       {
-        text: "¿Qué sucede con quien toma medicina pero rechaza la dieta según el proverbio chino?",
+        text: "¿Cómo se denomina el punto E2, situado en el foramen infraorbitario?",
         options: [
-          "Se cura más rápido",
-          "Malgasta las habilidades del médico",
-          "Necesita más dosis de medicina",
-          "Fortalece su energía Wei",
+          "Chéngqì",
+          "Sìbái (Cuatro Blancos)",
+          "Dàyíng (Gran Acogida)",
+          "Jiāchē (Carro de la Mandíbula)",
         ],
         correct: 1,
       },
       {
-        text: "¿Cuál es el objetivo principal de conocer la naturaleza térmica de los alimentos?",
+        text: "El punto E3 se llama Jùliáo. ¿Cuál es su traducción?",
         options: [
-          "Saber cuántas calorías tienen",
-          "Armonizar el Yin-Yang interno según la estación y la constitución",
-          "Cocinar más rápido",
-          "Aumentar el sabor de las comidas",
+          "Receptáculo de las Lágrimas",
+          "Cuatro Blancos",
+          "Gran Hendidura",
+          "Puerta Inferior",
+        ],
+        correct: 2,
+      },
+      {
+        text: "¿Cuál es el nombre y la traducción del punto E4?",
+        options: [
+          "Dìcāng (Granero de la Tierra)",
+          "Dàyíng (Gran Acogida)",
+          "Jiāchē (Carro de la Mandíbula)",
+          "Xiàguān (Puerta Inferior)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "El punto E5, en el ángulo de la mandíbula, se conoce como:",
+        options: ["Dìcāng", "Dàyíng (Gran Acogida)", "Jiāchē", "Tóuwéi (Sujeción de la Cabeza)"],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se llama el punto E6, situado en el músculo masetero?",
+        options: [
+          "Xiàguān (Puerta Inferior)",
+          "Jiāchē (Carro de la Mandíbula)",
+          "Rényíng (Acogida del Hombre)",
+          "Shuǐtū (Prominencia del Agua)",
         ],
         correct: 1,
+      },
+      {
+        text: "El punto E7, debajo del arco cigomático, se denomina:",
+        options: [
+          "Xiàguān (Puerta Inferior)",
+          "Tóuwéi (Sujeción de la Cabeza)",
+          "Rényíng",
+          "Qìshè (Alojamiento del Qi)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es el nombre en Pīnyīn y traducción del punto E8?",
+        options: [
+          "Tóuwéi (Sujeción de la Cabeza)",
+          "Rényíng (Acogida del Hombre)",
+          "Shuǐtū (Prominencia del Agua)",
+          "Qìshè (Alojamiento del Qi)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "El punto E9, en el cuello a nivel del cartílago tiroides, se llama:",
+        options: [
+          "Rényíng (Acogida del Hombre)",
+          "Shuǐtū (Prominencia del Agua)",
+          "Qìshè (Alojamiento del Qi)",
+          "Quēpén (Cuenca Vacía)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cómo se denomina el punto E10, situado en el borde anterior del ECM a nivel del hioides?",
+        options: [
+          "Rényíng",
+          "Shuǐtū (Prominencia del Agua)",
+          "Qìshè",
+          "Kùfáng (Almacén del Pecho)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E11 se llama Qìshè. ¿Cuál es su traducción?",
+        options: ["Alojamiento del Qi", "Cuenca Vacía", "Puerta del Qi", "Almacén del Pecho"],
+        correct: 0,
+      },
+      {
+        text: "¿Cómo se llama el punto E12, en la fosa supraclavicular?",
+        options: ["Qìshè", "Quēpén (Cuenca Vacía)", "Qìhù (Puerta del Qi)", "Kùfáng"],
+        correct: 1,
+      },
+      {
+        text: "El punto E13, debajo de la clavícula, recibe el nombre de:",
+        options: [
+          "Qìhù (Puerta del Qi)",
+          "Kùfáng (Almacén del Pecho)",
+          "Wūyì (Cubierta de la Casa)",
+          "Yīngchuāng (Ventana del Pecho)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es el nombre en Pīnyīn y traducción de E14?",
+        options: [
+          "Kùfáng (Almacén del Pecho)",
+          "Wūyì (Cubierta de la Casa)",
+          "Yīngchuāng (Ventana del Pecho)",
+          "Rǔzhōng (Centro del Pecho)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "El punto E15 se llama Wūyì. ¿Qué significa?",
+        options: [
+          "Almacén del Pecho",
+          "Cubierta de la Casa",
+          "Ventana del Pecho",
+          "Centro del Pecho",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se denomina el punto E16, en el cuarto espacio intercostal?",
+        options: [
+          "Wūyì",
+          "Yīngchuāng (Ventana del Pecho)",
+          "Rǔzhōng (Centro del Pecho)",
+          "Rǔgēn (Raíz del Pecho)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E17, situado en el pezón, se llama:",
+        options: [
+          "Rǔzhōng (Centro del Pecho)",
+          "Rǔgēn (Raíz del Pecho)",
+          "Bùróng (No Lleno)",
+          "Chéngmǎn (Lleno Pleno)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es el nombre y la traducción del punto E18?",
+        options: [
+          "Rǔgēn (Raíz del Pecho)",
+          "Bùróng (No Lleno)",
+          "Chéngmǎn (Lleno Pleno)",
+          "Liángmén (Puerta del Granero)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "El punto E19 se llama Bùróng. ¿Qué significa?",
+        options: ["No Lleno", "Lleno Pleno", "Puerta del Granero", "Puerta de Paso"],
+        correct: 0,
+      },
+      {
+        text: "¿Cómo se denomina el punto E20, a 5 cun sobre el ombligo?",
+        options: ["Bùróng", "Chéngmǎn (Lleno Pleno)", "Liángmén", "Guānmén (Puerta de Paso)"],
+        correct: 1,
+      },
+      {
+        text: "El punto E21 se llama Liángmén. ¿Cuál es su traducción?",
+        options: [
+          "Puerta del Granero",
+          "Puerta de Paso",
+          "Supremo Uno",
+          "Puerta de la Carne Grasa",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cómo se llama el punto E22, a 3 cun sobre el ombligo?",
+        options: [
+          "Liángmén",
+          "Guānmén (Puerta de Paso)",
+          "Tàiyǐ (Supremo Uno)",
+          "Huáròumén (Puerta de la Carne Grasa)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E23, a 2 cun sobre el ombligo, se denomina:",
+        options: ["Guānmén", "Tàiyǐ (Supremo Uno)", "Huáròumén", "Tiānshū (Pivote Celestial)"],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es el nombre en Pīnyīn y traducción de E24?",
+        options: [
+          "Tàiyǐ (Supremo Uno)",
+          "Huáròumén (Puerta de la Carne Grasa)",
+          "Tiānshū (Pivote Celestial)",
+          "Wàilíng (Montículo Externo)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E25, a 2 cun lateral del ombligo, se llama:",
+        options: [
+          "Tiānshū (Pivote Celestial)",
+          "Wàilíng (Montículo Externo)",
+          "Dàjù (Gran Gigante)",
+          "Shuǐdào (Vía del Agua)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cómo se denomina el punto E26, a 1 cun bajo el ombligo?",
+        options: [
+          "Tiānshū",
+          "Wàilíng (Montículo Externo)",
+          "Dàjù (Gran Gigante)",
+          "Guīlái (Retorno)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E27, a 2 cun bajo el ombligo, se llama:",
+        options: ["Wàilíng", "Dàjù (Gran Gigante)", "Shuǐdào (Vía del Agua)", "Guīlái (Retorno)"],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es el nombre y la traducción de E28?",
+        options: [
+          "Dàjù (Gran Gigante)",
+          "Shuǐdào (Vía del Agua)",
+          "Guīlái (Retorno)",
+          "Qìchōng (Afluente del Qi)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E29 se llama Guīlái. ¿Qué significa?",
+        options: ["Vía del Agua", "Retorno", "Afluente del Qi", "Rodilla de la Barrera"],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se denomina el punto E30, en el pliegue inguinal?",
+        options: [
+          "Guīlái",
+          "Qìchōng (Afluente del Qi)",
+          "Bìguān (Rodilla de la Barrera)",
+          "Fútù (Protuberancia Aplastada)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E31, en el muslo anterior, se llama:",
+        options: [
+          "Bìguān (Rodilla de la Barrera)",
+          "Fútù (Protuberancia Aplastada)",
+          "Yīnshì (Ciudad del Yin)",
+          "Liángqiū (Colina del Granero)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es el nombre en Pīnyīn y traducción de E32?",
+        options: [
+          "Bìguān (Rodilla de la Barrera)",
+          "Fútù (Protuberancia Aplastada)",
+          "Yīnshì (Ciudad del Yin)",
+          "Liángqiū (Colina del Granero)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E33, a 3 cun sobre la rótula, se denomina:",
+        options: [
+          "Fútù",
+          "Yīnshì (Ciudad del Yin)",
+          "Liángqiū (Colina del Granero)",
+          "Dúbí (Nariz de Buey)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se llama el punto E34, a 2 cun sobre la rótula?",
+        options: [
+          "Yīnshì",
+          "Liángqiū (Colina del Granero)",
+          "Dúbí (Nariz de Buey)",
+          "Zúsānlǐ (Tres Millas del Pie)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E35 se llama Dúbí. ¿Cuál es su traducción?",
+        options: [
+          "Colina del Granero",
+          "Nariz de Buey",
+          "Tres Millas del Pie",
+          "Gran Vacío Superior",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se denomina el punto E36, a 3 cun bajo la rótula?",
+        options: [
+          "Dúbí",
+          "Zúsānlǐ (Tres Millas del Pie)",
+          "Shàngjùxū (Gran Vacío Superior)",
+          "Tiáokǒu (Boca Abierta)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E37, a 6 cun bajo la rótula, se llama:",
+        options: [
+          "Zúsānlǐ",
+          "Shàngjùxū (Gran Vacío Superior)",
+          "Tiáokǒu (Boca Abierta)",
+          "Xiàjùxū (Gran Vacío Inferior)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es el nombre y la traducción de E38?",
+        options: [
+          "Shàngjùxū (Gran Vacío Superior)",
+          "Tiáokǒu (Boca Abierta)",
+          "Xiàjùxū (Gran Vacío Inferior)",
+          "Fēnglóng (Cumbre del Viento)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E39, a 9 cun bajo la rótula, se denomina:",
+        options: [
+          "Tiáokǒu",
+          "Xiàjùxū (Gran Vacío Inferior)",
+          "Fēnglóng (Cumbre del Viento)",
+          "Jiěxī (Arroyo Separado)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se llama el punto E40, punto de conexión (Luò) del meridiano?",
+        options: [
+          "Xiàjùxū",
+          "Fēnglóng (Cumbre del Viento)",
+          "Jiěxī (Arroyo Separado)",
+          "Chōngyáng (Afluente del Yang)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E41, en el dorso del pie, se llama:",
+        options: [
+          "Fēnglóng",
+          "Jiěxī (Arroyo Separado)",
+          "Chōngyáng (Afluente del Yang)",
+          "Xiàngǔ (Valle del Límite)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es el nombre en Pīnyīn y traducción de E42?",
+        options: [
+          "Jiěxī (Arroyo Separado)",
+          "Chōngyáng (Afluente del Yang)",
+          "Xiàngǔ (Valle del Límite)",
+          "Nèitíng (Palacio Interior)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto E43 se llama Xiàngǔ. ¿Qué significa?",
+        options: ["Afluente del Yang", "Valle del Límite", "Palacio Interior", "Agudo Riguroso"],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se denomina el punto E44, en el dorso del pie entre el 2º y 3º dedo?",
+        options: ["Xiàngǔ", "Nèitíng (Palacio Interior)", "Lìduì (Agudo Riguroso)", "Jiěxī"],
+        correct: 1,
+      },
+      {
+        text: "El punto E45, el último del meridiano, se llama:",
+        options: ["Nèitíng", "Lìduì (Agudo Riguroso)", "Chōngyáng", "Fēnglóng"],
+        correct: 1,
+      },
+
+      // ==========================================
+      // FASE 2: UBICACIÓN ANATÓMICA (45 preguntas)
+      // ==========================================
+      {
+        text: "¿Dónde se localiza E1 (Chéngqì)?",
+        options: [
+          "En el foramen infraorbitario",
+          "Directamente debajo de la pupila, en la órbita inferior",
+          "En la comisura de los labios",
+          "En el ángulo de la mandíbula",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es la referencia ósea de E2 (Sìbái)?",
+        options: [
+          "En el borde inferior de la órbita, en el foramen infraorbitario",
+          "En la sien, en la esquina anterior del cabello",
+          "En el arco cigomático",
+          "En la fosa supraclavicular",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E3 (Jùliáo) se sitúa:",
+        options: [
+          "A 0,5 cun lateral a la comisura de los labios",
+          "A 0,5 cun lateral al borde de la nariz, a nivel del ala nasal",
+          "En el surco nasolabial",
+          "En la depresión infraorbitaria",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Dónde se encuentra E4 (Dìcāng)?",
+        options: [
+          "En el ángulo de la mandíbula",
+          "En la comisura de los labios, lateral a 0,4 cun",
+          "En el centro del surco nasolabial",
+          "Debajo del pómulo",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E5 (Dàyíng) se localiza:",
+        options: [
+          "En el ángulo de la mandíbula, anterior al masetero",
+          "En el borde inferior del arco cigomático",
+          "En la fosa supraclavicular",
+          "En el borde anterior del ECM",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E6 (Jiāchē) se sitúa en el ángulo de la mandíbula, exactamente:",
+        options: [
+          "En la inserción del músculo masetero, 1 cun por delante del ángulo",
+          "En la depresión entre el masetero y el hueso",
+          "En el borde posterior del masetero",
+          "En el centro del músculo temporal",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E7 (Xiàguān) se localiza:",
+        options: [
+          "En la depresión debajo del arco cigomático, anterior al cóndilo de la mandíbula",
+          "En la sien, en la esquina anterior del cabello",
+          "En la fosa infraorbitaria",
+          "En el borde superior del maxilar",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es la ubicación de E8 (Tóuwéi)?",
+        options: [
+          "En la sien, en la esquina anterior de la línea del cabello, 1,5 cun por encima de la ceja",
+          "En el vértice de la cabeza",
+          "En la región occipital",
+          "En el borde superior del arco cigomático",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E9 (Rényíng) se encuentra:",
+        options: [
+          "A nivel del cartílago tiroides, en el borde anterior del ECM",
+          "A nivel del hioides, en el borde anterior del ECM",
+          "En la fosa supraclavicular",
+          "En el borde posterior del ECM",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E10 (Shuǐtū) se sitúa:",
+        options: [
+          "A nivel del cartílago tiroides, en el borde anterior del ECM",
+          "A nivel del hioides, en el borde anterior del ECM",
+          "En la fosa supraclavicular",
+          "En la depresión entre los extremos esternales de la clavícula",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E11 (Qìshè) se localiza:",
+        options: [
+          "En el borde superior de la clavícula, en la fosa supraclavicular",
+          "En el borde inferior de la clavícula, en el 1er espacio intercostal",
+          "En la fosa supraesternal",
+          "En el borde anterior del trapecio",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E12 (Quēpén) se encuentra:",
+        options: [
+          "En la fosa supraclavicular, entre los extremos esternales de la clavícula y el esternón",
+          "En la fosa infraclavicular",
+          "En el 2do espacio intercostal",
+          "En la región axilar",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E13 (Qìhù) está:",
+        options: [
+          "Debajo de la clavícula, en el 1er espacio intercostal, a 4 cun del esternón",
+          "En el 2do espacio intercostal, a 4 cun del esternón",
+          "En el 3er espacio intercostal, a 4 cun del esternón",
+          "En el 4to espacio intercostal, a 4 cun del esternón",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E14 (Kùfáng) se sitúa:",
+        options: [
+          "En el 1er espacio intercostal, a 4 cun del esternón",
+          "En el 2do espacio intercostal, a 4 cun del esternón",
+          "En el 3er espacio intercostal, a 4 cun del esternón",
+          "En el 4to espacio intercostal, a 4 cun del esternón",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E15 (Wūyì) se localiza en el:",
+        options: [
+          "3er espacio intercostal, a 4 cun del esternón",
+          "4to espacio intercostal, a 4 cun del esternón",
+          "5to espacio intercostal, a 4 cun del esternón",
+          "2do espacio intercostal, a 4 cun del esternón",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E16 (Yīngchuāng) está en el:",
+        options: [
+          "3er espacio intercostal, a 4 cun del esternón",
+          "4to espacio intercostal, a 4 cun del esternón",
+          "5to espacio intercostal, a 4 cun del esternón",
+          "6to espacio intercostal, a 4 cun del esternón",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E17 (Rǔzhōng) se localiza:",
+        options: [
+          "En el pezón, en el 4to espacio intercostal",
+          "Debajo del pezón, en el 5to espacio intercostal",
+          "En el 3er espacio intercostal",
+          "En el 5to espacio intercostal, a 6 cun del esternón",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E18 (Rǔgēn) se encuentra:",
+        options: [
+          "En el pezón",
+          "Debajo del pezón, en el 5to espacio intercostal",
+          "En el 6to espacio intercostal",
+          "En el 4to espacio intercostal, a 6 cun del esternón",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E19 (Bùróng) se localiza en el abdomen, a:",
+        options: [
+          "6 cun sobre el ombligo y 2 cun lateral",
+          "5 cun sobre el ombligo y 2 cun lateral",
+          "4 cun sobre el ombligo y 2 cun lateral",
+          "3 cun sobre el ombligo y 2 cun lateral",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E20 (Chéngmǎn) se sitúa a:",
+        options: [
+          "6 cun sobre el ombligo y 2 cun lateral",
+          "5 cun sobre el ombligo y 2 cun lateral",
+          "4 cun sobre el ombligo y 2 cun lateral",
+          "3 cun sobre el ombligo y 2 cun lateral",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E21 (Liángmén) se localiza a:",
+        options: [
+          "5 cun sobre el ombligo y 2 cun lateral",
+          "4 cun sobre el ombligo y 2 cun lateral",
+          "3 cun sobre el ombligo y 2 cun lateral",
+          "2 cun sobre el ombligo y 2 cun lateral",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E22 (Guānmén) está a:",
+        options: [
+          "4 cun sobre el ombligo y 2 cun lateral",
+          "3 cun sobre el ombligo y 2 cun lateral",
+          "2 cun sobre el ombligo y 2 cun lateral",
+          "1 cun sobre el ombligo y 2 cun lateral",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E23 (Tàiyǐ) se sitúa a:",
+        options: [
+          "3 cun sobre el ombligo y 2 cun lateral",
+          "2 cun sobre el ombligo y 2 cun lateral",
+          "1 cun sobre el ombligo y 2 cun lateral",
+          "al nivel del ombligo y 2 cun lateral",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E24 (Huáròumén) se localiza a:",
+        options: [
+          "2 cun sobre el ombligo y 2 cun lateral",
+          "1 cun sobre el ombligo y 2 cun lateral",
+          "al nivel del ombligo y 2 cun lateral",
+          "1 cun bajo el ombligo y 2 cun lateral",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E25 (Tiānshū) está:",
+        options: [
+          "A 2 cun lateral al ombligo",
+          "A 1 cun lateral al ombligo",
+          "A 3 cun lateral al ombligo",
+          "En la línea media del ombligo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E26 (Wàilíng) se sitúa:",
+        options: [
+          "A 1 cun bajo el ombligo y 2 cun lateral",
+          "A 2 cun bajo el ombligo y 2 cun lateral",
+          "A 3 cun bajo el ombligo y 2 cun lateral",
+          "A 4 cun bajo el ombligo y 2 cun lateral",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E27 (Dàjù) está a:",
+        options: [
+          "1 cun bajo el ombligo y 2 cun lateral",
+          "2 cun bajo el ombligo y 2 cun lateral",
+          "3 cun bajo el ombligo y 2 cun lateral",
+          "4 cun bajo el ombligo y 2 cun lateral",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E28 (Shuǐdào) se localiza a:",
+        options: [
+          "2 cun bajo el ombligo y 2 cun lateral",
+          "3 cun bajo el ombligo y 2 cun lateral",
+          "4 cun bajo el ombligo y 2 cun lateral",
+          "5 cun bajo el ombligo y 2 cun lateral",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E29 (Guīlái) está a:",
+        options: [
+          "3 cun bajo el ombligo y 2 cun lateral",
+          "4 cun bajo el ombligo y 2 cun lateral",
+          "5 cun bajo el ombligo y 2 cun lateral",
+          "en el pliegue inguinal",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E30 (Qìchōng) se localiza:",
+        options: [
+          "A 4 cun bajo el ombligo y 2 cun lateral",
+          "A 5 cun bajo el ombligo y 2 cun lateral, en el pliegue inguinal",
+          "A 1 cun bajo el pliegue inguinal",
+          "En el muslo anterior",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E31 (Bìguān) se sitúa:",
+        options: [
+          "En la ingle, 1 cun por debajo del pliegue inguinal",
+          "En el muslo anterior, 6 cun sobre la rótula",
+          "En el muslo anterior, 3 cun sobre la rótula",
+          "En el muslo anterior, 2 cun sobre la rótula",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E32 (Fútù) se localiza en el muslo anterior, a:",
+        options: [
+          "3 cun sobre la rótula",
+          "6 cun sobre la rótula",
+          "2 cun sobre la rótula",
+          "1 cun sobre la rótula",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E33 (Yīnshì) está a:",
+        options: [
+          "6 cun sobre la rótula",
+          "3 cun sobre la rótula",
+          "2 cun sobre la rótula",
+          "1 cun sobre la rótula",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E34 (Liángqiū) se sitúa a:",
+        options: [
+          "3 cun sobre la rótula",
+          "2 cun sobre la rótula",
+          "1 cun sobre la rótula",
+          "en la depresión lateral inferior de la rótula",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E35 (Dúbí) se localiza:",
+        options: [
+          "En la depresión lateral inferior de la rótula",
+          "En la depresión medial inferior de la rótula",
+          "En la depresión superolateral de la rótula",
+          "En el centro de la rótula",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E36 (Zúsānlǐ) está:",
+        options: [
+          "A 3 cun bajo la rótula, 1 cun lateral a la cresta tibial",
+          "A 6 cun bajo la rótula, 1 cun lateral",
+          "A 8 cun bajo la rótula, 1 cun lateral",
+          "A 9 cun bajo la rótula, 1 cun lateral",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E37 (Shàngjùxū) se sitúa:",
+        options: [
+          "A 3 cun bajo la rótula, 1 cun lateral",
+          "A 6 cun bajo la rótula, 1 cun lateral",
+          "A 8 cun bajo la rótula, 1 cun lateral",
+          "A 9 cun bajo la rótula, 1 cun lateral",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E38 (Tiáokǒu) está a:",
+        options: [
+          "A 6 cun bajo la rótula, 1 cun lateral",
+          "A 8 cun bajo la rótula, 1 cun lateral",
+          "A 9 cun bajo la rótula, 1 cun lateral",
+          "A 3 cun bajo la rótula, 1 cun lateral",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E39 (Xiàjùxū) se sitúa:",
+        options: [
+          "A 6 cun bajo la rótula, 1 cun lateral",
+          "A 8 cun bajo la rótula, 1 cun lateral",
+          "A 9 cun bajo la rótula, 1 cun lateral",
+          "A 3 cun bajo la rótula, 1 cun lateral",
+        ],
+        correct: 2,
+      },
+      {
+        text: "E40 (Fēnglóng) se localiza:",
+        options: [
+          "A 8 cun bajo la rótula, 1 cun lateral",
+          "A 8 cun bajo la rótula, 2 cun lateral",
+          "A 9 cun bajo la rótula, 1 cun lateral",
+          "A 9 cun bajo la rótula, 2 cun lateral",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E41 (Jiěxī) se sitúa en el dorso del pie:",
+        options: [
+          "En la depresión entre los tendones del extensor largo del dedo gordo y extensor largo de los dedos, a nivel del tobillo",
+          "En la depresión entre el 2º y 3º metatarsiano",
+          "En la base del 2º dedo",
+          "En la punta del 2º dedo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E42 (Chōngyáng) se localiza:",
+        options: [
+          "En la depresión entre los tendones, sobre la arteria pedia",
+          "En la articulación entre el 2º y 3º metatarsiano",
+          "En la base del 2º y 3º dedo",
+          "En la punta del 2º dedo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E43 (Xiàngǔ) se encuentra:",
+        options: [
+          "En la depresión entre el 2º y 3º metatarsiano",
+          "En la base del 2º y 3º dedo",
+          "En la punta del 2º dedo",
+          "En la depresión del tobillo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E44 (Nèitíng) se sitúa:",
+        options: [
+          "En la depresión entre el 2º y 3º metatarsiano",
+          "En la base del 2º y 3º dedo, proximal a los dedos",
+          "En la punta del 2º dedo",
+          "En el dorso del pie, a nivel del tobillo",
+        ],
+        correct: 1,
+      },
+      {
+        text: "E45 (Lìduì) se localiza:",
+        options: [
+          "En la base del 2º dedo",
+          "En la punta del 2º dedo, lado lateral de la uña",
+          "En la punta del 1er dedo",
+          "En la punta del 3er dedo",
+        ],
+        correct: 1,
+      },
+
+      // ==========================================
+      // FASE 3: CARACTERÍSTICAS CLÍNICAS (45 preguntas)
+      // ==========================================
+      {
+        text: "¿Cuál es la acción principal de E1 (Chéngqì)?",
+        options: [
+          "Tratar dolor ocular, lagrimeo y visión borrosa",
+          "Aliviar la congestión nasal",
+          "Dispersar el viento facial",
+          "Regular el qi del estómago",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E2 (Sìbái) se usa principalmente para:",
+        options: [
+          "Dolor facial y dental superior",
+          "Dolor ocular y blefaritis",
+          "Sinusitis y rinitis",
+          "Parálisis facial",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E3 (Jùliáo) es útil para:",
+        options: [
+          "Dolor facial, rinitis y epistaxis",
+          "Dolor de muelas inferiores",
+          "Trastornos digestivos",
+          "Cefalea occipital",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E4 (Dìcāng) se emplea en:",
+        options: [
+          "Parálisis facial, espasmo del orbicular de los labios",
+          "Dolor dental",
+          "Trismus",
+          "Sordera",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E5 (Dàyíng) está indicado para:",
+        options: [
+          "Dolor de mandíbula, trismus y parotiditis",
+          "Dolor de garganta",
+          "Tinnitus",
+          "Cefalea",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E6 (Jiāchē) es un punto clave para:",
+        options: [
+          "Dolor de muelas, trismus y parálisis facial",
+          "Dolor de oído",
+          "Sinusitis",
+          "Dolor cervical",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E7 (Xiàguān) se usa en:",
+        options: [
+          "Dolor de oído, sordera y artritis temporomandibular",
+          "Dolor de muelas superiores",
+          "Parálisis facial",
+          "Cefalea frontal",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E8 (Tóuwéi) es un punto local para:",
+        options: ["Cefalea, migraña y dolor ocular", "Dolor de oído", "Vértigo", "Sinusitis"],
+        correct: 0,
+      },
+      {
+        text: "E9 (Rényíng) se usa principalmente para:",
+        options: ["Dolor de garganta, afonía y asma", "Náuseas", "Hipertensión", "Sordera"],
+        correct: 0,
+      },
+      {
+        text: "E10 (Shuǐtū) está indicado para:",
+        options: ["Afonía, tos y dolor de garganta", "Nódulos tiroideos", "Vértigo", "Epistaxis"],
+        correct: 0,
+      },
+      {
+        text: "E11 (Qìshè) se emplea en:",
+        options: [
+          "Dolor y rigidez de cuello, asma y tos",
+          "Dolor de muelas",
+          "Cefalea",
+          "Trastornos digestivos",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E12 (Quēpén) es útil para:",
+        options: ["Dolor de cuello, rigidez y tos", "Dolor de hombro", "Palpitaciones", "Náuseas"],
+        correct: 0,
+      },
+      {
+        text: "E13 (Qìhù) se usa para:",
+        options: [
+          "Dolor torácico, asma y tos",
+          "Dolor de espalda",
+          "Dolor abdominal",
+          "Palpitaciones",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E14 (Kùfáng) está indicado para:",
+        options: ["Dolor de pecho, tos y asma", "Mastitis", "Dolor epigástrico", "Palpitaciones"],
+        correct: 0,
+      },
+      {
+        text: "E15 (Wūyì) se emplea en:",
+        options: ["Dolor torácico, mastitis y tos", "Dolor abdominal", "Estreñimiento", "Cefalea"],
+        correct: 0,
+      },
+      {
+        text: "E16 (Yīngchuāng) es útil para:",
+        options: [
+          "Dolor torácico, mastitis y tos",
+          "Dolor de hombro",
+          "Trastornos digestivos",
+          "Insomnio",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E17 (Rǔzhōng) generalmente no se punza, pero se usa como:",
+        options: [
+          "Referencia para otros puntos y en moxibustión (con precaución)",
+          "Punto de tonificación del estómago",
+          "Punto de dispersión del calor",
+          "Punto maestro del pecho",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E18 (Rǔgēn) se usa para:",
+        options: ["Mastitis, falta de leche y dolor torácico", "Tos", "Asma", "Palpitaciones"],
+        correct: 0,
+      },
+      {
+        text: "E19 (Bùróng) está indicado para:",
+        options: [
+          "Dolor epigástrico, distensión y vómitos",
+          "Estreñimiento",
+          "Diarrea",
+          "Dolor de espalda",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E20 (Chéngmǎn) se emplea en:",
+        options: [
+          "Dolor epigástrico, distensión y gastralgia",
+          "Diarrea",
+          "Estreñimiento",
+          "Cefalea",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E21 (Liángmén) es un punto clave para:",
+        options: [
+          "Gastralgia, vómitos y distensión abdominal",
+          "Estreñimiento",
+          "Diarrea",
+          "Regulación del qi",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E22 (Guānmén) se usa para:",
+        options: ["Dolor epigástrico, distensión y anorexia", "Diarrea", "Edema", "Palpitaciones"],
+        correct: 0,
+      },
+      {
+        text: "E23 (Tàiyǐ) está indicado para:",
+        options: [
+          "Dolor epigástrico, distensión y vómitos",
+          "Estreñimiento",
+          "Insomnio",
+          "Cefalea",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E24 (Huáròumén) se emplea en:",
+        options: ["Dolor epigástrico, vómitos y anorexia", "Diarrea", "Edema", "Asma"],
+        correct: 0,
+      },
+      {
+        text: "E25 (Tiānshū) es el punto Mù del Intestino Grueso, usado para:",
+        options: [
+          "Trastornos intestinales: diarrea, estreñimiento, dolor abdominal",
+          "Trastornos gástricos",
+          "Regulación de la menstruación",
+          "Dolor lumbar",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E26 (Wàilíng) se usa para:",
+        options: [
+          "Dolor abdominal, hernia y trastornos del intestino",
+          "Diarrea",
+          "Estreñimiento",
+          "Regulación de la vejiga",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E27 (Dàjù) está indicado para:",
+        options: [
+          "Dolor abdominal, hernia y problemas de vejiga",
+          "Trastornos gástricos",
+          "Diarrea",
+          "Estreñimiento",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E28 (Shuǐdào) se emplea en:",
+        options: [
+          "Trastornos del agua: edema, retención urinaria, hernia",
+          "Diarrea",
+          "Estreñimiento",
+          "Dolor lumbar",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E29 (Guīlái) es útil para:",
+        options: [
+          "Trastornos ginecológicos, hernia y dolor abdominal",
+          "Trastornos urinarios",
+          "Diarrea",
+          "Estreñimiento",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E30 (Qìchōng) se usa para:",
+        options: [
+          "Trastornos ginecológicos, hernia y dolor de ingle",
+          "Trastornos digestivos",
+          "Dolor de rodilla",
+          "Cefalea",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E31 (Bìguān) se emplea en:",
+        options: [
+          "Dolor y rigidez de la articulación de la cadera y muslo",
+          "Dolor de rodilla",
+          "Parálisis de miembros inferiores",
+          "Dolor lumbar",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E32 (Fútù) está indicado para:",
+        options: [
+          "Dolor de muslo, parálisis y atrofia muscular",
+          "Dolor de rodilla",
+          "Dolor lumbar",
+          "Trastornos digestivos",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E33 (Yīnshì) se usa para:",
+        options: [
+          "Dolor de muslo, rodilla y parálisis",
+          "Dolor abdominal",
+          "Trastornos ginecológicos",
+          "Cefalea",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E34 (Liángqiū) es el punto Xī (Hendidura) del Estómago, útil para:",
+        options: [
+          "Dolor agudo de rodilla, gastralgia y mastitis",
+          "Dolor de cadera",
+          "Trastornos intestinales",
+          "Edema",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E35 (Dúbí) se emplea para:",
+        options: [
+          "Dolor y rigidez de rodilla, artritis",
+          "Dolor de cadera",
+          "Parálisis de pierna",
+          "Trastornos digestivos",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E36 (Zúsānlǐ) es el punto de tonificación más importante; su acción principal es:",
+        options: [
+          "Tonificar el Qi y la Sangre, armonizar el estómago y el bazo",
+          "Dispersar el viento",
+          "Eliminar la humedad",
+          "Calmar la mente",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E37 (Shàngjùxū) es el punto Mar Inferior del Intestino Grueso, usado para:",
+        options: [
+          "Trastornos intestinales: diarrea, estreñimiento, apendicitis",
+          "Trastornos gástricos",
+          "Dolor de rodilla",
+          "Trastornos urinarios",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E38 (Tiáokǒu) se usa para:",
+        options: [
+          "Dolor de hombro y cuello, además de trastornos gastrointestinales",
+          "Dolor de rodilla",
+          "Parálisis de pierna",
+          "Cefalea",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E39 (Xiàjùxū) es el punto Mar Inferior del Intestino Delgado, usado para:",
+        options: [
+          "Trastornos del intestino delgado, dolor abdominal y diarrea",
+          "Trastornos del estómago",
+          "Dolor de rodilla",
+          "Edema",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E40 (Fēnglóng) es el punto Luò del Estómago y se usa principalmente para:",
+        options: [
+          "Transformar la flema, tratar trastornos mentales y dolor de cabeza",
+          "Tonificar el Qi",
+          "Eliminar el viento",
+          "Regular la menstruación",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E41 (Jiěxī) se emplea para:",
+        options: [
+          "Dolor de tobillo, pie y cefalea",
+          "Trastornos digestivos",
+          "Edema",
+          "Parálisis de pierna",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E42 (Chōngyáng) es el punto Fuente del Estómago, usado para:",
+        options: [
+          "Dolor de pie, trastornos gastrointestinales y cefalea",
+          "Dolor de rodilla",
+          "Trastornos urinarios",
+          "Edema",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E43 (Xiàngǔ) se usa para:",
+        options: [
+          "Dolor de pie, hinchazón y trastornos digestivos",
+          "Dolor de tobillo",
+          "Cefalea",
+          "Trastornos ginecológicos",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E44 (Nèitíng) es un punto de dispersión del calor, usado para:",
+        options: [
+          "Dolor de muelas, gingivitis y trastornos digestivos",
+          "Dolor de pie",
+          "Cefalea",
+          "Edema",
+        ],
+        correct: 0,
+      },
+      {
+        text: "E45 (Lìduì) es el punto Jing-Pozo del Estómago, su acción principal es:",
+        options: [
+          "Restaurar la conciencia y tratar trastornos mentales agudos",
+          "Tonificar el estómago",
+          "Eliminar el viento",
+          "Tratar el dolor de muelas",
+        ],
+        correct: 0,
       },
     ],
   },
-  // Aquí puedes agregar más quizzes en el futuro (anatomía, auriculoterapia, etc.)
+
+  // Meridiano de Bazo/Pancreas
+  {
+    id: "meridiano-bp-completo",
+    category: "meridianos",
+    title: "Bazo / Páncreas – Nombres, Ubicación y Clínica (Zú Tài Yīn)",
+    description:
+      "Nomenclatura (Pīnyīn y traducción), localización anatómica y acciones clínicas principales de los 21 puntos del meridiano de Bazo según la tradición.",
+    questions: [
+      // ==========================================
+      // FASE 1: NOMENCLATURA (21 preguntas)
+      // ==========================================
+      {
+        text: "¿Cuál es el nombre en Pīnyīn y la traducción del punto BP1?",
+        options: [
+          "Dàdū (Gran Capital)",
+          "Tàibái (Gran Blanco)",
+          "Yǐnbái (Blanco Oculto)",
+          "Gōngsūn (Abuelo Nieto)",
+        ],
+        correct: 2,
+      },
+      {
+        text: "¿Cómo se denomina el punto BP2, situado proximal a la cabeza del primer metatarsiano?",
+        options: [
+          "Yǐnbái",
+          "Dàdū (Gran Capital)",
+          "Tàibái (Gran Blanco)",
+          "Shāngqiū (Colina del Comercio)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto BP3 se llama Tàibái. ¿Cuál es su traducción?",
+        options: ["Blanco Oculto", "Gran Capital", "Gran Blanco", "Abuelo Nieto"],
+        correct: 2,
+      },
+      {
+        text: "¿Cuál es el nombre y la traducción del punto BP4?",
+        options: [
+          "Gōngsūn (Abuelo Nieto)",
+          "Shāngqiū (Colina del Comercio)",
+          "Sānyīnjiāo (Intersección de los Tres Yin)",
+          "Lòugǔ (Valle con Fugas)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "El punto BP5, en la depresión anteroinferior del maléolo medial, se llama:",
+        options: [
+          "Gōngsūn",
+          "Shāngqiū (Colina del Comercio)",
+          "Sānyīnjiāo (Intersección de los Tres Yin)",
+          "Dìjī (Mecanismo de la Tierra)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se denomina el punto BP6, punto de confluencia de los tres meridianos Yin de la pierna?",
+        options: [
+          "Shāngqiū",
+          "Sānyīnjiāo (Intersección de los Tres Yin)",
+          "Lòugǔ (Valle con Fugas)",
+          "Yīnlíngquán (Manantial del Montículo Yin)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto BP7 se llama Lòugǔ. ¿Cuál es la traducción de este nombre?",
+        options: [
+          "Valle con Fugas",
+          "Mecanismo de la Tierra",
+          "Manantial del Montículo Yin",
+          "Mar de Sangre",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cómo se llama el punto BP8, situado 3 cun por encima del maléolo medial?",
+        options: [
+          "Lòugǔ",
+          "Dìjī (Mecanismo de la Tierra)",
+          "Yīnlíngquán",
+          "Xuèhǎi (Mar de Sangre)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto BP9, que se encuentra en la depresión inferomedial de la rótula, recibe el nombre de:",
+        options: [
+          "Dìjī",
+          "Yīnlíngquán (Manantial del Montículo Yin)",
+          "Xuèhǎi (Mar de Sangre)",
+          "Jīmén (Puerta del Cedazo)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es el nombre en Pīnyīn del punto BP10, traducido como 'Mar de Sangre'?",
+        options: ["Yīnlíngquán", "Xuèhǎi", "Jīmén", "Chōngmén (Puerta de la Irrupción)"],
+        correct: 1,
+      },
+      {
+        text: "El punto BP11 se llama Jīmén. ¿Cuál es su traducción?",
+        options: [
+          "Mar de Sangre",
+          "Puerta del Cedazo",
+          "Puerta de la Irrupción",
+          "Residencia de la Mansión",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se denomina el punto BP12, situado en el pliegue inguinal?",
+        options: [
+          "Jīmén",
+          "Chōngmén (Puerta de la Irrupción)",
+          "Fǔshè (Residencia de la Mansión)",
+          "Fùjié (Nudo del Abdomen)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto BP13 es Fǔshè. ¿Qué significa su traducción?",
+        options: [
+          "Puerta de la Irrupción",
+          "Residencia de la Mansión",
+          "Nudo del Abdomen",
+          "Gran Horizontal",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es el nombre del punto BP14, ubicado a 1,3 cun por debajo del ombligo y 4 cun lateral?",
+        options: [
+          "Fǔshè",
+          "Fùjié (Nudo del Abdomen)",
+          "Dàhéng (Gran Horizontal)",
+          "Fù'āi (Tristeza del Abdomen)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto BP15, en la línea mamaria a nivel del ombligo, se llama:",
+        options: [
+          "Fùjié",
+          "Dàhéng (Gran Horizontal)",
+          "Fù'āi (Tristeza del Abdomen)",
+          "Shídòu (Orificio del Alimento)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se denomina el punto BP16, situado 3 cun por encima del ombligo y 4 cun lateral?",
+        options: [
+          "Dàhéng",
+          "Fù'āi (Tristeza del Abdomen)",
+          "Shídòu (Orificio del Alimento)",
+          "Tiānxī (Arroyo Celestial)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto BP17, en el 5º espacio intercostal, recibe el nombre de:",
+        options: [
+          "Fù'āi",
+          "Shídòu (Orificio del Alimento)",
+          "Xiōngxiāng (Fragancia del Pecho)",
+          "Dàbāo (Gran Envoltura)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se conoce el punto BP18, en el 4º espacio intercostal?",
+        options: [
+          "Shídòu",
+          "Tiānxī (Arroyo Celestial)",
+          "Xiōngxiāng (Fragancia del Pecho)",
+          "Zhōuróng (Circunferencia de la Gloria)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto BP19, situado en el 3º espacio intercostal, se llama:",
+        options: [
+          "Tiānxī",
+          "Xiōngxiāng (Fragancia del Pecho)",
+          "Zhōuróng (Circunferencia de la Gloria)",
+          "Dàbāo (Gran Envoltura)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es el nombre y la traducción del punto BP20, en el 2º espacio intercostal?",
+        options: [
+          "Xiōngxiāng",
+          "Zhōuróng (Circunferencia de la Gloria)",
+          "Dàbāo (Gran Envoltura)",
+          "Tiānxī",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto BP21, el último del meridiano, se conoce como:",
+        options: ["Zhōuróng", "Dàbāo (Gran Envoltura)", "Xiōngxiāng", "Shídòu"],
+        correct: 1,
+      },
+
+      // ==========================================
+      // FASE 2: UBICACIÓN ANATÓMICA (21 preguntas)
+      // ==========================================
+      {
+        text: "¿Dónde se localiza BP1 (Yǐnbái)?",
+        options: [
+          "En el borde medial de la uña del primer dedo del pie",
+          "En el borde lateral de la uña del primer dedo del pie",
+          "En la punta del segundo dedo del pie",
+          "En el borde medial de la uña del segundo dedo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP2 (Dàdū) se sitúa en el borde medial del pie. ¿En qué parte del primer metatarsiano?",
+        options: [
+          "En la base de la cabeza del primer metatarsiano, en la articulación",
+          "En la base del primer metatarsiano, proximal",
+          "En el centro del metatarsiano",
+          "En la articulación metatarsofalángica del segundo dedo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es la referencia ósea exacta para BP3 (Tàibái)?",
+        options: [
+          "En la base del primer metatarsiano, en la depresión posterior a la cabeza",
+          "En la depresión anteroinferior del maléolo medial",
+          "En la punta del maléolo lateral",
+          "En la articulación del tobillo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP4 (Gōngsūn) se localiza en el borde medial del pie. ¿Entre qué estructuras?",
+        options: [
+          "En el borde inferior de la base del primer metatarsiano",
+          "En la depresión anterior a la articulación del tobillo",
+          "En la unión del hueso navicular con la base del primer metatarsiano",
+          "En el tendón de Aquiles",
+        ],
+        correct: 2,
+      },
+      {
+        text: "BP5 (Shāngqiū) se sitúa en la depresión:",
+        options: [
+          "Anteroinferior al maléolo medial",
+          "Posteroinferior al maléolo medial",
+          "Anterosuperior al maléolo lateral",
+          "Posterior al maléolo lateral",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP6 (Sānyīnjiāo) se encuentra a 3 cun por encima del maléolo medial. ¿En qué borde óseo?",
+        options: [
+          "En el borde posterior de la tibia",
+          "En el borde anterior de la tibia",
+          "En el borde medial de la tibia",
+          "En el borde lateral de la tibia, entre los músculos",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP7 (Lòugǔ) se localiza a 6 cun por encima del maléolo medial. ¿En qué posición respecto a la tibia?",
+        options: [
+          "En el borde anterior de la tibia",
+          "En el borde posterior de la tibia",
+          "En la línea media de la cara medial de la tibia",
+          "En el borde lateral de la tibia",
+        ],
+        correct: 1,
+      },
+      {
+        text: "BP8 (Dìjī) se encuentra a 3 cun por debajo de Yīnlíngquán. ¿Cuánto es desde el maléolo medial?",
+        options: [
+          "6 cun por encima del maléolo medial",
+          "7 cun por encima del maléolo medial",
+          "8 cun por encima del maléolo medial",
+          "9 cun por encima del maléolo medial",
+        ],
+        correct: 2,
+      },
+      {
+        text: "BP9 (Yīnlíngquán) se localiza en:",
+        options: [
+          "En la depresión lateral del tendón rotuliano",
+          "En la depresión medial inferior de la rótula, en el borde de la meseta tibial",
+          "En la depresión posterior de la rodilla",
+          "En la cabeza del peroné",
+        ],
+        correct: 1,
+      },
+      {
+        text: "BP10 (Xuèhǎi) se sitúa en la cara medial del muslo, a:",
+        options: [
+          "3 cun por encima del borde superior de la rótula",
+          "2 cun por encima del borde superior de la rótula",
+          "1 cun por encima del borde superior de la rótula",
+          "al nivel de la rótula",
+        ],
+        correct: 1,
+      },
+      {
+        text: "BP11 (Jīmén) se encuentra en el muslo. ¿Entre qué pliegues?",
+        options: [
+          "En el borde inferior del pliegue inguinal, 6 cun por encima del borde superior de la rótula",
+          "En el pliegue poplíteo",
+          "En la ingle, 3 cun por debajo del pliegue",
+          "En la cara anterior del muslo, a 5 cun de la ingle",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP12 (Chōngmén) se localiza en el pliegue inguinal. ¿En qué punto de referencia?",
+        options: [
+          "A 3,5 cun lateral al punto Ren 2 (Qūgǔ)",
+          "A 2 cun lateral al punto Ren 2",
+          "A 4 cun lateral al punto Ren 2",
+          "En la línea media del pliegue inguinal",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP13 (Fǔshè) se encuentra en el abdomen inferior, a:",
+        options: [
+          "4 cun bajo el ombligo y 4 cun lateral",
+          "4 cun bajo el ombligo y 3 cun lateral",
+          "3 cun bajo el ombligo y 4 cun lateral",
+          "5 cun bajo el ombligo y 4 cun lateral",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP14 (Fùjié) se sitúa a 1,3 cun por debajo del ombligo. ¿A cuántos cun lateralmente?",
+        options: ["2 cun lateral", "3 cun lateral", "4 cun lateral", "5 cun lateral"],
+        correct: 2,
+      },
+      {
+        text: "BP15 (Dàhéng) está a nivel del ombligo. ¿A cuántos cun lateral?",
+        options: ["2 cun lateral", "3 cun lateral", "4 cun lateral", "5 cun lateral"],
+        correct: 2,
+      },
+      {
+        text: "BP16 (Fù'āi) se localiza en el abdomen superior, a:",
+        options: [
+          "3 cun por encima del ombligo y 4 cun lateral",
+          "4 cun por encima del ombligo y 3 cun lateral",
+          "2 cun por encima del ombligo y 4 cun lateral",
+          "5 cun por encima del ombligo y 4 cun lateral",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP17 (Shídòu) se encuentra en el tórax. ¿En qué espacio intercostal y a qué distancia del esternón?",
+        options: [
+          "5º espacio intercostal, a 4 cun del esternón",
+          "5º espacio intercostal, a 6 cun del esternón",
+          "4º espacio intercostal, a 4 cun del esternón",
+          "6º espacio intercostal, a 6 cun del esternón",
+        ],
+        correct: 1,
+      },
+      {
+        text: "BP18 (Tiānxī) se sitúa en el 4º espacio intercostal. ¿A cuántos cun del esternón?",
+        options: [
+          "4 cun del esternón",
+          "6 cun del esternón",
+          "3 cun del esternón",
+          "5 cun del esternón",
+        ],
+        correct: 1,
+      },
+      {
+        text: "BP19 (Xiōngxiāng) se localiza en el 3er espacio intercostal, a 6 cun del esternón. ¿A qué nivel de la línea mamilar?",
+        options: [
+          "En la línea mamilar",
+          "1 cun por fuera de la línea mamilar",
+          "2 cun por dentro de la línea mamilar",
+          "En la línea axilar anterior",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP20 (Zhōuróng) se sitúa en el 2º espacio intercostal. ¿A qué distancia del esternón?",
+        options: [
+          "A 4 cun del esternón",
+          "A 5 cun del esternón",
+          "A 6 cun del esternón",
+          "A 3 cun del esternón",
+        ],
+        correct: 2,
+      },
+      {
+        text: "BP21 (Dàbāo) se encuentra en el costado del tórax, en la línea axilar media. ¿En qué espacio intercostal?",
+        options: [
+          "En el 4º espacio intercostal",
+          "En el 5º espacio intercostal",
+          "En el 6º espacio intercostal",
+          "En el 7º espacio intercostal",
+        ],
+        correct: 2,
+      },
+
+      // ==========================================
+      // FASE 3: CARACTERÍSTICAS CLÍNICAS (21 preguntas)
+      // ==========================================
+      {
+        text: "BP1 (Yǐnbái) es un punto Jing-Pozo. ¿Cuál es su acción principal?",
+        options: [
+          "Detener la hemorragia y restaurar la conciencia",
+          "Tonificar el Qi del Bazo",
+          "Eliminar la humedad",
+          "Calmar la mente",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP2 (Dàdū) es el punto de Dispersión (Yíng) del Bazo. ¿Qué tipo de calor trata?",
+        options: [
+          "Calor por deficiencia",
+          "Calor húmedo en el Bazo y Estómago",
+          "Calor en la sangre",
+          "Calor de Riñón",
+        ],
+        correct: 1,
+      },
+      {
+        text: "BP3 (Tàibái) es el punto Fuente del Bazo. ¿Para qué se usa principalmente?",
+        options: [
+          "Tonificar el Bazo y transformar la humedad",
+          "Detener hemorragias",
+          "Regular el intestino",
+          "Dispersar el viento",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP4 (Gōngsūn) es el punto Luo del Bazo, y se conecta con el Estómago. ¿Cuál es su acción principal?",
+        options: [
+          "Trastornos del estómago y dolor epigástrico",
+          "Trastornos ginecológicos",
+          "Dolor de cabeza",
+          "Trastornos renales",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP5 (Shāngqiū) es un punto Río (Jīng). ¿Qué tipo de afecciones trata?",
+        options: [
+          "Trastornos de huesos y articulaciones del pie y tobillo",
+          "Trastornos digestivos",
+          "Trastornos respiratorios",
+          "Trastornos de la vejiga",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP6 (Sānyīnjiāo) es el punto de intersección de los 3 Yin. ¿Cuál es su indicación más amplia?",
+        options: [
+          "Trastornos ginecológicos, urinarios y digestivos",
+          "Solo trastornos digestivos",
+          "Solo trastornos de la piel",
+          "Solo dolor de rodilla",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP7 (Lòugǔ) se usa principalmente para:",
+        options: [
+          "Dolor y distensión abdominal",
+          "Diarrea y edema",
+          "Trastornos ginecológicos",
+          "Dolor de pierna",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP8 (Dìjī) es el punto Xī (Hendidura) del Bazo. ¿Para qué afección aguda se usa?",
+        options: [
+          "Dismenorrea y dolor abdominal agudo",
+          "Diarrea aguda",
+          "Vómitos agudos",
+          "Dolor de rodilla agudo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP9 (Yīnlíngquán) es el punto He (Mar) del Bazo. ¿Cuál es su acción principal?",
+        options: [
+          "Transformar la humedad y eliminar el edema",
+          "Tonificar el Yang del Bazo",
+          "Calmar el espíritu",
+          "Regular la menstruación",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP10 (Xuèhǎi) es el punto principal para:",
+        options: [
+          "Regular la sangre y tratar trastornos ginecológicos y de la piel",
+          "Tonificar la Sangre",
+          "Detener hemorragias",
+          "Movilizar la sangre estancada",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP11 (Jīmén) se usa para:",
+        options: [
+          "Trastornos urinarios e inguinales",
+          "Dolor de cadera",
+          "Trastornos ginecológicos",
+          "Dolor lumbar",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP12 (Chōngmén) se emplea en:",
+        options: [
+          "Dolor y distensión inguinal, hernia y problemas ginecológicos",
+          "Trastornos digestivos",
+          "Dolor de rodilla",
+          "Cefalea",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP13 (Fǔshè) está indicado para:",
+        options: [
+          "Dolor abdominal inferior, hernia y estreñimiento",
+          "Diarrea",
+          "Trastornos ginecológicos",
+          "Dolor lumbar",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP14 (Fùjié) se usa para:",
+        options: [
+          "Dolor abdominal, estreñimiento y diarrea",
+          "Trastornos del apetito",
+          "Edema",
+          "Dolor de cadera",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP15 (Dàhéng) es un punto clave para:",
+        options: [
+          "Trastornos intestinales y dolor abdominal",
+          "Trastornos gástricos",
+          "Trastornos de la vesícula biliar",
+          "Dolor lumbar",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP16 (Fù'āi) se usa para:",
+        options: [
+          "Dolor epigástrico y abdominal",
+          "Estreñimiento",
+          "Diarrea",
+          "Trastornos respiratorios",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP17 (Shídòu) se emplea en:",
+        options: [
+          "Dolor torácico y costal, tos y asma",
+          "Trastornos digestivos",
+          "Dolor de pecho",
+          "Palpitaciones",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP18 (Tiānxī) está indicado para:",
+        options: [
+          "Dolor torácico, tos y mastitis",
+          "Trastornos gastrointestinales",
+          "Insomnio",
+          "Cefalea",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP19 (Xiōngxiāng) se usa para:",
+        options: [
+          "Dolor torácico, tos y opresión en el pecho",
+          "Dolor abdominal",
+          "Trastornos renales",
+          "Vértigo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP20 (Zhōuróng) está indicado para:",
+        options: [
+          "Dolor torácico, tos y dificultad respiratoria",
+          "Trastornos hepáticos",
+          "Dolor de hombro",
+          "Cefalea",
+        ],
+        correct: 0,
+      },
+      {
+        text: "BP21 (Dàbāo) es el punto de Gran Envoltura (Luo del Bazo) y se usa para:",
+        options: [
+          "Dolor torácico, costal y articular generalizado",
+          "Trastornos digestivos",
+          "Trastornos ginecológicos",
+          "Regulación de la sangre",
+        ],
+        correct: 0,
+      },
+    ],
+  },
+
+  // Meridiano de Corazón
+  {
+    id: "meridiano-c-completo",
+    category: "meridianos",
+    title: "Corazón – Nombres, Ubicación y Clínica (Shǒu Shǎo Yīn)",
+    description:
+      "Nomenclatura (Pīnyīn y traducción), localización anatómica y acciones clínicas principales de los 9 puntos del meridiano del Corazón según la tradición.",
+    questions: [
+      // ==========================================
+      // FASE 1: NOMENCLATURA (9 preguntas)
+      // ==========================================
+      {
+        text: "¿Cuál es el nombre en Pīnyīn y la traducción del punto C1?",
+        options: [
+          "Qīnglíng (Colina Verde)",
+          "Jíquán (Manantial Extremo)",
+          "Shàohǎi (Mar Menor)",
+          "Língdào (Vía del Alma)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se denomina el punto C2, situado en el surco del bíceps?",
+        options: [
+          "Jíquán",
+          "Qīnglíng (Colina Verde)",
+          "Shàohǎi (Mar Menor)",
+          "Yīnlíng (Montículo Yin)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto C3 se llama Shàohǎi. ¿Cuál es su traducción?",
+        options: ["Mar Menor", "Colina Verde", "Vía del Alma", "Manantial del Corazón"],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es el nombre y la traducción del punto C4?",
+        options: [
+          "Língdào (Vía del Alma)",
+          "Xīmén (Puerta del Crecimiento)",
+          "Shénmén (Puerta del Espíritu)",
+          "Tōnglǐ (Comunicación Interior)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "El punto C5, situado a 2 cun proximal a la muñeca, se llama:",
+        options: [
+          "Tōnglǐ (Comunicación Interior)",
+          "Xīmén (Puerta del Crecimiento)",
+          "Shénmén (Puerta del Espíritu)",
+          "Yīnxī (Arroyo Yin)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se denomina el punto C6, a 1,5 cun proximal a la muñeca?",
+        options: [
+          "Tōnglǐ (Comunicación Interior)",
+          "Yīnxī (Arroyo Yin)",
+          "Shénmén (Puerta del Espíritu)",
+          "Xiǎochōng (Pequeño Irruptor)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "El punto C7 se llama Shénmén. ¿Cuál es su traducción?",
+        options: ["Puerta del Espíritu", "Arroyo Yin", "Pequeño Irruptor", "Comunicación Interior"],
+        correct: 0,
+      },
+      {
+        text: "¿Cómo se llama el punto C8, en la palma de la mano?",
+        options: ["Shénmén", "Yīnxī (Arroyo Yin)", "Xiǎochōng (Pequeño Irruptor)", "Língdào"],
+        correct: 1,
+      },
+      {
+        text: "El punto C9, el último del meridiano, se conoce como:",
+        options: [
+          "Yīnxī",
+          "Xiǎochōng (Pequeño Irruptor)",
+          "Shàochōng (Pequeño Irruptor)",
+          "Jíquán",
+        ],
+        correct: 2,
+      },
+
+      // ==========================================
+      // FASE 2: UBICACIÓN ANATÓMICA (9 preguntas)
+      // ==========================================
+      {
+        text: "¿Dónde se localiza C1 (Jíquán)?",
+        options: [
+          "En la axila, en la depresión del borde inferior del músculo pectoral mayor",
+          "En la fosa infraclavicular",
+          "En la parte anterior del hombro",
+          "En la cara lateral del tórax",
+        ],
+        correct: 0,
+      },
+      {
+        text: "C2 (Qīnglíng) se sitúa en el brazo. ¿En qué referencia exacta?",
+        options: [
+          "A 3 cun por encima del pliegue del codo, en el surco del bíceps",
+          "A 2 cun por encima del pliegue del codo",
+          "A 1 cun por encima del pliegue del codo",
+          "En el pliegue del codo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "C3 (Shàohǎi) se localiza en el pliegue del codo. ¿En qué lado y entre qué estructuras?",
+        options: [
+          "En el lado radial, entre el tendón del bíceps y el radio",
+          "En el lado cubital, entre el tendón del bíceps y el epicóndilo medial",
+          "En el centro del pliegue del codo",
+          "En el lado radial, entre el bíceps y el epicóndilo lateral",
+        ],
+        correct: 1,
+      },
+      {
+        text: "C4 (Língdào) se encuentra en el antebrazo. ¿A qué distancia de la muñeca?",
+        options: [
+          "A 2 cun proximal a la muñeca, entre los tendones del flexor radial y palmar",
+          "A 1,5 cun proximal a la muñeca",
+          "A 3 cun proximal a la muñeca",
+          "A 1 cun proximal a la muñeca",
+        ],
+        correct: 0,
+      },
+      {
+        text: "C5 (Xīmén) se localiza a 5 cun proximal a la muñeca. ¿Entre qué tendones?",
+        options: [
+          "Entre los tendones del flexor radial y el palmar mayor",
+          "Entre los tendones del palmar mayor y el flexor cubital",
+          "Entre el flexor cubital y el cubito",
+          "Entre el bíceps y el radio",
+        ],
+        correct: 0,
+      },
+      {
+        text: "C6 (Tōnglǐ) se sitúa a 1,5 cun proximal a la muñeca. ¿En qué surco tendinoso?",
+        options: [
+          "En el surco lateral del tendón del flexor radial",
+          "En el surco medial del tendón del flexor radial",
+          "Entre el palmar largo y el cubital",
+          "En el centro de la muñeca",
+        ],
+        correct: 1,
+      },
+      {
+        text: "C7 (Shénmén) se encuentra en la muñeca. ¿Cuál es su referencia exacta?",
+        options: [
+          "En el pliegue distal de la muñeca, lado radial, en la depresión de la articulación",
+          "En el pliegue distal de la muñeca, lado cubital, en la depresión de la articulación",
+          "En el centro del pliegue de la muñeca",
+          "En el dorso de la muñeca",
+        ],
+        correct: 1,
+      },
+      {
+        text: "C8 (Yīnxī) se localiza en la palma. ¿Entre qué estructuras?",
+        options: [
+          "En el centro de la palma, entre el 2º y 3º metacarpianos",
+          "En la palma, en la depresión entre el 4º y 5º metacarpianos, proximal",
+          "En la eminencia tenar",
+          "En la eminencia hipotenar",
+        ],
+        correct: 1,
+      },
+      {
+        text: "C9 (Shàochōng) se sitúa en la mano. ¿Dónde exactamente?",
+        options: [
+          "En la punta del pulgar, lado radial de la uña",
+          "En la punta del dedo medio",
+          "En la punta del dedo meñique, lado radial de la uña",
+          "En la punta del dedo anular",
+        ],
+        correct: 2,
+      },
+
+      // ==========================================
+      // FASE 3: CARACTERÍSTICAS CLÍNICAS (9 preguntas)
+      // ==========================================
+      {
+        text: "C1 (Jíquán) se usa principalmente para:",
+        options: [
+          "Dolor de axila y problemas circulatorios del brazo",
+          "Palpitaciones y ansiedad",
+          "Trastornos respiratorios",
+          "Dolor de hombro",
+        ],
+        correct: 0,
+      },
+      {
+        text: "C2 (Qīnglíng) está indicado para:",
+        options: ["Dolor de brazo y rigidez del codo", "Insomnio", "Palpitaciones", "Cefalea"],
+        correct: 0,
+      },
+      {
+        text: "C3 (Shàohǎi) es el punto He (Mar) del Corazón. ¿Qué acción principal tiene?",
+        options: [
+          "Calmar el espíritu y tratar palpitaciones",
+          "Dispersar el viento",
+          "Tonificar el Yang del Corazón",
+          "Regular la menstruación",
+        ],
+        correct: 0,
+      },
+      {
+        text: "C4 (Língdào) se usa para:",
+        options: [
+          "Trastornos mentales, ansiedad y palpitaciones",
+          "Dolor de brazo",
+          "Problemas digestivos",
+          "Dolor de cabeza",
+        ],
+        correct: 0,
+      },
+      {
+        text: "C5 (Xīmén) es el punto Xī (Hendidura) del Corazón. ¿Para qué afecciones agudas se usa?",
+        options: [
+          "Dolor precordial agudo y palpitaciones",
+          "Diarrea aguda",
+          "Vómitos",
+          "Dolor de cabeza agudo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "C6 (Tōnglǐ) es el punto Luo del Corazón. ¿Cuál es su acción principal?",
+        options: [
+          "Comunicar el corazón y tratar afonía y palpitaciones",
+          "Tonificar la sangre",
+          "Calmar la mente",
+          "Regular la sudoración",
+        ],
+        correct: 0,
+      },
+      {
+        text: "C7 (Shénmén) es el punto Fuente del Corazón. ¿Cuál es su indicación más importante?",
+        options: [
+          "Trastornos mentales, insomnio, palpitaciones y ansiedad",
+          "Dolor de muñeca",
+          "Dolor de cabeza",
+          "Regulación de la presión arterial",
+        ],
+        correct: 0,
+      },
+      {
+        text: "C8 (Yīnxī) está indicado para:",
+        options: [
+          "Palpitaciones, dolor precordial y sudoración nocturna",
+          "Dolor de mano",
+          "Trastornos digestivos",
+          "Cefalea",
+        ],
+        correct: 0,
+      },
+      {
+        text: "C9 (Shàochōng) es el punto Jing-Pozo del Corazón. ¿Cuál es su acción principal?",
+        options: [
+          "Restaurar la conciencia y tratar trastornos mentales agudos",
+          "Tonificar el Corazón",
+          "Eliminar el calor",
+          "Regular la sangre",
+        ],
+        correct: 0,
+      },
+    ],
+  },
+
+  // Meridiano de ID
+  {
+    id: "meridiano-id-completo",
+    category: "meridianos",
+    title: "Intestino Delgado – Nombres, Ubicación y Clínica (Shǒu Tài Yáng)",
+    description:
+      "Nomenclatura (Pīnyīn y traducción), localización anatómica y acciones clínicas principales de los 19 puntos del meridiano de Intestino Delgado según la tradición.",
+    questions: [
+      // ==========================================
+      // FASE 1: NOMENCLATURA (19 preguntas)
+      // ==========================================
+      {
+        text: "¿Cuál es el nombre en Pīnyīn y la traducción del punto ID1?",
+        options: [
+          "Qiángǔ (Valle Anterior)",
+          "Hòuxī (Arroyo Posterior)",
+          "Shàozé (Pequeño Pantano)",
+          "Wāngǔ (Hueso de la Muñeca)",
+        ],
+        correct: 2,
+      },
+      {
+        text: "¿Cómo se denomina el punto ID2, situado en el borde cubital del quinto dedo?",
+        options: [
+          "Shàozé",
+          "Qiángǔ (Valle Anterior)",
+          "Hòuxī (Arroyo Posterior)",
+          "Yánggǔ (Valle del Yang)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto ID3 se llama Hòuxī. ¿Cuál es su traducción?",
+        options: ["Valle Anterior", "Arroyo Posterior", "Hueso de la Muñeca", "Pequeño Pantano"],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es el nombre y la traducción del punto ID4?",
+        options: [
+          "Wāngǔ (Hueso de la Muñeca)",
+          "Yánggǔ (Valle del Yang)",
+          "Yǎnglǎo (Cuidar al Anciano)",
+          "Zhīzhèng (Rama Recta)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "El punto ID5, en la depresión del lado cubital de la muñeca, se llama:",
+        options: [
+          "Wāngǔ",
+          "Yánggǔ (Valle del Yang)",
+          "Yǎnglǎo (Cuidar al Anciano)",
+          "Xiǎohǎi (Mar Pequeño)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se denomina el punto ID6, situado en la depresión sobre la cabeza del cúbito?",
+        options: [
+          "Yánggǔ",
+          "Yǎnglǎo (Cuidar al Anciano)",
+          "Zhīzhèng (Rama Recta)",
+          "Jiānzhēn (Rectitud del Hombro)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto ID7 se llama Zhīzhèng. ¿Cuál es su traducción?",
+        options: ["Cuidar al Anciano", "Rama Recta", "Mar Pequeño", "Hueso de la Muñeca"],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se llama el punto ID8, ubicado entre el olécranon y el epicóndilo medial?",
+        options: [
+          "Zhīzhèng",
+          "Xiǎohǎi (Mar Pequeño)",
+          "Jiānzhēn (Rectitud del Hombro)",
+          "Nàoshū (Transporte del Brazo)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto ID9, en la parte posterior de la axila, recibe el nombre de:",
+        options: [
+          "Jiānzhēn (Rectitud del Hombro)",
+          "Nàoshū (Transporte del Brazo)",
+          "Tiānzōng (Reunión Celestial)",
+          "Bǐngfēng (Agarrar el Viento)",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es el nombre en Pīnyīn del punto ID10, traducido como 'Transporte del Brazo'?",
+        options: ["Jiānzhēn", "Nàoshū", "Tiānzōng", "Qūyuán (Muro Curvo)"],
+        correct: 1,
+      },
+      {
+        text: "El punto ID11 se llama Tiānzōng. ¿Cuál es su traducción?",
+        options: ["Reunión Celestial", "Agarrar el Viento", "Muro Curvo", "Ventana Celestial"],
+        correct: 0,
+      },
+      {
+        text: "¿Cómo se denomina el punto ID12, en la fosa supraespinosa?",
+        options: [
+          "Tiānzōng",
+          "Bǐngfēng (Agarrar el Viento)",
+          "Qūyuán (Muro Curvo)",
+          "Jiānwàishū (Transporte Externo del Hombro)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto ID13 es Qūyuán. ¿Qué significa su traducción?",
+        options: [
+          "Muro Curvo",
+          "Transporte Externo del Hombro",
+          "Ventana Celestial",
+          "Rostro Celestial",
+        ],
+        correct: 0,
+      },
+      {
+        text: "¿Cuál es el nombre del punto ID14, a 3 cun lateral a la vértebra T1?",
+        options: [
+          "Qūyuán",
+          "Jiānwàishū (Transporte Externo del Hombro)",
+          "Jiānzhōngshū (Transporte Medio del Hombro)",
+          "Tiānchuāng (Ventana Celestial)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto ID15, a 2 cun lateral a la vértebra C7, se llama:",
+        options: [
+          "Jiānwàishū",
+          "Jiānzhōngshū (Transporte Medio del Hombro)",
+          "Tiānchuāng (Ventana Celestial)",
+          "Tiānróng (Rostro Celestial)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cómo se denomina el punto ID16, situado en el borde posterior del esternocleidomastoideo a nivel del cartílago tiroides?",
+        options: [
+          "Jiānzhōngshū",
+          "Tiānchuāng (Ventana Celestial)",
+          "Tiānróng (Rostro Celestial)",
+          "Quánliáo (Hendidura del Pómulo)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto ID17, en el borde posterior del esternocleidomastoideo a nivel del ángulo de la mandíbula, se llama:",
+        options: [
+          "Tiānchuāng",
+          "Tiānróng (Rostro Celestial)",
+          "Quánliáo (Hendidura del Pómulo)",
+          "Tīnggōng (Palacio de la Audición)",
+        ],
+        correct: 1,
+      },
+      {
+        text: "¿Cuál es el nombre y la traducción del punto ID18, debajo del pómulo?",
+        options: [
+          "Tiānróng",
+          "Quánliáo (Hendidura del Pómulo)",
+          "Tīnggōng (Palacio de la Audición)",
+          "Shàozé",
+        ],
+        correct: 1,
+      },
+      {
+        text: "El punto ID19, el último del meridiano, se conoce como:",
+        options: ["Quánliáo", "Tīnggōng (Palacio de la Audición)", "Tiānróng", "Jiānzhōngshū"],
+        correct: 1,
+      },
+
+      // ==========================================
+      // FASE 2: UBICACIÓN ANATÓMICA (19 preguntas)
+      // ==========================================
+      {
+        text: "¿Dónde se localiza ID1 (Shàozé)?",
+        options: [
+          "En la punta del pulgar, lado radial",
+          "En la punta del dedo meñique, lado cubital de la uña",
+          "En la punta del dedo anular",
+          "En la base del dedo meñique",
+        ],
+        correct: 1,
+      },
+      {
+        text: "ID2 (Qiángǔ) se sitúa en el borde cubital de la mano. ¿En qué referencia exacta?",
+        options: [
+          "En la base del quinto dedo, en la articulación metacarpofalángica",
+          "En la cabeza del quinto metacarpiano",
+          "En la base del cuarto metacarpiano",
+          "En la articulación metacarpofalángica del pulgar",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID3 (Hòuxī) se encuentra en el borde cubital de la mano. ¿Entre qué estructuras?",
+        options: [
+          "En la depresión proximal a la cabeza del quinto metacarpiano",
+          "En la depresión distal a la cabeza del quinto metacarpiano",
+          "En la articulación de la muñeca",
+          "En la base del cuarto metacarpiano",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID4 (Wāngǔ) se localiza en la muñeca. ¿Cuál es su referencia ósea?",
+        options: [
+          "En la depresión entre el hueso pisiforme y el ganchoso",
+          "En la depresión entre el hueso piramidal y el pisiforme",
+          "En la depresión sobre la apófisis estiloides del cúbito",
+          "En el centro del pliegue de la muñeca",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID5 (Yánggǔ) se sitúa en el lado cubital de la muñeca. ¿En qué depresión?",
+        options: [
+          "Entre el cúbito y el hueso piramidal",
+          "Entre el radio y el escafoides",
+          "En la apófisis estiloides del radio",
+          "En el centro de la muñeca",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID6 (Yǎnglǎo) se encuentra en el antebrazo. ¿A qué altura y en qué hueso?",
+        options: [
+          "A 1 cun proximal a la apófisis estiloides del cúbito",
+          "A 1 cun distal a la apófisis estiloides del cúbito",
+          "A 2 cun proximal a la muñeca, en el radio",
+          "En el pliegue del codo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID7 (Zhīzhèng) se sitúa en el antebrazo. ¿A qué distancia de la muñeca?",
+        options: [
+          "A 3 cun proximal a la muñeca, en el borde cubital",
+          "A 5 cun proximal a la muñeca, en el borde cubital",
+          "A 2 cun proximal a la muñeca, en el borde radial",
+          "A 4 cun proximal a la muñeca, en el borde cubital",
+        ],
+        correct: 1,
+      },
+      {
+        text: "ID8 (Xiǎohǎi) se localiza en el codo. ¿Entre qué estructuras?",
+        options: [
+          "Entre el olécranon y el epicóndilo medial, en la depresión",
+          "Entre el olécranon y el epicóndilo lateral",
+          "En el centro del pliegue del codo",
+          "En la fosa cubital",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID9 (Jiānzhēn) se encuentra en el hombro. ¿En qué posición respecto a la axila?",
+        options: [
+          "En la depresión posterior a la axila, 1 cun por encima del pliegue axilar",
+          "En la depresión anterior a la axila",
+          "En el centro del hombro",
+          "En la fosa supraclavicular",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID10 (Nàoshū) se sitúa en el hombro. ¿En qué depresión?",
+        options: [
+          "En la depresión bajo la espina de la escápula",
+          "En la depresión bajo el acromion, posterior",
+          "En la fosa supraespinosa",
+          "En la articulación acromioclavicular",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID11 (Tiānzōng) se localiza en la escápula. ¿En qué fosa?",
+        options: [
+          "En la fosa supraespinosa",
+          "En la fosa infraespinosa, en el centro",
+          "En el borde medial de la escápula",
+          "En el borde lateral de la escápula",
+        ],
+        correct: 1,
+      },
+      {
+        text: "ID12 (Bǐngfēng) se encuentra en la fosa supraespinosa. ¿En qué punto de referencia?",
+        options: [
+          "En el centro de la fosa supraespinosa",
+          "En el borde superior de la espina de la escápula",
+          "En el borde medial de la escápula",
+          "En el acromion",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID13 (Qūyuán) se sitúa en la escápula. ¿Entre qué estructuras?",
+        options: [
+          "En el borde medial de la escápula, entre las espinas C7 y T1",
+          "En el borde lateral de la escápula",
+          "En el centro de la fosa infraespinosa",
+          "En el borde inferior de la escápula",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID14 (Jiānwàishū) se localiza en la espalda. ¿A qué distancia de la columna?",
+        options: [
+          "A 3 cun lateral a la apófisis espinosa de T1",
+          "A 2 cun lateral a la apófisis espinosa de T1",
+          "A 4 cun lateral a la apófisis espinosa de T1",
+          "A 3 cun lateral a la apófisis espinosa de C7",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID15 (Jiānzhōngshū) se sitúa en la espalda. ¿A qué nivel y distancia de la columna?",
+        options: [
+          "A 3 cun lateral a la apófisis espinosa de T1",
+          "A 3 cun lateral a la apófisis espinosa de C7",
+          "A 2 cun lateral a la apófisis espinosa de C7",
+          "A 2 cun lateral a la apófisis espinosa de T1",
+        ],
+        correct: 2,
+      },
+      {
+        text: "ID16 (Tiānchuāng) se encuentra en el cuello. ¿En qué músculo y a qué nivel?",
+        options: [
+          "En el borde posterior del ECM, a nivel del cartílago tiroides",
+          "En el borde anterior del ECM, a nivel del cartílago tiroides",
+          "En el borde posterior del ECM, a nivel del hioides",
+          "En el borde anterior del ECM, a nivel del hioides",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID17 (Tiānróng) se localiza en el cuello. ¿En qué referencia exacta?",
+        options: [
+          "En el borde posterior del ECM, a nivel del ángulo de la mandíbula",
+          "En el borde anterior del ECM, a nivel del ángulo de la mandíbula",
+          "Detrás del lóbulo de la oreja",
+          "En la fosa supraclavicular",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID18 (Quánliáo) se sitúa en la cara. ¿Dónde exactamente?",
+        options: [
+          "Debajo de la pupila, en el foramen infraorbitario",
+          "Debajo del pómulo, en la depresión en el borde inferior del arco cigomático",
+          "En el surco nasolabial",
+          "En la comisura de los labios",
+        ],
+        correct: 1,
+      },
+      {
+        text: "ID19 (Tīnggōng) se localiza en la cara. ¿En qué depresión?",
+        options: [
+          "Delante del lóbulo de la oreja, en la depresión entre el cóndilo mandibular y el trago",
+          "Detrás del lóbulo de la oreja",
+          "En el trago",
+          "En la sien",
+        ],
+        correct: 0,
+      },
+
+      // ==========================================
+      // FASE 3: CARACTERÍSTICAS CLÍNICAS (19 preguntas)
+      // ==========================================
+      {
+        text: "ID1 (Shàozé) es el punto Jing-Pozo del Intestino Delgado. ¿Cuál es su acción principal?",
+        options: [
+          "Restaurar la conciencia y aliviar el dolor de garganta",
+          "Tonificar el Qi del Intestino Delgado",
+          "Eliminar el calor del corazón",
+          "Regular la digestión",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID2 (Qiángǔ) es el punto de Dispersión (Yíng) del canal. ¿Qué tipo de calor trata?",
+        options: [
+          "Calor externo con fiebre y dolor de cabeza",
+          "Calor por deficiencia de Yin",
+          "Calor húmedo en el Jiao Inferior",
+          "Calor en la sangre",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID3 (Hòuxī) es un punto muy importante, punto de confluencia del Vaso Gobernador. ¿Para qué se usa principalmente?",
+        options: [
+          "Dolor de cuello, rigidez y problemas de la columna cervical",
+          "Trastornos digestivos",
+          "Dolor de rodilla",
+          "Insomnio",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID4 (Wāngǔ) es el punto Fuente del Intestino Delgado. ¿Qué acción tiene?",
+        options: [
+          "Tratar problemas de la muñeca y dolor de cabeza",
+          "Tonificar el Bazo",
+          "Eliminar la flema",
+          "Regular la menstruación",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID5 (Yánggǔ) es el punto Río (Jīng) del canal. ¿Para qué se usa?",
+        options: [
+          "Dolor de muñeca, tinnitus y sordera",
+          "Dolor de codo",
+          "Trastornos digestivos",
+          "Cefalea frontal",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID6 (Yǎnglǎo) es el punto Xī (Hendidura) del Intestino Delgado. ¿Qué afección aguda trata?",
+        options: [
+          "Dolor agudo de muñeca y problemas oculares",
+          "Diarrea aguda",
+          "Vómitos",
+          "Dolor de cabeza agudo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID7 (Zhīzhèng) es el punto Luo del Intestino Delgado. ¿Cuál es su función principal?",
+        options: [
+          "Armonizar el canal y tratar dolor de cabeza y cuello",
+          "Tonificar la sangre",
+          "Calmar el espíritu",
+          "Regular la digestión",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID8 (Xiǎohǎi) es el punto He (Mar) del Intestino Delgado. ¿Qué tipo de afecciones trata?",
+        options: [
+          "Dolor de codo y trastornos del intestino delgado",
+          "Dolor de hombro",
+          "Trastornos mentales",
+          "Dolor de cabeza",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID9 (Jiānzhēn) se usa principalmente para:",
+        options: [
+          "Dolor de hombro y brazo, especialmente en la región escapular",
+          "Dolor de cuello",
+          "Trastornos respiratorios",
+          "Dolor torácico",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID10 (Nàoshū) está indicado para:",
+        options: [
+          "Dolor de hombro y rigidez del brazo",
+          "Dolor de codo",
+          "Trastornos digestivos",
+          "Cefalea",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID11 (Tiānzōng) se usa para:",
+        options: [
+          "Dolor de hombro, rigidez y periartritis escapular",
+          "Dolor lumbar",
+          "Trastornos respiratorios",
+          "Dolor torácico",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID12 (Bǐngfēng) está indicado para:",
+        options: [
+          "Dolor y rigidez del hombro y cuello",
+          "Dolor de cabeza",
+          "Trastornos digestivos",
+          "Dolor de brazo",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID13 (Qūyuán) se usa para:",
+        options: [
+          "Dolor y rigidez del hombro y la región escapular",
+          "Dolor lumbar",
+          "Cefalea",
+          "Trastornos gastrointestinales",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID14 (Jiānwàishū) está indicado para:",
+        options: [
+          "Dolor y rigidez del hombro y cuello",
+          "Dolor de codo",
+          "Trastornos digestivos",
+          "Dolor de cabeza",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID15 (Jiānzhōngshū) se usa para:",
+        options: [
+          "Dolor de hombro, rigidez y tos",
+          "Dolor lumbar",
+          "Cefalea",
+          "Trastornos del intestino",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID16 (Tiānchuāng) está indicado para:",
+        options: [
+          "Dolor de garganta, afonía y rigidez de cuello",
+          "Sordera",
+          "Tinnitus",
+          "Dolor dental",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID17 (Tiānróng) se usa para:",
+        options: [
+          "Dolor de garganta, afonía y problemas del oído",
+          "Congestión nasal",
+          "Dolor facial",
+          "Cefalea",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID18 (Quánliáo) está indicado para:",
+        options: [
+          "Dolor facial, parálisis facial y neuralgia del trigémino",
+          "Dolor de muelas",
+          "Sinusitis",
+          "Dolor de oído",
+        ],
+        correct: 0,
+      },
+      {
+        text: "ID19 (Tīnggōng) es el punto principal para:",
+        options: [
+          "Tinnitus, sordera y problemas del oído",
+          "Dolor facial",
+          "Dolor de garganta",
+          "Dolor dental",
+        ],
+        correct: 0,
+      },
+    ],
+  },
 ];

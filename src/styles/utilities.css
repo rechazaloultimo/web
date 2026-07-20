@@ -2,45 +2,86 @@
    UTILITIES.CSS - Clases Reutilizables
    ======================================== */
 
+:root {
+  --utility-section-padding-x: 1.5rem;
+  --utility-section-padding-y: 1.5rem;
+  --utility-section-padding-y-desktop: 2rem;
+  --utility-section-spacing: 3rem;
+  --utility-section-spacing-desktop: 5rem;
+}
+
 /* === HEADINGS === */
 
-.section-heading-xl {
+:is(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .font-title,
+  .section-heading-xl,
+  .section-heading-lg,
+  .section-heading-md
+) {
   font-family: var(--font-title);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+:is(.section-heading-xl, .section-heading-lg, .section-heading-md) {
+  color: var(--color-text-title);
+}
+
+.section-heading-xl {
   font-size: clamp(1.875rem, 5vw, 3rem);
-  font-weight: 400;
-  color: var(--color-title-ink);
   margin-bottom: 3rem;
   text-align: center;
 }
 
 .section-heading-lg {
-  font-family: var(--font-title);
   font-size: clamp(1.5rem, 4vw, 2.25rem);
-  font-weight: 400;
-  color: var(--color-title-ink);
   margin-bottom: 2rem;
   text-align: center;
 }
 
 .section-heading-md {
-  font-family: var(--font-title);
   font-size: clamp(1rem, 3vw, 1.5rem);
-  font-weight: 400;
-  color: var(--color-title-ink);
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--color-text-title);
+}
+
+.section-subtitle {
+  font-size: clamp(1.125rem, 2.2vw, 1.375rem);
+  margin-bottom: 0.75rem;
+  color: var(--color-text-title);
+}
+
+.section-card-title {
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
+  margin-bottom: 0.5rem;
+  color: var(--color-text-title);
 }
 
 /* === PROSE / PÁRRAFOS === */
 
 .prose-standard {
   font-size: 1.125rem;
-  color: var(--color-ink);
+  color: var(--color-text-main);
   margin-bottom: 1rem;
   line-height: 1.75;
 }
 
 .prose-large {
   font-size: 1.25rem;
-  color: var(--color-ink);
+  color: var(--color-text-main);
   line-height: 1.75;
 }
 
@@ -51,56 +92,34 @@
 
 /* === CONTENEDORES === */
 
-.page-section-container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
-  max-width: 64rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3rem;
+.page-section-container,
+.page-section-container--narrow,
+.page-section-container--wide {
+  padding-inline: var(--utility-section-padding-x);
+  padding-top: var(--utility-section-padding-y);
+  padding-bottom: var(--utility-section-spacing);
+  margin-inline: auto;
 }
 
-@media (min-width: 768px) {
-  .page-section-container {
-    padding-top: 2rem;
-    padding-bottom: 5rem;
-    max-width: 64rem;
-  }
+.page-section-container {
+  max-width: 64rem;
+  margin-bottom: var(--utility-section-spacing);
 }
 
 .page-section-container--narrow {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
   max-width: 56rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 768px) {
-  .page-section-container--narrow {
-    padding-top: 2rem;
-    padding-bottom: 5rem;
-  }
 }
 
 .page-section-container--wide {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
   max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media (min-width: 768px) {
+  .page-section-container,
+  .page-section-container--narrow,
   .page-section-container--wide {
-    padding-top: 2rem;
-    padding-bottom: 5rem;
+    padding-top: var(--utility-section-padding-y-desktop);
+    padding-bottom: var(--utility-section-spacing-desktop);
   }
 }
 
@@ -216,20 +235,18 @@
 
 /* === CONTENEDORES CENTRADOS === */
 
+.container-centered,
+.container-centered--narrow {
+  margin-inline: auto;
+  padding-inline: var(--utility-section-padding-x);
+}
+
 .container-centered {
   max-width: 64rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .container-centered--narrow {
   max-width: 48rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 /* === FLEXBOX COMUNES === */
