@@ -10,10 +10,4 @@ const { title, description, ogImage } = Astro.props;
 
 <BaseLayout title={title} description={description} ogImage={ogImage}>
   <slot />
-
-  <!-- Scripts y estilos específicos para quizzes -->
-  <script slot="extra-scripts">
-    import "../js/photoswipe-init.js";
-    import "../js/estaticas.js";
-  </script>
 </BaseLayout>

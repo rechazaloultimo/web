@@ -15,11 +15,23 @@ const selectedId = Astro.url.searchParams.get("quiz");
 // ================================================================
 // NUEVO: LÓGICA DE AGRUPACIÓN POR CATEGORÍA
 // ================================================================
-const categoryOrder = ["anatomia", "auriculoterapia", "meridianos"];
+const categoryOrder = [
+  "anatomia",
+  "auriculoterapia",
+  "tuina",
+  "meridianos-nombres",
+  "meridianos-anatomia",
+  "meridianos-clinica",
+];
 const categoryTitles: Record<string, string> = {
   anatomia: "Anatomía",
   auriculoterapia: "Auriculoterapia",
-  meridianos: "Meridianos",
+  diagnostico: "Diagnóstico chino",
+  dietoterapia: "Dietoterapia china",
+  tuina: "Masaje Tui Na An Mo",
+  "meridianos-nombres": "Meridianos: nombres de los puntos",
+  "meridianos-anatomia": "Meridianos: ubicación anatómica",
+  "meridianos-clinica": "Meridianos: aplicaciones clínicas",
   otros: "Otros",
 };
 
@@ -62,8 +74,7 @@ for (const [cat, items] of Object.entries(grouped)) {
       </h2>
       <p class="text-lg mb-8 text-text-secondary">
         Empecé a cursar la carrera en Marzo del 2026, y para practicar lo que voy aprendiendo, armé
-        estos multiples choise. Por ahora son 30 preguntas por cada tema visto, pero con el tiempo
-        espero ir agregando más preguntas y temas.
+        estos multiples choise.
       </p>
       <p class="text-lg mb-12 text-text-secondary">
         Si tenés sugerencias de preguntas o temas para agregar, no dudes en contactarme al <a
