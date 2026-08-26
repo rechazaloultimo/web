@@ -1,0 +1,447 @@
+---
+import "../../../styles/auriculoterapia/editor.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auriculoterapia — Editor</title>
+  </head>
+  <body>
+    <main>
+      <!-- COLUMNA 1 (Por defecto Izquierda) -->
+      <section class="ear-column" data-col="col1">
+        <header class="ear-header">
+          <div class="ear-header-left">
+            <button class="toggle-panel-btn" data-col="col1">≡ Panel</button>
+            <div class="ear-title-container">
+              <span>👂</span>
+              <select class="ear-selector" id="selectLadoCol1" data-col="col1">
+                <option value="IZQUIERDA" selected>IZQUIERDA</option>
+                <option value="DERECHA">DERECHA</option>
+              </select>
+              <span class="ear-patient-info" id="infoCol1">- Sin Paciente [dd/mm/aaaa] - S: --</span
+              >
+            </div>
+          </div>
+          <div class="zoom-controls">
+            <button class="zoom-out" data-col="col1">−</button>
+            <span class="zoom-level" data-col="col1">100%</span>
+            <button class="zoom-in" data-col="col1">+</button>
+          </div>
+        </header>
+
+        <div class="ear-workspace">
+          <aside class="ear-panel" id="panelCol1">
+            <div class="panel-content">
+              <div class="panel-section-title collapsible" id="titleSesionesCol1">
+                <span>Sesiones</span>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="collapsible-content session-content">
+                <div class="clinic-form-grid">
+                  <div class="clinic-field">
+                    <label for="selectSesionCol1">Seleccionar Sesión</label>
+                    <select id="selectSesionCol1" data-col="col1">
+                      <option value="1">Sesión 1</option>
+                    </select>
+                  </div>
+                  <div class="clinic-field">
+                    <label for="selectTerapeutaSesionCol1">Terapeuta</label>
+                    <select id="selectTerapeutaSesionCol1" data-directory-type="terapeutas"
+                    ></select>
+                  </div>
+                  <div class="clinic-field">
+                    <label for="selectPacienteSesionCol1">Paciente</label>
+                    <select id="selectPacienteSesionCol1" data-directory-type="pacientes"></select>
+                  </div>
+                </div>
+                <div class="action-buttons">
+                  <button class="btn-panel btn-primary" id="btnCargarSesionCol1">Cargar</button>
+                  <button class="btn-panel btn-danger" id="btnBorrarSesionCol1">Borrar</button>
+                </div>
+              </div>
+
+              <div class="panel-section-title collapsible" id="titleConsultaCol1">
+                <span>Datos de Consulta</span>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="collapsible-content" id="gridConsultaCol1">
+                <div class="clinic-form-grid">
+                  <div class="session-meta-grid">
+                    <div class="clinic-field">
+                      <label for="terapeutaCol1">Terapeuta</label>
+                      <select id="terapeutaCol1"></select>
+                    </div>
+                    <div class="clinic-field">
+                      <label for="pacienteCol1">Paciente</label>
+                      <select id="pacienteCol1"></select>
+                    </div>
+                    <div class="clinic-field">
+                      <label for="fechaCol1">Fecha</label>
+                      <input type="date" class="input-fecha" id="fechaCol1" />
+                    </div>
+                    <div class="clinic-field small">
+                      <label for="sesionCol1">Sesión</label>
+                      <input type="number" min="1" placeholder="1" id="sesionCol1" />
+                    </div>
+                  </div>
+                  <div class="directory-row">
+                    <input type="text" id="nuevoTerapeutaCol1" placeholder="Nuevo terapeuta..." />
+                    <button
+                      class="btn-panel"
+                      type="button"
+                      data-add-person="terapeuta"
+                      data-col="col1"
+                      title="Añadir terapeuta"
+                    >
+                      +
+                    </button>
+                    <input type="text" id="nuevoPacienteCol1" placeholder="Nuevo paciente..." />
+                    <button
+                      class="btn-panel"
+                      type="button"
+                      data-add-person="paciente"
+                      data-col="col1"
+                      title="Añadir paciente"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <div class="clinic-field">
+                    <label>Motivo</label>
+                    <textarea id="motivoCol1" placeholder="Diagnóstico..."></textarea>
+                  </div>
+
+                  <div class="clinic-field">
+                    <label>Material Utilizado</label>
+                    <div class="checkbox-group">
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="material_col1" value="vacaria" />
+                        Vacaria</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="material_col1" value="mostaza" />
+                        Mostaza</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="material_col1" value="chinchetas" />
+                        Chinchetas</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="material_col1" value="agujas" /> Agujas</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="clinic-field">
+                    <label>Técnicas Complementarias</label>
+                    <div class="checkbox-group">
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="tecnica_col1" value="moxa" /> Moxa</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="tecnica_col1" value="sangria" />
+                        Sangría</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="tecnica_col1" value="masajes" />
+                        Masajes</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="clinic-field">
+                    <label>Dureza / Alteración en Zona</label>
+                    <div class="checkbox-group">
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col1" value="lobulo" /> Lóbulo</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col1" value="trago" /> Trago / Antitrago</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col1" value="helix" /> Hélix / Cauda</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col1" value="antihelix" /> Antihélix (Ramas)</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col1" value="concha_cava" /> Concha Cava</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col1" value="concha_cymba" /> Concha Cymba</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col1" value="fosa_triangular" /> Fosa Triangular</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col1" value="escafa" /> Escafa</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="clinic-field">
+                    <label>Respuesta del Paciente</label>
+                    <textarea
+                      id="respuestaCol1"
+                      placeholder="Sensación, dolor a la palpación, evolución..."></textarea>
+                  </div>
+                </div>
+
+                <div class="action-buttons">
+                  <button class="btn-panel btn-primary" id="btnGuardarCol1">💾 Guardar</button>
+                  <button class="btn-panel" id="btnRecargarCol1">⟲ Recargar</button>
+                </div>
+              </div>
+
+              <div class="panel-section-title">Gestión de Imagen</div>
+              <div class="action-buttons">
+                <label for="fileCol1" class="btn-panel">📁 Cargar</label>
+                <input type="file" id="fileCol1" accept="image/*" data-col="col1" />
+                <button class="btn-panel zoom-reset" data-col="col1">⟲ Reset</button>
+              </div>
+
+              <div class="panel-section-title collapsible" id="titlePuntosCol1">
+                <span>Puntos & Packs</span>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="collapsible-content" id="gridPuntosCol1">
+                <div class="panel-slot" data-col="col1"></div>
+              </div>
+            </div>
+          </aside>
+
+          <div class="image-container" id="containerCol1">
+            <img
+              id="imgCol1"
+              src="/auriculoterapia/images/oreja-segmentada-v3.jpg"
+              alt="Oreja visualización"
+            />
+            <svg id="svgCol1" viewBox="0 0 850 1300"></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLUMNA 2 (Por defecto Derecha) -->
+      <section class="ear-column" data-col="col2">
+        <header class="ear-header">
+          <div class="ear-header-left">
+            <button class="toggle-panel-btn" data-col="col2">≡ Panel</button>
+            <div class="ear-title-container">
+              <span>👂</span>
+              <select class="ear-selector" id="selectLadoCol2" data-col="col2">
+                <option value="IZQUIERDA">IZQUIERDA</option>
+                <option value="DERECHA" selected>DERECHA</option>
+              </select>
+              <span class="ear-patient-info" id="infoCol2">- Sin Paciente [dd/mm/aaaa] - S: --</span
+              >
+            </div>
+          </div>
+          <div class="zoom-controls">
+            <button class="zoom-out" data-col="col2">−</button>
+            <span class="zoom-level" data-col="col2">100%</span>
+            <button class="zoom-in" data-col="col2">+</button>
+          </div>
+        </header>
+
+        <div class="ear-workspace">
+          <div class="image-container" id="containerCol2">
+            <img
+              id="imgCol2"
+              src="/auriculoterapia/images/oreja-segmentada-v3.jpg"
+              alt="Oreja visualización"
+            />
+            <svg id="svgCol2" viewBox="0 0 850 1300"></svg>
+          </div>
+
+          <aside class="ear-panel" id="panelCol2">
+            <div class="panel-content">
+              <div class="panel-section-title collapsible" id="titleSesionesCol2">
+                <span>Sesiones</span>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="collapsible-content session-content">
+                <div class="clinic-form-grid">
+                  <div class="clinic-field">
+                    <label for="selectSesionCol2">Seleccionar Sesión</label>
+                    <select id="selectSesionCol2" data-col="col2">
+                      <option value="1">Sesión 1</option>
+                    </select>
+                  </div>
+                  <div class="clinic-field">
+                    <label for="selectTerapeutaSesionCol2">Terapeuta</label>
+                    <select id="selectTerapeutaSesionCol2" data-directory-type="terapeutas"
+                    ></select>
+                  </div>
+                  <div class="clinic-field">
+                    <label for="selectPacienteSesionCol2">Paciente</label>
+                    <select id="selectPacienteSesionCol2" data-directory-type="pacientes"></select>
+                  </div>
+                </div>
+                <div class="action-buttons">
+                  <button class="btn-panel btn-primary" id="btnCargarSesionCol2">Cargar</button>
+                  <button class="btn-panel btn-danger" id="btnBorrarSesionCol2">Borrar</button>
+                </div>
+              </div>
+
+              <div class="panel-section-title collapsible" id="titleConsultaCol2">
+                <span>Datos de Consulta</span>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="collapsible-content" id="gridConsultaCol2">
+                <div class="clinic-form-grid">
+                  <div class="session-meta-grid">
+                    <div class="clinic-field">
+                      <label for="terapeutaCol2">Terapeuta</label>
+                      <select id="terapeutaCol2"></select>
+                    </div>
+                    <div class="clinic-field">
+                      <label for="pacienteCol2">Paciente</label>
+                      <select id="pacienteCol2"></select>
+                    </div>
+                    <div class="clinic-field">
+                      <label for="fechaCol2">Fecha</label>
+                      <input type="date" class="input-fecha" id="fechaCol2" />
+                    </div>
+                    <div class="clinic-field small">
+                      <label for="sesionCol2">Sesión</label>
+                      <input type="number" min="1" placeholder="1" id="sesionCol2" />
+                    </div>
+                  </div>
+                  <div class="directory-row">
+                    <input type="text" id="nuevoTerapeutaCol2" placeholder="Nuevo terapeuta..." />
+                    <button
+                      class="btn-panel"
+                      type="button"
+                      data-add-person="terapeuta"
+                      data-col="col2"
+                      title="Añadir terapeuta"
+                    >
+                      +
+                    </button>
+                    <input type="text" id="nuevoPacienteCol2" placeholder="Nuevo paciente..." />
+                    <button
+                      class="btn-panel"
+                      type="button"
+                      data-add-person="paciente"
+                      data-col="col2"
+                      title="Añadir paciente"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <div class="clinic-field">
+                    <label>Motivo</label>
+                    <textarea id="motivoCol2" placeholder="Diagnóstico..."></textarea>
+                  </div>
+
+                  <div class="clinic-field">
+                    <label>Material Utilizado</label>
+                    <div class="checkbox-group">
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="material_col2" value="vacaria" />
+                        Vacaria</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="material_col2" value="mostaza" />
+                        Mostaza</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="material_col2" value="chinchetas" />
+                        Chinchetas</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="material_col2" value="agujas" /> Agujas</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="clinic-field">
+                    <label>Técnicas Complementarias</label>
+                    <div class="checkbox-group">
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="tecnica_col2" value="moxa" /> Moxa</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="tecnica_col2" value="sangria" />
+                        Sangría</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="tecnica_col2" value="masajes" />
+                        Masajes</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="clinic-field">
+                    <label>Dureza / Alteración en Zona</label>
+                    <div class="checkbox-group">
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col2" value="lobulo" /> Lóbulo</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col2" value="trago" /> Trago / Antitrago</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col2" value="helix" /> Hélix / Cauda</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col2" value="antihelix" /> Antihélix (Ramas)</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col2" value="concha_cava" /> Concha Cava</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col2" value="concha_cymba" /> Concha Cymba</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col2" value="fosa_triangular" /> Fosa Triangular</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="zona_col2" value="escafa" /> Escafa</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="clinic-field">
+                    <label>Respuesta del Paciente</label>
+                    <textarea
+                      id="respuestaCol2"
+                      placeholder="Sensación, dolor a la palpación, evolución..."></textarea>
+                  </div>
+                </div>
+
+                <div class="action-buttons">
+                  <button class="btn-panel btn-primary" id="btnGuardarCol2">💾 Guardar</button>
+                  <button class="btn-panel" id="btnRecargarCol2">⟲ Recargar</button>
+                </div>
+              </div>
+
+              <div class="panel-section-title">Gestión de Imagen</div>
+              <div class="action-buttons">
+                <label for="fileCol2" class="btn-panel">📁 Cargar</label>
+                <input type="file" id="fileCol2" accept="image/*" data-col="col2" />
+                <button class="btn-panel zoom-reset" data-col="col2">⟲ Reset</button>
+              </div>
+
+              <div class="panel-section-title collapsible" id="titlePuntosCol2">
+                <span>Puntos & Packs</span>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="collapsible-content" id="gridPuntosCol2">
+                <div class="panel-slot" data-col="col2"></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      import "../../../js/auriculoterapia/ui.js";
+    </script>
+  </body>
+</html>
