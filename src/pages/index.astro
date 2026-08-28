@@ -2,12 +2,13 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import Navbar from "@/components/Navegadores/Navbar.astro";
 import Contacto from "@/components/Contacto.astro";
+import FAQ from "@/components/FAQ.astro";
 import ImagenEstatica from "@/components/galerias/ImagenEstatica.astro";
 
 // 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
-const pageTitle = "Rodrigo Pizarro - Neijia";
+const pageTitle = "Rodrigo Pizarro - Neijia | Qigong, Taijiquan y Asistentes IA";
 const pageDescription =
-  "Sitio personal de Rodrigo Pizarro con servicios de Qígōng, Tàijíquán y asistentes IA GPT personalizados.";
+  "Clases de Qigong y Taijiquan presenciales en CABA, mantenimiento de microscopios y asistentes IA personalizados. Formado en la Escuela AN MO de MTC.";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -21,32 +22,32 @@ const pageDescription =
       class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10"
       style="animation-delay: 0.2s;"
     >
+      <!-- H1 mejorado: incluye el descriptor principal -->
       <h1
         class="font-title
-      text-5xl
-      sm:text-6xl
-      md:text-7xl
-      lg:text-8xl
+      text-4xl
+      sm:text-5xl
+      md:text-6xl
+      lg:text-7xl
       text-gray-50
       mb-6
       fade-in"
         style="animation-delay: 0.2s;"
       >
         Rodrigo Pizarro
+        <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-200 mt-4">
+          Realizador Multimedial Daoísta
+        </span>
       </h1>
-      <h2
-        class="text-xl sm:text-2xl md:text-3xl text-gray-100 mb-10 fade-in font-title"
-        style="animation-delay: 0.6s;"
-      >
-        Realizador Multimedial Daoísta
-      </h2>
+      <!-- Elimino el H2 que repetía el subtítulo -->
       <p
         class="text-base sm:text-lg md:text-xl max-w-xl lg:max-w-3xl mx-auto mb-10 text-gray-200 fade-in"
         style="animation-delay: 0.8s;"
       >
-        Bienvenidxs a mi web personal<br />
-        Encontrarás información de los servicios que ofrezco, fusionando disciplinas tradicionales con
-        herramientas modernas.
+        Bienvenidxs a mi web personal.<br />
+        Acá encontraras información sobre los servicios que ofrezco: disciplinas chinas tradicionales
+        (Qigong, Taijiquan), aplicaciones sobre la Medicina Tradicional China, combinadas con herramientas
+        digitales y el mantenimiento técnico de microscopios; entre otras cosas.
       </p>
     </div>
   </header>
@@ -63,10 +64,13 @@ const pageDescription =
       </h2>
       <p class="text-lg text-text-secondary text-center max-w-3xl mx-auto mb-12 md:mb-16 fade-in">
         Te ofrezco explorar las diferentes formas en las que combino el saber tradicional con
-        herramientas contemporáneas para promover el bienestar y el autoconocimiento.
+        herramientas contemporáneas para promover el bienestar y el autoconocimiento. Cada servicio
+        está pensado para adaptarse a tus necesidades, ya sea que busques clases grupales, atención
+        personalizada o soluciones técnicas especializadas.
       </p>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8">
+        <!-- Tarjetas de servicio (sin cambios, pero ahora la IA está visible) -->
         <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
           <div>
             <h3>
@@ -114,8 +118,8 @@ const pageDescription =
         <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
           <div>
             <h3>
-              <i aria-hidden="true" class="fas fa-microscope text-text-main mr-3"></i>Clases
-              Mantenimiento de Microscopios
+              <i aria-hidden="true" class="fas fa-microscope text-text-main mr-3"></i>Mantenimiento
+              de Microscopios
             </h3>
             <p class="text-lg text-ink mb-4 leading-relaxed">
               Brindo el servicio de mantenimiento de microscopios binoculares, trinoculares y
@@ -137,11 +141,11 @@ const pageDescription =
         <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
           <div>
             <h3>
-              <i aria-hidden="true" class="fas fa-question-circle text-text-main mr-3"></i>Clases
-              Múltiples Choise de MTC
+              <i aria-hidden="true" class="fas fa-question-circle text-text-main mr-3"></i>Múltiple
+              Choice de MTC
             </h3>
             <p class="text-lg text-ink mb-4 leading-relaxed">
-              Estoy armando multiples choise sobre temas vistos en la carrera de formacion en MTC en
+              Estoy armando múltiples choice sobre temas vistos en la carrera de formación en MTC en
               la Escuela de Medicina Tradicional China AN MO. De esta manera, practico lo que voy
               aprendiendo y comparto con otrxs estudiantes de MTC.
             </p>
@@ -160,31 +164,13 @@ const pageDescription =
           </div>
           <div class="mt-auto pt-4">
             <a href="/servicios/microscopia" class="service-link block"
-              >Ver Detalles de Mantenimiento de Microscopios &rarr;</a
+              >Ver Múltiple Choice de MTC &rarr;</a
             >
           </div>
         </div>
-        <!-- <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
-          <div>
-            <h3>
-              <i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Clases Virtuales
-              de Qígōng
-            </h3>
-            <p class="text-lg text-ink mb-4 leading-relaxed">
-              Desde la comodidad del hogar, 3 clases virtuales por semana de una hora.
-            </p>
-            <p class="text-lg text-ink mb-4 leading-relaxed">
-              Ideal para quienes buscan flexibilidad horaria y desean integrar la práctica del
-              Qígōng en su rutina diaria sin desplazamientos.
-            </p>
-          </div>
-          <div class="mt-auto pt-4">
-            <a href="/clases" class="service-link block">Ver Detalles de Clases Virtuales &rarr;</a
-            ><br />
-          </div>
-        </div> -->
 
-        <!-- <div class="service-card-modern fade-in" style="animation-delay: 0.6s;">
+        <!-- Sección de IA ahora visible y con contenido real -->
+        <div class="service-card-modern fade-in" style="animation-delay: 0.6s;">
           <div>
             <h3>
               <i aria-hidden="true" class="fas fa-robot text-text-main mr-3"></i>Asistentes IA GPT
@@ -193,16 +179,22 @@ const pageDescription =
               Descubre asistentes de inteligencia artificial especializados en filosofía daoísta,
               MTC y más. Herramientas innovadoras para el aprendizaje y la consulta personalizada.
             </p>
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Actualmente estoy desarrollando prototipos de asistentes que responden preguntas sobre
+              conceptos de medicina china y ejercicios de Qigong. Si te interesa probarlos o
+              colaborar en su mejora, podés contactarme.
+            </p>
           </div>
           <div class="mt-auto pt-4">
             <a href="/servicios/asistentes-ia" class="service-link block"
               >Explorar Asistentes IA &rarr;</a
             >
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
 
+    <!-- Sección SOBRE MÍ ampliada con más información real -->
     <section
       id="sobre-mi"
       class="min-h-screen flex flex-col justify-center py-16 md:py-22 section-bg-paper"
@@ -212,25 +204,32 @@ const pageDescription =
           <div class="md:w-2/5 fade-in img-mias-top">
             <ImagenEstatica
               imgPath="qigong-wudang/wu (0).webp"
-              altText=" "
+              altText="Rodrigo Pizarro practicando Qigong"
               class="rounded-none shadow-xl w-full aspect-[4/5] border-2 p-1 object-cover"
             />
           </div>
           <div class="md:w-3/5 fade-in">
             <h2 class="font-title text-3xl md:text-4xl lg:text-5xl mb-6">
-              Entre lo tradicional y moderno
+              Entre lo tradicional y lo moderno
             </h2>
             <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-              Me describo a mí mismo como un <strong>Realizador Multimedial</strong>: la <strong
-                >Multimedia</strong
-              > es la integración de diferentes medios como texto, imagen, audio y video para comunicar
-              ideas de manera más rica y efectiva; la <strong>Multidisciplina</strong> significa combinar
-              conocimientos y habilidades de distintas áreas, como arte (Videoarte), tecnología (IA),
-              salud (como el Tàijíquán y el Qígōng) y filosofía (como el Daoismo), para crear propuestas
-              más completas y creativas.
+              Me describo como un <strong>Realizador Multimedial</strong>: integro diferentes medios
+              (texto, imagen, audio, video) para comunicar ideas de manera más rica y efectiva.
+              También soy <strong>multidisciplinario</strong>, combinando conocimientos de arte
+              (videoarte), tecnología (IA), salud (Taijiquan y Qigong) y filosofía (Daoísmo) para
+              crear propuestas completas y creativas.
+            </p>
+            <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+              Mi formación en <strong>Medicina Tradicional China</strong> la realizo actualmente en la
+              <strong>Escuela AN MO</strong>, donde estudio los fundamentos teóricos y prácticos de
+              la acupuntura, la herbolaria y la dietética china. Esta base me permite entender y
+              enseñar el Qigong y el Taijiquan desde una perspectiva más profunda, vinculando el
+              movimiento con los conceptos de Qi, Yin-Yang y los meridianos.
             </p>
             <p class="text-lg text-text-secondary mb-6 leading-relaxed">
-              Mi propuesta es ofrecer herramientas y servicios, el autoconocimiento y la conexión
+              Llevo más de <strong>5 años</strong> practicando y enseñando estas disciplinas, y he tenido
+              la oportunidad de aprender de maestros de la tradición Wudang y de escuelas modernas. Mi
+              objetivo es ofrecer herramientas y servicios que faciliten el autoconocimiento y la conexión
               con una sabiduría atemporal, para una transformación consciente.
             </p>
             <a
@@ -244,6 +243,7 @@ const pageDescription =
       </div>
     </section>
 
+    <!-- Sección de sistemas (sin cambios, pero ya tiene buena estructura) -->
     <section id="sistemas-container" class="card-grid grid-2-cols">
       <article
         id="card-content-taiji"
@@ -260,21 +260,21 @@ const pageDescription =
           <ul
             class="list-none text-lg text-ink space-y-3 leading-relaxed mb-8 border-l-4 border-chinese-seal-red"
           >
-            <li class="pl-2 py-1">Origenes Históricos y Míticos</li>
-            <li class="pl-2 py-1">Historia de las Familias Tradicionales</li>
+            <li class="pl-2 py-1">Orígenes históricos y míticos del Taijiquan</li>
+            <li class="pl-2 py-1">Historia de las familias tradicionales (Chen, Yang, Wu, etc.)</li>
             <li class="pl-2 py-1">
               Transformación del Tàijí en la modernidad por parte del Gobierno Chino
             </li>
             <a href="/clases/taiji/historia" class="button-manuscript inline-block mt-2"
-              >Origenes del Taijiquan</a
+              >Orígenes del Taijiquan</a
             >
           </ul>
           <ul
             class="list-none text-lg text-ink space-y-3 leading-relaxed border-l-4 border-chinese-seal-red"
           >
             <li class="pl-2 py-1">
-              El Tàijíquán (Chuan significa manos) o con armas como Tàijíjiàn (Jiàn es espada), Dao
-              (Sabre) u ornamentales como el Tàijíshàn (abanico).
+              El Tàijíquán (Chuan significa "manos") o con armas como Tàijíjiàn (espada), Dao
+              (sable) u ornamentales como el Tàijíshàn (abanico).
             </li>
             <a href="/clases/taijiquan" class="button-manuscript inline-block mt-2"
               >Taijiquan y Armas</a
@@ -298,10 +298,12 @@ const pageDescription =
           <ul
             class="list-none text-lg text-ink space-y-3 leading-relaxed mb-8 border-l-4 border-chinese-seal-red"
           >
-            <li class="pl-2 py-1">Origenes Etimologicos e Históricos</li>
-            <li class="pl-2 py-1">Beneficios de la práctica del Qígōng</li>
+            <li class="pl-2 py-1">Orígenes etimológicos e históricos del Qigong</li>
+            <li class="pl-2 py-1">
+              Beneficios de la práctica del Qígōng para la salud física y mental
+            </li>
             <a href="/clases/qigong" class="button-manuscript inline-block mt-2"
-              >Origenes del Qigong</a
+              >Orígenes del Qigong</a
             >
           </ul>
 
@@ -309,7 +311,8 @@ const pageDescription =
             class="list-none text-lg text-ink space-y-3 leading-relaxed border-l-4 border-chinese-seal-red"
           >
             <li class="pl-2 py-1">
-              Diferentes sistemas que enseño para mejorar tu salud física y mental
+              Diferentes sistemas modernos y tradicionales que enseño para mejorar tu salud física y
+              mental (Ba Duan Jin, Wu Qin Xi, Zhan Zhuang, etc.)
             </li>
             <a href="/clases/qigong#galeria-qigong" class="button-manuscript inline-block mt-2"
               >Sistemas de Qígōng</a
@@ -318,6 +321,8 @@ const pageDescription =
         </div>
       </article>
     </section>
+
+    <FAQ id="faq" />
 
     <Contacto id="contacto" />
   </section>
