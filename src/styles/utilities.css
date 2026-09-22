@@ -38,12 +38,14 @@
 .section-heading-xl {
   font-size: clamp(1.875rem, 5vw, 3rem);
   margin-bottom: 3rem;
+  margin-top: 2rem;
   text-align: center;
 }
 
 .section-heading-lg {
   font-size: clamp(1.5rem, 4vw, 2.25rem);
   margin-bottom: 2rem;
+  margin-top: 1rem;
   text-align: center;
 }
 

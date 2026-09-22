@@ -1,0 +1,202 @@
+---
+import "../styles/blog.css";
+
+// 1. IMPORTAMOS LOS COMPONENTES NECESARIOS
+import MainLayout from "@/layouts/MainLayout.astro";
+import Navbar from "@/components/Navegadores/Navbar.astro";
+import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
+
+// 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
+const pageTitle = "Rodrigo Pizarro - Blog";
+const pageDescription = "Sitio personal de Rodrigo Pizarro - Blog sobre temas varios.";
+
+type BlogPost = {
+  slug: string;
+  icon: string;
+  title: string;
+  summary: string;
+  introTitle: string;
+  intro: string;
+  sectionTitle: string;
+  body: string;
+  date?: string;
+  categories: string[];
+  coverImage?: string;
+  images: { src: string; alt: string }[];
+};
+
+const blogModules = import.meta.glob("../data/blog/*.ts", {
+  eager: true,
+  import: "default",
+});
+const blogPosts = Object.values(blogModules) as BlogPost[];
+
+// Extraer categorías únicas para los botones de filtro
+const allCategories = Array.from(new Set(blogPosts.flatMap((post) => post.categories || [])));
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+  <Navbar />
+
+  <main id="main-content" class="px-6 max-w-5xl mx-auto mb-12 mt-12">
+    <section id="blog" class="min-h-screen flex flex-col justify-center section-bg-paper">
+      <div class="container mx-auto px-6">
+        <h2 class="font-title text-3xl md:text-4xl lg:text-5xl text-center mb-6">
+          Espacio de reflexión y exploración
+        </h2>
+        <p class="text-lg text-neutral-600 text-center max-w-3xl mx-auto mb-8">
+          En este blog comparto mis pensamientos, experiencias y cosas que me gustan y disgustan.Algunas serán relacionadas con el Neidan, MTC y parecidas; otras del día a dia, series, animaciónes, videos experimentales, filosofía, copypasta, entre otras cosas. Se ordenan en el orden en que salen, pero no precisamente por un orden de temas, así que podes filtrar las categorías abajo. 
+        </p>
+
+        <!-- Filtros por Categoría -->
+        <div class="mb-10">
+          <p class="text-base font-semibold mb-3">Filtrar por categorías:</p>
+          <div class="flex flex-wrap gap-2" id="filter-buttons">
+            <button
+              type="button"
+              data-filter="todos"
+              class="filter-btn active-filter interest-tag hover cursor-pointer"
+            >
+              TODOS ({blogPosts.length})
+            </button>
+            {
+              allCategories.map((cat) => {
+                const count = blogPosts.filter((p) => p.categories?.includes(cat)).length;
+                return (
+                  <button
+                    type="button"
+                    data-filter={cat}
+                    class="filter-btn interest-tag cursor-pointer"
+                  >
+                    {cat.toUpperCase()} ({count})
+                  </button>
+                );
+              })
+            }
+          </div>
+        </div>
+
+        <!-- Grid de Tarjetas -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="blog-grid">
+          {
+            blogPosts.map((post) => {
+              const imgSrc = post.coverImage || (post.images && post.images[0]?.src);
+              return (
+                <article
+                  class="custom-blog-card blog-card"
+                  data-blog-post={post.slug}
+                  data-categories={JSON.stringify(post.categories || [])}
+                  role="button"
+                  tabindex="0"
+                  aria-haspopup="dialog"
+                >
+                  <!-- Contenedor Superior: Imagen -->
+                  {imgSrc && (
+                    <div class="card-image-container">
+                      <img
+                        src={imgSrc}
+                        alt={post.title}
+                        class="card-image"
+                      />
+                    </div>
+                  )}
+
+                  <!-- Contenedor Inferior: Contenido -->
+                  <div class="card-body">
+                    {post.date && (
+                      <time class="card-date">{post.date}</time>
+                    )}
+                    <h3 class="card-title">
+                      <i aria-hidden="true" class={`fas ${post.icon || 'fa-newspaper'} text-chinese-seal-red`} />
+                      <span>{post.title}</span>
+                    </h3>
+                    <p class="card-summary">{post.summary}</p>
+
+                    <div class="card-footer">
+                      <div class="card-tags">
+                        {post.categories?.map((cat) => (
+                          <span class="interest-tag hover">
+                            {cat}
+                          </span>
+                        ))}
+                      </div>
+                      <span class="read-more-link">Leer post &rarr;</span>
+                    </div>
+                  </div>
+                </article>
+              );
+            })
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dialog Modal -->
+  <dialog id="blog-post-dialog" class="blog-post-dialog" aria-labelledby="blog-post-title">
+    <div class="blog-post-dialog__inner">
+      <button
+        class="blog-post-dialog__close"
+        type="button"
+        data-blog-close
+        aria-label="Cerrar post"
+      >
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      <article id="blog-post-content" class="blog-post-content"></article>
+      <div class="blog-post-dialog__actions">
+        <button class="button-manuscript" type="button" data-blog-share>
+          <i class="fas fa-share-alt" aria-hidden="true"></i> Compartir
+        </button>
+        <a class="button-manuscript" data-blog-whatsapp target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </dialog>
+
+  {
+    blogPosts.map((post) => (
+      <template id={`blog-post-${post.slug}`}>
+        <h1 id="blog-post-title">{post.title}</h1>
+        <h2>{post.introTitle}</h2>
+        <p>{post.intro}</p>
+        <h3>{post.sectionTitle}</h3>
+        <p>{post.body}</p>
+        <div class="blog-post-content__images">
+          {post.images.map((image) => (
+            <img src={image.src} alt={image.alt} />
+          ))}
+        </div>
+      </template>
+    ))
+  }
+
+  <script>
+    import "../js/blog-modal.js";
+
+    const filterButtons = document.querySelectorAll<HTMLButtonElement>(".filter-btn");
+    const blogCards = document.querySelectorAll<HTMLElement>(".blog-card");
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+
+        filterButtons.forEach((b) => {
+          b.classList.remove("hover");
+        });
+        btn.classList.add("hover");
+
+        blogCards.forEach((card) => {
+          const categories: string[] = JSON.parse(card.dataset.categories || "[]");
+          if (filter === "todos" || categories.includes(filter || "")) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+  <PhotoSwipeUI />
+</MainLayout>

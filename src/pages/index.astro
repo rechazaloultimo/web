@@ -6,9 +6,9 @@ import FAQ from "@/components/FAQ.astro";
 import ImagenEstatica from "@/components/galerias/ImagenEstatica.astro";
 
 // 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
-const pageTitle = "Rodrigo Pizarro - Neijia | Qigong, Taijiquan y Asistentes IA";
+const pageTitle = "Rodrigo Pizarro - Neijia | Qigong, Multimedia y MTC";
 const pageDescription =
-  "Clases de Qigong y Taijiquan presenciales en CABA, mantenimiento de microscopios y asistentes IA personalizados. Formado en la Escuela AN MO de MTC.";
+  "Clases de Qigong y Taijiquan Sun Tradicional en CABA, Argentina; mantenimiento de microscopios y estudiante de MTC.";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -47,7 +47,7 @@ const pageDescription =
         Bienvenidxs a mi web personal.<br />
         Acá encontraras información sobre los servicios que ofrezco: disciplinas chinas tradicionales
         (Qigong, Taijiquan), aplicaciones sobre la Medicina Tradicional China, combinadas con herramientas
-        digitales y el mantenimiento técnico de microscopios; entre otras cosas.
+        digitales y propuestas interactivas.
       </p>
     </div>
   </header>
@@ -87,8 +87,7 @@ const pageDescription =
             </p>
           </div>
           <div class="mt-auto pt-4">
-            <a href="/clases" class="service-link block"
-              >Ver Detalles de Clases Presenciales &rarr;</a
+            <a href="/clases" class="service-link block">Ver Detalles de Clases Grupales &rarr;</a
             ><br />
           </div>
         </div>
@@ -169,7 +168,6 @@ const pageDescription =
           </div>
         </div>
 
-        <!-- Sección de IA ahora visible y con contenido real -->
         <div class="service-card-modern fade-in" style="animation-delay: 0.6s;">
           <div>
             <h3>
@@ -191,139 +189,162 @@ const pageDescription =
             >
           </div>
         </div>
+
+        <div class="service-card-modern fade-in" style="animation-delay: 0.2s;">
+          <div>
+            <h3>
+              <i aria-hidden="true" class="fas fa-newspaper text-text-main mr-3"></i>Blog Personal
+            </h3>
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Estoy creando un blog para compartir reflexiones, experiencias y aprendizajes sobre
+              filosofía, metafísica, qigong, taijiquan, medicina tradicional china y temas de
+              interés personal.
+            </p>
+            <p class="text-lg text-ink mb-4 leading-relaxed">
+              Es un espacio para escribir con libertad, documentar mi recorrido y abrir un diálogo
+              con personas que compartan gustos parecidos.
+            </p>
+          </div>
+          <div class="mt-auto pt-4">
+            <a href="/blog" class="service-link block">Ir al Blog Personal &rarr;</a>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Sección SOBRE MÍ ampliada con más información real -->
-    <section
-      id="sobre-mi"
-      class="min-h-screen flex flex-col justify-center py-16 md:py-22 section-bg-paper"
-    >
-      <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <div class="md:w-2/5 fade-in img-mias-top">
-            <ImagenEstatica
-              imgPath="qigong-wudang/wu (0).webp"
-              altText="Rodrigo Pizarro practicando Qigong"
-              class="rounded-none shadow-xl w-full aspect-[4/5] border-2 p-1 object-cover"
-            />
-          </div>
-          <div class="md:w-3/5 fade-in">
-            <h2 class="font-title text-3xl md:text-4xl lg:text-5xl mb-6">
-              Entre lo tradicional y lo moderno
-            </h2>
-            <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-              Me describo como un <strong>Realizador Multimedial</strong>: integro diferentes medios
-              (texto, imagen, audio, video) para comunicar ideas de manera más rica y efectiva.
-              También soy <strong>multidisciplinario</strong>, combinando conocimientos de arte
-              (videoarte), tecnología (IA), salud (Taijiquan y Qigong) y filosofía (Daoísmo) para
-              crear propuestas completas y creativas.
-            </p>
-            <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-              Mi formación en <strong>Medicina Tradicional China</strong> la realizo actualmente en la
-              <strong>Escuela AN MO</strong>, donde estudio los fundamentos teóricos y prácticos de
-              la acupuntura, la herbolaria y la dietética china. Esta base me permite entender y
-              enseñar el Qigong y el Taijiquan desde una perspectiva más profunda, vinculando el
-              movimiento con los conceptos de Qi, Yin-Yang y los meridianos.
-            </p>
-            <p class="text-lg text-text-secondary mb-6 leading-relaxed">
-              Llevo más de <strong>5 años</strong> practicando y enseñando estas disciplinas, y he tenido
-              la oportunidad de aprender de maestros de la tradición Wudang y de escuelas modernas. Mi
-              objetivo es ofrecer herramientas y servicios que faciliten el autoconocimiento y la conexión
-              con una sabiduría atemporal, para una transformación consciente.
-            </p>
-            <a
-              href="/acerca-de-mi"
-              class="button-manuscript text-base md:text-lg font-semibold py-3 px-6 inline-block"
-            >
-              Te invito a leer mi historia y formación &rarr;
-            </a>
-          </div>
+  <section
+    id="sobre-mi"
+    class="min-h-screen flex flex-col justify-center py-16 md:py-22 section-bg-paper"
+  >
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="md:w-2/5 fade-in img-mias-top">
+          <ImagenEstatica
+            imgPath="qigong-wudang/wu (0).webp"
+            altText="Rodrigo Pizarro practicando Qigong"
+            class="rounded-none shadow-xl w-full aspect-[4/5] border-2 p-1 object-cover"
+          />
         </div>
-      </div>
-    </section>
-
-    <!-- Sección de sistemas (sin cambios, pero ya tiene buena estructura) -->
-    <section id="sistemas-container" class="card-grid grid-2-cols">
-      <article
-        id="card-content-taiji"
-        class="fade-in card-content-container"
-        style="animation-delay: 0.2s;"
-      >
-        <div class="card-content">
-          <h2 class="font-title">
-            <i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Tàijí (Tai Chi)
-          </h2>
-          <p class="text-lg text-text-secondary mb-6 leading-relaxed">
-            Me interesa teorizar y compartir conocimiento, por eso te brindo esta sección sobre:
-          </p>
-          <ul
-            class="list-none text-lg text-ink space-y-3 leading-relaxed mb-8 border-l-4 border-chinese-seal-red"
-          >
-            <li class="pl-2 py-1">Orígenes históricos y míticos del Taijiquan</li>
-            <li class="pl-2 py-1">Historia de las familias tradicionales (Chen, Yang, Wu, etc.)</li>
-            <li class="pl-2 py-1">
-              Transformación del Tàijí en la modernidad por parte del Gobierno Chino
-            </li>
-            <a href="/clases/taiji/historia" class="button-manuscript inline-block mt-2"
-              >Orígenes del Taijiquan</a
-            >
-          </ul>
-          <ul
-            class="list-none text-lg text-ink space-y-3 leading-relaxed border-l-4 border-chinese-seal-red"
-          >
-            <li class="pl-2 py-1">
-              El Tàijíquán (Chuan significa "manos") o con armas como Tàijíjiàn (espada), Dao
-              (sable) u ornamentales como el Tàijíshàn (abanico).
-            </li>
-            <a href="/clases/taijiquan" class="button-manuscript inline-block mt-2"
-              >Taijiquan y Armas</a
-            >
-          </ul>
-        </div>
-      </article>
-
-      <article
-        id="card-content-qigong"
-        class="fade-in card-content-container"
-        style="animation-delay: 0.2s;"
-      >
-        <div class="card-content">
-          <h2 class="font-title">
-            <i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Qígōng (Chi Kung)
+        <div class="md:w-3/5 fade-in">
+          <h2 class="font-title text-3xl md:text-4xl lg:text-5xl mb-6">
+            Entre lo tradicional y lo moderno
           </h2>
           <p class="text-lg text-text-secondary mb-4 leading-relaxed">
-            Aprender sobre Qigong, por eso te brindo esta sección que abarca:
+            Me describo como un <strong>Realizador Multimedial</strong>: integro diferentes medios
+            (texto, imagen, audio, video, programación) para comunicarme. También soy <strong
+              >multidisciplinario</strong
+            >, combinando conocimientos de arte (videoarte), tecnología (IA/Web), salud
+            (MTC/Qigong), artes marciales internas (Taijiquan) y filosofía (Daoísmo) para crear
+            propuestas completas y creativas.
           </p>
-          <ul
-            class="list-none text-lg text-ink space-y-3 leading-relaxed mb-8 border-l-4 border-chinese-seal-red"
+          <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+            Actualmente estoy centrnado mi formación en dos pilares: <strong>Neijia Sun</strong> con el
+            <strong> Maestro Jorge Quiñones</strong>, primer representante occidental reconocido por
+            la Asociación de Artes Marciales de de Sun Lutang de Dingxing, China. Y en <strong
+              >Medicina Tradicional China</strong
+            > con la
+            <strong> Escuela AN MO</strong>, donde estudio los fundamentos teóricos y prácticos,
+            como acupuntura o masaje Tui Na. Esta base me permite entender y enseñar el Qigong y el
+            Taijiquan desde una perspectiva más profunda, vinculando el movimiento con los conceptos
+            de Qi, Yin-Yang y los meridianos.
+          </p>
+          <p class="text-lg text-text-secondary mb-6 leading-relaxed">
+            Llevo más de <strong>5 años</strong> practicando estas disciplinas, y he tenido la oportunidad
+            de aprender de escuelas modernas y actualmente de tradicionales. Mi objetivo es ofrecer herramientas
+            y servicios que faciliten el autoconocimiento y la conexión con una sabiduría atemporal, para
+            una transformación consciente.
+          </p>
+          <a
+            href="/acerca-de-mi"
+            class="button-manuscript text-base md:text-lg font-semibold py-3 px-6 inline-block"
           >
-            <li class="pl-2 py-1">Orígenes etimológicos e históricos del Qigong</li>
-            <li class="pl-2 py-1">
-              Beneficios de la práctica del Qígōng para la salud física y mental
-            </li>
-            <a href="/clases/qigong" class="button-manuscript inline-block mt-2"
-              >Orígenes del Qigong</a
-            >
-          </ul>
-
-          <ul
-            class="list-none text-lg text-ink space-y-3 leading-relaxed border-l-4 border-chinese-seal-red"
-          >
-            <li class="pl-2 py-1">
-              Diferentes sistemas modernos y tradicionales que enseño para mejorar tu salud física y
-              mental (Ba Duan Jin, Wu Qin Xi, Zhan Zhuang, etc.)
-            </li>
-            <a href="/clases/qigong#galeria-qigong" class="button-manuscript inline-block mt-2"
-              >Sistemas de Qígōng</a
-            >
-          </ul>
+            Te invito a leer mi historia y formación &rarr;
+          </a>
         </div>
-      </article>
-    </section>
-
-    <FAQ id="faq" />
-
-    <Contacto id="contacto" />
+      </div>
+    </div>
   </section>
+
+  <section id="sistemas-container" class="card-grid grid-2-cols">
+    <article
+      id="card-content-taiji"
+      class="fade-in card-content-container"
+      style="animation-delay: 0.2s;"
+    >
+      <div class="card-content">
+        <h2 class="font-title">
+          <i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Tàijí (Tai Chi)
+        </h2>
+        <p class="text-lg text-text-secondary mb-6 leading-relaxed">
+          Me interesa teorizar y compartir conocimiento, por eso te brindo esta sección sobre:
+        </p>
+        <ul
+          class="list-none text-lg text-ink space-y-3 leading-relaxed mb-8 border-l-4 border-chinese-seal-red"
+        >
+          <li class="pl-2 py-1">Orígenes históricos y míticos del Taijiquan</li>
+          <li class="pl-2 py-1">Historia de las familias tradicionales (Chen, Yang, Wu, etc.)</li>
+          <li class="pl-2 py-1">
+            Transformación del Tàijí en la modernidad por parte del Gobierno Chino
+          </li>
+          <a href="/clases/taiji/historia" class="button-manuscript inline-block mt-2"
+            >Orígenes del Taijiquan</a
+          >
+        </ul>
+        <ul
+          class="list-none text-lg text-ink space-y-3 leading-relaxed border-l-4 border-chinese-seal-red"
+        >
+          <li class="pl-2 py-1">
+            El Tàijíquán (Chuan significa "manos") o con armas como Tàijíjiàn (espada), Dao (sable)
+            u ornamentales como el Tàijíshàn (abanico).
+          </li>
+          <a href="/clases/taijiquan" class="button-manuscript inline-block mt-2"
+            >Taijiquan y Armas</a
+          >
+        </ul>
+      </div>
+    </article>
+
+    <article
+      id="card-content-qigong"
+      class="fade-in card-content-container"
+      style="animation-delay: 0.2s;"
+    >
+      <div class="card-content">
+        <h2 class="font-title">
+          <i aria-hidden="true" class="fas fa-yin-yang text-text-main mr-3"></i>Qígōng (Chi Kung)
+        </h2>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Aprender sobre Qigong, por eso te brindo esta sección que abarca:
+        </p>
+        <ul
+          class="list-none text-lg text-ink space-y-3 leading-relaxed mb-8 border-l-4 border-chinese-seal-red"
+        >
+          <li class="pl-2 py-1">Orígenes etimológicos e históricos del Qigong</li>
+          <li class="pl-2 py-1">
+            Beneficios de la práctica del Qígōng para la salud física y mental
+          </li>
+          <a href="/clases/qigong" class="button-manuscript inline-block mt-2"
+            >Orígenes del Qigong</a
+          >
+        </ul>
+
+        <ul
+          class="list-none text-lg text-ink space-y-3 leading-relaxed border-l-4 border-chinese-seal-red"
+        >
+          <li class="pl-2 py-1">
+            Diferentes sistemas modernos y tradicionales que enseño para mejorar tu salud física y
+            mental (Ba Duan Jin, Wu Qin Xi, Zhan Zhuang, etc.)
+          </li>
+          <a href="/clases/qigong#galeria-qigong" class="button-manuscript inline-block mt-2"
+            >Sistemas de Qígōng</a
+          >
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <FAQ id="faq" />
+
+  <Contacto id="contacto" />
 </MainLayout>
