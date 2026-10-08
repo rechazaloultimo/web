@@ -1,0 +1,78 @@
+---
+import { getSession } from "auth-astro/server";
+import EditorHeader from "../../../components/auriculoterapia/EditorHeader.astro";
+import EditorSessionPanel from "../../../components/auriculoterapia/EditorSessionPanel.astro";
+import EditorConsultaPanel from "../../../components/auriculoterapia/EditorConsultaPanel.astro";
+import EditorGalleryPanel from "../../../components/auriculoterapia/EditorGalleryPanel.astro";
+import EditorPuntosPanel from "../../../components/auriculoterapia/EditorPuntosPanel.astro";
+import EditorCanvas from "../../../components/auriculoterapia/EditorCanvas.astro";
+import "../../../styles/auriculoterapia/editor.css";
+
+const authSession = await getSession(Astro.request);
+if (!authSession?.user?.id) return Astro.redirect("/servicios/auriculoterapia");
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auriculoterapia — Editor</title>
+  </head>
+  <body>
+    <main>
+      <section class="ear-column" data-col="col1">
+        <EditorHeader col="col1" showEmoji={true} />
+
+        <div class="ear-workspace">
+          <aside class="ear-panel" id="panelCol1">
+            <div class="panel-content">
+              <EditorSessionPanel col="col1" />
+              <EditorConsultaPanel col="col1" />
+              <EditorGalleryPanel col="col1" />
+              <EditorPuntosPanel col="col1" />
+
+              <div class="export-panel" id="exportPanelCol1">
+                <div class="panel-section-title">Exportar contenido</div>
+                <div class="export-panel-body">
+                  <button id="btnExportTxtCol1" class="btn-export" type="button">
+                    Descargar .txt
+                  </button>
+                  <textarea
+                    id="exportPreviewCol1"
+                    class="export-preview"
+                    readonly
+                    rows="8"
+                    placeholder="El contenido exportado aparecerá aquí..."></textarea>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <EditorCanvas col="col1" />
+        </div>
+      </section>
+
+      <section class="ear-column" data-col="col2">
+        <EditorHeader col="col2" showEmoji={false} />
+
+        <div class="ear-workspace">
+          <EditorCanvas col="col2" />
+
+          <aside class="ear-panel" id="panelCol2">
+            <div class="panel-content">
+              <EditorSessionPanel col="col2" />
+              <EditorConsultaPanel col="col2" />
+              <EditorGalleryPanel col="col2" />
+              <EditorPuntosPanel col="col2" />
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script type="module">
+      import "../../../js/auriculoterapia/editor-app.js";
+    </script>
+  </body>
+</html>

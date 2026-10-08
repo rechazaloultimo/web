@@ -1,0 +1,24 @@
+---
+const { col = "col1", showEmoji = false } = Astro.props;
+const suffix = col === "col1" ? "Col1" : "Col2";
+const isLeft = col === "col1";
+---
+
+<header class="ear-header">
+  <div class="ear-header-left">
+    <button class="toggle-panel-btn" data-col={col}>≡ Panel</button>
+    <div class="ear-title-container">
+      <select class="ear-selector" id={`selectLado${suffix}`} data-col={col}>
+        <option value="IZQUIERDA" selected={isLeft}>IZQUIERDA</option>
+        <option value="DERECHA" selected={!isLeft}>DERECHA</option>
+      </select>
+      <span class="ear-patient-info" id={`info${suffix}`}>- Sin Paciente [dd/mm/aaaa] - S: --</span>
+    </div>
+  </div>
+  <div class="zoom-controls">
+    <button class="zoom-out" data-col={col}>−</button>
+    <span class="zoom-level" data-col={col}>100%</span>
+    <button class="zoom-in" data-col={col}>+</button>
+    <button class="btn-panel zoom-reset" data-col={col}>⟲ Reset Zoom</button>
+  </div>
+</header>

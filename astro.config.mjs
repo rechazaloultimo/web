@@ -1,23 +1,26 @@
 // astro.config.mjs
-import { defineConfig } from 'astro/config';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import svelte from '@astrojs/svelte';
+import { defineConfig } from "astro/config";
+import path from "path";
+import { fileURLToPath } from "url";
+import svelte from "@astrojs/svelte";
+import node from "@astrojs/node";
+import auth from "auth-astro";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  // Tu dominio final sin barra al final
-  site: 'https://rodrigopizarro.com.ar', 
-  base: '/',
+  output: "server",
+  adapter: node({ mode: "standalone" }),
+  site: "https://rodrigopizarro.com.ar",
+  base: "/",
 
   vite: {
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './src'),
+        "@": path.resolve(__dirname, "./src"),
       },
     },
   },
-  integrations: [svelte()],
+  integrations: [svelte(), auth()],
 });

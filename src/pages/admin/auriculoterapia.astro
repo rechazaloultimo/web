@@ -1,0 +1,262 @@
+---
+import { getEditorUser } from "../../lib/auriculoterapia-auth";
+
+const user = await getEditorUser(Astro.request);
+if (!user) return Astro.redirect("/servicios/auriculoterapia");
+if (user.role !== "admin")
+  return new Response("Acceso solo para administradores.", { status: 403 });
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administración de Auriculoterapia</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Segoe UI", sans-serif;
+        background: #f3f5f4;
+        color: #18231d;
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 32px 20px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      a {
+        color: #19633b;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        background: #fff;
+        border: 1px solid #d7ded9;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 620px;
+      }
+      th,
+      td {
+        padding: 12px 14px;
+        text-align: left;
+        border-bottom: 1px solid #e2e8e4;
+      }
+      th {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        background: #eaf0ec;
+      }
+      select {
+        min-width: 130px;
+        padding: 8px;
+        border: 1px solid #aebbb2;
+        background: white;
+        color: inherit;
+      }
+      input,
+      textarea,
+      button {
+        font: inherit;
+      }
+      input,
+      textarea {
+        padding: 8px;
+        border: 1px solid #aebbb2;
+        background: white;
+        color: inherit;
+      }
+      button {
+        padding: 8px 12px;
+        border: 1px solid #aebbb2;
+        background: white;
+        color: inherit;
+        cursor: pointer;
+      }
+      button:hover {
+        border-color: #19633b;
+      }
+      button:disabled {
+        opacity: 0.55;
+        cursor: wait;
+      }
+      .admin-tabs,
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 16px 0;
+      }
+      .admin-tabs button[aria-selected="true"] {
+        background: #19633b;
+        border-color: #19633b;
+        color: white;
+      }
+      .admin-view[hidden] {
+        display: none;
+      }
+      .admin-section {
+        margin: 24px 0;
+      }
+      .admin-section h2 {
+        font-size: 1.1rem;
+      }
+      .admin-section table {
+        min-width: 760px;
+      }
+      .filters input {
+        flex: 1 1 240px;
+      }
+      .filters select {
+        flex: 0 1 220px;
+      }
+      dialog {
+        width: min(900px, calc(100vw - 32px));
+        border: 1px solid #aebbb2;
+      }
+      dialog::backdrop {
+        background: #10201888;
+      }
+      dialog textarea {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 55vh;
+        font: 12px/1.5 monospace;
+      }
+      .dialog-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      #status {
+        min-height: 1.5em;
+        color: #31553e;
+      }
+      .error {
+        color: #9e2a2b !important;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Usuarios y planes</h1>
+        <a href="/servicios/auriculoterapia/app">Volver al editor</a>
+      </header>
+      <nav class="admin-tabs" aria-label="Secciones de administración">
+        <button type="button" data-admin-tab="users" aria-selected="true">Usuarios y planes</button>
+        <button type="button" data-admin-tab="clinical" aria-selected="false"
+          >Gestión clínica</button
+        >
+        <button type="button" data-admin-tab="audit" aria-selected="false">Auditoría</button>
+      </nav>
+
+      <section class="admin-view" id="view-users">
+        <p id="status" role="status">Cargando usuarios…</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Usuario</th><th>Email</th><th>Rol</th><th>Plan</th><th>Acciones</th></tr>
+            </thead>
+            <tbody id="users"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-view" id="view-clinical" hidden>
+        <p id="clinical-status" role="status">Cargando datos clínicos…</p>
+        <div class="filters">
+          <input
+            id="clinical-search"
+            type="search"
+            placeholder="Buscar paciente, terapeuta o fecha"
+          />
+          <select id="clinical-therapist" aria-label="Filtrar por terapeuta"
+            ><option value="">Todos los terapeutas</option></select
+          >
+          <select id="clinical-patient" aria-label="Filtrar por paciente"
+            ><option value="">Todos los pacientes</option></select
+          >
+          <button type="button" id="clinical-refresh">Actualizar</button>
+        </div>
+        <section class="admin-section">
+          <h2>Pacientes</h2>
+          <div class="table-wrap">
+            <table>
+              <thead
+                ><tr
+                  ><th>Paciente</th><th>Terapeuta propietario</th><th>Sesiones</th><th>Acciones</th
+                  ></tr
+                ></thead
+              >
+              <tbody id="clinical-patients"></tbody>
+            </table>
+          </div>
+        </section>
+        <section class="admin-section">
+          <h2>Sesiones clínicas</h2>
+          <div class="table-wrap">
+            <table>
+              <thead
+                ><tr
+                  ><th>Fecha</th><th>Paciente</th><th>Terapeuta</th><th>Sesión</th><th>Puntos</th
+                  ><th>Imágenes</th><th>Acciones</th></tr
+                ></thead
+              >
+              <tbody id="clinical-sessions"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <section class="admin-view" id="view-audit" hidden>
+        <p id="audit-status" role="status">Cargando auditoría…</p>
+        <div class="table-wrap">
+          <table>
+            <thead
+              ><tr
+                ><th>Fecha</th><th>Actor</th><th>Acción</th><th>Tipo</th><th>Objetivo</th><th
+                  >Detalles</th
+                ></tr
+              ></thead
+            >
+            <tbody id="audit-events"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <dialog id="session-editor">
+        <form method="dialog">
+          <h2 id="session-editor-title">Editar sesión clínica</h2>
+          <p>JSON de la consulta (sin datos binarios; las imágenes se referencian por GridFS).</p>
+          <textarea id="session-editor-json" spellcheck="false"></textarea>
+          <div class="dialog-actions">
+            <button type="button" id="session-editor-cancel">Cancelar</button>
+            <button type="button" id="session-editor-save">Guardar cambios</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+    <script>
+      import "../../js/auriculoterapia/admin-users.js";
+      import "../../js/auriculoterapia/admin-clinical.js";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+---
+const { col = "col1" } = Astro.props;
+const suffix = col === "col1" ? "Col1" : "Col2";
+const materialOptions = [
+  { value: "vacaria", label: "Vacaria" },
+  { value: "mostaza", label: "Mostaza" },
+  { value: "chinchetas", label: "Chinchetas" },
+  { value: "agujas", label: "Agujas" },
+];
+const tecnicaOptions = [
+  { value: "moxa", label: "Moxa" },
+  { value: "sangria", label: "Sangría" },
+  { value: "masajes", label: "Masajes" },
+];
+const zonaOptions = [
+  { value: "lobulo", label: "Lóbulo" },
+  { value: "trago", label: "Trago / Antitrago" },
+  { value: "helix", label: "Hélix / Cauda" },
+  { value: "antihelix", label: "Antihélix (Ramas)" },
+  { value: "concha_cava", label: "Concha Cava" },
+  { value: "concha_cymba", label: "Concha Cymba" },
+  { value: "fosa_triangular", label: "Fosa Triangular" },
+  { value: "escafa", label: "Escafa" },
+];
+---
+
+<div class="panel-section-title collapsible" id={`titleConsulta${suffix}`}>
+  <span>Datos de Consulta</span>
+  <span class="toggle-icon">▼</span>
+</div>
+<div class="collapsible-content" id={`gridConsulta${suffix}`}>
+  <div class="clinic-form-grid">
+    <div class="session-meta-grid">
+      <div class="clinic-field">
+        <label for={`paciente${suffix}`}>Seleccionar paciente</label>
+        <select id={`paciente${suffix}`}></select>
+      </div>
+      <div class="clinic-field">
+        <label for={`fecha${suffix}`}>Fecha</label>
+        <input type="date" class="input-fecha" id={`fecha${suffix}`} />
+      </div>
+      <select id={`terapeuta${suffix}`} hidden aria-hidden="true"></select>
+    </div>
+
+    <div class="clinic-field">
+      <label for={`nuevoPaciente${suffix}`}>Nuevo paciente</label>
+      <input
+        class="patient-name-input"
+        type="text"
+        id={`nuevoPaciente${suffix}`}
+        placeholder="Nombre del paciente"
+        aria-label="Nombre del paciente"
+      />
+      <div class="directory-row patient-directory-actions">
+        <button
+          class="btn-panel"
+          type="button"
+          data-add-person="paciente"
+          data-col={col}
+          title="Agregar paciente"
+          aria-label="Agregar paciente">Agregar paciente</button
+        >
+        <button
+          class="btn-panel"
+          type="button"
+          data-rename-person="paciente"
+          data-col={col}
+          title="Modificar nombre del paciente"
+          aria-label="Modificar nombre del paciente">Modificar nombre</button
+        >
+      </div>
+      <small class="patient-status" id={`patientStatus${suffix}`} aria-live="polite"></small>
+    </div>
+
+    <div class="clinic-field">
+      <label for={`sesion${suffix}`}>Sesión</label>
+      <div class="session-stepper">
+        <button
+          class="btn-panel"
+          type="button"
+          data-session-step="-1"
+          data-col={col}
+          title="Reducir sesión"
+          aria-label="Reducir sesión">−</button
+        >
+        <input type="number" min="1" step="1" placeholder="1" id={`sesion${suffix}`} />
+        <button
+          class="btn-panel"
+          type="button"
+          data-session-step="1"
+          data-col={col}
+          title="Aumentar sesión"
+          aria-label="Aumentar sesión">+</button
+        >
+      </div>
+    </div>
+
+    <div class="clinic-field">
+      <label>Motivo</label>
+      <textarea id={`motivo${suffix}`} placeholder="Diagnóstico..."></textarea>
+    </div>
+
+    <div class="clinic-field">
+      <label>Material Utilizado</label>
+      <div class="checkbox-group">
+        {
+          materialOptions.map((option) => (
+            <label class="checkbox-item">
+              <input type="checkbox" name={`material_${col}`} value={option.value} />
+              {option.label}
+            </label>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="clinic-field">
+      <label>Técnicas Complementarias</label>
+      <div class="checkbox-group">
+        {
+          tecnicaOptions.map((option) => (
+            <label class="checkbox-item">
+              <input type="checkbox" name={`tecnica_${col}`} value={option.value} />
+              {option.label}
+            </label>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="clinic-field">
+      <label>Dureza / Alteración en Zona</label>
+      <div class="checkbox-group">
+        {
+          zonaOptions.map((option) => (
+            <label class="checkbox-item">
+              <input type="checkbox" name={`zona_${col}`} value={option.value} />
+              {option.label}
+            </label>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="clinic-field">
+      <label>Respuesta del Paciente</label>
+      <textarea
+        id={`respuesta${suffix}`}
+        placeholder="Sensación, dolor a la palpación, evolución..."></textarea>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <button class="btn-panel btn-primary" id={`btnGuardar${suffix}`}>💾 Guardar</button>
+    <button class="btn-panel" id={`btnRecargar${suffix}`}>⟲ Recargar</button>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+---
+const { col = "col1" } = Astro.props;
+const suffix = col === "col1" ? "Col1" : "Col2";
+---
+
+<div class="panel-section-title collapsible" id={`titlePuntos${suffix}`}>
+  <span>Puntos &amp; Packs</span>
+  <span class="toggle-icon">▼</span>
+</div>
+<div class="collapsible-content" id={`gridPuntos${suffix}`}>
+  <div class="panel-slot" data-col={col}></div>
+</div>

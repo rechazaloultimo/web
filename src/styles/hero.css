@@ -92,6 +92,11 @@
   background-image: url("/background/sistemas/wudangqigong.webp");
 }
 
+/* Sistemas: Wu Qin Xi */
+.hero-wuqinxi-bg {
+  background-image: url("../images/sistemas/wuqinxi.webp");
+}
+
 /* Clases virtuales (actualmente comentado en el original) */
 .hero-clases-virtuales-bg,
 #card-content-virtuales {

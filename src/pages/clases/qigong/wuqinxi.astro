@@ -1,0 +1,2703 @@
+---
+// 1. IMPORTAMOS LOS COMPONENTES NECESARIOS
+import MainLayout from "@/layouts/MainLayout.astro";
+import CardGaleria from "@/components/galerias/CardGaleria.astro";
+import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
+import NavWuqinxi from "@/components/Navegadores/Nav-Wuxinqi.astro";
+
+// 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
+const pageTitle = "Rodrigo Pizarro - Wu Qin Xi";
+const pageDescription =
+  "Información sobre Wu Qin Xi impartidas por Rodrigo Pizarro en CABA, Argentina.";
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+  <NavWuqinxi />
+
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+  <header
+    id="header"
+    class="hero-fullscreen-bg hero-wuqinxi-bg hero-banner h-screen flex flex-col items-center justify-center relative"
+  >
+    <div class="container mx-auto px-6 text-center py-8 md:py-12 relative z-10">
+      <h1
+        class="font-title text-5xl sm:text-6xl md:text-7xl mb-8 fade-in"
+        style="animation-delay: 0.2s;"
+      >
+        Wu Qin Xi
+      </h1>
+      <h2
+        class="text-xl sm:text-2xl md:text-3xl mb-12 fade-in font-title"
+        style="animation-delay:0.4s"
+      >
+        El Juego de los Cinco Animales
+      </h2>
+      <p
+        class="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-200 fade-in"
+        style="animation-delay:0.6s;"
+      >
+        Información sobre la serie de Qigong Oficial de 10 movimientos y sus variantes oficiales y
+        tradicionales, basada en la imitación física y energética del tigre, el ciervo, el oso, el
+        mono y la grulla.
+      </p>
+    </div>
+  </header>
+
+  <section id="historia" class="container mx-auto px-6 py-12 md:py-20">
+    <div id="titulo" class="mx-auto text-center mb-12">
+      <i aria-hidden="true" class="fas fa-user-circle text-6xl text-chinese-seal-red mb-6"></i>
+      <h2 class="font-title text-4xl md:text-5xl text-title-ink mb-6">Origen de los Ejercicios</h2>
+    </div>
+
+    <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+      El <strong>Wu Qin Xi (五禽戏 – Juego de los Cinco Animales)</strong> es una de las prácticas de
+      <strong>Daoyin (导引)</strong> más antiguas y representativas de la cultura china. Se atribuye su
+      creación al célebre médico <strong>Hua Tuo (华佗, c. 145–208 d.C.)</strong>, quien vivió
+      durante la Dinastía Han Oriental y desarrolló este sistema de ejercicios observando los
+      movimientos y comportamientos de cinco animales: el <>
+        el tigre, el ciervo, el oso, el mono y el ave (generalmente representada por la grulla). Su
+        propósito original era <strong
+          >prevenir enfermedades, fortalecer el cuerpo y prolongar la vida</strong
+        >, sentando las bases de lo que hoy conocemos como qigong médico.
+      </>
+
+      <p class="text-lg text-text-secondary mb-4 leading-relaxed"> La práctica se fundamenta en la <strong>medicina tradicional china</strong>. Cada animal representa una cualidad energética, un movimiento y una actitud específicos que, al ser imitados, <strong>estimulan órganos y meridianos concretos</strong>, armonizando el flujo de <strong>Qi</strong> y sangre. Como se detalla en los textos clásicos y en los materiales de práctica contemporáneos, el Wu Qin Xi <strong>combina dureza y suavidad, complementa el Yin y el Yang</strong> y encarna el principio filosófico de la <strong>unidad del cielo y el hombre. </strong></p>
+
+      <details>
+        <summary class="ocultar-summary">
+          <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+            <span class="text-chinese-seal-red">Mas información</span>
+          </p>
+        </summary>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          Raíces antiguas: el Daoyin antes de Hua Tuo
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          El Wu Qin Xi no surgió de la nada. <strong
+            >Hua Tuo heredó y sistematizó prácticas de Daoyin (conducción y estiramiento) que ya
+            existían desde tiempos remotos.</strong
+          > Según los historiadores, la primera mención escrita de la palabra <strong
+            >导引 (Daoyin)</strong
+          > aparece en el <strong>capítulo 15 del Zhuangzi</strong> (obra de los siglos IV–III a.C.),
+          donde se describe a quienes “expulsan el aliento viejo y toman el nuevo… imitando al oso y al
+          pájaro para conservar cuerpo y alma”.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Hua Tuo partió de estas bases, en particular de la práctica conocida como <strong
+            >“二禽戏” (Juego de los Dos Animales)</strong
+          > —el oso y el ave— mencionada en el Zhuangzi, y la amplió a cinco animales, incorporando su
+          profundo conocimiento de <strong>anatomía, acupuntura, moxibustión y fitoterapia</strong>.
+          Así, el Wu Qin Xi se convirtió en un sistema completo que combinaba <strong
+            >movimiento corporal, respiración y regulación mental</strong
+          >.
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          El registro histórico: Hua Tuo y sus discípulos
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          La primera referencia escrita al Wu Qin Xi aparece en el <strong
+            >Registro de los Tres Reinos (三国志 – Sanguozhi)</strong
+          > de Chen Shou (西晋, siglo III d.C.), en la biografía de Hua Tuo.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Hua Tuo transmitió su arte a sus discípulos <strong>Wu Pu (吴普) y Fan A (樊阿)</strong>.
+          Según los registros, ambos practicaron el Wu Qin Xi durante toda su vida: <strong
+            >Wu Pu vivió hasta los noventa y tantos años y Fan A superó los cien</strong
+          >, lo que en aquella época se consideró un verdadero milagro de longevidad. Wu Pu dejó
+          testimonio escrito de la práctica, que luego fue recogida y compilada por el médico
+          taoísta <strong>Tao Hongjing (陶弘景, 456–536 d.C.)</strong> en su obra
+          <strong
+            >“Yangsheng Yanming Lu” (养性延命录)(Registro sobre la conservación de la vida y la
+            prolongación de la existencia)</strong
+          >.
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          La descripción clásica de Tao Hongjing
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Tao Hongjing no solo describió los movimientos de cada animal con detalle, sino que
+          estableció el principio fundamental de la práctica: <strong
+            >“Practicar según la propia fuerza, tomando la sudoración como medida”
+            (任力为之，以汗出为度)</strong
+          >. En su texto se describen las posturas de cada animal:
+        </p>
+        <ul class="list-none text-lg text-ink space-y-2 leading-relaxed mb-4">
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Tigre (虎戏):</strong> Con las cuatro extremidades en el suelo, dar tres pasos hacia
+            adelante y dos hacia atrás; estirar la cintura y mirar al cielo.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Ciervo (鹿戏):</strong> Con las cuatro extremidades en el suelo, girar el cuello y
+            mirar hacia atrás; extender las patas izquierda y derecha alternativamente.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Oso (熊戏):</strong> Acostado boca arriba, abrazar las rodillas con ambas manos, levantar
+            la cabeza y rodar hacia la izquierda y la derecha.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Mono (猿戏):</strong> Colgarse de una rama, estirar y encoger el cuerpo; usar los
+            pies para sujetarse y colgarse.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Ave (鸟戏):</strong> Con los brazos extendidos, levantar un pie, extender ambas alas
+            y batir las alas.
+          </li>
+        </ul>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Esta obra es considerada el <strong
+            >texto más antiguo conservado que describe la forma concreta de ejecutar los movimientos</strong
+          >, y sus versiones se acercan a lo que Hua Tuo enseñó originalmente.
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          Evolución histórica: de la antigüedad a la era moderna
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          A lo largo de los siglos, el Wu Qin Xi se transmitió de generación en generación, a menudo
+          <strong>por transmisión secreta</strong> dentro de linajes familiares o de maestros a discípulos.
+          Durante las dinastías <strong>Tang y Song</strong>, la práctica se popularizó y fue
+          mencionada en numerosos poemas y textos médicos. En las dinastías <strong
+            >Ming y Qing</strong
+          > se sistematizó y se añadieron ilustraciones, destacando obras como el
+          <strong>“Cinnabar Book of Longevity” (赤凤髓 – Chifeng Sui)</strong> de Gong Juzhong, que contiene
+          xilografías claras de los cinco animales.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          En el <strong>siglo XX</strong>, el Wu Qin Xi siguió dos caminos paralelos:
+        </p>
+        <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4">
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>En China continental:</strong> Tras la fundación de la República Popular, el Estado
+            promovió el qigong como herramienta de salud pública. En <strong>2002</strong>, la
+            Administración General de Deportes de China organizó a expertos para crear el
+            <strong>“Fitness Qigong – Wu Qin Xi” (健身气功·五禽戏)</strong>, una versión
+            estandarizada, científica, sencilla y segura, basada en la esencia de las tradiciones
+            antiguas y adaptada a las necesidades modernas. Esta versión es hoy la más practicada en
+            el mundo.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>En Taiwán:</strong> Tras la guerra civil (1927–1950), muchos maestros de artes marciales
+            y qigong se refugiaron en la isla, preservando tradiciones que en el continente estaban siendo
+            suprimidas. Una figura clave fue <strong>Zhang Jingying (张镜影, 1899–1980)</strong>,
+            quien aprendió el Wu Qin Xi de maestros taoístas en la montaña Qingcheng (Sichuan) y se
+            convirtió en el <strong>primer maestro en enseñar el arte de Hua Tuo en Taiwán</strong>,
+            comenzando en 1956 en el Yuan Legislativo. Su versión original constaba de
+            <strong>125 movimientos</strong>, y solo dos de sus más de ochenta estudiantes iniciales
+            lograron dominarla por completo.
+          </li>
+        </ul>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Uno de los cinco discípulos directos de Zhang Jingying fue <strong
+            >Guo Tingxian (郭廷献, 1925–2003)</strong
+          >, quien popularizó el Wu Qin Xi por toda Taiwán, creando rutinas abreviadas y fundando
+          institutos de investigación y enseñanza. Otro discípulo,
+          <strong>Li Qinghan (李清汉)</strong>, enseñó cuatro versiones diferentes: la original de
+          Zhang, una con movimientos repetidos eliminados, una rutina concisa y una simplificada. En
+          la actualidad, el maestro <strong>Lin Jianhong (林建宏)</strong>, presidente de la
+          Asociación Hua Tuo de Cinco Animales de Taiwán, enseña una versión de <strong
+            >84 movimientos en ocho secciones</strong
+          >, que requiere una práctica lenta y profundamente relajada.
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          Reconocimiento como Patrimonio Cultural
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          En <strong>2011</strong>, el <strong>“Hua Tuo Wu Qin Xi” (华佗五禽戏)</strong> fue incluido
+          en la <strong>tercera lista de Patrimonio Cultural Inmaterial de China</strong>,
+          reconociendo su valor histórico, su contribución a la salud pública y su profundo
+          significado cultural. El proyecto está inscrito con el número <strong>Ⅵ-63</strong> en la categoría
+          de
+          <strong>“Deportes tradicionales, juegos y acrobacias”</strong>, y su región de origen es
+          <strong>Bozhou, provincia de Anhui</strong>, lugar de nacimiento de Hua Tuo.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Hoy, el Wu Qin Xi se practica en todo el mundo. En Bozhou, su ciudad natal, existen más de
+          <strong>100 centros de enseñanza y unos 1.400 instructores</strong> que guían a más de
+          <strong>100.000 practicantes</strong>. Al menos <strong
+            >1.600 entusiastas de más de 10 países</strong
+          > han viajado a Bozhou para aprender el arte directamente de sus herederos. La práctica ha trascendido
+          fronteras, demostrando la vigencia de la sabiduría de Hua Tuo: un ejercicio alegre, modelado
+          sobre animales juguetones, que nutre la salud y previene la enfermedad, sin necesidad de temer
+          a “leones, tigres y osos”.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Como resume el artículo de Michael A. DeMarco: <strong
+            >“El Wu Qin Xi de Hua Tuo representa una joya de la cultura física china, empaquetada en
+            un ejercicio alegre modelado sobre animales juguetones. Aprender es divertido, con
+            muchos beneficios que dan incentivo al practicante para entrenar con regularidad.”</strong
+          >
+        </p>
+
+        <!-- Referencias -->
+        <details id="referencias-historia" class="mt-10">
+          <summary class="ocultar-summary">
+            <p class="text-lg text-text-secondary leading-relaxed">
+              <span class="text-chinese-seal-red"
+                >Mas información sobre las referencias y fuentes del [1] al [10]</span
+              >
+            </p>
+          </summary>
+          <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4">
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              [1] Chen Shou (西晋, siglo III d.C.). <em
+                >Registro de los Tres Reinos (三国志 – Sanguozhi)</em
+              >. Biografía de Hua Tuo. Primera referencia escrita al Wu Qin Xi.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              [2] Zhuang Zhou (siglos IV–III a.C.). <em>Zhuangzi</em>, capítulo 15. Primera mención
+              escrita del término <em>Daoyin</em> (导引).
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              [3] Tao Hongjing (陶弘景, siglo VI d.C.). <em>Yangsheng Yanming Lu (养性延命录)</em>.
+              Descripción detallada de los movimientos de los cinco animales.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              [4] Gong Juzhong (明, dinastía Ming). <em
+                >Cinnabar Book of Longevity (赤凤髓 – Chifeng Sui)</em
+              >. Xilografías de los cinco animales.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              [5] Administración General de Deportes de China (2002). <em
+                >Fitness Qigong – Wu Qin Xi (健身气功·五禽戏)</em
+              >. Versión estandarizada y oficial.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              [6] DeMarco, M. A. (2018). <em
+                >Five Animal Frolics in Taiwan: Nourishing Health on a Beautiful Island</em
+              >. Artículo sobre la transmisión en Taiwán.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              [7] Guo Tingxian (郭廷献, 1990). <em>Hua Tuo's Five Animal Frolics Illustrated</em>.
+              Publicación de rutinas abreviadas en Taiwán.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              [8] Li Zhangzhi (2010). <em
+                >The Inheritance and Development of Hua Tuo Wu Qin Xi in Taiwan</em
+              >. Artículo en línea.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              [9] China Association of Traditional Chinese Medicine (2011). <em
+                >Tercera lista de Patrimonio Cultural Inmaterial de China</em
+              >. Inscripción del Hua Tuo Wu Qin Xi con el número Ⅵ-63.
+            </li>
+            <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+              [10] Science and Technology Daily (2022). <em
+                >Wu Qin Xi: A Classical Indoor Exercise</em
+              >. Datos sobre la popularidad global y centros en Bozhou.
+            </li>
+          </ul>
+        </details>
+      </details>
+    </p>
+
+    <section id="correspondencia-elementos" class="mb-8 fade-in max-w-4xl mx-auto">
+      <div id="titulo-correspondencia" class="mx-auto text-center mb-12">
+        <i aria-hidden="true" class="fas fa-yin-yang text-6xl text-chinese-seal-red mb-6"></i>
+        <h4 class="font-title text-2xl md:text-3xl border-b-2 border-chinese-seal-red pb-4 mb-4">
+          Correspondencia con el Wǔxíng Xìtǒng (五行系统)
+        </h4>
+        <p class="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          La relación entre los cinco animales y el <strong
+            >Wǔxíng Xìtǒng (五行系统 – Sistema de los Cinco Elementos/Fases)</strong
+          > no es una asignación arbitraria ni una simple correspondencia órgano-animal. Se fundamenta
+          en el
+          <strong>pensamiento simbólico (象思维 – Xiàng sīwéi)</strong> de la medicina tradicional china,
+          que observa las cualidades de cada animal y las vincula con un
+          <strong>sistema funcional integrado</strong> que abarca fase, órganos Zang-Fu, emoción, dirección,
+          estación, color, tejido, órgano de los sentidos, sonido y sabor. El practicante no trabaja sobre
+          un órgano aislado, sino sobre <strong>todo un sistema de correspondencias</strong>.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto mb-10">
+        <table class="min-w-full text-lg text-ink border-collapse shadow-lg">
+          <thead>
+            <tr class="bg-chinese-seal-red text-white">
+              <th class="py-3 px-4 text-left font-title">Animal</th>
+              <th class="py-3 px-4 text-left font-title">Sistema</th>
+              <th class="py-3 px-4 text-left font-title">Órgano Yin</th>
+              <th class="py-3 px-4 text-left font-title">Órgano Yang</th>
+              <th class="py-3 px-4 text-left font-title">Emoción</th>
+              <th class="py-3 px-4 text-left font-title">Cualidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-300 hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">虎 Tigre</td>
+              <td class="py-3 px-4"><strong>Madera</strong></td>
+              <td class="py-3 px-4">Hígado</td>
+              <td class="py-3 px-4">Vesícula Biliar</td>
+              <td class="py-3 px-4">Ira</td>
+              <td class="py-3 px-4">
+                Firmeza serena, decisión, coraje, iniciativa, visión estratégica
+              </td>
+            </tr>
+            <tr class="border-b border-gray-300 hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">鹿 Ciervo</td>
+              <td class="py-3 px-4"><strong>Agua</strong></td>
+              <td class="py-3 px-4">Riñón</td>
+              <td class="py-3 px-4">Vejiga</td>
+              <td class="py-3 px-4">Miedo</td>
+              <td class="py-3 px-4">
+                Serenidad, confianza, flexibilidad, resistencia, sabiduría profunda
+              </td>
+            </tr>
+            <tr class="border-b border-gray-300 hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">熊 Oso</td>
+              <td class="py-3 px-4"><strong>Tierra</strong></td>
+              <td class="py-3 px-4">Bazo</td>
+              <td class="py-3 px-4">Estómago</td>
+              <td class="py-3 px-4">Preocupación</td>
+              <td class="py-3 px-4">
+                Estabilidad, centrado, solidez, nutrición, confianza en el proceso
+              </td>
+            </tr>
+            <tr class="border-b border-gray-300 hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">猿 Mono</td>
+              <td class="py-3 px-4"><strong>Fuego</strong></td>
+              <td class="py-3 px-4">Corazón</td>
+              <td class="py-3 px-4">Intestino Delgado</td>
+              <td class="py-3 px-4">Alegría</td>
+              <td class="py-3 px-4">
+                Alegría serena, agilidad mental, presencia, vivacidad, claridad
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">鸟 Ave (Grulla)</td>
+              <td class="py-3 px-4"><strong>Metal</strong></td>
+              <td class="py-3 px-4">Pulmón</td>
+              <td class="py-3 px-4">Intestino Grueso</td>
+              <td class="py-3 px-4">Tristeza</td>
+              <td class="py-3 px-4">
+                Apertura, ligereza, elevación del espíritu, libertad, gracia
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="mb-8">
+        <summary class="ocultar-summary">
+          <p class="text-lg text-text-secondary leading-relaxed">
+            <span class="text-chinese-seal-red"
+              >Mas información sobre el Wǔxíng Xìtǒng, la fundamentación teórica y la confusión
+              occidental</span
+            >
+          </p>
+        </summary>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          El Wǔxíng Xìtǒng: una visión sistémica, no orgánica
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          En la medicina tradicional china, cada animal del Wu Qin Xi no corresponde a un órgano
+          aislado, sino a un <strong>Wǔxíng Xìtǒng (五行系统)</strong>, un sistema funcional
+          integrado que abarca múltiples niveles de la realidad corporal, emocional y cósmica.
+          Cuando el practicante ejecuta el Juego del Tigre, no está "ejercitando el Hígado": está
+          <strong>activando todo el Sistema de la Madera</strong> en sus múltiples manifestaciones.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          La siguiente tabla muestra la correspondencia completa de cada Wǔxíng Xìtǒng, con sus once
+          categorías principales:
+        </p>
+
+        <div class="overflow-x-auto mb-6">
+          <table class="min-w-full text-lg text-ink border-collapse shadow-lg">
+            <thead>
+              <tr class="bg-chinese-seal-red text-white">
+                <th class="py-3 px-4 text-left font-title">Categoría</th>
+                <th class="py-3 px-4 text-left font-title">Madera (Tigre)</th>
+                <th class="py-3 px-4 text-left font-title">Agua (Ciervo)</th>
+                <th class="py-3 px-4 text-left font-title">Tierra (Oso)</th>
+                <th class="py-3 px-4 text-left font-title">Fuego (Mono)</th>
+                <th class="py-3 px-4 text-left font-title">Metal (Ave)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Fase</td>
+                <td class="py-3 px-4">Madera</td>
+                <td class="py-3 px-4">Agua</td>
+                <td class="py-3 px-4">Tierra</td>
+                <td class="py-3 px-4">Fuego</td>
+                <td class="py-3 px-4">Metal</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Órgano Yin</td>
+                <td class="py-3 px-4">Hígado</td>
+                <td class="py-3 px-4">Riñón</td>
+                <td class="py-3 px-4">Bazo</td>
+                <td class="py-3 px-4">Corazón</td>
+                <td class="py-3 px-4">Pulmón</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Órgano Yang</td>
+                <td class="py-3 px-4">Vesícula Biliar</td>
+                <td class="py-3 px-4">Vejiga</td>
+                <td class="py-3 px-4">Estómago</td>
+                <td class="py-3 px-4">Intestino Delgado</td>
+                <td class="py-3 px-4">Intestino Grueso</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Emoción</td>
+                <td class="py-3 px-4">Ira</td>
+                <td class="py-3 px-4">Miedo</td>
+                <td class="py-3 px-4">Preocupación</td>
+                <td class="py-3 px-4">Alegría</td>
+                <td class="py-3 px-4">Tristeza</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Dirección</td>
+                <td class="py-3 px-4">Este</td>
+                <td class="py-3 px-4">Norte</td>
+                <td class="py-3 px-4">Centro</td>
+                <td class="py-3 px-4">Sur</td>
+                <td class="py-3 px-4">Oeste</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Estación</td>
+                <td class="py-3 px-4">Primavera</td>
+                <td class="py-3 px-4">Invierno</td>
+                <td class="py-3 px-4">Fin del verano</td>
+                <td class="py-3 px-4">Verano</td>
+                <td class="py-3 px-4">Otoño</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Color</td>
+                <td class="py-3 px-4">Verde</td>
+                <td class="py-3 px-4">Negro</td>
+                <td class="py-3 px-4">Amarillo</td>
+                <td class="py-3 px-4">Rojo</td>
+                <td class="py-3 px-4">Blanco</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Tejido</td>
+                <td class="py-3 px-4">Tendones</td>
+                <td class="py-3 px-4">Huesos</td>
+                <td class="py-3 px-4">Músculos</td>
+                <td class="py-3 px-4">Vasos</td>
+                <td class="py-3 px-4">Piel y pelo</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Órgano de los sentidos</td>
+                <td class="py-3 px-4">Ojos</td>
+                <td class="py-3 px-4">Oídos</td>
+                <td class="py-3 px-4">Boca</td>
+                <td class="py-3 px-4">Lengua</td>
+                <td class="py-3 px-4">Nariz</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Sonido</td>
+                <td class="py-3 px-4">Grito</td>
+                <td class="py-3 px-4">Gemido</td>
+                <td class="py-3 px-4">Canto</td>
+                <td class="py-3 px-4">Risa</td>
+                <td class="py-3 px-4">Llanto</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Sabor</td>
+                <td class="py-3 px-4">Ácido</td>
+                <td class="py-3 px-4">Salado</td>
+                <td class="py-3 px-4">Dulce</td>
+                <td class="py-3 px-4">Amargo</td>
+                <td class="py-3 px-4">Picante</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Como se puede observar, el Wu Qin Xi no trabaja sobre órganos aislados ni sobre meridianos
+          separados: trabaja sobre <strong>Wǔxíng Xìtǒng completos</strong>. El practicante que
+          ejecuta el Juego del Tigre no solo moviliza el Qi del Hígado y la Vesícula Biliar:
+          <strong
+            >relaja los tendones, abre los ojos, transforma la ira en firmeza, armoniza la primavera
+            interna, activa el color verde y el sabor ácido</strong
+          >. La práctica es
+          <strong>sistémica, no orgánica</strong>.
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          La base teórica: el pensamiento simbólico (象思维)
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          La asignación de cada animal a un Wǔxíng Xìtǒng se explica a través del
+          <strong>pensamiento simbólico (象思维 – Xiàng sīwéi)</strong>, un modo de razonamiento
+          característico de la medicina tradicional china que se basa en la observación de las
+          manifestaciones externas para comprender las funciones internas. Un estudio académico
+          publicado en el <em>Journal of Shandong University of Traditional Chinese Medicine</em>
+          (2023) explica esta correspondencia de forma sistemática:
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          En traducción: <em
+            >“Partiendo del pensamiento simbólico, a través de la teoría del zang-xiang, la teoría
+            del yin-yang, la teoría de los cinco elementos y la teoría de los meridianos, se explica
+            el mecanismo teórico por el cual el Juego del Tigre, el Juego del Ciervo, el Juego del
+            Oso, el Juego del Mono y el Juego del Ave corresponden respectivamente a los cinco
+            sistemas: hígado, riñón, bazo, corazón y pulmón.”</em
+          >
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          El mismo estudio detalla las funciones terapéuticas asociadas a cada animal:
+          <strong>虎戏属木，主肝，理气疏肝、舒筋养肝</strong> (El Juego del Tigre pertenece al Sistema
+          de la Madera, rige el Hígado, regula el Qi y desobstruye el Hígado, relaja los tendones y nutre
+          el Hígado); <strong>鹿戏属水，主肾，壮腰健骨、温补肾阳</strong> (El Juego del Ciervo pertenece
+          al Sistema del Agua, rige el Riñón, fortalece la cintura y los huesos, tonifica el Yang del
+          Riñón);
+          <strong>熊戏属土，主脾</strong> (El Juego del Oso pertenece al Sistema de la Tierra, rige el
+          Bazo);
+          <strong>猿戏属火，主心</strong> (El Juego del Mono pertenece al Sistema del Fuego, rige el Corazón);
+          y <strong>鸟戏属金，主肺</strong>
+          (El Juego del Ave pertenece al Sistema del Metal, rige el Pulmón).
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          Explicación individual: por qué cada animal corresponde a su sistema
+        </h3>
+
+        <h4 class="font-title text-xl text-title-ink mt-6 mb-4">
+          虎戏 – Sistema de la Madera (木行系统) – Hígado (肝)
+        </h4>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          El tigre es el rey de las bestias, símbolo de fiereza, autoridad y poder. En la tradición
+          china, <strong>el tigre se asocia con el Sistema de la Madera</strong> porque ambos comparten
+          cualidades de expansión, crecimiento y energía ascendente. El Sistema de la Madera se manifiesta
+          en el Hígado y la Vesícula Biliar, pero también en los tendones, los ojos, la ira, la primavera,
+          el Este, el color verde y el sabor ácido. El Hígado rige la libre circulación del Qi y almacena
+          la sangre; su desequilibrio genera ira e irritabilidad. Los movimientos del tigre —extender
+          las garras, estirar el cuerpo, lanzarse hacia adelante— <strong
+            >activan todo el Sistema de la Madera</strong
+          >, liberando la tensión acumulada y promoviendo un flujo suave y armonioso del Qi. Un
+          texto clásico de la Universidad de Medicina Tradicional China de Shanghái explica:
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          <em
+            >“El Juego del Tigre pertenece al Sistema de la Madera y rige el Hígado; puede
+            desobstruir el Hígado y regular el Qi, relajar los meridianos y activar el flujo.”</em
+          >
+        </p>
+
+        <h4 class="font-title text-xl text-title-ink mt-6 mb-4">
+          鹿戏 – Sistema del Agua (水行系统) – Riñón (肾)
+        </h4>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          El ciervo es un animal grácil, tranquilo y longevo, asociado en la tradición china con la
+          <strong>longevidad y la vitalidad esencial</strong>. Se asigna al <strong
+            >Sistema del Agua</strong
+          >, que se manifiesta en el Riñón y la Vejiga, pero también en los huesos, los oídos, el
+          miedo, el invierno, el Norte, el color negro y el sabor salado. El Riñón almacena la
+          Esencia (Jing), gobierna los huesos y la médula, y es la raíz del Yin y el Yang del
+          cuerpo. El miedo excesivo daña el Riñón, y la práctica del Juego del Ciervo —con sus
+          movimientos suaves de rotación de la cintura, extensión del cuello y arqueo de la columna— <strong
+            >activa todo el Sistema del Agua</strong
+          >, masajeando y tonificando la zona lumbar, fortaleciendo la energía renal y cultivando la
+          serenidad. Como señala el texto de Shanghái:
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          <em
+            >“El Juego del Ciervo pertenece al Sistema del Agua y rige el Riñón; puede tonificar el
+            Qi y nutrir el Riñón, fortalecer la cintura y tonificar el estómago.”</em
+          >
+        </p>
+
+        <h4 class="font-title text-xl text-title-ink mt-6 mb-4">
+          熊戏 – Sistema de la Tierra (土行系统) – Bazo (脾)
+        </h4>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          El oso es un animal pesado, lento y aparentemente torpe, pero dotado de una
+          <strong>fuerza interna estable y sólida</strong>. Se asigna al <strong
+            >Sistema de la Tierra</strong
+          >, que se manifiesta en el Bazo y el Estómago, pero también en los músculos, la boca, la
+          preocupación, el fin del verano, el Centro, el color amarillo y el sabor dulce. El Bazo es
+          el centro de la transformación y el transporte de los alimentos y los líquidos. Rige los
+          músculos y las cuatro extremidades; su desequilibrio produce preocupación excesiva,
+          rumiación y debilidad digestiva. El Juego del Oso, con sus movimientos circulares de la
+          cintura y el abdomen, <strong>activa todo el Sistema de la Tierra</strong>, masajeando las
+          vísceras del Jiao Medio, regulando la función digestiva y fortaleciendo el centro. El
+          texto de Shanghái lo confirma:
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          <em
+            >“El Juego del Oso pertenece al Sistema de la Tierra y rige el Bazo; puede armonizar el
+            Bazo y el Estómago, y fortalecer las extremidades.”</em
+          >
+        </p>
+
+        <h4 class="font-title text-xl text-title-ink mt-6 mb-4">
+          猿戏 – Sistema del Fuego (火行系统) – Corazón (心)
+        </h4>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          El mono es un animal vivaz, ágil, curioso e inteligente. Su energía es rápida, cambiante y
+          alegre, cualidades que en la tradición china se asocian con el <strong
+            >Sistema del Fuego</strong
+          >, que se manifiesta en el Corazón y el Intestino Delgado, pero también en los vasos
+          sanguíneos, la lengua, la alegría, el verano, el Sur, el color rojo y el sabor amargo. El
+          Corazón alberga el Shen (espíritu) y gobierna la mente y la conciencia. La alegría
+          excesiva puede dispersar el Shen y causar agitación e insomnio; la práctica del Juego del
+          Mono —con sus movimientos ágiles, sus giros de cabeza y sus cambios de ritmo—
+          <strong>activa todo el Sistema del Fuego</strong>, calmando el Shen, mejorando la
+          circulación hacia el cerebro y cultivando una alegría serena y una agilidad mental
+          equilibrada. El texto de Shanghái dice:
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          <em
+            >“El Juego del Mono pertenece al Sistema del Fuego y rige el Corazón; puede nutrir el
+            Corazón y el cerebro, abrir los orificios y beneficiar la inteligencia.”</em
+          >
+        </p>
+
+        <h4 class="font-title text-xl text-title-ink mt-6 mb-4">
+          鸟戏 – Sistema del Metal (金行系统) – Pulmón (肺)
+        </h4>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          El ave, generalmente representada por la grulla, es símbolo de <strong
+            >elegancia, ligereza y elevación espiritual</strong
+          >. Se asigna al <strong>Sistema del Metal</strong>, que se manifiesta en el Pulmón y el
+          Intestino Grueso, pero también en la piel y el pelo, la nariz, la tristeza, el otoño, el
+          Oeste, el color blanco y el sabor picante. El Pulmón gobierna el Qi y la respiración, y su
+          desequilibrio genera tristeza y opresión torácica. El Juego del Ave, con sus movimientos
+          de apertura de brazos, extensión del tórax y elevación del cuerpo, <strong
+            >activa todo el Sistema del Metal</strong
+          >, expandiendo la caja torácica, mejorando la capacidad respiratoria y elevando el
+          espíritu, transformando la tristeza en apertura y ligereza. El texto de Shanghái lo
+          describe así:
+        </p>
+
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          <em
+            >“El Juego del Ave pertenece al Sistema del Metal y rige el Pulmón; puede tonificar el
+            Pulmón, ensanchar el pecho y armonizar el movimiento del Qi.”</em
+          >
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          Sobre la confusión occidental: una aclaración necesaria
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          En algunas publicaciones occidentales en inglés —notablemente un artículo de
+          <em>China Daily</em> de 2020 y otras fuentes derivadas— se ha difundido una asignación diferente:
+          <strong>Tigre = Agua / Riñón</strong> y <strong>Ciervo = Madera / Hígado</strong>. Esta
+          inversión <strong>no tiene respaldo en la tradición china</strong> y contradice los principios
+          del Wǔxíng Xìtǒng y el pensamiento simbólico de la MTC.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          La confusión probablemente surge de la mezcla de diferentes linajes de qigong o de
+          interpretaciones erróneas de fuentes secundarias. Sin embargo, la literatura académica y
+          médica china es unánime: <strong
+            >el Tigre pertenece al Sistema de la Madera (Hígado) y el Ciervo al Sistema del Agua
+            (Riñón)</strong
+          >. Esta asignación se encuentra en los materiales oficiales de la Administración General
+          de Deportes de China, en los manuales de las universidades de medicina tradicional china
+          (Shandong, Shanghái) y en las publicaciones del <em
+            >China Association of Traditional Chinese Medicine</em
+          >. Por ejemplo, el texto oficial de la Universidad de Medicina Tradicional China de
+          Shanghái para la versión estandarizada de 2002 afirma sin ambigüedad:
+        </p>
+
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Para quien practica o enseña Wu Qin Xi, es importante conocer esta distinción y basarse en
+          las fuentes chinas autorizadas, que son las que reflejan fielmente la intención original
+          de Hua Tuo y la teoría médica que sustenta la práctica.
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">Referencias</h3>
+        <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4">
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>曹海豪，毕鸿雁，席晓明，王丽敏，孙文玉 (2023).</strong> 基于象思维探讨五禽戏五脏配属的理论机制.
+            <em>山东中医药大学学报</em>, 47(1), 20-23+28. DOI:
+            10.16294/j.cnki.1007-659x.2023.01.005.
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>上海中医药大学 (2020).</strong> 科学健身 | 战“疫”时期，五禽戏助力！（中级篇）.
+            <em>上海中医药大学体育部</em>.
+            https://tyb.shutcm.edu.cn/2020/0209/c5170a119851/page.htm.
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>科普中国 (2018).</strong> 五禽戏“招招是宝” 或可解决现代人“亚健康”问题.
+            <em>科普中国-乐享健康</em>.
+            https://www.kepuchina.cn/health/care/201809/t20180912_730975.shtml.
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>国家体育总局健身气功管理中心 (2003).</strong>
+            <em>健身气功·五禽戏</em>. 北京: 人民体育出版社.
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>Science and Technology Daily (2022).</strong> Wu Qin Xi: A Classical Indoor Exercise.
+            <em>Science and Technology Daily</em>.
+            https://www.stdaily.com/web/English/2022-05/12/content_1887113.html.
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="orden-animales" class="mb-8 fade-in max-w-4xl mx-auto">
+      <div id="titulo-orden" class="mx-auto text-center mb-12">
+        <i aria-hidden="true" class="fas fa-sort-numeric-down text-6xl text-chinese-seal-red mb-6"
+        ></i>
+        <h4 class="font-title text-2xl md:text-3xl border-b-2 border-chinese-seal-red pb-4 mb-4">
+          El orden de los animales: una secuencia con propósito
+        </h4>
+        <p class="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed"> El Wu Qin Xi no es una simple sucesión de cinco ejercicios independientes. El orden en que se practican —<strong>Tigre (虎), Ciervo (鹿), Oso (熊), Mono (猿), Ave (鸟)</strong>— no es arbitrario ni caprichoso. Responde a una lógica profunda que combina la <strong>teoría del Yin y el Yang</strong>, la orientación del <strong>Taiji Tu</strong> y el <strong>cuadrado de Luo Shu</strong>, y que ha sido analizada por el investigador Saša Balanesković en un estudio publicado en <em>Chinese Medicine and Culture</em> (2018). </p>
+      </div>
+
+      <p class="text-lg text-text-secondary mb-6 leading-relaxed max-w-4xl mx-auto">
+        La fuente histórica más antigua que cita el orden es el
+        <strong>Registro de los Tres Reinos (三国志 – Sanguozhi)</strong> de Chen Shou, que establece
+        explícitamente:
+         —“el primero es el tigre, el segundo el ciervo,
+        el tercero el oso, el cuarto el mono y el quinto el ave”. Hua Tuo no dejó ningún documento escrito
+        que explicara por qué eligió ese orden, lo que ha dado lugar a siglos de especulación.
+      </p>
+
+      <p class="text-lg text-text-secondary mb-8 leading-relaxed max-w-4xl mx-auto">
+        La explicación más común —que el orden sigue el ciclo de generación del
+        <strong>Wǔxíng Xìtǒng (五行系统)</strong>— <strong>es incorrecta</strong>. Si asignamos cada
+        animal a su sistema (Tigre = Sistema de la Madera, Ciervo = Sistema del Agua, Oso = Sistema
+        de la Tierra, Mono = Sistema del Fuego, Ave = Sistema del Metal) y los colocamos en el
+        círculo del Wǔxíng, la secuencia
+        <strong>Madera → Agua → Tierra → Fuego → Metal</strong> no forma ni el ciclo de generación (相生),
+        ni el de control (相克), ni el de insultación (相侮). No dibuja ninguna figura reconocible. Como
+        señala Balanesković: <em
+          >“Cuando alguien ve esta imagen, no tiene ningún sentido, teniendo en cuenta las teorías
+          precisas y extensas de la medicina china y el amor chino por la simetría y la estética.”</em
+        >
+      </p>
+
+      <div class="overflow-x-auto mb-10 max-w-5xl mx-auto">
+        <table class="min-w-full text-lg text-ink border-collapse shadow-lg">
+          <thead>
+            <tr class="bg-chinese-seal-red text-white">
+              <th class="py-3 px-4 text-left font-title">Orden</th>
+              <th class="py-3 px-4 text-left font-title">Animal</th>
+              <th class="py-3 px-4 text-left font-title">Sistema (五行系统)</th>
+              <th class="py-3 px-4 text-left font-title">Órgano Yin</th>
+              <th class="py-3 px-4 text-left font-title">Dirección</th>
+              <th class="py-3 px-4 text-left font-title">Estación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-300 hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">1.º</td>
+              <td class="py-3 px-4">虎 Tigre</td>
+              <td class="py-3 px-4">木行系统 (Mù xíng xìtǒng)</td>
+              <td class="py-3 px-4">肝 Hígado</td>
+              <td class="py-3 px-4">Este</td>
+              <td class="py-3 px-4">Primavera</td>
+            </tr>
+            <tr class="border-b border-gray-300 hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">2.º</td>
+              <td class="py-3 px-4">鹿 Ciervo</td>
+              <td class="py-3 px-4">水行系统 (Shuǐ xíng xìtǒng)</td>
+              <td class="py-3 px-4">肾 Riñón</td>
+              <td class="py-3 px-4">Norte</td>
+              <td class="py-3 px-4">Invierno</td>
+            </tr>
+            <tr class="border-b border-gray-300 hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">3.º</td>
+              <td class="py-3 px-4">熊 Oso</td>
+              <td class="py-3 px-4">土行系统 (Tǔ xíng xìtǒng)</td>
+              <td class="py-3 px-4">脾 Bazo</td>
+              <td class="py-3 px-4">Centro</td>
+              <td class="py-3 px-4">Fin del verano</td>
+            </tr>
+            <tr class="border-b border-gray-300 hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">4.º</td>
+              <td class="py-3 px-4">猿 Mono</td>
+              <td class="py-3 px-4">火行系统 (Huǒ xíng xìtǒng)</td>
+              <td class="py-3 px-4">心 Corazón</td>
+              <td class="py-3 px-4">Sur</td>
+              <td class="py-3 px-4">Verano</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">5.º</td>
+              <td class="py-3 px-4">鸟 Ave</td>
+              <td class="py-3 px-4">金行系统 (Jīn xíng xìtǒng)</td>
+              <td class="py-3 px-4">肺 Pulmón</td>
+              <td class="py-3 px-4">Oeste</td>
+              <td class="py-3 px-4">Otoño</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-lg text-text-secondary mb-8 leading-relaxed max-w-4xl mx-auto">
+        La hipótesis de Balanesković es que Hua Tuo, como gran científico y médico, no cometió un
+        error al establecer ese orden. Lo que hizo fue <strong
+          >seguir la dirección del movimiento del Yin y el Yang</strong
+        >, tal como se representa en el <strong>Taiji Tu (太极图)</strong>
+        y en el <strong>cuadrado de Luo Shu (洛书)</strong>. Al conectar los sistemas en el orden
+        del Wu Qin Xi dentro de la representación en cruz del Luo Shu, <strong
+          >emerge una figura en forma de "S"</strong
+        > que es una parte del antiguo símbolo del <strong>swástica o rueda solar (卍 – wàn)</strong
+        >, símbolo universal del movimiento cósmico, del ciclo de la vida y de la muerte, y del
+        eterno devenir del Yin y el Yang.
+      </p>
+
+      <details class="mb-8 max-w-4xl mx-auto">
+        <summary class="ocultar-summary">
+          <p class="text-lg text-text-secondary leading-relaxed">
+            <span class="text-chinese-seal-red"
+              >Mas información sobre la hipótesis de Balanesković, el Luo Shu y la orientación del
+              Taiji</span
+            >
+          </p>
+        </summary>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          El problema: el orden no sigue el Wǔxíng Xìtǒng
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Balanesković plantea el enigma con claridad: si seguimos el <strong
+            >Wǔxíng Xìtǒng (五行系统)</strong
+          >, existen tres ciclos posibles:
+        </p>
+        <ul class="list-none text-lg text-ink space-y-2 leading-relaxed mb-4">
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Ciclo de generación (相生):</strong> Madera → Fuego → Tierra → Metal → Agua → Madera
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Ciclo de control (相克):</strong> Madera → Tierra → Agua → Fuego → Metal → Madera
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Ciclo de insultación (相侮):</strong> Madera → Metal → Fuego → Agua → Tierra → Madera
+          </li>
+        </ul>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          <strong>Ninguno de estos tres ciclos coincide con el orden del Wu Qin Xi</strong>, que es
+          Madera → Agua → Tierra → Fuego → Metal. Si dibujamos este orden en el círculo del Wǔxíng,
+          no se forma ninguna figura reconocible. Esto resultaba profundamente insatisfactorio para
+          un maestro como Hua Tuo, que conocía a la perfección todas las teorías médicas y
+          cosmológicas de su tiempo.
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          La clave: la orientación del Taiji Tu
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Balanesković encontró la pista decisiva en una conferencia de la profesora
+          <strong>Qu Lifang</strong>, de la Universidad de Medicina Tradicional China de Shanghái,
+          sobre la dirección del Taiji Tu. La profesora Qu explicó que la representación más común
+          del Yin Yang tiene el Yang arriba, moviéndose en sentido horario, de izquierda a derecha.
+          Pero existen <strong>dos orientaciones posibles</strong>:
+        </p>
+        <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4">
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Orientación solar:</strong> Mirando hacia el sur, siguiendo el movimiento del sol
+            de este a oeste, de izquierda a derecha, privilegiando la izquierda.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Orientación polar:</strong> Mirando hacia el norte, siguiendo el movimiento astral
+            alrededor de la estrella polar de este a oeste, de derecha a izquierda, privilegiando la derecha.
+          </li>
+        </ul>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Zhuangzi ya decía: <em
+            >“La primavera da a luz a la izquierda, el otoño destruye a la derecha, el verano ayuda
+            a crecer delante y el invierno guarda reservas detrás.”</em
+          >
+          Según las correspondencias habituales entre estaciones y puntos cardinales, el sur está delante
+          y el norte detrás. Durante la dinastía Han anterior, la derecha parece haber suplantado a la
+          izquierda, al menos en el marco de las funciones oficiales.
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          El cuadrado de Luo Shu y la figura en "S"
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Balanesković recurre entonces al <strong>cuadrado de Luo Shu (洛书)</strong>, el diagrama
+          del río Amarillo que representa los cinco sistemas en forma de cruz en lugar de círculo.
+          En esta representación:
+        </p>
+        <ul class="list-none text-lg text-ink space-y-2 leading-relaxed mb-4">
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            El Sistema del Fuego (火行系统) está arriba (Sur)
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            El Sistema del Agua (水行系统) está abajo (Norte)
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            El Sistema de la Madera (木行系统) está a la izquierda (Este)
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            El Sistema del Metal (金行系统) está a la derecha (Oeste)
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            El Sistema de la Tierra (土行系统) está en el centro
+          </li>
+        </ul>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Si conectamos los sistemas en el orden del Wu Qin Xi (<strong
+            >Madera → Agua → Tierra → Fuego → Metal</strong
+          >, es decir,
+          <strong>Este → Norte → Centro → Sur → Oeste</strong>) dentro de esta cruz de cinco
+          sistemas y trazamos la línea, <strong>emerge una figura en forma de "S"</strong>. Esa "S"
+          es una parte del antiguo símbolo del <strong>swástica o rueda solar (卍 – wàn)</strong>.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          El swástica o wàn es un símbolo universal que representa el movimiento de la Osa Menor y
+          la Osa Mayor alrededor de la estrella polar, el centro del cosmos. Representa el todo de
+          la creación, el número 10.000, la miríada de cosas del Tao Te Ching. Según René Guénon,
+          este símbolo representa la actividad del principio del universo en la formación del mundo,
+          y en su valor polar tiene el mismo significado que el símbolo del Yin y el Yang.
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          La conclusión: Hua Tuo como científico y cosmólogo
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Balanesković concluye que Hua Tuo estableció el orden del Wu Qin Xi teniendo en cuenta
+          <strong>todas las teorías disponibles en su tiempo</strong>:
+        </p>
+        <ul class="list-none text-lg text-ink space-y-2 leading-relaxed mb-4">
+          <li class="pl-4 border-l-4 border-chinese-seal-red">La teoría del Yin y el Yang</li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            El Wǔxíng Xìtǒng (五行系统) y la teoría Zang-Fu
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            El diagrama del río Amarillo (Luo Shu)
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            El conocimiento del movimiento de los cuerpos celestes
+          </li>
+        </ul>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          El practicante, al ejecutar los movimientos en ese orden, <strong
+            >traza inconscientemente el signo universal de la vida</strong
+          >, representado como Taiji, swástica, Kolovrat o vórtice en forma de "S" que trasciende el
+          tiempo, las culturas y la civilización humana. La práctica del Wu Qin Xi es, por tanto, no
+          solo un ejercicio físico y energético, sino también una <strong>danza cósmica</strong> que conecta
+          al practicante con el orden fundamental del universo.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Como el propio Balanesković reconoce, esta es su interpretación personal y requiere más
+          investigación y cooperación entre expertos en qigong e historiadores. Pero una cosa
+          permanece: <strong
+            >“esta práctica es una joya de la historia y la cultura chinas de cultivo de la mente y
+            el cuerpo, y traerá alegría y salud a todos los que practiquen el sistema.”</strong
+          >
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">Referencias</h3>
+        <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-4">
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>Balaneskovic, S. (2018).</strong> Hua Tuo's Wu Qin Xi (Five Animal Frolics) Movements
+            and the Logic behind It. <em>Chinese Medicine and Culture</em>, 1(3), 127-134. DOI:
+            10.4103/CMAC.CMAC_32_18.
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>Chen Shou (西晋, siglo III d.C.).</strong>
+            <em>Registro de los Tres Reinos (三国志 – Sanguozhi)</em>. Biografía de Hua Tuo. Fuente
+            histórica que establece el orden canónico de los cinco animales.
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>Legge, J. (1891).</strong>
+            <em>The Writings of Chuang Tzu</em>. Oxford: The Clarendon Press. Traducción del
+            Zhuangzi, capítulo 15.
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>Kohn, L. (2008).</strong>
+            <em>Chinese Healing Exercises</em>. Honolulu: University of Hawai'i Press. Cita del
+            "Five-Animal Classic" de Wu Pu.
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>Guenon, R. (2004).</strong>
+            <em>Symbols of Sacred Science</em>. Sophia Perennis. Análisis del simbolismo del
+            swástica y su relación con el Yin y el Yang.
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>Chinese Health Qigong Association (2007).</strong>
+            <em>Chinese Health Qigong: Wu Qin Xi</em>. Beijing: Foreign Languages Press. Versión
+            oficial estandarizada.
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="emociones" class="mb-8 fade-in max-w-4xl mx-auto">
+      <h4 class="font-title text-2xl md:text-3xl border-b-2 border-chinese-seal-red pb-4 mb-4">
+        Las Emociones en el Wu Qin Xi
+      </h4>
+
+      <p class="text-lg text-text-secondary mb-6 leading-relaxed max-w-4xl mx-auto">
+        En la tradición china más popular, las emociones se clasifican en las
+        <strong>"Cinco Emociones" (五志 – Wǔ Zhì)</strong> —ira, alegría, preocupación, tristeza y miedo—.
+        Cada una de las Cinco Emociones se asocia con un órgano y un
+        <strong>Wǔxíng Xìtǒng (五行系统 – Sistema de los Cinco Elementos/Fases)</strong>, y su
+        desequilibrio por exceso puede afectar la salud.
+      </p>
+
+      <p class="text-lg text-text-secondary mb-8 leading-relaxed max-w-4xl mx-auto">
+        La práctica del Wu Qin Xi aborda estas emociones desde una perspectiva de
+        <strong>transformación y equilibrio</strong>. Al imitar la actitud y el movimiento de cada
+        animal, el practicante aprende a encarnar sus cualidades y, con ello, a modular su propio
+        estado interno. La siguiente tabla muestra la relación completa:
+      </p>
+
+      <div class="overflow-x-auto mb-10 max-w-5xl mx-auto">
+        <table class="min-w-full text-lg text-ink border-collapse shadow-lg">
+          <thead>
+            <tr class="bg-chinese-seal-red text-white">
+              <th class="py-3 px-4 text-left font-title">Animal</th>
+              <th class="py-3 px-4 text-left font-title">Emoción (五志)</th>
+              <th class="py-3 px-4 text-left font-title">Desequilibrio por exceso</th>
+              <th class="py-3 px-4 text-left font-title">Cualidad a cultivar</th>
+              <th class="py-3 px-4 text-left font-title">Acción terapéutica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-300 hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">虎 Tigre</td>
+              <td class="py-3 px-4">怒 Ira</td>
+              <td class="py-3 px-4">
+                Irritabilidad, agresividad, congestión hepática, dolores de cabeza
+              </td>
+              <td class="py-3 px-4">Firmeza serena, decisión, coraje</td>
+              <td class="py-3 px-4">
+                Transforma la ira reprimida en energía firme y decidida; activa el Sistema de la
+                Madera
+              </td>
+            </tr>
+            <tr class="border-b border-gray-300 hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">鹿 Ciervo</td>
+              <td class="py-3 px-4">恐 Miedo</td>
+              <td class="py-3 px-4">
+                Ansiedad, inseguridad, agotamiento renal, dolores lumbares
+              </td>
+              <td class="py-3 px-4">Serenidad, confianza, flexibilidad</td>
+              <td class="py-3 px-4">
+                Calma el miedo y fortalece la serenidad; activa el Sistema del Agua
+              </td>
+            </tr>
+            <tr class="border-b border-gray-300 hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">熊 Oso</td>
+              <td class="py-3 px-4">思 Preocupación</td>
+              <td class="py-3 px-4"> Rumiación, obsesión, debilidad digestiva, fatiga mental </td>
+              <td class="py-3 px-4">Estabilidad, centrado, confianza en el proceso</td>
+              <td class="py-3 px-4">
+                Disuelve la rumiación y fortalece el centro; activa el Sistema de la Tierra
+              </td>
+            </tr>
+            <tr class="border-b border-gray-300 hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">猿 Mono</td>
+              <td class="py-3 px-4">喜 Alegría</td>
+              <td class="py-3 px-4"> Agitación, dispersión, insomnio, palpitaciones </td>
+              <td class="py-3 px-4">Alegría serena, agilidad mental, presencia</td>
+              <td class="py-3 px-4">
+                Calma el Shen y cultiva una alegría equilibrada; activa el Sistema del Fuego
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-3 px-4 font-semibold">鸟 Ave (Grulla)</td>
+              <td class="py-3 px-4">悲 Tristeza</td>
+              <td class="py-3 px-4">
+                Melancolía, opresión torácica, falta de aire, llanto fácil
+              </td>
+              <td class="py-3 px-4">Apertura, ligereza, elevación del espíritu</td>
+              <td class="py-3 px-4">
+                Transforma la tristeza en apertura y ligereza; activa el Sistema del Metal
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="mb-8 max-w-4xl mx-auto">
+        <summary class="ocultar-summary">
+          <p class="text-lg text-text-secondary leading-relaxed">
+            <span class="text-chinese-seal-red"
+              >Mas información sobre la naturaleza dual de las emociones y su regulación</span
+            >
+          </p>
+        </summary>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          La naturaleza dual de las emociones
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          En la MTC, cada emoción tiene una <strong>función fisiológica necesaria</strong>. La ira,
+          por ejemplo, moviliza la energía hacia arriba y hacia fuera, permitiendo la defensa y la
+          acción decidida. El miedo, por su parte, nos protege del peligro al activar la prudencia y
+          la cautela. La alegría abre el corazón y facilita la conexión social. La preocupación nos
+          ayuda a planificar y a resolver problemas. La tristeza nos permite procesar las pérdidas y
+          soltar lo que ya no necesitamos.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          El problema no es la emoción en sí, sino su <strong
+            >intensidad, duración o represión</strong
+          >. Cuando una emoción se vuelve crónica o se suprime, el Qi se estanca o se dispersa, y el
+          órgano asociado comienza a debilitarse. La práctica del Wu Qin Xi actúa precisamente en
+          ese punto: <strong>no elimina la emoción, sino que la reconduce y la armoniza</strong>.
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          Mecanismo de regulación emocional en el Wu Qin Xi
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Cada animal del Wu Qin Xi encarna una <strong>cualidad emocional específica</strong> que, al
+          ser imitada conscientemente, permite al practicante <strong
+            >regular su propio estado interno</strong
+          >. Este proceso opera en tres niveles:
+        </p>
+        <ul class="list-none text-lg text-ink space-y-3 leading-relaxed mb-6">
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>Nivel físico:</strong> Los movimientos específicos de cada animal estimulan los meridianos
+            y órganos asociados, liberando tensiones y restableciendo el flujo de Qi.
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>Nivel respiratorio:</strong> La coordinación de la respiración con el movimiento regula
+            el sistema nervioso autónomo, calmando la mente y estabilizando las emociones.
+          </li>
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <strong>Nivel mental (Yi):</strong> La visualización y la intención de encarnar las cualidades
+            del animal transforman los patrones emocionales subconscientes.
+          </li>
+        </ul>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Como resume el artículo de Michael A. DeMarco: <strong>
+            "Algunos practicantes intentan absorber los rasgos característicos de cada animal, ya
+            sea la elegancia del ciervo, la ferocidad del tigre, la fuerza del oso, la libertad del
+            pájaro o la vivacidad del mono. El efecto real aquí es principalmente subconsciente. El
+            grado varía según la capacidad de cada individuo para manifestar las características del
+            animal en su personalidad."</strong
+          >
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          El equilibrio emocional como objetivo de la práctica
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          El objetivo final del Wu Qin Xi no es convertirse en un tigre, un ciervo o un mono, sino
+          <strong>encarnar el shen de los cinco animales</strong> para alcanzar un estado de
+          <strong>equilibrio dinámico</strong>. La práctica regular permite al practicante:
+        </p>
+        <ul class="list-none text-lg text-ink space-y-2 leading-relaxed mb-6">
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            Reconocer sus patrones emocionales habituales sin juzgarlos.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            Modular la intensidad de sus emociones a través del movimiento y la respiración.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            Cultivar cualidades positivas de forma consciente y sostenida.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            Armonizar el flujo de Qi y sangre, previniendo enfermedades de origen emocional.
+          </li>
+        </ul>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          En definitiva, el Wu Qin Xi es una herramienta de <strong
+            >autoconocimiento y transformación</strong
+          > que, a través de la imitación lúdica de los animales, nos enseña a danzar con nuestras emociones
+          en lugar de ser dominados por ellas.
+        </p>
+      </details>
+    </section>
+
+    <!-- SISTEMA -->
+    <section
+      id="sistema"
+      class="max-w-5xl mx-auto mb-12 px-6 md:px-8 py-8 border-t border-chinese-seal-red"
+    >
+      <h2 class="font-title text-3xl md:text-4xl mb-4 py-8 text-center">
+        La secuencia oficial del Wu Qin Xi: los 10 movimientos
+      </h2>
+
+      <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+        En <strong>2002</strong>, la Administración General de Deportes de China organizó a un
+        equipo de expertos, médicos y maestros de qigong para crear una versión estandarizada,
+        científica, sencilla y segura del Wu Qin Xi tradicional. El resultado fue el
+        <strong>“Fitness Qigong – Wu Qin Xi” (健身气功·五禽戏)</strong>, que conserva la esencia de
+        la enseñanza de Hua Tuo pero la adapta a las necesidades modernas. En <strong>2003</strong>
+        se publicó el <strong>Manual Oficial de Wu Qin Xi</strong>, que se convirtió en el texto de
+        referencia para la enseñanza y la práctica en todo el país.
+      </p>
+
+      <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+        El <strong>25 de septiembre de 2018</strong>, la Administración General de Deportes emitió
+        la circular «习惯性错误及纠正方法» (“Errores habituales y métodos de corrección”) para
+        garantizar la estética postural, la seguridad biomecánica y el efecto terapéutico previsto.
+        <strong>
+          Esto está integrado en los movimientos que se encuentran abajo y es sumamente importante
+          los cambios realizados para mejorar el sistema.
+        </strong>
+      </p>
+
+      <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+        Los movimientos de la secuencia oficial en total son <strong>12</strong>:
+        <strong>10 movimientos principales</strong> (2 por cada animal), <strong
+          >1 de apertura</strong
+        >
+        (起势 – Qǐ shì) y <strong>otro de cierre</strong> (收势 – Shōu shì / 引气归元 – Yǐn qì guī yuán).
+        Los 10 movimientos principales corresponden a los cinco animales y a los
+        <strong>reinos funcionales</strong> que cada uno representa en la medicina tradicional china,
+        mencionado anteriormente.
+      </p>
+
+      <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+        Algunos movimientos se hacen <strong>unilateralmente</strong> (primero un lado, luego el otro)
+        y otros <strong>bilaterales</strong> (ambos lados a la vez). Todos deben ser practicados un mínimo
+        de <strong>6 veces unilateralmente</strong> y
+        <strong>3 veces bilaterales</strong>, con una pausa de <strong>3 respiraciones</strong>
+        entre cada movimiento, para mentalizarse hacia el próximo.
+      </p>
+
+      <details class="mb-8 max-w-4xl mx-auto">
+        <summary class="ocultar-summary">
+          <p class="text-lg text-text-secondary leading-relaxed">
+            <span class="text-chinese-seal-red"
+              >Mas información sobre los reinos funcionales, la estructura de la secuencia y la
+              práctica</span
+            >
+          </p>
+        </summary>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          Los reinos funcionales en la medicina tradicional china
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          En la MTC, cada animal del Wu Qin Xi no corresponde a un órgano aislado, sino a un
+          <strong>reino funcional completo</strong> (un sistema integrado de relaciones). Este reino incluye
+          el elemento o fase, el par de órganos Zang-Fu, el meridiano, la emoción, la dirección, la estación,
+          el color, el sonido, el sabor, el tejido y el órgano de los sentidos. El practicante no trabaja
+          sobre "el Hígado", sino sobre <strong>todo el Reino de la Madera</strong>.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          La siguiente tabla muestra la correspondencia completa de cada reino funcional:
+        </p>
+        <div class="overflow-x-auto mb-6">
+          <table class="min-w-full text-lg text-ink border-collapse shadow-lg">
+            <thead>
+              <tr class="bg-chinese-seal-red text-white">
+                <th class="py-3 px-4 text-left font-title">Categoría</th>
+                <th class="py-3 px-4 text-left font-title">Reino de la Madera (Tigre)</th>
+                <th class="py-3 px-4 text-left font-title">Reino del Agua (Ciervo)</th>
+                <th class="py-3 px-4 text-left font-title">Reino de la Tierra (Oso)</th>
+                <th class="py-3 px-4 text-left font-title">Reino del Fuego (Mono)</th>
+                <th class="py-3 px-4 text-left font-title">Reino del Metal (Ave)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Elemento / Fase</td>
+                <td class="py-3 px-4">木 Madera</td>
+                <td class="py-3 px-4">水 Agua</td>
+                <td class="py-3 px-4">土 Tierra</td>
+                <td class="py-3 px-4">火 Fuego</td>
+                <td class="py-3 px-4">金 Metal</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Órgano Yin (Zang)</td>
+                <td class="py-3 px-4">肝 Hígado</td>
+                <td class="py-3 px-4">肾 Riñón</td>
+                <td class="py-3 px-4">脾 Bazo</td>
+                <td class="py-3 px-4">心 Corazón</td>
+                <td class="py-3 px-4">肺 Pulmón</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Órgano Yang (Fu)</td>
+                <td class="py-3 px-4">胆 Vesícula Biliar</td>
+                <td class="py-3 px-4">膀胱 Vejiga</td>
+                <td class="py-3 px-4">胃 Estómago</td>
+                <td class="py-3 px-4">小肠 Intestino Delgado</td>
+                <td class="py-3 px-4">大肠 Intestino Grueso</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Emoción (Wu Zhi)</td>
+                <td class="py-3 px-4">怒 Ira</td>
+                <td class="py-3 px-4">恐 Miedo</td>
+                <td class="py-3 px-4">思 Preocupación</td>
+                <td class="py-3 px-4">喜 Alegría</td>
+                <td class="py-3 px-4">悲 Tristeza</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Dirección</td>
+                <td class="py-3 px-4">东 Este</td>
+                <td class="py-3 px-4">北 Norte</td>
+                <td class="py-3 px-4">中 Centro</td>
+                <td class="py-3 px-4">南 Sur</td>
+                <td class="py-3 px-4">西 Oeste</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Estación</td>
+                <td class="py-3 px-4">春 Primavera</td>
+                <td class="py-3 px-4">冬 Invierno</td>
+                <td class="py-3 px-4">长夏 Fin del verano</td>
+                <td class="py-3 px-4">夏 Verano</td>
+                <td class="py-3 px-4">秋 Otoño</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Color</td>
+                <td class="py-3 px-4">青 Verde</td>
+                <td class="py-3 px-4">黑 Negro</td>
+                <td class="py-3 px-4">黄 Amarillo</td>
+                <td class="py-3 px-4">赤 Rojo</td>
+                <td class="py-3 px-4">白 Blanco</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Tejido</td>
+                <td class="py-3 px-4">筋 Tendones</td>
+                <td class="py-3 px-4">骨 Huesos</td>
+                <td class="py-3 px-4">肉 Músculos</td>
+                <td class="py-3 px-4">脉 Vasos</td>
+                <td class="py-3 px-4">皮毛 Piel y pelo</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Órgano de los sentidos</td>
+                <td class="py-3 px-4">目 Ojos</td>
+                <td class="py-3 px-4">耳 Oídos</td>
+                <td class="py-3 px-4">口 Boca</td>
+                <td class="py-3 px-4">舌 Lengua</td>
+                <td class="py-3 px-4">鼻 Nariz</td>
+              </tr>
+              <tr class="border-b border-gray-300 hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Sonido</td>
+                <td class="py-3 px-4">呼 Grito</td>
+                <td class="py-3 px-4">呻 Gemido</td>
+                <td class="py-3 px-4">歌 Canto</td>
+                <td class="py-3 px-4">笑 Risa</td>
+                <td class="py-3 px-4">哭 Llanto</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4 font-semibold">Sabor</td>
+                <td class="py-3 px-4">酸 Ácido</td>
+                <td class="py-3 px-4">咸 Salado</td>
+                <td class="py-3 px-4">甘 Dulce</td>
+                <td class="py-3 px-4">苦 Amargo</td>
+                <td class="py-3 px-4">辛 Picante</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Cuando el practicante ejecuta el Juego del Tigre, no está "ejercitando el Hígado". Está
+          <strong>activando todo el Reino de la Madera</strong>: moviliza el Qi del Hígado y la
+          Vesícula Biliar, relaja los tendones, abre los ojos, transforma la ira, armoniza la
+          primavera interna, etc. La práctica es <strong>sistémica, no orgánica</strong>.
+        </p>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">Tiempos y repeticiones</h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          La práctica oficial recomienda:
+        </p>
+        <ul class="list-none text-lg text-ink space-y-2 leading-relaxed mb-6">
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Movimientos unilaterales:</strong> mínimo 6 repeticiones por lado (izquierda y derecha).
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Movimientos bilaterales:</strong> mínimo 3 repeticiones completas.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Pausa entre movimientos:</strong> 3 respiraciones completas para mentalizarse hacia
+            el próximo movimiento.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Duración total:</strong> aproximadamente 12–15 minutos para la secuencia completa.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Frecuencia recomendada:</strong> 1–2 veces al día, preferiblemente por la mañana o
+            al atardecer.
+          </li>
+        </ul>
+
+        <h3 class="font-title text-2xl text-title-ink mt-8 mb-4">
+          Beneficios científicos comprobados
+        </h3>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          La investigación contemporánea ha confirmado los beneficios del Wu Qin Xi oficial:
+        </p>
+        <ul class="list-none text-lg text-ink space-y-2 leading-relaxed mb-6">
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Mejora de la función cardiopulmonar:</strong> Aumento de la capacidad respiratoria
+            y de la eficiencia cardíaca.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Mejora de la función inmunológica:</strong> Estudios en Shanghái muestran mejoras
+            en los índices de inmunidad en practicantes regulares.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Reducción del dolor lumbar:</strong> Un artículo en el <em
+              >Journal of Physical Therapy Science</em
+            > confirma la eficacia del Wu Qin Xi para reducir el dolor lumbar.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Mejora del equilibrio y la coordinación:</strong> Especialmente en adultos mayores,
+            reduciendo el riesgo de caídas.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Mejora de la salud mental:</strong> Reducción del estrés, la ansiedad y la depresión,
+            y mejora del estado de ánimo.
+          </li>
+          <li class="pl-4 border-l-4 border-chinese-seal-red">
+            <strong>Mejora de la flexibilidad y la movilidad articular:</strong> Aumento del rango de
+            movimiento de las articulaciones principales.
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <!--  OPINION -->
+    <section id="opinion" class="mb-8 fade-in max-w-4xl mx-auto">
+      <div class="max-w-4xl mx-auto section-bg-dynamic p-6 md:p-10 rounded-none shadow-lg">
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Yo aprendí este sistema a principios de 2025, en la Asociación Qing Mo Tiyu, Argentina.
+          Considero que la Administración General de Deportes de China y Chinese Health Qigong
+          Association, son las instituciones oficiales a las cuales se debe tener en cuenta para las
+          correciones y cambios en la adecuación y mejora del sistema, considerando que tienen
+          reglamentos técnicos evaluatorios.
+        </p>
+        <p class="text-lg text-text-secondary mb-4 leading-relaxed">
+          Aun así te encontrarás, como me pasa mí, con variaciones de movimientos e
+          interpretaciones, y aunque soy una persona abierta a la exploración del qigong y sus
+          diferentes estilos, considero que es importante tener en cuenta los criterios que utilizan
+          las instituciones oficiales para la enseñanza y práctica del Wu Qin Xi, ya que son el
+          resultado de años de investigación y experiencia en la materia.
+        </p>
+      </div>
+    </section>
+
+    <!--  MOVIMIENTOS -->
+    <section id="movimientos" class="mb-16 md:mb-20">
+      <!-- 0. 起势 -->
+      <details
+        id="movimiento-0"
+        class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      >
+        <summary class="mov-summary section-bg-paper">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+            起势 – Qǐ shì – (Preparación)
+          </h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+        <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1 px-6">
+            <CardGaleria
+              imgPath="construccion.webp"
+              altText="construccion"
+              width={800}
+              height={800}
+            />
+          </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong> Ren Mai (Vaso Concepción) y Du Mai (Vaso Gobernador)
+                forman el eje central al ponerse de pie; se despiertan suavemente los meridianos Taiyin
+                y Shaoyin de las manos para conectar la respiración con el movimiento.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong> Dāntián inferior (CV6–CV4) como depósito del
+                Qi, Baihui (DU20) para alinear el eje cielo-tierra, Zhongwan (CV12) para suavizar y centrar
+                el torso y Laogong (PC8) en las palmas.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico principal:</strong> Reunir el Qi disperso, armonizar la
+                respiración con la postura y “despertar” el sistema energético antes de los movimientos
+                dinámicos de la serie.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención / Yi:</strong> Sentir que el aire, la luz y la atención se recogen desde
+                el entorno y se asientan en el dāntián, estableciendo una base serena y estable.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración recomendada:</strong> Inspirar por la nariz cuando las manos ascienden;
+                espirar suavemente al descender, con cadencia tranquila (cuatro tiempos para inspirar
+                y cuatro para espirar).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación estructural:</strong> Pies separados al ancho de los hombros, columna
+                erguida sin rigidez, barbilla ligeramente retraída, hombros relajados, rodillas suaves
+                y peso equilibrado en ambos pies.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Visualización / imagen interna:</strong> Una esfera cálida de luz se eleva desde
+                el dāntián con la inhalación y vuelve a asentarse con la exhalación, llenando el tronco
+                de calma y vitalidad.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Activación muscular / biomecánica clave:</strong> Ligerísima contracción del suelo
+                pélvico y del transverso abdominal; escápulas separadas con hombros descendidos para que
+                los brazos suban sin tensión.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención (foco):</strong> Mente en el dāntián, evitar tensar cuello
+                y hombros, permitir que la respiración sea profunda y continua.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong> Forzar la lumbar (corregir alineando
+                el eje cabeza-sacro); elevar los hombros (soltarlos antes de iniciar); respirar superficialmente
+                en el pecho (llevar el aire al abdomen).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Contraindicaciones o precauciones:</strong> No forzar la respiración si hay hipertensión
+                no controlada o vértigo; en caso de inestabilidad, mantener la mirada baja y practicar
+                pausado.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición anterior y siguiente:</strong> Al ser el inicio, no tiene movimiento
+                previo; prepara el cuerpo para 虎举 (Hǔ jǔ – El Tigre Levanta).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong> Ligera expansión en pecho y abdomen, sosiego mental
+                y sensación de “enraizamiento” en el centro corporal.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 1. 虎举 -->
+      <details
+        id="movimiento-1"
+        class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      >
+        <summary class="mov-summary section-bg-paper">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+            虎举 – Hǔ jǔ – (El Tigre Levanta)
+          </h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1 px-6">
+            <CardGaleria
+              imgPath="construccion.webp"
+              altText="construccion"
+              width={1200}
+              height={800}
+            />
+          </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong> Hígado (LIV) y Vesícula Biliar (GB) como canales
+                principales, con participación de Du Mai (Vaso Gobernador) para el eje posterior y del
+                Meridiano Tendinomuscular de Pulmón (LU) por la apertura torácica.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong> Taichong (LIV3), Yanglingquan (GB34), Dazhui
+                (DU14), Jianjing (GB21), Hegu (LI4) y Laogong (PC8). Movilizan el Qi hepático, relajan
+                tendones y abren la cintura escapular.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico principal:</strong> Fortalece hígado y vesícula, tonifica
+                tendones y huesos, mejora la función respiratoria y la microcirculación de palmas y dedos,
+                y estira la columna en el eje vertical.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención / Yi:</strong> Manifestar la fiereza imponente del tigre, con mirada
+                penetrante y fuerza que nace del dāntián. Sentir cómo el cuerpo se estira hacia arriba
+                como si sostuviera algo pesado.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración recomendada:</strong> Inhalar al elevar las palmas y abrir el pecho;
+                exhalar al presionar hacia abajo, hundiendo el Qi en el dāntián.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación estructural:</strong> Columna erguida sin arquear la espalda; pecho
+                elevado y abdomen contraído como si se sostuviera algo pesado; rodillas alineadas con
+                los pies.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Visualización / imagen interna:</strong> Formar garra de tigre con las manos al
+                descender; imaginar que se sostiene el cielo al elevar las palmas.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Activación muscular / biomecánica clave:</strong> Multífidos, erectores espinales,
+                romboides, serrato anterior, core (transverso y oblicuos) y flexores de los dedos.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención (foco):</strong> Palmas hacia abajo y dedos separados al inicio;
+                cerrar el puño comenzando por el meñique; abrir lentamente al superar la altura del pecho.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong> Elevar los hombros (relajar trapecios
+                y descender escápulas); arquear la lumbar (activar abdomen y mantener pelvis neutra);
+                bloquear la respiración (sincronizar con el movimiento).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Contraindicaciones o precauciones:</strong> Evitar hiperextensión lumbar en dolor
+                agudo; moderar amplitud en lesiones de hombro o muñeca.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición anterior y siguiente:</strong> Sigue a 起势 (Qǐ shì) y precede a 虎扑
+                (Hǔ pū).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong> Apertura torácica, calor en tendones y articulaciones,
+                fuerza en dedos y manos, y estiramiento agradable en la columna.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2. 虎扑 -->
+      <details
+        id="movimiento-2"
+        class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      >
+        <summary class="mov-summary section-bg-paper">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+            虎扑 – Hǔ pū – (El Tigre se Abalanza)
+          </h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+        <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1 px-6">
+            <CardGaleria
+              imgPath="construccion.webp"
+              altText="construccion"
+              width={800}
+              height={800}
+            />
+          </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong> Hígado (LIV), Vesícula Biliar (GB), Du Mai (Vaso
+                Gobernador) y Dai Mai (Vaso Cinturón) por la flexo-extensión de la columna y la estabilidad
+                lumbopélvica.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong> Mingmen (DU4), Yaoyangguan (DU3), Shenshu (BL23),
+                Taichong (LIV3), Jianjing (GB21) y Hegu (LI4).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico principal:</strong> Estira y pliega la columna, ejercita
+                la flexibilidad y amplitud de las articulaciones vertebrales, desbloquea meridianos, activa
+                puntos de acupuntura (Xue) y fortalece la zona lumbar.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención / Yi:</strong> Proyectar la energía hacia delante y abajo, como un tigre
+                que se abalanza sobre su presa, con la fuerza que llega hasta la punta de los dedos.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración recomendada:</strong> Al abalanzarse hacia abajo, coordinar con una
+                exhalación rápida, utilizando el Qi para impulsar la fuerza (Li) hasta la punta de los
+                dedos.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación estructural:</strong> Levantar la cabeza al extender hacia delante,
+                empujar las nalgas hacia atrás, estirar cintura y rodillas, alargando la zona lumbar.
+                Al presionar y levantar: primero empujar las rodillas hacia delante, luego la cadera,
+                inclinando el cuerpo hacia atrás.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Visualización / imagen interna:</strong> Formar garra de tigre al abalanzarse
+                hacia abajo; puño vacío al levantar; cambio alterno entre ambas formas.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Activación muscular / biomecánica clave:</strong> Multífidos, erectores espinales,
+                glúteos, isquiotibiales, cuádriceps, romboides y flexores de los dedos; core profundo
+                estabilizando.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención (foco):</strong> Cambios en la forma de las manos: al levantar,
+                puño vacío (Kong Quan); al extender y presionar hacia abajo, garra de tigre (Hu Zhao).
+                Velocidad de lenta a rápida; fuerza de suave a firme.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong> Al extender las manos hacia delante,
+                arquear la espalda, bajar la cabeza y doblar las rodillas. Corrección: levantar la cabeza,
+                empujar las nalgas hacia atrás, estirar cintura y rodillas, alargando la zona lumbar.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Contraindicaciones o precauciones:</strong> Evitar la hiperextensión lumbar en
+                dolor agudo; moderar el rango en hernias discales, postcirugía o lesiones de rodilla y
+                cadera.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición anterior y siguiente:</strong> Sigue a 虎举 (Hǔ jǔ) y precede a 鹿抵
+                (Lù dǐ), tras una breve regulación de la respiración (Tiao Xi) con las manos hacia delante
+                y arriba.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong> Estiramiento y plegado de la columna, calor en
+                la zona lumbar, activación de meridianos y sensación de fuerza en las extremidades.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 3. 鹿抵 -->
+      <details
+        id="movimiento-3"
+        class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      >
+        <summary class="mov-summary section-bg-paper">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+            鹿抵 – Lù dǐ – (El Ciervo Topa)
+          </h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+        <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1 px-6">
+            <CardGaleria
+              imgPath="construccion.webp"
+              altText="construccion"
+              width={800}
+              height={800}
+            />
+          </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong> Riñón (KI) y Vejiga (BL) como canales principales;
+                colaboran Du Mai (Vaso Gobernador) y Dai Mai (Vaso Cinturón) por la rotación de la cintura.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong> Mingmen (DU4), Shenshu (BL23), Taixi (KI3),
+                Fuliu (KI7), Daimai (GB26) y Yanglingquan (GB34).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico principal:</strong> Trabaja principalmente la zona lumbar;
+                la práctica regular aumenta la fuerza muscular y la amplitud de movimiento de la cintura,
+                con efecto de fortalecer la cintura y consolidar los riñones.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención / Yi:</strong> Imitar la expresión grácil, tranquila, libre y fogosa
+                del ciervo. La rotación de la cintura impulsa los movimientos de brazos y piernas, coordinando
+                armoniosamente.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración recomendada:</strong> Inhalar al preparar la rotación; exhalar al
+                girar la cintura y extender las extremidades, manteniendo un ritmo suave y continuo.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación estructural:</strong> Al apoyar el pie, girar la punta hacia fuera
+                casi 90° (75° es óptimo). Inclinar ligeramente el cuerpo hacia delante, presionar el codo
+                izquierdo contra el costado de la cintura, extender completamente la mano derecha hacia
+                atrás, estirar el lado derecho de la cintura y aumentar la rotación lumbar, de modo que
+                los ojos, a través del hombro derecho, puedan ver el talón del pie derecho.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Visualización / imagen interna:</strong> Formar “cuerno de ciervo” con los dedos
+                corazón y anular doblados, los otros tres extendidos. Visualizar un ciervo que gira con
+                elegancia y mira hacia atrás.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Activación muscular / biomecánica clave:</strong> Oblicuos internos y externos,
+                transverso abdominal, multífidos, erectores espinales, glúteos, rotadores de cadera y
+                cuádriceps.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención (foco):</strong> La rotación nace de la cintura, no de los
+                hombros. Levantar la pierna, dar un paso, trazar un arco con las manos, girar la cintura
+                y extender las extremidades; luego recogerse.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong> Al apoyar el pie, apuntar con la punta
+                hacia delante sin girarla hacia fuera; el cuerpo no gira y no se logra mirar el talón.
+                Corrección: girar la punta del pie hacia fuera 75–90°, inclinar ligeramente el cuerpo
+                hacia delante, presionar el codo contra la cintura y aumentar la rotación lumbar.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Contraindicaciones o precauciones:</strong> Precaución en lumbalgia aguda, hernia
+                discal lumbar o postcirugía; reducir amplitud y velocidad según tolerancia.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición anterior y siguiente:</strong> Sigue a 虎扑 (Hǔ pū) y precede a 鹿奔
+                (Lù bēn).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong> Calor agradable en la zona lumbar, sensación de
+                soltura pélvica, mayor amplitud de rotación y soporte central firme.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 4. 鹿奔 -->
+      <details
+        id="movimiento-4"
+        class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      >
+        <summary class="mov-summary section-bg-paper">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+            鹿奔 – Lù bēn – (El Ciervo Corre)
+          </h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+        <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1 px-6">
+            <CardGaleria
+              imgPath="construccion.webp"
+              altText="construccion"
+              width={800}
+              height={800}
+            />
+          </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong> Riñón (KI) y Vejiga (BL); colaboran Du Mai (Vaso
+                Gobernador), Dai Mai (Vaso Cinturón) y Chong Mai por el arqueo de la columna.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong> Mingmen (DU4), Shenshu (BL23), Taixi (KI3),
+                Fuliu (KI7) y Dazhui (DU14).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico principal:</strong> Permite la rotación interna completa
+                de la articulación del hombro, estira los músculos de la espalda, ejercita las articulaciones
+                de la columna vertebral, masajea y estira Mingmen (Puerta de la Vida), tonificando la
+                energía de los riñones.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención / Yi:</strong> Sentir cómo la columna forma un arco horizontal en hombros
+                y espalda, y un arco vertical en la zona lumbar y dorsal; visualizar un ciervo que corre
+                con elegancia.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración recomendada:</strong> Inhalar al dar el paso adelante y extender los
+                brazos; exhalar al arquear la espalda y recoger el pie. Mantener ritmo suave y continuo.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación estructural:</strong> Al sentarse atrás con el peso, las manos se transforman
+                en “cuerno de ciervo”, rotación interna y extensión hacia delante con los dorsos enfrentados.
+                Hundir el pecho y bajar la cabeza, formando un arco horizontal en hombros y espalda; las
+                vértebras lumbares se flexionan hacia delante, contrayendo la espalda y formando un arco
+                vertical en la zona lumbar.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Visualización / imagen interna:</strong> Puños vacíos que trazan un arco hacia
+                delante y finalmente se arquean; cuerno de ciervo con rotación interna y extensión.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Activación muscular / biomecánica clave:</strong> Control excéntrico de isquiotibiales
+                y glúteos durante el arqueo; multífidos, erectores espinales, transverso abdominal y oblicuos;
+                rotadores internos de hombro y serrato anterior.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención (foco):</strong> Prestar atención al pequeño paso de cambio
+                entre los lados izquierdo y derecho: solo Lù bēn tiene este pequeño paso. Al sentarse
+                atrás, hundir pecho, bajar cabeza y flexionar vértebras lumbares hacia delante.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong> Arquear la espalda sin coordinar el pequeño
+                paso; forzar la flexión lumbar. Corrección: practicar por separado el pequeño paso y el
+                arqueo; buscar la sensación de masaje en Mingmen sin dolor.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Contraindicaciones o precauciones:</strong> Precaución en hernias discales agudas,
+                lumbalgia intensa, postcirugía o mareos; reducir amplitud y velocidad.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición anterior y siguiente:</strong> Sigue a 鹿抵 (Lù dǐ) y precede a 熊运
+                (Xióng yùn), tras una regulación de la respiración con las manos hacia delante y arriba.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong> Calor en la zona lumbar, masaje sobre Mingmen,
+                estiramiento de la espalda y sensación de elasticidad en la columna.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 5. 熊运 -->
+      <details
+        id="movimiento-5"
+        class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      >
+        <summary class="mov-summary section-bg-paper">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+            熊运 – Xióng yùn – (El Oso se Mueve)
+          </h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1 px-6">
+            <CardGaleria
+              imgPath="construccion.webp"
+              altText="construccion"
+              width={1200}
+              height={800}
+            />
+          </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong> Bazo (SP) y Estómago (ST) como canales principales;
+                colaboran Dai Mai (Vaso Cinturón) para la cohesión lateral y Du Mai (Vaso Gobernador)
+                para el eje posterior.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong> Zusanli (ST36), Sanyinjiao (SP6), Tianshu (ST25),
+                Zhongwan (CV12) y Mingmen (DU4).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico principal:</strong> Regula el bazo y el estómago, promueve
+                la función digestiva, masajea las vísceras del Jiao Medio y ejercita la zona lumbar y
+                la espalda.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención / Yi:</strong> Imitar la solidez y fuerza interna estable del oso. Sentir
+                la compresión y relajación de la zona abdominal y lumbar.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración recomendada:</strong> Inhalar al levantar las manos, exhalar al bajarlas.
+                Coordinar con el movimiento circular del cuerpo.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación estructural:</strong> Ambas piernas inmóviles; fijar cintura y cadera.
+                Inclinar la parte superior del cuerpo hacia delante y trazar un arco en el sentido de
+                las agujas del reloj con el cuerpo: derecha, arriba, izquierda, abajo. Luego en sentido
+                contrario.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Visualización / imagen interna:</strong> Formar “garra de oso” con las manos debajo
+                del abdomen, con los dedos doblados y el pulgar presionando sobre los nudillos de índice
+                y corazón, la “boca de tigre” redondeada.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Activación muscular / biomecánica clave:</strong> Transverso abdominal, oblicuos,
+                erectores espinales, multífidos, glúteos y cuádriceps.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención (foco):</strong> Al comenzar la práctica, dejar las manos colgando
+                y relajadas, concentrándose solo en la rotación circular impulsada por la fuerza de la
+                cintura y el abdomen. Una vez ganada la soltura, las manos pueden seguir el movimiento
+                trazando círculos frente al abdomen.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong> Mover activamente las manos sobre el
+                pecho y el abdomen (corregir dejándolas relajadas al inicio); girar la cintura y el abdomen
+                en un plano horizontal (corregir fijando cadera y piernas, y trazando el arco con el tronco).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Contraindicaciones o precauciones:</strong> Evitar esfuerzos abdominales intensos
+                en postoperatorios recientes, hernias abdominales activas o embarazo avanzado sin supervisión.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición anterior y siguiente:</strong> Sigue a 鹿奔 (Lù bēn) y precede a 熊晃
+                (Xióng huàng).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong> Calor abdominal, sensación de masaje visceral,
+                solidez lumbar y agradable pesadez en las piernas.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 6. 熊晃 -->
+      <details
+        id="movimiento-6"
+        class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      >
+        <summary class="mov-summary section-bg-paper">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+            熊晃 – Xióng huàng – (El Oso se Balancea)
+          </h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+        <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1 px-6">
+            <CardGaleria
+              imgPath="construccion.webp"
+              altText="construccion"
+              width={800}
+              height={800}
+            />
+          </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong> Bazo (SP) y Estómago (ST); colaboran Dai Mai (Vaso
+                Cinturón), Du Mai (Vaso Gobernador) y Chong Mai por el balanceo lateral.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong> Zusanli (ST36), Sanyinjiao (SP6), Tianshu (ST25),
+                Daimai (GB26) y Mingmen (DU4).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico principal:</strong> Ejercita las vísceras del Jiao Medio
+                y las articulaciones de los hombros y las caderas; mejora la coordinación y la estabilidad
+                lumbopélvica.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención / Yi:</strong> Imitar el balanceo pesado pero enérgico del oso. Sentir
+                cómo la cadera impulsa la pierna y cómo la vibración se transmite al apoyar la planta
+                del pie.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración recomendada:</strong> Inhalar al elevar la cadera; exhalar al sentarse
+                atrás y inclinarse hacia delante.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación estructural:</strong> Elevar la cadera, dar un paso, doblar la pierna,
+                sentarse atrás, inclinarse hacia delante. Mantener los hombros inmóviles, contraer los
+                lados de la cintura, usar la cadera para impulsar la pierna, alternando izquierda y derecha.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Visualización / imagen interna:</strong> Visualizar un oso que camina pesadamente,
+                apoyando cada paso con estabilidad y fuerza.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Activación muscular / biomecánica clave:</strong> Cuádriceps y glúteos en la fase
+                de descenso y ascenso; core (transverso y oblicuos) estabilizando; control fino de tobillo;
+                rotadores externos de cadera.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención (foco):</strong> Al transferir el centro de gravedad, los lados
+                de la cintura se comprimen y relajan alternativamente. Para principiantes, el movimiento
+                de elevar la cadera puede practicarse por separado en el sitio.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong> Pisar fuerte deliberadamente con el pie.
+                Corrección: presionar hacia abajo de forma natural con el cuerpo, relajar las articulaciones
+                de rodilla y cadera, y al apoyar la planta del pie permitir que la vibración se transmita
+                a la cadera.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Contraindicaciones o precauciones:</strong> Adaptar en lesiones de rodilla, cadera
+                o tobillo; evitar impactos fuertes en presencia de patología articular.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición anterior y siguiente:</strong> Sigue a 熊运 (Xióng yùn) y precede a
+                猿提 (Yuán tí), tras una regulación de la respiración.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong> Calor en piernas y caderas, sensación de estabilidad,
+                solidez lumbar y ligera vibración al apoyar el pie.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 7. 猿提 -->
+      <details
+        id="movimiento-7"
+        class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      >
+        <summary class="mov-summary section-bg-paper">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+            猿提 – Yuán tí – (El Mono Se Levanta)
+          </h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+        <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1 px-6">
+            <CardGaleria
+              imgPath="construccion.webp"
+              altText="construccion"
+              width={800}
+              height={800}
+            />
+          </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong> Corazón (HT) e Intestino Delgado (SI) como canales
+                principales; colaboran Du Mai (Vaso Gobernador) para el eje posterior y Ren Mai (Vaso
+                Concepción) para la línea media anterior.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong> Shenmen (HT7), Shaohai (HT3), Xiaohai (SI8),
+                Dazhui (DU14), Baihui (DU20) y Huiyin (REN1) por la contracción del perineo.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico principal:</strong> Masajea las vísceras del Jiao Superior,
+                mejora la función cardiopulmonar, fortalece el sistema nervioso y aumenta la agilidad
+                y el equilibrio.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención / Yi:</strong> La intención (Yi Nian) es que el punto Baihui (en la
+                coronilla) lidere hacia arriba y el cuerpo le siga. Imitar al mono vivaz, ágil y listo,
+                que mira a todas partes.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración recomendada:</strong> Inhalar al elevar el centro de gravedad; exhalar
+                al descender. Al elevar: primero levantar los hombros, luego contraer abdomen y perineo,
+                y finalmente levantar los talones. Al descender: primero relajar los hombros, luego el
+                abdomen y perineo, y finalmente bajar los talones.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación estructural:</strong> Colocar ambas manos frente al cuerpo, separar
+                los dedos y luego cerrarlos rápidamente formando el “Gancho de Mono” (Yuan Gou). Encojer
+                los hombros, contraer el cuello, levantar las manos, contraer abdomen y perineo (Tigang),
+                levantar los talones. Girar la cabeza hacia la izquierda, luego al frente.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Visualización / imagen interna:</strong> Gancho de mono (Yuan Gou) juntando las
+                puntas de los cinco dedos y doblando la muñeca. Tomando el centro del pecho como núcleo,
+                expandir el pecho y contraer el abdomen, encoger el cuello y elevar el perineo, juntando
+                ligeramente ambos brazos hacia dentro; formar una fuerza convergente hacia el centro desde
+                arriba, abajo, izquierda y derecha.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Activación muscular / biomecánica clave:</strong> Trapecio superior, romboides,
+                serrato anterior, core (transverso y oblicuos), suelo pélvico, gemelos, cuádriceps y glúteos.
+                Flexores de dedos y muñeca.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención (foco):</strong> Al elevar el centro de gravedad, mantener
+                el equilibrio del cuerpo. La secuencia de activación es fundamental: hombros → abdomen/perineo
+                → talones.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong> Perder el equilibrio (practicar cerca
+                de un apoyo si es necesario); tensar hombros (relajarlos y descenderlos); cortar la respiración
+                (sincronizar con el movimiento). No levantar los talones antes de contraer abdomen y perineo.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Contraindicaciones o precauciones:</strong> Practicar con cuidado si hay vértigo,
+                problemas de equilibrio, hipertensión no controlada o lesiones de tobillo y rodilla. Evitar
+                apneas.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición anterior y siguiente:</strong> Sigue a 熊晃 (Xióng huàng) y precede
+                a 猿摘 (Yuán zhāi).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong> Ligereza en brazos y hombros, calor suave en el
+                pecho, mayor agilidad, sensación de alerta serena y elevación del centro de gravedad.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 8. 猿摘 -->
+      <details
+        id="movimiento-8"
+        class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      >
+        <summary class="mov-summary section-bg-paper">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+            猿摘 – Yuán zhāi – (El Mono Recolecta)
+          </h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+        <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1 px-6">
+            <CardGaleria
+              imgPath="construccion.webp"
+              altText="construccion"
+              width={800}
+              height={800}
+            />
+          </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong> Corazón (HT) e Intestino Delgado (SI); colaboran
+                Du Mai (Vaso Gobernador), Dai Mai (Vaso Cinturón) y Vesícula Biliar (GB) por los giros
+                y la coordinación.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong> Shenmen (HT7), Xiaohai (SI8), Jianzhen (SI9),
+                Fengchi (GB20), Dazhui (DU14) y Baihui (DU20).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico principal:</strong> Mejora la función del sistema nervioso,
+                aumenta la agilidad de respuesta del organismo, ejercita la coordinación ojo-mano y fortalece
+                la musculatura de piernas y core.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención / Yi:</strong> Simular al mono trepando para recoger frutos. La mirada
+                sigue a la mano izquierda; cuando la mano se mueve hacia el lado derecho de la cabeza,
+                girar la cabeza para mirar hacia arriba a la derecha. Imaginar que se ha descubierto un
+                melocotón en el árbol.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración recomendada:</strong> Coordinar la respiración con el paso atrás y
+                el avance para recolectar. Al trepar para recoger el fruto, la velocidad para formar el
+                gancho debe ser rápida.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación estructural:</strong> Paso atrás trazando un arco, postura de apoyo
+                (Ding Bu) presionando hacia abajo, paso adelante para recolectar el fruto. Movimientos
+                de piernas: dar un paso atrás con el pie izquierdo hacia la izquierda, retirar el pie
+                derecho y adoptar la postura de apoyo. Dar un gran paso adelante con el pie derecho, desplazar
+                el peso hacia arriba, luego retirarlo de nuevo y adoptar la postura de apoyo.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Visualización / imagen interna:</strong> Recolectar el paso, retirar la mano y
+                cambiarla a palma para sostener el melocotón, con la mano izquierda soportando desde abajo.
+                Visualizar al mono agachándose y dando un salto hacia adelante.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Activación muscular / biomecánica clave:</strong> Cuádriceps, glúteos, isquiotibiales,
+                gemelos; core (transverso y oblicuos); rotadores de cadera; trapecio superior, romboides,
+                serrato anterior y flexores de dedos y muñeca.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención (foco):</strong> Prestar atención a la coordinación armoniosa
+                de los movimientos de las extremidades superiores e inferiores. La mirada sigue a la mano;
+                hay muchos cambios en las formas de las manos y la expresión de los ojos.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong> Perder la coordinación entre piernas
+                y brazos (practicar por separado los movimientos); perder el equilibrio durante el salto
+                y la postura de apoyo (bajar el centro de gravedad y practicar cerca de un apoyo); ralentizar
+                la formación del gancho (mantener la rapidez característica del mono).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Contraindicaciones o precauciones:</strong> Practicar con cuidado si hay vértigo,
+                problemas de equilibrio, lesiones de rodilla, tobillo o cadera. Moderar la amplitud en
+                dolor lumbar agudo.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición anterior y siguiente:</strong> Sigue a 猿提 (Yuán tí) y precede a 鸟伸
+                (Niǎo shēn), tras una regulación de la respiración.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong> Calor suave en el pecho y las piernas, mayor agilidad,
+                sensación de coordinación ojo-mano y ligereza corporal.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 9. 鸟伸 -->
+      <details
+        id="movimiento-9"
+        class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      >
+        <summary class="mov-summary section-bg-paper">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+            鸟伸 – Niǎo shēn – (El Ave se Estira)
+          </h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1 px-6">
+            <CardGaleria
+              imgPath="construccion.webp"
+              altText="construccion"
+              width={1200}
+              height={800}
+            />
+          </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong> Pulmón (LU) e Intestino Grueso (LI) como canales
+                principales; colaboran Ren Mai (Vaso Concepción) para la expansión anterior, Du Mai (Vaso
+                Gobernador) para el eje posterior y Dai Mai (Vaso Cinturón) para la estabilidad.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong> Zhongfu (LU1), Shaoshang (LU11), Feishu (BL13),
+                Dazhui (DU14), Danzhong (REN17) y Hegu (LI4).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico principal:</strong> A través de la elevación del brazo y
+                la presión hacia abajo, el cuerpo se alterna entre tensión y relajación, lo que sirve
+                para “exhalar lo viejo, inhalar lo nuevo” (Tu Gu Na Xin) y desbloquear la energía esencial
+                (Jing Qi) de los meridianos Du y Ren.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención / Yi:</strong> Imaginar que se es una grulla en medio de un lago, erguida
+                con la cabeza en alto, estirando los tendones y huesos, extendiendo las alas y volando
+                alto.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración recomendada:</strong> Inhalar al levantar ambas manos y juntar los
+                hombros; exhalar al presionar hacia abajo y extender la pierna hacia atrás.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación estructural:</strong> Al levantar ambas manos, juntar los hombros y
+                contraer ligeramente, levantar las muñecas con los dedos hacia arriba, manteniendo las
+                manos a nivel. Al presionar hacia abajo, relajar el cuerpo, desplazar el centro de gravedad
+                hacia la derecha, luego estirar la pierna izquierda hacia atrás, abriendo la parte superior
+                del cuerpo. Juntar las manos frente al abdomen, levantarlas hasta la altura de la frente
+                con las palmas a nivel; inclinar ligeramente el cuerpo hacia delante, presionar ambas
+                manos hacia abajo hasta el abdomen, luego extenderlas hacia atrás formando una ‘V’ invertida,
+                estirar ambas rodillas y mantener el cuerpo estable.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Visualización / imagen interna:</strong> Formar “ala de ave” (Niao Chi) con los
+                dedos corazón y anular doblados hacia abajo, los otros tres elevados. Visualizar una grulla
+                que extiende las alas y vuela sobre un lago tranquilo.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Activación muscular / biomecánica clave:</strong> Serrato anterior, trapecio inferior,
+                romboides, deltoides posterior, core (transverso y oblicuos), cuádriceps, glúteos y gemelos.
+                Control excéntrico de isquiotibiales y glúteos en la inclinación del tronco.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención (foco):</strong> Mantener la apertura desde el pecho y no solo
+                desde los hombros; evitar elevar los hombros; conservar el eje vertical sin arquear la
+                zona lumbar; sostener respiración amplia y continua.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong> Elevar los hombros por tensión cervical
+                (alargar la nuca y relajar mandíbula y lengua); arquear en exceso la zona lumbar (activar
+                abdomen bajo y distribuir la extensión por toda la columna); perder el ritmo respiratorio
+                (sincronizar inhalación en la preparación y exhalación en la extensión segmentaria).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Contraindicaciones o precauciones:</strong> Moderar amplitud en lesiones de hombro,
+                cervical o lumbar; ajustar la práctica en hipertensión o patologías cardíacas; evitar
+                apneas y respetar rangos indoloros.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición anterior y siguiente:</strong> Sigue a 猿摘 (Yuán zhāi) y precede a
+                鸟飞 (Niǎo fēi).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong> Amplitud torácica, ligereza en hombros, elongación
+                axial confortable, calor suave en la pierna de apoyo y mayor claridad mental.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 10. 鸟飞 -->
+      <details
+        id="movimiento-10"
+        class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      >
+        <summary class="mov-summary section-bg-paper">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+            鸟飞 – Niǎo fēi – (El Ave Vuela)
+          </h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+        <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1 px-6">
+            <CardGaleria
+              imgPath="construccion.webp"
+              altText="construccion"
+              width={800}
+              height={800}
+            />
+          </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong> Pulmón (LU) e Intestino Grueso (LI); colaboran
+                Ren Mai (Vaso Concepción), Du Mai (Vaso Gobernador), Dai Mai (Vaso Cinturón) y Vesícula
+                Biliar (GB) por el equilibrio monopodal.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong> Zhongfu (LU1), Shaoshang (LU11), Feishu (BL13),
+                Dazhui (DU14), Danzhong (REN17), Hegu (LI4) y Yongquan (KI1) por el apoyo plantar.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico principal:</strong> La práctica regular puede ejercitar
+                la función cardiopulmonar, flexibilizar las articulaciones de las extremidades y mejorar
+                la capacidad de equilibrio.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención / Yi:</strong> Imaginar que se es una grulla que despliega sus alas
+                y vuela alto, manteniendo serenidad y control postural en cada cambio de apoyo.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración recomendada:</strong> Inhalar al elevar las manos horizontalmente
+                y levantar la rodilla; exhalar al bajar las manos y descender la pierna.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación estructural:</strong> Juntar ambas manos frente al abdomen, elevarlas
+                a la altura de los hombros en posición horizontal, levantar una pierna y mantenerse erguido
+                sobre la otra. Al elevarlas horizontalmente, las muñecas deben quedar ligeramente más
+                altas que los hombros. Al bajar las manos, las palmas deben enfrentarse. Al elevarlas,
+                los dorsos de las manos se enfrentan, formando una abertura hacia arriba con forma de
+                campana.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Visualización / imagen interna:</strong> Formar “ala de ave” con los dedos corazón
+                y anular doblados hacia abajo, los otros tres elevados. Visualizar una grulla que se eleva
+                con serenidad sobre un lago.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Activación muscular / biomecánica clave:</strong> Primero hundir los hombros,
+                luego levantar los codos y finalmente levantar las muñecas. Al descender: primero relajar
+                los hombros, luego hundir los codos y presionar las palmas. Esto permite que hombros y
+                brazos formen un movimiento ondulante, beneficioso para la circulación de Qi y Xue. Al
+                levantar una rodilla, la pierna de apoyo se estira; al descender, la pierna de apoyo se
+                dobla, la punta del pie toca el suelo, luego vuelve a levantar la rodilla.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención (foco):</strong> Al practicar Niǎo fēi, se debe coordinar armoniosamente
+                las extremidades superiores e inferiores y mantener el equilibrio del cuerpo. Practicar
+                primero los movimientos de la parte superior del cuerpo por separado y luego los de la
+                parte inferior.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong> Perder el equilibrio (bajar un poco la
+                pierna elevada o usar un apoyo); tensar hombros (aflojar y abrir el pecho); cortar la
+                respiración (sincronizar con el movimiento).
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Contraindicaciones o precauciones:</strong> Practicar cerca de un apoyo si hay
+                vértigo o problemas de equilibrio; reducir rango en lesiones de hombro, tobillo o rodilla;
+                moderar en hipertensión no controlada.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición anterior y siguiente:</strong> Sigue a 鸟伸 (Niǎo shēn) y precede al
+                cierre 收势 (Shōu shì) / 引气归元 (Yǐn qì guī yuán), tras una regulación de la respiración.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong> Amplitud torácica, ligereza en brazos y hombros,
+                calor suave en la pierna de apoyo, mayor claridad mental y sensación de elevación serena.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 11. 收势 / 引气归元 -->
+      <details
+        id="movimiento-11"
+        class="container mx-auto mb-10 md:mb-20 py-12 section-bg-paper rounded-none shadow-lg fade-in"
+      >
+        <summary class="mov-summary section-bg-paper">
+          <h3 class="font-title text-2xl md:text-4xl text-text-title text-center mb-4">
+            收势 – Shōu shì – (Cierre) · 引气归元 – Yǐn qì guī yuán – (Conducir el Qi al Origen)
+          </h3>
+          <span aria-hidden="true" class="chev fa-solid fa-chevron-down"></span>
+        </summary>
+
+        <div class="pswp-gallery-container grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1 px-6">
+            <CardGaleria
+              imgPath="construccion.webp"
+              altText="construccion"
+              width={800}
+              height={800}
+            />
+          </div>
+          <div class="md:col-span-2 flex flex-col space-y-4 px-10">
+            <ul class="list-none text-lg text-ink space-y-3 leading-relaxed py-10">
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Meridianos implicados:</strong> Ren Mai (Vaso Concepción) dirige la energía por
+                la línea media anterior durante el descenso de las manos; Du Mai (Vaso Gobernador) estabiliza
+                el eje posterior; Pericardio (PC) y Riñón (KI) colaboran al sellar la energía en el Dan
+                Tian.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos energéticos clave:</strong> Primer sello Danzhong (REN17), centro del pecho,
+                reúne el Qi. Segundo sello Zhongwan (REN12), parte alta del abdomen, armoniza Estómago
+                y Bazo. Tercer sello Qihai / Guanyuan (REN6–REN4), Dan Tian inferior, almacena la energía
+                para nutrir todo el cuerpo. Las palmas (Laogong PC8) actúan como «tapones» que conducen
+                el Qi a cada nivel.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Beneficio terapéutico principal:</strong> Armoniza la respiración, sella y equilibra
+                la energía generada durante la secuencia, induce calma mental, armoniza Qi y Xue, regula
+                los meridianos (Jing Mai) y ordena las vísceras (Zang Fu). Favorece la integración de
+                los tres centros: pecho, abdomen medio y bajo.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Intención / Yi:</strong> La intención (Yi Nian) acompaña el movimiento: al elevar
+                las manos, imaginar que se sostiene energía (Qi) y se lleva hasta la coronilla. Al descender,
+                visualizar que el Qi fluye por el interior del cuerpo (a través del meridiano Ren) hasta
+                el Dan Tian, mientras el cuerpo se relaja por completo. Reunir el Qi disperso con las
+                palmas, guiándolo en tres pasos descendentes hasta el Dan Tian inferior.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Respiración recomendada:</strong> Inspirar suavemente al elevar las manos lateralmente;
+                exhalar lenta y prolongadamente al bajarlas por delante del cuerpo y en cada sello, percibiendo
+                cómo el aire y la energía descienden y se concentran.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Alineación estructural:</strong> Postura erguida con pies paralelos al ancho de
+                hombros, rodillas relajadas, sacro pesado, coronilla suspendida y hombros suavemente descendidos.
+                Levantar ambas manos lateralmente con las palmas hacia arriba hasta la altura de la cabeza;
+                girar las palmas hacia abajo y bajarlas naturalmente por delante del cuerpo.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Visualización / imagen interna:</strong> Imaginar un hilo de luz que desciende
+                desde la coronilla a lo largo del eje central, siguiendo el trayecto de las palmas mientras
+                estas sellan la energía en cada nivel. Finalmente, juntar las manos trazando un arco frente
+                al abdomen, cruzar los dedos (con la boca de tigre de una mano sobre la otra) y superponerlas
+                sobre el abdomen.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Activación muscular / biomecánica clave:</strong> Tono postural suave: glúteos
+                y abdomen inferior sostienen la vertical; hombros y brazos se mueven con mínimo esfuerzo,
+                guiados por la respiración. Diafragma y suelo pélvico coordinan para sostener la presión
+                intraabdominal.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Puntos de atención (foco):</strong> Deslizar las palmas sin prisa, mantener la
+                mente anclada en cada punto de sello y percibir el calor que se acumula en el Dan Tian.
+                Cerrar los ojos y descansar un momento, regular la respiración hasta que esté uniforme,
+                concentrar la mente en el Dan Tian. Esperar hasta que la respiración sea uniforme y la
+                intención (Yi Nian) se haya aquietado en el Dan Tian.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Errores comunes y correcciones:</strong> Cerrar de forma brusca no beneficia la
+                práctica; ralentizar los gestos y sincronizar con la respiración. Evitar contener el aire
+                o forzar la postura. Abrir lentamente los ojos, juntar las palmas y frotarlas hasta que
+                se calienten; “lavar” la cara con las manos calientes, puede repetir varias veces. Finalmente,
+                levantar ambas palmas, pasarlas por detrás de las orejas y bajarlas lentamente por delante
+                del cuerpo.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Contraindicaciones o precauciones:</strong> Ninguna específica; simplemente mantener
+                la estabilidad si existen problemas de equilibrio o fatiga.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Transición anterior y siguiente:</strong> Sigue inmediatamente a 鸟飞 (Niǎo fēi)
+                y finaliza la práctica. Los brazos cuelgan naturalmente, juntar los pies. A través del
+                cierre (Shou Gong), el cuerpo se siente confortable y sano, volviendo al estado normal.
+              </li>
+              <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+                <strong>Sensaciones esperadas:</strong> Calor suave que se concentra en el abdomen inferior,
+                respiración tranquila, mente clara y sensación de enraizamiento. El cuerpo se siente confortable
+                y sano, volviendo al estado normal.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section id="Fuentes_WuQinXi" class="mb-8 fade-in max-w-4xl mx-auto">
+      <div class="max-w-4xl mx-auto section-bg-paper p-6 md:p-10 rounded-none shadow-lg">
+        <h4 class="font-title text-2xl md:text-3xl border-b-2 border-chinese-seal-red pb-4 mb-4">
+          Fuentes y Bibliografía Académica utilizada para la elaboración de este artículo
+        </h4>
+        <ul class="list-none text-lg text-ink space-y-6 leading-relaxed py-10">
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a
+              href="https://doi.org/10.4103/CMAC.CMAC_32_18"
+              class="text-blue-700 underline font-semibold"
+              target="_blank"
+              rel="noopener"
+            >
+              Balaneskovic, S. (2018). Hua Tuo's Wu Qin Xi (Five Animal Frolics) Movements and the
+              Logic behind It. Chinese Medicine and Culture, 1(3), 127-134.
+            </a>
+            <p class="text-sm text-text-secondary mt-1">
+              Estudio fundamental que analiza la lógica del orden de los animales, vinculándolo con
+              el Taiji Tu, el cuadrado de Luo Shu y el símbolo del swástica.
+            </p>
+          </li>
+
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a
+              href="https://doi.org/10.16294/j.cnki.1007-659x.2023.01.005"
+              class="text-blue-700 underline font-semibold"
+              target="_blank"
+              rel="noopener"
+            >
+              曹海豪，毕鸿雁，席晓明，王丽敏，孙文玉 (2023). 基于象思维探讨五禽戏五脏配属的理论机制.
+              山东中医药大学学报, 47(1), 20-23+28.
+            </a>
+            <p class="text-sm text-text-secondary mt-1">
+              Artículo académico que explica la correspondencia entre los cinco animales y los
+              órganos (Zang-Fu) desde el pensamiento simbólico (象思维) de la MTC.
+            </p>
+          </li>
+
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a
+              href="https://tyb.shutcm.edu.cn/2020/0209/c5170a119851/page.htm"
+              class="text-blue-700 underline font-semibold"
+              target="_blank"
+              rel="noopener"
+            >
+              上海中医药大学 (2020). 科学健身 | 战“疫”时期，五禽戏助力！（中级篇）.
+            </a>
+            <p class="text-sm text-text-secondary mt-1">
+              Material oficial de la Universidad de Medicina Tradicional China de Shanghái que
+              detalla las funciones terapéuticas de cada animal y su relación con los órganos.
+            </p>
+          </li>
+
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a
+              href="https://www.sport.gov.cn/qgzx/n5407/c875504/content.html"
+              class="text-blue-700 underline font-semibold"
+              target="_blank"
+              rel="noopener"
+            >
+              国家体育总局健身气功管理中心 (2003). 健身气功·五禽戏. 北京: 人民体育出版社.
+            </a>
+            <p class="text-sm text-text-secondary mt-1">
+              Manual oficial de la versión estandarizada del Wu Qin Xi, publicado por la
+              Administración General de Deportes de China. Base de la secuencia de 10 movimientos.
+            </p>
+          </li>
+
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a
+              href="https://ctext.org/sanguozhi/zh"
+              class="text-blue-700 underline font-semibold"
+              target="_blank"
+              rel="noopener"
+            >
+              Chen Shou (西晋). 三国志 (Sanguozhi) – Biografía de Hua Tuo.
+            </a>
+            <p class="text-sm text-text-secondary mt-1">
+              Fuente histórica más antigua que cita el orden canónico de los cinco animales: Tigre,
+              Ciervo, Oso, Mono y Ave.
+            </p>
+          </li>
+
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a
+              href="https://ctext.org/wiki.pl?if=gb&res=781616"
+              class="text-blue-700 underline font-semibold"
+              target="_blank"
+              rel="noopener"
+            >
+              Tao Hongjing (陶弘景). 养性延命录 (Yangsheng Yanming Lu).
+            </a>
+            <p class="text-sm text-text-secondary mt-1">
+              Texto clásico del siglo VI d.C. que describe los movimientos de cada animal y
+              establece el principio de “practicar según la propia fuerza, tomando la sudoración
+              como medida”.
+            </p>
+          </li>
+
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a
+              href="https://www.stdaily.com/web/English/2022-05/12/content_1887113.html"
+              class="text-blue-700 underline font-semibold"
+              target="_blank"
+              rel="noopener"
+            >
+              Science and Technology Daily (2022). Wu Qin Xi: A Classical Indoor Exercise.
+            </a>
+            <p class="text-sm text-text-secondary mt-1">
+              Artículo periodístico que resume los beneficios científicos del Wu Qin Xi y su
+              popularidad global, incluyendo datos sobre los centros de enseñanza en Bozhou.
+            </p>
+          </li>
+
+          <li class="pl-4 py-1 border-l-4 border-chinese-seal-red">
+            <a
+              href="#"
+              class="text-blue-700 underline font-semibold"
+              target="_blank"
+              rel="noopener"
+            >
+              DeMarco, M. A. (2018). Five Animal Frolics in Taiwan: Nourishing Health on a Beautiful
+              Island.
+            </a>
+            <p class="text-sm text-text-secondary mt-1">
+              Artículo que documenta la transmisión del Wu Qin Xi en Taiwán, con las versiones de
+              125 y 84 movimientos de Zhang Jingying y Lin Jianhong.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <PhotoSwipeUI />
+  </section>
+</MainLayout>

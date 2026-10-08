@@ -1,0 +1,354 @@
+---
+import { getEditorUser } from "../../lib/auriculoterapia-auth";
+
+const user = await getEditorUser(Astro.request);
+if (!user) return Astro.redirect("/servicios/auriculoterapia");
+if (user.role !== "admin")
+  return new Response("Acceso solo para administradores.", { status: 403 });
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin · Blog</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Segoe UI", sans-serif;
+        background: #f3f5f4;
+        color: #18231d;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 28px 18px 56px;
+      }
+      header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.6rem;
+      }
+      h2 {
+        margin: 0 0 12px;
+        font-size: 1.1rem;
+      }
+      a {
+        color: #19633b;
+      }
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+      button {
+        padding: 8px 12px;
+        border: 1px solid #aebbb2;
+        background: #fff;
+        color: inherit;
+        cursor: pointer;
+      }
+      button:hover {
+        border-color: #19633b;
+      }
+      button:disabled {
+        opacity: 0.55;
+        cursor: wait;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 9px 10px;
+        border: 1px solid #b8c3bc;
+        background: white;
+        color: inherit;
+      }
+      label {
+        display: grid;
+        gap: 6px;
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+      .admin-grid {
+        display: grid;
+        grid-template-columns: minmax(220px, 290px) minmax(0, 1fr);
+        gap: 20px;
+        align-items: start;
+      }
+      .panel {
+        background: white;
+        border: 1px solid #d7ded9;
+        padding: 16px;
+      }
+      .post-list {
+        display: grid;
+        gap: 8px;
+        max-height: 75vh;
+        overflow: auto;
+        margin-top: 12px;
+      }
+      .post-choice {
+        display: grid;
+        gap: 4px;
+        width: 100%;
+        text-align: left;
+      }
+      .post-choice small {
+        opacity: 0.7;
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .form-grid .wide {
+        grid-column: 1 / -1;
+      }
+      .toolbar,
+      .form-actions,
+      .image-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .toolbar {
+        padding: 8px;
+        border: 1px solid #d7ded9;
+        border-bottom: 0;
+        background: #f7f9f7;
+      }
+      .toolbar button {
+        padding: 6px 9px;
+      }
+      .editor-surface {
+        min-height: 280px;
+        padding: 14px;
+        border: 1px solid #b8c3bc;
+        background: #fff;
+        outline: none;
+        line-height: 1.65;
+      }
+      .editor-surface:focus {
+        border-color: #19633b;
+      }
+      .image-preview {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 10px 0;
+      }
+      .image-preview figure {
+        position: relative;
+        width: 132px;
+        margin: 0;
+      }
+      .image-preview img {
+        display: block;
+        width: 132px;
+        height: 94px;
+        object-fit: cover;
+        border: 1px solid #d7ded9;
+      }
+      .image-preview figcaption {
+        overflow: hidden;
+        font-size: 0.72rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .image-preview button {
+        margin-top: 4px;
+        padding: 4px 7px;
+        font-size: 0.72rem;
+      }
+      .cover-preview img {
+        width: 210px;
+        height: 140px;
+      }
+      .form-actions {
+        justify-content: flex-end;
+        margin-top: 18px;
+      }
+      .primary {
+        background: #19633b;
+        color: white;
+        border-color: #19633b;
+      }
+      #blog-status {
+        min-height: 1.4em;
+      }
+      .error {
+        color: #9e2a2b;
+      }
+      .muted {
+        color: #637169;
+        font-size: 0.8rem;
+      }
+      @media (max-width: 760px) {
+        .admin-grid {
+          grid-template-columns: 1fr;
+        }
+        .post-list {
+          max-height: 240px;
+        }
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+        .form-grid .wide {
+          grid-column: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Gestión del blog</h1><p class="muted">Entradas, formato enriquecido e imágenes</p>
+        </div>
+        <a href="/admin/auriculoterapia">Volver a administración</a>
+      </header>
+      <p id="blog-status" role="status">Cargando entradas…</p>
+      <div class="admin-grid">
+        <aside class="panel">
+          <button type="button" id="blog-new" class="primary">+ Nueva entrada</button>
+          <div id="blog-post-list" class="post-list"></div>
+        </aside>
+        <section class="panel">
+          <form id="blog-form">
+            <div class="form-grid">
+              <label
+                >Título
+                <input
+                  id="blog-title"
+                  maxlength="180"
+                  required
+                  placeholder="Título de la entrada"
+                />
+              </label>
+              <label
+                >Slug / URL
+                <input id="blog-slug" maxlength="100" placeholder="se-genera-desde-el-titulo" />
+              </label>
+              <label
+                >Resumen de la tarjeta
+                <textarea
+                  id="blog-summary"
+                  rows="3"
+                  maxlength="500"
+                  placeholder="Resumen corto para la portada"></textarea>
+              </label>
+              <label
+                >Categorías (separadas por coma)
+                <input id="blog-categories" placeholder="MTC, Experiencias" />
+              </label>
+              <label
+                >Fecha visible
+                <input id="blog-date" placeholder="1 de octubre de 2026" />
+              </label>
+              <label
+                >Icono Font Awesome (opcional)
+                <input id="blog-icon" placeholder="fa-newspaper" />
+              </label>
+              <label
+                >Subtítulo de introducción
+                <input id="blog-intro-title" maxlength="180" />
+              </label>
+              <label
+                >Subtítulo de sección
+                <input id="blog-section-title" maxlength="180" />
+              </label>
+              <label class="wide"
+                >Introducción
+                <textarea id="blog-intro" rows="4" maxlength="5000"></textarea>
+              </label>
+              <div class="wide">
+                <label for="blog-body-editor">Texto del post</label>
+                <div class="toolbar" aria-label="Formato de texto">
+                  <button type="button" data-command="bold" title="Negrita"
+                    ><strong>B</strong></button
+                  >
+                  <button type="button" data-command="italic" title="Cursiva"><em>I</em></button>
+                  <button type="button" data-command="underline" title="Subrayado"><u>U</u></button>
+                  <button type="button" data-block="h2">Título</button>
+                  <button type="button" data-block="h3">Subtítulo</button>
+                  <button type="button" data-block="blockquote">Cita</button>
+                  <button type="button" data-command="insertUnorderedList">• Lista</button>
+                  <button type="button" data-command="insertOrderedList">1. Lista</button>
+                  <button type="button" id="blog-insert-link">Enlace</button>
+                  <button type="button" id="blog-insert-image">Insertar imagen</button>
+                </div>
+                <div
+                  id="blog-body-editor"
+                  class="editor-surface"
+                  contenteditable="true"
+                  role="textbox"
+                  aria-multiline="true"
+                >
+                </div>
+                <p class="muted">
+                  El servidor filtra etiquetas, atributos y enlaces antes de publicar.
+                </p>
+              </div>
+              <div class="wide">
+                <div class="image-actions">
+                  <label
+                    >Imagen de portada <input
+                      id="blog-cover-file"
+                      type="file"
+                      accept="image/jpeg,image/png,image/webp,image/gif"
+                    /></label
+                  >
+                  <label
+                    >Galería (podés elegir varias) <input
+                      id="blog-gallery-files"
+                      type="file"
+                      accept="image/jpeg,image/png,image/webp,image/gif"
+                      multiple
+                    /></label
+                  >
+                </div>
+                <div id="blog-cover-preview" class="image-preview cover-preview"></div>
+                <div id="blog-gallery-preview" class="image-preview"></div>
+              </div>
+              <label class="wide"
+                ><span
+                  ><input id="blog-published" type="checkbox" style="width:auto" /> Publicado (visible
+                  en el blog)</span
+                ></label
+              >
+            </div>
+            <div class="form-actions">
+              <button type="button" id="blog-delete">Eliminar entrada</button>
+              <button type="submit" class="primary" id="blog-save">Guardar entrada</button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <input
+        id="blog-inline-image"
+        type="file"
+        accept="image/jpeg,image/png,image/webp,image/gif"
+        hidden
+      />
+    </main>
+    <script>
+      import "../../js/auriculoterapia/admin-blog.js";
+    </script>
+  </body>
+</html>

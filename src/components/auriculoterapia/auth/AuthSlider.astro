@@ -1,0 +1,124 @@
+<div class="left-panel">
+  <div class="top-nav">
+    <span class="brand-logo">👂 AuriculoApp</span>
+    <button id="btnVerPlanes" class="badge-plan" type="button">Ver Planes ➔</button>
+  </div>
+
+  <div class="slider-container" aria-live="polite">
+    <div class="slide active" data-slide="1">
+      <img
+        src="/auriculoterapia/images/oreja-segmentada-v3.jpg"
+        alt="Mapeo de Oreja"
+        class="slide-img"
+      />
+      <div class="slide-overlay">
+        <h3>Mapeo Clínico Digital</h3>
+        <p>
+          Gestiona sesiones, registra puntos y lleva la evolución clínica de tus pacientes de forma
+          visual e intuitiva.
+        </p>
+      </div>
+    </div>
+
+    <div class="slide" data-slide="2">
+      <div class="plans-slide-content">
+        <span class="slide-tag">Nuestros Planes</span>
+        <div class="plans-mini-grid">
+          <div class="plan-card">
+            <div class="plan-card-header">
+              <h4>Gratuito</h4>
+              <span class="plan-price">$0</span>
+            </div>
+            <ul>
+              <li>✓ Hasta 3 pacientes</li>
+              <li>✓ 1 imagen por oreja</li>
+            </ul>
+          </div>
+
+          <div class="plan-card featured">
+            <div class="plan-card-header">
+              <div class="title-badge">
+                <h4>Clásico</h4>
+                <span class="pop-tag">Popular</span>
+              </div>
+              <span class="plan-price">$??/mes</span>
+            </div>
+            <ul>
+              <li>✓ Pacientes ilimitados</li>
+              <li>✓ 3 imágenes por oreja</li>
+              <li>✓ Exportación de fichas .txt</li>
+            </ul>
+          </div>
+
+          <div class="plan-card premium">
+            <div class="plan-card-header">
+              <h4>Premium</h4>
+              <span class="plan-price">$??/mes</span>
+            </div>
+            <ul>
+              <li>✓ Todo lo del Plan Clásico</li>
+              <li>✓ Lectura de casos de otros terapeutas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" data-slide="3">
+      <img
+        src="/auriculoterapia/images/oreja-segmentada-v3.jpg"
+        alt="Historial Clínico"
+        class="slide-img"
+      />
+      <div class="slide-overlay">
+        <h3>Historial y Evolución</h3>
+        <p>
+          Registra diagnósticos, técnicas aplicadas (moxa, sangría, agujas) y consulta el historial
+          completo en tiempo real.
+        </p>
+      </div>
+    </div>
+
+    <div class="slide" data-slide="4">
+      <img
+        src="/auriculoterapia/images/oreja-segmentada-v3.jpg"
+        alt="Visualización Bilateral"
+        class="slide-img"
+      />
+      <div class="slide-overlay">
+        <h3>Visualización Bilateral</h3>
+        <p>
+          Compara oreja izquierda y derecha simultáneamente. Carga tus propias fotos para sobreponer
+          la red de puntos.
+        </p>
+      </div>
+    </div>
+
+    <div class="slide" data-slide="5">
+      <img
+        src="/auriculoterapia/images/oreja-segmentada-v3.jpg"
+        alt="Puntos y Tratamientos"
+        class="slide-img"
+      />
+      <div class="slide-overlay">
+        <h3>Biblioteca y Protocolos</h3>
+        <p>
+          Accede a ubicaciones predefinidas por zonas o guarda tus propios protocolos de tratamiento
+          para aplicarlos rápido.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-dots" aria-label="Selector de slide">
+    <button class="dot active" data-target="1" type="button" aria-label="Ir al slide 1"></button>
+    <button class="dot" data-target="2" type="button" aria-label="Ir al slide 2"></button>
+    <button class="dot" data-target="3" type="button" aria-label="Ir al slide 3"></button>
+    <button class="dot" data-target="4" type="button" aria-label="Ir al slide 4"></button>
+    <button class="dot" data-target="5" type="button" aria-label="Ir al slide 5"></button>
+  </div>
+</div>
+
+<script>
+  import "../../../js/auriculoterapia/auth-slider.js";
+</script>

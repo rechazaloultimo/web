@@ -1,0 +1,38 @@
+---
+const { col = "col1" } = Astro.props;
+const suffix = col === "col1" ? "Col1" : "Col2";
+---
+
+<div class="panel-section-title collapsible" id={`titleSesiones${suffix}`}>
+  <span>Sesiones</span>
+  <span class="toggle-icon">▼</span>
+</div>
+<div class="collapsible-content session-content">
+  <div class="clinic-form-grid">
+    <div class="clinic-field">
+      <label for={`selectTerapeutaSesion${suffix}`}>Terapeuta</label>
+      <select id={`selectTerapeutaSesion${suffix}`} data-directory-type="terapeutas"></select>
+    </div>
+    <div class="clinic-field">
+      <label for={`selectPacienteSesion${suffix}`}>Paciente</label>
+      <select id={`selectPacienteSesion${suffix}`} data-directory-type="pacientes"></select>
+    </div>
+    <div class="clinic-field">
+      <label for={`selectSesion${suffix}`}>Sesión (fecha)</label>
+      <select id={`selectSesion${suffix}`} data-col={col}>
+        <option value="1">Sesión 1</option>
+      </select>
+    </div>
+  </div>
+  <div class="action-buttons">
+    <button class="btn-panel btn-primary" id={`btnCargarSesion${suffix}`} type="button"
+      >Cargar</button
+    >
+    <button class="btn-panel btn-danger" id={`btnBorrarSesion${suffix}`} type="button">
+      Borrar sesión
+    </button>
+    <button class="btn-panel btn-danger" id={`btnBorrarPaciente${suffix}`} type="button">
+      Borrar paciente
+    </button>
+  </div>
+</div>

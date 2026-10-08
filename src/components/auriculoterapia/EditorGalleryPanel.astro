@@ -1,0 +1,37 @@
+---
+const { col = "col1" } = Astro.props;
+const suffix = col === "col1" ? "Col1" : "Col2";
+const slots = [0, 1, 2];
+---
+
+<div class="panel-section-title">Gestión de Imagen</div>
+<div class="gallery-container" data-col={col}>
+  <div class="gallery-slots">
+    {
+      slots.map((slotIndex) => (
+        <div class="gallery-slot" data-col={col} data-slot={slotIndex}>
+          <div class="slot-header">
+            <span class="slot-num">Imagen {slotIndex + 1}</span>
+            <button class="btn-slot-del" data-col={col} data-slot={slotIndex} title="Borrar">
+              ✕
+            </button>
+          </div>
+          <div class="slot-body" data-col={col} data-slot={slotIndex}>
+            <img class="slot-img" id={`slotImg${slotIndex}${suffix}`} src="" alt="" />
+            <span class="slot-placeholder" id={`slotLabel${slotIndex}${suffix}`}>
+              + Cargar
+            </span>
+          </div>
+          <input
+            type="file"
+            id={`file${slotIndex}${suffix}`}
+            accept=".png,.jpg,.jpeg,.gif,.bmp,.webp,.svg,.avif,.heic,.heif,image/*"
+            data-col={col}
+            data-slot={slotIndex}
+            hidden
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>

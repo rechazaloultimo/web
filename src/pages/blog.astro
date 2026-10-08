@@ -5,6 +5,10 @@ import "../styles/blog.css";
 import MainLayout from "@/layouts/MainLayout.astro";
 import Navbar from "@/components/Navegadores/Navbar.astro";
 import PhotoSwipeUI from "@/components/galerias/PhotoSwipeUI.astro";
+import { getDb } from "../lib/db";
+import { getEditorUser } from "../lib/auriculoterapia-auth";
+
+const visitor = await getEditorUser(Astro.request).catch(() => null);
 
 // 2. DEFINIMOS LOS DATOS ÚNICOS DE ESTA PÁGINA
 const pageTitle = "Rodrigo Pizarro - Blog";
@@ -23,13 +27,60 @@ type BlogPost = {
   categories: string[];
   coverImage?: string;
   images: { src: string; alt: string }[];
+  published?: boolean;
+  publishedAt?: string | Date;
+  bodyHtml?: string;
 };
 
 const blogModules = import.meta.glob("../data/blog/*.ts", {
   eager: true,
   import: "default",
 });
-const blogPosts = Object.values(blogModules) as BlogPost[];
+const staticPosts = Object.values(blogModules) as BlogPost[];
+let databasePosts: BlogPost[] = [];
+try {
+  const records = await (await getDb())
+    .collection("blog_posts")
+    .find({ published: true })
+    .sort({ publishedAt: -1, createdAt: -1 })
+    .toArray();
+  databasePosts = records.map(
+    (record): BlogPost => ({
+      slug: String(record.slug || ""),
+      icon: String(record.icon || "fa-newspaper"),
+      title: String(record.title || ""),
+      summary: String(record.summary || ""),
+      introTitle: String(record.introTitle || ""),
+      intro: String(record.intro || ""),
+      sectionTitle: String(record.sectionTitle || ""),
+      body: String(record.body || ""),
+      date: String(record.date || ""),
+      categories: Array.isArray(record.categories) ? record.categories.map(String) : [],
+      coverImage: String(record.coverImage || ""),
+      images: Array.isArray(record.images)
+        ? record.images.map((image: { src?: string; alt?: string }) => ({
+            src: String(image.src || ""),
+            alt: String(image.alt || ""),
+          }))
+        : [],
+      published: true,
+      publishedAt: record.publishedAt,
+      bodyHtml: String(record.body || ""),
+    }),
+  );
+} catch (error) {
+  console.warn("No se pudieron cargar entradas de blog desde MongoDB.", error);
+}
+const postsBySlug = new Map(staticPosts.map((post) => [post.slug, post]));
+databasePosts.forEach((post) => postsBySlug.set(post.slug, post));
+const blogPosts = [...postsBySlug.values()].sort((left, right) => {
+  const getTime = (post: BlogPost) => {
+    const date = post.publishedAt || post.date;
+    const timestamp = date ? new Date(date).getTime() : 0;
+    return Number.isFinite(timestamp) ? timestamp : 0;
+  };
+  return getTime(right) - getTime(left);
+});
 
 // Extraer categorías únicas para los botones de filtro
 const allCategories = Array.from(new Set(blogPosts.flatMap((post) => post.categories || [])));
@@ -41,6 +92,21 @@ const allCategories = Array.from(new Set(blogPosts.flatMap((post) => post.catego
   <main id="main-content" class="px-6 max-w-5xl mx-auto mb-12 mt-12">
     <section id="blog" class="min-h-screen flex flex-col justify-center section-bg-paper">
       <div class="container mx-auto px-6">
+        <div class="blog-account-bar">
+          {
+            visitor ? (
+              <>
+                <span>Conectado como {visitor.name}</span>
+                {visitor.role === "admin" && <a href="/admin/blog">Administrar blog</a>}
+                <button type="button" id="blog-signout">Cerrar sesión</button>
+              </>
+            ) : (
+              <button type="button" data-blog-auth-open data-return-to="/blog">
+                Ingresar para participar
+              </button>
+            )
+          }
+        </div>
         <h2 class="font-title text-3xl md:text-4xl lg:text-5xl text-center mb-6">
           Espacio de reflexión y exploración
         </h2>
@@ -155,6 +221,42 @@ const allCategories = Array.from(new Set(blogPosts.flatMap((post) => post.catego
     </div>
   </dialog>
 
+  <dialog id="blog-auth-dialog" class="blog-auth-dialog" aria-labelledby="blog-auth-title">
+    <form id="blog-auth-form" class="blog-auth-form" novalidate>
+      <button
+        class="blog-post-dialog__close"
+        type="button"
+        data-blog-auth-close
+        aria-label="Cerrar ingreso"
+      >
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      <h2 id="blog-auth-title">Ingresar al blog</h2>
+      <p id="blog-auth-status" role="status" aria-live="polite"></p>
+      <label id="blog-auth-name-field" hidden>
+        Nombre
+        <input name="name" type="text" autocomplete="given-name" />
+      </label>
+      <label>
+        Correo electrónico
+        <input name="email" type="email" autocomplete="email" required />
+      </label>
+      <label>
+        Contraseña
+        <input name="password" type="password" autocomplete="current-password" required />
+      </label>
+      <button class="blog-auth-submit" id="blog-auth-submit" type="submit">Ingresar</button>
+      <p class="blog-auth-switch">
+        <span id="blog-auth-switch-copy">¿No tienes cuenta?</span>
+        <button id="blog-auth-toggle" type="button">Crear una cuenta</button>
+      </p>
+      <div class="blog-auth-divider"><span>O continuar con</span></div>
+      <button id="blog-auth-google" type="button" class="blog-auth-google">
+        <i class="fab fa-google" aria-hidden="true"></i> Google
+      </button>
+    </form>
+  </dialog>
+
   {
     blogPosts.map((post) => (
       <template id={`blog-post-${post.slug}`}>
@@ -162,7 +264,7 @@ const allCategories = Array.from(new Set(blogPosts.flatMap((post) => post.catego
         <h2>{post.introTitle}</h2>
         <p>{post.intro}</p>
         <h3>{post.sectionTitle}</h3>
-        <p>{post.body}</p>
+        {post.bodyHtml ? <div set:html={post.bodyHtml} /> : <p>{post.body}</p>}
         <div class="blog-post-content__images">
           {post.images.map((image) => (
             <img src={image.src} alt={image.alt} />
@@ -173,7 +275,133 @@ const allCategories = Array.from(new Set(blogPosts.flatMap((post) => post.catego
   }
 
   <script>
+    import { signIn, signOut } from "auth-astro/client";
     import "../js/blog-modal.js";
+
+    const blogSignIn = signIn as unknown as (
+      providerId: string,
+      options?: {
+        email?: string;
+        password?: string;
+        redirect?: boolean;
+        callbackUrl?: string;
+      },
+      authorizationParams?: Record<string, string>,
+    ) => Promise<void | Response>;
+    const blogAuthDialog = document.querySelector<HTMLDialogElement>("#blog-auth-dialog");
+    const blogAuthForm = document.querySelector<HTMLFormElement>("#blog-auth-form");
+    const blogAuthStatus = document.querySelector<HTMLElement>("#blog-auth-status");
+    const blogAuthNameField = document.querySelector<HTMLLabelElement>("#blog-auth-name-field");
+    const blogAuthTitle = document.querySelector<HTMLElement>("#blog-auth-title");
+    const blogAuthSubmit = document.querySelector<HTMLButtonElement>("#blog-auth-submit");
+    let blogAuthRegisterMode = false;
+
+    function blogAuthReturnTo(value: string) {
+      try {
+        const url = new URL(value, window.location.origin);
+        if (url.origin === window.location.origin && url.pathname === "/blog") {
+          return `${url.pathname}${url.search}${url.hash}`;
+        }
+      } catch {
+        return "/blog";
+      }
+      return "/blog";
+    }
+
+    function openBlogAuth(returnTo: string) {
+      if (!blogAuthDialog) return;
+      blogAuthDialog.dataset.returnTo = blogAuthReturnTo(returnTo);
+      blogAuthStatus && (blogAuthStatus.textContent = "");
+      blogAuthDialog.showModal();
+      blogAuthForm?.querySelector<HTMLInputElement>('input[name="email"]')?.focus();
+    }
+
+    function updateBlogAuthMode() {
+      if (blogAuthTitle) {
+        blogAuthTitle.textContent = blogAuthRegisterMode ? "Crear cuenta para el blog" : "Ingresar al blog";
+      }
+      if (blogAuthSubmit) blogAuthSubmit.textContent = blogAuthRegisterMode ? "Crear cuenta" : "Ingresar";
+      if (blogAuthNameField) {
+        blogAuthNameField.hidden = !blogAuthRegisterMode;
+        const input = blogAuthNameField.querySelector<HTMLInputElement>("input");
+        if (input) input.required = blogAuthRegisterMode;
+      }
+      const switchCopy = document.querySelector<HTMLElement>("#blog-auth-switch-copy");
+      const switchButton = document.querySelector<HTMLButtonElement>("#blog-auth-toggle");
+      if (switchCopy) switchCopy.textContent = blogAuthRegisterMode ? "¿Ya tienes cuenta?" : "¿No tienes cuenta?";
+      if (switchButton) switchButton.textContent = blogAuthRegisterMode ? "Ingresar" : "Crear una cuenta";
+      const password = blogAuthForm?.querySelector<HTMLInputElement>('input[name="password"]');
+      if (password) password.autocomplete = blogAuthRegisterMode ? "new-password" : "current-password";
+    }
+
+    document.querySelectorAll<HTMLButtonElement>("[data-blog-auth-open]").forEach((button) => {
+      button.addEventListener("click", () => openBlogAuth(button.dataset.returnTo || "/blog"));
+    });
+    document.addEventListener("blog-auth:open", (event) => {
+      const detail = (event as CustomEvent<{ returnTo?: string }>).detail;
+      openBlogAuth(detail?.returnTo || "/blog");
+    });
+    document.querySelector("[data-blog-auth-close]")?.addEventListener("click", () => {
+      blogAuthDialog?.close();
+    });
+    blogAuthDialog?.addEventListener("click", (event) => {
+      if (event.target === blogAuthDialog) blogAuthDialog.close();
+    });
+    document.querySelector("#blog-auth-toggle")?.addEventListener("click", () => {
+      blogAuthRegisterMode = !blogAuthRegisterMode;
+      updateBlogAuthMode();
+      blogAuthStatus && (blogAuthStatus.textContent = "");
+    });
+    blogAuthForm?.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!blogAuthForm || !blogAuthStatus) return;
+      const formData = new FormData(blogAuthForm);
+      const name = String(formData.get("name") || "").trim();
+      const email = String(formData.get("email") || "").trim();
+      const password = String(formData.get("password") || "");
+      if (!email || !password || (blogAuthRegisterMode && !name)) {
+        blogAuthStatus.textContent = "Completa los campos requeridos.";
+        return;
+      }
+
+      if (blogAuthSubmit) blogAuthSubmit.disabled = true;
+      blogAuthStatus.textContent = "";
+      try {
+        if (blogAuthRegisterMode) {
+          const response = await fetch("/api/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nombre: name, apellido: "", email, password }),
+          });
+          const result = await response.json().catch(() => ({}));
+          if (!response.ok) throw new Error(result.message || "No se pudo crear la cuenta.");
+        }
+
+        const result = await blogSignIn("credentials", {
+          email,
+          password,
+          redirect: false,
+          callbackUrl: blogAuthDialog?.dataset.returnTo || "/blog",
+        });
+        if (result instanceof Response) throw new Error("Email o contraseña incorrectos.");
+        window.location.assign(blogAuthDialog?.dataset.returnTo || "/blog");
+      } catch (error) {
+        blogAuthStatus.textContent = error instanceof Error ? error.message : "No se pudo ingresar.";
+        if (blogAuthSubmit) blogAuthSubmit.disabled = false;
+      }
+    });
+    document.querySelector("#blog-auth-google")?.addEventListener("click", () => {
+      void blogSignIn(
+        "google",
+        { callbackUrl: blogAuthDialog?.dataset.returnTo || "/blog" },
+        { prompt: "select_account" },
+      );
+    });
+    updateBlogAuthMode();
+
+    document.getElementById("blog-signout")?.addEventListener("click", () => {
+      void signOut();
+    });
 
     const filterButtons = document.querySelectorAll<HTMLButtonElement>(".filter-btn");
     const blogCards = document.querySelectorAll<HTMLElement>(".blog-card");

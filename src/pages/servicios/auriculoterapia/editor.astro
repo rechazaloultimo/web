@@ -1,0 +1,9 @@
+---
+import { getSession } from "auth-astro/server";
+import App from "./app.astro";
+
+const authSession = await getSession(Astro.request);
+if (!authSession?.user?.id) return Astro.redirect("/servicios/auriculoterapia");
+---
+
+<App />

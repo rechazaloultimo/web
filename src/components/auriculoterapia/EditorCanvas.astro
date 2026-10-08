@@ -1,0 +1,13 @@
+---
+const { col = "col1" } = Astro.props;
+const suffix = col === "col1" ? "Col1" : "Col2";
+---
+
+<div class="image-container" id={`container${suffix}`}>
+  <img
+    id={`img${suffix}`}
+    src="/auriculoterapia/images/oreja-segmentada-v3.jpg"
+    alt="Oreja visualización"
+  />
+  <svg id={`svg${suffix}`} viewBox="0 0 850 1300"></svg>
+</div>

@@ -193,8 +193,6 @@ main {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: invert(1) hue-rotate(180deg) contrast(1.1) brightness(0.9);
-  transition: filter 0.2s ease;
 }
 
 .image-container svg {
@@ -320,10 +318,27 @@ main {
   flex: 0 0 65px;
 }
 
+.patient-name-input {
+  width: 100%;
+  min-height: 48px;
+}
+
 .session-meta-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
+}
+
+.session-stepper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 80px minmax(0, 1fr);
+  gap: 4px;
+}
+
+.session-stepper .btn-panel {
+  flex: none;
+  padding: 4px 0;
+  font-size: 0.8rem;
 }
 
 .directory-row {
@@ -339,6 +354,16 @@ main {
 .directory-row button {
   flex: 0 0 30px;
   padding: 6px 0;
+}
+
+.patient-directory-actions {
+  justify-content: flex-start;
+}
+
+.patient-directory-actions button {
+  flex: 0 1 auto;
+  min-height: 34px;
+  padding: 6px 10px;
 }
 
 .panel-content label {
@@ -446,6 +471,13 @@ main {
 .btn-panel.btn-primary:hover {
   background: #d11212;
   border-color: #d11212;
+}
+
+.btn-panel.is-saved,
+.btn-panel.is-saved:hover {
+  background: #247a45;
+  border-color: #247a45;
+  color: #ffffff;
 }
 
 .btn-panel.btn-danger {
@@ -700,4 +732,144 @@ input[type="range"]::-moz-range-thumb {
   background: var(--accent);
   cursor: pointer;
   border: 1px solid var(--border);
+}
+
+.gallery-slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.gallery-slot {
+  background: #181818;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+  user-select: none;
+}
+
+.gallery-slot:hover {
+  border-color: #555;
+}
+
+.gallery-slot.active {
+  border-color: #c8a96e;
+  background: #262015;
+}
+
+.slot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  color: #888;
+  margin-bottom: 3px;
+}
+
+.gallery-slot.active .slot-num {
+  color: #c8a96e;
+  font-weight: bold;
+}
+
+.btn-slot-del {
+  background: transparent;
+  border: none;
+  color: #ff5555;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 0 2px;
+  line-height: 1;
+}
+
+.btn-slot-del:hover {
+  color: #ff0000;
+}
+
+.slot-body {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2px;
+  background: #0d0d0d;
+  border: 1px dashed #2a2a2a;
+}
+
+.gallery-slot.active .slot-body {
+  border-style: solid;
+  border-color: #554322;
+}
+
+.slot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slot-img.is-hidden {
+  display: none;
+}
+
+.slot-placeholder {
+  font-size: 10px;
+  color: #666;
+}
+
+.slot-placeholder.is-hidden {
+  display: none;
+}
+
+.export-panel {
+  margin-top: 16px;
+  border-top: 1px solid var(--editor-border);
+  padding-top: 14px;
+}
+
+.export-panel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn-export {
+  width: 100%;
+  background: var(--editor-accent);
+  border: 1px solid var(--editor-accent);
+  color: #fff;
+  font-family: var(--editor-font);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-export:hover {
+  background: #d31414;
+  border-color: #d31414;
+}
+
+.export-preview {
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+  border: 1px solid var(--editor-border);
+  background: #0d0d0d;
+  color: var(--editor-text);
+  font-family: var(--editor-font);
+  font-size: 0.7rem;
+  line-height: 1.4;
+  padding: 8px;
 }

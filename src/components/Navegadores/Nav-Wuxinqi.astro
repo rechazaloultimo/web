@@ -1,0 +1,34 @@
+---
+import Navbar from "@/components/Navegadores/Navbar.astro";
+
+const wuqinxiMenuItems = [
+  {
+    label: "Indice Wu Qin Xi",
+    submenu: [
+      { label: "Origen de los Ejercicios", href: "#historia" },
+      { label: "Manuscritos y recuperación", href: "#manuscritos" },
+      { label: 'El "Diagrama de Dǎoyǐn"', href: "#diagrama" },
+      { label: "Legado y repercusión", href: "#repercusión" },
+    ],
+  },
+  {
+    label: "Movimientos",
+    submenu: [
+      { label: "Apertura (Qǐ Shì)", href: "#movimiento-0" },
+      { label: "1. Garras de Tigre (Hǔ Zhǎ)", href: "#movimiento-1" },
+      { label: "2. Abalanzarse como el Tigre (Hǔ Pū)", href: "#movimiento-2" },
+      { label: "3. Embestir con los Cuernos de Venado (Lù Jiǎo)", href: "#movimiento-3" },
+      { label: "4. Correr como el Venado (Lù Běn)", href: "#movimiento-4" },
+      { label: "5. Levantar las Zarpas del Oso (Xióng Yún)", href: "#movimiento-5" },
+      { label: "6. Caminar del Oso (Xióng Háng)", href: "#movimiento-6" },
+      { label: "7. Agarrar la Fruta del Mono (Hóu Zȟuī)", href: "#movimiento-7" },
+      { label: "8. Ofrecer la Fruta del Mono (Hóu Xiàn)", href: "#movimiento-8" },
+      { label: "9. Estiramiento de la Grulla (Hè Shēn)", href: "#movimiento-9" },
+      { label: "10. Vuelo de la Grulla (Hè Xiáng)", href: "#movimiento-10" },
+      { label: "Cierre (Shōu Shì)", href: "#movimiento-11" },
+    ],
+  },
+];
+---
+
+<Navbar additionalMenuItems={wuqinxiMenuItems} />

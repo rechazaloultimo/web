@@ -1,0 +1,81 @@
+/* ============================================ */
+/* ESTILOS GENERALES Y VARIABLES CSS (REFACTOR) */
+/* ============================================ */
+
+:root {
+  --color-bg-main: #fefcf0;
+  --color-bg-section: #f6f3e4;
+  --color-bg-card: #fdfbf2;
+  --color-text-main: #212529;
+  --color-text-secondary: #495057;
+  --color-text-title: #000000;
+  --color-text-light: #ffffff;
+  --color-text-placeholder: #6c757d;
+  --color-border-subtle: #dee2e6;
+  --color-border-input: #ced4da;
+  --color-accent-primary: #000000;
+  --color-chinese-seal-red: #b31010;
+  --color-chinese-seal-red-hover: #900808;
+  --color-error: #dc2626;
+  --font-title: "Noto Serif SC", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Dark mode variables */
+  --color-dm-bg-main: #1c1c1c;
+  --color-dm-bg-section: #2b2c2e;
+  --color-dm-bg-card: #393c42;
+  --color-dm-text-main: #f3f4f6;
+  --color-dm-text-secondary: #d1d5db;
+  --color-dm-text-title: #ffffff;
+  --color-dm-border-subtle: #4b5563;
+  --color-dm-border-input: #525861;
+  --color-dm-chinese-seal-red: #e0b33c;
+  --color-dm-chinese-seal-red-hover: #e6c454;
+  --color-dm-text-placeholder: #888c92;
+}
+
+/* Transiciones suaves limitadas */
+body,
+#mainNav,
+.service-card-modern,
+.card-manuscript,
+.login-form-container,
+.aula-virtual-card,
+footer,
+input,
+select,
+textarea,
+button {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    opacity 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+body {
+  line-height: 1.7;
+  scroll-behavior: smooth;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-main);
+  font-family: var(--font-body);
+}
+
+.font-title {
+  color: var(--color-text-title);
+  font-family: var(--font-title);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+a {
+  color: var(--color-chinese-seal-red);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-chinese-seal-red-hover);
+}

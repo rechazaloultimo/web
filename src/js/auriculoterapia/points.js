@@ -91,11 +91,19 @@ export function initPoints({
   elements,
   persistSessions,
   renderColumn,
+  updatePointCallout,
+  canEdit,
   suffix,
   showToast,
 }) {
+  function findPointCircle(column, pointId) {
+    const circles = elements(column).svg?.querySelectorAll("circle[data-point-id]") || [];
+    return [...circles].find((circle) => circle.dataset.pointId === pointId);
+  }
+
   // ─── Crear punto nuevo ───
   function createPoint(column, event) {
+    if (!canEdit(column)) return;
     const { svg } = elements(column);
     const side = getCurrentSide(column);
     if (!svg || !side) return;
@@ -122,6 +130,7 @@ export function initPoints({
 
   // ─── Añadir pack de puntos ───
   function addPack(column, packKey) {
+    if (!canEdit(column)) return 0;
     const pack = PACKS[packKey];
     if (!pack) {
       console.error("Pack no encontrado:", packKey);
@@ -164,6 +173,7 @@ export function initPoints({
 
   // ─── Eliminar todos los puntos de la columna ───
   function deleteAllPoints(column) {
+    if (!canEdit(column)) return;
     const side = getCurrentSide(column);
     const count = Object.keys(side.points).length;
     if (count === 0) {
@@ -171,7 +181,8 @@ export function initPoints({
       return;
     }
     if (confirm(`¿Eliminar todos los ${count} puntos de esta oreja?`)) {
-      side.points = {};
+      side.pointsByImage[side.activeIndex] = {};
+      side.points = side.pointsByImage[side.activeIndex];
       persistSessions();
       renderColumn(column);
       if (showToast) showToast(column, `🗑 ${count} puntos eliminados.`);
@@ -196,7 +207,7 @@ export function initPoints({
     Object.keys(PACKS).forEach((key) => {
       const btn = document.createElement("button");
       btn.className = "btn-panel btn-sm pack-btn";
-      btn.dataset.pack = key;
+      btn.disabled = !canEdit(column);
       btn.dataset.col = column;
       btn.textContent = PACKS[key].nombre;
       btn.addEventListener("click", () => addPack(column, key));
@@ -209,7 +220,7 @@ export function initPoints({
 
     if (point) {
       if (!point.color) point.color = "#c8a96e";
-      if (!point.size) point.size = 6;
+      point.size = Math.max(6, Math.min(100, Number(point.size) || 6));
 
       editorWrapper.innerHTML = `
         <div class="point-editor-header">
@@ -234,10 +245,15 @@ export function initPoints({
           </div>
           <div class="clinic-field" style="flex:1;">
             <label for="pointSize${colSuffix}">Tamaño: <span id="sizeLabel${colSuffix}">${point.size}</span></label>
-            <input type="range" id="pointSize${colSuffix}" min="4" max="20" step="1" value="${point.size}" style="width:100%; accent-color:var(--accent);" />
+            <input type="range" id="pointSize${colSuffix}" min="6" max="100" step="1" value="${point.size}" style="width:100%; accent-color:var(--accent);" />
           </div>
         </div>
       `;
+      if (!canEdit(column)) {
+        editorWrapper.querySelectorAll("input, textarea, button").forEach((control) => {
+          control.disabled = true;
+        });
+      }
 
       // Eventos del editor
       const nameInput = editorWrapper.querySelector(`#pointName${colSuffix}`);
@@ -249,36 +265,58 @@ export function initPoints({
       const toggleBtn = editorWrapper.querySelector(`.point-toggle-btn`);
 
       nameInput.addEventListener("input", () => {
+        if (!canEdit(column)) return;
         point.name = nameInput.value;
         persistSessions();
         renderColumn(column, point.id);
       });
 
       notesInput.addEventListener("input", () => {
+        if (!canEdit(column)) return;
         point.notes = notesInput.value;
+        updatePointCallout?.(column);
         persistSessions();
       });
 
       colorInput.addEventListener("input", () => {
+        if (!canEdit(column)) return;
         point.color = colorInput.value;
         persistSessions();
-        renderColumn(column, point.id);
+        const pointCircle = findPointCircle(column, point.id);
+        if (pointCircle) pointCircle.setAttribute("fill", point.color);
+        const listItem = [...slot.querySelectorAll(".point-item")].find(
+          (item) => item.dataset.id === point.id,
+        );
+        const colorDot = listItem?.querySelector(".point-color-dot");
+        if (colorDot) colorDot.style.background = point.color;
+        updatePointCallout?.(column);
       });
 
       sizeInput.addEventListener("input", () => {
+        if (!canEdit(column)) return;
         point.size = parseInt(sizeInput.value, 10);
+        point.size = Math.max(6, Math.min(100, Number(point.size) || 6));
         sizeLabel.textContent = point.size;
         persistSessions();
-        renderColumn(column, point.id);
+        const svg = elements(column).svg;
+        const pointCircle = findPointCircle(column, point.id);
+        if (pointCircle) pointCircle.setAttribute("r", String(point.size));
+        if (selectedPointId === point.id) {
+          const selectionRing = svg?.querySelector("circle[stroke-dasharray]");
+          if (selectionRing) selectionRing.setAttribute("r", String(point.size + 8));
+        }
+        updatePointCallout?.(column);
       });
 
       deleteBtn.addEventListener("click", () => {
+        if (!canEdit(column)) return;
         delete side.points[point.id];
         persistSessions();
         renderColumn(column);
       });
 
       toggleBtn.addEventListener("click", () => {
+        if (!canEdit(column)) return;
         point.visible = point.visible === false;
         persistSessions();
         renderColumn(column, point.id);
@@ -297,7 +335,7 @@ export function initPoints({
       listHeader.className = "point-list-header";
       listHeader.innerHTML = `
         <span class="point-list-title">Lista de puntos (${puntosList.length})</span>
-        <button class="btn-panel btn-danger delete-all-btn">🗑 Eliminar todos</button>
+        <button class="btn-panel btn-danger delete-all-btn" ${canEdit(column) ? "" : "disabled"}>🗑 Eliminar todos</button>
       `;
 
       const listContainer = document.createElement("div");
@@ -310,6 +348,7 @@ export function initPoints({
         item.dataset.id = p.id;
 
         const colorDot = document.createElement("span");
+        colorDot.className = "point-color-dot";
         colorDot.style.cssText = `display:inline-block; width:10px; height:10px; border-radius:50%; background:${p.color || "#c8a96e"}; margin-right:6px; flex-shrink:0;`;
         const nameSpan = document.createElement("span");
         nameSpan.className = "point-item-name";
@@ -322,11 +361,13 @@ export function initPoints({
         deleteBtn.className = "btn-panel btn-danger point-item-delete";
         deleteBtn.textContent = "✕";
         deleteBtn.dataset.id = p.id;
+        deleteBtn.disabled = !canEdit(column);
 
         const toggleBtn = document.createElement("button");
         toggleBtn.className = "btn-panel point-item-toggle";
         toggleBtn.textContent = p.visible === false ? "👁" : "◯";
         toggleBtn.dataset.id = p.id;
+        toggleBtn.disabled = !canEdit(column);
 
         actions.appendChild(deleteBtn);
         actions.appendChild(toggleBtn);
@@ -349,6 +390,7 @@ export function initPoints({
 
         deleteBtn.addEventListener("click", (e) => {
           e.stopPropagation();
+          if (!canEdit(column)) return;
           delete side.points[p.id];
           persistSessions();
           renderColumn(column);
@@ -356,6 +398,7 @@ export function initPoints({
 
         toggleBtn.addEventListener("click", (e) => {
           e.stopPropagation();
+          if (!canEdit(column)) return;
           const target = side.points[p.id];
           if (target) {
             target.visible = target.visible === false;
@@ -385,6 +428,7 @@ export function initPoints({
 
   // ─── Arrastre de puntos ───
   function bindPointDrag(column, point, circle) {
+    if (!canEdit(column)) return;
     circle.addEventListener("mousedown", (event) => {
       event.preventDefault();
       event.stopPropagation();
@@ -404,8 +448,8 @@ export function initPoints({
           0,
           Math.min(1, (moveEvent.clientY - newRect.top) / newRect.height - offsetY),
         );
-        circle.setAttribute("cx", `${point.x * 100}%`);
-        circle.setAttribute("cy", `${point.y * 100}%`);
+        circle.setAttribute("cx", String(point.x * 850));
+        circle.setAttribute("cy", String(point.y * 1300));
       };
 
       const stop = () => {
