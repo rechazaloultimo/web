@@ -11,7 +11,9 @@ import { createCanvasRenderer } from "./canvas-renderer.js";
 export async function initEditor() {
   if (typeof document === "undefined") return;
 
-  const DEFAULT_IMAGE = "/auriculoterapia/images/oreja-segmentada-v3.jpg";
+  const APP_BASE = document.documentElement.dataset.basePath || "";
+  const DEFAULT_IMAGE = `${APP_BASE}/auriculoterapia/images/oreja-segmentada-v3.jpg`;
+  const API_BASE = `${APP_BASE}/api`;
   const COLUMNS = ["col1", "col2"];
   const MIN_ZOOM = 0.3;
   const MAX_ZOOM = 2.5;
@@ -19,9 +21,9 @@ export async function initEditor() {
   const WHEEL_STEP = 0.05;
   let initialData;
   try {
-    let response = await fetch("/api/auriculoterapia/data", { cache: "no-store" });
+    let response = await fetch(`${API_BASE}/auriculoterapia/data`, { cache: "no-store" });
     if (response.status === 401) {
-      window.location.replace("/servicios/auriculoterapia");
+      window.location.replace(`${APP_BASE}/servicios/auriculoterapia`);
       return;
     }
     if (!response.ok) throw new Error("No se pudo cargar tu cuenta desde MongoDB.");
@@ -29,7 +31,7 @@ export async function initEditor() {
 
     if (initialData.needsMigration) {
       const legacyData = readLegacyEditorData();
-      response = await fetch("/api/auriculoterapia/data", {
+      response = await fetch(`${API_BASE}/auriculoterapia/data`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(legacyData),
@@ -96,7 +98,7 @@ export async function initEditor() {
               !session.ownerUserId ||
               session.ownerUserId === profile.id),
         );
-        const response = await fetch("/api/auriculoterapia/data", {
+        const response = await fetch(`${API_BASE}/auriculoterapia/data`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -417,7 +419,7 @@ export async function initEditor() {
     }
 
     if (type === "paciente") {
-      const response = await fetch("/api/auriculoterapia/patients", {
+      const response = await fetch(`${API_BASE}/auriculoterapia/patients`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ownerUserId, oldName, newName }),
@@ -755,7 +757,7 @@ export async function initEditor() {
       return;
     }
     if (session?.ownerUserId || profile.role === "admin") {
-      const response = await fetch("/api/auriculoterapia/sessions", {
+      const response = await fetch(`${API_BASE}/auriculoterapia/sessions`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -810,7 +812,7 @@ export async function initEditor() {
     );
     if (!confirmed) return;
 
-    const response = await fetch("/api/auriculoterapia/patients", {
+    const response = await fetch(`${API_BASE}/auriculoterapia/patients`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ownerUserId, name: patient }),
@@ -896,6 +898,7 @@ export async function initEditor() {
 
   const imageLoader = initImageLoader({
     document,
+    apiBase: API_BASE,
     getCurrentSide,
     renderColumn,
     persistSessions,
@@ -1018,7 +1021,7 @@ export async function initEditor() {
 
   async function initializeLoggedInTherapist() {
     try {
-      const response = await fetch("/api/auth/session");
+      const response = await fetch(`${API_BASE}/auth/session`);
       if (!response.ok) return;
       const authSession = await response.json();
       const therapistName = String(

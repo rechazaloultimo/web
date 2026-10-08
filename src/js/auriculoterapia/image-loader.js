@@ -1,5 +1,6 @@
 export function initImageLoader({
   document,
+  apiBase,
   getCurrentSide,
   renderColumn,
   persistSessions,
@@ -89,7 +90,10 @@ export function initImageLoader({
     form.append("slot", String(index));
 
     try {
-      const response = await fetch("/api/auriculoterapia/images", { method: "POST", body: form });
+      const response = await fetch(`${apiBase}/auriculoterapia/images`, {
+        method: "POST",
+        body: form,
+      });
       const result = await response.json();
       if (!response.ok) throw new Error(result.message || "No se pudo cargar la imagen.");
       const side = getCurrentSide(column);
@@ -111,7 +115,9 @@ export function initImageLoader({
         ? image.match(/\/api\/auriculoterapia\/images\/([a-f\d]{24})$/i)?.[1]
         : null;
     if (imageId) {
-      const response = await fetch(`/api/auriculoterapia/images/${imageId}`, { method: "DELETE" });
+      const response = await fetch(`${apiBase}/auriculoterapia/images/${imageId}`, {
+        method: "DELETE",
+      });
       if (!response.ok) {
         const result = await response.json().catch(() => ({}));
         showToast(column, result.message || "No se pudo borrar la imagen.");

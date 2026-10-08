@@ -45,7 +45,7 @@ async function saveImage(
     metadata,
   });
   await pipeline(Readable.from([buffer]), upload);
-  return `/api/auriculoterapia/images/${upload.id.toString()}`;
+  return `${import.meta.env.BASE_URL.replace(/\/$/, "")}/api/auriculoterapia/images/${upload.id.toString()}`;
 }
 
 async function normalizeSessionImages(

@@ -9,11 +9,13 @@ import EditorCanvas from "../../../components/auriculoterapia/EditorCanvas.astro
 import "../../../styles/auriculoterapia/editor.css";
 
 const authSession = await getSession(Astro.request);
-if (!authSession?.user?.id) return Astro.redirect("/servicios/auriculoterapia");
+if (!authSession?.user?.id) {
+  return Astro.redirect(`${import.meta.env.BASE_URL}servicios/auriculoterapia`);
+}
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" data-base-path={import.meta.env.BASE_URL.replace(/\/$/, "")}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

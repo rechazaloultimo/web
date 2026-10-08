@@ -7,6 +7,7 @@ import { getMongoClient } from "./src/lib/db";
 
 const mongoClient = await getMongoClient().catch(() => null);
 const mongoAdapter = mongoClient ? MongoDBAdapter(mongoClient) : undefined;
+const authPrefix = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/api/auth`;
 const adminEmails = new Set(
   String(import.meta.env.AURICULO_ADMIN_EMAILS || "")
     .split(",")
@@ -19,6 +20,7 @@ function getUserRole(email: string, currentRole?: unknown) {
 }
 
 export default defineConfig({
+  prefix: authPrefix,
   secret: import.meta.env.AUTH_SECRET || "dev-secret-auriculoterapia-change-me",
   trustHost: true,
   adapter: mongoAdapter,

@@ -85,10 +85,14 @@
       password?: string;
       redirect?: boolean;
       callbackUrl?: string;
+      prefix?: string;
     },
     authorizationParams?: Record<string, string>,
   ) => Promise<void | Response>;
-  const authSignOut = signOut as unknown as (options?: { callbackUrl?: string }) => Promise<void>;
+  const authSignOut = signOut as unknown as (options?: {
+    callbackUrl?: string;
+    prefix?: string;
+  }) => Promise<void>;
 
   let isRegisterMode = true;
 
@@ -102,7 +106,9 @@
   const btnTogglePass = document.getElementById("btnTogglePass");
   const passInput = document.getElementById("password") as HTMLInputElement | null;
   const formStatus = document.getElementById("formStatus");
-  const defaultCallbackUrl = "/servicios/auriculoterapia/editor";
+  const appBase = import.meta.env.BASE_URL.replace(/\/$/, "");
+  const authPrefix = `${appBase}/api/auth`;
+  const defaultCallbackUrl = `${appBase}/servicios/auriculoterapia/editor`;
   const requestedCallbackUrl = new URLSearchParams(window.location.search).get("callbackUrl");
   let authCallbackUrl = defaultCallbackUrl;
   if (requestedCallbackUrl) {
@@ -172,7 +178,7 @@
     }
 
     if (isRegisterMode) {
-      const response = await fetch("/api/register", {
+      const response = await fetch(`${appBase}/api/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nombre, apellido, email, password }),
@@ -190,6 +196,7 @@
         password,
         redirect: false,
         callbackUrl: authCallbackUrl,
+        prefix: authPrefix,
       });
 
       if (result instanceof Response) {
@@ -206,6 +213,7 @@
       password,
       redirect: false,
       callbackUrl: authCallbackUrl,
+      prefix: authPrefix,
     });
 
     if (result instanceof Response) {
@@ -217,16 +225,20 @@
   });
 
   btnGoogleLogin?.addEventListener("click", async () => {
-    const response = await fetch("/api/auth/session", { cache: "no-store" });
+    const response = await fetch(`${authPrefix}/session`, { cache: "no-store" });
     const session = await response.json().catch(() => null);
     if (session?.user?.email) {
-      const switchUrl = new URL("/servicios/auriculoterapia", window.location.origin);
+      const switchUrl = new URL(`${appBase}/servicios/auriculoterapia`, window.location.origin);
       switchUrl.searchParams.set("google-account-switch", "1");
       switchUrl.searchParams.set("callbackUrl", authCallbackUrl);
-      await authSignOut({ callbackUrl: switchUrl.toString() });
+      await authSignOut({ callbackUrl: switchUrl.toString(), prefix: authPrefix });
       return;
     }
-    await authSignIn("google", { callbackUrl: authCallbackUrl }, { prompt: "select_account" });
+    await authSignIn(
+      "google",
+      { callbackUrl: authCallbackUrl, prefix: authPrefix },
+      { prompt: "select_account" },
+    );
   });
 
   updateAuthUI();
